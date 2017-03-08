@@ -4,6 +4,7 @@
 *.iml
 *.suo
 .vs/*
-blodapp/obj/Debug/*
-blodapp/bin/Debug/*.exe
-blodapp/bin/Debug/*.pdb
+blodapp\obj\Debug\*
+blodapp\bin\Debug\*.exe
+blodapp\bin\Debug\*.pdb
+blodapp\.vs\blodapp\v14\.suo
