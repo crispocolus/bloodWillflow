@@ -7,3 +7,5 @@
 blodapp/obj/Debug/*
 blodapp/bin/Debug/*.exe
 blodapp/bin/Debug/*.pdb
+blodapp/bin/Debug/*
+
