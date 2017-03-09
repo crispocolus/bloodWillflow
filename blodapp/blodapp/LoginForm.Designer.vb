@@ -44,11 +44,11 @@ Partial Class LoginForm
         'lblLoginBrukernavn
         '
         Me.lblLoginBrukernavn.AutoSize = True
-        Me.lblLoginBrukernavn.Location = New System.Drawing.Point(14, 55)
+        Me.lblLoginBrukernavn.Location = New System.Drawing.Point(42, 58)
         Me.lblLoginBrukernavn.Name = "lblLoginBrukernavn"
-        Me.lblLoginBrukernavn.Size = New System.Drawing.Size(65, 13)
+        Me.lblLoginBrukernavn.Size = New System.Drawing.Size(37, 13)
         Me.lblLoginBrukernavn.TabIndex = 1
-        Me.lblLoginBrukernavn.Text = "Brukernavn:"
+        Me.lblLoginBrukernavn.Text = "Epost:"
         '
         'lblLoginPwd
         '

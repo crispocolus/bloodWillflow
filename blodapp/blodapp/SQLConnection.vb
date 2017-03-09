@@ -5,6 +5,37 @@ Public Class Login
     Public databasenavn As String
     Public oppkobling As New MySqlConnection
 
+    Public Sub innlogging()
+        ry
+        Dim brukernavn = TextBox1.Text.Replace("'", "\'")
+        Dim passord = TextBox2.Text.Replace("'", "\'")
+        Dim sqlSporring = "select * from brukere where brukernavn=@brukernavn " & " and passord=@passord"
+        Dim sql As New MySqlCommand(sqlSporring, oppkobling)
+        'MsgBox("SQL-spørringen er: " & sqlSporring)
+
+        sql.Parameters.AddWithValue("@brukernavn", brukernavn)
+        sql.Parameters.AddWithValue("@passord", passord)
+
+        Dim da As New MySqlDataAdapter
+        Dim interTabell As New DataTable
+        da.SelectCommand = sql
+        da.Fill(interTabell)
+
+        If interTabell.Rows.Count > 0 Then
+            MsgBox("Logget på")
+            status = True
+            Label5.Text = "Bruker innlogget: " & brukernavn
+            MsgBox(lesTilfeldigVits())
+        Else
+            MsgBox("Feil brukernavn eller passord")
+            oppkobling.Close()
+        End If
+        oppkobling.Close()
+        Catch ex As MySqlException
+        MessageBox.Show("Noe gikk galt: " & ex.Message)
+        End Try
+    End Sub
+
 End Class
 
 '    Private brukernavn As String
