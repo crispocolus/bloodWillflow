@@ -4,35 +4,35 @@ Public Class Login
     Public passord As String
     Public databasenavn As String
     Public oppkobling As New MySqlConnection
+    Private paakoblet As Boolean = False
+
 
     Public Sub innlogging()
-        ry
-        Dim brukernavn = TextBox1.Text.Replace("'", "\'")
-        Dim passord = TextBox2.Text.Replace("'", "\'")
-        Dim sqlSporring = "select * from brukere where brukernavn=@brukernavn " & " and passord=@passord"
-        Dim sql As New MySqlCommand(sqlSporring, oppkobling)
-        'MsgBox("SQL-spørringen er: " & sqlSporring)
+        oppkobling = New MySqlConnection("server=mysql.stud.iie.ntnu.no;database=g_oops_25;uid=g_oops_25;Pwd=M3PV7P9e")
+        oppkobling.Open()
+        Try
+            Dim sqlSporring = "select * from brukere where epost=@brukernavn " & " and passord=@passord"
+            Dim sql As New MySqlCommand(sqlSporring, oppkobling)
 
-        sql.Parameters.AddWithValue("@brukernavn", brukernavn)
-        sql.Parameters.AddWithValue("@passord", passord)
+            sql.Parameters.AddWithValue("@brukernavn", brukernavn)
+            sql.Parameters.AddWithValue("@passord", passord)
 
-        Dim da As New MySqlDataAdapter
-        Dim interTabell As New DataTable
-        da.SelectCommand = sql
-        da.Fill(interTabell)
+            Dim da As New MySqlDataAdapter
+            Dim interTabell As New DataTable
+            da.SelectCommand = sql
+            da.Fill(interTabell)
 
-        If interTabell.Rows.Count > 0 Then
-            MsgBox("Logget på")
-            status = True
-            Label5.Text = "Bruker innlogget: " & brukernavn
-            MsgBox(lesTilfeldigVits())
-        Else
-            MsgBox("Feil brukernavn eller passord")
+            If interTabell.Rows.Count > 0 Then
+                MsgBox("Logget på")
+                paakoblet = True
+                'Label5.Text = "Bruker innlogget: " & brukernavn
+            Else
+                MsgBox("Feil brukernavn eller passord")
+                oppkobling.Close()
+            End If
             oppkobling.Close()
-        End If
-        oppkobling.Close()
         Catch ex As MySqlException
-        MessageBox.Show("Noe gikk galt: " & ex.Message)
+            MessageBox.Show("Noe gikk galt: " & ex.Message)
         End Try
     End Sub
 
