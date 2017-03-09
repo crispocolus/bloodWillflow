@@ -34,7 +34,7 @@ Partial Class LoginForm
         'btnLogin
         '
         Me.btnLogin.Location = New System.Drawing.Point(92, 123)
-        Me.btnLogin.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnLogin.Margin = New System.Windows.Forms.Padding(2)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(100, 36)
         Me.btnLogin.TabIndex = 0
@@ -90,6 +90,7 @@ Partial Class LoginForm
         '
         Me.txtLoginPwd.Location = New System.Drawing.Point(92, 85)
         Me.txtLoginPwd.Name = "txtLoginPwd"
+        Me.txtLoginPwd.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtLoginPwd.Size = New System.Drawing.Size(100, 20)
         Me.txtLoginPwd.TabIndex = 6
         '
@@ -105,7 +106,7 @@ Partial Class LoginForm
         Me.Controls.Add(Me.lblLoginPwd)
         Me.Controls.Add(Me.lblLoginBrukernavn)
         Me.Controls.Add(Me.btnLogin)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "LoginForm"
         Me.Text = "Logg inn"
         Me.ResumeLayout(False)
