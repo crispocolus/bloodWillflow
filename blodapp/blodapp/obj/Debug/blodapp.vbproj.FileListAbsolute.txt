@@ -1,1 +1,2 @@
 C:\g25\bloodWillflow\blodapp\blodapp\bin\Debug\blodapp.exe.config
+C:\Users\Even\Documents\Skole\OOPS\Prosjekt\gruppe25blodapp_try2\bloodWillflow\blodapp\blodapp\bin\Debug\blodapp.exe.config
