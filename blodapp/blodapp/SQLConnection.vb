@@ -1,9 +1,9 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Login
-    Private brukernavn As String
-    Private passord As String
-    Private databasenavn As String
-    Private oppkobling As New MySqlConnection
+    Public brukernavn As String
+    Public passord As String
+    Public databasenavn As String
+    Public oppkobling As New MySqlConnection
 
 End Class
 
