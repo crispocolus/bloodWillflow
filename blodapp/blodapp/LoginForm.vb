@@ -16,6 +16,7 @@ Public Class LoginForm
     End Sub
 
     Private Sub llblLoginReg_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llblLoginReg.LinkClicked
-        RegistrerForm.Open()
+        RegistrerForm.Show()
+        Me.Hide()
     End Sub
 End Class

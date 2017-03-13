@@ -22,10 +22,10 @@ Partial Class RegistrerForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.epostTxt = New System.Windows.Forms.TextBox()
+        Me.fornavnTxt = New System.Windows.Forms.TextBox()
+        Me.etternavnTxt = New System.Windows.Forms.TextBox()
+        Me.tlfTxt = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -33,33 +33,33 @@ Partial Class RegistrerForm
         Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'epostTxt
         '
-        Me.TextBox1.Location = New System.Drawing.Point(91, 34)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 0
+        Me.epostTxt.Location = New System.Drawing.Point(91, 34)
+        Me.epostTxt.Name = "epostTxt"
+        Me.epostTxt.Size = New System.Drawing.Size(100, 20)
+        Me.epostTxt.TabIndex = 0
         '
-        'TextBox2
+        'fornavnTxt
         '
-        Me.TextBox2.Location = New System.Drawing.Point(91, 71)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 1
+        Me.fornavnTxt.Location = New System.Drawing.Point(91, 71)
+        Me.fornavnTxt.Name = "fornavnTxt"
+        Me.fornavnTxt.Size = New System.Drawing.Size(100, 20)
+        Me.fornavnTxt.TabIndex = 1
         '
-        'TextBox3
+        'etternavnTxt
         '
-        Me.TextBox3.Location = New System.Drawing.Point(91, 109)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 2
+        Me.etternavnTxt.Location = New System.Drawing.Point(91, 109)
+        Me.etternavnTxt.Name = "etternavnTxt"
+        Me.etternavnTxt.Size = New System.Drawing.Size(100, 20)
+        Me.etternavnTxt.TabIndex = 2
         '
-        'TextBox4
+        'tlfTxt
         '
-        Me.TextBox4.Location = New System.Drawing.Point(91, 147)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 3
+        Me.tlfTxt.Location = New System.Drawing.Point(91, 147)
+        Me.tlfTxt.Name = "tlfTxt"
+        Me.tlfTxt.Size = New System.Drawing.Size(100, 20)
+        Me.tlfTxt.TabIndex = 3
         '
         'Label1
         '
@@ -116,10 +116,10 @@ Partial Class RegistrerForm
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.tlfTxt)
+        Me.Controls.Add(Me.etternavnTxt)
+        Me.Controls.Add(Me.fornavnTxt)
+        Me.Controls.Add(Me.epostTxt)
         Me.Name = "RegistrerForm"
         Me.Text = "RegistrerForm"
         Me.ResumeLayout(False)
@@ -127,10 +127,10 @@ Partial Class RegistrerForm
 
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents epostTxt As TextBox
+    Friend WithEvents fornavnTxt As TextBox
+    Friend WithEvents etternavnTxt As TextBox
+    Friend WithEvents tlfTxt As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
