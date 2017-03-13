@@ -25,6 +25,7 @@ Public Class Login
             If interTabell.Rows.Count > 0 Then
                 MsgBox("Logget på")
                 paakoblet = True
+                MinSide.Show()
                 'Label5.Text = "Bruker innlogget: " & brukernavn
             Else
                 MsgBox("Feil brukernavn eller passord")
