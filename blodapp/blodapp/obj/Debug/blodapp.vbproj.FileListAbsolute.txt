@@ -4,3 +4,13 @@ C:\bloodwillflow\blodapp\blodapp\bin\Debug\blodapp.exe.config
 C:\bloodwillflow\blodapp\blodapp\obj\Debug\blodapp.exe
 C:\bloodwillflow\blodapp\blodapp\obj\Debug\blodapp.xml
 C:\bloodwillflow\blodapp\blodapp\obj\Debug\blodapp.pdb
+C:\bloodwillflow\blodapp\blodapp\bin\Debug\blodapp.exe
+C:\bloodwillflow\blodapp\blodapp\bin\Debug\blodapp.pdb
+C:\bloodwillflow\blodapp\blodapp\bin\Debug\blodapp.xml
+C:\bloodwillflow\blodapp\blodapp\bin\Debug\MySql.Data.dll
+C:\bloodwillflow\blodapp\blodapp\bin\Debug\MySql.Data.xml
+C:\bloodwillflow\blodapp\blodapp\obj\Debug\blodapp.vbprojResolveAssemblyReference.cache
+C:\bloodwillflow\blodapp\blodapp\obj\Debug\blodapp.LoginForm.resources
+C:\bloodwillflow\blodapp\blodapp\obj\Debug\blodapp.MinSide.resources
+C:\bloodwillflow\blodapp\blodapp\obj\Debug\blodapp.Resources.resources
+C:\bloodwillflow\blodapp\blodapp\obj\Debug\blodapp.vbproj.GenerateResource.Cache

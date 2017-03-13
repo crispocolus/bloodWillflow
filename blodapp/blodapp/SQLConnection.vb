@@ -6,12 +6,11 @@ Public Class Login
     Public oppkobling As New MySqlConnection
     Private paakoblet As Boolean = False
 
-
     Public Sub innlogging()
         oppkobling = New MySqlConnection("server=mysql.stud.iie.ntnu.no;database=g_oops_25;uid=g_oops_25;Pwd=M3PV7P9e")
         oppkobling.Open()
         Try
-            Dim sqlSporring = "select * from brukere where epost=@brukernavn " & " and passord=@passord"
+            Dim sqlSporring = "select * from bruker where epost=@brukernavn " & " and passord=@passord"
             Dim sql As New MySqlCommand(sqlSporring, oppkobling)
 
             sql.Parameters.AddWithValue("@brukernavn", brukernavn)
