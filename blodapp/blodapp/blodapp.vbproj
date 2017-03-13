@@ -79,6 +79,12 @@
     <Compile Include="MinSide.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="RegistrerForm.Designer.vb">
+      <DependentUpon>RegistrerForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SQLConnection.vb" />
     <Compile Include="LoginForm.vb">
       <SubType>Form</SubType>
@@ -115,6 +121,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrerForm.resx">
+      <DependentUpon>RegistrerForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
