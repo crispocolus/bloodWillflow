@@ -73,10 +73,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MinSide.Designer.vb">
-      <DependentUpon>MinSide.vb</DependentUpon>
+    <Compile Include="LoggetInn.Designer.vb">
+      <DependentUpon>LoggetInn.vb</DependentUpon>
     </Compile>
-    <Compile Include="MinSide.vb">
+    <Compile Include="LoggetInn.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RegistrerForm.Designer.vb">
@@ -110,11 +110,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="LoggetInn.resx">
+      <DependentUpon>LoggetInn.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MinSide.resx">
-      <DependentUpon>MinSide.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

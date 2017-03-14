@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class MinSide
+Partial Class LoggetInn
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,13 +24,13 @@ Partial Class MinSide
     Private Sub InitializeComponent()
         Me.SuspendLayout()
         '
-        'MinSide
+        'LoggetInn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(282, 253)
-        Me.Name = "MinSide"
-        Me.Text = "MinSide"
+        Me.Name = "LoggetInn"
+        Me.Text = "LoggetInn"
         Me.ResumeLayout(False)
 
     End Sub

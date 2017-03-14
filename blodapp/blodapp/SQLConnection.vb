@@ -6,7 +6,8 @@ Public Class Login
     Public oppkobling As New MySqlConnection
     Private paakoblet As Boolean = False
 
-    Public Sub innlogging()
+
+    Public Function innlogging()
         oppkobling = New MySqlConnection("server=mysql.stud.iie.ntnu.no;database=g_oops_25;uid=g_oops_25;Pwd=M3PV7P9e")
         oppkobling.Open()
         Try
@@ -25,7 +26,6 @@ Public Class Login
                 MsgBox("Logget på")
                 paakoblet = True
                 MinSide.Show()
-                'Label5.Text = "Bruker innlogget: " & brukernavn
             Else
                 MsgBox("Feil brukernavn eller passord")
                 oppkobling.Close()
@@ -34,7 +34,7 @@ Public Class Login
         Catch ex As MySqlException
             MessageBox.Show("Noe gikk galt: " & ex.Message)
         End Try
-    End Sub
+    End Function
 
 End Class
 
