@@ -73,6 +73,24 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adminSide.Designer.vb">
+      <DependentUpon>adminSide.vb</DependentUpon>
+    </Compile>
+    <Compile Include="adminSide.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ansattSide.Designer.vb">
+      <DependentUpon>ansattSide.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ansattSide.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="brukerSide.Designer.vb">
+      <DependentUpon>brukerSide.vb</DependentUpon>
+    </Compile>
+    <Compile Include="brukerSide.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="LoggetInn.Designer.vb">
       <DependentUpon>LoggetInn.vb</DependentUpon>
     </Compile>
@@ -110,6 +128,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ansattSide.resx">
+      <DependentUpon>ansattSide.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoggetInn.resx">
       <DependentUpon>LoggetInn.vb</DependentUpon>
     </EmbeddedResource>
