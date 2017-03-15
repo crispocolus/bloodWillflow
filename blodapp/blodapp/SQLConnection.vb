@@ -40,33 +40,30 @@ Public Class Login
 
     Public Function sjekkBrukerStat(bnavn As String)
         Try
-            Dim brukerstatus As String = 0
+            Dim brukerstatus As String
             Dim sqlSporring = "select brukerstatus from bruker where epost=@brukernavn"
             Dim sql As New MySqlCommand(sqlSporring, oppkobling)
 
             sql.Parameters.AddWithValue("@brukernavn", bnavn)
-            '**NOT WORKING**
+            sql.ExecuteNonQuery()
 
-            'Dim data As New MySqlDataAdapter
-            'Dim interTabellDeux As New DataTable
-            'Data.SelectCommand = sql
-            'Data.Fill(interTabellDeux)
-            'MsgBox("Table filled")
+            Dim leser = sql.ExecuteReader()
+            While leser.Read()
+                brukerstatus = (leser("brukerstatus"))
+            End While
+            leser.Close()
 
-
-            'For Each DataRow In interTabellDeux.Rows
-            '    Select Case DataRow
-            '        Case 0
-            '            'brukerSide.Show()
-            '            MsgBox("Du er en bruker")
-            '        Case 1
-            '            'ansattSide.Show()
-            '            MsgBox("Du er en ansatt")
-            '        Case 2
-            '            'adminSide.Show()
-            '            MsgBox("Du er en admin")
-            '    End Select
-            'Next
+            Select Case brukerstatus
+                Case "0"
+                    brukerSide.Show()
+                    MsgBox("Du er en bruker")
+                Case "1"
+                    ansattSide.Show()
+                    MsgBox("Du er en ansatt")
+                Case "2"
+                    adminSide.Show()
+                    MsgBox("Du er en admin")
+            End Select
 
             '**NOT WORKING **
             oppkobling.Close()
