@@ -1,9 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class LoginForm
-    'Dim SQLConnection As Object
-    Private Sub LoginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         Dim logginntest As New Login

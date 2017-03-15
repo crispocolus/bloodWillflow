@@ -18,3 +18,14 @@ C:\g25\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.MinSide.resources
 C:\g25\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.Resources.resources
 C:\g25\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.RegistrerForm.resources
 C:\g25\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.vbproj.GenerateResource.Cache
+C:\bloodwillflow\blodapp\blodapp\obj\Debug\blodapp.vbprojResolveAssemblyReference.cache
+C:\bloodwillflow\blodapp\blodapp\obj\Debug\blodapp.LoggetInn.resources
+C:\bloodwillflow\blodapp\blodapp\obj\Debug\blodapp.LoginForm.resources
+C:\bloodwillflow\blodapp\blodapp\obj\Debug\blodapp.Resources.resources
+C:\bloodwillflow\blodapp\blodapp\obj\Debug\blodapp.RegistrerForm.resources
+C:\bloodwillflow\blodapp\blodapp\obj\Debug\blodapp.vbproj.GenerateResource.Cache
+C:\bloodwillflow\blodapp\blodapp\bin\Debug\blodapp.exe
+C:\bloodwillflow\blodapp\blodapp\bin\Debug\blodapp.pdb
+C:\bloodwillflow\blodapp\blodapp\bin\Debug\blodapp.xml
+C:\bloodwillflow\blodapp\blodapp\bin\Debug\MySql.Data.dll
+C:\bloodwillflow\blodapp\blodapp\bin\Debug\MySql.Data.xml

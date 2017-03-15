@@ -3,12 +3,14 @@ Public Class Login
     Public brukernavn As String
     Public passord As String
     Public databasenavn As String
-    Public oppkobling As New MySqlConnection
+    'Public oppkobling As New MySqlConnection
     Private paakoblet As Boolean = False
+    Public oppkobling = New MySqlConnection("server=mysql.stud.iie.ntnu.no;database=g_oops_25;uid=g_oops_25;Pwd=M3PV7P9e")
+    Dim brukerstatus As String
 
 
-    Public Function innlogging()
-        oppkobling = New MySqlConnection("server=mysql.stud.iie.ntnu.no;database=g_oops_25;uid=g_oops_25;Pwd=M3PV7P9e")
+
+    Public Sub innlogging()
         oppkobling.Open()
         Try
             Dim sqlSporring = "select * from bruker where epost=@brukernavn " & " and passord=@passord"
@@ -25,7 +27,7 @@ Public Class Login
             If interTabell.Rows.Count > 0 Then
                 MsgBox("Logget på")
                 paakoblet = True
-                MinSide.Show()
+                MsgBox(sjekkBrukerStat(brukernavn))
             Else
                 MsgBox("Feil brukernavn eller passord")
                 oppkobling.Close()
@@ -34,8 +36,44 @@ Public Class Login
         Catch ex As MySqlException
             MessageBox.Show("Noe gikk galt: " & ex.Message)
         End Try
-    End Function
+    End Sub
 
+    Public Function sjekkBrukerStat(bnavn As String)
+        Try
+            Dim brukerstatus As String = 0
+            Dim sqlSporring = "select brukerstatus from bruker where epost=@brukernavn"
+            Dim sql As New MySqlCommand(sqlSporring, oppkobling)
+
+            sql.Parameters.AddWithValue("@brukernavn", bnavn)
+            '**NOT WORKING**
+
+            'Dim data As New MySqlDataAdapter
+            'Dim interTabellDeux As New DataTable
+            'Data.SelectCommand = sql
+            'Data.Fill(interTabellDeux)
+            'MsgBox("Table filled")
+
+
+            'For Each DataRow In interTabellDeux.Rows
+            '    Select Case DataRow
+            '        Case 0
+            '            'brukerSide.Show()
+            '            MsgBox("Du er en bruker")
+            '        Case 1
+            '            'ansattSide.Show()
+            '            MsgBox("Du er en ansatt")
+            '        Case 2
+            '            'adminSide.Show()
+            '            MsgBox("Du er en admin")
+            '    End Select
+            'Next
+
+            '**NOT WORKING **
+            oppkobling.Close()
+        Catch ex As MySqlException
+            MessageBox.Show("Noe gikk galt: " & ex.Message)
+        End Try
+    End Function
 End Class
 
 '    Private brukernavn As String
