@@ -40,8 +40,9 @@ Partial Class ansattSide
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtTidspunkt = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.btnSend = New System.Windows.Forms.Button()
+        Me.btnRetur = New System.Windows.Forms.Button()
+        Me.chkBekreft = New System.Windows.Forms.CheckBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -135,8 +136,9 @@ Partial Class ansattSide
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.chkBekreft)
+        Me.TabPage2.Controls.Add(Me.btnRetur)
         Me.TabPage2.Controls.Add(Me.btnSend)
-        Me.TabPage2.Controls.Add(Me.CheckBox1)
         Me.TabPage2.Controls.Add(Me.txtTidspunkt)
         Me.TabPage2.Controls.Add(Me.Label7)
         Me.TabPage2.Controls.Add(Me.txtMengde)
@@ -218,24 +220,34 @@ Partial Class ansattSide
         Me.Label7.TabIndex = 7
         Me.Label7.Text = "Tidspunkt mottatt:"
         '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(263, 198)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(115, 17)
-        Me.CheckBox1.TabIndex = 9
-        Me.CheckBox1.Text = "Godkjenn bestilling"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
         'btnSend
         '
+        Me.btnSend.Enabled = False
         Me.btnSend.Location = New System.Drawing.Point(263, 237)
         Me.btnSend.Name = "btnSend"
         Me.btnSend.Size = New System.Drawing.Size(100, 23)
         Me.btnSend.TabIndex = 10
         Me.btnSend.Text = "Send bestilling"
         Me.btnSend.UseVisualStyleBackColor = True
+        '
+        'btnRetur
+        '
+        Me.btnRetur.Location = New System.Drawing.Point(263, 208)
+        Me.btnRetur.Name = "btnRetur"
+        Me.btnRetur.Size = New System.Drawing.Size(100, 23)
+        Me.btnRetur.TabIndex = 11
+        Me.btnRetur.Text = "Send retur"
+        Me.btnRetur.UseVisualStyleBackColor = True
+        '
+        'chkBekreft
+        '
+        Me.chkBekreft.AutoSize = True
+        Me.chkBekreft.Location = New System.Drawing.Point(271, 185)
+        Me.chkBekreft.Name = "chkBekreft"
+        Me.chkBekreft.Size = New System.Drawing.Size(81, 17)
+        Me.chkBekreft.TabIndex = 12
+        Me.chkBekreft.Text = "CheckBox1"
+        Me.chkBekreft.UseVisualStyleBackColor = True
         '
         'ansattSide
         '
@@ -265,7 +277,6 @@ Partial Class ansattSide
     Friend WithEvents lstKandidater As ListBox
     Friend WithEvents CBoxBlodtype As ComboBox
     Friend WithEvents btnSend As Button
-    Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents txtTidspunkt As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents txtMengde As TextBox
@@ -274,4 +285,6 @@ Partial Class ansattSide
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents lstBestillinger As ListBox
+    Friend WithEvents btnRetur As Button
+    Friend WithEvents chkBekreft As CheckBox
 End Class
