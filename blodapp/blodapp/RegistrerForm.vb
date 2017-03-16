@@ -37,4 +37,6 @@ Public Class RegistrerForm
             MsgBox("Registrering fullført." & vbCrLf & "Brukernavnet ditt er: " & epostTxt.Text & vbCrLf & vbCrLf & "Du kan nå gi samtykke ved resepsjonen")
         End If
     End Sub
+
+
 End Class

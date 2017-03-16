@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ansattSide
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class ansattSide
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -32,17 +32,17 @@ Partial Class ansattSide
         Me.lstKandidater = New System.Windows.Forms.ListBox()
         Me.CBoxBlodtype = New System.Windows.Forms.ComboBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.lstBestillinger = New System.Windows.Forms.ListBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtBlodtype = New System.Windows.Forms.TextBox()
-        Me.txtMengde = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.chkBekreft = New System.Windows.Forms.CheckBox()
+        Me.btnRetur = New System.Windows.Forms.Button()
+        Me.btnSend = New System.Windows.Forms.Button()
         Me.txtTidspunkt = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.btnSend = New System.Windows.Forms.Button()
-        Me.btnRetur = New System.Windows.Forms.Button()
-        Me.chkBekreft = New System.Windows.Forms.CheckBox()
+        Me.txtMengde = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtBlodtype = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.lstBestillinger = New System.Windows.Forms.ListBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -72,7 +72,7 @@ Partial Class ansattSide
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(582, 388)
         Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "TabPage1"
+        Me.TabPage1.Text = "Innkalling"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
         'btnInnkalling
@@ -152,57 +152,37 @@ Partial Class ansattSide
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(582, 388)
         Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "TabPage2"
+        Me.TabPage2.Text = "Bestillinger"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'lstBestillinger
+        'chkBekreft
         '
-        Me.lstBestillinger.FormattingEnabled = True
-        Me.lstBestillinger.Location = New System.Drawing.Point(24, 35)
-        Me.lstBestillinger.Name = "lstBestillinger"
-        Me.lstBestillinger.Size = New System.Drawing.Size(184, 225)
-        Me.lstBestillinger.TabIndex = 0
+        Me.chkBekreft.AutoSize = True
+        Me.chkBekreft.Location = New System.Drawing.Point(271, 185)
+        Me.chkBekreft.Name = "chkBekreft"
+        Me.chkBekreft.Size = New System.Drawing.Size(81, 17)
+        Me.chkBekreft.TabIndex = 12
+        Me.chkBekreft.Text = "CheckBox1"
+        Me.chkBekreft.UseVisualStyleBackColor = True
         '
-        'Label4
+        'btnRetur
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(24, 16)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(76, 13)
-        Me.Label4.TabIndex = 2
-        Me.Label4.Text = "Alle bestillinger"
+        Me.btnRetur.Location = New System.Drawing.Point(263, 208)
+        Me.btnRetur.Name = "btnRetur"
+        Me.btnRetur.Size = New System.Drawing.Size(100, 23)
+        Me.btnRetur.TabIndex = 11
+        Me.btnRetur.Text = "Send retur"
+        Me.btnRetur.UseVisualStyleBackColor = True
         '
-        'Label5
+        'btnSend
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(260, 19)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(51, 13)
-        Me.Label5.TabIndex = 3
-        Me.Label5.Text = "Blodtype:"
-        '
-        'txtBlodtype
-        '
-        Me.txtBlodtype.Location = New System.Drawing.Point(263, 36)
-        Me.txtBlodtype.Name = "txtBlodtype"
-        Me.txtBlodtype.Size = New System.Drawing.Size(100, 20)
-        Me.txtBlodtype.TabIndex = 4
-        '
-        'txtMengde
-        '
-        Me.txtMengde.Location = New System.Drawing.Point(263, 97)
-        Me.txtMengde.Name = "txtMengde"
-        Me.txtMengde.Size = New System.Drawing.Size(100, 20)
-        Me.txtMengde.TabIndex = 6
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(260, 80)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(49, 13)
-        Me.Label6.TabIndex = 5
-        Me.Label6.Text = "Mengde:"
+        Me.btnSend.Enabled = False
+        Me.btnSend.Location = New System.Drawing.Point(263, 237)
+        Me.btnSend.Name = "btnSend"
+        Me.btnSend.Size = New System.Drawing.Size(100, 23)
+        Me.btnSend.TabIndex = 10
+        Me.btnSend.Text = "Send bestilling"
+        Me.btnSend.UseVisualStyleBackColor = True
         '
         'txtTidspunkt
         '
@@ -220,34 +200,54 @@ Partial Class ansattSide
         Me.Label7.TabIndex = 7
         Me.Label7.Text = "Tidspunkt mottatt:"
         '
-        'btnSend
+        'txtMengde
         '
-        Me.btnSend.Enabled = False
-        Me.btnSend.Location = New System.Drawing.Point(263, 237)
-        Me.btnSend.Name = "btnSend"
-        Me.btnSend.Size = New System.Drawing.Size(100, 23)
-        Me.btnSend.TabIndex = 10
-        Me.btnSend.Text = "Send bestilling"
-        Me.btnSend.UseVisualStyleBackColor = True
+        Me.txtMengde.Location = New System.Drawing.Point(263, 97)
+        Me.txtMengde.Name = "txtMengde"
+        Me.txtMengde.Size = New System.Drawing.Size(100, 20)
+        Me.txtMengde.TabIndex = 6
         '
-        'btnRetur
+        'Label6
         '
-        Me.btnRetur.Location = New System.Drawing.Point(263, 208)
-        Me.btnRetur.Name = "btnRetur"
-        Me.btnRetur.Size = New System.Drawing.Size(100, 23)
-        Me.btnRetur.TabIndex = 11
-        Me.btnRetur.Text = "Send retur"
-        Me.btnRetur.UseVisualStyleBackColor = True
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(260, 80)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(49, 13)
+        Me.Label6.TabIndex = 5
+        Me.Label6.Text = "Mengde:"
         '
-        'chkBekreft
+        'txtBlodtype
         '
-        Me.chkBekreft.AutoSize = True
-        Me.chkBekreft.Location = New System.Drawing.Point(271, 185)
-        Me.chkBekreft.Name = "chkBekreft"
-        Me.chkBekreft.Size = New System.Drawing.Size(81, 17)
-        Me.chkBekreft.TabIndex = 12
-        Me.chkBekreft.Text = "CheckBox1"
-        Me.chkBekreft.UseVisualStyleBackColor = True
+        Me.txtBlodtype.Location = New System.Drawing.Point(263, 36)
+        Me.txtBlodtype.Name = "txtBlodtype"
+        Me.txtBlodtype.Size = New System.Drawing.Size(100, 20)
+        Me.txtBlodtype.TabIndex = 4
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(260, 19)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(51, 13)
+        Me.Label5.TabIndex = 3
+        Me.Label5.Text = "Blodtype:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(24, 16)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(76, 13)
+        Me.Label4.TabIndex = 2
+        Me.Label4.Text = "Alle bestillinger"
+        '
+        'lstBestillinger
+        '
+        Me.lstBestillinger.FormattingEnabled = True
+        Me.lstBestillinger.Location = New System.Drawing.Point(24, 35)
+        Me.lstBestillinger.Name = "lstBestillinger"
+        Me.lstBestillinger.Size = New System.Drawing.Size(184, 225)
+        Me.lstBestillinger.TabIndex = 0
         '
         'ansattSide
         '
