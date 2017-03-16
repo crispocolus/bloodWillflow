@@ -6,22 +6,31 @@ Public Class Login
     Private paakoblet As Boolean = False
     Public oppkobling = New MySqlConnection("server=mysql.stud.iie.ntnu.no;database=g_oops_25;uid=g_oops_25;Pwd=M3PV7P9e")
     Dim brukerstatus As String
+    Dim paakoblet As Boolean
 
+    'Påloggingskode. Utføres når brukeren logger inn.
     Public Sub innlogging()
+        'Åpner tilkoblingen til databasen
         oppkobling.Open()
         Try
+            'Finner brukeren i databasen
             Dim sqlSporring = "select * from bruker where epost=@brukernavn " & " and passord=@passord"
+            'Setter opp en sql funksjon ved hjelp av spørringen og tilkoblingen
             Dim sql As New MySqlCommand(sqlSporring, oppkobling)
 
+            'Gjør det mulig å bruke variabler i sql-kode
             sql.Parameters.AddWithValue("@brukernavn", brukernavn)
             sql.Parameters.AddWithValue("@passord", passord)
 
+            'Fyller en tabell med resultat fra query
             Dim da As New MySqlDataAdapter
             Dim interTabell As New DataTable
             da.SelectCommand = sql
             da.Fill(interTabell)
 
+            'Sjekker om det kommer noe restultat. Hvis ja, sier "Logget på" og utfører "sjekkBrukerStat()"
             If interTabell.Rows.Count > 0 Then
+
                 MsgBox("Logget på")
                 paakoblet = True
                 MsgBox(sjekkBrukerStat(brukernavn))
@@ -31,6 +40,7 @@ Public Class Login
             End If
             oppkobling.Close()
         Catch ex As MySqlException
+            'Gir feilmelding om 
             MessageBox.Show("Noe gikk galt: " & ex.Message)
         End Try
     End Sub
@@ -69,70 +79,35 @@ Public Class Login
             MessageBox.Show("Noe gikk galt: " & ex.Message)
         End Try
     End Function
+
+
+
+    Private Function HentData(ByVal sql As String) As DataTable
+
+        Dim tabell As New DataTable
+
+        If status = False Then
+            MsgBox("Du er ikke logget inn")
+        Else
+            Try
+                oppkobling.Open()
+
+                Dim kommando As New MySqlCommand(sql, oppkobling)
+
+                Dim da As New MySqlDataAdapter
+                da.SelectCommand = kommando
+                da.Fill(tabell)
+                oppkobling.Close()
+            Catch ex As MySqlException
+                MessageBox.Show("Noe gikk galt: " & ex.Message)
+            End Try
+        End If
+        Return tabell
+    End Function
 End Class
 
-'    Private brukernavn As String
-'    Private passord As String
-'    Private databasenavn As String
-'    Private tjener As String
 
-'    Private oppkobling As New MySqlConnection
-'    Private connstring As String
 
-'    Private sorter As String
-'    Private status As Boolean = False
-'    'Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-'    '    Try
-'    '        
-'    '        Dim sqlSporring = "select * from brukere where brukernavn=@brukernavn " & " and passord=@passord"
-'    '        Dim sql As New MySqlCommand(sqlSporring, oppkobling)
-'    '        'MsgBox("SQL-spørringen er: " & sqlSporring)
-
-'    '        sql.Parameters.AddWithValue("@brukernavn", brukernavn)
-'    '        sql.Parameters.AddWithValue("@passord", passord)
-
-'    '        Dim da As New MySqlDataAdapter
-'    '        Dim interTabell As New DataTable
-'    '        da.SelectCommand = sql
-'    '        da.Fill(interTabell)
-
-'    '        If interTabell.Rows.Count > 0 Then
-'    '            MsgBox("Logget på")
-'    '            status = True
-'    '            Label5.Text = "Bruker innlogget: " & brukernavn
-'    '            MsgBox(lesTilfeldigVits())
-'    '        Else
-'    '            MsgBox("Feil brukernavn eller passord")
-'    '            oppkobling.Close()
-'    '        End If
-'    '        oppkobling.Close()
-'    '    Catch ex As MySqlException
-'    '        MessageBox.Show("Noe gikk galt: " & ex.Message)
-'    '    End Try
-
-'    'End Sub
-
-'    Private Function Sporring(ByVal sql As String) As DataTable
-'        Dim tabell As New DataTable
-
-'        If status = False Then
-'            MsgBox("Du er ikke logget inn")
-'        Else
-'            Try
-'                oppkobling.Open()
-
-'                Dim kommando As New MySqlCommand(sql, oppkobling)
-
-'                Dim da As New MySqlDataAdapter
-'                da.SelectCommand = kommando
-'                da.Fill(tabell)
-'                oppkobling.Close()
-'            Catch ex As MySqlException
-'                MessageBox.Show("Noe gikk galt: " & ex.Message)
-'            End Try
-'        End If
-'        Return tabell
-'    End Function
 '    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 '        oppkobling = New MySqlConnection("server=mysql.stud.iie.ntnu.no;database=g_oops_25;uid=g_oops_25;Pwd=M3PV7P9e")

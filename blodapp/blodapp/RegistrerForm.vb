@@ -12,11 +12,13 @@ Public Class RegistrerForm
     End Function
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        SjekkInfo()
+    End Sub
 
+
+    Public Sub SjekkInfo()
         Dim fornavn As String = fornavnTxt.Text
         Dim etternavn As String = etternavnTxt.Text
-
-
         Dim godkjentEpost As Boolean = False
         Dim godkjentTelefon As Boolean = False
 
@@ -24,7 +26,6 @@ Public Class RegistrerForm
             godkjentEpost = True
         Else
             MsgBox("Epost ikke godkjent. Sjekk om du har husket @")
-
         End If
 
         If IsNumeric(tlfTxt.Text) And tlfTxt.TextLength = 8 Then
@@ -35,8 +36,11 @@ Public Class RegistrerForm
 
         If godkjentEpost = True And godkjentTelefon = True Then
             MsgBox("Registrering fullført." & vbCrLf & "Brukernavnet ditt er: " & epostTxt.Text & vbCrLf & vbCrLf & "Du kan nå gi samtykke ved resepsjonen")
+            sendInfo()
         End If
     End Sub
 
+    Public Sub sendInfo()
 
+    End Sub
 End Class

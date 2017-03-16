@@ -97,6 +97,7 @@
     <Compile Include="ProsFunk.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="regbruker.vb" />
     <Compile Include="RegistrerForm.Designer.vb">
       <DependentUpon>RegistrerForm.vb</DependentUpon>
     </Compile>
