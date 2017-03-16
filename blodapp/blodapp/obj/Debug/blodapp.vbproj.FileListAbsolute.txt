@@ -29,3 +29,4 @@ C:\bloodwillflow\blodapp\blodapp\bin\Debug\blodapp.pdb
 C:\bloodwillflow\blodapp\blodapp\bin\Debug\blodapp.xml
 C:\bloodwillflow\blodapp\blodapp\bin\Debug\MySql.Data.dll
 C:\bloodwillflow\blodapp\blodapp\bin\Debug\MySql.Data.xml
+C:\bloodwillflow\blodapp\blodapp\obj\Debug\blodapp.ansattSide.resources

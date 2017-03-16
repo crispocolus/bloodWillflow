@@ -3,12 +3,9 @@ Public Class Login
     Public brukernavn As String
     Public passord As String
     Public databasenavn As String
-    'Public oppkobling As New MySqlConnection
     Private paakoblet As Boolean = False
     Public oppkobling = New MySqlConnection("server=mysql.stud.iie.ntnu.no;database=g_oops_25;uid=g_oops_25;Pwd=M3PV7P9e")
     Dim brukerstatus As String
-
-
 
     Public Sub innlogging()
         oppkobling.Open()
@@ -40,7 +37,7 @@ Public Class Login
 
     Public Function sjekkBrukerStat(bnavn As String)
         Try
-            Dim brukerstatus As String
+            Dim brukerstatus As String = -1
             Dim sqlSporring = "select brukerstatus from bruker where epost=@brukernavn"
             Dim sql As New MySqlCommand(sqlSporring, oppkobling)
 
@@ -63,9 +60,10 @@ Public Class Login
                 Case "2"
                     adminSide.Show()
                     MsgBox("Du er en admin")
+                Case Else
+                    MsgBox("En feil oppstod: 'brukerstatus not found'. Vennligst kontakt personalet.")
             End Select
 
-            '**NOT WORKING **
             oppkobling.Close()
         Catch ex As MySqlException
             MessageBox.Show("Noe gikk galt: " & ex.Message)
@@ -85,8 +83,7 @@ End Class
 '    Private status As Boolean = False
 '    'Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 '    '    Try
-'    '        Dim brukernavn = TextBox1.Text.Replace("'", "\'")
-'    '        Dim passord = TextBox2.Text.Replace("'", "\'")
+'    '        
 '    '        Dim sqlSporring = "select * from brukere where brukernavn=@brukernavn " & " and passord=@passord"
 '    '        Dim sql As New MySqlCommand(sqlSporring, oppkobling)
 '    '        'MsgBox("SQL-spørringen er: " & sqlSporring)
