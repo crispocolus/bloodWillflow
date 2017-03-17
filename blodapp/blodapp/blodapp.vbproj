@@ -79,6 +79,12 @@
     <Compile Include="adminSide.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="lederSide.Designer.vb">
+      <DependentUpon>lederSide.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lederSide.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ansattSide.Designer.vb">
       <DependentUpon>ansattSide.vb</DependentUpon>
     </Compile>
@@ -131,6 +137,9 @@
   <ItemGroup>
     <EmbeddedResource Include="adminSide.resx">
       <DependentUpon>adminSide.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lederSide.resx">
+      <DependentUpon>lederSide.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ansattSide.resx">
       <DependentUpon>ansattSide.vb</DependentUpon>
