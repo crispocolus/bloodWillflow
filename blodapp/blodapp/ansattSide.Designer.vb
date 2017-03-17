@@ -158,11 +158,11 @@ Partial Class ansattSide
         'chkBekreft
         '
         Me.chkBekreft.AutoSize = True
-        Me.chkBekreft.Location = New System.Drawing.Point(271, 185)
+        Me.chkBekreft.Location = New System.Drawing.Point(263, 185)
         Me.chkBekreft.Name = "chkBekreft"
-        Me.chkBekreft.Size = New System.Drawing.Size(81, 17)
+        Me.chkBekreft.Size = New System.Drawing.Size(103, 17)
         Me.chkBekreft.TabIndex = 12
-        Me.chkBekreft.Text = "CheckBox1"
+        Me.chkBekreft.Text = "Bekreft bestilling"
         Me.chkBekreft.UseVisualStyleBackColor = True
         '
         'btnRetur

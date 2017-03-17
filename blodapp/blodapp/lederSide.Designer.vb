@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class lederSide
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class lederSide
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -45,14 +45,10 @@ Partial Class lederSide
         Me.lstBestillinger = New System.Windows.Forms.ListBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.lstStatistikk = New System.Windows.Forms.ListBox()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.TabPage3.SuspendLayout()
-        Me.TabPage4.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -60,7 +56,6 @@ Partial Class lederSide
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
-        Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Location = New System.Drawing.Point(0, 1)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -277,42 +272,13 @@ Partial Class lederSide
         Me.lstStatistikk.Size = New System.Drawing.Size(212, 199)
         Me.lstStatistikk.TabIndex = 0
         '
-        'TabPage4
-        '
-        Me.TabPage4.Controls.Add(Me.Label8)
-        Me.TabPage4.Controls.Add(Me.ListBox1)
-        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(582, 388)
-        Me.TabPage4.TabIndex = 3
-        Me.TabPage4.Text = "Brukeradmin"
-        Me.TabPage4.UseVisualStyleBackColor = True
-        '
-        'ListBox1
-        '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(37, 37)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(108, 303)
-        Me.ListBox1.TabIndex = 0
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(34, 21)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(75, 13)
-        Me.Label8.TabIndex = 3
-        Me.Label8.Text = "Brukeroversikt"
-        '
-        'adminSide
+        'lederSide
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(587, 411)
         Me.Controls.Add(Me.TabControl1)
-        Me.Name = "adminSide"
+        Me.Name = "lederSide"
         Me.Text = "adminSide"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
@@ -320,8 +286,6 @@ Partial Class lederSide
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
-        Me.TabPage4.ResumeLayout(False)
-        Me.TabPage4.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -349,7 +313,4 @@ Partial Class lederSide
     Friend WithEvents lstBestillinger As ListBox
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents lstStatistikk As ListBox
-    Friend WithEvents TabPage4 As TabPage
-    Friend WithEvents ListBox1 As ListBox
-    Friend WithEvents Label8 As Label
 End Class
