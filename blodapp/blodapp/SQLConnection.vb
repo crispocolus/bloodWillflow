@@ -1,26 +1,40 @@
 ﻿Imports MySql.Data.MySqlClient
+Public Class SQL
+    Public oppkobling = New MySqlConnection("server=mysql.stud.iie.ntnu.no;database=g_oops_25;uid=g_oops_25;Pwd=M3PV7P9e")
+    Public paakoblet As Boolean = False
+End Class
 Public Class Login
     Public brukernavn As String
     Public passord As String
     Public databasenavn As String
-    Private paakoblet As Boolean = False
-    Public oppkobling = New MySqlConnection("server=mysql.stud.iie.ntnu.no;database=g_oops_25;uid=g_oops_25;Pwd=M3PV7P9e")
     Dim brukerstatus As String
-    Dim paakoblet As Boolean
+
 
     'Påloggingskode. Utføres når brukeren logger inn.
     Public Sub innlogging()
+        'Importerer oppkobling fra SQL klassen
+        Dim connect As New SQL
+        Dim oppkobling = connect.oppkobling
+        'Importerer BrukerStat klassen
+        Dim brukerstat As New BrukerStat
+
         'Åpner tilkoblingen til databasen
-        oppkobling.Open()
+
         Try
+            oppkobling.Open()
+
             'Finner brukeren i databasen
-            Dim sqlSporring = "select * from bruker where epost=@brukernavn " & " and passord=@passord"
+            Dim sqlSporring = "select * from bruker where epost=@brukernavn " & " and hash=@passordHash"
+
+
+
             'Setter opp en sql funksjon ved hjelp av spørringen og tilkoblingen
             Dim sql As New MySqlCommand(sqlSporring, oppkobling)
 
+
             'Gjør det mulig å bruke variabler i sql-kode
             sql.Parameters.AddWithValue("@brukernavn", brukernavn)
-            sql.Parameters.AddWithValue("@passord", passord)
+            sql.Parameters.AddWithValue("@passordHash", passord)
 
             'Fyller en tabell med resultat fra query
             Dim da As New MySqlDataAdapter
@@ -30,10 +44,9 @@ Public Class Login
 
             'Sjekker om det kommer noe restultat. Hvis ja, sier "Logget på" og utfører "sjekkBrukerStat()"
             If interTabell.Rows.Count > 0 Then
-
-                MsgBox("Logget på")
-                paakoblet = True
-                MsgBox(sjekkBrukerStat(brukernavn))
+                MsgBox("Innlogget", MsgBoxStyle.Information)
+                connect.paakoblet = True
+                brukerstat.sjekkBrukerStat(brukernavn)
             Else
                 MsgBox("Feil brukernavn eller passord")
                 oppkobling.Close()
@@ -44,8 +57,42 @@ Public Class Login
             MessageBox.Show("Noe gikk galt: " & ex.Message)
         End Try
     End Sub
+End Class
 
-    Public Function sjekkBrukerStat(bnavn As String)
+Public Class HentData
+    Private Function HentData(ByVal sql As String) As DataTable
+        'Importerer oppkobling fra SQL klassen
+        Dim connect As New SQL
+        Dim oppkobling = connect.oppkobling
+
+
+        Dim tabell As New DataTable
+        If connect.paakoblet = False Then
+            MsgBox("Du er ikke logget inn")
+        Else
+            Try
+                oppkobling.Open()
+
+                Dim kommando As New MySqlCommand(sql, oppkobling)
+
+                Dim da As New MySqlDataAdapter
+                da.SelectCommand = kommando
+                da.Fill(tabell)
+                oppkobling.Close()
+            Catch ex As MySqlException
+                MessageBox.Show("Noe gikk galt: " & ex.Message)
+            End Try
+        End If
+        Return tabell
+    End Function
+End Class
+
+Public Class BrukerStat
+    Public Sub sjekkBrukerStat(bnavn As String)
+        'Importerer oppkobling fra SQL klassen
+        Dim connect As New SQL
+        Dim oppkobling = connect.oppkobling
+
         Try
             Dim brukerstatus As String = -1
             Dim sqlSporring = "select brukerstatus from bruker where epost=@brukernavn"
@@ -73,40 +120,70 @@ Public Class Login
                 Case Else
                     MsgBox("En feil oppstod: 'brukerstatus not found'. Vennligst kontakt personalet.")
             End Select
-
             oppkobling.Close()
         Catch ex As MySqlException
             MessageBox.Show("Noe gikk galt: " & ex.Message)
         End Try
-    End Function
-
-
-
-    Private Function HentData(ByVal sql As String) As DataTable
-
-        Dim tabell As New DataTable
-
-        If status = False Then
-            MsgBox("Du er ikke logget inn")
-        Else
-            Try
-                oppkobling.Open()
-
-                Dim kommando As New MySqlCommand(sql, oppkobling)
-
-                Dim da As New MySqlDataAdapter
-                da.SelectCommand = kommando
-                da.Fill(tabell)
-                oppkobling.Close()
-            Catch ex As MySqlException
-                MessageBox.Show("Noe gikk galt: " & ex.Message)
-            End Try
-        End If
-        Return tabell
-    End Function
+    End Sub
 End Class
 
+Public Class RegBruker
 
+    Public Sub sendInfo(postnr As String,
+                        gtadresse As String,
+                        stdnavn As String,
+                        fylke As String,
+                        pnummer As String,
+                        fnavn As String,
+                        enavn As String,
+                        epost As String,
+                        telefon As String,
+                        passordHash As String,
+                        salt As String
+                        )
+        'Importerer oppkobling fra SQL klassen
+        Dim connect As New SQL
+        Dim oppkobling = connect.oppkobling
+
+        Dim adresse_id As String
+
+        Try
+            oppkobling.Open()
+
+            Dim sqlSporring = "insert into adresse (postnr, gateadresse, stednavn, fylke) values (@post_nr, @gtadresse, @stdnavn, @fylke)"
+
+            Dim sql As New MySqlCommand(sqlSporring, oppkobling)
+
+            sql.Parameters.AddWithValue("@post_nr", postnr)
+            sql.Parameters.AddWithValue("@gtadresse", gtadresse)
+            sql.Parameters.AddWithValue("@stdnavn", stdnavn)
+            sql.Parameters.AddWithValue("@fylke", fylke)
+            sql.ExecuteNonQuery()
+
+            adresse_id = sql.LastInsertedId
+
+            Dim sqlSporring2 = "insert into bruker (person_nr, brukerstatus, fornavn, etternavn, epost, telefon, fdato, hash, salt) values (@person_nr, @brukerstatus, @fornavn, @etternavn, @epost, @telefon, @fdato, @hash, @salt)"
+
+            Dim sql2 As New MySqlCommand(sqlSporring2, oppkobling)
+            sql2.Parameters.AddWithValue("@person_nr", pnummer)
+            sql2.Parameters.AddWithValue("@brukerstatus", "0")
+            sql2.Parameters.AddWithValue("@fornavn", fnavn)
+            sql2.Parameters.AddWithValue("@etternavn", enavn)
+            sql2.Parameters.AddWithValue("@epost", epost)
+            sql2.Parameters.AddWithValue("@telefon", telefon)
+            sql2.Parameters.AddWithValue("@fdato", "112397")
+            sql2.Parameters.AddWithValue("@adresse_id", adresse_id)
+            sql2.Parameters.AddWithValue("@hash", passordHash)
+            sql2.Parameters.AddWithValue("@salt", salt)
+
+            sql2.ExecuteNonQuery()
+
+            oppkobling.Close()
+        Catch ex As Exception
+            MessageBox.Show("Noe gikk galt: " & ex.Message)
+        End Try
+    End Sub
+End Class
 
 '    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
