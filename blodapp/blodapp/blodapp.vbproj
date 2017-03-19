@@ -79,6 +79,18 @@
     <Compile Include="adminSide.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="egenerklaering.Designer.vb">
+      <DependentUpon>egenerklaering.vb</DependentUpon>
+    </Compile>
+    <Compile Include="egenerklaering.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="egenerklaering2.Designer.vb">
+      <DependentUpon>egenerklaering2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="egenerklaering2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="lederSide.Designer.vb">
       <DependentUpon>lederSide.vb</DependentUpon>
     </Compile>
@@ -137,6 +149,12 @@
   <ItemGroup>
     <EmbeddedResource Include="adminSide.resx">
       <DependentUpon>adminSide.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="egenerklaering.resx">
+      <DependentUpon>egenerklaering.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="egenerklaering2.resx">
+      <DependentUpon>egenerklaering2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="lederSide.resx">
       <DependentUpon>lederSide.vb</DependentUpon>
