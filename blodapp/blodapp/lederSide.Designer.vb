@@ -24,6 +24,10 @@ Partial Class lederSide
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.btnBehov = New System.Windows.Forms.Button()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.btnInnkalling = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.tappeKalender = New System.Windows.Forms.MonthCalendar()
@@ -45,10 +49,18 @@ Partial Class lederSide
         Me.lstBestillinger = New System.Windows.Forms.ListBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.lstStatistikk = New System.Windows.Forms.ListBox()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.TabPage3.SuspendLayout()
+        Me.TabPage4.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -56,6 +68,7 @@ Partial Class lederSide
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
+        Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Location = New System.Drawing.Point(0, 1)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -64,6 +77,10 @@ Partial Class lederSide
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Label9)
+        Me.TabPage1.Controls.Add(Me.btnBehov)
+        Me.TabPage1.Controls.Add(Me.Label8)
+        Me.TabPage1.Controls.Add(Me.TextBox1)
         Me.TabPage1.Controls.Add(Me.btnInnkalling)
         Me.TabPage1.Controls.Add(Me.Label3)
         Me.TabPage1.Controls.Add(Me.tappeKalender)
@@ -79,64 +96,98 @@ Partial Class lederSide
         Me.TabPage1.Text = "Innkalling"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(2, 162)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(148, 13)
+        Me.Label9.TabIndex = 21
+        Me.Label9.Text = "Du trenger minst: 0 blodgivere"
+        '
+        'btnBehov
+        '
+        Me.btnBehov.Location = New System.Drawing.Point(0, 117)
+        Me.btnBehov.Name = "btnBehov"
+        Me.btnBehov.Size = New System.Drawing.Size(74, 22)
+        Me.btnBehov.TabIndex = 20
+        Me.btnBehov.Text = "Regn ut innkallingsbehov"
+        Me.btnBehov.UseVisualStyleBackColor = True
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(0, 72)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(60, 13)
+        Me.Label8.TabIndex = 19
+        Me.Label8.Text = "Literbehov:"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(0, 91)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(74, 20)
+        Me.TextBox1.TabIndex = 18
+        '
         'btnInnkalling
         '
-        Me.btnInnkalling.Location = New System.Drawing.Point(306, 227)
+        Me.btnInnkalling.Location = New System.Drawing.Point(368, 218)
         Me.btnInnkalling.Name = "btnInnkalling"
         Me.btnInnkalling.Size = New System.Drawing.Size(129, 51)
-        Me.btnInnkalling.TabIndex = 6
+        Me.btnInnkalling.TabIndex = 17
         Me.btnInnkalling.Text = "Send innkalling"
         Me.btnInnkalling.UseVisualStyleBackColor = True
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(250, 28)
+        Me.Label3.Location = New System.Drawing.Point(312, 19)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(59, 13)
-        Me.Label3.TabIndex = 5
+        Me.Label3.TabIndex = 16
         Me.Label3.Text = "Tappedato"
         '
         'tappeKalender
         '
-        Me.tappeKalender.Location = New System.Drawing.Point(253, 44)
+        Me.tappeKalender.Location = New System.Drawing.Point(315, 35)
         Me.tappeKalender.Name = "tappeKalender"
-        Me.tappeKalender.TabIndex = 4
+        Me.tappeKalender.TabIndex = 15
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(133, 27)
+        Me.Label2.Location = New System.Drawing.Point(195, 18)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(58, 13)
-        Me.Label2.TabIndex = 3
+        Me.Label2.TabIndex = 14
         Me.Label2.Text = "Kandidater"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 28)
+        Me.Label1.Location = New System.Drawing.Point(0, 19)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(74, 13)
-        Me.Label1.TabIndex = 2
+        Me.Label1.TabIndex = 13
         Me.Label1.Text = "Velg blodtype:"
         '
         'lstKandidater
         '
         Me.lstKandidater.FormattingEnabled = True
-        Me.lstKandidater.Location = New System.Drawing.Point(133, 44)
+        Me.lstKandidater.Location = New System.Drawing.Point(195, 35)
         Me.lstKandidater.Name = "lstKandidater"
         Me.lstKandidater.Size = New System.Drawing.Size(108, 264)
-        Me.lstKandidater.TabIndex = 1
+        Me.lstKandidater.TabIndex = 12
         '
         'CBoxBlodtype
         '
         Me.CBoxBlodtype.FormattingEnabled = True
         Me.CBoxBlodtype.Items.AddRange(New Object() {"O+", "O-", "A+", "A-", "B+", "B-", "AB+", "AB-"})
-        Me.CBoxBlodtype.Location = New System.Drawing.Point(6, 44)
+        Me.CBoxBlodtype.Location = New System.Drawing.Point(0, 35)
         Me.CBoxBlodtype.Name = "CBoxBlodtype"
-        Me.CBoxBlodtype.Size = New System.Drawing.Size(121, 21)
-        Me.CBoxBlodtype.TabIndex = 0
+        Me.CBoxBlodtype.Size = New System.Drawing.Size(74, 21)
+        Me.CBoxBlodtype.TabIndex = 11
         '
         'TabPage2
         '
@@ -171,7 +222,7 @@ Partial Class lederSide
         '
         'btnRetur
         '
-        Me.btnRetur.Location = New System.Drawing.Point(263, 208)
+        Me.btnRetur.Location = New System.Drawing.Point(263, 237)
         Me.btnRetur.Name = "btnRetur"
         Me.btnRetur.Size = New System.Drawing.Size(100, 23)
         Me.btnRetur.TabIndex = 11
@@ -181,7 +232,7 @@ Partial Class lederSide
         'btnSend
         '
         Me.btnSend.Enabled = False
-        Me.btnSend.Location = New System.Drawing.Point(263, 237)
+        Me.btnSend.Location = New System.Drawing.Point(263, 208)
         Me.btnSend.Name = "btnSend"
         Me.btnSend.Size = New System.Drawing.Size(100, 23)
         Me.btnSend.TabIndex = 10
@@ -272,6 +323,72 @@ Partial Class lederSide
         Me.lstStatistikk.Size = New System.Drawing.Size(212, 199)
         Me.lstStatistikk.TabIndex = 0
         '
+        'TabPage4
+        '
+        Me.TabPage4.Controls.Add(Me.ListBox1)
+        Me.TabPage4.Controls.Add(Me.Label12)
+        Me.TabPage4.Controls.Add(Me.Label11)
+        Me.TabPage4.Controls.Add(Me.TextBox2)
+        Me.TabPage4.Controls.Add(Me.Label10)
+        Me.TabPage4.Controls.Add(Me.ComboBox1)
+        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage4.Size = New System.Drawing.Size(582, 388)
+        Me.TabPage4.TabIndex = 3
+        Me.TabPage4.Text = "Oversikt blodbank"
+        Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'ListBox1
+        '
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.Location = New System.Drawing.Point(8, 107)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(529, 251)
+        Me.ListBox1.TabIndex = 11
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(4, 91)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(63, 13)
+        Me.Label12.TabIndex = 10
+        Me.Label12.Text = "Full oversikt"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(155, 15)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(46, 13)
+        Me.Label11.TabIndex = 9
+        Me.Label11.Text = "Resultat"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(158, 31)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.TabIndex = 8
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(4, 15)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(73, 13)
+        Me.Label10.TabIndex = 7
+        Me.Label10.Text = "Søk antall liter"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(7, 31)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.TabIndex = 6
+        '
         'lederSide
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -286,19 +403,14 @@ Partial Class lederSide
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
+        Me.TabPage4.ResumeLayout(False)
+        Me.TabPage4.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents btnInnkalling As Button
-    Friend WithEvents Label3 As Label
-    Friend WithEvents tappeKalender As MonthCalendar
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents lstKandidater As ListBox
-    Friend WithEvents CBoxBlodtype As ComboBox
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents chkBekreft As CheckBox
     Friend WithEvents btnRetur As Button
@@ -313,4 +425,22 @@ Partial Class lederSide
     Friend WithEvents lstBestillinger As ListBox
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents lstStatistikk As ListBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents btnBehov As Button
+    Friend WithEvents Label8 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents btnInnkalling As Button
+    Friend WithEvents Label3 As Label
+    Friend WithEvents tappeKalender As MonthCalendar
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents lstKandidater As ListBox
+    Friend WithEvents CBoxBlodtype As ComboBox
+    Friend WithEvents TabPage4 As TabPage
+    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents ComboBox1 As ComboBox
 End Class

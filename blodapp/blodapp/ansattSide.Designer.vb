@@ -24,6 +24,8 @@ Partial Class ansattSide
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.btnBehov = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.btnInnkalling = New System.Windows.Forms.Button()
@@ -45,17 +47,24 @@ Partial Class ansattSide
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lstBestillinger = New System.Windows.Forms.ListBox()
-        Me.btnBehov = New System.Windows.Forms.Button()
-        Me.Label9 = New System.Windows.Forms.Label()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Location = New System.Drawing.Point(0, 1)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -82,6 +91,24 @@ Partial Class ansattSide
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Innkalling"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(8, 171)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(148, 13)
+        Me.Label9.TabIndex = 10
+        Me.Label9.Text = "Du trenger minst: 0 blodgivere"
+        '
+        'btnBehov
+        '
+        Me.btnBehov.Location = New System.Drawing.Point(6, 126)
+        Me.btnBehov.Name = "btnBehov"
+        Me.btnBehov.Size = New System.Drawing.Size(74, 22)
+        Me.btnBehov.TabIndex = 9
+        Me.btnBehov.Text = "Regn ut innkallingsbehov"
+        Me.btnBehov.UseVisualStyleBackColor = True
         '
         'Label8
         '
@@ -273,23 +300,71 @@ Partial Class ansattSide
         Me.lstBestillinger.Size = New System.Drawing.Size(184, 225)
         Me.lstBestillinger.TabIndex = 0
         '
-        'btnBehov
+        'TabPage3
         '
-        Me.btnBehov.Location = New System.Drawing.Point(6, 126)
-        Me.btnBehov.Name = "btnBehov"
-        Me.btnBehov.Size = New System.Drawing.Size(74, 22)
-        Me.btnBehov.TabIndex = 9
-        Me.btnBehov.Text = "Regn ut innkallingsbehov"
-        Me.btnBehov.UseVisualStyleBackColor = True
+        Me.TabPage3.Controls.Add(Me.ListBox1)
+        Me.TabPage3.Controls.Add(Me.Label12)
+        Me.TabPage3.Controls.Add(Me.Label11)
+        Me.TabPage3.Controls.Add(Me.TextBox2)
+        Me.TabPage3.Controls.Add(Me.Label10)
+        Me.TabPage3.Controls.Add(Me.ComboBox1)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Size = New System.Drawing.Size(582, 388)
+        Me.TabPage3.TabIndex = 2
+        Me.TabPage3.Text = "Oversikt blodbank"
+        Me.TabPage3.UseVisualStyleBackColor = True
         '
-        'Label9
+        'ComboBox1
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(8, 171)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(148, 13)
-        Me.Label9.TabIndex = 10
-        Me.Label9.Text = "Du trenger minst: 0 blodgivere"
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(26, 46)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.TabIndex = 0
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(23, 30)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(73, 13)
+        Me.Label10.TabIndex = 1
+        Me.Label10.Text = "Søk antall liter"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(177, 46)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.TabIndex = 2
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(174, 30)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(46, 13)
+        Me.Label11.TabIndex = 3
+        Me.Label11.Text = "Resultat"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(23, 106)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(63, 13)
+        Me.Label12.TabIndex = 4
+        Me.Label12.Text = "Full oversikt"
+        '
+        'ListBox1
+        '
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.Location = New System.Drawing.Point(27, 122)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(529, 251)
+        Me.ListBox1.TabIndex = 5
         '
         'ansattSide
         '
@@ -304,6 +379,8 @@ Partial Class ansattSide
         Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        Me.TabPage3.ResumeLayout(False)
+        Me.TabPage3.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -333,4 +410,11 @@ Partial Class ansattSide
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents btnBehov As Button
+    Friend WithEvents TabPage3 As TabPage
+    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents ComboBox1 As ComboBox
 End Class
