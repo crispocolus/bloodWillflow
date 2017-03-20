@@ -24,6 +24,8 @@ Partial Class ansattSide
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.btnInnkalling = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.tappeKalender = New System.Windows.Forms.MonthCalendar()
@@ -43,6 +45,8 @@ Partial Class ansattSide
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lstBestillinger = New System.Windows.Forms.ListBox()
+        Me.btnBehov = New System.Windows.Forms.Button()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -60,6 +64,10 @@ Partial Class ansattSide
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Label9)
+        Me.TabPage1.Controls.Add(Me.btnBehov)
+        Me.TabPage1.Controls.Add(Me.Label8)
+        Me.TabPage1.Controls.Add(Me.TextBox1)
         Me.TabPage1.Controls.Add(Me.btnInnkalling)
         Me.TabPage1.Controls.Add(Me.Label3)
         Me.TabPage1.Controls.Add(Me.tappeKalender)
@@ -75,9 +83,25 @@ Partial Class ansattSide
         Me.TabPage1.Text = "Innkalling"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(6, 81)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(60, 13)
+        Me.Label8.TabIndex = 8
+        Me.Label8.Text = "Literbehov:"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(6, 100)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(74, 20)
+        Me.TextBox1.TabIndex = 7
+        '
         'btnInnkalling
         '
-        Me.btnInnkalling.Location = New System.Drawing.Point(306, 227)
+        Me.btnInnkalling.Location = New System.Drawing.Point(374, 227)
         Me.btnInnkalling.Name = "btnInnkalling"
         Me.btnInnkalling.Size = New System.Drawing.Size(129, 51)
         Me.btnInnkalling.TabIndex = 6
@@ -87,7 +111,7 @@ Partial Class ansattSide
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(250, 28)
+        Me.Label3.Location = New System.Drawing.Point(318, 28)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(59, 13)
         Me.Label3.TabIndex = 5
@@ -95,14 +119,14 @@ Partial Class ansattSide
         '
         'tappeKalender
         '
-        Me.tappeKalender.Location = New System.Drawing.Point(253, 44)
+        Me.tappeKalender.Location = New System.Drawing.Point(321, 44)
         Me.tappeKalender.Name = "tappeKalender"
         Me.tappeKalender.TabIndex = 4
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(133, 27)
+        Me.Label2.Location = New System.Drawing.Point(201, 27)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(58, 13)
         Me.Label2.TabIndex = 3
@@ -120,7 +144,7 @@ Partial Class ansattSide
         'lstKandidater
         '
         Me.lstKandidater.FormattingEnabled = True
-        Me.lstKandidater.Location = New System.Drawing.Point(133, 44)
+        Me.lstKandidater.Location = New System.Drawing.Point(201, 44)
         Me.lstKandidater.Name = "lstKandidater"
         Me.lstKandidater.Size = New System.Drawing.Size(108, 264)
         Me.lstKandidater.TabIndex = 1
@@ -131,7 +155,7 @@ Partial Class ansattSide
         Me.CBoxBlodtype.Items.AddRange(New Object() {"O+", "O-", "A+", "A-", "B+", "B-", "AB+", "AB-"})
         Me.CBoxBlodtype.Location = New System.Drawing.Point(6, 44)
         Me.CBoxBlodtype.Name = "CBoxBlodtype"
-        Me.CBoxBlodtype.Size = New System.Drawing.Size(121, 21)
+        Me.CBoxBlodtype.Size = New System.Drawing.Size(74, 21)
         Me.CBoxBlodtype.TabIndex = 0
         '
         'TabPage2
@@ -167,7 +191,7 @@ Partial Class ansattSide
         '
         'btnRetur
         '
-        Me.btnRetur.Location = New System.Drawing.Point(263, 208)
+        Me.btnRetur.Location = New System.Drawing.Point(263, 237)
         Me.btnRetur.Name = "btnRetur"
         Me.btnRetur.Size = New System.Drawing.Size(100, 23)
         Me.btnRetur.TabIndex = 11
@@ -177,7 +201,7 @@ Partial Class ansattSide
         'btnSend
         '
         Me.btnSend.Enabled = False
-        Me.btnSend.Location = New System.Drawing.Point(263, 237)
+        Me.btnSend.Location = New System.Drawing.Point(263, 208)
         Me.btnSend.Name = "btnSend"
         Me.btnSend.Size = New System.Drawing.Size(100, 23)
         Me.btnSend.TabIndex = 10
@@ -249,6 +273,24 @@ Partial Class ansattSide
         Me.lstBestillinger.Size = New System.Drawing.Size(184, 225)
         Me.lstBestillinger.TabIndex = 0
         '
+        'btnBehov
+        '
+        Me.btnBehov.Location = New System.Drawing.Point(6, 126)
+        Me.btnBehov.Name = "btnBehov"
+        Me.btnBehov.Size = New System.Drawing.Size(74, 22)
+        Me.btnBehov.TabIndex = 9
+        Me.btnBehov.Text = "Regn ut innkallingsbehov"
+        Me.btnBehov.UseVisualStyleBackColor = True
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(8, 171)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(148, 13)
+        Me.Label9.TabIndex = 10
+        Me.Label9.Text = "Du trenger minst: 0 blodgivere"
+        '
         'ansattSide
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -287,4 +329,8 @@ Partial Class ansattSide
     Friend WithEvents lstBestillinger As ListBox
     Friend WithEvents btnRetur As Button
     Friend WithEvents chkBekreft As CheckBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents btnBehov As Button
 End Class

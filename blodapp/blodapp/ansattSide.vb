@@ -1,5 +1,7 @@
 ﻿Public Class ansattSide
     Dim kommentar As String
+
+    Dim giverBehov As Integer = TextBox1.Text
     Private Sub btnRetur_Click(sender As Object, e As EventArgs) Handles btnRetur.Click
 
         kommentar = InputBox("Skriv en kommentar til bestillingen")
@@ -21,6 +23,15 @@
     End Sub
 
     Private Sub btnInnkalling_Click(sender As Object, e As EventArgs) Handles btnInnkalling.Click
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnBehov.Click
+        If IsNumeric(txtMengde) Then
+            Label9.Text = "Du trenger minst: " & giverBehov & "antall blodgivere"
+        Else
+            MsgBox("Du må skrive et tall når du skriver literbehov")
+        End If
 
     End Sub
 End Class
