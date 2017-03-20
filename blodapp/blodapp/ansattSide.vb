@@ -26,7 +26,7 @@
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnBehov.Click
+    Private Sub btnBehov_Click(sender As Object, e As EventArgs) Handles btnBehov.Click
         If IsNumeric(txtMengde) Then
             Label9.Text = "Du trenger minst: " & giverBehov & "antall blodgivere"
         Else
