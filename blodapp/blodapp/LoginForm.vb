@@ -3,16 +3,20 @@ Imports System.Security.Cryptography
 Imports System.Text
 
 Public Class LoginForm
+    Public bnavn As String
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+        Dim connect As New SQL
+
         Dim logginntest As New Login
         logginntest.brukernavn = txtLoginBrukernavn.Text.Replace("'", "\'")
-        Dim unhashed As String = txtLoginPwd.Text.Replace("'", "\'")
-        'Dim salt As String = 0
+        Dim unhashed As String = txtLoginPwd.Text
+        Dim salt As String = 0
 
-        Dim bnavn As String = txtLoginBrukernavn.Text
+        logginntest.innloggetbrukernavn = txtLoginPwd.Text
+
+        bnavn = txtLoginBrukernavn.Text
         'Try
-        '    Dim connect As New SQL
         '    Dim oppkobling = connect.oppkobling
         '    oppkobling.Open()
 
@@ -34,9 +38,10 @@ Public Class LoginForm
         'End Try
 
         'Dim hashed As String
-        'hashed = HashReverse(unhashed, salt)
+        'hashed = cryptdeux(unhashed, salt)
 
         'MsgBox(salt & ", " & hashed & ", " & unhashed)
+        'logginntest.passord = hashed
 
         logginntest.passord = unhashed
         logginntest.innlogging()
@@ -46,19 +51,18 @@ Public Class LoginForm
         RegistrerForm.Show()
         Me.Hide()
     End Sub
-    'Private Function HashPas(passord As String, salt As String)
-    '    Dim test As New RegistrerForm
-    '    Dim hashed As String
-    '    hashed = (test.Hash512(passord, salt))
-    '    Return hashed
-    'End Function
 
-    Public Function HashReverse(password As String, salt As String) As String
-        Dim convertedToBytes As Byte() = Encoding.UTF8.GetBytes(password & salt)
-        Dim hashType As HashAlgorithm = New SHA512Managed()
-        Dim hashBytes As Byte() = hashType.ComputeHash(convertedToBytes)
-        Dim hashedResult As String = Convert.ToBase64String(hashBytes)
-        Return hashedResult
+    Function cryptdeux(passord As String, salt As String) As String
+        Dim HashObjekt = New Security.Cryptography.SHA256Managed()
+        Dim bytes = System.Text.Encoding.ASCII.GetBytes(passord & salt)
+        bytes = HashObjekt.ComputeHash(bytes)
+
+        Dim hexStreng As String = ""
+        For Each enByte In bytes
+            hexStreng &= enByte.ToString("x2")
+        Next
+        MsgBox(hexStreng)
+        Return hexStreng
     End Function
 
     Private Sub txtLoginPwd_TextChanged(sender As Object, e As EventArgs) Handles txtLoginPwd.TextChanged

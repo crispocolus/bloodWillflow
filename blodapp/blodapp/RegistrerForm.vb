@@ -48,9 +48,10 @@ Public Class RegistrerForm
         If godkjentEpost = True And godkjentTelefon = True And godkjentPassord = True Then
             MsgBox("Registrering fullført." & vbCrLf & "Brukernavnet ditt er: " & epostTxt.Text & vbCrLf & vbCrLf & "Du kan nå gi samtykke ved resepsjonen")
             Dim salt As String
-            Dim passordHash As String = passordTxt.Text
+            Dim passordHash As String = ""
             salt = CreateRandomSalt()
-            'passordHash = Hash512(passordTxt.Text, salt)
+            'passordHash = crypt(passordTxt.Text, salt)
+            passordHash = passordTxt.Text
 
 
             Registrering.sendInfo(postnrTxt.Text,
@@ -64,20 +65,34 @@ Public Class RegistrerForm
                                   adresseTxt.Text,
                                   passordHash,
                                   salt)
+
+            Me.Hide()
+            LoginForm.Show()
         End If
     End Sub
 
     Public Function CreateRandomSalt() As String
         'the following is the string that will hold the salt charachters
-        Dim mix As String = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+=][}{<>"
+        Dim mix As String = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+        '!@#$%^&*()_+=][}{<>"
         Dim salt As String = ""
         Dim rnd As New Random
         Dim sb As New StringBuilder
-        For i As Integer = 1 To 100 'Length of the salt
+
+        Dim hexStreng As String = ""
+
+        For i As Integer = 1 To 10 'Length of the salt
             Dim x As Integer = rnd.Next(0, mix.Length - 1)
             salt &= (mix.Substring(x, 1))
+            For t As Integer = 1 To 10
+                hexStreng &= t.ToString("x2")
+            Next
         Next
-        Return salt
+
+
+
+
+        Return hexStreng
     End Function
 
     Public Function Hash512(password As String, salt As String) As String
@@ -86,5 +101,18 @@ Public Class RegistrerForm
         Dim hashBytes As Byte() = hashType.ComputeHash(convertedToBytes)
         Dim hashedResult As String = Convert.ToBase64String(hashBytes)
         Return hashedResult
+    End Function
+
+    Function crypt(passord As String, salt As String) As String
+        Dim HashObjekt = New Security.Cryptography.SHA256Managed()
+        Dim bytes = System.Text.Encoding.ASCII.GetBytes(passord & salt)
+        bytes = HashObjekt.ComputeHash(bytes)
+
+        Dim hexStreng As String = ""
+        For Each enByte In bytes
+            hexStreng &= enByte.ToString("x2")
+        Next
+        MsgBox(hexStreng)
+        Return hexStreng
     End Function
 End Class

@@ -35,75 +35,85 @@ Partial Class brukerSide
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(396, 181)
+        Me.Label1.Location = New System.Drawing.Point(528, 223)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(57, 13)
+        Me.Label1.Size = New System.Drawing.Size(76, 17)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Personinfo"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(396, 9)
+        Me.Label2.Location = New System.Drawing.Point(528, 11)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(49, 13)
+        Me.Label2.Size = New System.Drawing.Size(65, 17)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Giverinfo"
         '
         'ListBox2
         '
         Me.ListBox2.FormattingEnabled = True
-        Me.ListBox2.Location = New System.Drawing.Point(364, 25)
+        Me.ListBox2.ItemHeight = 16
+        Me.ListBox2.Location = New System.Drawing.Point(485, 31)
+        Me.ListBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.ListBox2.Name = "ListBox2"
-        Me.ListBox2.Size = New System.Drawing.Size(120, 121)
+        Me.ListBox2.Size = New System.Drawing.Size(159, 148)
         Me.ListBox2.TabIndex = 4
         '
         'ListBox3
         '
         Me.ListBox3.FormattingEnabled = True
-        Me.ListBox3.Location = New System.Drawing.Point(364, 197)
+        Me.ListBox3.ItemHeight = 16
+        Me.ListBox3.Location = New System.Drawing.Point(485, 242)
+        Me.ListBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.ListBox3.Name = "ListBox3"
-        Me.ListBox3.Size = New System.Drawing.Size(120, 121)
+        Me.ListBox3.Size = New System.Drawing.Size(159, 148)
         Me.ListBox3.TabIndex = 5
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(86, 275)
+        Me.Button1.Location = New System.Drawing.Point(115, 338)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(102, 23)
+        Me.Button1.Size = New System.Drawing.Size(136, 28)
         Me.Button1.TabIndex = 6
         Me.Button1.Text = "Søk om å gi blod"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'MonthCalendar1
         '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(18, 101)
+        Me.MonthCalendar1.Location = New System.Drawing.Point(24, 124)
+        Me.MonthCalendar1.Margin = New System.Windows.Forms.Padding(12, 11, 12, 11)
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 7
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(83, 79)
+        Me.Label3.Location = New System.Drawing.Point(111, 97)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(90, 13)
+        Me.Label3.Size = New System.Drawing.Size(120, 17)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Velg en ledig time"
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(373, 324)
+        Me.Button2.Location = New System.Drawing.Point(497, 399)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(102, 23)
+        Me.Button2.Size = New System.Drawing.Size(136, 28)
         Me.Button2.TabIndex = 9
         Me.Button2.Text = "Endre personinfo"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'brukerSide
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(540, 400)
+        Me.ClientSize = New System.Drawing.Size(720, 492)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.MonthCalendar1)
@@ -112,6 +122,7 @@ Partial Class brukerSide
         Me.Controls.Add(Me.ListBox2)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "brukerSide"
         Me.Text = "brukerSide"
         Me.ResumeLayout(False)

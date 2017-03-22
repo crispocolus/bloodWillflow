@@ -150,6 +150,9 @@
     <EmbeddedResource Include="adminSide.resx">
       <DependentUpon>adminSide.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="brukerSide.resx">
+      <DependentUpon>brukerSide.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="egenerklaering.resx">
       <DependentUpon>egenerklaering.vb</DependentUpon>
     </EmbeddedResource>

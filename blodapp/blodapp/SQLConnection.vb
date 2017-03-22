@@ -2,12 +2,14 @@
 Public Class SQL
     Public oppkobling = New MySqlConnection("server=mysql.stud.iie.ntnu.no;database=g_oops_25;uid=g_oops_25;Pwd=M3PV7P9e")
     Public paakoblet As Boolean = False
+
 End Class
 Public Class Login
     Public brukernavn As String
     Public passord As String
     Public databasenavn As String
     Dim brukerstatus As String
+    Public innloggetbrukernavn = ""
 
 
     'Påloggingskode. Utføres når brukeren logger inn.
@@ -47,6 +49,7 @@ Public Class Login
                 MsgBox("Innlogget", MsgBoxStyle.Information)
                 connect.paakoblet = True
                 brukerstat.sjekkBrukerStat(brukernavn)
+                innloggetbrukernavn = brukernavn
             Else
                 MsgBox("Feil brukernavn eller passord")
                 oppkobling.Close()
@@ -207,6 +210,34 @@ Public Class soking
 
         Catch ex As Exception
             MessageBox.Show("Noe gikk galt: " & ex.Message)
+
+        End Try
+    End Function
+End Class
+
+Public Class info
+    Public Function hentInfo()
+        'Importerer oppkobling fra SQL klassen
+        Dim connect As New SQL
+        Dim oppkobling = connect.oppkobling
+        Dim tabell As New DataTable
+        Try
+            oppkobling.Open()
+
+            Dim sqlSporring = "SELECT * from bruker INNER JOIN postnummer ON bruker.post_nr = postnummer.post_nr WHERE epost =@brukernavn;"
+
+            Dim SQL As New MySqlCommand(sqlSporring, oppkobling)
+            SQL.Parameters.AddWithValue("@brukernavn", LoginForm.bnavn)
+
+            Dim da As New MySqlDataAdapter
+            da.SelectCommand = SQL
+            da.Fill(tabell)
+            Return tabell
+            oppkobling.Close()
+
+        Catch ex As Exception
+            MessageBox.Show("Noe gikk galt: " & ex.Message)
+            Return "Det ble en feil men det er forsatt en veldig fin dag"
         End Try
     End Function
 End Class

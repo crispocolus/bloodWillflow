@@ -53,3 +53,4 @@ C:\Users\Even\Documents\Skole\OOPS\Prosjekt\gruppe25blodapp_try2\bloodWillflow\b
 C:\Users\Even\Documents\Skole\OOPS\Prosjekt\gruppe25blodapp_try2\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.exe
 C:\Users\Even\Documents\Skole\OOPS\Prosjekt\gruppe25blodapp_try2\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.xml
 C:\Users\Even\Documents\Skole\OOPS\Prosjekt\gruppe25blodapp_try2\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.pdb
+C:\bloodwillflow\blodapp\blodapp\obj\Debug\blodapp.brukerSide.resources
