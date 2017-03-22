@@ -94,6 +94,7 @@ Public Class BrukerStat
         Dim oppkobling = connect.oppkobling
 
         Try
+            oppkobling.Open()
             Dim brukerstatus As String = -1
             Dim sqlSporring = "select brukerstatus from bruker where epost=@brukernavn"
             Dim sql As New MySqlCommand(sqlSporring, oppkobling)
@@ -110,15 +111,12 @@ Public Class BrukerStat
             Select Case brukerstatus
                 Case "0"
                     brukerSide.Show()
-                    MsgBox("Du er en bruker")
                 Case "1"
                     ansattSide.Show()
-                    MsgBox("Du er en ansatt")
                 Case "2"
                     adminSide.Show()
-                    MsgBox("Du er en admin")
                 Case Else
-                    MsgBox("En feil oppstod: 'brukerstatus not found'. Vennligst kontakt personalet.")
+                    MsgBox("En feil oppstod: 'brukerstatus ikke funnet'. Vennligst kontakt personalet.")
             End Select
             oppkobling.Close()
         Catch ex As MySqlException
@@ -132,7 +130,6 @@ Public Class RegBruker
     Public Sub sendInfo(postnr As String,
                         gtadresse As String,
                         stdnavn As String,
-                        fylke As String,
                         pnummer As String,
                         fnavn As String,
                         enavn As String,
@@ -150,15 +147,14 @@ Public Class RegBruker
         Try
             oppkobling.Open()
 
-            Dim sqlSporring = "insert into adresse (postnr, gateadresse, stednavn, fylke) values (@post_nr, @gtadresse, @stdnavn, @fylke)"
+            Dim sqlSporring = "insert into adresse (postnr, gateadresse, stednavn) values (@post_nr, @gtadresse, @stdnavn)"
 
             Dim sql As New MySqlCommand(sqlSporring, oppkobling)
 
             sql.Parameters.AddWithValue("@post_nr", postnr)
             sql.Parameters.AddWithValue("@gtadresse", gtadresse)
             sql.Parameters.AddWithValue("@stdnavn", stdnavn)
-            sql.Parameters.AddWithValue("@fylke", fylke)
-            sql.ExecuteNonQuery()
+            'sql.ExecuteNonQuery()
 
             adresse_id = sql.LastInsertedId
 
@@ -183,6 +179,35 @@ Public Class RegBruker
             MessageBox.Show("Noe gikk galt: " & ex.Message)
         End Try
     End Sub
+End Class
+
+Public Class soking
+
+    Public Function sok(sokeord As String, sorter As String)
+        'Importerer oppkobling fra SQL klassen
+        Dim connect As New SQL
+        Dim oppkobling = connect.oppkobling
+        Dim tabell As New DataTable
+        Try
+            oppkobling.Open()
+
+            Dim sqlSporring = "SELECT * FROM bruker WHERE " & sorter & " = " & "'" & sokeord & "'"
+
+            Dim SQL As New MySqlCommand(sqlSporring, oppkobling)
+
+            'SQL.ExecuteNonQuery()
+            'Return SQL
+
+            Dim da As New MySqlDataAdapter
+            da.SelectCommand = SQL
+            da.Fill(tabell)
+            Return tabell
+            oppkobling.Close()
+
+        Catch ex As Exception
+            MessageBox.Show("Noe gikk galt: " & ex.Message)
+        End Try
+    End Function
 End Class
 
 '    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load

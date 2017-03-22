@@ -7,39 +7,38 @@ Public Class LoginForm
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         Dim logginntest As New Login
         logginntest.brukernavn = txtLoginBrukernavn.Text.Replace("'", "\'")
-        'Dim unhashed As String = txtLoginPwd.Text.Replace("'", "\'")
-        Dim unhashed As String = txtLoginPwd.Text
-        Dim salt As String = 0
+        Dim unhashed As String = txtLoginPwd.Text.Replace("'", "\'")
+        'Dim salt As String = 0
 
         Dim bnavn As String = txtLoginBrukernavn.Text
-        Try
-            Dim connect As New SQL
-            Dim oppkobling = connect.oppkobling
-            oppkobling.Open()
+        'Try
+        '    Dim connect As New SQL
+        '    Dim oppkobling = connect.oppkobling
+        '    oppkobling.Open()
 
-            Dim sqlSporring = "select salt from bruker where epost=@brukernavn"
-            Dim sql As New MySqlCommand(sqlSporring, oppkobling)
+        '    Dim sqlSporring = "select salt from bruker where epost=@brukernavn"
+        '    Dim sql As New MySqlCommand(sqlSporring, oppkobling)
 
-            sql.Parameters.AddWithValue("@brukernavn", bnavn)
-            sql.ExecuteNonQuery()
+        '    sql.Parameters.AddWithValue("@brukernavn", bnavn)
+        '    sql.ExecuteNonQuery()
 
-            Dim leser = sql.ExecuteReader()
-            While leser.Read()
-                salt = (leser("salt"))
-            End While
+        '    Dim leser = sql.ExecuteReader()
+        '    While leser.Read()
+        '        salt = (leser("salt"))
+        '    End While
 
-            leser.Close()
-            oppkobling.Close()
-        Catch ex As MySqlException
-            MessageBox.Show("Noe gikk galt: " & ex.Message)
-        End Try
+        '    leser.Close()
+        '    oppkobling.Close()
+        'Catch ex As MySqlException
+        '    MessageBox.Show("Noe gikk galt: " & ex.Message)
+        'End Try
 
-        Dim hashed As String
-        hashed = HashReverse(unhashed, salt)
+        'Dim hashed As String
+        'hashed = HashReverse(unhashed, salt)
 
-        MsgBox(salt & ", " & hashed & ", " & unhashed)
+        'MsgBox(salt & ", " & hashed & ", " & unhashed)
 
-        logginntest.passord = hashed
+        logginntest.passord = unhashed
         logginntest.innlogging()
     End Sub
 
@@ -61,4 +60,8 @@ Public Class LoginForm
         Dim hashedResult As String = Convert.ToBase64String(hashBytes)
         Return hashedResult
     End Function
+
+    Private Sub txtLoginPwd_TextChanged(sender As Object, e As EventArgs) Handles txtLoginPwd.TextChanged
+
+    End Sub
 End Class

@@ -43,8 +43,6 @@ Partial Class RegistrerForm
         Me.adresseLbl = New System.Windows.Forms.Label()
         Me.postnrTxt = New System.Windows.Forms.TextBox()
         Me.postnrLbl = New System.Windows.Forms.Label()
-        Me.fylkeLbl = New System.Windows.Forms.Label()
-        Me.fylkeTxt = New System.Windows.Forms.TextBox()
         Me.stdnavnLbl = New System.Windows.Forms.Label()
         Me.stdnavnTxt = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
@@ -52,7 +50,7 @@ Partial Class RegistrerForm
         'epostTxt
         '
         Me.epostTxt.Location = New System.Drawing.Point(49, 180)
-        Me.epostTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.epostTxt.Margin = New System.Windows.Forms.Padding(4)
         Me.epostTxt.Name = "epostTxt"
         Me.epostTxt.Size = New System.Drawing.Size(132, 22)
         Me.epostTxt.TabIndex = 0
@@ -60,7 +58,7 @@ Partial Class RegistrerForm
         'fornavnTxt
         '
         Me.fornavnTxt.Location = New System.Drawing.Point(49, 31)
-        Me.fornavnTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.fornavnTxt.Margin = New System.Windows.Forms.Padding(4)
         Me.fornavnTxt.Name = "fornavnTxt"
         Me.fornavnTxt.Size = New System.Drawing.Size(132, 22)
         Me.fornavnTxt.TabIndex = 1
@@ -68,15 +66,15 @@ Partial Class RegistrerForm
         'etternavnTxt
         '
         Me.etternavnTxt.Location = New System.Drawing.Point(49, 82)
-        Me.etternavnTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.etternavnTxt.Margin = New System.Windows.Forms.Padding(4)
         Me.etternavnTxt.Name = "etternavnTxt"
         Me.etternavnTxt.Size = New System.Drawing.Size(132, 22)
         Me.etternavnTxt.TabIndex = 2
         '
         'tlfTxt
         '
-        Me.tlfTxt.Location = New System.Drawing.Point(49, 231)
-        Me.tlfTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tlfTxt.Location = New System.Drawing.Point(251, 180)
+        Me.tlfTxt.Margin = New System.Windows.Forms.Padding(4)
         Me.tlfTxt.Name = "tlfTxt"
         Me.tlfTxt.Size = New System.Drawing.Size(132, 22)
         Me.tlfTxt.TabIndex = 3
@@ -114,7 +112,7 @@ Partial Class RegistrerForm
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(50, 212)
+        Me.Label4.Location = New System.Drawing.Point(248, 160)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(56, 17)
@@ -123,8 +121,8 @@ Partial Class RegistrerForm
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(159, 425)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button1.Location = New System.Drawing.Point(164, 322)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(104, 44)
         Me.Button1.TabIndex = 10
@@ -144,7 +142,7 @@ Partial Class RegistrerForm
         'pnummerTxt
         '
         Me.pnummerTxt.Location = New System.Drawing.Point(49, 130)
-        Me.pnummerTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pnummerTxt.Margin = New System.Windows.Forms.Padding(4)
         Me.pnummerTxt.Name = "pnummerTxt"
         Me.pnummerTxt.Size = New System.Drawing.Size(132, 22)
         Me.pnummerTxt.TabIndex = 11
@@ -152,7 +150,7 @@ Partial Class RegistrerForm
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(46, 311)
+        Me.Label6.Location = New System.Drawing.Point(248, 213)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(112, 17)
@@ -162,7 +160,7 @@ Partial Class RegistrerForm
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(46, 260)
+        Me.Label7.Location = New System.Drawing.Point(45, 213)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(60, 17)
@@ -171,16 +169,16 @@ Partial Class RegistrerForm
         '
         'passordcTxt
         '
-        Me.passordcTxt.Location = New System.Drawing.Point(49, 332)
-        Me.passordcTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.passordcTxt.Location = New System.Drawing.Point(251, 234)
+        Me.passordcTxt.Margin = New System.Windows.Forms.Padding(4)
         Me.passordcTxt.Name = "passordcTxt"
         Me.passordcTxt.Size = New System.Drawing.Size(132, 22)
         Me.passordcTxt.TabIndex = 14
         '
         'passordTxt
         '
-        Me.passordTxt.Location = New System.Drawing.Point(49, 279)
-        Me.passordTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.passordTxt.Location = New System.Drawing.Point(48, 234)
+        Me.passordTxt.Margin = New System.Windows.Forms.Padding(4)
         Me.passordTxt.Name = "passordTxt"
         Me.passordTxt.Size = New System.Drawing.Size(132, 22)
         Me.passordTxt.TabIndex = 13
@@ -188,8 +186,8 @@ Partial Class RegistrerForm
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(39, 387)
-        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CheckBox1.Location = New System.Drawing.Point(48, 276)
+        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(18, 17)
         Me.CheckBox1.TabIndex = 17
@@ -199,7 +197,7 @@ Partial Class RegistrerForm
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(85, 387)
+        Me.Label8.Location = New System.Drawing.Point(85, 276)
         Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(335, 17)
@@ -242,24 +240,6 @@ Partial Class RegistrerForm
         Me.postnrLbl.TabIndex = 22
         Me.postnrLbl.Text = "Postnunmmer"
         '
-        'fylkeLbl
-        '
-        Me.fylkeLbl.AutoSize = True
-        Me.fylkeLbl.Location = New System.Drawing.Point(248, 161)
-        Me.fylkeLbl.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.fylkeLbl.Name = "fylkeLbl"
-        Me.fylkeLbl.Size = New System.Drawing.Size(41, 17)
-        Me.fylkeLbl.TabIndex = 26
-        Me.fylkeLbl.Text = "Fylke"
-        '
-        'fylkeTxt
-        '
-        Me.fylkeTxt.Location = New System.Drawing.Point(251, 180)
-        Me.fylkeTxt.Margin = New System.Windows.Forms.Padding(4)
-        Me.fylkeTxt.Name = "fylkeTxt"
-        Me.fylkeTxt.Size = New System.Drawing.Size(132, 22)
-        Me.fylkeTxt.TabIndex = 25
-        '
         'stdnavnLbl
         '
         Me.stdnavnLbl.AutoSize = True
@@ -282,9 +262,7 @@ Partial Class RegistrerForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(433, 507)
-        Me.Controls.Add(Me.fylkeLbl)
-        Me.Controls.Add(Me.fylkeTxt)
+        Me.ClientSize = New System.Drawing.Size(433, 400)
         Me.Controls.Add(Me.stdnavnLbl)
         Me.Controls.Add(Me.stdnavnTxt)
         Me.Controls.Add(Me.postnrLbl)
@@ -308,7 +286,7 @@ Partial Class RegistrerForm
         Me.Controls.Add(Me.etternavnTxt)
         Me.Controls.Add(Me.fornavnTxt)
         Me.Controls.Add(Me.epostTxt)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "RegistrerForm"
         Me.Text = "RegistrerForm"
         Me.ResumeLayout(False)
@@ -337,8 +315,6 @@ Partial Class RegistrerForm
     Friend WithEvents adresseLbl As Label
     Friend WithEvents postnrTxt As TextBox
     Friend WithEvents postnrLbl As Label
-    Friend WithEvents fylkeLbl As Label
-    Friend WithEvents fylkeTxt As TextBox
     Friend WithEvents stdnavnLbl As Label
     Friend WithEvents stdnavnTxt As TextBox
 End Class

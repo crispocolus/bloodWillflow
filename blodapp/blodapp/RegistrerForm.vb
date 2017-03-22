@@ -48,14 +48,14 @@ Public Class RegistrerForm
         If godkjentEpost = True And godkjentTelefon = True And godkjentPassord = True Then
             MsgBox("Registrering fullført." & vbCrLf & "Brukernavnet ditt er: " & epostTxt.Text & vbCrLf & vbCrLf & "Du kan nå gi samtykke ved resepsjonen")
             Dim salt As String
-            Dim passordHash As String
+            Dim passordHash As String = passordTxt.Text
             salt = CreateRandomSalt()
-            passordHash = Hash512(passordTxt.Text, salt)
+            'passordHash = Hash512(passordTxt.Text, salt)
+
 
             Registrering.sendInfo(postnrTxt.Text,
                                   adresseTxt.Text,
                                   stdnavnTxt.Text,
-                                  fylkeTxt.Text,
                                   pnummerTxt.Text,
                                   fornavnTxt.Text,
                                   etternavnTxt.Text,
