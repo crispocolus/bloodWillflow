@@ -129,12 +129,13 @@ Public Class RegBruker
 
     Public Sub sendInfo(postnr As String,
                         gtadresse As String,
-                        stdnavn As String,
                         pnummer As String,
                         fnavn As String,
                         enavn As String,
                         epost As String,
                         telefon As String,
+                        post_nr As String,
+                        gateadresse As String,
                         passordHash As String,
                         salt As String
                         )
@@ -147,18 +148,17 @@ Public Class RegBruker
         Try
             oppkobling.Open()
 
-            Dim sqlSporring = "insert into adresse (postnr, gateadresse, stednavn) values (@post_nr, @gtadresse, @stdnavn)"
+            Dim sqlSporring = "insert into adresse (post_nr, gateadresse, stednavn) values (@post_nr, @gtadresse, @stdnavn)"
 
             Dim sql As New MySqlCommand(sqlSporring, oppkobling)
 
             sql.Parameters.AddWithValue("@post_nr", postnr)
             sql.Parameters.AddWithValue("@gtadresse", gtadresse)
-            sql.Parameters.AddWithValue("@stdnavn", stdnavn)
             'sql.ExecuteNonQuery()
 
             adresse_id = sql.LastInsertedId
 
-            Dim sqlSporring2 = "insert into bruker (person_nr, brukerstatus, fornavn, etternavn, epost, telefon, fdato, hash, salt) values (@person_nr, @brukerstatus, @fornavn, @etternavn, @epost, @telefon, @fdato, @hash, @salt)"
+            Dim sqlSporring2 = "insert into bruker (person_nr, brukerstatus, fornavn, etternavn, epost, telefon, fdato, post_nr,gateadresse, hash, salt) values (@person_nr, @brukerstatus, @fornavn, @etternavn, @epost, @telefon, @fdato, @post_nr,@gateadresse, @hash, @salt)"
 
             Dim sql2 As New MySqlCommand(sqlSporring2, oppkobling)
             sql2.Parameters.AddWithValue("@person_nr", pnummer)
@@ -168,7 +168,8 @@ Public Class RegBruker
             sql2.Parameters.AddWithValue("@epost", epost)
             sql2.Parameters.AddWithValue("@telefon", telefon)
             sql2.Parameters.AddWithValue("@fdato", "112397")
-            sql2.Parameters.AddWithValue("@adresse_id", adresse_id)
+            sql2.Parameters.AddWithValue("@post_nr", post_nr)
+            sql2.Parameters.AddWithValue("@gateadresse", gateadresse)
             sql2.Parameters.AddWithValue("@hash", passordHash)
             sql2.Parameters.AddWithValue("@salt", salt)
 

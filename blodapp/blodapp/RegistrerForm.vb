@@ -55,12 +55,13 @@ Public Class RegistrerForm
 
             Registrering.sendInfo(postnrTxt.Text,
                                   adresseTxt.Text,
-                                  stdnavnTxt.Text,
                                   pnummerTxt.Text,
                                   fornavnTxt.Text,
                                   etternavnTxt.Text,
                                   epostTxt.Text,
                                   tlfTxt.Text,
+                                  postnrTxt.Text,
+                                  adresseTxt.Text,
                                   passordHash,
                                   salt)
         End If
