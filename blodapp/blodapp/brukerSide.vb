@@ -16,4 +16,8 @@
     Private Sub brukerSide_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         info()
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnAvbestillTime.Click
+
+    End Sub
 End Class
