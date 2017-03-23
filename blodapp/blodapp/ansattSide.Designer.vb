@@ -54,6 +54,8 @@ Partial Class ansattSide
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.kandidatCmb = New System.Windows.Forms.ComboBox()
+        Me.ListBox2 = New System.Windows.Forms.ListBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -74,6 +76,8 @@ Partial Class ansattSide
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.ListBox2)
+        Me.TabPage1.Controls.Add(Me.kandidatCmb)
         Me.TabPage1.Controls.Add(Me.Label9)
         Me.TabPage1.Controls.Add(Me.btnBehov)
         Me.TabPage1.Controls.Add(Me.Label8)
@@ -134,7 +138,7 @@ Partial Class ansattSide
         '
         'btnInnkalling
         '
-        Me.btnInnkalling.Location = New System.Drawing.Point(499, 279)
+        Me.btnInnkalling.Location = New System.Drawing.Point(492, 347)
         Me.btnInnkalling.Margin = New System.Windows.Forms.Padding(4)
         Me.btnInnkalling.Name = "btnInnkalling"
         Me.btnInnkalling.Size = New System.Drawing.Size(172, 63)
@@ -216,7 +220,7 @@ Partial Class ansattSide
         Me.TabPage2.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(4)
-        Me.TabPage2.Size = New System.Drawing.Size(779, 481)
+        Me.TabPage2.Size = New System.Drawing.Size(779, 483)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Bestillinger"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -401,6 +405,23 @@ Partial Class ansattSide
         Me.ComboBox1.Size = New System.Drawing.Size(160, 24)
         Me.ComboBox1.TabIndex = 0
         '
+        'kandidatCmb
+        '
+        Me.kandidatCmb.FormattingEnabled = True
+        Me.kandidatCmb.Location = New System.Drawing.Point(492, 306)
+        Me.kandidatCmb.Name = "kandidatCmb"
+        Me.kandidatCmb.Size = New System.Drawing.Size(181, 24)
+        Me.kandidatCmb.TabIndex = 11
+        '
+        'ListBox2
+        '
+        Me.ListBox2.FormattingEnabled = True
+        Me.ListBox2.ItemHeight = 16
+        Me.ListBox2.Location = New System.Drawing.Point(811, 347)
+        Me.ListBox2.Name = "ListBox2"
+        Me.ListBox2.Size = New System.Drawing.Size(10, 84)
+        Me.ListBox2.TabIndex = 12
+        '
         'ansattSide
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -453,4 +474,6 @@ Partial Class ansattSide
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents kandidatCmb As ComboBox
+    Friend WithEvents ListBox2 As ListBox
 End Class

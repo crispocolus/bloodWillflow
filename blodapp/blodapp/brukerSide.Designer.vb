@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class brukerSide
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class brukerSide
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.MonthCalendar2 = New System.Windows.Forms.MonthCalendar()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -29,7 +29,7 @@ Partial Class brukerSide
         Me.ListBox5 = New System.Windows.Forms.ListBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.ListBox7 = New System.Windows.Forms.ListBox()
+        Me.innkallingLst = New System.Windows.Forms.ListBox()
         Me.btnAvbestillTime = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.btnEndrePersinfo = New System.Windows.Forms.Button()
@@ -77,7 +77,7 @@ Partial Class brukerSide
         '
         Me.ListBox5.FormattingEnabled = True
         Me.ListBox5.ItemHeight = 16
-        Me.ListBox5.Location = New System.Drawing.Point(361, 287)
+        Me.ListBox5.Location = New System.Drawing.Point(310, 287)
         Me.ListBox5.Name = "ListBox5"
         Me.ListBox5.Size = New System.Drawing.Size(85, 116)
         Me.ListBox5.TabIndex = 4
@@ -100,14 +100,14 @@ Partial Class brukerSide
         Me.Label7.TabIndex = 6
         Me.Label7.Text = "Personlig info"
         '
-        'ListBox7
+        'innkallingLst
         '
-        Me.ListBox7.FormattingEnabled = True
-        Me.ListBox7.ItemHeight = 16
-        Me.ListBox7.Location = New System.Drawing.Point(12, 287)
-        Me.ListBox7.Name = "ListBox7"
-        Me.ListBox7.Size = New System.Drawing.Size(119, 116)
-        Me.ListBox7.TabIndex = 8
+        Me.innkallingLst.FormattingEnabled = True
+        Me.innkallingLst.ItemHeight = 16
+        Me.innkallingLst.Location = New System.Drawing.Point(12, 287)
+        Me.innkallingLst.Name = "innkallingLst"
+        Me.innkallingLst.Size = New System.Drawing.Size(119, 116)
+        Me.innkallingLst.TabIndex = 8
         '
         'btnAvbestillTime
         '
@@ -129,7 +129,7 @@ Partial Class brukerSide
         '
         'btnEndrePersinfo
         '
-        Me.btnEndrePersinfo.Location = New System.Drawing.Point(343, 449)
+        Me.btnEndrePersinfo.Location = New System.Drawing.Point(310, 414)
         Me.btnEndrePersinfo.Name = "btnEndrePersinfo"
         Me.btnEndrePersinfo.Size = New System.Drawing.Size(103, 23)
         Me.btnEndrePersinfo.TabIndex = 11
@@ -138,7 +138,7 @@ Partial Class brukerSide
         '
         'btnLoggUt
         '
-        Me.btnLoggUt.Location = New System.Drawing.Point(427, 18)
+        Me.btnLoggUt.Location = New System.Drawing.Point(600, 12)
         Me.btnLoggUt.Name = "btnLoggUt"
         Me.btnLoggUt.Size = New System.Drawing.Size(103, 23)
         Me.btnLoggUt.TabIndex = 12
@@ -175,7 +175,7 @@ Partial Class brukerSide
         '
         'brukerSide
         '
-        Me.ClientSize = New System.Drawing.Size(554, 585)
+        Me.ClientSize = New System.Drawing.Size(715, 585)
         Me.Controls.Add(Me.epostTxt)
         Me.Controls.Add(Me.telefonTxt)
         Me.Controls.Add(Me.etternavnTxt)
@@ -184,7 +184,7 @@ Partial Class brukerSide
         Me.Controls.Add(Me.btnEndrePersinfo)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.btnAvbestillTime)
-        Me.Controls.Add(Me.ListBox7)
+        Me.Controls.Add(Me.innkallingLst)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.ListBox5)
@@ -217,7 +217,7 @@ Partial Class brukerSide
     Friend WithEvents ListBox5 As ListBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents ListBox7 As ListBox
+    Friend WithEvents innkallingLst As ListBox
     Friend WithEvents btnAvbestillTime As Button
     Friend WithEvents Label8 As Label
     Friend WithEvents btnEndrePersinfo As Button

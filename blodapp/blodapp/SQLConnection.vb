@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class SQL
-    Public oppkobling = New MySqlConnection("server=mysql.stud.iie.ntnu.no;database=g_oops_25;uid=g_oops_25;Pwd=M3PV7P9e")
+    Public oppkobling = New MySqlConnection("server=mysql.stud.iie.ntnu.no;database=g_oops_25;uid=g_oops_25;Pwd=M3PV7P9e;Convert Zero Datetime=true;")
     Public paakoblet As Boolean = False
 
 End Class
@@ -272,6 +272,30 @@ Public Class info
             Return ex.Message
         End Try
     End Function
+
+    Public Sub sendInnkalling(personnummer As String, innkallingTekst As String, dato As String)
+        'Importerer oppkobling fra SQL klassen
+        Dim connect As New SQL
+        Dim oppkobling = connect.oppkobling
+
+        Dim status As String = 0
+
+        Try
+            oppkobling.Open()
+
+            Dim sqlSporring = "insert into innkallinger (person_nr, tid_sendt, status, fritekst_innkalling, oppmote) values (" & personnummer & ",  
+                                                                                                                            CURDATE() , 
+                                                                                                                           " & status & ", 
+                                                                                                                           '" & innkallingTekst & "', 
+                                                                                                                           '" & dato & "');" '
+
+            Dim sql As New MySqlCommand(sqlSporring, oppkobling)
+            sql.ExecuteNonQuery()
+            oppkobling.Close()
+        Catch ex As Exception
+            MessageBox.Show("Noe gikk galt: " & ex.Message)
+        End Try
+    End Sub
 End Class
 
 
