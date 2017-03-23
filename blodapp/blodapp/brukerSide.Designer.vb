@@ -48,21 +48,22 @@ Partial Class brukerSide
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(159, 23)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(90, 13)
+        Me.Label5.Size = New System.Drawing.Size(120, 17)
         Me.Label5.TabIndex = 1
         Me.Label5.Text = "Velg en ledig time"
         '
         'ListBox4
         '
         Me.ListBox4.FormattingEnabled = True
-        Me.ListBox4.Location = New System.Drawing.Point(260, 45)
+        Me.ListBox4.ItemHeight = 16
+        Me.ListBox4.Location = New System.Drawing.Point(310, 45)
         Me.ListBox4.Name = "ListBox4"
-        Me.ListBox4.Size = New System.Drawing.Size(87, 160)
+        Me.ListBox4.Size = New System.Drawing.Size(87, 148)
         Me.ListBox4.TabIndex = 2
         '
         'btnSokTime
         '
-        Me.btnSokTime.Location = New System.Drawing.Point(162, 219)
+        Me.btnSokTime.Location = New System.Drawing.Point(310, 219)
         Me.btnSokTime.Name = "btnSokTime"
         Me.btnSokTime.Size = New System.Drawing.Size(103, 23)
         Me.btnSokTime.TabIndex = 3
@@ -72,9 +73,10 @@ Partial Class brukerSide
         'ListBox5
         '
         Me.ListBox5.FormattingEnabled = True
+        Me.ListBox5.ItemHeight = 16
         Me.ListBox5.Location = New System.Drawing.Point(296, 287)
         Me.ListBox5.Name = "ListBox5"
-        Me.ListBox5.Size = New System.Drawing.Size(85, 121)
+        Me.ListBox5.Size = New System.Drawing.Size(85, 116)
         Me.ListBox5.TabIndex = 4
         '
         'Label6
@@ -82,7 +84,7 @@ Partial Class brukerSide
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(307, 260)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(49, 13)
+        Me.Label6.Size = New System.Drawing.Size(65, 17)
         Me.Label6.TabIndex = 5
         Me.Label6.Text = "Giverinfo"
         '
@@ -91,24 +93,26 @@ Partial Class brukerSide
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(179, 260)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(70, 13)
+        Me.Label7.Size = New System.Drawing.Size(94, 17)
         Me.Label7.TabIndex = 6
         Me.Label7.Text = "Personlig info"
         '
         'ListBox6
         '
         Me.ListBox6.FormattingEnabled = True
+        Me.ListBox6.ItemHeight = 16
         Me.ListBox6.Location = New System.Drawing.Point(174, 287)
         Me.ListBox6.Name = "ListBox6"
-        Me.ListBox6.Size = New System.Drawing.Size(85, 121)
+        Me.ListBox6.Size = New System.Drawing.Size(85, 116)
         Me.ListBox6.TabIndex = 7
         '
         'ListBox7
         '
         Me.ListBox7.FormattingEnabled = True
+        Me.ListBox7.ItemHeight = 16
         Me.ListBox7.Location = New System.Drawing.Point(12, 287)
         Me.ListBox7.Name = "ListBox7"
-        Me.ListBox7.Size = New System.Drawing.Size(119, 121)
+        Me.ListBox7.Size = New System.Drawing.Size(119, 116)
         Me.ListBox7.TabIndex = 8
         '
         'btnAvbestillTime
@@ -125,7 +129,7 @@ Partial Class brukerSide
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(15, 260)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(93, 13)
+        Me.Label8.Size = New System.Drawing.Size(122, 17)
         Me.Label8.TabIndex = 10
         Me.Label8.Text = "Aktive innkallinger"
         '

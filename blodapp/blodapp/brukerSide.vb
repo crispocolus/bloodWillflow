@@ -4,12 +4,14 @@
         Dim info As New info
         Dim sql As New SQL
 
-        Dim resultatTab As New DataTable
-        resultatTab = info.hentInfo()
+        MsgBox(LoginForm.bnavn)
 
-        ListBox3.Items.Clear()
+        Dim resultatTab As New DataTable
+        resultatTab = info.queryJoin("*", "bruker", "postnummer ON bruker.post_nr = postnummer.post_nr", "epost = jens@")
+
+        ListBox6.Items.Clear()
         For Each rad As DataRow In resultatTab.Rows
-            ListBox3.Items.Add(rad("fornavn") & " " & rad("etternavn") & " " & rad("epost") & " " & rad("fdato"))
+            ListBox6.Items.Add(rad("fornavn") & " " & rad("etternavn") & " " & rad("epost") & " " & rad("fdato"))
         Next
     End Sub
 

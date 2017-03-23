@@ -215,7 +215,7 @@ Public Class soking
 End Class
 
 Public Class info
-    Public Function hentInfo()
+    Public Function query(velg As String, fra As String, hvor As String)
         'Importerer oppkobling fra SQL klassen
         Dim connect As New SQL
         Dim oppkobling = connect.oppkobling
@@ -223,10 +223,13 @@ Public Class info
         Try
             oppkobling.Open()
 
-            Dim sqlSporring = "SELECT * from bruker INNER JOIN postnummer ON bruker.post_nr = postnummer.post_nr WHERE epost =@brukernavn;"
+
+            Dim sqlSporring = "SELECT @velg FROM @fra WHERE @hvor;"
 
             Dim SQL As New MySqlCommand(sqlSporring, oppkobling)
-            SQL.Parameters.AddWithValue("@brukernavn", LoginForm.bnavn)
+            SQL.Parameters.AddWithValue("@velg", velg)
+            SQL.Parameters.AddWithValue("@fra", fra)
+            SQL.Parameters.AddWithValue("@hvor", hvor)
 
             Dim da As New MySqlDataAdapter
             da.SelectCommand = SQL
@@ -236,20 +239,39 @@ Public Class info
 
         Catch ex As Exception
             MessageBox.Show("Noe gikk galt: " & ex.Message)
-            Return "Det ble en feil men det er forsatt en veldig fin dag"
+            Return ex.Message
+        End Try
+    End Function
+
+    Public Function queryJoin(velg As String, fra As String, join As String, hvor As String)
+        'Importerer oppkobling fra SQL klassen
+        Dim connect As New SQL
+        Dim oppkobling = connect.oppkobling
+        Dim tabell As New DataTable
+        Try
+            oppkobling.Open()
+
+            Dim sqlSporring = "SELECT @velg FROM @fra INNER JOIN @join WHERE @hvor;"
+
+            Dim SQL As New MySqlCommand(sqlSporring, oppkobling)
+            SQL.Parameters.AddWithValue("@velg", velg)
+            SQL.Parameters.AddWithValue("@join", join)
+            SQL.Parameters.AddWithValue("@fra", fra)
+            SQL.Parameters.AddWithValue("@hvor", hvor)
+
+            Dim da As New MySqlDataAdapter
+            da.SelectCommand = SQL
+            da.Fill(tabell)
+            Return tabell
+            oppkobling.Close()
+
+        Catch ex As Exception
+            MessageBox.Show("Noe gikk galt: " & ex.Message)
+            Return ex.Message
         End Try
     End Function
 End Class
 
-'    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-'        oppkobling = New MySqlConnection("server=mysql.stud.iie.ntnu.no;database=g_oops_25;uid=g_oops_25;Pwd=M3PV7P9e")
-'        oppkobling.Open()
-'    End Sub
-
-'    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-'        Application.Exit()
-'    End Sub
 
 '    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
 '        Sporring("CREATE TABLE Oving4 (Id int, Fornavn Char(25), Etternavn Char(25), Epost Char(25), Fdato Date)")
@@ -257,41 +279,6 @@ End Class
 '        Sporring("INSERT INTO Oving4 (Id, Fornavn, Etternavn, Epost, Fdato) VALUES (2, 'Kari', 'Svensen', 'sven.kari@hotmail.com', '1956-03-12')")
 '        Sporring("INSERT INTO Oving4 (Id, Fornavn, Etternavn, Epost, Fdato) VALUES (3, 'Ove', 'Jensen', 'ove@jensen.no', '1978-05-11')")
 '    End Sub
-
-'    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-'        Dim tabell As New DataTable
-'        tabell = Sporring("SELECT * FROM Oving4")
-
-'        ListBox1.Items.Clear()
-'        For Each rad As DataRow In tabell.Rows
-'            ListBox1.Items.Add(rad("Id") & " " & rad("Fornavn") & " " & rad("Etternavn") & " " & rad("Epost") & " " & rad("Fdato"))
-'        Next
-'        oppkobling.Close()
-'    End Sub
-
-'    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-'        Dim sorter As String
-
-'        Select Case ComboBox1.Text
-'            Case "fornavn"
-'                sorter = "Fornavn"
-'            Case "etternavn"
-'                sorter = "Etternavn"
-'            Case "epost"
-'                sorter = "Epost"
-'            Case "fdato"
-'                sorter = "Fdato"
-'            Case "id"
-'                sorter = "Id"
-'        End Select
-
-'        Dim tabell As New DataTable
-'        tabell = Sporring("SELECT * FROM Oving4 ORDER By " & sorter)
-
-'        ListBox1.Items.Clear()
-'        For Each rad As DataRow In tabell.Rows
-'            ListBox1.Items.Add(rad("Fornavn") & " " & rad("Etternavn") & " " & rad("Epost") & " " & rad("Fdato"))
-'        Next
 
 '    End Sub
 

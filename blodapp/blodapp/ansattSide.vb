@@ -34,4 +34,17 @@
         End If
 
     End Sub
+
+    'Public Sub query()
+    '    Dim info As New info
+    '    Dim sql As New SQL
+
+    '    Dim resultatTab As New DataTable
+    '    resultatTab = info.hentInfo()
+
+    '    lstKandidater.Items.Clear()
+    '    For Each rad As DataRow In resultatTab.Rows
+    '        lstKandidater.Items.Add(rad("fornavn") & " " & rad("etternavn") & " " & rad("epost") & " " & rad("fdato"))
+    '    Next
+    'End Sub
 End Class
