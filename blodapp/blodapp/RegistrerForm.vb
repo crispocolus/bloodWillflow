@@ -14,31 +14,33 @@ Public Class RegistrerForm
     End Function
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        SjekkInfo()
+        SjekkInfo(postnrTxt.Text, adresseTxt.Text, pnummerTxt.Text, fornavnTxt.Text, etternavnTxt.Text, epostTxt.Text, tlfTxt.Text, passordcTxt.Text, passordTxt.Text)
+        Me.Hide()
+        LoginForm.Show()
     End Sub
 
 
-    Public Sub SjekkInfo()
+    Public Sub SjekkInfo(post_nr As String, adresse As String, pnummer As String, fornavn As String, etternavn As String, epost As String, tlf As String, passordc As String, passord As String)
         Dim Registrering As New RegBruker
-        Dim fornavn As String = fornavnTxt.Text
-        Dim etternavn As String = etternavnTxt.Text
+
         Dim godkjentEpost As Boolean = False
         Dim godkjentTelefon As Boolean = False
         Dim godkjentPassord As Boolean = False
 
-        If validateEmail(epostTxt.Text) = True Then
+
+        If validateEmail(epost) = True Then
             godkjentEpost = True
         Else
             MsgBox("Epost ikke godkjent. Sjekk om du har husket @")
         End If
 
-        If IsNumeric(tlfTxt.Text) And tlfTxt.TextLength = 8 Then
+        If IsNumeric(tlf) And tlf.Length = 8 Then
             godkjentTelefon = True
         Else
             MsgBox("Telefonnummeret må være 8 siffer")
         End If
 
-        If passordcTxt.Text = passordTxt.Text Then
+        If passordc = passord Then
             godkjentPassord = True
         Else
             MsgBox("Passordene du anga stemmer ikke overens")
@@ -46,7 +48,7 @@ Public Class RegistrerForm
 
         'Når info er sjekket og godkjent så utføres funksjonen *sendInfo* som finnes i regbruker.vb
         If godkjentEpost = True And godkjentTelefon = True And godkjentPassord = True Then
-            MsgBox("Registrering fullført." & vbCrLf & "Brukernavnet ditt er: " & epostTxt.Text & vbCrLf & vbCrLf & "Du kan nå gi samtykke ved resepsjonen")
+            MsgBox("Registrering fullført." & vbCrLf & "Brukernavnet ditt er: " & epost & vbCrLf & vbCrLf & "Du kan nå gi samtykke ved resepsjonen")
             Dim salt As String
             Dim passordHash As String = ""
             salt = CreateRandomSalt()
@@ -54,20 +56,18 @@ Public Class RegistrerForm
             passordHash = passordTxt.Text
 
 
-            Registrering.sendInfo(postnrTxt.Text,
-                                  adresseTxt.Text,
-                                  pnummerTxt.Text,
-                                  fornavnTxt.Text,
-                                  etternavnTxt.Text,
-                                  epostTxt.Text,
-                                  tlfTxt.Text,
-                                  postnrTxt.Text,
-                                  adresseTxt.Text,
+            Registrering.sendInfo(post_nr,
+                                  adresse,
+                                  pnummer,
+                                  fornavn,
+                                  etternavn,
+                                  epost,
+                                  tlf,
+                                  adresse,
                                   passordHash,
                                   salt)
 
-            Me.Hide()
-            LoginForm.Show()
+
         End If
     End Sub
 

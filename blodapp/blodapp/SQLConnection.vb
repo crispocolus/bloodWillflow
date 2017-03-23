@@ -137,7 +137,6 @@ Public Class RegBruker
                         enavn As String,
                         epost As String,
                         telefon As String,
-                        post_nr As String,
                         gateadresse As String,
                         passordHash As String,
                         salt As String
@@ -171,7 +170,7 @@ Public Class RegBruker
             sql2.Parameters.AddWithValue("@epost", epost)
             sql2.Parameters.AddWithValue("@telefon", telefon)
             sql2.Parameters.AddWithValue("@fdato", "112397")
-            sql2.Parameters.AddWithValue("@post_nr", post_nr)
+            sql2.Parameters.AddWithValue("@post_nr", postnr)
             sql2.Parameters.AddWithValue("@gateadresse", gateadresse)
             sql2.Parameters.AddWithValue("@hash", passordHash)
             sql2.Parameters.AddWithValue("@salt", salt)
