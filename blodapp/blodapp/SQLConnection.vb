@@ -9,11 +9,9 @@ Public Class Login
     Public passord As String
     Public databasenavn As String
     Dim brukerstatus As String
-    Public innloggetbrukernavn = ""
-
 
     'Påloggingskode. Utføres når brukeren logger inn.
-    Public Sub innlogging()
+    Public Function innlogging()
         'Importerer oppkobling fra SQL klassen
         Dim connect As New SQL
         Dim oppkobling = connect.oppkobling
@@ -47,9 +45,9 @@ Public Class Login
             'Sjekker om det kommer noe restultat. Hvis ja, sier "Logget på" og utfører "sjekkBrukerStat()"
             If interTabell.Rows.Count > 0 Then
                 MsgBox("Innlogget", MsgBoxStyle.Information)
+                brukerstat.sjekkBrukerStat(LoginForm.bnavn)
                 connect.paakoblet = True
-                brukerstat.sjekkBrukerStat(brukernavn)
-                innloggetbrukernavn = brukernavn
+                Return connect.paakoblet
             Else
                 MsgBox("Feil brukernavn eller passord")
                 oppkobling.Close()
@@ -59,7 +57,7 @@ Public Class Login
             'Gir feilmelding om 
             MessageBox.Show("Noe gikk galt: " & ex.Message)
         End Try
-    End Sub
+    End Function
 End Class
 
 Public Class HentData
@@ -97,8 +95,12 @@ Public Class BrukerStat
         Dim oppkobling = connect.oppkobling
 
         Try
+            'Åpner tilkobling mot databsen
             oppkobling.Open()
-            Dim brukerstatus As String = -1
+
+            'Definerer brukerstatus
+            Dim brukerstatus As Integer = -1
+
             Dim sqlSporring = "select brukerstatus from bruker where epost=@brukernavn"
             Dim sql As New MySqlCommand(sqlSporring, oppkobling)
 
@@ -116,7 +118,10 @@ Public Class BrukerStat
                     brukerSide.Show()
                 Case "1"
                     ansattSide.Show()
+                    MsgBox("Du er en ansatt")
                 Case "2"
+                    lederSide.Show()
+                Case "3"
                     adminSide.Show()
                 Case Else
                     MsgBox("En feil oppstod: 'brukerstatus ikke funnet'. Vennligst kontakt personalet.")
@@ -224,12 +229,9 @@ Public Class info
             oppkobling.Open()
 
 
-            Dim sqlSporring = "SELECT @velg FROM @fra WHERE @hvor;"
+            Dim sqlSporring = "SELECT " & velg & " FROM " & fra & " WHERE " & hvor & ";"
 
             Dim SQL As New MySqlCommand(sqlSporring, oppkobling)
-            SQL.Parameters.AddWithValue("@velg", velg)
-            SQL.Parameters.AddWithValue("@fra", fra)
-            SQL.Parameters.AddWithValue("@hvor", hvor)
 
             Dim da As New MySqlDataAdapter
             da.SelectCommand = SQL
@@ -251,13 +253,13 @@ Public Class info
         Try
             oppkobling.Open()
 
-            Dim sqlSporring = "SELECT @velg FROM @fra INNER JOIN @join WHERE @hvor;"
+            Dim sqlSporring = "SELECT " & velg & " FROM " & fra & " INNER JOIN " & join & " WHERE " & hvor & ";"
 
             Dim SQL As New MySqlCommand(sqlSporring, oppkobling)
-            SQL.Parameters.AddWithValue("@velg", velg)
-            SQL.Parameters.AddWithValue("@join", join)
-            SQL.Parameters.AddWithValue("@fra", fra)
-            SQL.Parameters.AddWithValue("@hvor", hvor)
+            'SQL.Parameters.AddWithValue("@velg", velg)
+            'SQL.Parameters.AddWithValue("@join", join)
+            'SQL.Parameters.AddWithValue("@fra", fra)
+            'SQL.Parameters.AddWithValue("@hvor", hvor)
 
             Dim da As New MySqlDataAdapter
             da.SelectCommand = SQL

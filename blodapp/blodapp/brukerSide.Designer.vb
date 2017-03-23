@@ -29,12 +29,15 @@ Partial Class brukerSide
         Me.ListBox5 = New System.Windows.Forms.ListBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.ListBox6 = New System.Windows.Forms.ListBox()
         Me.ListBox7 = New System.Windows.Forms.ListBox()
         Me.btnAvbestillTime = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.btnEndrePersinfo = New System.Windows.Forms.Button()
         Me.btnLoggUt = New System.Windows.Forms.Button()
+        Me.fornavnTxt = New System.Windows.Forms.TextBox()
+        Me.etternavnTxt = New System.Windows.Forms.TextBox()
+        Me.telefonTxt = New System.Windows.Forms.TextBox()
+        Me.epostTxt = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'MonthCalendar2
@@ -74,7 +77,7 @@ Partial Class brukerSide
         '
         Me.ListBox5.FormattingEnabled = True
         Me.ListBox5.ItemHeight = 16
-        Me.ListBox5.Location = New System.Drawing.Point(296, 287)
+        Me.ListBox5.Location = New System.Drawing.Point(361, 287)
         Me.ListBox5.Name = "ListBox5"
         Me.ListBox5.Size = New System.Drawing.Size(85, 116)
         Me.ListBox5.TabIndex = 4
@@ -96,15 +99,6 @@ Partial Class brukerSide
         Me.Label7.Size = New System.Drawing.Size(94, 17)
         Me.Label7.TabIndex = 6
         Me.Label7.Text = "Personlig info"
-        '
-        'ListBox6
-        '
-        Me.ListBox6.FormattingEnabled = True
-        Me.ListBox6.ItemHeight = 16
-        Me.ListBox6.Location = New System.Drawing.Point(174, 287)
-        Me.ListBox6.Name = "ListBox6"
-        Me.ListBox6.Size = New System.Drawing.Size(85, 116)
-        Me.ListBox6.TabIndex = 7
         '
         'ListBox7
         '
@@ -135,7 +129,7 @@ Partial Class brukerSide
         '
         'btnEndrePersinfo
         '
-        Me.btnEndrePersinfo.Location = New System.Drawing.Point(162, 414)
+        Me.btnEndrePersinfo.Location = New System.Drawing.Point(343, 449)
         Me.btnEndrePersinfo.Name = "btnEndrePersinfo"
         Me.btnEndrePersinfo.Size = New System.Drawing.Size(103, 23)
         Me.btnEndrePersinfo.TabIndex = 11
@@ -151,15 +145,46 @@ Partial Class brukerSide
         Me.btnLoggUt.Text = "Logg ut"
         Me.btnLoggUt.UseVisualStyleBackColor = True
         '
+        'fornavnTxt
+        '
+        Me.fornavnTxt.Location = New System.Drawing.Point(179, 287)
+        Me.fornavnTxt.Name = "fornavnTxt"
+        Me.fornavnTxt.Size = New System.Drawing.Size(100, 22)
+        Me.fornavnTxt.TabIndex = 13
+        '
+        'etternavnTxt
+        '
+        Me.etternavnTxt.Location = New System.Drawing.Point(179, 325)
+        Me.etternavnTxt.Name = "etternavnTxt"
+        Me.etternavnTxt.Size = New System.Drawing.Size(100, 22)
+        Me.etternavnTxt.TabIndex = 14
+        '
+        'telefonTxt
+        '
+        Me.telefonTxt.Location = New System.Drawing.Point(179, 368)
+        Me.telefonTxt.Name = "telefonTxt"
+        Me.telefonTxt.Size = New System.Drawing.Size(100, 22)
+        Me.telefonTxt.TabIndex = 15
+        '
+        'epostTxt
+        '
+        Me.epostTxt.Location = New System.Drawing.Point(179, 414)
+        Me.epostTxt.Name = "epostTxt"
+        Me.epostTxt.Size = New System.Drawing.Size(100, 22)
+        Me.epostTxt.TabIndex = 16
+        '
         'brukerSide
         '
-        Me.ClientSize = New System.Drawing.Size(554, 496)
+        Me.ClientSize = New System.Drawing.Size(554, 585)
+        Me.Controls.Add(Me.epostTxt)
+        Me.Controls.Add(Me.telefonTxt)
+        Me.Controls.Add(Me.etternavnTxt)
+        Me.Controls.Add(Me.fornavnTxt)
         Me.Controls.Add(Me.btnLoggUt)
         Me.Controls.Add(Me.btnEndrePersinfo)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.btnAvbestillTime)
         Me.Controls.Add(Me.ListBox7)
-        Me.Controls.Add(Me.ListBox6)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.ListBox5)
@@ -192,10 +217,13 @@ Partial Class brukerSide
     Friend WithEvents ListBox5 As ListBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents ListBox6 As ListBox
     Friend WithEvents ListBox7 As ListBox
     Friend WithEvents btnAvbestillTime As Button
     Friend WithEvents Label8 As Label
     Friend WithEvents btnEndrePersinfo As Button
     Friend WithEvents btnLoggUt As Button
+    Friend WithEvents fornavnTxt As TextBox
+    Friend WithEvents etternavnTxt As TextBox
+    Friend WithEvents telefonTxt As TextBox
+    Friend WithEvents epostTxt As TextBox
 End Class

@@ -1,7 +1,7 @@
 ﻿Public Class ansattSide
     Dim kommentar As String
 
-    Dim giverBehov As Integer = TextBox1.Text
+    Public giverBehov As String = 1
     Private Sub btnRetur_Click(sender As Object, e As EventArgs) Handles btnRetur.Click
 
         kommentar = InputBox("Skriv en kommentar til bestillingen")
@@ -27,6 +27,7 @@
     End Sub
 
     Private Sub btnBehov_Click(sender As Object, e As EventArgs) Handles btnBehov.Click
+        giverBehov = TextBox1.Text
         If IsNumeric(txtMengde) Then
             Label9.Text = "Du trenger minst: " & giverBehov & "antall blodgivere"
         Else
@@ -34,6 +35,26 @@
         End If
 
     End Sub
+
+    Private Sub CBoxBlodtype_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBoxBlodtype.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub ansattSide_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lastBlodType()
+    End Sub
+    Public Sub lastBlodType()
+        Dim info As New info
+        Dim CountTabell As New DataTable
+        CBoxBlodtype.Items.Clear()
+
+        CountTabell = info.query("blodtype", "blodgiver", "1 GROUP BY blodtype")
+
+        For Each rad In CountTabell.Rows
+            CBoxBlodtype.Items.Add(rad("blodtype"))
+        Next
+    End Sub
+
 
     'Public Sub query()
     '    Dim info As New info

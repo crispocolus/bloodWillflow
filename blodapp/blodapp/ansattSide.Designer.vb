@@ -65,11 +65,11 @@ Partial Class ansattSide
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
-        Me.TabControl1.Location = New System.Drawing.Point(0, 1)
+        Me.TabControl1.Location = New System.Drawing.Point(0, -1)
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(4)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(787, 510)
+        Me.TabControl1.Size = New System.Drawing.Size(787, 512)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage1
@@ -89,7 +89,7 @@ Partial Class ansattSide
         Me.TabPage1.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(4)
-        Me.TabPage1.Size = New System.Drawing.Size(779, 481)
+        Me.TabPage1.Size = New System.Drawing.Size(779, 483)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Innkalling"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -162,7 +162,7 @@ Partial Class ansattSide
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(268, 33)
+        Me.Label2.Location = New System.Drawing.Point(272, 17)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(77, 17)
@@ -172,7 +172,7 @@ Partial Class ansattSide
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(8, 34)
+        Me.Label1.Location = New System.Drawing.Point(262, 47)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(98, 17)
@@ -183,7 +183,7 @@ Partial Class ansattSide
         '
         Me.lstKandidater.FormattingEnabled = True
         Me.lstKandidater.ItemHeight = 16
-        Me.lstKandidater.Location = New System.Drawing.Point(239, 54)
+        Me.lstKandidater.Location = New System.Drawing.Point(249, 100)
         Me.lstKandidater.Margin = New System.Windows.Forms.Padding(4)
         Me.lstKandidater.Name = "lstKandidater"
         Me.lstKandidater.Size = New System.Drawing.Size(143, 324)
@@ -193,7 +193,7 @@ Partial Class ansattSide
         '
         Me.CBoxBlodtype.FormattingEnabled = True
         Me.CBoxBlodtype.Items.AddRange(New Object() {"O+", "O-", "A+", "A-", "B+", "B-", "AB+", "AB-"})
-        Me.CBoxBlodtype.Location = New System.Drawing.Point(8, 54)
+        Me.CBoxBlodtype.Location = New System.Drawing.Point(265, 68)
         Me.CBoxBlodtype.Margin = New System.Windows.Forms.Padding(4)
         Me.CBoxBlodtype.Name = "CBoxBlodtype"
         Me.CBoxBlodtype.Size = New System.Drawing.Size(97, 24)
@@ -339,7 +339,7 @@ Partial Class ansattSide
         Me.TabPage3.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(4)
-        Me.TabPage3.Size = New System.Drawing.Size(779, 481)
+        Me.TabPage3.Size = New System.Drawing.Size(779, 483)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Oversikt blodbank"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -348,7 +348,7 @@ Partial Class ansattSide
         '
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.ItemHeight = 16
-        Me.ListBox1.Location = New System.Drawing.Point(36, 150)
+        Me.ListBox1.Location = New System.Drawing.Point(34, 150)
         Me.ListBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(704, 308)
@@ -357,7 +357,7 @@ Partial Class ansattSide
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(31, 130)
+        Me.Label12.Location = New System.Drawing.Point(33, 129)
         Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(83, 17)
@@ -367,7 +367,7 @@ Partial Class ansattSide
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(232, 37)
+        Me.Label11.Location = New System.Drawing.Point(232, 38)
         Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(60, 17)
@@ -376,7 +376,7 @@ Partial Class ansattSide
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(236, 57)
+        Me.TextBox2.Location = New System.Drawing.Point(235, 59)
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(132, 22)
@@ -385,17 +385,17 @@ Partial Class ansattSide
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(31, 37)
+        Me.Label10.Location = New System.Drawing.Point(33, 37)
         Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(97, 17)
+        Me.Label10.Size = New System.Drawing.Size(92, 17)
         Me.Label10.TabIndex = 1
-        Me.Label10.Text = "Søk antall liter"
+        Me.Label10.Text = "Vis antall liter"
         '
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(35, 57)
+        Me.ComboBox1.Location = New System.Drawing.Point(34, 57)
         Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(160, 24)
