@@ -13,14 +13,15 @@
     End Sub
 
     Public Sub info()
+        'Importerer SQL og info ved nye objekt
         Dim info As New info
         Dim sql As New SQL
 
+
+        'Oppretter 
         Dim resultatTab As New DataTable
         resultatTab = info.queryJoin("*", "bruker", "postnummer ON bruker.post_nr = postnummer.post_nr", "epost = '" & LoginForm.bnavn & "';")
-        'ListBox6.Items.Clear()
         For Each rad As DataRow In resultatTab.Rows
-            'ListBox6.Items.Add(rad("fornavn") & " " & rad("etternavn") & " " & rad("telefon") & " " & rad("epost"))
             fornavnTxt.Text = (rad("fornavn"))
             etternavnTxt.Text = (rad("etternavn"))
             telefonTxt.Text = (rad("telefon"))
@@ -30,16 +31,19 @@
     End Sub
 
     Public Sub sjekkMelding()
+        'Importerer SQL og info objekt
         Dim info As New info
         Dim sql As New SQL
 
+        'Opretter en datatabell og putter resultatet fra spørringen inni. Henter innkallinger basert på brukernavn og status. 
         Dim resultatTab As New DataTable
-        resultatTab = info.queryJoin("innkallinger.person_nr, innkallinger.oppmote", "innkallinger", "bruker ON bruker.person_nr = innkallinger.person_nr", "innkallinger.status = 0;")
+        resultatTab = info.queryJoin("innkallinger.person_nr, innkallinger.oppmote, fritekst_innkalling", "innkallinger", "bruker ON bruker.person_nr = innkallinger.person_nr", "innkallinger.status = 0;")
 
+        'Sjekker innholdet i tabellen, hvis det er resultat får brukeren melding
         If resultatTab.Rows.Count > 0 Then
-            MsgBox("DU HAR FÅTT EN INNKALLING!!!!!!")
+            MsgBox("DU HAR FÅTT " & resultatTab.Rows.Count & " innkalling(er)")
             For Each rad As DataRow In resultatTab.Rows
-                innkallingLst.Items.Add(rad("person_nr") & rad("oppmote"))
+                innkallingLst.Items.Add(rad("fritekst_innkalling") & " " & rad("oppmote"))
             Next
         Else
         End If
