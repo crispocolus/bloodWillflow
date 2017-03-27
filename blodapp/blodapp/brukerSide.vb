@@ -1,13 +1,16 @@
-﻿Public Class brukerSide
+﻿Imports System.Globalization
+Imports MySql.Data.MySqlClient
+
+Public Class brukerSide
     Private Sub brukerSide_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'info()
+        info()
         sjekkMelding()
     End Sub
 
 
     Private Sub btnLoggUt_Click(sender As Object, e As EventArgs) Handles btnLoggUt.Click
         LoginForm.bnavn = ""
-        Me.Hide()
+        Me.Close()
         LoginForm.Show()
         MsgBox("Du er nå logget ut")
     End Sub
@@ -47,5 +50,19 @@
             Next
         Else
         End If
+    End Sub
+
+    Private Sub MonthCalendar2_DateChanged(sender As Object, e As DateRangeEventArgs) Handles MonthCalendar2.DateChanged
+        Dim info As New info
+        Dim dato As String
+        Dim data As New DataTable
+        dato = MonthCalendar2.SelectionRange.Start.ToString()
+        MsgBox(dato)
+        'dato = Date.ParseExact(dato, "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture)
+        data = info.queryDato("oppmote", "innkallinger", "bruker ON bruker.person_nr = innkallinger.person_nr", "oppmote = '" & dato & "' AND bruker.epost = '" & LoginForm.bnavn & "';")
+
+        For Each rad As DataRow In data.Rows
+            datoInkallLst.Items.Add(rad("fritekst_innkalling") & " " & rad("oppmote"))
+        Next
     End Sub
 End Class

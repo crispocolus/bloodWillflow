@@ -24,7 +24,7 @@ Partial Class brukerSide
     Private Sub InitializeComponent()
         Me.MonthCalendar2 = New System.Windows.Forms.MonthCalendar()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.ListBox4 = New System.Windows.Forms.ListBox()
+        Me.datoInkallLst = New System.Windows.Forms.ListBox()
         Me.btnSokTime = New System.Windows.Forms.Button()
         Me.ListBox5 = New System.Windows.Forms.ListBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -55,14 +55,14 @@ Partial Class brukerSide
         Me.Label5.TabIndex = 1
         Me.Label5.Text = "Velg en ledig time"
         '
-        'ListBox4
+        'datoInkallLst
         '
-        Me.ListBox4.FormattingEnabled = True
-        Me.ListBox4.ItemHeight = 16
-        Me.ListBox4.Location = New System.Drawing.Point(310, 45)
-        Me.ListBox4.Name = "ListBox4"
-        Me.ListBox4.Size = New System.Drawing.Size(87, 148)
-        Me.ListBox4.TabIndex = 2
+        Me.datoInkallLst.FormattingEnabled = True
+        Me.datoInkallLst.ItemHeight = 16
+        Me.datoInkallLst.Location = New System.Drawing.Point(310, 45)
+        Me.datoInkallLst.Name = "datoInkallLst"
+        Me.datoInkallLst.Size = New System.Drawing.Size(87, 148)
+        Me.datoInkallLst.TabIndex = 2
         '
         'btnSokTime
         '
@@ -189,7 +189,7 @@ Partial Class brukerSide
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.ListBox5)
         Me.Controls.Add(Me.btnSokTime)
-        Me.Controls.Add(Me.ListBox4)
+        Me.Controls.Add(Me.datoInkallLst)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.MonthCalendar2)
         Me.Name = "brukerSide"
@@ -212,7 +212,7 @@ Partial Class brukerSide
     Friend WithEvents btnAvbestill As Button
     Friend WithEvents MonthCalendar2 As MonthCalendar
     Friend WithEvents Label5 As Label
-    Friend WithEvents ListBox4 As ListBox
+    Friend WithEvents datoInkallLst As ListBox
     Friend WithEvents btnSokTime As Button
     Friend WithEvents ListBox5 As ListBox
     Friend WithEvents Label6 As Label

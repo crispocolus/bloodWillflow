@@ -15,21 +15,30 @@ Public Class RegistrerForm
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         SjekkInfo(postnrTxt.Text, adresseTxt.Text, pnummerTxt.Text, fornavnTxt.Text, etternavnTxt.Text, epostTxt.Text, tlfTxt.Text, passordcTxt.Text, passordTxt.Text)
-        Me.Hide()
+        Me.Close()
         LoginForm.Show()
     End Sub
 
 
     Public Sub SjekkInfo(post_nr As String, adresse As String, pnummer As String, fornavn As String, etternavn As String, epost As String, tlf As String, passordc As String, passord As String)
         Dim Registrering As New RegBruker
+        Dim info As New info
+        Dim data As DataTable
+        data = info.query("epost", "bruker", "epost = '" & epost & "';")
+
+        MsgBox(data.Rows.Count)
 
         Dim godkjentEpost As Boolean = False
         Dim godkjentTelefon As Boolean = False
         Dim godkjentPassord As Boolean = False
 
-
         If validateEmail(epost) = True Then
-            godkjentEpost = True
+            If data.Rows.Count > 0 Then
+                MsgBox("E-posten finnes fra før. Har du glemt passord?")
+            Else
+                godkjentEpost = True
+                MsgBox(godkjentEpost)
+            End If
         Else
             MsgBox("Epost ikke godkjent. Sjekk om du har husket @")
         End If
@@ -66,8 +75,6 @@ Public Class RegistrerForm
                                   adresse,
                                   passordHash,
                                   salt)
-
-
         End If
     End Sub
 
@@ -88,31 +95,27 @@ Public Class RegistrerForm
                 hexStreng &= t.ToString("x2")
             Next
         Next
-
-
-
-
         Return hexStreng
     End Function
 
-    Public Function Hash512(password As String, salt As String) As String
-        Dim convertedToBytes As Byte() = Encoding.UTF8.GetBytes(password & salt)
-        Dim hashType As HashAlgorithm = New SHA512Managed()
-        Dim hashBytes As Byte() = hashType.ComputeHash(convertedToBytes)
-        Dim hashedResult As String = Convert.ToBase64String(hashBytes)
-        Return hashedResult
-    End Function
+    'Public Function Hash512(password As String, salt As String) As String
+    '    Dim convertedToBytes As Byte() = Encoding.UTF8.GetBytes(password & salt)
+    '    Dim hashType As HashAlgorithm = New SHA512Managed()
+    '    Dim hashBytes As Byte() = hashType.ComputeHash(convertedToBytes)
+    '    Dim hashedResult As String = Convert.ToBase64String(hashBytes)
+    '    Return hashedResult
+    'End Function
 
-    Function crypt(passord As String, salt As String) As String
-        Dim HashObjekt = New Security.Cryptography.SHA256Managed()
-        Dim bytes = System.Text.Encoding.ASCII.GetBytes(passord & salt)
-        bytes = HashObjekt.ComputeHash(bytes)
+    '    Function crypt(passord As String, salt As String) As String
+    '        Dim HashObjekt = New Security.Cryptography.SHA256Managed()
+    '        Dim bytes = System.Text.Encoding.ASCII.GetBytes(passord & salt)
+    '        bytes = HashObjekt.ComputeHash(bytes)
 
-        Dim hexStreng As String = ""
-        For Each enByte In bytes
-            hexStreng &= enByte.ToString("x2")
-        Next
-        MsgBox(hexStreng)
-        Return hexStreng
-    End Function
+    '        Dim hexStreng As String = ""
+    '        For Each enByte In bytes
+    '            hexStreng &= enByte.ToString("x2")
+    '        Next
+    '        MsgBox(hexStreng)
+    '        Return hexStreng
+    '    End Function
 End Class

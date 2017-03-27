@@ -19,18 +19,14 @@ Public Class Login
         Dim brukerstat As New BrukerStat
 
         'Åpner tilkoblingen til databasen
-
         Try
             oppkobling.Open()
 
             'Finner brukeren i databasen
             Dim sqlSporring = "select * from bruker where epost=@brukernavn " & " and hash=@passordHash"
 
-
-
             'Setter opp en sql funksjon ved hjelp av spørringen og tilkoblingen
             Dim sql As New MySqlCommand(sqlSporring, oppkobling)
-
 
             'Gjør det mulig å bruke variabler i sql-kode
             sql.Parameters.AddWithValue("@brukernavn", brukernavn)
@@ -66,16 +62,13 @@ Public Class HentData
         Dim connect As New SQL
         Dim oppkobling = connect.oppkobling
 
-
         Dim tabell As New DataTable
         If connect.paakoblet = False Then
             MsgBox("Du er ikke logget inn")
         Else
             Try
                 oppkobling.Open()
-
                 Dim kommando As New MySqlCommand(sql, oppkobling)
-
                 Dim da As New MySqlDataAdapter
                 da.SelectCommand = kommando
                 da.Fill(tabell)
@@ -118,7 +111,6 @@ Public Class BrukerStat
                     brukerSide.Show()
                 Case "1"
                     ansattSide.Show()
-                    MsgBox("Du er en ansatt")
                 Case "2"
                     lederSide.Show()
                 Case "3"
@@ -161,7 +153,6 @@ Public Class RegBruker
 
             sql.Parameters.AddWithValue("@post_nr", postnr)
             sql.Parameters.AddWithValue("@gtadresse", gtadresse)
-            'sql.ExecuteNonQuery()
 
             adresse_id = sql.LastInsertedId
 
@@ -203,9 +194,6 @@ Public Class soking
 
             Dim SQL As New MySqlCommand(sqlSporring, oppkobling)
 
-            'SQL.ExecuteNonQuery()
-            'Return SQL
-
             Dim da As New MySqlDataAdapter
             da.SelectCommand = SQL
             da.Fill(tabell)
@@ -214,7 +202,7 @@ Public Class soking
 
         Catch ex As Exception
             MessageBox.Show("Noe gikk galt: " & ex.Message)
-
+            Return ex.Message
         End Try
     End Function
 End Class
@@ -228,7 +216,6 @@ Public Class info
         Try
             oppkobling.Open()
 
-
             Dim sqlSporring = "SELECT " & velg & " FROM " & fra & " WHERE " & hvor & ";"
 
             Dim SQL As New MySqlCommand(sqlSporring, oppkobling)
@@ -238,7 +225,6 @@ Public Class info
             da.Fill(tabell)
             Return tabell
             oppkobling.Close()
-
         Catch ex As Exception
             MessageBox.Show("Noe gikk galt: " & ex.Message)
             Return ex.Message
@@ -256,10 +242,6 @@ Public Class info
             Dim sqlSporring = "SELECT " & velg & " FROM " & fra & " INNER JOIN " & join & " WHERE " & hvor & ";"
 
             Dim SQL As New MySqlCommand(sqlSporring, oppkobling)
-            'SQL.Parameters.AddWithValue("@velg", velg)
-            'SQL.Parameters.AddWithValue("@join", join)
-            'SQL.Parameters.AddWithValue("@fra", fra)
-            'SQL.Parameters.AddWithValue("@hvor", hvor)
 
             Dim da As New MySqlDataAdapter
             da.SelectCommand = SQL
@@ -272,6 +254,33 @@ Public Class info
             Return ex.Message
         End Try
     End Function
+
+    Public Function queryDato(velg As String, fra As String, dato As String)
+        'Importerer oppkobling fra SQL klassen
+        Dim connect As New SQL
+        Dim oppkobling = connect.oppkobling
+        Dim tabell As New DataTable
+        Try
+            oppkobling.Open()
+
+            Dim sqlSporring = "SELECT " & velg & " FROM " & fra & " WHERE " & dato & ";"
+
+            Dim SQL As New MySqlCommand(sqlSporring, oppkobling)
+
+            SQL.Parameters.AddWithValue("dato", SqlDbType.DateTime).Value = dato
+
+            Dim da As New MySqlDataAdapter
+            da.SelectCommand = SQL
+            da.Fill(tabell)
+            Return tabell
+            oppkobling.Close()
+
+        Catch ex As Exception
+            MessageBox.Show("Noe gikk galt: " & ex.Message)
+            Return ex.Message
+        End Try
+    End Function
+
 
     Public Sub sendInnkalling(personnummer As String, innkallingTekst As String, dato As String)
         'Importerer oppkobling fra SQL klassen
@@ -299,41 +308,7 @@ Public Class info
 End Class
 
 
-'    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-'        Sporring("CREATE TABLE Oving4 (Id int, Fornavn Char(25), Etternavn Char(25), Epost Char(25), Fdato Date)")
-'        Sporring("INSERT INTO Oving4 (Id, Fornavn, Etternavn, Epost, Fdato) VALUES (1, 'Sven', 'Horgen', 'svenhorgen@gmail.com', '1985-12-23')")
-'        Sporring("INSERT INTO Oving4 (Id, Fornavn, Etternavn, Epost, Fdato) VALUES (2, 'Kari', 'Svensen', 'sven.kari@hotmail.com', '1956-03-12')")
-'        Sporring("INSERT INTO Oving4 (Id, Fornavn, Etternavn, Epost, Fdato) VALUES (3, 'Ove', 'Jensen', 'ove@jensen.no', '1978-05-11')")
-'    End Sub
-
-'    End Sub
-
-'    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-
-'        Dim sok As String
-'        sok = TextBox4.Text
-
-'        Select Case ComboBox1.Text
-'            Case "fornavn"
-'                sorter = "Fornavn"
-'            Case "etternavn"
-'                sorter = "Etternavn"
-'            Case "epost"
-'                sorter = "Epost"
-'            Case "fdato"
-'                sorter = "Fdato"
-'            Case "id"
-'                sorter = "Id"
-'        End Select
-
-'        Dim tabell As New DataTable
-'        tabell = Sporring("SELECT * FROM Oving4 WHERE " & sorter & " = " & "'" & sok & "'")
-
-'        ListBox1.Items.Clear()
-'        For Each rad As DataRow In tabell.Rows
-'            ListBox1.Items.Add(rad("Fornavn") & " " & rad("Etternavn") & " " & rad("Epost") & " " & rad("Fdato"))
-'        Next
-'    End Sub
+'    
 
 '    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
 '        Dim sok As String
