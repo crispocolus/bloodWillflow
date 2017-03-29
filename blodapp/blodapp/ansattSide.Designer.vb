@@ -24,6 +24,9 @@ Partial Class ansattSide
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.loggutBtn = New System.Windows.Forms.Button()
+        Me.ListBox2 = New System.Windows.Forms.ListBox()
+        Me.kandidatCmb = New System.Windows.Forms.ComboBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.btnBehov = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -54,8 +57,6 @@ Partial Class ansattSide
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.kandidatCmb = New System.Windows.Forms.ComboBox()
-        Me.ListBox2 = New System.Windows.Forms.ListBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -76,6 +77,7 @@ Partial Class ansattSide
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.loggutBtn)
         Me.TabPage1.Controls.Add(Me.ListBox2)
         Me.TabPage1.Controls.Add(Me.kandidatCmb)
         Me.TabPage1.Controls.Add(Me.Label9)
@@ -97,6 +99,32 @@ Partial Class ansattSide
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Innkalling"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'loggutBtn
+        '
+        Me.loggutBtn.Location = New System.Drawing.Point(7, 447)
+        Me.loggutBtn.Name = "loggutBtn"
+        Me.loggutBtn.Size = New System.Drawing.Size(75, 23)
+        Me.loggutBtn.TabIndex = 1
+        Me.loggutBtn.Text = "Logg ut"
+        Me.loggutBtn.UseVisualStyleBackColor = True
+        '
+        'ListBox2
+        '
+        Me.ListBox2.FormattingEnabled = True
+        Me.ListBox2.ItemHeight = 16
+        Me.ListBox2.Location = New System.Drawing.Point(811, 347)
+        Me.ListBox2.Name = "ListBox2"
+        Me.ListBox2.Size = New System.Drawing.Size(10, 84)
+        Me.ListBox2.TabIndex = 12
+        '
+        'kandidatCmb
+        '
+        Me.kandidatCmb.FormattingEnabled = True
+        Me.kandidatCmb.Location = New System.Drawing.Point(483, 316)
+        Me.kandidatCmb.Name = "kandidatCmb"
+        Me.kandidatCmb.Size = New System.Drawing.Size(181, 24)
+        Me.kandidatCmb.TabIndex = 11
         '
         'Label9
         '
@@ -130,7 +158,7 @@ Partial Class ansattSide
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(8, 123)
+        Me.TextBox1.Location = New System.Drawing.Point(4, 121)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(97, 22)
@@ -352,7 +380,7 @@ Partial Class ansattSide
         '
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.ItemHeight = 16
-        Me.ListBox1.Location = New System.Drawing.Point(34, 150)
+        Me.ListBox1.Location = New System.Drawing.Point(34, 116)
         Me.ListBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(704, 308)
@@ -361,7 +389,7 @@ Partial Class ansattSide
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(33, 129)
+        Me.Label12.Location = New System.Drawing.Point(31, 95)
         Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(83, 17)
@@ -371,7 +399,7 @@ Partial Class ansattSide
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(232, 38)
+        Me.Label11.Location = New System.Drawing.Point(232, 21)
         Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(60, 17)
@@ -380,7 +408,7 @@ Partial Class ansattSide
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(235, 59)
+        Me.TextBox2.Location = New System.Drawing.Point(235, 42)
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(132, 22)
@@ -389,7 +417,7 @@ Partial Class ansattSide
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(33, 37)
+        Me.Label10.Location = New System.Drawing.Point(31, 21)
         Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(92, 17)
@@ -399,28 +427,11 @@ Partial Class ansattSide
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(34, 57)
+        Me.ComboBox1.Location = New System.Drawing.Point(34, 42)
         Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(160, 24)
         Me.ComboBox1.TabIndex = 0
-        '
-        'kandidatCmb
-        '
-        Me.kandidatCmb.FormattingEnabled = True
-        Me.kandidatCmb.Location = New System.Drawing.Point(492, 306)
-        Me.kandidatCmb.Name = "kandidatCmb"
-        Me.kandidatCmb.Size = New System.Drawing.Size(181, 24)
-        Me.kandidatCmb.TabIndex = 11
-        '
-        'ListBox2
-        '
-        Me.ListBox2.FormattingEnabled = True
-        Me.ListBox2.ItemHeight = 16
-        Me.ListBox2.Location = New System.Drawing.Point(811, 347)
-        Me.ListBox2.Name = "ListBox2"
-        Me.ListBox2.Size = New System.Drawing.Size(10, 84)
-        Me.ListBox2.TabIndex = 12
         '
         'ansattSide
         '
@@ -476,4 +487,5 @@ Partial Class ansattSide
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents kandidatCmb As ComboBox
     Friend WithEvents ListBox2 As ListBox
+    Friend WithEvents loggutBtn As Button
 End Class

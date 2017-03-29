@@ -2,7 +2,6 @@
 Public Class SQL
     Public oppkobling = New MySqlConnection("server=mysql.stud.iie.ntnu.no;database=g_oops_25;uid=g_oops_25;Pwd=M3PV7P9e;Convert Zero Datetime=true;")
     Public paakoblet As Boolean = False
-
 End Class
 Public Class Login
     Public brukernavn As String
@@ -47,37 +46,14 @@ Public Class Login
             Else
                 MsgBox("Feil brukernavn eller passord")
                 oppkobling.Close()
+                Return "Feil brukernavn eller passord"
             End If
             oppkobling.Close()
         Catch ex As MySqlException
             'Gir feilmelding om 
             MessageBox.Show("Noe gikk galt: " & ex.Message)
+            Return ex.Message
         End Try
-    End Function
-End Class
-
-Public Class HentData
-    Private Function HentData(ByVal sql As String) As DataTable
-        'Importerer oppkobling fra SQL klassen
-        Dim connect As New SQL
-        Dim oppkobling = connect.oppkobling
-
-        Dim tabell As New DataTable
-        If connect.paakoblet = False Then
-            MsgBox("Du er ikke logget inn")
-        Else
-            Try
-                oppkobling.Open()
-                Dim kommando As New MySqlCommand(sql, oppkobling)
-                Dim da As New MySqlDataAdapter
-                da.SelectCommand = kommando
-                da.Fill(tabell)
-                oppkobling.Close()
-            Catch ex As MySqlException
-                MessageBox.Show("Noe gikk galt: " & ex.Message)
-            End Try
-        End If
-        Return tabell
     End Function
 End Class
 
@@ -126,7 +102,6 @@ Public Class BrukerStat
 End Class
 
 Public Class RegBruker
-
     Public Sub sendInfo(postnr As String,
                         gtadresse As String,
                         pnummer As String,
@@ -134,6 +109,7 @@ Public Class RegBruker
                         enavn As String,
                         epost As String,
                         telefon As String,
+                        fdato As String,
                         gateadresse As String,
                         passordHash As String,
                         salt As String
@@ -165,7 +141,7 @@ Public Class RegBruker
             sql2.Parameters.AddWithValue("@etternavn", enavn)
             sql2.Parameters.AddWithValue("@epost", epost)
             sql2.Parameters.AddWithValue("@telefon", telefon)
-            sql2.Parameters.AddWithValue("@fdato", "112397")
+            sql2.Parameters.AddWithValue("@fdato", fdato)
             sql2.Parameters.AddWithValue("@post_nr", postnr)
             sql2.Parameters.AddWithValue("@gateadresse", gateadresse)
             sql2.Parameters.AddWithValue("@hash", passordHash)
@@ -202,7 +178,7 @@ Public Class soking
 
         Catch ex As Exception
             MessageBox.Show("Noe gikk galt: " & ex.Message)
-            Return ex.Message
+            Return tabell
         End Try
     End Function
 End Class
@@ -227,7 +203,7 @@ Public Class info
             oppkobling.Close()
         Catch ex As Exception
             MessageBox.Show("Noe gikk galt: " & ex.Message)
-            Return ex.Message
+            Return tabell
         End Try
     End Function
 
@@ -251,20 +227,20 @@ Public Class info
 
         Catch ex As Exception
             MessageBox.Show("Noe gikk galt: " & ex.Message)
-            Return ex.Message
+            Return tabell
         End Try
     End Function
 
-    Public Function queryDato(velg As String, fra As String, dato As String)
+    Public Function queryDato(dato As String)
         'Importerer oppkobling fra SQL klassen
         Dim connect As New SQL
         Dim oppkobling = connect.oppkobling
         Dim tabell As New DataTable
+
         Try
             oppkobling.Open()
 
-            Dim sqlSporring = "SELECT " & velg & " FROM " & fra & " WHERE " & dato & ";"
-
+            Dim sqlSporring = "SELECT fritekst_innkalling, oppmote FROM innkallinger INNER JOIN bruker ON bruker.person_nr = innkallinger.person_nr WHERE oppmote = '" & dato & "' AND bruker.epost = '" & LoginForm.bnavn & "' ;"
             Dim SQL As New MySqlCommand(sqlSporring, oppkobling)
 
             SQL.Parameters.AddWithValue("dato", SqlDbType.DateTime).Value = dato
@@ -277,7 +253,7 @@ Public Class info
 
         Catch ex As Exception
             MessageBox.Show("Noe gikk galt: " & ex.Message)
-            Return ex.Message
+            Return tabell
         End Try
     End Function
 
@@ -308,7 +284,30 @@ Public Class info
 End Class
 
 
-'    
+'    'Public Class HentData
+'    Private Function HentData(ByVal sql As String) As DataTable
+'        'Importerer oppkobling fra SQL klassen
+'        Dim connect As New SQL
+'        Dim oppkobling = connect.oppkobling
+
+'        Dim tabell As New DataTable
+'        If connect.paakoblet = False Then
+'            MsgBox("Du er ikke logget inn")
+'        Else
+'            Try
+'                oppkobling.Open()
+'                Dim kommando As New MySqlCommand(sql, oppkobling)
+'                Dim da As New MySqlDataAdapter
+'                da.SelectCommand = kommando
+'                da.Fill(tabell)
+'                oppkobling.Close()
+'            Catch ex As MySqlException
+'                MessageBox.Show("Noe gikk galt: " & ex.Message)
+'            End Try
+'        End If
+'        Return tabell
+'    End Function
+'End Class
 
 '    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
 '        Dim sok As String

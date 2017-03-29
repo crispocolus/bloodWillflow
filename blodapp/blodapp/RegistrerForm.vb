@@ -4,7 +4,6 @@ Imports System.Text
 
 Public Class RegistrerForm
     Public Function validateEmail(emailAddress) As Boolean
-        ' Dim email As New Regex("^(?<user>[^@]+)@(?<host>.+)$")
         Dim epostChar As New Regex("@")
         If epostChar.IsMatch(emailAddress) Then
             Return True
@@ -13,14 +12,12 @@ Public Class RegistrerForm
         End If
     End Function
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        SjekkInfo(postnrTxt.Text, adresseTxt.Text, pnummerTxt.Text, fornavnTxt.Text, etternavnTxt.Text, epostTxt.Text, tlfTxt.Text, passordcTxt.Text, passordTxt.Text)
-        Me.Close()
-        LoginForm.Show()
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click, Me.KeyPress
+        SjekkInfo(postnrTxt.Text, adresseTxt.Text, pnummerTxt.Text, fornavnTxt.Text, etternavnTxt.Text, epostTxt.Text, tlfTxt.Text, finnFdato(pnummerTxt.Text), passordcTxt.Text, passordTxt.Text)
     End Sub
 
 
-    Public Sub SjekkInfo(post_nr As String, adresse As String, pnummer As String, fornavn As String, etternavn As String, epost As String, tlf As String, passordc As String, passord As String)
+    Public Sub SjekkInfo(post_nr As String, adresse As String, pnummer As String, fornavn As String, etternavn As String, epost As String, tlf As String, fdato As String, passordc As String, passord As String)
         Dim Registrering As New RegBruker
         Dim info As New info
         Dim data As DataTable
@@ -57,7 +54,6 @@ Public Class RegistrerForm
 
         'Når info er sjekket og godkjent så utføres funksjonen *sendInfo* som finnes i regbruker.vb
         If godkjentEpost = True And godkjentTelefon = True And godkjentPassord = True Then
-            MsgBox("Registrering fullført." & vbCrLf & "Brukernavnet ditt er: " & epost & vbCrLf & vbCrLf & "Du kan nå gi samtykke ved resepsjonen")
             Dim salt As String
             Dim passordHash As String = ""
             salt = CreateRandomSalt()
@@ -72,9 +68,13 @@ Public Class RegistrerForm
                                   etternavn,
                                   epost,
                                   tlf,
+                                  fdato,
                                   adresse,
                                   passordHash,
                                   salt)
+            MsgBox("Registrering fullført." & vbCrLf & "Brukernavnet ditt er: " & epost & vbCrLf & vbCrLf & "Du kan nå gi samtykke ved resepsjonen")
+            Me.Close()
+            LoginForm.Show()
         End If
     End Sub
 
@@ -97,6 +97,24 @@ Public Class RegistrerForm
         Next
         Return hexStreng
     End Function
+
+    Function finnFdato(person_nr As String)
+        Dim fdato As String
+        Dim i As Integer
+
+        For i = 1 To 6
+            fdato += (Mid(person_nr, i, 1))
+        Next i
+
+        MsgBox(fdato)
+        Return fdato
+    End Function
+
+    Private Sub tilbakeBtn_Click(sender As Object, e As EventArgs) Handles tilbakeBtn.Click
+        Me.Close()
+        LoginForm.Show()
+    End Sub
+
 
     'Public Function Hash512(password As String, salt As String) As String
     '    Dim convertedToBytes As Byte() = Encoding.UTF8.GetBytes(password & salt)

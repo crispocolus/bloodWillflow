@@ -129,5 +129,20 @@
 
         'blod_pnummer = kandidatCmb.
     End Sub
+
+    Private Sub loggutBtn_Click(sender As Object, e As EventArgs) Handles loggutBtn.Click
+        LoginForm.bnavn = ""
+        Me.Close()
+        LoginForm.Show()
+        MsgBox("Du er nå logget ut")
+    End Sub
+
+    Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
+
+    End Sub
+
+    Private Sub tappeKalender_DateChanged(sender As Object, e As DateRangeEventArgs) Handles tappeKalender.DateChanged
+
+    End Sub
 End Class
 
