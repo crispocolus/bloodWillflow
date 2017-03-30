@@ -281,6 +281,8 @@ Public Class info
             MessageBox.Show("Noe gikk galt: " & ex.Message)
         End Try
     End Sub
+
+
 End Class
 
 

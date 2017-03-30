@@ -72,7 +72,7 @@ Partial Class adminSide
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
-        Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabControl1.Margin = New System.Windows.Forms.Padding(4)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(543, 501)
@@ -95,9 +95,9 @@ Partial Class adminSide
         Me.TabPage1.Controls.Add(Me.ListBox1)
         Me.TabPage1.Controls.Add(Me.btnSokBruker)
         Me.TabPage1.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage1.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(4)
         Me.TabPage1.Size = New System.Drawing.Size(535, 472)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Brukeradministrasjon"
@@ -125,7 +125,7 @@ Partial Class adminSide
         'btnFjernBruker
         '
         Me.btnFjernBruker.Location = New System.Drawing.Point(248, 177)
-        Me.btnFjernBruker.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnFjernBruker.Margin = New System.Windows.Forms.Padding(4)
         Me.btnFjernBruker.Name = "btnFjernBruker"
         Me.btnFjernBruker.Size = New System.Drawing.Size(177, 28)
         Me.btnFjernBruker.TabIndex = 19
@@ -145,7 +145,7 @@ Partial Class adminSide
         'btnEndrePersoninfo
         '
         Me.btnEndrePersoninfo.Location = New System.Drawing.Point(248, 105)
-        Me.btnEndrePersoninfo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnEndrePersoninfo.Margin = New System.Windows.Forms.Padding(4)
         Me.btnEndrePersoninfo.Name = "btnEndrePersoninfo"
         Me.btnEndrePersoninfo.Size = New System.Drawing.Size(161, 28)
         Me.btnEndrePersoninfo.TabIndex = 17
@@ -165,7 +165,7 @@ Partial Class adminSide
         'Button2
         '
         Me.Button2.Location = New System.Drawing.Point(417, 28)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(64, 28)
         Me.Button2.TabIndex = 15
@@ -187,7 +187,7 @@ Partial Class adminSide
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Ansatt", "Blodgiver", "Leder", "IT"})
         Me.ComboBox1.Location = New System.Drawing.Point(248, 31)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(160, 24)
         Me.ComboBox1.TabIndex = 13
@@ -205,7 +205,7 @@ Partial Class adminSide
         'sokTxt
         '
         Me.sokTxt.Location = New System.Drawing.Point(8, 303)
-        Me.sokTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.sokTxt.Margin = New System.Windows.Forms.Padding(4)
         Me.sokTxt.Name = "sokTxt"
         Me.sokTxt.Size = New System.Drawing.Size(135, 22)
         Me.sokTxt.TabIndex = 11
@@ -225,7 +225,7 @@ Partial Class adminSide
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.ItemHeight = 16
         Me.ListBox1.Location = New System.Drawing.Point(11, 31)
-        Me.ListBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ListBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(212, 196)
         Me.ListBox1.TabIndex = 9
@@ -233,7 +233,7 @@ Partial Class adminSide
         'btnSokBruker
         '
         Me.btnSokBruker.Location = New System.Drawing.Point(151, 300)
-        Me.btnSokBruker.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnSokBruker.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSokBruker.Name = "btnSokBruker"
         Me.btnSokBruker.Size = New System.Drawing.Size(69, 28)
         Me.btnSokBruker.TabIndex = 8
@@ -266,9 +266,9 @@ Partial Class adminSide
         Me.TabPage2.Controls.Add(Me.fornavnTxt)
         Me.TabPage2.Controls.Add(Me.epostTxt)
         Me.TabPage2.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage2.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(4)
         Me.TabPage2.Size = New System.Drawing.Size(535, 472)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Legg til ny bruker"
@@ -306,7 +306,7 @@ Partial Class adminSide
         'stdnavnTxt
         '
         Me.stdnavnTxt.Location = New System.Drawing.Point(289, 126)
-        Me.stdnavnTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.stdnavnTxt.Margin = New System.Windows.Forms.Padding(4)
         Me.stdnavnTxt.Name = "stdnavnTxt"
         Me.stdnavnTxt.Size = New System.Drawing.Size(132, 22)
         Me.stdnavnTxt.TabIndex = 48
@@ -324,7 +324,7 @@ Partial Class adminSide
         'postnrTxt
         '
         Me.postnrTxt.Location = New System.Drawing.Point(289, 78)
-        Me.postnrTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.postnrTxt.Margin = New System.Windows.Forms.Padding(4)
         Me.postnrTxt.Name = "postnrTxt"
         Me.postnrTxt.Size = New System.Drawing.Size(132, 22)
         Me.postnrTxt.TabIndex = 46
@@ -342,7 +342,7 @@ Partial Class adminSide
         'adresseTxt
         '
         Me.adresseTxt.Location = New System.Drawing.Point(289, 28)
-        Me.adresseTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.adresseTxt.Margin = New System.Windows.Forms.Padding(4)
         Me.adresseTxt.Name = "adresseTxt"
         Me.adresseTxt.Size = New System.Drawing.Size(132, 22)
         Me.adresseTxt.TabIndex = 44
@@ -370,7 +370,7 @@ Partial Class adminSide
         'passordcTxt
         '
         Me.passordcTxt.Location = New System.Drawing.Point(289, 231)
-        Me.passordcTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.passordcTxt.Margin = New System.Windows.Forms.Padding(4)
         Me.passordcTxt.Name = "passordcTxt"
         Me.passordcTxt.Size = New System.Drawing.Size(132, 22)
         Me.passordcTxt.TabIndex = 39
@@ -378,7 +378,7 @@ Partial Class adminSide
         'passordTxt
         '
         Me.passordTxt.Location = New System.Drawing.Point(87, 231)
-        Me.passordTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.passordTxt.Margin = New System.Windows.Forms.Padding(4)
         Me.passordTxt.Name = "passordTxt"
         Me.passordTxt.Size = New System.Drawing.Size(132, 22)
         Me.passordTxt.TabIndex = 38
@@ -396,7 +396,7 @@ Partial Class adminSide
         'pnummerTxt
         '
         Me.pnummerTxt.Location = New System.Drawing.Point(87, 126)
-        Me.pnummerTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pnummerTxt.Margin = New System.Windows.Forms.Padding(4)
         Me.pnummerTxt.Name = "pnummerTxt"
         Me.pnummerTxt.Size = New System.Drawing.Size(132, 22)
         Me.pnummerTxt.TabIndex = 36
@@ -404,7 +404,7 @@ Partial Class adminSide
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(201, 324)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(104, 44)
         Me.Button1.TabIndex = 35
@@ -454,7 +454,7 @@ Partial Class adminSide
         'tlfTxt
         '
         Me.tlfTxt.Location = New System.Drawing.Point(289, 176)
-        Me.tlfTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tlfTxt.Margin = New System.Windows.Forms.Padding(4)
         Me.tlfTxt.Name = "tlfTxt"
         Me.tlfTxt.Size = New System.Drawing.Size(132, 22)
         Me.tlfTxt.TabIndex = 30
@@ -462,7 +462,7 @@ Partial Class adminSide
         'etternavnTxt
         '
         Me.etternavnTxt.Location = New System.Drawing.Point(87, 78)
-        Me.etternavnTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.etternavnTxt.Margin = New System.Windows.Forms.Padding(4)
         Me.etternavnTxt.Name = "etternavnTxt"
         Me.etternavnTxt.Size = New System.Drawing.Size(132, 22)
         Me.etternavnTxt.TabIndex = 29
@@ -470,7 +470,7 @@ Partial Class adminSide
         'fornavnTxt
         '
         Me.fornavnTxt.Location = New System.Drawing.Point(87, 27)
-        Me.fornavnTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.fornavnTxt.Margin = New System.Windows.Forms.Padding(4)
         Me.fornavnTxt.Name = "fornavnTxt"
         Me.fornavnTxt.Size = New System.Drawing.Size(132, 22)
         Me.fornavnTxt.TabIndex = 28
@@ -478,7 +478,7 @@ Partial Class adminSide
         'epostTxt
         '
         Me.epostTxt.Location = New System.Drawing.Point(87, 176)
-        Me.epostTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.epostTxt.Margin = New System.Windows.Forms.Padding(4)
         Me.epostTxt.Name = "epostTxt"
         Me.epostTxt.Size = New System.Drawing.Size(132, 22)
         Me.epostTxt.TabIndex = 27
@@ -489,7 +489,7 @@ Partial Class adminSide
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(539, 418)
         Me.Controls.Add(Me.TabControl1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "adminSide"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)

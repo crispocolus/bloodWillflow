@@ -46,7 +46,12 @@
     End Sub
 
     Private Sub ansattSide_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lastBlodType()
+        Dim tabell As New DataTable
+        Dim prosedyrer As New prosedyrer
+        tabell = prosedyrer.lastinnBlodtype()
+        For Each rad In tabell.Rows
+            CBoxBlodtype.Items.Add(rad("blodtype"))
+        Next
     End Sub
     Public Sub lastBlodType()
         'Importerer info-klassen som inneholder query-funksjon
@@ -71,61 +76,72 @@
         Dim info As New info
         'Lager en ny tabell som inneholder data fra query
         Dim Tabell As New DataTable
+        Dim pNummerTabell As New ArrayList()
         'Tømmer combo-box før query
         lstKandidater.Items.Clear()
 
         'Utfører query ved hjelp av funksjonen query under klassen info. 
-        Tabell = info.queryJoin("fornavn, etternavn", "bruker", "blodgiver ON bruker.person_nr = blodgiver.person_nr", "blodtype = '" & blodtype & "';")
-
+        Tabell = info.queryJoin("fornavn, etternavn, bruker.person_nr", "bruker", "blodgiver ON bruker.person_nr = blodgiver.person_nr", "blodtype = '" & blodtype & "';")
+        'pNummerTabell = Tabell
         'Legger til kandidater basert på hva som er valgt i ComboBox
         For Each rad In Tabell.Rows
             lstKandidater.Items.Add(rad("fornavn") & " " & rad("etternavn"))
+            pNummerTabell.Add(rad("person_nr").ToString)
+            MsgBox(pNummerTabell.IndexOf())
         Next
+        Dim sResult As String = ""
+
+        'For Each elem As String In pNummerTabell
+        '    MsgBox(elem)
+        'Next
     End Sub
 
     Public Sub sendInnkalling()
         Dim info As New info
+
         info.sendInnkalling("12345678900", InputBox("Her skriver du din tekst"), InputBox("skriv inn en dato når du vil at folk skal komme"))
     End Sub
 
 
-    Public Sub fyllKandidat(blodtype As String)
+    'Public Sub fyllKandidat(blodtype As String)
 
-        'Importerer info-klassen som inneholder query-funksjon
-        Dim info As New info
-        'Lager en ny tabell som inneholder data fra query
-        Dim Tabell As New DataTable
-        Dim personNrTab As New DataTable
-        'Tømmer combo-box før query
-        kandidatCmb.Items.Clear()
+    '    'Importerer info-klassen som inneholder query-funksjon
+    '    Dim info As New info
+    '    'Lager en ny tabell som inneholder data fra query
+    '    Dim Tabell As New DataTable
+    '    Dim personNrTab As New DataTable
+    '    'Tømmer combo-box før query
+    '    kandidatCmb.Items.Clear()
 
-        'Utfører query ved hjelp av funksjonen query under klassen info. 
-        Tabell = info.queryJoin("fornavn, etternavn, person_nr", "bruker", "blodgiver ON bruker.person_nr = blodgiver.person_nr", "1")
+    '    'Utfører query ved hjelp av funksjonen query under klassen info. 
+    '    Tabell = info.queryJoin("fornavn, etternavn, person_nr", "bruker", "blodgiver ON bruker.person_nr = blodgiver.person_nr", "1")
 
-        'Legger til kandidater basert på hva som er valgt i ComboBox
-        For Each rad In Tabell.Rows
-            kandidatCmb.Items.Add(rad("fornavn") & vbTab & rad("etternavn") & vbTab & rad("person_nr"))
-        Next
-    End Sub
+    '    'Legger til kandidater basert på hva som er valgt i ComboBox
+    '    For Each rad In Tabell.Rows
+    '        kandidatCmb.Items.Add(rad("fornavn") & vbTab & rad("etternavn") & vbTab & rad("person_nr"))
+    '    Next
+    'End Sub
 
-    Public Sub hentKandPers(blodtype As String)
+    'Public Sub hentKandPers(blodtype As String)
 
-        'Importerer info-klassen som inneholder query-funksjon
-        Dim info As New info
-        'Lager en ny tabell som inneholder data fra query
-        Dim Tabell As New DataTable
-        'Tømmer combo-box før query
+    '    'Importerer info-klassen som inneholder query-funksjon
+    '    Dim info As New info
+    '    'Lager en ny tabell som inneholder data fra query
+    '    Dim Tabell As New DataTable
 
-        'Utfører query ved hjelp av funksjonen query under klassen info. 
-        Tabell = info.query("person_nr", "bruker", "fornavn+etternavn = " & kandidatCmb.Text)
+    '    'Tømmer combo-box før query
+    '    kandidatCmb.Items.Clear()
 
-        'Legger til kandidater basert på hva som er valgt i ComboBox
-        For Each rad In Tabell.Rows
-            kandidatCmb.Items.Add(rad("fornavn") & " " & rad("etternavn"))
-        Next
-    End Sub
+    '    'Utfører query ved hjelp av funksjonen query under klassen info. 
+    '    Tabell = info.query("person_nr", "bruker", "fornavn+etternavn = " & kandidatCmb.Text)
 
-    Private Sub kandidatCmb_SelectedIndexChanged(sender As Object, e As EventArgs) Handles kandidatCmb.SelectedIndexChanged
+    '    'Legger til kandidater basert på hva som er valgt i ComboBox
+    '    For Each rad In Tabell.Rows
+    '        kandidatCmb.Items.Add(rad("fornavn") & " " & rad("etternavn"))
+    '    Next
+    'End Sub
+
+    Private Sub kandidatCmb_SelectedIndexChanged(sender As Object, e As EventArgs)
 
         'blod_pnummer = kandidatCmb.
     End Sub
@@ -135,14 +151,6 @@
         Me.Close()
         LoginForm.Show()
         MsgBox("Du er nå logget ut")
-    End Sub
-
-    Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
-
-    End Sub
-
-    Private Sub tappeKalender_DateChanged(sender As Object, e As DateRangeEventArgs) Handles tappeKalender.DateChanged
-
     End Sub
 End Class
 

@@ -30,7 +30,6 @@ C:\bloodwillflow\blodapp\blodapp\bin\Debug\MySql.Data.dll
 C:\bloodwillflow\blodapp\blodapp\bin\Debug\MySql.Data.xml
 C:\bloodwillflow\blodapp\blodapp\obj\Debug\blodapp.ansattSide.resources
 C:\bloodwillflow\blodapp\blodapp\obj\Debug\blodapp.adminSide.resources
-C:\bloodwillflow\blodapp\blodapp\obj\Debug\blodapp.ProsFunk.resources
 C:\bloodwillflow\blodapp\blodapp\obj\Debug\blodapp.egenerklaering.resources
 C:\bloodwillflow\blodapp\blodapp\obj\Debug\blodapp.egenerklaering2.resources
 C:\bloodwillflow\blodapp\blodapp\obj\Debug\blodapp.lederSide.resources
