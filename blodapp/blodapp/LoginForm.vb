@@ -10,6 +10,7 @@ Public Class LoginForm
         'Lager et nytt SQL og et nytt Login-objekt. 
         Dim connect As New SQL
         Dim logginntest As New Login
+        Dim pHash As New passordHash
 
         'Skriver brukernavn til logginntest-objektet
         logginntest.brukernavn = txtLoginBrukernavn.Text.Replace("'", "\'")
@@ -46,15 +47,11 @@ Public Class LoginForm
         End Try
 
         Dim hashed As String
-        hashed = GetSaltedHash(unhashed, salt)
+        hashed = pHash.lagSaltetHash(unhashed, salt)
 
-        MsgBox(salt & ", " & hashed & ", " & unhashed)
         logginntest.passord = hashed
 
-        'logginntest.passord = unhashed
-
         logginntest.innlogging()
-
 
     End Sub
 
@@ -64,37 +61,9 @@ Public Class LoginForm
         Me.Hide()
     End Sub
 
-    'Funksjon for å hashe passord. Heter deux fordi den brukes ved innlogging. 
-    'Function cryptdeux(passord As String, salt As String) As String
-    '    Dim HashObjekt = New Security.Cryptography.SHA256Managed()
-    '    Dim bytes = System.Text.Encoding.ASCII.GetBytes(passord & salt)
-    '    bytes = HashObjekt.ComputeHash(bytes)
-
-    '    Dim hexStreng As String = ""
-    '    For Each enByte In bytes
-    '        hexStreng &= enByte.ToString("x2")
-    '    Next
-    '    MsgBox(hexStreng)
-    '    Return hexStreng
-    'End Function
-
-    Private Function GetSaltedHash(pw As String, salt As String) As String
-        Dim tmp As String = pw & salt
-
-        ' or SHA512Managed
-        Using hash As HashAlgorithm = New SHA256Managed()
-            ' convert pw+salt to bytes:
-            Dim saltyPW = Encoding.UTF8.GetBytes(tmp)
-            ' hash the pw+salt bytes:
-            Dim hBytes = hash.ComputeHash(saltyPW)
-            ' return a B64 string so it can be saved as text 
-            Return Convert.ToBase64String(hBytes)
-        End Using
-
-    End Function
-
     Private Sub llblLoginFgtPwd_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llblLoginFgtPwd.LinkClicked
-        Dim epost As New epost
-        epost.sendEpost("hei på deg", "kristoffer.selbekk.hille@gmail.com")
+        Dim pros As New prosedyrer
+        pros.glemtPw()
     End Sub
+
 End Class

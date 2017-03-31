@@ -1,6 +1,6 @@
 ﻿Imports System.Net.Mail
 Public Class epost
-    Public Sub sendEpost(message As String, mottaker As String)
+    Public Function sendEpost(emne As String, message As String, mottaker As String)
         Try
             Dim Smtp_Server As New SmtpClient
             Dim e_mail As New MailMessage()
@@ -13,15 +13,16 @@ Public Class epost
             e_mail = New MailMessage()
             e_mail.From = New MailAddress("bloodflowas@gmail.com")
             e_mail.To.Add(mottaker)
-            e_mail.Subject = "Email Sending"
+            e_mail.Subject = emne
             e_mail.IsBodyHtml = False
             e_mail.Body = message
             Smtp_Server.Send(e_mail)
-            MsgBox("Mail Sent")
+            Return True
 
         Catch error_t As Exception
             MsgBox(error_t.ToString)
+            Return False
         End Try
 
-    End Sub
+    End Function
 End Class

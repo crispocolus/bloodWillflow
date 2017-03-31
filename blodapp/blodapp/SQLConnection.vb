@@ -257,6 +257,24 @@ Public Class info
         End Try
     End Function
 
+    Public Sub queryUpdate(table As String, hvorVerdi As String, where As String)
+
+        'Importerer oppkobling fra SQL klassen
+        Dim connect As New SQL
+        Dim oppkobling = connect.oppkobling
+
+        Try
+            oppkobling.Open()
+            Dim sqlSporring = "UPDATE " & table & " SET " & hvorVerdi & " WHERE " & where & ";"
+            Dim SQL As New MySqlCommand(sqlSporring, oppkobling)
+            SQL.ExecuteNonQuery()
+            oppkobling.Close()
+
+        Catch ex As Exception
+            MessageBox.Show("Noe gikk galt: " & ex.Message)
+        End Try
+    End Sub
+
 
     Public Sub sendInnkalling(personnummer As String, innkallingTekst As String, dato As String)
         'Importerer oppkobling fra SQL klassen
@@ -281,8 +299,6 @@ Public Class info
             MessageBox.Show("Noe gikk galt: " & ex.Message)
         End Try
     End Sub
-
-
 End Class
 
 
