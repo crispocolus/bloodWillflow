@@ -82,7 +82,18 @@
     '    'Tømmer combo-box før query
     '    lstKandidater.Items.Clear()
 
-<<<<<<< HEAD
+
+    '    'Utfører query ved hjelp av funksjonen query under klassen info. 
+    '    Tabell = info.queryJoin("fornavn, etternavn, bruker.person_nr", "bruker", "blodgiver ON bruker.person_nr = blodgiver.person_nr", "blodtype = '" & blodtype & "';")
+    '    'pNummerTabell = Tabell
+    '    'Legger til kandidater basert på hva som er valgt i ComboBox
+    '    For Each rad In Tabell.Rows
+    ''        lstKandidater.Items.Add(rad("fornavn") & " " & rad("etternavn"))
+    ''        pNummerTabell.Add(rad("person_nr").ToString)
+    ''        MsgBox(pNummerTabell.IndexOf())
+    ''    Next
+    ''    Dim sResult As String = ""
+
     '    'Utfører query ved hjelp av funksjonen query under klassen info. 
     '    Tabell = info.queryJoin("fornavn, etternavn, bruker.person_nr", "bruker", "blodgiver ON bruker.person_nr = blodgiver.person_nr", "blodtype = '" & blodtype & "';")
     '    'pNummerTabell = Tabell
@@ -90,21 +101,10 @@
     '    For Each rad In Tabell.Rows
     '        lstKandidater.Items.Add(rad("fornavn") & " " & rad("etternavn"))
     '        pNummerTabell.Add(rad("person_nr").ToString)
-    '        MsgBox(pNummerTabell.IndexOf())
+    '        'MsgBox(pNummerTabell.IndexOf()) Kommentert ut for testing på resten av siden
     '    Next
     '    Dim sResult As String = ""
-=======
-        'Utfører query ved hjelp av funksjonen query under klassen info. 
-        Tabell = info.queryJoin("fornavn, etternavn, bruker.person_nr", "bruker", "blodgiver ON bruker.person_nr = blodgiver.person_nr", "blodtype = '" & blodtype & "';")
-        'pNummerTabell = Tabell
-        'Legger til kandidater basert på hva som er valgt i ComboBox
-        For Each rad In Tabell.Rows
-            lstKandidater.Items.Add(rad("fornavn") & " " & rad("etternavn"))
-            pNummerTabell.Add(rad("person_nr").ToString)
-            'MsgBox(pNummerTabell.IndexOf()) Kommentert ut for testing på resten av siden
-        Next
-        Dim sResult As String = ""
->>>>>>> 3b591de80c4b3fa5c58e3f4ac64bb098d7da2a7c
+
 
     '    'For Each elem As String In pNummerTabell
     '    '    MsgBox(elem)
