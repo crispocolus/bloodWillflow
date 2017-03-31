@@ -56,6 +56,7 @@ Partial Class lederSide
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.endrePwBtn = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -70,7 +71,7 @@ Partial Class lederSide
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Location = New System.Drawing.Point(0, 1)
-        Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabControl1.Margin = New System.Windows.Forms.Padding(4)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(787, 510)
@@ -78,6 +79,7 @@ Partial Class lederSide
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.endrePwBtn)
         Me.TabPage1.Controls.Add(Me.Label9)
         Me.TabPage1.Controls.Add(Me.btnBehov)
         Me.TabPage1.Controls.Add(Me.Label8)
@@ -90,9 +92,9 @@ Partial Class lederSide
         Me.TabPage1.Controls.Add(Me.lstKandidater)
         Me.TabPage1.Controls.Add(Me.CBoxBlodtype)
         Me.TabPage1.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage1.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(4)
         Me.TabPage1.Size = New System.Drawing.Size(779, 481)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Innkalling"
@@ -111,7 +113,7 @@ Partial Class lederSide
         'btnBehov
         '
         Me.btnBehov.Location = New System.Drawing.Point(31, 144)
-        Me.btnBehov.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnBehov.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBehov.Name = "btnBehov"
         Me.btnBehov.Size = New System.Drawing.Size(99, 27)
         Me.btnBehov.TabIndex = 20
@@ -131,7 +133,7 @@ Partial Class lederSide
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(33, 114)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(97, 22)
         Me.TextBox1.TabIndex = 18
@@ -139,7 +141,7 @@ Partial Class lederSide
         'btnInnkalling
         '
         Me.btnInnkalling.Location = New System.Drawing.Point(491, 268)
-        Me.btnInnkalling.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnInnkalling.Margin = New System.Windows.Forms.Padding(4)
         Me.btnInnkalling.Name = "btnInnkalling"
         Me.btnInnkalling.Size = New System.Drawing.Size(172, 63)
         Me.btnInnkalling.TabIndex = 17
@@ -188,7 +190,7 @@ Partial Class lederSide
         Me.lstKandidater.FormattingEnabled = True
         Me.lstKandidater.ItemHeight = 16
         Me.lstKandidater.Location = New System.Drawing.Point(260, 43)
-        Me.lstKandidater.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.lstKandidater.Margin = New System.Windows.Forms.Padding(4)
         Me.lstKandidater.Name = "lstKandidater"
         Me.lstKandidater.Size = New System.Drawing.Size(143, 324)
         Me.lstKandidater.TabIndex = 12
@@ -198,7 +200,7 @@ Partial Class lederSide
         Me.CBoxBlodtype.FormattingEnabled = True
         Me.CBoxBlodtype.Items.AddRange(New Object() {"O+", "O-", "A+", "A-", "B+", "B-", "AB+", "AB-"})
         Me.CBoxBlodtype.Location = New System.Drawing.Point(33, 44)
-        Me.CBoxBlodtype.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CBoxBlodtype.Margin = New System.Windows.Forms.Padding(4)
         Me.CBoxBlodtype.Name = "CBoxBlodtype"
         Me.CBoxBlodtype.Size = New System.Drawing.Size(97, 24)
         Me.CBoxBlodtype.TabIndex = 11
@@ -217,9 +219,9 @@ Partial Class lederSide
         Me.TabPage2.Controls.Add(Me.Label4)
         Me.TabPage2.Controls.Add(Me.lstBestillinger)
         Me.TabPage2.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage2.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(4)
         Me.TabPage2.Size = New System.Drawing.Size(779, 481)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Bestillinger"
@@ -229,7 +231,7 @@ Partial Class lederSide
         '
         Me.chkBekreft.AutoSize = True
         Me.chkBekreft.Location = New System.Drawing.Point(361, 228)
-        Me.chkBekreft.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.chkBekreft.Margin = New System.Windows.Forms.Padding(4)
         Me.chkBekreft.Name = "chkBekreft"
         Me.chkBekreft.Size = New System.Drawing.Size(100, 21)
         Me.chkBekreft.TabIndex = 12
@@ -239,7 +241,7 @@ Partial Class lederSide
         'btnRetur
         '
         Me.btnRetur.Location = New System.Drawing.Point(351, 292)
-        Me.btnRetur.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnRetur.Margin = New System.Windows.Forms.Padding(4)
         Me.btnRetur.Name = "btnRetur"
         Me.btnRetur.Size = New System.Drawing.Size(133, 28)
         Me.btnRetur.TabIndex = 11
@@ -250,7 +252,7 @@ Partial Class lederSide
         '
         Me.btnSend.Enabled = False
         Me.btnSend.Location = New System.Drawing.Point(351, 256)
-        Me.btnSend.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnSend.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSend.Name = "btnSend"
         Me.btnSend.Size = New System.Drawing.Size(133, 28)
         Me.btnSend.TabIndex = 10
@@ -260,7 +262,7 @@ Partial Class lederSide
         'txtTidspunkt
         '
         Me.txtTidspunkt.Location = New System.Drawing.Point(351, 193)
-        Me.txtTidspunkt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtTidspunkt.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTidspunkt.Name = "txtTidspunkt"
         Me.txtTidspunkt.Size = New System.Drawing.Size(132, 22)
         Me.txtTidspunkt.TabIndex = 8
@@ -278,7 +280,7 @@ Partial Class lederSide
         'txtMengde
         '
         Me.txtMengde.Location = New System.Drawing.Point(351, 119)
-        Me.txtMengde.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtMengde.Margin = New System.Windows.Forms.Padding(4)
         Me.txtMengde.Name = "txtMengde"
         Me.txtMengde.Size = New System.Drawing.Size(132, 22)
         Me.txtMengde.TabIndex = 6
@@ -296,7 +298,7 @@ Partial Class lederSide
         'txtBlodtype
         '
         Me.txtBlodtype.Location = New System.Drawing.Point(351, 44)
-        Me.txtBlodtype.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtBlodtype.Margin = New System.Windows.Forms.Padding(4)
         Me.txtBlodtype.Name = "txtBlodtype"
         Me.txtBlodtype.Size = New System.Drawing.Size(132, 22)
         Me.txtBlodtype.TabIndex = 4
@@ -326,7 +328,7 @@ Partial Class lederSide
         Me.lstBestillinger.FormattingEnabled = True
         Me.lstBestillinger.ItemHeight = 16
         Me.lstBestillinger.Location = New System.Drawing.Point(32, 43)
-        Me.lstBestillinger.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.lstBestillinger.Margin = New System.Windows.Forms.Padding(4)
         Me.lstBestillinger.Name = "lstBestillinger"
         Me.lstBestillinger.Size = New System.Drawing.Size(244, 276)
         Me.lstBestillinger.TabIndex = 0
@@ -335,9 +337,9 @@ Partial Class lederSide
         '
         Me.TabPage3.Controls.Add(Me.lstStatistikk)
         Me.TabPage3.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage3.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(4)
         Me.TabPage3.Size = New System.Drawing.Size(779, 481)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Statistikk"
@@ -348,7 +350,7 @@ Partial Class lederSide
         Me.lstStatistikk.FormattingEnabled = True
         Me.lstStatistikk.ItemHeight = 16
         Me.lstStatistikk.Location = New System.Drawing.Point(27, 38)
-        Me.lstStatistikk.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.lstStatistikk.Margin = New System.Windows.Forms.Padding(4)
         Me.lstStatistikk.Name = "lstStatistikk"
         Me.lstStatistikk.Size = New System.Drawing.Size(281, 244)
         Me.lstStatistikk.TabIndex = 0
@@ -362,9 +364,9 @@ Partial Class lederSide
         Me.TabPage4.Controls.Add(Me.Label10)
         Me.TabPage4.Controls.Add(Me.ComboBox1)
         Me.TabPage4.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage4.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(4)
         Me.TabPage4.Size = New System.Drawing.Size(779, 481)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Oversikt blodbank"
@@ -375,7 +377,7 @@ Partial Class lederSide
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.ItemHeight = 16
         Me.ListBox1.Location = New System.Drawing.Point(11, 132)
-        Me.ListBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ListBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(704, 308)
         Me.ListBox1.TabIndex = 11
@@ -403,7 +405,7 @@ Partial Class lederSide
         'TextBox2
         '
         Me.TextBox2.Location = New System.Drawing.Point(211, 38)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(132, 22)
         Me.TextBox2.TabIndex = 8
@@ -422,10 +424,19 @@ Partial Class lederSide
         '
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(9, 38)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(160, 24)
         Me.ComboBox1.TabIndex = 6
+        '
+        'endrePwBtn
+        '
+        Me.endrePwBtn.Location = New System.Drawing.Point(21, 389)
+        Me.endrePwBtn.Name = "endrePwBtn"
+        Me.endrePwBtn.Size = New System.Drawing.Size(127, 58)
+        Me.endrePwBtn.TabIndex = 22
+        Me.endrePwBtn.Text = "Endre passord"
+        Me.endrePwBtn.UseVisualStyleBackColor = True
         '
         'lederSide
         '
@@ -433,7 +444,7 @@ Partial Class lederSide
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(783, 506)
         Me.Controls.Add(Me.TabControl1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "lederSide"
         Me.Text = "lederSide"
         Me.TabControl1.ResumeLayout(False)
@@ -482,4 +493,5 @@ Partial Class lederSide
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents endrePwBtn As Button
 End Class

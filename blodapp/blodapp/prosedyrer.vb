@@ -16,6 +16,30 @@ Public Class prosedyrer
         End If
     End Function
 
+    Public Sub endrePw(e_post As String)
+        Dim info As New info
+        Dim pHash As New passordHash
+        Dim epost As New epost
+
+        Dim newPass As String
+        Dim connewPass As String
+        Dim salt As String
+        Dim hashPas As String
+
+
+        newPass = InputBox("Skriv inn ditt ønskede passord")
+        connewPass = InputBox("Bekreft passordet")
+        If Not newPass = connewPass Then
+            MsgBox("Passordene stemmer ikke overens.")
+            endrePw(e_post)
+        End If
+        salt = pHash.lagSalt
+        hashPas = pHash.lagSaltetHash(newPass, salt)
+        info.queryUpdate("bruker", "salt = '" & salt & "', hash = '" & hashPas & "'", "epost = '" & e_post & "' ")
+
+        MsgBox("Ditt passord har blitt oppdatert")
+    End Sub
+
     Public Sub glemtPw()
         Dim info As New info
         Dim pHash As New passordHash

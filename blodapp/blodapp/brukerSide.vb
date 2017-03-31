@@ -92,4 +92,9 @@ Public Class brukerSide
 
 
     End Sub
+
+    Private Sub endrePwBtn_Click(sender As Object, e As EventArgs) Handles endrePwBtn.Click
+        Dim pros As New prosedyrer
+        pros.endrePw(LoginForm.bnavn)
+    End Sub
 End Class

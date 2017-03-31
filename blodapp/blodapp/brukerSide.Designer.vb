@@ -40,12 +40,14 @@ Partial Class brukerSide
         Me.epostTxt = New System.Windows.Forms.TextBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.lblFornavn = New System.Windows.Forms.Label()
-        Me.lblEtternavn = New System.Windows.Forms.Label()
-        Me.lblTlf = New System.Windows.Forms.Label()
         Me.lblEpost = New System.Windows.Forms.Label()
+        Me.lblTlf = New System.Windows.Forms.Label()
+        Me.lblEtternavn = New System.Windows.Forms.Label()
+        Me.lblFornavn = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.endrePwBtn = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -200,6 +202,7 @@ Partial Class brukerSide
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.endrePwBtn)
         Me.TabPage1.Controls.Add(Me.lblEpost)
         Me.TabPage1.Controls.Add(Me.lblTlf)
         Me.TabPage1.Controls.Add(Me.lblEtternavn)
@@ -225,6 +228,51 @@ Partial Class brukerSide
         Me.TabPage1.Text = "TabPage1"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'lblEpost
+        '
+        Me.lblEpost.AutoSize = True
+        Me.lblEpost.Location = New System.Drawing.Point(156, 176)
+        Me.lblEpost.Name = "lblEpost"
+        Me.lblEpost.Size = New System.Drawing.Size(59, 17)
+        Me.lblEpost.TabIndex = 21
+        Me.lblEpost.Text = "Label12"
+        '
+        'lblTlf
+        '
+        Me.lblTlf.AutoSize = True
+        Me.lblTlf.Location = New System.Drawing.Point(156, 128)
+        Me.lblTlf.Name = "lblTlf"
+        Me.lblTlf.Size = New System.Drawing.Size(59, 17)
+        Me.lblTlf.TabIndex = 20
+        Me.lblTlf.Text = "Label11"
+        '
+        'lblEtternavn
+        '
+        Me.lblEtternavn.AutoSize = True
+        Me.lblEtternavn.Location = New System.Drawing.Point(156, 92)
+        Me.lblEtternavn.Name = "lblEtternavn"
+        Me.lblEtternavn.Size = New System.Drawing.Size(59, 17)
+        Me.lblEtternavn.TabIndex = 19
+        Me.lblEtternavn.Text = "Label10"
+        '
+        'lblFornavn
+        '
+        Me.lblFornavn.AutoSize = True
+        Me.lblFornavn.Location = New System.Drawing.Point(156, 53)
+        Me.lblFornavn.Name = "lblFornavn"
+        Me.lblFornavn.Size = New System.Drawing.Size(51, 17)
+        Me.lblFornavn.TabIndex = 18
+        Me.lblFornavn.Text = "Label9"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(436, 185)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(117, 41)
+        Me.Button1.TabIndex = 17
+        Me.Button1.Text = "Egenerklæring"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'TabPage2
         '
         Me.TabPage2.Controls.Add(Me.MonthCalendar2)
@@ -239,54 +287,28 @@ Partial Class brukerSide
         Me.TabPage2.Text = "TabPage2"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'Button1
+        'Button2
         '
-        Me.Button1.Location = New System.Drawing.Point(436, 185)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(117, 41)
-        Me.Button1.TabIndex = 17
-        Me.Button1.Text = "Egenerklæring"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button2.Location = New System.Drawing.Point(0, 0)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 18
+        Me.Button2.Text = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
         '
-        'lblFornavn
+        'endrePwBtn
         '
-        Me.lblFornavn.AutoSize = True
-        Me.lblFornavn.Location = New System.Drawing.Point(156, 53)
-        Me.lblFornavn.Name = "lblFornavn"
-        Me.lblFornavn.Size = New System.Drawing.Size(51, 17)
-        Me.lblFornavn.TabIndex = 18
-        Me.lblFornavn.Text = "Label9"
-        '
-        'lblEtternavn
-        '
-        Me.lblEtternavn.AutoSize = True
-        Me.lblEtternavn.Location = New System.Drawing.Point(156, 92)
-        Me.lblEtternavn.Name = "lblEtternavn"
-        Me.lblEtternavn.Size = New System.Drawing.Size(59, 17)
-        Me.lblEtternavn.TabIndex = 19
-        Me.lblEtternavn.Text = "Label10"
-        '
-        'lblTlf
-        '
-        Me.lblTlf.AutoSize = True
-        Me.lblTlf.Location = New System.Drawing.Point(156, 128)
-        Me.lblTlf.Name = "lblTlf"
-        Me.lblTlf.Size = New System.Drawing.Size(59, 17)
-        Me.lblTlf.TabIndex = 20
-        Me.lblTlf.Text = "Label11"
-        '
-        'lblEpost
-        '
-        Me.lblEpost.AutoSize = True
-        Me.lblEpost.Location = New System.Drawing.Point(156, 176)
-        Me.lblEpost.Name = "lblEpost"
-        Me.lblEpost.Size = New System.Drawing.Size(59, 17)
-        Me.lblEpost.TabIndex = 21
-        Me.lblEpost.Text = "Label12"
+        Me.endrePwBtn.Location = New System.Drawing.Point(416, 70)
+        Me.endrePwBtn.Name = "endrePwBtn"
+        Me.endrePwBtn.Size = New System.Drawing.Size(136, 55)
+        Me.endrePwBtn.TabIndex = 22
+        Me.endrePwBtn.Text = "Endre passord"
+        Me.endrePwBtn.UseVisualStyleBackColor = True
         '
         'brukerSide
         '
         Me.ClientSize = New System.Drawing.Size(592, 319)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "brukerSide"
         Me.TabControl1.ResumeLayout(False)
@@ -334,4 +356,6 @@ Partial Class brukerSide
     Friend WithEvents lblTlf As Label
     Friend WithEvents lblEtternavn As Label
     Friend WithEvents lblFornavn As Label
+    Friend WithEvents endrePwBtn As Button
+    Friend WithEvents Button2 As Button
 End Class

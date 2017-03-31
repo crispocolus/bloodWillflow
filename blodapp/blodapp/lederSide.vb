@@ -26,6 +26,11 @@
 
     End Sub
 
+    Private Sub endrePwBtn_Click(sender As Object, e As EventArgs) Handles endrePwBtn.Click
+        Dim pros As New prosedyrer
+        pros.endrePw(LoginForm.bnavn)
+    End Sub
+
     'Private Sub btnBehov_Click(sender As Object, e As EventArgs) Handles btnBehov.Click
     '    If IsNumeric(txtMengde) Then
     '        Label9.Text = "Du trenger minst: " & giverBehov & "antall blodgivere"
