@@ -24,10 +24,10 @@ Public Class brukerSide
         Dim resultatTab As New DataTable
         resultatTab = info.queryJoin("*", "bruker", "postnummer ON bruker.post_nr = postnummer.post_nr", "epost = '" & LoginForm.bnavn & "';")
         For Each rad As DataRow In resultatTab.Rows
-            fornavnTxt.Text = (rad("fornavn"))
-            etternavnTxt.Text = (rad("etternavn"))
-            telefonTxt.Text = (rad("telefon"))
-            epostTxt.Text = (rad("epost"))
+            lblFornavn.Text = (rad("fornavn"))
+            lblEtternavn.Text = (rad("etternavn"))
+            lblTlf.Text = (rad("telefon"))
+            lblEpost.Text = (rad("epost"))
 
         Next
     End Sub
@@ -68,6 +68,28 @@ Public Class brukerSide
     End Sub
 
     Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        egenerklaering.Show()
+    End Sub
+
+    Private Sub btnEndrePersinfo_Click(sender As Object, e As EventArgs) Handles btnEndrePersinfo.Click
+        lblFornavn.Hide()
+        lblEtternavn.Hide()
+        lblTlf.Hide()
+        lblEpost.Hide()
+
+        fornavnTxt.Text = lblFornavn.Text
+        fornavnTxt.Visible = True
+        etternavnTxt.Text = lblEtternavn.Text
+        etternavnTxt.Visible = True
+        epostTxt.Text = lblEpost.Text
+        epostTxt.Visible = True
+        telefonTxt.Text = lblTlf.Text
+        telefonTxt.Visible = True
+
 
     End Sub
 End Class

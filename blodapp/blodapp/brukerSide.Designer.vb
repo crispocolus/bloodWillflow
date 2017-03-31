@@ -41,6 +41,11 @@ Partial Class brukerSide
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.lblFornavn = New System.Windows.Forms.Label()
+        Me.lblEtternavn = New System.Windows.Forms.Label()
+        Me.lblTlf = New System.Windows.Forms.Label()
+        Me.lblEpost = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -157,6 +162,7 @@ Partial Class brukerSide
         Me.fornavnTxt.Name = "fornavnTxt"
         Me.fornavnTxt.Size = New System.Drawing.Size(100, 22)
         Me.fornavnTxt.TabIndex = 13
+        Me.fornavnTxt.Visible = False
         '
         'etternavnTxt
         '
@@ -164,6 +170,7 @@ Partial Class brukerSide
         Me.etternavnTxt.Name = "etternavnTxt"
         Me.etternavnTxt.Size = New System.Drawing.Size(100, 22)
         Me.etternavnTxt.TabIndex = 14
+        Me.etternavnTxt.Visible = False
         '
         'telefonTxt
         '
@@ -171,6 +178,7 @@ Partial Class brukerSide
         Me.telefonTxt.Name = "telefonTxt"
         Me.telefonTxt.Size = New System.Drawing.Size(100, 22)
         Me.telefonTxt.TabIndex = 15
+        Me.telefonTxt.Visible = False
         '
         'epostTxt
         '
@@ -178,6 +186,7 @@ Partial Class brukerSide
         Me.epostTxt.Name = "epostTxt"
         Me.epostTxt.Size = New System.Drawing.Size(100, 22)
         Me.epostTxt.TabIndex = 16
+        Me.epostTxt.Visible = False
         '
         'TabControl1
         '
@@ -191,6 +200,11 @@ Partial Class brukerSide
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.lblEpost)
+        Me.TabPage1.Controls.Add(Me.lblTlf)
+        Me.TabPage1.Controls.Add(Me.lblEtternavn)
+        Me.TabPage1.Controls.Add(Me.lblFornavn)
+        Me.TabPage1.Controls.Add(Me.Button1)
         Me.TabPage1.Controls.Add(Me.btnEndrePersinfo)
         Me.TabPage1.Controls.Add(Me.btnLoggUt)
         Me.TabPage1.Controls.Add(Me.fornavnTxt)
@@ -224,6 +238,51 @@ Partial Class brukerSide
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "TabPage2"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(436, 185)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(117, 41)
+        Me.Button1.TabIndex = 17
+        Me.Button1.Text = "Egenerklæring"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'lblFornavn
+        '
+        Me.lblFornavn.AutoSize = True
+        Me.lblFornavn.Location = New System.Drawing.Point(156, 53)
+        Me.lblFornavn.Name = "lblFornavn"
+        Me.lblFornavn.Size = New System.Drawing.Size(51, 17)
+        Me.lblFornavn.TabIndex = 18
+        Me.lblFornavn.Text = "Label9"
+        '
+        'lblEtternavn
+        '
+        Me.lblEtternavn.AutoSize = True
+        Me.lblEtternavn.Location = New System.Drawing.Point(156, 92)
+        Me.lblEtternavn.Name = "lblEtternavn"
+        Me.lblEtternavn.Size = New System.Drawing.Size(59, 17)
+        Me.lblEtternavn.TabIndex = 19
+        Me.lblEtternavn.Text = "Label10"
+        '
+        'lblTlf
+        '
+        Me.lblTlf.AutoSize = True
+        Me.lblTlf.Location = New System.Drawing.Point(156, 128)
+        Me.lblTlf.Name = "lblTlf"
+        Me.lblTlf.Size = New System.Drawing.Size(59, 17)
+        Me.lblTlf.TabIndex = 20
+        Me.lblTlf.Text = "Label11"
+        '
+        'lblEpost
+        '
+        Me.lblEpost.AutoSize = True
+        Me.lblEpost.Location = New System.Drawing.Point(156, 176)
+        Me.lblEpost.Name = "lblEpost"
+        Me.lblEpost.Size = New System.Drawing.Size(59, 17)
+        Me.lblEpost.TabIndex = 21
+        Me.lblEpost.Text = "Label12"
         '
         'brukerSide
         '
@@ -270,4 +329,9 @@ Partial Class brukerSide
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents Button1 As Button
+    Friend WithEvents lblEpost As Label
+    Friend WithEvents lblTlf As Label
+    Friend WithEvents lblEtternavn As Label
+    Friend WithEvents lblFornavn As Label
 End Class
