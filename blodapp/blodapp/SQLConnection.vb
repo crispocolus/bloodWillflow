@@ -14,8 +14,10 @@ Public Class Login
         'Importerer oppkobling fra SQL klassen
         Dim connect As New SQL
         Dim oppkobling = connect.oppkobling
+        Dim pros As New prosedyrer
         'Importerer BrukerStat klassen
         Dim brukerstat As New BrukerStat
+        Dim janei As Integer
 
         'Åpner tilkoblingen til databasen
         Try
@@ -42,9 +44,18 @@ Public Class Login
                 MsgBox("Innlogget", MsgBoxStyle.Information)
                 brukerstat.sjekkBrukerStat(LoginForm.bnavn)
                 connect.paakoblet = True
+                LoginForm.attempts = 0
                 Return connect.paakoblet
+            End If
+            If LoginForm.attempts = 2 Then
+                janei = MsgBox("Du har skrevet inn feil brukernavn eller passord 3 ganger. Har du glemt passordet?", MsgBoxStyle.YesNo)
+                If janei = DialogResult.Yes Then
+                    pros.glemtPw()
+                End If
             Else
                 MsgBox("Feil brukernavn eller passord")
+                LoginForm.attempts += 1
+                MsgBox(LoginForm.attempts)
                 oppkobling.Close()
                 Return "Feil brukernavn eller passord"
             End If

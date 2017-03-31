@@ -5,6 +5,7 @@ Imports System.Text
 Public Class LoginForm
     'Brukes for å vite hvem som er innlogget
     Public bnavn As String
+    Public attempts As Integer
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         'Lager et nytt SQL og et nytt Login-objekt. 
@@ -23,8 +24,7 @@ Public Class LoginForm
 
         bnavn = txtLoginBrukernavn.Text
 
-        'Funksjon for å hente salt fra databasen. Brukes ikke enda. 
-
+        'Funksjon for å hente salt fra databasen. 
         Try
             Dim oppkobling = connect.oppkobling
             oppkobling.Open()
