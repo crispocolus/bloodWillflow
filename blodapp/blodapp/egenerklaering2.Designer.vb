@@ -72,6 +72,17 @@ Partial Class egenerklaering2
         Me.lblEgen2Samtykke = New System.Windows.Forms.Label()
         Me.lblEgen2Land = New System.Windows.Forms.Label()
         Me.txtEgen2Land = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'lblEgen2InfoBlod
@@ -86,7 +97,7 @@ Partial Class egenerklaering2
         'radEgen2infoJa
         '
         Me.radEgen2infoJa.AutoSize = True
-        Me.radEgen2infoJa.Location = New System.Drawing.Point(219, 11)
+        Me.radEgen2infoJa.Location = New System.Drawing.Point(225, 14)
         Me.radEgen2infoJa.Name = "radEgen2infoJa"
         Me.radEgen2infoJa.Size = New System.Drawing.Size(36, 17)
         Me.radEgen2infoJa.TabIndex = 1
@@ -97,7 +108,7 @@ Partial Class egenerklaering2
         'radEgen2infoNei
         '
         Me.radEgen2infoNei.AutoSize = True
-        Me.radEgen2infoNei.Location = New System.Drawing.Point(261, 12)
+        Me.radEgen2infoNei.Location = New System.Drawing.Point(267, 15)
         Me.radEgen2infoNei.Name = "radEgen2infoNei"
         Me.radEgen2infoNei.Size = New System.Drawing.Size(41, 17)
         Me.radEgen2infoNei.TabIndex = 2
@@ -108,7 +119,7 @@ Partial Class egenerklaering2
         'radEgen2FriskNei
         '
         Me.radEgen2FriskNei.AutoSize = True
-        Me.radEgen2FriskNei.Location = New System.Drawing.Point(261, 39)
+        Me.radEgen2FriskNei.Location = New System.Drawing.Point(267, 42)
         Me.radEgen2FriskNei.Name = "radEgen2FriskNei"
         Me.radEgen2FriskNei.Size = New System.Drawing.Size(41, 17)
         Me.radEgen2FriskNei.TabIndex = 5
@@ -119,7 +130,7 @@ Partial Class egenerklaering2
         'radEgen2FriskJa
         '
         Me.radEgen2FriskJa.AutoSize = True
-        Me.radEgen2FriskJa.Location = New System.Drawing.Point(219, 38)
+        Me.radEgen2FriskJa.Location = New System.Drawing.Point(225, 41)
         Me.radEgen2FriskJa.Name = "radEgen2FriskJa"
         Me.radEgen2FriskJa.Size = New System.Drawing.Size(36, 17)
         Me.radEgen2FriskJa.TabIndex = 4
@@ -139,7 +150,7 @@ Partial Class egenerklaering2
         'radEgen2FriskSistNei
         '
         Me.radEgen2FriskSistNei.AutoSize = True
-        Me.radEgen2FriskSistNei.Location = New System.Drawing.Point(451, 62)
+        Me.radEgen2FriskSistNei.Location = New System.Drawing.Point(267, 93)
         Me.radEgen2FriskSistNei.Name = "radEgen2FriskSistNei"
         Me.radEgen2FriskSistNei.Size = New System.Drawing.Size(41, 17)
         Me.radEgen2FriskSistNei.TabIndex = 8
@@ -150,7 +161,7 @@ Partial Class egenerklaering2
         'radEgen2FriskSistJa
         '
         Me.radEgen2FriskSistJa.AutoSize = True
-        Me.radEgen2FriskSistJa.Location = New System.Drawing.Point(409, 62)
+        Me.radEgen2FriskSistJa.Location = New System.Drawing.Point(225, 93)
         Me.radEgen2FriskSistJa.Name = "radEgen2FriskSistJa"
         Me.radEgen2FriskSistJa.Size = New System.Drawing.Size(36, 17)
         Me.radEgen2FriskSistJa.TabIndex = 7
@@ -161,17 +172,16 @@ Partial Class egenerklaering2
         'lblEgen2FriskSidenSist
         '
         Me.lblEgen2FriskSidenSist.AutoSize = True
-        Me.lblEgen2FriskSidenSist.Location = New System.Drawing.Point(5, 66)
+        Me.lblEgen2FriskSidenSist.Location = New System.Drawing.Point(5, 79)
         Me.lblEgen2FriskSidenSist.Name = "lblEgen2FriskSidenSist"
-        Me.lblEgen2FriskSidenSist.Size = New System.Drawing.Size(398, 13)
+        Me.lblEgen2FriskSidenSist.Size = New System.Drawing.Size(143, 13)
         Me.lblEgen2FriskSidenSist.TabIndex = 6
-        Me.lblEgen2FriskSidenSist.Text = "Hvis du har gitt blod tidligere, har du vært frisk i perioden fra forige blodgivi" &
-    "ng til nå?"
+        Me.lblEgen2FriskSidenSist.Text = "Hvis du har gitt blod tidligere,"
         '
         'radEgen2FemtiNei
         '
         Me.radEgen2FemtiNei.AutoSize = True
-        Me.radEgen2FemtiNei.Location = New System.Drawing.Point(261, 86)
+        Me.radEgen2FemtiNei.Location = New System.Drawing.Point(268, 140)
         Me.radEgen2FemtiNei.Name = "radEgen2FemtiNei"
         Me.radEgen2FemtiNei.Size = New System.Drawing.Size(41, 17)
         Me.radEgen2FemtiNei.TabIndex = 11
@@ -182,7 +192,7 @@ Partial Class egenerklaering2
         'radEgen2FemtiJa
         '
         Me.radEgen2FemtiJa.AutoSize = True
-        Me.radEgen2FemtiJa.Location = New System.Drawing.Point(219, 85)
+        Me.radEgen2FemtiJa.Location = New System.Drawing.Point(225, 140)
         Me.radEgen2FemtiJa.Name = "radEgen2FemtiJa"
         Me.radEgen2FemtiJa.Size = New System.Drawing.Size(36, 17)
         Me.radEgen2FemtiJa.TabIndex = 10
@@ -193,7 +203,7 @@ Partial Class egenerklaering2
         'lblEgen2Femti
         '
         Me.lblEgen2Femti.AutoSize = True
-        Me.lblEgen2Femti.Location = New System.Drawing.Point(5, 88)
+        Me.lblEgen2Femti.Location = New System.Drawing.Point(5, 139)
         Me.lblEgen2Femti.Name = "lblEgen2Femti"
         Me.lblEgen2Femti.Size = New System.Drawing.Size(125, 13)
         Me.lblEgen2Femti.TabIndex = 9
@@ -202,7 +212,7 @@ Partial Class egenerklaering2
         'radEgen2HudSykNei
         '
         Me.radEgen2HudSykNei.AutoSize = True
-        Me.radEgen2HudSykNei.Location = New System.Drawing.Point(261, 109)
+        Me.radEgen2HudSykNei.Location = New System.Drawing.Point(268, 179)
         Me.radEgen2HudSykNei.Name = "radEgen2HudSykNei"
         Me.radEgen2HudSykNei.Size = New System.Drawing.Size(41, 17)
         Me.radEgen2HudSykNei.TabIndex = 14
@@ -213,7 +223,7 @@ Partial Class egenerklaering2
         'radEgen2HudSykJa
         '
         Me.radEgen2HudSykJa.AutoSize = True
-        Me.radEgen2HudSykJa.Location = New System.Drawing.Point(219, 108)
+        Me.radEgen2HudSykJa.Location = New System.Drawing.Point(226, 179)
         Me.radEgen2HudSykJa.Name = "radEgen2HudSykJa"
         Me.radEgen2HudSykJa.Size = New System.Drawing.Size(36, 17)
         Me.radEgen2HudSykJa.TabIndex = 13
@@ -224,7 +234,7 @@ Partial Class egenerklaering2
         'lblEgen2HudSyk
         '
         Me.lblEgen2HudSyk.AutoSize = True
-        Me.lblEgen2HudSyk.Location = New System.Drawing.Point(5, 109)
+        Me.lblEgen2HudSyk.Location = New System.Drawing.Point(11, 179)
         Me.lblEgen2HudSyk.Name = "lblEgen2HudSyk"
         Me.lblEgen2HudSyk.Size = New System.Drawing.Size(205, 13)
         Me.lblEgen2HudSyk.TabIndex = 12
@@ -233,7 +243,7 @@ Partial Class egenerklaering2
         'radEgen2Narkotika12mndNei
         '
         Me.radEgen2Narkotika12mndNei.AutoSize = True
-        Me.radEgen2Narkotika12mndNei.Location = New System.Drawing.Point(261, 153)
+        Me.radEgen2Narkotika12mndNei.Location = New System.Drawing.Point(268, 243)
         Me.radEgen2Narkotika12mndNei.Name = "radEgen2Narkotika12mndNei"
         Me.radEgen2Narkotika12mndNei.Size = New System.Drawing.Size(41, 17)
         Me.radEgen2Narkotika12mndNei.TabIndex = 20
@@ -244,7 +254,7 @@ Partial Class egenerklaering2
         'radEgen2Narkotika12mndJa
         '
         Me.radEgen2Narkotika12mndJa.AutoSize = True
-        Me.radEgen2Narkotika12mndJa.Location = New System.Drawing.Point(219, 152)
+        Me.radEgen2Narkotika12mndJa.Location = New System.Drawing.Point(226, 243)
         Me.radEgen2Narkotika12mndJa.Name = "radEgen2Narkotika12mndJa"
         Me.radEgen2Narkotika12mndJa.Size = New System.Drawing.Size(36, 17)
         Me.radEgen2Narkotika12mndJa.TabIndex = 19
@@ -255,16 +265,16 @@ Partial Class egenerklaering2
         'lblEgen2Narkotika12mnd
         '
         Me.lblEgen2Narkotika12mnd.AutoSize = True
-        Me.lblEgen2Narkotika12mnd.Location = New System.Drawing.Point(5, 155)
+        Me.lblEgen2Narkotika12mnd.Location = New System.Drawing.Point(5, 243)
         Me.lblEgen2Narkotika12mnd.Name = "lblEgen2Narkotika12mnd"
-        Me.lblEgen2Narkotika12mnd.Size = New System.Drawing.Size(217, 13)
+        Me.lblEgen2Narkotika12mnd.Size = New System.Drawing.Size(196, 13)
         Me.lblEgen2Narkotika12mnd.TabIndex = 18
-        Me.lblEgen2Narkotika12mnd.Text = "Har du brukt narkotika de siste 12 måneder?"
+        Me.lblEgen2Narkotika12mnd.Text = "Har du brukt narkotika de siste 12 mnd?"
         '
         'radEgen2CjdNei
         '
         Me.radEgen2CjdNei.AutoSize = True
-        Me.radEgen2CjdNei.Location = New System.Drawing.Point(451, 174)
+        Me.radEgen2CjdNei.Location = New System.Drawing.Point(267, 281)
         Me.radEgen2CjdNei.Name = "radEgen2CjdNei"
         Me.radEgen2CjdNei.Size = New System.Drawing.Size(41, 17)
         Me.radEgen2CjdNei.TabIndex = 23
@@ -275,7 +285,7 @@ Partial Class egenerklaering2
         'radEgen2CjdJa
         '
         Me.radEgen2CjdJa.AutoSize = True
-        Me.radEgen2CjdJa.Location = New System.Drawing.Point(409, 173)
+        Me.radEgen2CjdJa.Location = New System.Drawing.Point(225, 280)
         Me.radEgen2CjdJa.Name = "radEgen2CjdJa"
         Me.radEgen2CjdJa.Size = New System.Drawing.Size(36, 17)
         Me.radEgen2CjdJa.TabIndex = 22
@@ -286,17 +296,16 @@ Partial Class egenerklaering2
         'lblEgen2CJD
         '
         Me.lblEgen2CJD.AutoSize = True
-        Me.lblEgen2CJD.Location = New System.Drawing.Point(5, 178)
+        Me.lblEgen2CJD.Location = New System.Drawing.Point(5, 269)
         Me.lblEgen2CJD.Name = "lblEgen2CJD"
-        Me.lblEgen2CJD.Size = New System.Drawing.Size(379, 13)
+        Me.lblEgen2CJD.Size = New System.Drawing.Size(172, 13)
         Me.lblEgen2CJD.TabIndex = 21
-        Me.lblEgen2CJD.Text = "Har du eller noen i familien din hatt Creutzfeldt-Jakob sykdom eller variant CJD?" &
-    ""
+        Me.lblEgen2CJD.Text = "Har du eller noen i familien din hatt "
         '
         'radEgen2GbNei
         '
         Me.radEgen2GbNei.AutoSize = True
-        Me.radEgen2GbNei.Location = New System.Drawing.Point(451, 198)
+        Me.radEgen2GbNei.Location = New System.Drawing.Point(267, 324)
         Me.radEgen2GbNei.Name = "radEgen2GbNei"
         Me.radEgen2GbNei.Size = New System.Drawing.Size(41, 17)
         Me.radEgen2GbNei.TabIndex = 26
@@ -307,7 +316,7 @@ Partial Class egenerklaering2
         'radEgen2GbJa
         '
         Me.radEgen2GbJa.AutoSize = True
-        Me.radEgen2GbJa.Location = New System.Drawing.Point(409, 197)
+        Me.radEgen2GbJa.Location = New System.Drawing.Point(225, 323)
         Me.radEgen2GbJa.Name = "radEgen2GbJa"
         Me.radEgen2GbJa.Size = New System.Drawing.Size(36, 17)
         Me.radEgen2GbJa.TabIndex = 25
@@ -318,17 +327,16 @@ Partial Class egenerklaering2
         'lblEgen2Gb
         '
         Me.lblEgen2Gb.AutoSize = True
-        Me.lblEgen2Gb.Location = New System.Drawing.Point(5, 200)
+        Me.lblEgen2Gb.Location = New System.Drawing.Point(5, 314)
         Me.lblEgen2Gb.Name = "lblEgen2Gb"
-        Me.lblEgen2Gb.Size = New System.Drawing.Size(406, 13)
+        Me.lblEgen2Gb.Size = New System.Drawing.Size(209, 13)
         Me.lblEgen2Gb.TabIndex = 24
-        Me.lblEgen2Gb.Text = "Har du oppholt deg i Storbritannia mer enn et år til sammen i perioden 1980 og 19" &
-    "96?"
+        Me.lblEgen2Gb.Text = "Har du oppholt deg i Storbritannia mer enn "
         '
         'radEgen2MalariaNei
         '
         Me.radEgen2MalariaNei.AutoSize = True
-        Me.radEgen2MalariaNei.Location = New System.Drawing.Point(451, 224)
+        Me.radEgen2MalariaNei.Location = New System.Drawing.Point(267, 362)
         Me.radEgen2MalariaNei.Name = "radEgen2MalariaNei"
         Me.radEgen2MalariaNei.Size = New System.Drawing.Size(41, 17)
         Me.radEgen2MalariaNei.TabIndex = 29
@@ -339,7 +347,7 @@ Partial Class egenerklaering2
         'radEgen2MalariaJa
         '
         Me.radEgen2MalariaJa.AutoSize = True
-        Me.radEgen2MalariaJa.Location = New System.Drawing.Point(409, 223)
+        Me.radEgen2MalariaJa.Location = New System.Drawing.Point(225, 361)
         Me.radEgen2MalariaJa.Name = "radEgen2MalariaJa"
         Me.radEgen2MalariaJa.Size = New System.Drawing.Size(36, 17)
         Me.radEgen2MalariaJa.TabIndex = 28
@@ -350,16 +358,16 @@ Partial Class egenerklaering2
         'lblEgen2Malaria
         '
         Me.lblEgen2Malaria.AutoSize = True
-        Me.lblEgen2Malaria.Location = New System.Drawing.Point(5, 224)
+        Me.lblEgen2Malaria.Location = New System.Drawing.Point(5, 351)
         Me.lblEgen2Malaria.Name = "lblEgen2Malaria"
-        Me.lblEgen2Malaria.Size = New System.Drawing.Size(346, 13)
+        Me.lblEgen2Malaria.Size = New System.Drawing.Size(184, 13)
         Me.lblEgen2Malaria.TabIndex = 27
-        Me.lblEgen2Malaria.Text = "Har du i løpet av de siste tre år vært i områder hvor malaria forekommer?"
+        Me.lblEgen2Malaria.Text = "Har du i løpet av de siste tre år vært i "
         '
         'radEgen2Malaria6MndNei
         '
         Me.radEgen2Malaria6MndNei.AutoSize = True
-        Me.radEgen2Malaria6MndNei.Location = New System.Drawing.Point(539, 245)
+        Me.radEgen2Malaria6MndNei.Location = New System.Drawing.Point(267, 409)
         Me.radEgen2Malaria6MndNei.Name = "radEgen2Malaria6MndNei"
         Me.radEgen2Malaria6MndNei.Size = New System.Drawing.Size(41, 17)
         Me.radEgen2Malaria6MndNei.TabIndex = 32
@@ -370,7 +378,7 @@ Partial Class egenerklaering2
         'radEgen2Malaria6MndJa
         '
         Me.radEgen2Malaria6MndJa.AutoSize = True
-        Me.radEgen2Malaria6MndJa.Location = New System.Drawing.Point(497, 244)
+        Me.radEgen2Malaria6MndJa.Location = New System.Drawing.Point(225, 408)
         Me.radEgen2Malaria6MndJa.Name = "radEgen2Malaria6MndJa"
         Me.radEgen2Malaria6MndJa.Size = New System.Drawing.Size(36, 17)
         Me.radEgen2Malaria6MndJa.TabIndex = 31
@@ -381,17 +389,16 @@ Partial Class egenerklaering2
         'lblEgen2Malaria6Mnd
         '
         Me.lblEgen2Malaria6Mnd.AutoSize = True
-        Me.lblEgen2Malaria6Mnd.Location = New System.Drawing.Point(5, 247)
+        Me.lblEgen2Malaria6Mnd.Location = New System.Drawing.Point(3, 392)
         Me.lblEgen2Malaria6Mnd.Name = "lblEgen2Malaria6Mnd"
-        Me.lblEgen2Malaria6Mnd.Size = New System.Drawing.Size(489, 13)
+        Me.lblEgen2Malaria6Mnd.Size = New System.Drawing.Size(217, 13)
         Me.lblEgen2Malaria6Mnd.TabIndex = 30
-        Me.lblEgen2Malaria6Mnd.Text = "Har du oppholdt deg mer sammenhengende minst seks måneder i et område hvor malari" &
-    "a forekommer?"
+        Me.lblEgen2Malaria6Mnd.Text = "Har du oppholdt deg mer sammenhengende "
         '
         'radEgen2Afrika5AarNei
         '
         Me.radEgen2Afrika5AarNei.AutoSize = True
-        Me.radEgen2Afrika5AarNei.Location = New System.Drawing.Point(451, 268)
+        Me.radEgen2Afrika5AarNei.Location = New System.Drawing.Point(267, 461)
         Me.radEgen2Afrika5AarNei.Name = "radEgen2Afrika5AarNei"
         Me.radEgen2Afrika5AarNei.Size = New System.Drawing.Size(41, 17)
         Me.radEgen2Afrika5AarNei.TabIndex = 35
@@ -402,7 +409,7 @@ Partial Class egenerklaering2
         'radEgen2Afrika5AarJa
         '
         Me.radEgen2Afrika5AarJa.AutoSize = True
-        Me.radEgen2Afrika5AarJa.Location = New System.Drawing.Point(409, 267)
+        Me.radEgen2Afrika5AarJa.Location = New System.Drawing.Point(225, 460)
         Me.radEgen2Afrika5AarJa.Name = "radEgen2Afrika5AarJa"
         Me.radEgen2Afrika5AarJa.Size = New System.Drawing.Size(36, 17)
         Me.radEgen2Afrika5AarJa.TabIndex = 34
@@ -413,16 +420,16 @@ Partial Class egenerklaering2
         'lblEgen2Afrika5Aar
         '
         Me.lblEgen2Afrika5Aar.AutoSize = True
-        Me.lblEgen2Afrika5Aar.Location = New System.Drawing.Point(5, 270)
+        Me.lblEgen2Afrika5Aar.Location = New System.Drawing.Point(5, 449)
         Me.lblEgen2Afrika5Aar.Name = "lblEgen2Afrika5Aar"
-        Me.lblEgen2Afrika5Aar.Size = New System.Drawing.Size(263, 13)
+        Me.lblEgen2Afrika5Aar.Size = New System.Drawing.Size(135, 13)
         Me.lblEgen2Afrika5Aar.TabIndex = 33
-        Me.lblEgen2Afrika5Aar.Text = "Har du oppholt deg i afrika mer enn fem år til sammen?"
+        Me.lblEgen2Afrika5Aar.Text = "Har du oppholt deg i afrika "
         '
         'lblEgen2Pierc
         '
         Me.lblEgen2Pierc.AutoSize = True
-        Me.lblEgen2Pierc.Location = New System.Drawing.Point(5, 132)
+        Me.lblEgen2Pierc.Location = New System.Drawing.Point(5, 209)
         Me.lblEgen2Pierc.Name = "lblEgen2Pierc"
         Me.lblEgen2Pierc.Size = New System.Drawing.Size(136, 13)
         Me.lblEgen2Pierc.TabIndex = 15
@@ -431,7 +438,7 @@ Partial Class egenerklaering2
         'radEgen2PiercJa
         '
         Me.radEgen2PiercJa.AutoSize = True
-        Me.radEgen2PiercJa.Location = New System.Drawing.Point(219, 129)
+        Me.radEgen2PiercJa.Location = New System.Drawing.Point(226, 209)
         Me.radEgen2PiercJa.Name = "radEgen2PiercJa"
         Me.radEgen2PiercJa.Size = New System.Drawing.Size(36, 17)
         Me.radEgen2PiercJa.TabIndex = 16
@@ -442,7 +449,7 @@ Partial Class egenerklaering2
         'radEgen2PiercNei
         '
         Me.radEgen2PiercNei.AutoSize = True
-        Me.radEgen2PiercNei.Location = New System.Drawing.Point(261, 130)
+        Me.radEgen2PiercNei.Location = New System.Drawing.Point(268, 209)
         Me.radEgen2PiercNei.Name = "radEgen2PiercNei"
         Me.radEgen2PiercNei.Size = New System.Drawing.Size(41, 17)
         Me.radEgen2PiercNei.TabIndex = 17
@@ -453,7 +460,7 @@ Partial Class egenerklaering2
         'radEgen2SorAmerikaNei
         '
         Me.radEgen2SorAmerikaNei.AutoSize = True
-        Me.radEgen2SorAmerikaNei.Location = New System.Drawing.Point(261, 292)
+        Me.radEgen2SorAmerikaNei.Location = New System.Drawing.Point(267, 488)
         Me.radEgen2SorAmerikaNei.Name = "radEgen2SorAmerikaNei"
         Me.radEgen2SorAmerikaNei.Size = New System.Drawing.Size(41, 17)
         Me.radEgen2SorAmerikaNei.TabIndex = 38
@@ -464,7 +471,7 @@ Partial Class egenerklaering2
         'radEgen2SorAmerikaJa
         '
         Me.radEgen2SorAmerikaJa.AutoSize = True
-        Me.radEgen2SorAmerikaJa.Location = New System.Drawing.Point(219, 291)
+        Me.radEgen2SorAmerikaJa.Location = New System.Drawing.Point(225, 487)
         Me.radEgen2SorAmerikaJa.Name = "radEgen2SorAmerikaJa"
         Me.radEgen2SorAmerikaJa.Size = New System.Drawing.Size(36, 17)
         Me.radEgen2SorAmerikaJa.TabIndex = 37
@@ -475,7 +482,7 @@ Partial Class egenerklaering2
         'lblEgen2SorAmerika
         '
         Me.lblEgen2SorAmerika.AutoSize = True
-        Me.lblEgen2SorAmerika.Location = New System.Drawing.Point(5, 294)
+        Me.lblEgen2SorAmerika.Location = New System.Drawing.Point(5, 487)
         Me.lblEgen2SorAmerika.Name = "lblEgen2SorAmerika"
         Me.lblEgen2SorAmerika.Size = New System.Drawing.Size(184, 13)
         Me.lblEgen2SorAmerika.TabIndex = 36
@@ -484,7 +491,7 @@ Partial Class egenerklaering2
         'radEgen2ForskningNei
         '
         Me.radEgen2ForskningNei.AutoSize = True
-        Me.radEgen2ForskningNei.Location = New System.Drawing.Point(451, 314)
+        Me.radEgen2ForskningNei.Location = New System.Drawing.Point(267, 522)
         Me.radEgen2ForskningNei.Name = "radEgen2ForskningNei"
         Me.radEgen2ForskningNei.Size = New System.Drawing.Size(41, 17)
         Me.radEgen2ForskningNei.TabIndex = 41
@@ -495,7 +502,7 @@ Partial Class egenerklaering2
         'radEgen2ForskningJa
         '
         Me.radEgen2ForskningJa.AutoSize = True
-        Me.radEgen2ForskningJa.Location = New System.Drawing.Point(409, 313)
+        Me.radEgen2ForskningJa.Location = New System.Drawing.Point(225, 521)
         Me.radEgen2ForskningJa.Name = "radEgen2ForskningJa"
         Me.radEgen2ForskningJa.Size = New System.Drawing.Size(36, 17)
         Me.radEgen2ForskningJa.TabIndex = 40
@@ -506,16 +513,16 @@ Partial Class egenerklaering2
         'lblEgen2Forskning
         '
         Me.lblEgen2Forskning.AutoSize = True
-        Me.lblEgen2Forskning.Location = New System.Drawing.Point(5, 316)
+        Me.lblEgen2Forskning.Location = New System.Drawing.Point(8, 521)
         Me.lblEgen2Forskning.Name = "lblEgen2Forskning"
-        Me.lblEgen2Forskning.Size = New System.Drawing.Size(337, 13)
+        Me.lblEgen2Forskning.Size = New System.Drawing.Size(199, 13)
         Me.lblEgen2Forskning.TabIndex = 39
-        Me.lblEgen2Forskning.Text = "Godtar du at anonymiserte prøver av ditt blod kan brukes til forskning?"
+        Me.lblEgen2Forskning.Text = "Godtar du at anonymiserte prøver av ditt "
         '
         'radEgen2Forskning12mndNei
         '
         Me.radEgen2Forskning12mndNei.AutoSize = True
-        Me.radEgen2Forskning12mndNei.Location = New System.Drawing.Point(451, 336)
+        Me.radEgen2Forskning12mndNei.Location = New System.Drawing.Point(267, 558)
         Me.radEgen2Forskning12mndNei.Name = "radEgen2Forskning12mndNei"
         Me.radEgen2Forskning12mndNei.Size = New System.Drawing.Size(41, 17)
         Me.radEgen2Forskning12mndNei.TabIndex = 44
@@ -526,7 +533,7 @@ Partial Class egenerklaering2
         'radEgen2Forskning12mndJa
         '
         Me.radEgen2Forskning12mndJa.AutoSize = True
-        Me.radEgen2Forskning12mndJa.Location = New System.Drawing.Point(409, 335)
+        Me.radEgen2Forskning12mndJa.Location = New System.Drawing.Point(225, 557)
         Me.radEgen2Forskning12mndJa.Name = "radEgen2Forskning12mndJa"
         Me.radEgen2Forskning12mndJa.Size = New System.Drawing.Size(36, 17)
         Me.radEgen2Forskning12mndJa.TabIndex = 43
@@ -537,16 +544,16 @@ Partial Class egenerklaering2
         'lblEgen2Medikament12mnd
         '
         Me.lblEgen2Medikament12mnd.AutoSize = True
-        Me.lblEgen2Medikament12mnd.Location = New System.Drawing.Point(5, 338)
+        Me.lblEgen2Medikament12mnd.Location = New System.Drawing.Point(3, 562)
         Me.lblEgen2Medikament12mnd.Name = "lblEgen2Medikament12mnd"
-        Me.lblEgen2Medikament12mnd.Size = New System.Drawing.Size(257, 13)
+        Me.lblEgen2Medikament12mnd.Size = New System.Drawing.Size(180, 13)
         Me.lblEgen2Medikament12mnd.TabIndex = 42
-        Me.lblEgen2Medikament12mnd.Text = "Har du deltatt i et medikamentforsøk de siste 12mnd?"
+        Me.lblEgen2Medikament12mnd.Text = "Har du deltatt i et medikamentforsøk "
         '
         'radEgen2SamtykkeNei
         '
         Me.radEgen2SamtykkeNei.AutoSize = True
-        Me.radEgen2SamtykkeNei.Location = New System.Drawing.Point(451, 358)
+        Me.radEgen2SamtykkeNei.Location = New System.Drawing.Point(267, 608)
         Me.radEgen2SamtykkeNei.Name = "radEgen2SamtykkeNei"
         Me.radEgen2SamtykkeNei.Size = New System.Drawing.Size(41, 17)
         Me.radEgen2SamtykkeNei.TabIndex = 47
@@ -557,7 +564,7 @@ Partial Class egenerklaering2
         'radEgen2SamtykkeJa
         '
         Me.radEgen2SamtykkeJa.AutoSize = True
-        Me.radEgen2SamtykkeJa.Location = New System.Drawing.Point(409, 358)
+        Me.radEgen2SamtykkeJa.Location = New System.Drawing.Point(225, 608)
         Me.radEgen2SamtykkeJa.Name = "radEgen2SamtykkeJa"
         Me.radEgen2SamtykkeJa.Size = New System.Drawing.Size(36, 17)
         Me.radEgen2SamtykkeJa.TabIndex = 46
@@ -568,16 +575,16 @@ Partial Class egenerklaering2
         'lblEgen2Samtykke
         '
         Me.lblEgen2Samtykke.AutoSize = True
-        Me.lblEgen2Samtykke.Location = New System.Drawing.Point(5, 360)
+        Me.lblEgen2Samtykke.Location = New System.Drawing.Point(3, 599)
         Me.lblEgen2Samtykke.Name = "lblEgen2Samtykke"
-        Me.lblEgen2Samtykke.Size = New System.Drawing.Size(350, 13)
+        Me.lblEgen2Samtykke.Size = New System.Drawing.Size(150, 13)
         Me.lblEgen2Samtykke.TabIndex = 45
-        Me.lblEgen2Samtykke.Text = "Jeg samtykker i at mitt plasma føres ut av norge for legemiddelproduksjon"
+        Me.lblEgen2Samtykke.Text = "Jeg samtykker i at mitt plasma "
         '
         'lblEgen2Land
         '
         Me.lblEgen2Land.AutoSize = True
-        Me.lblEgen2Land.Location = New System.Drawing.Point(8, 377)
+        Me.lblEgen2Land.Location = New System.Drawing.Point(8, 642)
         Me.lblEgen2Land.Name = "lblEgen2Land"
         Me.lblEgen2Land.Size = New System.Drawing.Size(153, 13)
         Me.lblEgen2Land.TabIndex = 48
@@ -585,16 +592,126 @@ Partial Class egenerklaering2
         '
         'txtEgen2Land
         '
-        Me.txtEgen2Land.Location = New System.Drawing.Point(219, 377)
+        Me.txtEgen2Land.Location = New System.Drawing.Point(219, 642)
         Me.txtEgen2Land.Name = "txtEgen2Land"
-        Me.txtEgen2Land.Size = New System.Drawing.Size(273, 20)
+        Me.txtEgen2Land.Size = New System.Drawing.Size(135, 20)
         Me.txtEgen2Land.TabIndex = 49
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(5, 92)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(136, 13)
+        Me.Label1.TabIndex = 50
+        Me.Label1.Text = "har du vært frisk i perioden "
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(5, 105)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(130, 13)
+        Me.Label2.TabIndex = 51
+        Me.Label2.Text = "fra forige blodgiving til nå?"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(5, 282)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(214, 13)
+        Me.Label3.TabIndex = 52
+        Me.Label3.Text = "Creutzfeldt-Jakob sykdom eller variant CJD?"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(5, 328)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(204, 13)
+        Me.Label4.TabIndex = 53
+        Me.Label4.Text = "et år til sammen i perioden 1980 og 1996?"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(5, 364)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(169, 13)
+        Me.Label5.TabIndex = 54
+        Me.Label5.Text = "områder hvor malaria forekommer?"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(6, 409)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(215, 13)
+        Me.Label6.TabIndex = 55
+        Me.Label6.Text = "minst seks måneder i et område hvor malaria"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(8, 426)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(68, 13)
+        Me.Label7.TabIndex = 56
+        Me.Label7.Text = "forekommer?"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(5, 465)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(135, 13)
+        Me.Label8.TabIndex = 57
+        Me.Label8.Text = "mer enn fem år til sammen?"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(8, 534)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(145, 13)
+        Me.Label9.TabIndex = 58
+        Me.Label9.Text = "blod kan brukes til forskning?"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(3, 575)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(84, 13)
+        Me.Label10.TabIndex = 59
+        Me.Label10.Text = "de siste 12mnd?"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(5, 612)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(207, 13)
+        Me.Label11.TabIndex = 60
+        Me.Label11.Text = "føres ut av norge for legemiddelproduksjon"
         '
         'egenerklaering2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(580, 403)
+        Me.ClientSize = New System.Drawing.Size(538, 669)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtEgen2Land)
         Me.Controls.Add(Me.lblEgen2Land)
         Me.Controls.Add(Me.radEgen2SamtykkeNei)
@@ -702,4 +819,15 @@ Partial Class egenerklaering2
     Friend WithEvents lblEgen2Samtykke As Label
     Friend WithEvents lblEgen2Land As Label
     Friend WithEvents txtEgen2Land As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label11 As Label
 End Class

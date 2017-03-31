@@ -54,3 +54,23 @@ C:\Users\Even\Documents\Skole\OOPS\Prosjekt\gruppe25blodapp_try2\bloodWillflow\b
 C:\Users\Even\Documents\Skole\OOPS\Prosjekt\gruppe25blodapp_try2\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.pdb
 C:\bloodwillflow\blodapp\blodapp\obj\Debug\blodapp.brukerSide.resources
 C:\Users\Even\Documents\Skole\OOPS\Prosjekt\gruppe25blodapp_try2\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.brukerSide.resources
+C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\bin\Debug\blodapp.exe.config
+C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.exe
+C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.xml
+C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.pdb
+C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.vbprojResolveAssemblyReference.cache
+C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.adminSide.resources
+C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.brukerSide.resources
+C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.egenerklaering.resources
+C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.egenerklaering2.resources
+C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.lederSide.resources
+C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.ansattSide.resources
+C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.LoginForm.resources
+C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.Resources.resources
+C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.RegistrerForm.resources
+C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.vbproj.GenerateResource.Cache
+C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\bin\Debug\blodapp.exe
+C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\bin\Debug\blodapp.pdb
+C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\bin\Debug\blodapp.xml
+C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\bin\Debug\MySql.Data.dll
+C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\bin\Debug\MySql.Data.xml

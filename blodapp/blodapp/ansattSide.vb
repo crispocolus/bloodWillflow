@@ -2,7 +2,7 @@
     Dim kommentar As String
     Dim blod_pnummer As String
 
-    Public giverBehov As String = 1
+    Public literBehov As String = 0
     Private Sub btnRetur_Click(sender As Object, e As EventArgs) Handles btnRetur.Click
 
         kommentar = InputBox("Skriv en kommentar til bestillingen")
@@ -28,11 +28,13 @@
     End Sub
 
     Private Sub btnBehov_Click(sender As Object, e As EventArgs) Handles btnBehov.Click
-        giverBehov = TextBox1.Text
-        If IsNumeric(txtMengde) Then
-            Label9.Text = "Du trenger minst: " & giverBehov & "antall blodgivere"
+        literBehov = TextBox1.Text
+        Dim giverBehov As Integer
+        giverBehov = (literBehov / 0.45) + 1
+        If IsNumeric(TextBox1.Text) = False Then
+            MsgBox("Du må skrive et heltall når du skriver literbehov")
         Else
-            MsgBox("Du må skrive et tall når du skriver literbehov")
+            Label9.Text = "Du trenger minst: " & giverBehov & " blodgivere" & vbCrLf & "for å få " & literBehov & " liter blod."
         End If
 
     End Sub
@@ -80,6 +82,7 @@
     '    'Tømmer combo-box før query
     '    lstKandidater.Items.Clear()
 
+<<<<<<< HEAD
     '    'Utfører query ved hjelp av funksjonen query under klassen info. 
     '    Tabell = info.queryJoin("fornavn, etternavn, bruker.person_nr", "bruker", "blodgiver ON bruker.person_nr = blodgiver.person_nr", "blodtype = '" & blodtype & "';")
     '    'pNummerTabell = Tabell
@@ -90,6 +93,18 @@
     '        MsgBox(pNummerTabell.IndexOf())
     '    Next
     '    Dim sResult As String = ""
+=======
+        'Utfører query ved hjelp av funksjonen query under klassen info. 
+        Tabell = info.queryJoin("fornavn, etternavn, bruker.person_nr", "bruker", "blodgiver ON bruker.person_nr = blodgiver.person_nr", "blodtype = '" & blodtype & "';")
+        'pNummerTabell = Tabell
+        'Legger til kandidater basert på hva som er valgt i ComboBox
+        For Each rad In Tabell.Rows
+            lstKandidater.Items.Add(rad("fornavn") & " " & rad("etternavn"))
+            pNummerTabell.Add(rad("person_nr").ToString)
+            'MsgBox(pNummerTabell.IndexOf()) Kommentert ut for testing på resten av siden
+        Next
+        Dim sResult As String = ""
+>>>>>>> 3b591de80c4b3fa5c58e3f4ac64bb098d7da2a7c
 
     '    'For Each elem As String In pNummerTabell
     '    '    MsgBox(elem)
