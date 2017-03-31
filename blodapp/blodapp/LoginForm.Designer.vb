@@ -86,7 +86,7 @@ Partial Class LoginForm
         'txtLoginBrukernavn
         '
         Me.txtLoginBrukernavn.Location = New System.Drawing.Point(123, 68)
-        Me.txtLoginBrukernavn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtLoginBrukernavn.Margin = New System.Windows.Forms.Padding(4)
         Me.txtLoginBrukernavn.Name = "txtLoginBrukernavn"
         Me.txtLoginBrukernavn.Size = New System.Drawing.Size(132, 22)
         Me.txtLoginBrukernavn.TabIndex = 5
@@ -94,7 +94,7 @@ Partial Class LoginForm
         'txtLoginPwd
         '
         Me.txtLoginPwd.Location = New System.Drawing.Point(123, 105)
-        Me.txtLoginPwd.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtLoginPwd.Margin = New System.Windows.Forms.Padding(4)
         Me.txtLoginPwd.Name = "txtLoginPwd"
         Me.txtLoginPwd.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtLoginPwd.Size = New System.Drawing.Size(132, 22)

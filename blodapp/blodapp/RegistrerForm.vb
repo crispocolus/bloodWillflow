@@ -56,10 +56,8 @@ Public Class RegistrerForm
         If godkjentEpost = True And godkjentTelefon = True And godkjentPassord = True Then
             Dim salt As String
             Dim passordHash As String = ""
-            salt = CreateRandomSalt()
-            'passordHash = crypt(passordTxt.Text, salt)
-            passordHash = passordTxt.Text
-
+            salt = lagSalt(25)
+            passordHash = lagSaltetHash(passordTxt.Text, salt)
 
             Registrering.sendInfo(post_nr,
                                   adresse,
@@ -78,26 +76,6 @@ Public Class RegistrerForm
         End If
     End Sub
 
-    Public Function CreateRandomSalt() As String
-        'the following is the string that will hold the salt charachters
-        Dim mix As String = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
-        '!@#$%^&*()_+=][}{<>"
-        Dim salt As String = ""
-        Dim rnd As New Random
-        Dim sb As New StringBuilder
-
-        Dim hexStreng As String = ""
-
-        For i As Integer = 1 To 10 'Length of the salt
-            Dim x As Integer = rnd.Next(0, mix.Length - 1)
-            salt &= (mix.Substring(x, 1))
-            For t As Integer = 1 To 10
-                hexStreng &= t.ToString("x2")
-            Next
-        Next
-        Return hexStreng
-    End Function
-
     Function finnFdato(person_nr As String)
         Dim fdato As String
         Dim i As Integer
@@ -115,25 +93,31 @@ Public Class RegistrerForm
         LoginForm.Show()
     End Sub
 
+    Private Function lagSaltetHash(pw As String, salt As String) As String
+        Dim tmp As String = pw & salt
 
-    'Public Function Hash512(password As String, salt As String) As String
-    '    Dim convertedToBytes As Byte() = Encoding.UTF8.GetBytes(password & salt)
-    '    Dim hashType As HashAlgorithm = New SHA512Managed()
-    '    Dim hashBytes As Byte() = hashType.ComputeHash(convertedToBytes)
-    '    Dim hashedResult As String = Convert.ToBase64String(hashBytes)
-    '    Return hashedResult
-    'End Function
+        ' or SHA512Managed
+        Using hash As HashAlgorithm = New SHA256Managed()
+            ' convert pw+salt to bytes:
+            Dim saltyPW = Encoding.UTF8.GetBytes(tmp)
+            ' hash the pw+salt bytes:
+            Dim hBytes = hash.ComputeHash(saltyPW)
+            ' return a B64 string so it can be saved as text 
+            Return Convert.ToBase64String(hBytes)
+        End Using
 
-    '    Function crypt(passord As String, salt As String) As String
-    '        Dim HashObjekt = New Security.Cryptography.SHA256Managed()
-    '        Dim bytes = System.Text.Encoding.ASCII.GetBytes(passord & salt)
-    '        bytes = HashObjekt.ComputeHash(bytes)
+    End Function
 
-    '        Dim hexStreng As String = ""
-    '        For Each enByte In bytes
-    '            hexStreng &= enByte.ToString("x2")
-    '        Next
-    '        MsgBox(hexStreng)
-    '        Return hexStreng
-    '    End Function
+    Private Function lagSalt(size As Integer) As String
+        ' use the crypto random number generator to create
+        ' a new random salt 
+        Using rng As New RNGCryptoServiceProvider
+            ' dont allow very small salt
+            Dim data(If(size < 7, 7, size)) As Byte
+            ' fill the array
+            rng.GetBytes(data)
+            ' convert to B64 for saving as text
+            Return Convert.ToBase64String(data)
+        End Using
+    End Function
 End Class
