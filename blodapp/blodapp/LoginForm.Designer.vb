@@ -45,6 +45,7 @@ Partial Class LoginForm
         '
         Me.lblLoginBrukernavn.AutoSize = True
         Me.lblLoginBrukernavn.BackColor = System.Drawing.Color.Transparent
+        Me.lblLoginBrukernavn.ForeColor = System.Drawing.SystemColors.Control
         Me.lblLoginBrukernavn.Location = New System.Drawing.Point(42, 58)
         Me.lblLoginBrukernavn.Name = "lblLoginBrukernavn"
         Me.lblLoginBrukernavn.Size = New System.Drawing.Size(37, 13)
@@ -55,6 +56,7 @@ Partial Class LoginForm
         '
         Me.lblLoginPwd.AutoSize = True
         Me.lblLoginPwd.BackColor = System.Drawing.Color.Transparent
+        Me.lblLoginPwd.ForeColor = System.Drawing.SystemColors.Control
         Me.lblLoginPwd.Location = New System.Drawing.Point(31, 88)
         Me.lblLoginPwd.Name = "lblLoginPwd"
         Me.lblLoginPwd.Size = New System.Drawing.Size(48, 13)
@@ -65,6 +67,7 @@ Partial Class LoginForm
         '
         Me.llblLoginFgtPwd.AutoSize = True
         Me.llblLoginFgtPwd.BackColor = System.Drawing.Color.Transparent
+        Me.llblLoginFgtPwd.LinkColor = System.Drawing.Color.DodgerBlue
         Me.llblLoginFgtPwd.Location = New System.Drawing.Point(12, 206)
         Me.llblLoginFgtPwd.Name = "llblLoginFgtPwd"
         Me.llblLoginFgtPwd.Size = New System.Drawing.Size(80, 13)
@@ -76,6 +79,7 @@ Partial Class LoginForm
         '
         Me.llblLoginReg.AutoSize = True
         Me.llblLoginReg.BackColor = System.Drawing.Color.Transparent
+        Me.llblLoginReg.LinkColor = System.Drawing.Color.DodgerBlue
         Me.llblLoginReg.Location = New System.Drawing.Point(190, 206)
         Me.llblLoginReg.Name = "llblLoginReg"
         Me.llblLoginReg.Size = New System.Drawing.Size(70, 13)
@@ -102,8 +106,8 @@ Partial Class LoginForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.blodapp.My.Resources.Resources.silver
-        Me.ClientSize = New System.Drawing.Size(272, 242)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(281, 256)
         Me.Controls.Add(Me.txtLoginPwd)
         Me.Controls.Add(Me.txtLoginBrukernavn)
         Me.Controls.Add(Me.llblLoginReg)

@@ -14,7 +14,6 @@ C:\g25\bloodWillflow\blodapp\blodapp\bin\Debug\MySql.Data.dll
 C:\g25\bloodWillflow\blodapp\blodapp\bin\Debug\MySql.Data.xml
 C:\g25\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.vbprojResolveAssemblyReference.cache
 C:\g25\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.LoginForm.resources
-C:\g25\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.MinSide.resources
 C:\g25\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.Resources.resources
 C:\g25\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.RegistrerForm.resources
 C:\g25\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.vbproj.GenerateResource.Cache
@@ -74,3 +73,8 @@ C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\bin\Debug\
 C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\bin\Debug\blodapp.xml
 C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\bin\Debug\MySql.Data.dll
 C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\bin\Debug\MySql.Data.xml
+C:\g25\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.adminSide.resources
+C:\g25\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.brukerSide.resources
+C:\g25\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.egenerklaering.resources
+C:\g25\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.lederSide.resources
+C:\g25\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.ansattSide.resources

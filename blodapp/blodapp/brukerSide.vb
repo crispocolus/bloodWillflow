@@ -97,4 +97,6 @@ Public Class brukerSide
         Dim pros As New prosedyrer
         pros.endrePw(LoginForm.bnavn)
     End Sub
+
+
 End Class
