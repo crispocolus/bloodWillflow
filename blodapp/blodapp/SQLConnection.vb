@@ -101,11 +101,10 @@ Public Class BrukerStat
 End Class
 
 Public Class RegBruker
-    'VIRKER IKKE PR NÅ. MÅ FIKSE INSERT
-
     Public Sub sendInfo(postnr As String,
                         gtadresse As String,
                         pnummer As String,
+                        brukerstatus As String,
                         fnavn As String,
                         enavn As String,
                         epost As String,
@@ -119,8 +118,6 @@ Public Class RegBruker
         Dim connect As New SQL
         Dim oppkobling = connect.oppkobling
 
-        Dim adresse_id As String
-
         Try
             oppkobling.Open()
 
@@ -131,32 +128,19 @@ Public Class RegBruker
             sql.Parameters.AddWithValue("@post_nr", postnr)
             sql.Parameters.AddWithValue("@gtadresse", gtadresse)
 
-            adresse_id = sql.LastInsertedId
-
             Dim sqlSporring2 = "insert into bruker (person_nr, brukerstatus, fornavn, etternavn, epost, telefon, fdato, post_nr, gateadresse, hash, salt) values (" & pnummer & ", 
-                                                                                                                                                                  @brukerstatus, 
-                                                                                                                                                                  " & fnavn & ", 
-                                                                                                                                                                  " & enavn & ", 
-                                                                                                                                                                  " & epost & ", 
+                                                                                                                                                                  " & brukerstatus & ", 
+                                                                                                                                                                  '" & fnavn & "', 
+                                                                                                                                                                  '" & enavn & "', 
+                                                                                                                                                                  '" & epost & "', 
                                                                                                                                                                   " & telefon & ", 
                                                                                                                                                                   " & fdato & ", 
                                                                                                                                                                   " & postnr & ", 
-                                                                                                                                                                  " & gateadresse & ", 
-                                                                                                                                                                  " & passordHash & ", 
-                                                                                                                                                                  " & salt & "');"
+                                                                                                                                                                  '" & gateadresse & "', 
+                                                                                                                                                                  '" & passordHash & "', 
+                                                                                                                                                                  '" & salt & "');"
 
             Dim sql2 As New MySqlCommand(sqlSporring2, oppkobling)
-            'sql2.Parameters.AddWithValue("@person_nr", pnummer)
-            sql2.Parameters.AddWithValue("@brukerstatus", "0")
-            'sql2.Parameters.AddWithValue("@fornavn", fnavn)
-            'sql2.Parameters.AddWithValue("@etternavn", enavn)
-            'sql2.Parameters.AddWithValue("@epost", epost)
-            'sql2.Parameters.AddWithValue("@telefon", telefon)
-            'sql2.Parameters.AddWithValue("@fdato", fdato)
-            'sql2.Parameters.AddWithValue("@post_nr", postnr)
-            'sql2.Parameters.AddWithValue("@gateadresse", gateadresse)
-            'sql2.Parameters.AddWithValue("@hash", passordHash)
-            'sql2.Parameters.AddWithValue("@salt", salt)
 
             sql2.ExecuteNonQuery()
 

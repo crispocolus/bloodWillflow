@@ -33,10 +33,10 @@ Partial Class LoginForm
         '
         'btnLogin
         '
-        Me.btnLogin.Location = New System.Drawing.Point(92, 123)
-        Me.btnLogin.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnLogin.Location = New System.Drawing.Point(123, 151)
+        Me.btnLogin.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(100, 36)
+        Me.btnLogin.Size = New System.Drawing.Size(133, 44)
         Me.btnLogin.TabIndex = 0
         Me.btnLogin.Text = "Logg inn"
         Me.btnLogin.UseVisualStyleBackColor = True
@@ -46,9 +46,10 @@ Partial Class LoginForm
         Me.lblLoginBrukernavn.AutoSize = True
         Me.lblLoginBrukernavn.BackColor = System.Drawing.Color.Transparent
         Me.lblLoginBrukernavn.ForeColor = System.Drawing.SystemColors.Control
-        Me.lblLoginBrukernavn.Location = New System.Drawing.Point(42, 58)
+        Me.lblLoginBrukernavn.Location = New System.Drawing.Point(56, 71)
+        Me.lblLoginBrukernavn.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblLoginBrukernavn.Name = "lblLoginBrukernavn"
-        Me.lblLoginBrukernavn.Size = New System.Drawing.Size(37, 13)
+        Me.lblLoginBrukernavn.Size = New System.Drawing.Size(48, 17)
         Me.lblLoginBrukernavn.TabIndex = 1
         Me.lblLoginBrukernavn.Text = "Epost:"
         '
@@ -57,9 +58,10 @@ Partial Class LoginForm
         Me.lblLoginPwd.AutoSize = True
         Me.lblLoginPwd.BackColor = System.Drawing.Color.Transparent
         Me.lblLoginPwd.ForeColor = System.Drawing.SystemColors.Control
-        Me.lblLoginPwd.Location = New System.Drawing.Point(31, 88)
+        Me.lblLoginPwd.Location = New System.Drawing.Point(41, 108)
+        Me.lblLoginPwd.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblLoginPwd.Name = "lblLoginPwd"
-        Me.lblLoginPwd.Size = New System.Drawing.Size(48, 13)
+        Me.lblLoginPwd.Size = New System.Drawing.Size(64, 17)
         Me.lblLoginPwd.TabIndex = 2
         Me.lblLoginPwd.Text = "Passord:"
         '
@@ -68,9 +70,10 @@ Partial Class LoginForm
         Me.llblLoginFgtPwd.AutoSize = True
         Me.llblLoginFgtPwd.BackColor = System.Drawing.Color.Transparent
         Me.llblLoginFgtPwd.LinkColor = System.Drawing.Color.DodgerBlue
-        Me.llblLoginFgtPwd.Location = New System.Drawing.Point(12, 206)
+        Me.llblLoginFgtPwd.Location = New System.Drawing.Point(16, 254)
+        Me.llblLoginFgtPwd.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.llblLoginFgtPwd.Name = "llblLoginFgtPwd"
-        Me.llblLoginFgtPwd.Size = New System.Drawing.Size(80, 13)
+        Me.llblLoginFgtPwd.Size = New System.Drawing.Size(108, 17)
         Me.llblLoginFgtPwd.TabIndex = 3
         Me.llblLoginFgtPwd.TabStop = True
         Me.llblLoginFgtPwd.Text = "Glemt passord?"
@@ -80,34 +83,37 @@ Partial Class LoginForm
         Me.llblLoginReg.AutoSize = True
         Me.llblLoginReg.BackColor = System.Drawing.Color.Transparent
         Me.llblLoginReg.LinkColor = System.Drawing.Color.DodgerBlue
-        Me.llblLoginReg.Location = New System.Drawing.Point(190, 206)
+        Me.llblLoginReg.Location = New System.Drawing.Point(253, 254)
+        Me.llblLoginReg.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.llblLoginReg.Name = "llblLoginReg"
-        Me.llblLoginReg.Size = New System.Drawing.Size(70, 13)
+        Me.llblLoginReg.Size = New System.Drawing.Size(94, 17)
         Me.llblLoginReg.TabIndex = 4
         Me.llblLoginReg.TabStop = True
         Me.llblLoginReg.Text = "Registrer deg"
         '
         'txtLoginBrukernavn
         '
-        Me.txtLoginBrukernavn.Location = New System.Drawing.Point(92, 55)
+        Me.txtLoginBrukernavn.Location = New System.Drawing.Point(123, 68)
+        Me.txtLoginBrukernavn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtLoginBrukernavn.Name = "txtLoginBrukernavn"
-        Me.txtLoginBrukernavn.Size = New System.Drawing.Size(100, 20)
+        Me.txtLoginBrukernavn.Size = New System.Drawing.Size(132, 22)
         Me.txtLoginBrukernavn.TabIndex = 5
         '
         'txtLoginPwd
         '
-        Me.txtLoginPwd.Location = New System.Drawing.Point(92, 85)
+        Me.txtLoginPwd.Location = New System.Drawing.Point(123, 105)
+        Me.txtLoginPwd.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtLoginPwd.Name = "txtLoginPwd"
         Me.txtLoginPwd.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtLoginPwd.Size = New System.Drawing.Size(100, 20)
+        Me.txtLoginPwd.Size = New System.Drawing.Size(132, 22)
         Me.txtLoginPwd.TabIndex = 6
         '
         'LoginForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(281, 256)
+        Me.ClientSize = New System.Drawing.Size(375, 315)
         Me.Controls.Add(Me.txtLoginPwd)
         Me.Controls.Add(Me.txtLoginBrukernavn)
         Me.Controls.Add(Me.llblLoginReg)
@@ -115,7 +121,7 @@ Partial Class LoginForm
         Me.Controls.Add(Me.lblLoginPwd)
         Me.Controls.Add(Me.lblLoginBrukernavn)
         Me.Controls.Add(Me.btnLogin)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "LoginForm"
         Me.Text = "Logg inn"
         Me.ResumeLayout(False)

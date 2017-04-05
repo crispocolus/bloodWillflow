@@ -53,6 +53,7 @@ Public Class RegistrerForm
             Registrering.sendInfo(post_nr,
                                   adresse,
                                   pnummer,
+                                  "0",
                                   fornavn,
                                   etternavn,
                                   epost,
