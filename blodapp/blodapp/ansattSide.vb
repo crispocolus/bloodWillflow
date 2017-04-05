@@ -117,6 +117,36 @@
         info.sendInnkalling("12345678900", InputBox("Her skriver du din tekst"), InputBox("skriv inn en dato når du vil at folk skal komme"))
     End Sub
 
+    Public Sub blodInfo()
+
+        Dim info As New info
+        Dim tabell As New DataTable
+
+        Dim blodtype As String = cBoxOversikt.SelectedItem
+        Dim produkt As String = cBoxProdukt.SelectedItem
+
+
+        tabell = info.query("id", produkt, "blodtype = '" & blodtype & "';")
+
+        ListBox1.Items.Add("Det er " & ((tabell.Rows.Count) * 0.45) & " liter med " & produkt & " av typen " & blodtype)
+
+    End Sub
+
+    Private Sub CBoxProdukt_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cBoxProdukt.SelectedIndexChanged
+        ListBox1.Items.Clear()
+
+        Dim blodtype As String
+        Dim produkt As String
+
+        blodtype = cBoxOversikt.SelectedItem
+        produkt = cBoxProdukt.SelectedItem
+
+        blodInfo()
+
+
+
+    End Sub
+
 
     'Public Sub fyllKandidat(blodtype As String)
 
@@ -173,7 +203,6 @@
         LoginForm.Show()
         MsgBox("Du er nå logget ut")
     End Sub
-
 
 End Class
 
