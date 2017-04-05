@@ -161,16 +161,17 @@
         'blod_pnummer = kandidatCmb.
     End Sub
 
-    Private Sub loggutBtn_Click(sender As Object, e As EventArgs) Handles loggutBtn.Click
-        LoginForm.bnavn = ""
-        Me.Close()
-        LoginForm.Show()
-        MsgBox("Du er nå logget ut")
-    End Sub
 
     Private Sub endrePwBtn_Click(sender As Object, e As EventArgs) Handles endrePwBtn.Click
         Dim pros As New prosedyrer
         pros.endrePw(LoginForm.bnavn)
+    End Sub
+
+    Private Sub loggutBtn_Click_1(sender As Object, e As EventArgs) Handles loggutBtn.Click
+        LoginForm.bnavn = ""
+        Me.Close()
+        LoginForm.Show()
+        MsgBox("Du er nå logget ut")
     End Sub
 End Class
 

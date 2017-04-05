@@ -22,6 +22,7 @@ Partial Class lederSide
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(lederSide))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.endrePwBtn = New System.Windows.Forms.Button()
@@ -97,8 +98,8 @@ Partial Class lederSide
         Me.TabPage1.Controls.Add(Me.CBoxBlodtype)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
-        Me.TabPage1.Size = New System.Drawing.Size(582, 388)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(730, 388)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Innkalling"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -106,7 +107,7 @@ Partial Class lederSide
         'endrePwBtn
         '
         Me.endrePwBtn.Location = New System.Drawing.Point(16, 316)
-        Me.endrePwBtn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.endrePwBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.endrePwBtn.Name = "endrePwBtn"
         Me.endrePwBtn.Size = New System.Drawing.Size(95, 47)
         Me.endrePwBtn.TabIndex = 22
@@ -221,7 +222,7 @@ Partial Class lederSide
         Me.TabPage2.Controls.Add(Me.lstBestillinger)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(730, 388)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Bestillinger"
@@ -326,8 +327,8 @@ Partial Class lederSide
         Me.TabPage3.Controls.Add(Me.lstStatistikk)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
-        Me.TabPage3.Size = New System.Drawing.Size(582, 388)
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Size = New System.Drawing.Size(730, 388)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Statistikk"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -350,8 +351,8 @@ Partial Class lederSide
         Me.TabPage4.Controls.Add(Me.ComboBox1)
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
-        Me.TabPage4.Size = New System.Drawing.Size(582, 388)
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage4.Size = New System.Drawing.Size(730, 388)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Oversikt blodbank"
         Me.TabPage4.UseVisualStyleBackColor = True
@@ -409,7 +410,7 @@ Partial Class lederSide
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.PictureBox1.Image = Global.blodapp.My.Resources.Resources.testbloodflow1
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(135, 55)

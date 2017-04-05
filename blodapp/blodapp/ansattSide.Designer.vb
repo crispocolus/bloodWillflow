@@ -22,10 +22,11 @@ Partial Class ansattSide
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ansattSide))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.endrePwBtn = New System.Windows.Forms.Button()
-        Me.loggutBtn = New System.Windows.Forms.Button()
         Me.ListBox2 = New System.Windows.Forms.ListBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.btnBehov = New System.Windows.Forms.Button()
@@ -58,8 +59,10 @@ Partial Class ansattSide
         Me.Label10 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.btnLoggUt = New System.Windows.Forms.Button()
+        Me.loggutBtn = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -76,13 +79,13 @@ Partial Class ansattSide
         Me.TabControl1.Location = New System.Drawing.Point(0, 61)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(737, 416)
+        Me.TabControl1.Size = New System.Drawing.Size(739, 481)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Panel1)
         Me.TabPage1.Controls.Add(Me.endrePwBtn)
-        Me.TabPage1.Controls.Add(Me.loggutBtn)
         Me.TabPage1.Controls.Add(Me.ListBox2)
         Me.TabPage1.Controls.Add(Me.Label9)
         Me.TabPage1.Controls.Add(Me.btnBehov)
@@ -97,37 +100,36 @@ Partial Class ansattSide
         Me.TabPage1.Controls.Add(Me.CBoxBlodtype)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
-        Me.TabPage1.Size = New System.Drawing.Size(582, 390)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(731, 455)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Innkalling"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel1.Location = New System.Drawing.Point(3, 369)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(725, 83)
+        Me.Panel1.TabIndex = 24
+        '
         'endrePwBtn
         '
-        Me.endrePwBtn.Location = New System.Drawing.Point(107, 363)
-        Me.endrePwBtn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.endrePwBtn.Location = New System.Drawing.Point(11, 327)
+        Me.endrePwBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.endrePwBtn.Name = "endrePwBtn"
         Me.endrePwBtn.Size = New System.Drawing.Size(91, 19)
         Me.endrePwBtn.TabIndex = 13
         Me.endrePwBtn.Text = "Endre passord"
         Me.endrePwBtn.UseVisualStyleBackColor = True
         '
-        'loggutBtn
-        '
-        Me.loggutBtn.Location = New System.Drawing.Point(5, 363)
-        Me.loggutBtn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.loggutBtn.Name = "loggutBtn"
-        Me.loggutBtn.Size = New System.Drawing.Size(56, 19)
-        Me.loggutBtn.TabIndex = 1
-        Me.loggutBtn.Text = "Logg ut"
-        Me.loggutBtn.UseVisualStyleBackColor = True
-        '
         'ListBox2
         '
         Me.ListBox2.FormattingEnabled = True
         Me.ListBox2.Location = New System.Drawing.Point(608, 282)
-        Me.ListBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ListBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.ListBox2.Name = "ListBox2"
         Me.ListBox2.Size = New System.Drawing.Size(8, 69)
         Me.ListBox2.TabIndex = 12
@@ -226,6 +228,7 @@ Partial Class ansattSide
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.Panel3)
         Me.TabPage2.Controls.Add(Me.chkBekreft)
         Me.TabPage2.Controls.Add(Me.btnRetur)
         Me.TabPage2.Controls.Add(Me.btnSend)
@@ -239,8 +242,8 @@ Partial Class ansattSide
         Me.TabPage2.Controls.Add(Me.lstBestillinger)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
-        Me.TabPage2.Size = New System.Drawing.Size(582, 390)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(731, 455)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Bestillinger"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -341,6 +344,7 @@ Partial Class ansattSide
         '
         'TabPage3
         '
+        Me.TabPage3.Controls.Add(Me.Panel4)
         Me.TabPage3.Controls.Add(Me.ListBox1)
         Me.TabPage3.Controls.Add(Me.Label12)
         Me.TabPage3.Controls.Add(Me.Label11)
@@ -349,8 +353,8 @@ Partial Class ansattSide
         Me.TabPage3.Controls.Add(Me.ComboBox1)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
-        Me.TabPage3.Size = New System.Drawing.Size(729, 390)
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Size = New System.Drawing.Size(731, 455)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Oversikt blodbank"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -408,7 +412,7 @@ Partial Class ansattSide
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.PictureBox1.Image = Global.blodapp.My.Resources.Resources.testbloodflow1
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(135, 55)
@@ -416,31 +420,49 @@ Partial Class ansattSide
         Me.PictureBox1.TabIndex = 8
         Me.PictureBox1.TabStop = False
         '
-        'btnLoggUt
+        'loggutBtn
         '
-        Me.btnLoggUt.Location = New System.Drawing.Point(634, 12)
-        Me.btnLoggUt.Name = "btnLoggUt"
-        Me.btnLoggUt.Size = New System.Drawing.Size(103, 23)
-        Me.btnLoggUt.TabIndex = 12
-        Me.btnLoggUt.Text = "Logg ut"
-        Me.btnLoggUt.UseVisualStyleBackColor = True
+        Me.loggutBtn.Location = New System.Drawing.Point(634, 12)
+        Me.loggutBtn.Name = "loggutBtn"
+        Me.loggutBtn.Size = New System.Drawing.Size(103, 23)
+        Me.loggutBtn.TabIndex = 12
+        Me.loggutBtn.Text = "Logg ut"
+        Me.loggutBtn.UseVisualStyleBackColor = True
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Panel2.Controls.Add(Me.PictureBox1)
-        Me.Panel2.Controls.Add(Me.btnLoggUt)
+        Me.Panel2.Controls.Add(Me.loggutBtn)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(741, 55)
+        Me.Panel2.Size = New System.Drawing.Size(739, 55)
         Me.Panel2.TabIndex = 20
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel3.Location = New System.Drawing.Point(3, 347)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(725, 105)
+        Me.Panel3.TabIndex = 25
+        '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel4.Location = New System.Drawing.Point(3, 351)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(725, 101)
+        Me.Panel4.TabIndex = 25
         '
         'ansattSide
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(741, 448)
+        Me.ClientSize = New System.Drawing.Size(739, 494)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "ansattSide"
@@ -491,9 +513,11 @@ Partial Class ansattSide
     Friend WithEvents Label10 As Label
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents ListBox2 As ListBox
-    Friend WithEvents loggutBtn As Button
     Friend WithEvents endrePwBtn As Button
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents btnLoggUt As Button
+    Friend WithEvents loggutBtn As Button
     Friend WithEvents Panel2 As Panel
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Panel4 As Panel
 End Class

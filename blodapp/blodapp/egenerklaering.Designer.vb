@@ -129,6 +129,8 @@ Partial Class egenerklaering
         Me.lblEgen2Frisk = New System.Windows.Forms.Label()
         Me.lblEgen2InfoBlod = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.RadioButton29 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton30 = New System.Windows.Forms.RadioButton()
         Me.RadioButton7 = New System.Windows.Forms.RadioButton()
         Me.RadioButton8 = New System.Windows.Forms.RadioButton()
         Me.RadioButton5 = New System.Windows.Forms.RadioButton()
@@ -241,6 +243,22 @@ Partial Class egenerklaering
         Me.Label48 = New System.Windows.Forms.Label()
         Me.Label85 = New System.Windows.Forms.Label()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.RadioButton59 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton60 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton57 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton58 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton55 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton56 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton53 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton54 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton51 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton52 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton49 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton50 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton47 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton48 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton45 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton46 = New System.Windows.Forms.RadioButton()
         Me.RadioButton43 = New System.Windows.Forms.RadioButton()
         Me.RadioButton44 = New System.Windows.Forms.RadioButton()
         Me.RadioButton42 = New System.Windows.Forms.RadioButton()
@@ -290,6 +308,16 @@ Partial Class egenerklaering
         Me.Label71 = New System.Windows.Forms.Label()
         Me.Label70 = New System.Windows.Forms.Label()
         Me.TabPage6 = New System.Windows.Forms.TabPage()
+        Me.RadioButton71 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton72 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton69 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton70 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton67 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton68 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton65 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton66 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton63 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton64 = New System.Windows.Forms.RadioButton()
         Me.Label147 = New System.Windows.Forms.Label()
         Me.Label146 = New System.Windows.Forms.Label()
         Me.Label144 = New System.Windows.Forms.Label()
@@ -309,34 +337,6 @@ Partial Class egenerklaering
         Me.Label132 = New System.Windows.Forms.Label()
         Me.Label129 = New System.Windows.Forms.Label()
         Me.Label130 = New System.Windows.Forms.Label()
-        Me.RadioButton45 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton46 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton47 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton48 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton49 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton50 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton51 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton52 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton53 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton54 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton55 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton56 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton57 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton58 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton59 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton60 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton63 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton64 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton65 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton66 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton67 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton68 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton69 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton70 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton71 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton72 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton29 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton30 = New System.Windows.Forms.RadioButton()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -391,7 +391,7 @@ Partial Class egenerklaering
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(577, 705)
         Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "TabPage1"
+        Me.TabPage1.Text = "Personinfo"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
         'btnEgenNext
@@ -691,7 +691,7 @@ Partial Class egenerklaering
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(577, 705)
         Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "TabPage2"
+        Me.TabPage2.Text = "Side 1"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
         'Label4
@@ -1532,8 +1532,30 @@ Partial Class egenerklaering
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage3.Size = New System.Drawing.Size(577, 705)
         Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "TabPage3"
+        Me.TabPage3.Text = "Side 2"
         Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'RadioButton29
+        '
+        Me.RadioButton29.AutoSize = True
+        Me.RadioButton29.Location = New System.Drawing.Point(497, 49)
+        Me.RadioButton29.Name = "RadioButton29"
+        Me.RadioButton29.Size = New System.Drawing.Size(41, 17)
+        Me.RadioButton29.TabIndex = 114
+        Me.RadioButton29.TabStop = True
+        Me.RadioButton29.Text = "Nei"
+        Me.RadioButton29.UseVisualStyleBackColor = True
+        '
+        'RadioButton30
+        '
+        Me.RadioButton30.AutoSize = True
+        Me.RadioButton30.Location = New System.Drawing.Point(455, 49)
+        Me.RadioButton30.Name = "RadioButton30"
+        Me.RadioButton30.Size = New System.Drawing.Size(36, 17)
+        Me.RadioButton30.TabIndex = 113
+        Me.RadioButton30.TabStop = True
+        Me.RadioButton30.Text = "Ja"
+        Me.RadioButton30.UseVisualStyleBackColor = True
         '
         'RadioButton7
         '
@@ -2220,7 +2242,7 @@ Partial Class egenerklaering
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage4.Size = New System.Drawing.Size(577, 705)
         Me.TabPage4.TabIndex = 3
-        Me.TabPage4.Text = "TabPage4"
+        Me.TabPage4.Text = "Side 3"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
         'RadioButton27
@@ -2739,8 +2761,184 @@ Partial Class egenerklaering
         Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage5.Size = New System.Drawing.Size(577, 705)
         Me.TabPage5.TabIndex = 4
-        Me.TabPage5.Text = "TabPage5"
+        Me.TabPage5.Text = "Side 4"
         Me.TabPage5.UseVisualStyleBackColor = True
+        '
+        'RadioButton59
+        '
+        Me.RadioButton59.AutoSize = True
+        Me.RadioButton59.Location = New System.Drawing.Point(299, 565)
+        Me.RadioButton59.Name = "RadioButton59"
+        Me.RadioButton59.Size = New System.Drawing.Size(41, 17)
+        Me.RadioButton59.TabIndex = 136
+        Me.RadioButton59.TabStop = True
+        Me.RadioButton59.Text = "Nei"
+        Me.RadioButton59.UseVisualStyleBackColor = True
+        '
+        'RadioButton60
+        '
+        Me.RadioButton60.AutoSize = True
+        Me.RadioButton60.Location = New System.Drawing.Point(257, 565)
+        Me.RadioButton60.Name = "RadioButton60"
+        Me.RadioButton60.Size = New System.Drawing.Size(36, 17)
+        Me.RadioButton60.TabIndex = 135
+        Me.RadioButton60.TabStop = True
+        Me.RadioButton60.Text = "Ja"
+        Me.RadioButton60.UseVisualStyleBackColor = True
+        '
+        'RadioButton57
+        '
+        Me.RadioButton57.AutoSize = True
+        Me.RadioButton57.Location = New System.Drawing.Point(299, 524)
+        Me.RadioButton57.Name = "RadioButton57"
+        Me.RadioButton57.Size = New System.Drawing.Size(41, 17)
+        Me.RadioButton57.TabIndex = 134
+        Me.RadioButton57.TabStop = True
+        Me.RadioButton57.Text = "Nei"
+        Me.RadioButton57.UseVisualStyleBackColor = True
+        '
+        'RadioButton58
+        '
+        Me.RadioButton58.AutoSize = True
+        Me.RadioButton58.Location = New System.Drawing.Point(257, 524)
+        Me.RadioButton58.Name = "RadioButton58"
+        Me.RadioButton58.Size = New System.Drawing.Size(36, 17)
+        Me.RadioButton58.TabIndex = 133
+        Me.RadioButton58.TabStop = True
+        Me.RadioButton58.Text = "Ja"
+        Me.RadioButton58.UseVisualStyleBackColor = True
+        '
+        'RadioButton55
+        '
+        Me.RadioButton55.AutoSize = True
+        Me.RadioButton55.Location = New System.Drawing.Point(299, 483)
+        Me.RadioButton55.Name = "RadioButton55"
+        Me.RadioButton55.Size = New System.Drawing.Size(41, 17)
+        Me.RadioButton55.TabIndex = 132
+        Me.RadioButton55.TabStop = True
+        Me.RadioButton55.Text = "Nei"
+        Me.RadioButton55.UseVisualStyleBackColor = True
+        '
+        'RadioButton56
+        '
+        Me.RadioButton56.AutoSize = True
+        Me.RadioButton56.Location = New System.Drawing.Point(257, 483)
+        Me.RadioButton56.Name = "RadioButton56"
+        Me.RadioButton56.Size = New System.Drawing.Size(36, 17)
+        Me.RadioButton56.TabIndex = 131
+        Me.RadioButton56.TabStop = True
+        Me.RadioButton56.Text = "Ja"
+        Me.RadioButton56.UseVisualStyleBackColor = True
+        '
+        'RadioButton53
+        '
+        Me.RadioButton53.AutoSize = True
+        Me.RadioButton53.Location = New System.Drawing.Point(299, 447)
+        Me.RadioButton53.Name = "RadioButton53"
+        Me.RadioButton53.Size = New System.Drawing.Size(41, 17)
+        Me.RadioButton53.TabIndex = 130
+        Me.RadioButton53.TabStop = True
+        Me.RadioButton53.Text = "Nei"
+        Me.RadioButton53.UseVisualStyleBackColor = True
+        '
+        'RadioButton54
+        '
+        Me.RadioButton54.AutoSize = True
+        Me.RadioButton54.Location = New System.Drawing.Point(257, 447)
+        Me.RadioButton54.Name = "RadioButton54"
+        Me.RadioButton54.Size = New System.Drawing.Size(36, 17)
+        Me.RadioButton54.TabIndex = 129
+        Me.RadioButton54.TabStop = True
+        Me.RadioButton54.Text = "Ja"
+        Me.RadioButton54.UseVisualStyleBackColor = True
+        '
+        'RadioButton51
+        '
+        Me.RadioButton51.AutoSize = True
+        Me.RadioButton51.Location = New System.Drawing.Point(299, 412)
+        Me.RadioButton51.Name = "RadioButton51"
+        Me.RadioButton51.Size = New System.Drawing.Size(41, 17)
+        Me.RadioButton51.TabIndex = 128
+        Me.RadioButton51.TabStop = True
+        Me.RadioButton51.Text = "Nei"
+        Me.RadioButton51.UseVisualStyleBackColor = True
+        '
+        'RadioButton52
+        '
+        Me.RadioButton52.AutoSize = True
+        Me.RadioButton52.Location = New System.Drawing.Point(257, 412)
+        Me.RadioButton52.Name = "RadioButton52"
+        Me.RadioButton52.Size = New System.Drawing.Size(36, 17)
+        Me.RadioButton52.TabIndex = 127
+        Me.RadioButton52.TabStop = True
+        Me.RadioButton52.Text = "Ja"
+        Me.RadioButton52.UseVisualStyleBackColor = True
+        '
+        'RadioButton49
+        '
+        Me.RadioButton49.AutoSize = True
+        Me.RadioButton49.Location = New System.Drawing.Point(299, 378)
+        Me.RadioButton49.Name = "RadioButton49"
+        Me.RadioButton49.Size = New System.Drawing.Size(41, 17)
+        Me.RadioButton49.TabIndex = 126
+        Me.RadioButton49.TabStop = True
+        Me.RadioButton49.Text = "Nei"
+        Me.RadioButton49.UseVisualStyleBackColor = True
+        '
+        'RadioButton50
+        '
+        Me.RadioButton50.AutoSize = True
+        Me.RadioButton50.Location = New System.Drawing.Point(257, 378)
+        Me.RadioButton50.Name = "RadioButton50"
+        Me.RadioButton50.Size = New System.Drawing.Size(36, 17)
+        Me.RadioButton50.TabIndex = 125
+        Me.RadioButton50.TabStop = True
+        Me.RadioButton50.Text = "Ja"
+        Me.RadioButton50.UseVisualStyleBackColor = True
+        '
+        'RadioButton47
+        '
+        Me.RadioButton47.AutoSize = True
+        Me.RadioButton47.Location = New System.Drawing.Point(299, 343)
+        Me.RadioButton47.Name = "RadioButton47"
+        Me.RadioButton47.Size = New System.Drawing.Size(41, 17)
+        Me.RadioButton47.TabIndex = 124
+        Me.RadioButton47.TabStop = True
+        Me.RadioButton47.Text = "Nei"
+        Me.RadioButton47.UseVisualStyleBackColor = True
+        '
+        'RadioButton48
+        '
+        Me.RadioButton48.AutoSize = True
+        Me.RadioButton48.Location = New System.Drawing.Point(257, 343)
+        Me.RadioButton48.Name = "RadioButton48"
+        Me.RadioButton48.Size = New System.Drawing.Size(36, 17)
+        Me.RadioButton48.TabIndex = 123
+        Me.RadioButton48.TabStop = True
+        Me.RadioButton48.Text = "Ja"
+        Me.RadioButton48.UseVisualStyleBackColor = True
+        '
+        'RadioButton45
+        '
+        Me.RadioButton45.AutoSize = True
+        Me.RadioButton45.Location = New System.Drawing.Point(299, 303)
+        Me.RadioButton45.Name = "RadioButton45"
+        Me.RadioButton45.Size = New System.Drawing.Size(41, 17)
+        Me.RadioButton45.TabIndex = 122
+        Me.RadioButton45.TabStop = True
+        Me.RadioButton45.Text = "Nei"
+        Me.RadioButton45.UseVisualStyleBackColor = True
+        '
+        'RadioButton46
+        '
+        Me.RadioButton46.AutoSize = True
+        Me.RadioButton46.Location = New System.Drawing.Point(257, 303)
+        Me.RadioButton46.Name = "RadioButton46"
+        Me.RadioButton46.Size = New System.Drawing.Size(36, 17)
+        Me.RadioButton46.TabIndex = 121
+        Me.RadioButton46.TabStop = True
+        Me.RadioButton46.Text = "Ja"
+        Me.RadioButton46.UseVisualStyleBackColor = True
         '
         'RadioButton43
         '
@@ -3224,8 +3422,118 @@ Partial Class egenerklaering
         Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage6.Size = New System.Drawing.Size(577, 705)
         Me.TabPage6.TabIndex = 5
-        Me.TabPage6.Text = "TabPage6"
+        Me.TabPage6.Text = "Side 5"
         Me.TabPage6.UseVisualStyleBackColor = True
+        '
+        'RadioButton71
+        '
+        Me.RadioButton71.AutoSize = True
+        Me.RadioButton71.Location = New System.Drawing.Point(303, 333)
+        Me.RadioButton71.Name = "RadioButton71"
+        Me.RadioButton71.Size = New System.Drawing.Size(41, 17)
+        Me.RadioButton71.TabIndex = 118
+        Me.RadioButton71.TabStop = True
+        Me.RadioButton71.Text = "Nei"
+        Me.RadioButton71.UseVisualStyleBackColor = True
+        '
+        'RadioButton72
+        '
+        Me.RadioButton72.AutoSize = True
+        Me.RadioButton72.Location = New System.Drawing.Point(261, 333)
+        Me.RadioButton72.Name = "RadioButton72"
+        Me.RadioButton72.Size = New System.Drawing.Size(36, 17)
+        Me.RadioButton72.TabIndex = 117
+        Me.RadioButton72.TabStop = True
+        Me.RadioButton72.Text = "Ja"
+        Me.RadioButton72.UseVisualStyleBackColor = True
+        '
+        'RadioButton69
+        '
+        Me.RadioButton69.AutoSize = True
+        Me.RadioButton69.Location = New System.Drawing.Point(303, 198)
+        Me.RadioButton69.Name = "RadioButton69"
+        Me.RadioButton69.Size = New System.Drawing.Size(41, 17)
+        Me.RadioButton69.TabIndex = 116
+        Me.RadioButton69.TabStop = True
+        Me.RadioButton69.Text = "Nei"
+        Me.RadioButton69.UseVisualStyleBackColor = True
+        '
+        'RadioButton70
+        '
+        Me.RadioButton70.AutoSize = True
+        Me.RadioButton70.Location = New System.Drawing.Point(261, 198)
+        Me.RadioButton70.Name = "RadioButton70"
+        Me.RadioButton70.Size = New System.Drawing.Size(36, 17)
+        Me.RadioButton70.TabIndex = 115
+        Me.RadioButton70.TabStop = True
+        Me.RadioButton70.Text = "Ja"
+        Me.RadioButton70.UseVisualStyleBackColor = True
+        '
+        'RadioButton67
+        '
+        Me.RadioButton67.AutoSize = True
+        Me.RadioButton67.Location = New System.Drawing.Point(303, 135)
+        Me.RadioButton67.Name = "RadioButton67"
+        Me.RadioButton67.Size = New System.Drawing.Size(41, 17)
+        Me.RadioButton67.TabIndex = 114
+        Me.RadioButton67.TabStop = True
+        Me.RadioButton67.Text = "Nei"
+        Me.RadioButton67.UseVisualStyleBackColor = True
+        '
+        'RadioButton68
+        '
+        Me.RadioButton68.AutoSize = True
+        Me.RadioButton68.Location = New System.Drawing.Point(261, 135)
+        Me.RadioButton68.Name = "RadioButton68"
+        Me.RadioButton68.Size = New System.Drawing.Size(36, 17)
+        Me.RadioButton68.TabIndex = 113
+        Me.RadioButton68.TabStop = True
+        Me.RadioButton68.Text = "Ja"
+        Me.RadioButton68.UseVisualStyleBackColor = True
+        '
+        'RadioButton65
+        '
+        Me.RadioButton65.AutoSize = True
+        Me.RadioButton65.Location = New System.Drawing.Point(303, 90)
+        Me.RadioButton65.Name = "RadioButton65"
+        Me.RadioButton65.Size = New System.Drawing.Size(41, 17)
+        Me.RadioButton65.TabIndex = 112
+        Me.RadioButton65.TabStop = True
+        Me.RadioButton65.Text = "Nei"
+        Me.RadioButton65.UseVisualStyleBackColor = True
+        '
+        'RadioButton66
+        '
+        Me.RadioButton66.AutoSize = True
+        Me.RadioButton66.Location = New System.Drawing.Point(261, 90)
+        Me.RadioButton66.Name = "RadioButton66"
+        Me.RadioButton66.Size = New System.Drawing.Size(36, 17)
+        Me.RadioButton66.TabIndex = 111
+        Me.RadioButton66.TabStop = True
+        Me.RadioButton66.Text = "Ja"
+        Me.RadioButton66.UseVisualStyleBackColor = True
+        '
+        'RadioButton63
+        '
+        Me.RadioButton63.AutoSize = True
+        Me.RadioButton63.Location = New System.Drawing.Point(303, 49)
+        Me.RadioButton63.Name = "RadioButton63"
+        Me.RadioButton63.Size = New System.Drawing.Size(41, 17)
+        Me.RadioButton63.TabIndex = 110
+        Me.RadioButton63.TabStop = True
+        Me.RadioButton63.Text = "Nei"
+        Me.RadioButton63.UseVisualStyleBackColor = True
+        '
+        'RadioButton64
+        '
+        Me.RadioButton64.AutoSize = True
+        Me.RadioButton64.Location = New System.Drawing.Point(261, 49)
+        Me.RadioButton64.Name = "RadioButton64"
+        Me.RadioButton64.Size = New System.Drawing.Size(36, 17)
+        Me.RadioButton64.TabIndex = 109
+        Me.RadioButton64.TabStop = True
+        Me.RadioButton64.Text = "Ja"
+        Me.RadioButton64.UseVisualStyleBackColor = True
         '
         'Label147
         '
@@ -3397,314 +3705,6 @@ Partial Class egenerklaering
         Me.Label130.Size = New System.Drawing.Size(107, 13)
         Me.Label130.TabIndex = 81
         Me.Label130.Text = "Besvares av kvinner:"
-        '
-        'RadioButton45
-        '
-        Me.RadioButton45.AutoSize = True
-        Me.RadioButton45.Location = New System.Drawing.Point(299, 303)
-        Me.RadioButton45.Name = "RadioButton45"
-        Me.RadioButton45.Size = New System.Drawing.Size(41, 17)
-        Me.RadioButton45.TabIndex = 122
-        Me.RadioButton45.TabStop = True
-        Me.RadioButton45.Text = "Nei"
-        Me.RadioButton45.UseVisualStyleBackColor = True
-        '
-        'RadioButton46
-        '
-        Me.RadioButton46.AutoSize = True
-        Me.RadioButton46.Location = New System.Drawing.Point(257, 303)
-        Me.RadioButton46.Name = "RadioButton46"
-        Me.RadioButton46.Size = New System.Drawing.Size(36, 17)
-        Me.RadioButton46.TabIndex = 121
-        Me.RadioButton46.TabStop = True
-        Me.RadioButton46.Text = "Ja"
-        Me.RadioButton46.UseVisualStyleBackColor = True
-        '
-        'RadioButton47
-        '
-        Me.RadioButton47.AutoSize = True
-        Me.RadioButton47.Location = New System.Drawing.Point(299, 343)
-        Me.RadioButton47.Name = "RadioButton47"
-        Me.RadioButton47.Size = New System.Drawing.Size(41, 17)
-        Me.RadioButton47.TabIndex = 124
-        Me.RadioButton47.TabStop = True
-        Me.RadioButton47.Text = "Nei"
-        Me.RadioButton47.UseVisualStyleBackColor = True
-        '
-        'RadioButton48
-        '
-        Me.RadioButton48.AutoSize = True
-        Me.RadioButton48.Location = New System.Drawing.Point(257, 343)
-        Me.RadioButton48.Name = "RadioButton48"
-        Me.RadioButton48.Size = New System.Drawing.Size(36, 17)
-        Me.RadioButton48.TabIndex = 123
-        Me.RadioButton48.TabStop = True
-        Me.RadioButton48.Text = "Ja"
-        Me.RadioButton48.UseVisualStyleBackColor = True
-        '
-        'RadioButton49
-        '
-        Me.RadioButton49.AutoSize = True
-        Me.RadioButton49.Location = New System.Drawing.Point(299, 378)
-        Me.RadioButton49.Name = "RadioButton49"
-        Me.RadioButton49.Size = New System.Drawing.Size(41, 17)
-        Me.RadioButton49.TabIndex = 126
-        Me.RadioButton49.TabStop = True
-        Me.RadioButton49.Text = "Nei"
-        Me.RadioButton49.UseVisualStyleBackColor = True
-        '
-        'RadioButton50
-        '
-        Me.RadioButton50.AutoSize = True
-        Me.RadioButton50.Location = New System.Drawing.Point(257, 378)
-        Me.RadioButton50.Name = "RadioButton50"
-        Me.RadioButton50.Size = New System.Drawing.Size(36, 17)
-        Me.RadioButton50.TabIndex = 125
-        Me.RadioButton50.TabStop = True
-        Me.RadioButton50.Text = "Ja"
-        Me.RadioButton50.UseVisualStyleBackColor = True
-        '
-        'RadioButton51
-        '
-        Me.RadioButton51.AutoSize = True
-        Me.RadioButton51.Location = New System.Drawing.Point(299, 412)
-        Me.RadioButton51.Name = "RadioButton51"
-        Me.RadioButton51.Size = New System.Drawing.Size(41, 17)
-        Me.RadioButton51.TabIndex = 128
-        Me.RadioButton51.TabStop = True
-        Me.RadioButton51.Text = "Nei"
-        Me.RadioButton51.UseVisualStyleBackColor = True
-        '
-        'RadioButton52
-        '
-        Me.RadioButton52.AutoSize = True
-        Me.RadioButton52.Location = New System.Drawing.Point(257, 412)
-        Me.RadioButton52.Name = "RadioButton52"
-        Me.RadioButton52.Size = New System.Drawing.Size(36, 17)
-        Me.RadioButton52.TabIndex = 127
-        Me.RadioButton52.TabStop = True
-        Me.RadioButton52.Text = "Ja"
-        Me.RadioButton52.UseVisualStyleBackColor = True
-        '
-        'RadioButton53
-        '
-        Me.RadioButton53.AutoSize = True
-        Me.RadioButton53.Location = New System.Drawing.Point(299, 447)
-        Me.RadioButton53.Name = "RadioButton53"
-        Me.RadioButton53.Size = New System.Drawing.Size(41, 17)
-        Me.RadioButton53.TabIndex = 130
-        Me.RadioButton53.TabStop = True
-        Me.RadioButton53.Text = "Nei"
-        Me.RadioButton53.UseVisualStyleBackColor = True
-        '
-        'RadioButton54
-        '
-        Me.RadioButton54.AutoSize = True
-        Me.RadioButton54.Location = New System.Drawing.Point(257, 447)
-        Me.RadioButton54.Name = "RadioButton54"
-        Me.RadioButton54.Size = New System.Drawing.Size(36, 17)
-        Me.RadioButton54.TabIndex = 129
-        Me.RadioButton54.TabStop = True
-        Me.RadioButton54.Text = "Ja"
-        Me.RadioButton54.UseVisualStyleBackColor = True
-        '
-        'RadioButton55
-        '
-        Me.RadioButton55.AutoSize = True
-        Me.RadioButton55.Location = New System.Drawing.Point(299, 483)
-        Me.RadioButton55.Name = "RadioButton55"
-        Me.RadioButton55.Size = New System.Drawing.Size(41, 17)
-        Me.RadioButton55.TabIndex = 132
-        Me.RadioButton55.TabStop = True
-        Me.RadioButton55.Text = "Nei"
-        Me.RadioButton55.UseVisualStyleBackColor = True
-        '
-        'RadioButton56
-        '
-        Me.RadioButton56.AutoSize = True
-        Me.RadioButton56.Location = New System.Drawing.Point(257, 483)
-        Me.RadioButton56.Name = "RadioButton56"
-        Me.RadioButton56.Size = New System.Drawing.Size(36, 17)
-        Me.RadioButton56.TabIndex = 131
-        Me.RadioButton56.TabStop = True
-        Me.RadioButton56.Text = "Ja"
-        Me.RadioButton56.UseVisualStyleBackColor = True
-        '
-        'RadioButton57
-        '
-        Me.RadioButton57.AutoSize = True
-        Me.RadioButton57.Location = New System.Drawing.Point(299, 524)
-        Me.RadioButton57.Name = "RadioButton57"
-        Me.RadioButton57.Size = New System.Drawing.Size(41, 17)
-        Me.RadioButton57.TabIndex = 134
-        Me.RadioButton57.TabStop = True
-        Me.RadioButton57.Text = "Nei"
-        Me.RadioButton57.UseVisualStyleBackColor = True
-        '
-        'RadioButton58
-        '
-        Me.RadioButton58.AutoSize = True
-        Me.RadioButton58.Location = New System.Drawing.Point(257, 524)
-        Me.RadioButton58.Name = "RadioButton58"
-        Me.RadioButton58.Size = New System.Drawing.Size(36, 17)
-        Me.RadioButton58.TabIndex = 133
-        Me.RadioButton58.TabStop = True
-        Me.RadioButton58.Text = "Ja"
-        Me.RadioButton58.UseVisualStyleBackColor = True
-        '
-        'RadioButton59
-        '
-        Me.RadioButton59.AutoSize = True
-        Me.RadioButton59.Location = New System.Drawing.Point(299, 565)
-        Me.RadioButton59.Name = "RadioButton59"
-        Me.RadioButton59.Size = New System.Drawing.Size(41, 17)
-        Me.RadioButton59.TabIndex = 136
-        Me.RadioButton59.TabStop = True
-        Me.RadioButton59.Text = "Nei"
-        Me.RadioButton59.UseVisualStyleBackColor = True
-        '
-        'RadioButton60
-        '
-        Me.RadioButton60.AutoSize = True
-        Me.RadioButton60.Location = New System.Drawing.Point(257, 565)
-        Me.RadioButton60.Name = "RadioButton60"
-        Me.RadioButton60.Size = New System.Drawing.Size(36, 17)
-        Me.RadioButton60.TabIndex = 135
-        Me.RadioButton60.TabStop = True
-        Me.RadioButton60.Text = "Ja"
-        Me.RadioButton60.UseVisualStyleBackColor = True
-        '
-        'RadioButton63
-        '
-        Me.RadioButton63.AutoSize = True
-        Me.RadioButton63.Location = New System.Drawing.Point(303, 49)
-        Me.RadioButton63.Name = "RadioButton63"
-        Me.RadioButton63.Size = New System.Drawing.Size(41, 17)
-        Me.RadioButton63.TabIndex = 110
-        Me.RadioButton63.TabStop = True
-        Me.RadioButton63.Text = "Nei"
-        Me.RadioButton63.UseVisualStyleBackColor = True
-        '
-        'RadioButton64
-        '
-        Me.RadioButton64.AutoSize = True
-        Me.RadioButton64.Location = New System.Drawing.Point(261, 49)
-        Me.RadioButton64.Name = "RadioButton64"
-        Me.RadioButton64.Size = New System.Drawing.Size(36, 17)
-        Me.RadioButton64.TabIndex = 109
-        Me.RadioButton64.TabStop = True
-        Me.RadioButton64.Text = "Ja"
-        Me.RadioButton64.UseVisualStyleBackColor = True
-        '
-        'RadioButton65
-        '
-        Me.RadioButton65.AutoSize = True
-        Me.RadioButton65.Location = New System.Drawing.Point(303, 90)
-        Me.RadioButton65.Name = "RadioButton65"
-        Me.RadioButton65.Size = New System.Drawing.Size(41, 17)
-        Me.RadioButton65.TabIndex = 112
-        Me.RadioButton65.TabStop = True
-        Me.RadioButton65.Text = "Nei"
-        Me.RadioButton65.UseVisualStyleBackColor = True
-        '
-        'RadioButton66
-        '
-        Me.RadioButton66.AutoSize = True
-        Me.RadioButton66.Location = New System.Drawing.Point(261, 90)
-        Me.RadioButton66.Name = "RadioButton66"
-        Me.RadioButton66.Size = New System.Drawing.Size(36, 17)
-        Me.RadioButton66.TabIndex = 111
-        Me.RadioButton66.TabStop = True
-        Me.RadioButton66.Text = "Ja"
-        Me.RadioButton66.UseVisualStyleBackColor = True
-        '
-        'RadioButton67
-        '
-        Me.RadioButton67.AutoSize = True
-        Me.RadioButton67.Location = New System.Drawing.Point(303, 135)
-        Me.RadioButton67.Name = "RadioButton67"
-        Me.RadioButton67.Size = New System.Drawing.Size(41, 17)
-        Me.RadioButton67.TabIndex = 114
-        Me.RadioButton67.TabStop = True
-        Me.RadioButton67.Text = "Nei"
-        Me.RadioButton67.UseVisualStyleBackColor = True
-        '
-        'RadioButton68
-        '
-        Me.RadioButton68.AutoSize = True
-        Me.RadioButton68.Location = New System.Drawing.Point(261, 135)
-        Me.RadioButton68.Name = "RadioButton68"
-        Me.RadioButton68.Size = New System.Drawing.Size(36, 17)
-        Me.RadioButton68.TabIndex = 113
-        Me.RadioButton68.TabStop = True
-        Me.RadioButton68.Text = "Ja"
-        Me.RadioButton68.UseVisualStyleBackColor = True
-        '
-        'RadioButton69
-        '
-        Me.RadioButton69.AutoSize = True
-        Me.RadioButton69.Location = New System.Drawing.Point(303, 198)
-        Me.RadioButton69.Name = "RadioButton69"
-        Me.RadioButton69.Size = New System.Drawing.Size(41, 17)
-        Me.RadioButton69.TabIndex = 116
-        Me.RadioButton69.TabStop = True
-        Me.RadioButton69.Text = "Nei"
-        Me.RadioButton69.UseVisualStyleBackColor = True
-        '
-        'RadioButton70
-        '
-        Me.RadioButton70.AutoSize = True
-        Me.RadioButton70.Location = New System.Drawing.Point(261, 198)
-        Me.RadioButton70.Name = "RadioButton70"
-        Me.RadioButton70.Size = New System.Drawing.Size(36, 17)
-        Me.RadioButton70.TabIndex = 115
-        Me.RadioButton70.TabStop = True
-        Me.RadioButton70.Text = "Ja"
-        Me.RadioButton70.UseVisualStyleBackColor = True
-        '
-        'RadioButton71
-        '
-        Me.RadioButton71.AutoSize = True
-        Me.RadioButton71.Location = New System.Drawing.Point(303, 333)
-        Me.RadioButton71.Name = "RadioButton71"
-        Me.RadioButton71.Size = New System.Drawing.Size(41, 17)
-        Me.RadioButton71.TabIndex = 118
-        Me.RadioButton71.TabStop = True
-        Me.RadioButton71.Text = "Nei"
-        Me.RadioButton71.UseVisualStyleBackColor = True
-        '
-        'RadioButton72
-        '
-        Me.RadioButton72.AutoSize = True
-        Me.RadioButton72.Location = New System.Drawing.Point(261, 333)
-        Me.RadioButton72.Name = "RadioButton72"
-        Me.RadioButton72.Size = New System.Drawing.Size(36, 17)
-        Me.RadioButton72.TabIndex = 117
-        Me.RadioButton72.TabStop = True
-        Me.RadioButton72.Text = "Ja"
-        Me.RadioButton72.UseVisualStyleBackColor = True
-        '
-        'RadioButton29
-        '
-        Me.RadioButton29.AutoSize = True
-        Me.RadioButton29.Location = New System.Drawing.Point(497, 49)
-        Me.RadioButton29.Name = "RadioButton29"
-        Me.RadioButton29.Size = New System.Drawing.Size(41, 17)
-        Me.RadioButton29.TabIndex = 114
-        Me.RadioButton29.TabStop = True
-        Me.RadioButton29.Text = "Nei"
-        Me.RadioButton29.UseVisualStyleBackColor = True
-        '
-        'RadioButton30
-        '
-        Me.RadioButton30.AutoSize = True
-        Me.RadioButton30.Location = New System.Drawing.Point(455, 49)
-        Me.RadioButton30.Name = "RadioButton30"
-        Me.RadioButton30.Size = New System.Drawing.Size(36, 17)
-        Me.RadioButton30.TabIndex = 113
-        Me.RadioButton30.TabStop = True
-        Me.RadioButton30.Text = "Ja"
-        Me.RadioButton30.UseVisualStyleBackColor = True
         '
         'egenerklaering
         '

@@ -22,8 +22,10 @@ Partial Class adminSide
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(adminSide))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.endrePwBtn = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.sokSpesCmb = New System.Windows.Forms.ComboBox()
@@ -63,14 +65,14 @@ Partial Class adminSide
         Me.etternavnTxt = New System.Windows.Forms.TextBox()
         Me.fornavnTxt = New System.Windows.Forms.TextBox()
         Me.epostTxt = New System.Windows.Forms.TextBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnLoggUt = New System.Windows.Forms.Button()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -85,6 +87,7 @@ Partial Class adminSide
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Panel1)
         Me.TabPage1.Controls.Add(Me.endrePwBtn)
         Me.TabPage1.Controls.Add(Me.Label6)
         Me.TabPage1.Controls.Add(Me.sokSpesCmb)
@@ -102,16 +105,25 @@ Partial Class adminSide
         Me.TabPage1.Controls.Add(Me.btnSokBruker)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(729, 390)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Brukeradministrasjon"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel1.Location = New System.Drawing.Point(3, 304)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(723, 83)
+        Me.Panel1.TabIndex = 23
+        '
         'endrePwBtn
         '
-        Me.endrePwBtn.Location = New System.Drawing.Point(271, 266)
-        Me.endrePwBtn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.endrePwBtn.Location = New System.Drawing.Point(229, 234)
+        Me.endrePwBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.endrePwBtn.Name = "endrePwBtn"
         Me.endrePwBtn.Size = New System.Drawing.Size(90, 33)
         Me.endrePwBtn.TabIndex = 22
@@ -133,7 +145,7 @@ Partial Class adminSide
         Me.sokSpesCmb.FormattingEnabled = True
         Me.sokSpesCmb.Items.AddRange(New Object() {"fornavn", "etternavn", "e-post"})
         Me.sokSpesCmb.Location = New System.Drawing.Point(65, 215)
-        Me.sokSpesCmb.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.sokSpesCmb.Margin = New System.Windows.Forms.Padding(2)
         Me.sokSpesCmb.Name = "sokSpesCmb"
         Me.sokSpesCmb.Size = New System.Drawing.Size(92, 21)
         Me.sokSpesCmb.TabIndex = 20
@@ -271,8 +283,8 @@ Partial Class adminSide
         Me.TabPage2.Controls.Add(Me.epostTxt)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
-        Me.TabPage2.Size = New System.Drawing.Size(399, 381)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(729, 390)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Legg til ny bruker"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -292,7 +304,7 @@ Partial Class adminSide
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Items.AddRange(New Object() {"blodgiver", "ansatt", "leder", "admin"})
         Me.ComboBox2.Location = New System.Drawing.Point(169, 225)
-        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(92, 21)
         Me.ComboBox2.TabIndex = 52
@@ -466,10 +478,21 @@ Partial Class adminSide
         Me.epostTxt.Size = New System.Drawing.Size(100, 20)
         Me.epostTxt.TabIndex = 27
         '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.PictureBox1)
+        Me.Panel2.Controls.Add(Me.btnLoggUt)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(739, 55)
+        Me.Panel2.TabIndex = 20
+        '
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.PictureBox1.Image = Global.blodapp.My.Resources.Resources.testbloodflow1
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(135, 55)
@@ -486,22 +509,11 @@ Partial Class adminSide
         Me.btnLoggUt.Text = "Logg ut"
         Me.btnLoggUt.UseVisualStyleBackColor = True
         '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.PictureBox1)
-        Me.Panel2.Controls.Add(Me.btnLoggUt)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(739, 55)
-        Me.Panel2.TabIndex = 20
-        '
         'adminSide
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(739, 439)
+        Me.ClientSize = New System.Drawing.Size(739, 455)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "adminSide"
@@ -510,8 +522,8 @@ Partial Class adminSide
         Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -557,7 +569,8 @@ Partial Class adminSide
     Friend WithEvents fornavnTxt As TextBox
     Friend WithEvents epostTxt As TextBox
     Friend WithEvents endrePwBtn As Button
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel2 As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnLoggUt As Button
-    Friend WithEvents Panel2 As Panel
 End Class
