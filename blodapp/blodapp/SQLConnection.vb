@@ -1,9 +1,11 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class SQL
+    'Her ligger oppkoblingsdata, pluss en variabel for å se om tilkobling er 'aktiv'
     Public oppkobling = New MySqlConnection("server=mysql.stud.iie.ntnu.no;database=g_oops_25;uid=g_oops_25;Pwd=M3PV7P9e;Convert Zero Datetime=true;")
     Public paakoblet As Boolean = False
 End Class
 Public Class Login
+    'Bruker ligger som eget objekt
     Public brukernavn As String
     Public passord As String
     Public databasenavn As String
@@ -15,29 +17,15 @@ Public Class Login
         Dim connect As New SQL
         Dim oppkobling = connect.oppkobling
         Dim pros As New prosedyrer
+        Dim info As New info
         'Importerer BrukerStat klassen
         Dim brukerstat As New BrukerStat
         Dim janei As Integer
 
-        'Åpner tilkoblingen til databasen
         Try
-            oppkobling.Open()
-
             'Finner brukeren i databasen
-            Dim sqlSporring = "select * from bruker where epost=@brukernavn " & " and hash=@passordHash"
-
-            'Setter opp en sql funksjon ved hjelp av spørringen og tilkoblingen
-            Dim sql As New MySqlCommand(sqlSporring, oppkobling)
-
-            'Gjør det mulig å bruke variabler i sql-kode
-            sql.Parameters.AddWithValue("@brukernavn", brukernavn)
-            sql.Parameters.AddWithValue("@passordHash", passord)
-
-            'Fyller en tabell med resultat fra query
-            Dim da As New MySqlDataAdapter
             Dim interTabell As New DataTable
-            da.SelectCommand = sql
-            da.Fill(interTabell)
+            interTabell = info.query("*", "bruker", "epost = '" & brukernavn & "' AND hash = '" & passord & "'")
 
             'Sjekker om det kommer noe restultat. Hvis ja, sier "Logget på" og utfører "sjekkBrukerStat()"
             If interTabell.Rows.Count > 0 Then
@@ -113,6 +101,8 @@ Public Class BrukerStat
 End Class
 
 Public Class RegBruker
+    'VIRKER IKKE PR NÅ. MÅ FIKSE INSERT
+
     Public Sub sendInfo(postnr As String,
                         gtadresse As String,
                         pnummer As String,
@@ -134,7 +124,7 @@ Public Class RegBruker
         Try
             oppkobling.Open()
 
-            Dim sqlSporring = "insert into adresse (post_nr, gateadresse, stednavn) values (@post_nr, @gtadresse, @stdnavn)"
+            Dim sqlSporring = "insert into adresse (post_nr, gateadresse, stednavn) values (@post_nr, @gtadresse)"
 
             Dim sql As New MySqlCommand(sqlSporring, oppkobling)
 
@@ -143,33 +133,43 @@ Public Class RegBruker
 
             adresse_id = sql.LastInsertedId
 
-            Dim sqlSporring2 = "insert into bruker (person_nr, brukerstatus, fornavn, etternavn, epost, telefon, fdato, post_nr,gateadresse, hash, salt) values (@person_nr, @brukerstatus, @fornavn, @etternavn, @epost, @telefon, @fdato, @post_nr,@gateadresse, @hash, @salt)"
+            Dim sqlSporring2 = "insert into bruker (person_nr, brukerstatus, fornavn, etternavn, epost, telefon, fdato, post_nr, gateadresse, hash, salt) values (" & pnummer & ", 
+                                                                                                                                                                  @brukerstatus, 
+                                                                                                                                                                  " & fnavn & ", 
+                                                                                                                                                                  " & enavn & ", 
+                                                                                                                                                                  " & epost & ", 
+                                                                                                                                                                  " & telefon & ", 
+                                                                                                                                                                  " & fdato & ", 
+                                                                                                                                                                  " & postnr & ", 
+                                                                                                                                                                  " & gateadresse & ", 
+                                                                                                                                                                  " & passordHash & ", 
+                                                                                                                                                                  " & salt & "');"
 
             Dim sql2 As New MySqlCommand(sqlSporring2, oppkobling)
-            sql2.Parameters.AddWithValue("@person_nr", pnummer)
+            'sql2.Parameters.AddWithValue("@person_nr", pnummer)
             sql2.Parameters.AddWithValue("@brukerstatus", "0")
-            sql2.Parameters.AddWithValue("@fornavn", fnavn)
-            sql2.Parameters.AddWithValue("@etternavn", enavn)
-            sql2.Parameters.AddWithValue("@epost", epost)
-            sql2.Parameters.AddWithValue("@telefon", telefon)
-            sql2.Parameters.AddWithValue("@fdato", fdato)
-            sql2.Parameters.AddWithValue("@post_nr", postnr)
-            sql2.Parameters.AddWithValue("@gateadresse", gateadresse)
-            sql2.Parameters.AddWithValue("@hash", passordHash)
-            sql2.Parameters.AddWithValue("@salt", salt)
+            'sql2.Parameters.AddWithValue("@fornavn", fnavn)
+            'sql2.Parameters.AddWithValue("@etternavn", enavn)
+            'sql2.Parameters.AddWithValue("@epost", epost)
+            'sql2.Parameters.AddWithValue("@telefon", telefon)
+            'sql2.Parameters.AddWithValue("@fdato", fdato)
+            'sql2.Parameters.AddWithValue("@post_nr", postnr)
+            'sql2.Parameters.AddWithValue("@gateadresse", gateadresse)
+            'sql2.Parameters.AddWithValue("@hash", passordHash)
+            'sql2.Parameters.AddWithValue("@salt", salt)
 
             sql2.ExecuteNonQuery()
 
             oppkobling.Close()
         Catch ex As Exception
-            MessageBox.Show("Noe gikk galt: " & ex.Message)
+            MessageBox.Show("Noe gikk galt " & ex.Message)
         End Try
     End Sub
 End Class
 
 Public Class soking
 
-    Public Function sok(sokeord As String, sorter As String)
+    Public Function sokBruker(sokeord As String, sorter As String)
         'Importerer oppkobling fra SQL klassen
         Dim connect As New SQL
         Dim oppkobling = connect.oppkobling
@@ -177,7 +177,7 @@ Public Class soking
         Try
             oppkobling.Open()
 
-            Dim sqlSporring = "SELECT * FROM bruker WHERE " & sorter & " = " & "'" & sokeord & "'"
+            Dim sqlSporring = "Select * FROM bruker WHERE " & sorter & " = " & "'" & sokeord & "'"
 
             Dim SQL As New MySqlCommand(sqlSporring, oppkobling)
 
@@ -538,3 +538,5 @@ End Class
 
 '        Return output
 '    End Function
+
+
