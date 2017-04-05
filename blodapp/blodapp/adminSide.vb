@@ -21,7 +21,7 @@
                 sorter = "epost"
         End Select
 
-        resultatTab = soking.sok(sokeord, sorter)
+        resultatTab = soking.sokBruker(sokeord, sorter)
 
         ListBox1.Items.Clear()
         For Each rad As DataRow In resultatTab.Rows
