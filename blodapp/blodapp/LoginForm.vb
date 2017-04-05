@@ -65,5 +65,4 @@ Public Class LoginForm
         Dim pros As New prosedyrer
         pros.glemtPw()
     End Sub
-
 End Class
