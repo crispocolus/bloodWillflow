@@ -129,6 +129,7 @@ Partial Class egenerklaering
         Me.lblEgen2Frisk = New System.Windows.Forms.Label()
         Me.lblEgen2InfoBlod = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.RadioButton29 = New System.Windows.Forms.RadioButton()
         Me.RadioButton30 = New System.Windows.Forms.RadioButton()
         Me.RadioButton7 = New System.Windows.Forms.RadioButton()
@@ -337,6 +338,12 @@ Partial Class egenerklaering
         Me.Label132 = New System.Windows.Forms.Label()
         Me.Label129 = New System.Windows.Forms.Label()
         Me.Label130 = New System.Windows.Forms.Label()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -686,6 +693,7 @@ Partial Class egenerklaering
         Me.TabPage2.Controls.Add(Me.radEgen2FriskJa)
         Me.TabPage2.Controls.Add(Me.lblEgen2Frisk)
         Me.TabPage2.Controls.Add(Me.lblEgen2InfoBlod)
+        Me.TabPage2.Controls.Add(Me.GroupBox2)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -1527,6 +1535,9 @@ Partial Class egenerklaering
         Me.TabPage3.Controls.Add(Me.Label14)
         Me.TabPage3.Controls.Add(Me.Label13)
         Me.TabPage3.Controls.Add(Me.Label12)
+        Me.TabPage3.Controls.Add(Me.GroupBox1)
+        Me.TabPage3.Controls.Add(Me.GroupBox3)
+        Me.TabPage3.Controls.Add(Me.GroupBox4)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
@@ -1535,6 +1546,14 @@ Partial Class egenerklaering
         Me.TabPage3.Text = "Side 2"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Location = New System.Drawing.Point(9, 0)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(243, 206)
+        Me.GroupBox1.TabIndex = 116
+        Me.GroupBox1.TabStop = False
+        '
         'RadioButton29
         '
         Me.RadioButton29.AutoSize = True
@@ -1542,7 +1561,6 @@ Partial Class egenerklaering
         Me.RadioButton29.Name = "RadioButton29"
         Me.RadioButton29.Size = New System.Drawing.Size(41, 17)
         Me.RadioButton29.TabIndex = 114
-        Me.RadioButton29.TabStop = True
         Me.RadioButton29.Text = "Nei"
         Me.RadioButton29.UseVisualStyleBackColor = True
         '
@@ -1553,7 +1571,6 @@ Partial Class egenerklaering
         Me.RadioButton30.Name = "RadioButton30"
         Me.RadioButton30.Size = New System.Drawing.Size(36, 17)
         Me.RadioButton30.TabIndex = 113
-        Me.RadioButton30.TabStop = True
         Me.RadioButton30.Text = "Ja"
         Me.RadioButton30.UseVisualStyleBackColor = True
         '
@@ -1564,7 +1581,6 @@ Partial Class egenerklaering
         Me.RadioButton7.Name = "RadioButton7"
         Me.RadioButton7.Size = New System.Drawing.Size(41, 17)
         Me.RadioButton7.TabIndex = 112
-        Me.RadioButton7.TabStop = True
         Me.RadioButton7.Text = "Nei"
         Me.RadioButton7.UseVisualStyleBackColor = True
         '
@@ -1575,7 +1591,6 @@ Partial Class egenerklaering
         Me.RadioButton8.Name = "RadioButton8"
         Me.RadioButton8.Size = New System.Drawing.Size(36, 17)
         Me.RadioButton8.TabIndex = 111
-        Me.RadioButton8.TabStop = True
         Me.RadioButton8.Text = "Ja"
         Me.RadioButton8.UseVisualStyleBackColor = True
         '
@@ -1586,7 +1601,6 @@ Partial Class egenerklaering
         Me.RadioButton5.Name = "RadioButton5"
         Me.RadioButton5.Size = New System.Drawing.Size(41, 17)
         Me.RadioButton5.TabIndex = 110
-        Me.RadioButton5.TabStop = True
         Me.RadioButton5.Text = "Nei"
         Me.RadioButton5.UseVisualStyleBackColor = True
         '
@@ -1597,7 +1611,6 @@ Partial Class egenerklaering
         Me.RadioButton6.Name = "RadioButton6"
         Me.RadioButton6.Size = New System.Drawing.Size(36, 17)
         Me.RadioButton6.TabIndex = 109
-        Me.RadioButton6.TabStop = True
         Me.RadioButton6.Text = "Ja"
         Me.RadioButton6.UseVisualStyleBackColor = True
         '
@@ -1608,7 +1621,6 @@ Partial Class egenerklaering
         Me.RadioButton3.Name = "RadioButton3"
         Me.RadioButton3.Size = New System.Drawing.Size(41, 17)
         Me.RadioButton3.TabIndex = 108
-        Me.RadioButton3.TabStop = True
         Me.RadioButton3.Text = "Nei"
         Me.RadioButton3.UseVisualStyleBackColor = True
         '
@@ -1619,7 +1631,6 @@ Partial Class egenerklaering
         Me.RadioButton4.Name = "RadioButton4"
         Me.RadioButton4.Size = New System.Drawing.Size(36, 17)
         Me.RadioButton4.TabIndex = 107
-        Me.RadioButton4.TabStop = True
         Me.RadioButton4.Text = "Ja"
         Me.RadioButton4.UseVisualStyleBackColor = True
         '
@@ -1630,7 +1641,6 @@ Partial Class egenerklaering
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(41, 17)
         Me.RadioButton1.TabIndex = 106
-        Me.RadioButton1.TabStop = True
         Me.RadioButton1.Text = "Nei"
         Me.RadioButton1.UseVisualStyleBackColor = True
         '
@@ -1641,7 +1651,6 @@ Partial Class egenerklaering
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(36, 17)
         Me.RadioButton2.TabIndex = 105
-        Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "Ja"
         Me.RadioButton2.UseVisualStyleBackColor = True
         '
@@ -1652,7 +1661,6 @@ Partial Class egenerklaering
         Me.rbKjonnssykdom6mndNei.Name = "rbKjonnssykdom6mndNei"
         Me.rbKjonnssykdom6mndNei.Size = New System.Drawing.Size(41, 17)
         Me.rbKjonnssykdom6mndNei.TabIndex = 104
-        Me.rbKjonnssykdom6mndNei.TabStop = True
         Me.rbKjonnssykdom6mndNei.Text = "Nei"
         Me.rbKjonnssykdom6mndNei.UseVisualStyleBackColor = True
         '
@@ -1663,7 +1671,6 @@ Partial Class egenerklaering
         Me.rbKjonnssykdom6mndJa.Name = "rbKjonnssykdom6mndJa"
         Me.rbKjonnssykdom6mndJa.Size = New System.Drawing.Size(36, 17)
         Me.rbKjonnssykdom6mndJa.TabIndex = 103
-        Me.rbKjonnssykdom6mndJa.TabStop = True
         Me.rbKjonnssykdom6mndJa.Text = "Ja"
         Me.rbKjonnssykdom6mndJa.UseVisualStyleBackColor = True
         '
@@ -1674,7 +1681,6 @@ Partial Class egenerklaering
         Me.rbSproyteBehandlingNei.Name = "rbSproyteBehandlingNei"
         Me.rbSproyteBehandlingNei.Size = New System.Drawing.Size(41, 17)
         Me.rbSproyteBehandlingNei.TabIndex = 102
-        Me.rbSproyteBehandlingNei.TabStop = True
         Me.rbSproyteBehandlingNei.Text = "Nei"
         Me.rbSproyteBehandlingNei.UseVisualStyleBackColor = True
         '
@@ -1685,7 +1691,6 @@ Partial Class egenerklaering
         Me.rbSproyteBehandlingJa.Name = "rbSproyteBehandlingJa"
         Me.rbSproyteBehandlingJa.Size = New System.Drawing.Size(36, 17)
         Me.rbSproyteBehandlingJa.TabIndex = 101
-        Me.rbSproyteBehandlingJa.TabStop = True
         Me.rbSproyteBehandlingJa.Text = "Ja"
         Me.rbSproyteBehandlingJa.UseVisualStyleBackColor = True
         '
@@ -1696,7 +1701,6 @@ Partial Class egenerklaering
         Me.rbBehandling6mndNei.Name = "rbBehandling6mndNei"
         Me.rbBehandling6mndNei.Size = New System.Drawing.Size(41, 17)
         Me.rbBehandling6mndNei.TabIndex = 100
-        Me.rbBehandling6mndNei.TabStop = True
         Me.rbBehandling6mndNei.Text = "Nei"
         Me.rbBehandling6mndNei.UseVisualStyleBackColor = True
         '
@@ -1707,7 +1711,6 @@ Partial Class egenerklaering
         Me.rbBehandling6mndJa.Name = "rbBehandling6mndJa"
         Me.rbBehandling6mndJa.Size = New System.Drawing.Size(36, 17)
         Me.rbBehandling6mndJa.TabIndex = 99
-        Me.rbBehandling6mndJa.TabStop = True
         Me.rbBehandling6mndJa.Text = "Ja"
         Me.rbBehandling6mndJa.UseVisualStyleBackColor = True
         '
@@ -1718,7 +1721,6 @@ Partial Class egenerklaering
         Me.rbFireUkerTannlegeNei.Name = "rbFireUkerTannlegeNei"
         Me.rbFireUkerTannlegeNei.Size = New System.Drawing.Size(41, 17)
         Me.rbFireUkerTannlegeNei.TabIndex = 98
-        Me.rbFireUkerTannlegeNei.TabStop = True
         Me.rbFireUkerTannlegeNei.Text = "Nei"
         Me.rbFireUkerTannlegeNei.UseVisualStyleBackColor = True
         '
@@ -1729,7 +1731,6 @@ Partial Class egenerklaering
         Me.rbFireUkerTannlegeJa.Name = "rbFireUkerTannlegeJa"
         Me.rbFireUkerTannlegeJa.Size = New System.Drawing.Size(36, 17)
         Me.rbFireUkerTannlegeJa.TabIndex = 97
-        Me.rbFireUkerTannlegeJa.TabStop = True
         Me.rbFireUkerTannlegeJa.Text = "Ja"
         Me.rbFireUkerTannlegeJa.UseVisualStyleBackColor = True
         '
@@ -1740,7 +1741,6 @@ Partial Class egenerklaering
         Me.rbFireUkerVaksineNei.Name = "rbFireUkerVaksineNei"
         Me.rbFireUkerVaksineNei.Size = New System.Drawing.Size(41, 17)
         Me.rbFireUkerVaksineNei.TabIndex = 96
-        Me.rbFireUkerVaksineNei.TabStop = True
         Me.rbFireUkerVaksineNei.Text = "Nei"
         Me.rbFireUkerVaksineNei.UseVisualStyleBackColor = True
         '
@@ -1751,7 +1751,6 @@ Partial Class egenerklaering
         Me.rbFireUkerVaksineJa.Name = "rbFireUkerVaksineJa"
         Me.rbFireUkerVaksineJa.Size = New System.Drawing.Size(36, 17)
         Me.rbFireUkerVaksineJa.TabIndex = 95
-        Me.rbFireUkerVaksineJa.TabStop = True
         Me.rbFireUkerVaksineJa.Text = "Ja"
         Me.rbFireUkerVaksineJa.UseVisualStyleBackColor = True
         '
@@ -1762,7 +1761,6 @@ Partial Class egenerklaering
         Me.rbFireUkerLosAvforingNei.Name = "rbFireUkerLosAvforingNei"
         Me.rbFireUkerLosAvforingNei.Size = New System.Drawing.Size(41, 17)
         Me.rbFireUkerLosAvforingNei.TabIndex = 94
-        Me.rbFireUkerLosAvforingNei.TabStop = True
         Me.rbFireUkerLosAvforingNei.Text = "Nei"
         Me.rbFireUkerLosAvforingNei.UseVisualStyleBackColor = True
         '
@@ -1773,7 +1771,6 @@ Partial Class egenerklaering
         Me.rbFireUkerLosAvforingJa.Name = "rbFireUkerLosAvforingJa"
         Me.rbFireUkerLosAvforingJa.Size = New System.Drawing.Size(36, 17)
         Me.rbFireUkerLosAvforingJa.TabIndex = 93
-        Me.rbFireUkerLosAvforingJa.TabStop = True
         Me.rbFireUkerLosAvforingJa.Text = "Ja"
         Me.rbFireUkerLosAvforingJa.UseVisualStyleBackColor = True
         '
@@ -1784,7 +1781,6 @@ Partial Class egenerklaering
         Me.rbFireUkerSykFeberNei.Name = "rbFireUkerSykFeberNei"
         Me.rbFireUkerSykFeberNei.Size = New System.Drawing.Size(41, 17)
         Me.rbFireUkerSykFeberNei.TabIndex = 92
-        Me.rbFireUkerSykFeberNei.TabStop = True
         Me.rbFireUkerSykFeberNei.Text = "Nei"
         Me.rbFireUkerSykFeberNei.UseVisualStyleBackColor = True
         '
@@ -1795,7 +1791,6 @@ Partial Class egenerklaering
         Me.rbFireUkerSykFeberJa.Name = "rbFireUkerSykFeberJa"
         Me.rbFireUkerSykFeberJa.Size = New System.Drawing.Size(36, 17)
         Me.rbFireUkerSykFeberJa.TabIndex = 91
-        Me.rbFireUkerSykFeberJa.TabStop = True
         Me.rbFireUkerSykFeberJa.Text = "Ja"
         Me.rbFireUkerSykFeberJa.UseVisualStyleBackColor = True
         '
@@ -2094,13 +2089,13 @@ Partial Class egenerklaering
         Me.rbFireUkerMedisinNei.Name = "rbFireUkerMedisinNei"
         Me.rbFireUkerMedisinNei.Size = New System.Drawing.Size(41, 17)
         Me.rbFireUkerMedisinNei.TabIndex = 14
-        Me.rbFireUkerMedisinNei.TabStop = True
         Me.rbFireUkerMedisinNei.Text = "Nei"
         Me.rbFireUkerMedisinNei.UseVisualStyleBackColor = True
         '
         'rbFireUkerMedisinJa
         '
         Me.rbFireUkerMedisinJa.AutoSize = True
+        Me.rbFireUkerMedisinJa.Checked = True
         Me.rbFireUkerMedisinJa.Location = New System.Drawing.Point(166, 38)
         Me.rbFireUkerMedisinJa.Name = "rbFireUkerMedisinJa"
         Me.rbFireUkerMedisinJa.Size = New System.Drawing.Size(36, 17)
@@ -2237,6 +2232,7 @@ Partial Class egenerklaering
         Me.TabPage4.Controls.Add(Me.Label49)
         Me.TabPage4.Controls.Add(Me.Label48)
         Me.TabPage4.Controls.Add(Me.Label85)
+        Me.TabPage4.Controls.Add(Me.GroupBox5)
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
@@ -2756,6 +2752,7 @@ Partial Class egenerklaering
         Me.TabPage5.Controls.Add(Me.Label72)
         Me.TabPage5.Controls.Add(Me.Label71)
         Me.TabPage5.Controls.Add(Me.Label70)
+        Me.TabPage5.Controls.Add(Me.GroupBox6)
         Me.TabPage5.Location = New System.Drawing.Point(4, 22)
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
@@ -3417,6 +3414,7 @@ Partial Class egenerklaering
         Me.TabPage6.Controls.Add(Me.Label132)
         Me.TabPage6.Controls.Add(Me.Label129)
         Me.TabPage6.Controls.Add(Me.Label130)
+        Me.TabPage6.Controls.Add(Me.GroupBox7)
         Me.TabPage6.Location = New System.Drawing.Point(4, 22)
         Me.TabPage6.Name = "TabPage6"
         Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
@@ -3706,6 +3704,55 @@ Partial Class egenerklaering
         Me.Label130.TabIndex = 81
         Me.Label130.Text = "Besvares av kvinner:"
         '
+        'GroupBox2
+        '
+        Me.GroupBox2.Location = New System.Drawing.Point(15, 6)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(310, 673)
+        Me.GroupBox2.TabIndex = 139
+        Me.GroupBox2.TabStop = False
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Location = New System.Drawing.Point(291, 3)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(247, 109)
+        Me.GroupBox3.TabIndex = 117
+        Me.GroupBox3.TabStop = False
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Location = New System.Drawing.Point(11, 239)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(356, 384)
+        Me.GroupBox4.TabIndex = 118
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "GroupBox4"
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.Location = New System.Drawing.Point(8, 14)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(353, 432)
+        Me.GroupBox5.TabIndex = 127
+        Me.GroupBox5.TabStop = False
+        '
+        'GroupBox6
+        '
+        Me.GroupBox6.Location = New System.Drawing.Point(3, 6)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(351, 597)
+        Me.GroupBox6.TabIndex = 137
+        Me.GroupBox6.TabStop = False
+        '
+        'GroupBox7
+        '
+        Me.GroupBox7.Location = New System.Drawing.Point(3, 6)
+        Me.GroupBox7.Name = "GroupBox7"
+        Me.GroupBox7.Size = New System.Drawing.Size(357, 360)
+        Me.GroupBox7.TabIndex = 119
+        Me.GroupBox7.TabStop = False
+        '
         'egenerklaering
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -3835,7 +3882,6 @@ Partial Class egenerklaering
     Friend WithEvents Label14 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents Label41 As Label
     Friend WithEvents Label40 As Label
     Friend WithEvents Label39 As Label
     Friend WithEvents Label38 As Label
@@ -3849,9 +3895,6 @@ Partial Class egenerklaering
     Friend WithEvents Label30 As Label
     Friend WithEvents Label29 As Label
     Friend WithEvents Label28 As Label
-    Friend WithEvents Label27 As Label
-    Friend WithEvents Label26 As Label
-    Friend WithEvents Label25 As Label
     Friend WithEvents Label45 As Label
     Friend WithEvents Label44 As Label
     Friend WithEvents Label43 As Label
@@ -4045,4 +4088,15 @@ Partial Class egenerklaering
     Friend WithEvents RadioButton66 As RadioButton
     Friend WithEvents RadioButton63 As RadioButton
     Friend WithEvents RadioButton64 As RadioButton
+    Friend WithEvents Label41 As Label
+    Friend WithEvents Label27 As Label
+    Friend WithEvents Label26 As Label
+    Friend WithEvents Label25 As Label
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents GroupBox5 As GroupBox
+    Friend WithEvents GroupBox6 As GroupBox
+    Friend WithEvents GroupBox7 As GroupBox
 End Class

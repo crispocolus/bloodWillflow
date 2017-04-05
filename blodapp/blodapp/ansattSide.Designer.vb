@@ -40,6 +40,7 @@ Partial Class ansattSide
         Me.lstKandidater = New System.Windows.Forms.ListBox()
         Me.CBoxBlodtype = New System.Windows.Forms.ComboBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.chkBekreft = New System.Windows.Forms.CheckBox()
         Me.btnRetur = New System.Windows.Forms.Button()
         Me.btnSend = New System.Windows.Forms.Button()
@@ -52,6 +53,7 @@ Partial Class ansattSide
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lstBestillinger = New System.Windows.Forms.ListBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -61,8 +63,6 @@ Partial Class ansattSide
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.loggutBtn = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -248,6 +248,15 @@ Partial Class ansattSide
         Me.TabPage2.Text = "Bestillinger"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel3.Location = New System.Drawing.Point(3, 347)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(725, 105)
+        Me.Panel3.TabIndex = 25
+        '
         'chkBekreft
         '
         Me.chkBekreft.AutoSize = True
@@ -359,6 +368,15 @@ Partial Class ansattSide
         Me.TabPage3.Text = "Oversikt blodbank"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel4.Location = New System.Drawing.Point(3, 351)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(725, 101)
+        Me.Panel4.TabIndex = 25
+        '
         'ListBox1
         '
         Me.ListBox1.FormattingEnabled = True
@@ -439,24 +457,6 @@ Partial Class ansattSide
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(739, 55)
         Me.Panel2.TabIndex = 20
-        '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel3.Location = New System.Drawing.Point(3, 347)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(725, 105)
-        Me.Panel3.TabIndex = 25
-        '
-        'Panel4
-        '
-        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel4.Location = New System.Drawing.Point(3, 351)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(725, 101)
-        Me.Panel4.TabIndex = 25
         '
         'ansattSide
         '
