@@ -44,7 +44,7 @@
 
         blodtype = CBoxBlodtype.Text
 
-        'hentBlodGiver(blodtype)
+        hentBlodGiver(blodtype)
     End Sub
 
     Private Sub ansattSide_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -72,44 +72,44 @@
         Next
     End Sub
 
-    'Public Sub hentBlodGiver(blodtype As String)
+    Public Sub hentBlodGiver(blodtype As String)
 
-    '    'Importerer info-klassen som inneholder query-funksjon
-    '    Dim info As New info
-    '    'Lager en ny tabell som inneholder data fra query
-    '    Dim Tabell As New DataTable
-    '    Dim pNummerTabell As New ArrayList()
-    '    'Tømmer combo-box før query
-    '    lstKandidater.Items.Clear()
-
-
-    '    'Utfører query ved hjelp av funksjonen query under klassen info. 
-    '    Tabell = info.queryJoin("fornavn, etternavn, bruker.person_nr", "bruker", "blodgiver ON bruker.person_nr = blodgiver.person_nr", "blodtype = '" & blodtype & "';")
-    '    'pNummerTabell = Tabell
-    '    'Legger til kandidater basert på hva som er valgt i ComboBox
-    '    For Each rad In Tabell.Rows
-    ''        lstKandidater.Items.Add(rad("fornavn") & " " & rad("etternavn"))
-    ''        pNummerTabell.Add(rad("person_nr").ToString)
-    ''        MsgBox(pNummerTabell.IndexOf())
-    ''    Next
-    ''    Dim sResult As String = ""
-
-    '    'Utfører query ved hjelp av funksjonen query under klassen info. 
-    '    Tabell = info.queryJoin("fornavn, etternavn, bruker.person_nr", "bruker", "blodgiver ON bruker.person_nr = blodgiver.person_nr", "blodtype = '" & blodtype & "';")
-    '    'pNummerTabell = Tabell
-    '    'Legger til kandidater basert på hva som er valgt i ComboBox
-    '    For Each rad In Tabell.Rows
-    '        lstKandidater.Items.Add(rad("fornavn") & " " & rad("etternavn"))
-    '        pNummerTabell.Add(rad("person_nr").ToString)
-    '        'MsgBox(pNummerTabell.IndexOf()) Kommentert ut for testing på resten av siden
-    '    Next
-    '    Dim sResult As String = ""
+        'Importerer info-klassen som inneholder query-funksjon
+        Dim info As New info
+        'Lager en ny tabell som inneholder data fra query
+        Dim Tabell As New DataTable
+        Dim pNummerTabell As New ArrayList()
+        'Tømmer combo-box før query
+        lstKandidater.Items.Clear()
 
 
-    '    'For Each elem As String In pNummerTabell
-    '    '    MsgBox(elem)
-    '    'Next
-    'End Sub
+        'Utfører query ved hjelp av funksjonen query under klassen info. 
+        'Tabell = info.queryJoin("fornavn, etternavn, bruker.person_nr", "bruker", "blodgiver ON bruker.person_nr = blodgiver.person_nr", "blodtype = '" & blodtype & "';")
+        'pNummerTabell = Tabell
+        'Legger til kandidater basert på hva som er valgt i ComboBox
+        'For Each rad In Tabell.Rows
+        '        lstKandidater.Items.Add(rad("fornavn") & " " & rad("etternavn"))
+        '        pNummerTabell.Add(rad("person_nr").ToString)
+        '        MsgBox(pNummerTabell.IndexOf())
+        '    Next
+        '    Dim sResult As String = ""
+
+        'Utfører query ved hjelp av funksjonen query under klassen info. 
+        Tabell = info.queryJoin("fornavn, etternavn, bruker.person_nr", "bruker", "blodgiver ON bruker.person_nr = blodgiver.person_nr", "blodtype = '" & blodtype & "';")
+            'pNummerTabell = Tabell
+            'Legger til kandidater basert på hva som er valgt i ComboBox
+            For Each rad In Tabell.Rows
+                lstKandidater.Items.Add(rad("fornavn") & " " & rad("etternavn"))
+                pNummerTabell.Add(rad("person_nr").ToString)
+                'MsgBox(pNummerTabell.IndexOf()) Kommentert ut for testing på resten av siden
+            Next
+            Dim sResult As String = ""
+
+
+        'For Each elem As String In pNummerTabell
+        '    MsgBox(elem)
+        'Next
+    End Sub
 
     Public Sub sendInnkalling()
         Dim info As New info

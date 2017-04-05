@@ -61,7 +61,6 @@ C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\obj\Debug\
 C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.adminSide.resources
 C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.brukerSide.resources
 C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.egenerklaering.resources
-C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.egenerklaering2.resources
 C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.lederSide.resources
 C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.ansattSide.resources
 C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.LoginForm.resources
