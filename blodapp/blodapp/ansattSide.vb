@@ -128,7 +128,54 @@
 
         tabell = info.query("id", produkt, "blodtype = '" & blodtype & "';")
 
-        ListBox1.Items.Add("Det er " & ((tabell.Rows.Count) * 0.45) & " liter med " & produkt & " av typen " & blodtype)
+        lblResultat.Text = (tabell.Rows.Count * 0.45) & " liter"
+
+
+        'ListBox1.Items.Add("Det er " & ((tabell.Rows.Count) * 0.45) & " liter med " & produkt & " av typen " & blodtype)
+
+    End Sub
+
+    Public Sub blodFullOversikt()
+        Dim connect As New SQL
+        Dim oppkobling = connect.oppkobling
+
+
+        Dim info As New info
+        Dim tabellPlasma As New DataTable
+        Dim tabellLegemer As New DataTable
+        Dim tabellPlater As New DataTable
+
+        tabellPlasma = info.query("count(blodtype), blodtype", "blodplasma", "1 GROUP BY blodtype")
+        tabellLegemer = info.query("count(blodtype), blodtype", "blodlegemer", "1 GROUP BY blodtype")
+        tabellPlater = info.query("count(blodtype), blodtype", "blodplater", "1 GROUP BY blodtype")
+
+        'Dim leser = SQL.ExecuteReader()
+        'While leser.Read()
+        '    brukerstatus = (leser("brukerstatus"))
+        'End While
+        'leser.Close()
+        Try
+
+            ListBox1.Items.Add("Blodplasma: ")
+            For Each rad In tabellPlasma.Rows
+                ListBox1.Items.Add(rad("blodtype") & vbTab & rad("count(blodtype)"))
+
+            Next
+            ListBox1.Items.Add("Blodplater")
+            For Each rad In tabellPlater.Rows
+
+                ListBox1.Items.Add(rad("blodtype") & vbTab & rad("count(blodtype)"))
+
+            Next
+            ListBox1.Items.Add("Blodlegemer: ")
+            For Each rad In tabellLegemer.Rows
+                ListBox1.Items.Add(rad("blodtype") & vbTab & rad("count(blodtype)"))
+
+            Next
+
+        Catch feil As Exception
+            MsgBox(feil.Message)
+        End Try
 
     End Sub
 
@@ -142,6 +189,13 @@
         produkt = cBoxProdukt.SelectedItem
 
         blodInfo()
+
+
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        blodFullOversikt()
 
 
 
