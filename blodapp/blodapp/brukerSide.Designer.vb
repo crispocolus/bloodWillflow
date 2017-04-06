@@ -41,6 +41,7 @@ Partial Class brukerSide
         Me.epostTxt = New System.Windows.Forms.TextBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.endrePwBtn = New System.Windows.Forms.Button()
         Me.lblEpost = New System.Windows.Forms.Label()
         Me.lblTlf = New System.Windows.Forms.Label()
@@ -48,10 +49,9 @@ Partial Class brukerSide
         Me.lblFornavn = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -231,6 +231,15 @@ Partial Class brukerSide
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Min side"
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel1.Location = New System.Drawing.Point(3, 309)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(739, 65)
+        Me.Panel1.TabIndex = 25
+        '
         'endrePwBtn
         '
         Me.endrePwBtn.Location = New System.Drawing.Point(416, 70)
@@ -300,6 +309,15 @@ Partial Class brukerSide
         Me.TabPage2.Text = "Bestill time"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel3.Location = New System.Drawing.Point(3, 309)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(739, 65)
+        Me.Panel3.TabIndex = 25
+        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -321,24 +339,6 @@ Partial Class brukerSide
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 8
         Me.PictureBox1.TabStop = False
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Location = New System.Drawing.Point(3, 309)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(739, 65)
-        Me.Panel1.TabIndex = 25
-        '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel3.Location = New System.Drawing.Point(3, 309)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(739, 65)
-        Me.Panel3.TabIndex = 25
         '
         'brukerSide
         '
