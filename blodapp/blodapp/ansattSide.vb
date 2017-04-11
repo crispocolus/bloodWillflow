@@ -27,17 +27,19 @@
         sendInnkalling()
     End Sub
 
-    Private Sub btnBehov_Click(sender As Object, e As EventArgs) Handles btnBehov.Click
-        literBehov = TextBox1.Text
-        Dim giverBehov As Integer
-        giverBehov = (literBehov / 0.45) + 1
-        If IsNumeric(TextBox1.Text) = False Then
-            MsgBox("Du må skrive et heltall når du skriver literbehov")
-        Else
-            Label9.Text = "Du trenger minst: " & giverBehov & " blodgivere" & vbCrLf & "for å få " & literBehov & " liter blod."
-        End If
+    'Private Sub btnBehov_Click(sender As Object, e As EventArgs) Handles btnBehov.Click
+    '    literBehov = TextBox1.Text
+    '    Dim giverBehov As Integer
+    '    giverBehov = (literBehov / 0.45) + 1
+    '    If IsNumeric(TextBox1.Text) = False Then
+    '        MsgBox("Du må skrive et heltall når du skriver literbehov")
+    '    Else
+    '        Label9.Text = "Du trenger minst: " & giverBehov & " blodgivere" & vbCrLf & "for å få " & literBehov & " liter blod."
+    '    End If
 
-    End Sub
+
+    '***********Skal vi ha denne?********
+    'End Sub
 
     Private Sub CBoxBlodtype_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBoxBlodtype.SelectedIndexChanged
         Dim blodtype As String
@@ -73,49 +75,63 @@
     End Sub
 
     Public Sub hentBlodGiver(blodtype As String)
-
-        'Importerer info-klassen som inneholder query-funksjon
+        'Importerer info - klassen som inneholder query-funksjon
         Dim info As New info
         'Lager en ny tabell som inneholder data fra query
         Dim Tabell As New DataTable
-        Dim pNummerTabell As New ArrayList()
-        'Tømmer combo-box før query
+        'Tømmer combo - box før query
         lstKandidater.Items.Clear()
 
 
         'Utfører query ved hjelp av funksjonen query under klassen info. 
-        'Tabell = info.queryJoin("fornavn, etternavn, bruker.person_nr", "bruker", "blodgiver ON bruker.person_nr = blodgiver.person_nr", "blodtype = '" & blodtype & "';")
-        'pNummerTabell = Tabell
-        'Legger til kandidater basert på hva som er valgt i ComboBox
-        'For Each rad In Tabell.Rows
-        '        lstKandidater.Items.Add(rad("fornavn") & " " & rad("etternavn"))
-        '        pNummerTabell.Add(rad("person_nr").ToString)
-        '        MsgBox(pNummerTabell.IndexOf())
-        '    Next
-        '    Dim sResult As String = ""
-
-        'Utfører query ved hjelp av funksjonen query under klassen info. 
         Tabell = info.queryJoin("fornavn, etternavn, bruker.person_nr", "bruker", "blodgiver ON bruker.person_nr = blodgiver.person_nr", "blodtype = '" & blodtype & "';")
-            'pNummerTabell = Tabell
-            'Legger til kandidater basert på hva som er valgt i ComboBox
-            For Each rad In Tabell.Rows
-                lstKandidater.Items.Add(rad("fornavn") & " " & rad("etternavn"))
-                pNummerTabell.Add(rad("person_nr").ToString)
-                'MsgBox(pNummerTabell.IndexOf()) Kommentert ut for testing på resten av siden
-            Next
-            Dim sResult As String = ""
 
+        'Legger til kandidater basert på hva som er valgt i ComboBox
+        For Each rad In Tabell.Rows
+            'lstKandidater.Items.Add(rad("fornavn") & " " & rad("etternavn"))
+            lstKandidater.Items.Add(New listItem With {.display = rad("fornavn") & " " & rad("etternavn"), .value = rad("person_nr")})
+        Next
+        Dim sResult As String = ""
 
-        'For Each elem As String In pNummerTabell
-        '    MsgBox(elem)
-        'Next
+    End Sub
+
+    Private Sub btnBehov_Click(sender As Object, e As EventArgs) Handles btnBehov.Click
+        '    If IsNumeric(txtMengde) Then
+        '        Label9.Text = "Du trenger minst: " & giverBehov & "antall blodgivere"
+        '    Else
+        '        MsgBox("Du må skrive et tall når du skriver literbehov")
+        '    End If
+
+        '*******Skal vi ha denne?**************
     End Sub
 
     Public Sub sendInnkalling()
         Dim info As New info
+        Dim janei As Integer
+        Dim kommentar As String
 
-        info.sendInnkalling("12345678900", InputBox("Her skriver du din tekst"), InputBox("skriv inn en dato når du vil at folk skal komme"))
+        Dim valgtPnummer As String
+        valgtPnummer = CType(lstKandidater.SelectedItem, listItem).value
+        kommentar = InputBox("Kommentar: (frivillig)")
+
+
+        '*************Oppsummering funker ikke enda, bare småplukk!!*****
+        'MsgBox("Oppsummering: " & vbCrLf & "Navn: " & lstKandidater.SelectedItem & vbCrLf & "Dato: " & tappeKalender.SelectionStart.ToString("yyyy/MM/dd") & "Klokkeslett: " & cmbTime.SelectedItem & ":" & cmbMin.SelectedItem & vbCrLf & "Kommentar: " & kommentar & vbCrLf)
+
+        janei = MsgBox("Vil du sende innkallingen?", MsgBoxStyle.YesNo)
+        If janei = DialogResult.Yes Then
+            info.sendInnkalling(valgtPnummer, kommentar, tappeKalender.SelectionStart.ToString("yyyy/MM/dd") & " " & cmbTime.SelectedItem & ":" & cmbMin.SelectedItem & ":00")
+        End If
+
     End Sub
+
+    Public Class listItem
+        Public display As String
+        Public value As Decimal
+        Public Overrides Function ToString() As String
+            Return Me.display
+        End Function
+    End Class
 
     Public Sub blodInfo()
 
@@ -129,10 +145,6 @@
         tabell = info.query("id", produkt, "blodtype = '" & blodtype & "';")
 
         lblResultat.Text = (tabell.Rows.Count * 0.45) & " liter"
-
-
-        'ListBox1.Items.Add("Det er " & ((tabell.Rows.Count) * 0.45) & " liter med " & produkt & " av typen " & blodtype)
-
     End Sub
 
     Public Sub blodFullOversikt()
@@ -149,11 +161,6 @@
         tabellLegemer = info.query("count(blodtype), blodtype", "blodlegemer", "1 GROUP BY blodtype")
         tabellPlater = info.query("count(blodtype), blodtype", "blodplater", "1 GROUP BY blodtype")
 
-        'Dim leser = SQL.ExecuteReader()
-        'While leser.Read()
-        '    brukerstatus = (leser("brukerstatus"))
-        'End While
-        'leser.Close()
         Try
 
             ListBox1.Items.Add("Blodplasma: ")
@@ -189,67 +196,17 @@
         produkt = cBoxProdukt.SelectedItem
 
         blodInfo()
-
-
-
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         blodFullOversikt()
-
-
-
     End Sub
-
-
-    'Public Sub fyllKandidat(blodtype As String)
-
-    '    'Importerer info-klassen som inneholder query-funksjon
-    '    Dim info As New info
-    '    'Lager en ny tabell som inneholder data fra query
-    '    Dim Tabell As New DataTable
-    '    Dim personNrTab As New DataTable
-    '    'Tømmer combo-box før query
-    '    kandidatCmb.Items.Clear()
-
-    '    'Utfører query ved hjelp av funksjonen query under klassen info. 
-    '    Tabell = info.queryJoin("fornavn, etternavn, person_nr", "bruker", "blodgiver ON bruker.person_nr = blodgiver.person_nr", "1")
-
-    '    'Legger til kandidater basert på hva som er valgt i ComboBox
-    '    For Each rad In Tabell.Rows
-    '        kandidatCmb.Items.Add(rad("fornavn") & vbTab & rad("etternavn") & vbTab & rad("person_nr"))
-    '    Next
-    'End Sub
-
-    'Public Sub hentKandPers(blodtype As String)
-
-    '    'Importerer info-klassen som inneholder query-funksjon
-    '    Dim info As New info
-    '    'Lager en ny tabell som inneholder data fra query
-    '    Dim Tabell As New DataTable
-
-    '    'Tømmer combo-box før query
-    '    kandidatCmb.Items.Clear()
-
-    '    'Utfører query ved hjelp av funksjonen query under klassen info. 
-    '    Tabell = info.query("person_nr", "bruker", "fornavn+etternavn = " & kandidatCmb.Text)
-
-    '    'Legger til kandidater basert på hva som er valgt i ComboBox
-    '    For Each rad In Tabell.Rows
-    '        kandidatCmb.Items.Add(rad("fornavn") & " " & rad("etternavn"))
-    '    Next
-    'End Sub
-
-    Private Sub kandidatCmb_SelectedIndexChanged(sender As Object, e As EventArgs)
-
-        'blod_pnummer = kandidatCmb.
-    End Sub
-
 
     Private Sub endrePwBtn_Click(sender As Object, e As EventArgs) Handles endrePwBtn.Click
         Dim pros As New prosedyrer
         pros.endrePw(LoginForm.bnavn)
     End Sub
+
 
     Private Sub loggutBtn_Click_1(sender As Object, e As EventArgs) Handles loggutBtn.Click
         LoginForm.bnavn = ""

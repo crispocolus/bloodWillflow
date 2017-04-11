@@ -85,6 +85,10 @@
         'Next
     End Sub
 
+    Private Sub lstKandidater_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstKandidater.SelectedIndexChanged
+
+    End Sub
+
     'Private Sub btnBehov_Click(sender As Object, e As EventArgs) Handles btnBehov.Click
     '    If IsNumeric(txtMengde) Then
     '        Label9.Text = "Du trenger minst: " & giverBehov & "antall blodgivere"

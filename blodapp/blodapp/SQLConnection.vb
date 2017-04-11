@@ -23,11 +23,11 @@ Public Class Login
         Dim janei As Integer
 
         Try
-            'Finner brukeren i databasen
+            'Finner den potensielle brukeren i databasen
             Dim interTabell As New DataTable
             interTabell = info.query("*", "bruker", "epost = '" & brukernavn & "' AND hash = '" & passord & "'")
 
-            'Sjekker om det kommer noe restultat. Hvis ja, sier "Logget på" og utfører "sjekkBrukerStat()"
+            'Sjekker om det kommer noe restultat tilbake. Hvis ja, sier "Logget på" og utfører sjekkBrukerStat() som sjekker hvilken type bruker det er
             If interTabell.Rows.Count > 0 Then
                 MsgBox("Innlogget", MsgBoxStyle.Information)
                 brukerstat.sjekkBrukerStat(LoginForm.bnavn)
@@ -35,21 +35,23 @@ Public Class Login
                 LoginForm.attempts = 0
                 Return connect.paakoblet
             End If
-            If LoginForm.attempts = 2 Then
+            'Hvis brukeren har prøvd å logge på med feil brukernavn/passord 3 ganger får de mulighet til å nullstille passordet
+            If LoginForm.attempts = 2 Then 'tallet kan endres om man vil gi færre/flere forsøk
                 janei = MsgBox("Du har skrevet inn feil brukernavn eller passord 3 ganger. Har du glemt passordet?", MsgBoxStyle.YesNo)
                 If janei = DialogResult.Yes Then
                     pros.glemtPw()
+                    Return "Glemt passord"
                 End If
             Else
+                'Øker forsøk for hver gang brukernavn eller passord blir skrevet feil
                 MsgBox("Feil brukernavn eller passord")
                 LoginForm.attempts += 1
-                MsgBox(LoginForm.attempts)
                 oppkobling.Close()
                 Return "Feil brukernavn eller passord"
             End If
             oppkobling.Close()
         Catch ex As MySqlException
-            'Gir feilmelding om 
+            'Gir feilmelding om noe har gått galt
             MessageBox.Show("Noe gikk galt: " & ex.Message)
             Return ex.Message
         End Try

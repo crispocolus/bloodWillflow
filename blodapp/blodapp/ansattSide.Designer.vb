@@ -27,7 +27,6 @@ Partial Class ansattSide
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.endrePwBtn = New System.Windows.Forms.Button()
-        Me.ListBox2 = New System.Windows.Forms.ListBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.btnBehov = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -53,6 +52,8 @@ Partial Class ansattSide
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lstBestillinger = New System.Windows.Forms.ListBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.lblResultat = New System.Windows.Forms.Label()
         Me.cBoxProdukt = New System.Windows.Forms.ComboBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -64,10 +65,13 @@ Partial Class ansattSide
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.loggutBtn = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.lblResultat = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.lblKlokkeslett = New System.Windows.Forms.Label()
+        Me.cmbTime = New System.Windows.Forms.ComboBox()
+        Me.cmbMin = New System.Windows.Forms.ComboBox()
+        Me.lblKolon = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -80,17 +84,19 @@ Partial Class ansattSide
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Location = New System.Drawing.Point(0, 75)
-        Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabControl1.Margin = New System.Windows.Forms.Padding(4)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(985, 592)
+        Me.TabControl1.Size = New System.Drawing.Size(734, 592)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.lblKolon)
+        Me.TabPage1.Controls.Add(Me.cmbMin)
+        Me.TabPage1.Controls.Add(Me.cmbTime)
+        Me.TabPage1.Controls.Add(Me.lblKlokkeslett)
         Me.TabPage1.Controls.Add(Me.Panel1)
-        Me.TabPage1.Controls.Add(Me.endrePwBtn)
-        Me.TabPage1.Controls.Add(Me.ListBox2)
         Me.TabPage1.Controls.Add(Me.Label9)
         Me.TabPage1.Controls.Add(Me.btnBehov)
         Me.TabPage1.Controls.Add(Me.Label8)
@@ -103,10 +109,10 @@ Partial Class ansattSide
         Me.TabPage1.Controls.Add(Me.lstKandidater)
         Me.TabPage1.Controls.Add(Me.CBoxBlodtype)
         Me.TabPage1.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage1.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TabPage1.Size = New System.Drawing.Size(977, 563)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(4)
+        Me.TabPage1.Size = New System.Drawing.Size(726, 563)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Innkalling"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -114,16 +120,17 @@ Partial Class ansattSide
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.endrePwBtn)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel1.Location = New System.Drawing.Point(4, 457)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(969, 102)
+        Me.Panel1.Size = New System.Drawing.Size(718, 102)
         Me.Panel1.TabIndex = 24
         '
         'endrePwBtn
         '
-        Me.endrePwBtn.Location = New System.Drawing.Point(15, 402)
+        Me.endrePwBtn.Location = New System.Drawing.Point(11, 17)
         Me.endrePwBtn.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.endrePwBtn.Name = "endrePwBtn"
         Me.endrePwBtn.Size = New System.Drawing.Size(121, 23)
@@ -131,20 +138,10 @@ Partial Class ansattSide
         Me.endrePwBtn.Text = "Endre passord"
         Me.endrePwBtn.UseVisualStyleBackColor = True
         '
-        'ListBox2
-        '
-        Me.ListBox2.FormattingEnabled = True
-        Me.ListBox2.ItemHeight = 16
-        Me.ListBox2.Location = New System.Drawing.Point(811, 347)
-        Me.ListBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ListBox2.Name = "ListBox2"
-        Me.ListBox2.Size = New System.Drawing.Size(9, 84)
-        Me.ListBox2.TabIndex = 12
-        '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(11, 210)
+        Me.Label9.Location = New System.Drawing.Point(8, 115)
         Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(199, 17)
@@ -153,8 +150,8 @@ Partial Class ansattSide
         '
         'btnBehov
         '
-        Me.btnBehov.Location = New System.Drawing.Point(8, 155)
-        Me.btnBehov.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnBehov.Location = New System.Drawing.Point(54, 77)
+        Me.btnBehov.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBehov.Name = "btnBehov"
         Me.btnBehov.Size = New System.Drawing.Size(99, 27)
         Me.btnBehov.TabIndex = 9
@@ -164,7 +161,7 @@ Partial Class ansattSide
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(8, 100)
+        Me.Label8.Location = New System.Drawing.Point(57, 17)
         Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(79, 17)
@@ -173,16 +170,16 @@ Partial Class ansattSide
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(4, 121)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox1.Location = New System.Drawing.Point(56, 47)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(97, 22)
         Me.TextBox1.TabIndex = 7
         '
         'btnInnkalling
         '
-        Me.btnInnkalling.Location = New System.Drawing.Point(495, 345)
-        Me.btnInnkalling.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnInnkalling.Location = New System.Drawing.Point(483, 324)
+        Me.btnInnkalling.Margin = New System.Windows.Forms.Padding(4)
         Me.btnInnkalling.Name = "btnInnkalling"
         Me.btnInnkalling.Size = New System.Drawing.Size(172, 63)
         Me.btnInnkalling.TabIndex = 6
@@ -231,7 +228,7 @@ Partial Class ansattSide
         Me.lstKandidater.FormattingEnabled = True
         Me.lstKandidater.ItemHeight = 16
         Me.lstKandidater.Location = New System.Drawing.Point(249, 101)
-        Me.lstKandidater.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.lstKandidater.Margin = New System.Windows.Forms.Padding(4)
         Me.lstKandidater.Name = "lstKandidater"
         Me.lstKandidater.Size = New System.Drawing.Size(143, 324)
         Me.lstKandidater.TabIndex = 1
@@ -240,7 +237,7 @@ Partial Class ansattSide
         '
         Me.CBoxBlodtype.FormattingEnabled = True
         Me.CBoxBlodtype.Location = New System.Drawing.Point(265, 68)
-        Me.CBoxBlodtype.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CBoxBlodtype.Margin = New System.Windows.Forms.Padding(4)
         Me.CBoxBlodtype.Name = "CBoxBlodtype"
         Me.CBoxBlodtype.Size = New System.Drawing.Size(97, 24)
         Me.CBoxBlodtype.TabIndex = 0
@@ -260,10 +257,10 @@ Partial Class ansattSide
         Me.TabPage2.Controls.Add(Me.Label4)
         Me.TabPage2.Controls.Add(Me.lstBestillinger)
         Me.TabPage2.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage2.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TabPage2.Size = New System.Drawing.Size(977, 563)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(4)
+        Me.TabPage2.Size = New System.Drawing.Size(726, 563)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Bestillinger"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -273,16 +270,16 @@ Partial Class ansattSide
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel3.Location = New System.Drawing.Point(4, 430)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(969, 129)
+        Me.Panel3.Size = New System.Drawing.Size(718, 129)
         Me.Panel3.TabIndex = 25
         '
         'chkBekreft
         '
         Me.chkBekreft.AutoSize = True
-        Me.chkBekreft.Location = New System.Drawing.Point(351, 228)
-        Me.chkBekreft.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.chkBekreft.Location = New System.Drawing.Point(291, 224)
+        Me.chkBekreft.Margin = New System.Windows.Forms.Padding(4)
         Me.chkBekreft.Name = "chkBekreft"
         Me.chkBekreft.Size = New System.Drawing.Size(134, 21)
         Me.chkBekreft.TabIndex = 12
@@ -291,8 +288,8 @@ Partial Class ansattSide
         '
         'btnRetur
         '
-        Me.btnRetur.Location = New System.Drawing.Point(351, 292)
-        Me.btnRetur.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnRetur.Location = New System.Drawing.Point(291, 288)
+        Me.btnRetur.Margin = New System.Windows.Forms.Padding(4)
         Me.btnRetur.Name = "btnRetur"
         Me.btnRetur.Size = New System.Drawing.Size(133, 28)
         Me.btnRetur.TabIndex = 11
@@ -302,8 +299,8 @@ Partial Class ansattSide
         'btnSend
         '
         Me.btnSend.Enabled = False
-        Me.btnSend.Location = New System.Drawing.Point(351, 256)
-        Me.btnSend.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnSend.Location = New System.Drawing.Point(291, 252)
+        Me.btnSend.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSend.Name = "btnSend"
         Me.btnSend.Size = New System.Drawing.Size(133, 28)
         Me.btnSend.TabIndex = 10
@@ -312,8 +309,8 @@ Partial Class ansattSide
         '
         'txtTidspunkt
         '
-        Me.txtTidspunkt.Location = New System.Drawing.Point(351, 193)
-        Me.txtTidspunkt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtTidspunkt.Location = New System.Drawing.Point(291, 189)
+        Me.txtTidspunkt.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTidspunkt.Name = "txtTidspunkt"
         Me.txtTidspunkt.Size = New System.Drawing.Size(132, 22)
         Me.txtTidspunkt.TabIndex = 8
@@ -321,7 +318,7 @@ Partial Class ansattSide
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(347, 172)
+        Me.Label7.Location = New System.Drawing.Point(287, 168)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(121, 17)
@@ -330,8 +327,8 @@ Partial Class ansattSide
         '
         'txtMengde
         '
-        Me.txtMengde.Location = New System.Drawing.Point(351, 119)
-        Me.txtMengde.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtMengde.Location = New System.Drawing.Point(291, 115)
+        Me.txtMengde.Margin = New System.Windows.Forms.Padding(4)
         Me.txtMengde.Name = "txtMengde"
         Me.txtMengde.Size = New System.Drawing.Size(132, 22)
         Me.txtMengde.TabIndex = 6
@@ -339,7 +336,7 @@ Partial Class ansattSide
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(347, 98)
+        Me.Label6.Location = New System.Drawing.Point(287, 94)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(63, 17)
@@ -348,8 +345,8 @@ Partial Class ansattSide
         '
         'txtBlodtype
         '
-        Me.txtBlodtype.Location = New System.Drawing.Point(351, 44)
-        Me.txtBlodtype.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtBlodtype.Location = New System.Drawing.Point(291, 40)
+        Me.txtBlodtype.Margin = New System.Windows.Forms.Padding(4)
         Me.txtBlodtype.Name = "txtBlodtype"
         Me.txtBlodtype.Size = New System.Drawing.Size(132, 22)
         Me.txtBlodtype.TabIndex = 4
@@ -357,7 +354,7 @@ Partial Class ansattSide
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(347, 23)
+        Me.Label5.Location = New System.Drawing.Point(287, 19)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(67, 17)
@@ -378,10 +375,10 @@ Partial Class ansattSide
         '
         Me.lstBestillinger.FormattingEnabled = True
         Me.lstBestillinger.ItemHeight = 16
-        Me.lstBestillinger.Location = New System.Drawing.Point(32, 43)
-        Me.lstBestillinger.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.lstBestillinger.Location = New System.Drawing.Point(21, 40)
+        Me.lstBestillinger.Margin = New System.Windows.Forms.Padding(4)
         Me.lstBestillinger.Name = "lstBestillinger"
-        Me.lstBestillinger.Size = New System.Drawing.Size(244, 276)
+        Me.lstBestillinger.Size = New System.Drawing.Size(244, 372)
         Me.lstBestillinger.TabIndex = 0
         '
         'TabPage3
@@ -397,20 +394,37 @@ Partial Class ansattSide
         Me.TabPage3.Controls.Add(Me.Label10)
         Me.TabPage3.Controls.Add(Me.cBoxOversikt)
         Me.TabPage3.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage3.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TabPage3.Size = New System.Drawing.Size(977, 563)
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(4)
+        Me.TabPage3.Size = New System.Drawing.Size(726, 563)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Oversikt blodbank"
         Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(567, 326)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(132, 89)
+        Me.Button1.TabIndex = 30
+        Me.Button1.Text = "Oversikt Test"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'lblResultat
+        '
+        Me.lblResultat.AutoSize = True
+        Me.lblResultat.Location = New System.Drawing.Point(676, 49)
+        Me.lblResultat.Name = "lblResultat"
+        Me.lblResultat.Size = New System.Drawing.Size(0, 17)
+        Me.lblResultat.TabIndex = 29
         '
         'cBoxProdukt
         '
         Me.cBoxProdukt.FormattingEnabled = True
         Me.cBoxProdukt.Items.AddRange(New Object() {"blodplasma", "blodlegemer", "blodplater"})
         Me.cBoxProdukt.Location = New System.Drawing.Point(233, 42)
-        Me.cBoxProdukt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cBoxProdukt.Margin = New System.Windows.Forms.Padding(4)
         Me.cBoxProdukt.Name = "cBoxProdukt"
         Me.cBoxProdukt.Size = New System.Drawing.Size(160, 24)
         Me.cBoxProdukt.TabIndex = 28
@@ -429,9 +443,9 @@ Partial Class ansattSide
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel4.Location = New System.Drawing.Point(4, 435)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(969, 124)
+        Me.Panel4.Size = New System.Drawing.Size(718, 124)
         Me.Panel4.TabIndex = 25
         '
         'ListBox1
@@ -439,15 +453,15 @@ Partial Class ansattSide
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.ItemHeight = 16
         Me.ListBox1.Location = New System.Drawing.Point(35, 116)
-        Me.ListBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ListBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(704, 308)
+        Me.ListBox1.Size = New System.Drawing.Size(509, 308)
         Me.ListBox1.TabIndex = 5
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(31, 95)
+        Me.Label12.Location = New System.Drawing.Point(32, 85)
         Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(83, 17)
@@ -457,7 +471,7 @@ Partial Class ansattSide
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(676, 21)
+        Me.Label11.Location = New System.Drawing.Point(417, 20)
         Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(60, 17)
@@ -479,7 +493,7 @@ Partial Class ansattSide
         Me.cBoxOversikt.FormattingEnabled = True
         Me.cBoxOversikt.Items.AddRange(New Object() {"O+", "O-", "A+", "A-", "B+", "B-", "AB+", "AB-"})
         Me.cBoxOversikt.Location = New System.Drawing.Point(35, 42)
-        Me.cBoxOversikt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cBoxOversikt.Margin = New System.Windows.Forms.Padding(4)
         Me.cBoxOversikt.Name = "cBoxOversikt"
         Me.cBoxOversikt.Size = New System.Drawing.Size(160, 24)
         Me.cBoxOversikt.TabIndex = 0
@@ -489,7 +503,7 @@ Partial Class ansattSide
         Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(180, 68)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -499,7 +513,7 @@ Partial Class ansattSide
         'loggutBtn
         '
         Me.loggutBtn.Location = New System.Drawing.Point(845, 15)
-        Me.loggutBtn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.loggutBtn.Margin = New System.Windows.Forms.Padding(4)
         Me.loggutBtn.Name = "loggutBtn"
         Me.loggutBtn.Size = New System.Drawing.Size(137, 28)
         Me.loggutBtn.TabIndex = 12
@@ -513,41 +527,61 @@ Partial Class ansattSide
         Me.Panel2.Controls.Add(Me.loggutBtn)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(985, 68)
+        Me.Panel2.Size = New System.Drawing.Size(734, 68)
         Me.Panel2.TabIndex = 20
         '
-        'lblResultat
+        'lblKlokkeslett
         '
-        Me.lblResultat.AutoSize = True
-        Me.lblResultat.Location = New System.Drawing.Point(676, 49)
-        Me.lblResultat.Name = "lblResultat"
-        Me.lblResultat.Size = New System.Drawing.Size(0, 17)
-        Me.lblResultat.TabIndex = 29
+        Me.lblKlokkeslett.AutoSize = True
+        Me.lblKlokkeslett.Location = New System.Drawing.Point(434, 284)
+        Me.lblKlokkeslett.Name = "lblKlokkeslett"
+        Me.lblKlokkeslett.Size = New System.Drawing.Size(80, 17)
+        Me.lblKlokkeslett.TabIndex = 25
+        Me.lblKlokkeslett.Text = "Klokkeslett:"
         '
-        'Button1
+        'cmbTime
         '
-        Me.Button1.Location = New System.Drawing.Point(746, 137)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(132, 89)
-        Me.Button1.TabIndex = 30
-        Me.Button1.Text = "Oversikt Test"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.cmbTime.FormattingEnabled = True
+        Me.cmbTime.Items.AddRange(New Object() {"10", "11", "12", "13", "14", "15", "16", "17", "18"})
+        Me.cmbTime.Location = New System.Drawing.Point(520, 281)
+        Me.cmbTime.Name = "cmbTime"
+        Me.cmbTime.Size = New System.Drawing.Size(41, 24)
+        Me.cmbTime.TabIndex = 26
+        '
+        'cmbMin
+        '
+        Me.cmbMin.FormattingEnabled = True
+        Me.cmbMin.Items.AddRange(New Object() {"00", "15", "30", "45"})
+        Me.cmbMin.Location = New System.Drawing.Point(584, 281)
+        Me.cmbMin.Name = "cmbMin"
+        Me.cmbMin.Size = New System.Drawing.Size(37, 24)
+        Me.cmbMin.TabIndex = 27
+        '
+        'lblKolon
+        '
+        Me.lblKolon.AutoSize = True
+        Me.lblKolon.Location = New System.Drawing.Point(567, 284)
+        Me.lblKolon.Name = "lblKolon"
+        Me.lblKolon.Size = New System.Drawing.Size(12, 17)
+        Me.lblKolon.TabIndex = 28
+        Me.lblKolon.Text = ":"
         '
         'ansattSide
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(985, 608)
+        Me.ClientSize = New System.Drawing.Size(734, 608)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.TabControl1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "ansattSide"
         Me.Text = "ansattSide"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
@@ -589,7 +623,6 @@ Partial Class ansattSide
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents cBoxOversikt As ComboBox
-    Friend WithEvents ListBox2 As ListBox
     Friend WithEvents endrePwBtn As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents loggutBtn As Button
@@ -601,4 +634,8 @@ Partial Class ansattSide
     Friend WithEvents cBoxProdukt As ComboBox
     Friend WithEvents lblResultat As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents lblKolon As Label
+    Friend WithEvents cmbMin As ComboBox
+    Friend WithEvents cmbTime As ComboBox
+    Friend WithEvents lblKlokkeslett As Label
 End Class

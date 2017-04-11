@@ -25,6 +25,8 @@ Partial Class lederSide
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(lederSide))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.kolonLbl = New System.Windows.Forms.Label()
+        Me.klokkeslettLbl = New System.Windows.Forms.Label()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.endrePwBtn = New System.Windows.Forms.Button()
@@ -63,8 +65,6 @@ Partial Class lederSide
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnLoggUt = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.klokkeslettLbl = New System.Windows.Forms.Label()
-        Me.kolonLbl = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -113,6 +113,24 @@ Partial Class lederSide
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Innkalling"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'kolonLbl
+        '
+        Me.kolonLbl.AutoSize = True
+        Me.kolonLbl.Location = New System.Drawing.Point(558, 276)
+        Me.kolonLbl.Name = "kolonLbl"
+        Me.kolonLbl.Size = New System.Drawing.Size(12, 17)
+        Me.kolonLbl.TabIndex = 27
+        Me.kolonLbl.Text = ":"
+        '
+        'klokkeslettLbl
+        '
+        Me.klokkeslettLbl.AutoSize = True
+        Me.klokkeslettLbl.Location = New System.Drawing.Point(416, 276)
+        Me.klokkeslettLbl.Name = "klokkeslettLbl"
+        Me.klokkeslettLbl.Size = New System.Drawing.Size(80, 17)
+        Me.klokkeslettLbl.TabIndex = 26
+        Me.klokkeslettLbl.Text = "Klokkeslett:"
         '
         'ComboBox3
         '
@@ -504,24 +522,6 @@ Partial Class lederSide
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(984, 68)
         Me.Panel2.TabIndex = 20
-        '
-        'klokkeslettLbl
-        '
-        Me.klokkeslettLbl.AutoSize = True
-        Me.klokkeslettLbl.Location = New System.Drawing.Point(416, 276)
-        Me.klokkeslettLbl.Name = "klokkeslettLbl"
-        Me.klokkeslettLbl.Size = New System.Drawing.Size(80, 17)
-        Me.klokkeslettLbl.TabIndex = 26
-        Me.klokkeslettLbl.Text = "Klokkeslett:"
-        '
-        'kolonLbl
-        '
-        Me.kolonLbl.AutoSize = True
-        Me.kolonLbl.Location = New System.Drawing.Point(558, 276)
-        Me.kolonLbl.Name = "kolonLbl"
-        Me.kolonLbl.Size = New System.Drawing.Size(12, 17)
-        Me.kolonLbl.TabIndex = 27
-        Me.kolonLbl.Text = ":"
         '
         'lederSide
         '
