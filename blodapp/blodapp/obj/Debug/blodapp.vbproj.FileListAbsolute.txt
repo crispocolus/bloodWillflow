@@ -76,3 +76,4 @@ C:\g25\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.brukerSide.resources
 C:\g25\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.egenerklaering.resources
 C:\g25\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.lederSide.resources
 C:\g25\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.ansattSide.resources
+C:\bloodwillflow\blodapp\blodapp\obj\Debug\blodapp.hurtigBestilling.resources

@@ -25,6 +25,11 @@ Partial Class ansattSide
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ansattSide))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.btnHurtigB = New System.Windows.Forms.Button()
+        Me.lblKolon = New System.Windows.Forms.Label()
+        Me.cmbMin = New System.Windows.Forms.ComboBox()
+        Me.cmbTime = New System.Windows.Forms.ComboBox()
+        Me.lblKlokkeslett = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.endrePwBtn = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -65,10 +70,7 @@ Partial Class ansattSide
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.loggutBtn = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.lblKlokkeslett = New System.Windows.Forms.Label()
-        Me.cmbTime = New System.Windows.Forms.ComboBox()
-        Me.cmbMin = New System.Windows.Forms.ComboBox()
-        Me.lblKolon = New System.Windows.Forms.Label()
+        Me.btnLoggUt = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -92,6 +94,7 @@ Partial Class ansattSide
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.btnHurtigB)
         Me.TabPage1.Controls.Add(Me.lblKolon)
         Me.TabPage1.Controls.Add(Me.cmbMin)
         Me.TabPage1.Controls.Add(Me.cmbTime)
@@ -117,9 +120,55 @@ Partial Class ansattSide
         Me.TabPage1.Text = "Innkalling"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'btnHurtigB
+        '
+        Me.btnHurtigB.Location = New System.Drawing.Point(257, 432)
+        Me.btnHurtigB.Name = "btnHurtigB"
+        Me.btnHurtigB.Size = New System.Drawing.Size(123, 23)
+        Me.btnHurtigB.TabIndex = 29
+        Me.btnHurtigB.Text = "Hurtigbestilling"
+        Me.btnHurtigB.UseVisualStyleBackColor = True
+        '
+        'lblKolon
+        '
+        Me.lblKolon.AutoSize = True
+        Me.lblKolon.Location = New System.Drawing.Point(567, 284)
+        Me.lblKolon.Name = "lblKolon"
+        Me.lblKolon.Size = New System.Drawing.Size(12, 17)
+        Me.lblKolon.TabIndex = 28
+        Me.lblKolon.Text = ":"
+        '
+        'cmbMin
+        '
+        Me.cmbMin.FormattingEnabled = True
+        Me.cmbMin.Items.AddRange(New Object() {"00", "15", "30", "45"})
+        Me.cmbMin.Location = New System.Drawing.Point(584, 281)
+        Me.cmbMin.Name = "cmbMin"
+        Me.cmbMin.Size = New System.Drawing.Size(37, 24)
+        Me.cmbMin.TabIndex = 27
+        '
+        'cmbTime
+        '
+        Me.cmbTime.FormattingEnabled = True
+        Me.cmbTime.Items.AddRange(New Object() {"10", "11", "12", "13", "14", "15", "16", "17", "18"})
+        Me.cmbTime.Location = New System.Drawing.Point(520, 281)
+        Me.cmbTime.Name = "cmbTime"
+        Me.cmbTime.Size = New System.Drawing.Size(41, 24)
+        Me.cmbTime.TabIndex = 26
+        '
+        'lblKlokkeslett
+        '
+        Me.lblKlokkeslett.AutoSize = True
+        Me.lblKlokkeslett.Location = New System.Drawing.Point(434, 284)
+        Me.lblKlokkeslett.Name = "lblKlokkeslett"
+        Me.lblKlokkeslett.Size = New System.Drawing.Size(80, 17)
+        Me.lblKlokkeslett.TabIndex = 25
+        Me.lblKlokkeslett.Text = "Klokkeslett:"
+        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.btnLoggUt)
         Me.Panel1.Controls.Add(Me.endrePwBtn)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel1.Location = New System.Drawing.Point(4, 457)
@@ -206,7 +255,7 @@ Partial Class ansattSide
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(272, 17)
+        Me.Label2.Location = New System.Drawing.Point(273, 17)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(77, 17)
@@ -532,41 +581,14 @@ Partial Class ansattSide
         Me.Panel2.Size = New System.Drawing.Size(734, 68)
         Me.Panel2.TabIndex = 20
         '
-        'lblKlokkeslett
+        'btnLoggUt
         '
-        Me.lblKlokkeslett.AutoSize = True
-        Me.lblKlokkeslett.Location = New System.Drawing.Point(434, 284)
-        Me.lblKlokkeslett.Name = "lblKlokkeslett"
-        Me.lblKlokkeslett.Size = New System.Drawing.Size(80, 17)
-        Me.lblKlokkeslett.TabIndex = 25
-        Me.lblKlokkeslett.Text = "Klokkeslett:"
-        '
-        'cmbTime
-        '
-        Me.cmbTime.FormattingEnabled = True
-        Me.cmbTime.Items.AddRange(New Object() {"10", "11", "12", "13", "14", "15", "16", "17", "18"})
-        Me.cmbTime.Location = New System.Drawing.Point(520, 281)
-        Me.cmbTime.Name = "cmbTime"
-        Me.cmbTime.Size = New System.Drawing.Size(41, 24)
-        Me.cmbTime.TabIndex = 26
-        '
-        'cmbMin
-        '
-        Me.cmbMin.FormattingEnabled = True
-        Me.cmbMin.Items.AddRange(New Object() {"00", "15", "30", "45"})
-        Me.cmbMin.Location = New System.Drawing.Point(584, 281)
-        Me.cmbMin.Name = "cmbMin"
-        Me.cmbMin.Size = New System.Drawing.Size(37, 24)
-        Me.cmbMin.TabIndex = 27
-        '
-        'lblKolon
-        '
-        Me.lblKolon.AutoSize = True
-        Me.lblKolon.Location = New System.Drawing.Point(567, 284)
-        Me.lblKolon.Name = "lblKolon"
-        Me.lblKolon.Size = New System.Drawing.Size(12, 17)
-        Me.lblKolon.TabIndex = 28
-        Me.lblKolon.Text = ":"
+        Me.btnLoggUt.Location = New System.Drawing.Point(625, 16)
+        Me.btnLoggUt.Name = "btnLoggUt"
+        Me.btnLoggUt.Size = New System.Drawing.Size(75, 23)
+        Me.btnLoggUt.TabIndex = 14
+        Me.btnLoggUt.Text = "Logg ut"
+        Me.btnLoggUt.UseVisualStyleBackColor = True
         '
         'ansattSide
         '
@@ -638,4 +660,6 @@ Partial Class ansattSide
     Friend WithEvents cmbMin As ComboBox
     Friend WithEvents cmbTime As ComboBox
     Friend WithEvents lblKlokkeslett As Label
+    Friend WithEvents btnHurtigB As Button
+    Friend WithEvents btnLoggUt As Button
 End Class

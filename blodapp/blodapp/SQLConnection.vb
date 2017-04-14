@@ -13,7 +13,7 @@ Public Class Login
 
     'Påloggingskode. Utføres når brukeren logger inn.
     Public Function innlogging()
-        'Importerer oppkobling fra SQL klassen
+        'Importerer diverse klasser for eksterne prosedyrer og funksjoner
         Dim connect As New SQL
         Dim oppkobling = connect.oppkobling
         Dim pros As New prosedyrer
@@ -71,18 +71,23 @@ Public Class BrukerStat
             'Definerer brukerstatus
             Dim brukerstatus As Integer = -1
 
+
+            'SQL spørring som utføres
             Dim sqlSporring = "select brukerstatus from bruker where epost=@brukernavn"
             Dim sql As New MySqlCommand(sqlSporring, oppkobling)
 
             sql.Parameters.AddWithValue("@brukernavn", bnavn)
+            'Utfører spørringen
             sql.ExecuteNonQuery()
 
+            'Setter en leser på sql-spørringen
             Dim leser = sql.ExecuteReader()
             While leser.Read()
                 brukerstatus = (leser("brukerstatus"))
             End While
             leser.Close()
 
+            'Velger riktig side fra totalt 4 brukerstatuser
             Select Case brukerstatus
                 Case "0"
                     brukerSide.Show()
@@ -96,6 +101,7 @@ Public Class BrukerStat
                     MsgBox("En feil oppstod: 'brukerstatus ikke funnet'. Vennligst kontakt personalet.")
             End Select
             oppkobling.Close()
+            'Henter feil om noe gikk galt med spørringen
         Catch ex As MySqlException
             MessageBox.Show("Noe gikk galt: " & ex.Message)
         End Try
@@ -103,6 +109,7 @@ Public Class BrukerStat
 End Class
 
 Public Class RegBruker
+    'Viser til alle felt som fylles når man registerer bruker
     Public Sub sendInfo(postnr As String,
                         gtadresse As String,
                         pnummer As String,
@@ -123,6 +130,7 @@ Public Class RegBruker
         Try
             oppkobling.Open()
 
+            'SQL spørring som utføres 
             Dim sqlSporring = "insert into adresse (post_nr, gateadresse, stednavn) values (@post_nr, @gtadresse)"
 
             Dim sql As New MySqlCommand(sqlSporring, oppkobling)
@@ -144,6 +152,7 @@ Public Class RegBruker
 
             Dim sql2 As New MySqlCommand(sqlSporring2, oppkobling)
 
+            'Utfører SQL-spørringen
             sql2.ExecuteNonQuery()
 
             oppkobling.Close()
@@ -154,7 +163,7 @@ Public Class RegBruker
 End Class
 
 Public Class soking
-
+    'Søkefunksjon. Skal brukes for å søke etter ting i bruker-databasen
     Public Function sokBruker(sokeord As String, sorter As String)
         'Importerer oppkobling fra SQL klassen
         Dim connect As New SQL
@@ -181,6 +190,7 @@ Public Class soking
 End Class
 
 Public Class info
+    'Generisk query-funksjon. Kan velge 'SELECT', 'FROM' og 'WHERE' som parametre. 
     Public Function query(velg As String, fra As String, hvor As String)
         'Importerer oppkobling fra SQL klassen
         Dim connect As New SQL
@@ -204,6 +214,7 @@ Public Class info
         End Try
     End Function
 
+    'Generisk query-join funksjon. Kan velge 'SELECT', 'FROM', 'INNER JOIN' og 'WHERE' som parametre.  
     Public Function queryJoin(velg As String, fra As String, join As String, hvor As String)
         'Importerer oppkobling fra SQL klassen
         Dim connect As New SQL
@@ -227,7 +238,7 @@ Public Class info
             Return tabell
         End Try
     End Function
-
+    'Litt mer spesifikk query. Bruker 'INNER JOIN' og returnerer timer utifra dato. 
     Public Function queryDato(dato As String)
         'Importerer oppkobling fra SQL klassen
         Dim connect As New SQL
@@ -253,7 +264,7 @@ Public Class info
             Return tabell
         End Try
     End Function
-
+    'Genereisk queryUpdate-funksjon. Kan brukes til å oppdatere brukeredata f.eks. Har 'UPDATE', 'SET' og 'WHERE' som parametre. 
     Public Sub queryUpdate(table As String, hvorVerdi As String, where As String)
 
         'Importerer oppkobling fra SQL klassen
@@ -271,8 +282,7 @@ Public Class info
             MessageBox.Show("Noe gikk galt: " & ex.Message)
         End Try
     End Sub
-
-
+    'Prosedyre for å sende innkalling. Bruker person_nr, innkallingsTekst og dato som parametre. 
     Public Sub sendInnkalling(personnummer As String, innkallingTekst As String, dato As String)
         'Importerer oppkobling fra SQL klassen
         Dim connect As New SQL
@@ -299,204 +309,6 @@ Public Class info
 End Class
 
 
-'    'Public Class HentData
-'    Private Function HentData(ByVal sql As String) As DataTable
-'        'Importerer oppkobling fra SQL klassen
-'        Dim connect As New SQL
-'        Dim oppkobling = connect.oppkobling
-
-'        Dim tabell As New DataTable
-'        If connect.paakoblet = False Then
-'            MsgBox("Du er ikke logget inn")
-'        Else
-'            Try
-'                oppkobling.Open()
-'                Dim kommando As New MySqlCommand(sql, oppkobling)
-'                Dim da As New MySqlDataAdapter
-'                da.SelectCommand = kommando
-'                da.Fill(tabell)
-'                oppkobling.Close()
-'            Catch ex As MySqlException
-'                MessageBox.Show("Noe gikk galt: " & ex.Message)
-'            End Try
-'        End If
-'        Return tabell
-'    End Function
-'End Class
-
-'    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-'        Dim sok As String
-'        sok = TextBox4.Text
-
-'        Select Case ComboBox1.Text
-'            Case "fornavn"
-'                sorter = "Fornavn"
-'            Case "etternavn"
-'                sorter = "Etternavn"
-'            Case "epost"
-'                sorter = "Epost"
-'            Case "fdato"
-'                sorter = "Fdato"
-'            Case "id"
-'                sorter = "Id"
-'        End Select
-
-'        Dim tabell As New DataTable
-'        tabell = Sporring("SELECT * FROM Oving4 WHERE " & sorter & " LIKE '%" & sok & "%'")
-
-'        ListBox1.Items.Clear()
-'        For Each rad As DataRow In tabell.Rows
-'            ListBox1.Items.Add(rad("Fornavn") & " " & rad("Etternavn") & " " & rad("Epost") & " " & rad("Fdato"))
-'        Next
-'    End Sub
-
-'    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
-'        Dim age As Double
-'        Dim totalAge As Double
-'        Dim avgAge As Double
-
-'        Try
-
-'            Dim tabell As New DataTable
-'            tabell = Sporring("SELECT Fdato FROM Oving4")
-
-'            For Each rad As DataRow In tabell.Rows
-'                Dim birthDate As Date = (rad("Fdato"))
-'                Dim span As TimeSpan = Date.Now - birthDate
-'                Dim days As Int32 = span.Days
-'                age = span.Days / 365
-'                totalAge += age
-'            Next
-'            avgAge = totalAge / tabell.Rows.Count
-'            ListBox1.Items.Clear()
-'            ListBox1.Items.Add("Gjenomsnittsalderen er " & avgAge)
-
-'        Catch ex As MySqlException
-'            MessageBox.Show("Det oppstod en feil: " & ex.Message)
-'        End Try
-'    End Sub
-
-'    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
-'        Dim ageStorst As Double
-'        Dim eldst As Double
-'        Dim eldstNavn As String
-
-
-'        Try
-'            Dim tabell As New DataTable
-'            tabell = Sporring("SELECT * FROM Oving4")
-
-'            For Each rad As DataRow In tabell.Rows
-'                Dim birthDate As Date = (rad("Fdato"))
-'                Dim span As TimeSpan = Date.Now - birthDate
-'                Dim days As Int32 = span.Days
-'                ageStorst = span.Days / 365
-'                If ageStorst > eldst Then
-'                    eldst = ageStorst
-'                    eldstNavn = rad("Fornavn")
-'                End If
-'            Next
-'            ListBox1.Items.Clear()
-'            ListBox1.Items.Add("Den eldste personen er " & eldstNavn)
-
-'        Catch ex As MySqlException
-'            MessageBox.Show("Det oppstod en feil: " & ex.Message)
-'        End Try
-'    End Sub
-
-'    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
-'        Dim ageMinst As Double
-'        Dim yngst As Double = 999 'Det er meget usannsynelig at noen er over 999 år
-'        Dim yngstNavn As String
-'        Try
-
-'            Dim tabell As New DataTable
-'            tabell = Sporring("SELECT * FROM Oving4")
-
-'            For Each rad As DataRow In tabell.Rows
-'                Dim birthDate As Date = (rad("Fdato"))
-'                Dim span As TimeSpan = Date.Now - birthDate
-'                Dim days As Int32 = span.Days
-'                ageMinst = span.Days / 365
-'                If ageMinst < yngst Then
-'                    yngst = ageMinst
-'                    yngstNavn = rad("Fornavn")
-'                    'ListBox1.Items.Add(yngstNavn & yngst)
-'                End If
-'            Next
-'            ListBox1.Items.Clear()
-'            ListBox1.Items.Add("Den yngste personen er " & yngstNavn)
-
-'        Catch ex As MySqlException
-'            MessageBox.Show("Det oppstod en feil: " & ex.Message)
-
-'        End Try
-'    End Sub
-
-'    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
-'        Dim nummer As Integer
-'        nummer = (ComboBox2.SelectedIndex + 1)
-
-'        Dim tabell As New DataTable
-'        tabell = Sporring("SELECT * FROM Oving4 WHERE Id = '" & nummer & "'")
-
-'        For Each rad As DataRow In tabell.Rows
-'            TextBox5.Text = rad("Fornavn")
-'            TextBox6.Text = rad("Etternavn")
-'            TextBox7.Text = rad("Epost")
-'            TextBox8.Text = rad("Fdato")
-'            Return
-'        Next
-'    End Sub
-
-'    Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
-'        ComboBox2.Items.Clear()
-'        Dim CountTabell As New DataTable
-'        CountTabell = Sporring("SELECT * FROM Oving4")
-
-'        For i As Integer = 1 To CountTabell.Rows.Count
-'            ComboBox2.Items.Add(i)
-'        Next
-'    End Sub
-
-'    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
-'        Dim nummer As Integer
-'        nummer = (ComboBox2.SelectedIndex + 1)
-
-'        Dim tabell As New DataTable
-'        tabell = Sporring("UPDATE Oving4 SET Fornavn='" & TextBox5.Text & "', Etternavn='" & TextBox6.Text & "', Epost='" & TextBox7.Text & "' WHERE Id = '" & nummer & "'")
-'    End Sub
-
-'    Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
-'        status = False
-'        Label5.Text = "Bruker innlogget: NaN"
-'    End Sub
-
-'    Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
-'        oppkobling.Open()
-
-'        If status = False Then
-'            MsgBox("Du har ikke logget inn")
-'        Else
-'            Try
-'                Dim brukernavn = TextBox1.Text
-'                Dim passord = TextBox2.Text
-'                Dim sqlSporring = "insert into brukere (brukernavn, passord) values (@brukernavn, @passord)"
-
-'                Dim sql As New MySqlCommand(sqlSporring, oppkobling)
-
-'                sql.Parameters.AddWithValue("@brukernavn", brukernavn)
-'                sql.Parameters.AddWithValue("@passord", passord)
-
-'                sql.ExecuteNonQuery()
-'                oppkobling.Close()
-'                MsgBox("Du har opprettet bruker med id: " & sql.LastInsertedId)
-'            Catch ex As Exception
-'                MessageBox.Show("Noe gikk galt: " & ex.Message)
-'            End Try
-'        End If
-'    End Sub
-
 '    Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
 '        Dim sqlsporring = "select brukernavn from brukere"
 '        Dim sql As New MySqlCommand(sqlsporring, oppkobling)
@@ -506,23 +318,5 @@ End Class
 '            MsgBox("Bruker : " & leser("brukernavn"))
 '        End While
 '    End Sub
-
-'    Private Function lesTilfeldigVits()
-'        Dim output As String
-'        Dim index As Integer = Math.Round(10 - 1 + 1) * Rnd() + 1
-
-'        oppkobling.Close()
-'        oppkobling.Open()
-
-'        Dim sqlsporring2 = "select text from vits where id = '" & index & "'"
-'        Dim sql2 As New MySqlCommand(sqlsporring2, oppkobling)
-'        Dim leser = sql2.ExecuteReader()
-'        While leser.Read()
-'            output = leser("text")
-'        End While
-'        leser.Close()
-
-'        Return output
-'    End Function
 
 
