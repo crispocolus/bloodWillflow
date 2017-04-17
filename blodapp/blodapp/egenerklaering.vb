@@ -1,4 +1,5 @@
 ﻿Imports System.IO
+Imports System.Linq
 Public Class egenerklaering
 
     Private Sub egenerklaering_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -38,6 +39,8 @@ Public Class egenerklaering
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         TabControl1.SelectedIndex = TabControl1.SelectedIndex + 1
+
+
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -51,4 +54,5 @@ Public Class egenerklaering
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         TabControl1.SelectedIndex = TabControl1.SelectedIndex + 1
     End Sub
+
 End Class
