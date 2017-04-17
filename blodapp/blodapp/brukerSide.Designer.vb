@@ -70,16 +70,17 @@ Partial Class brukerSide
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(34, 24)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(90, 13)
+        Me.Label5.Size = New System.Drawing.Size(120, 17)
         Me.Label5.TabIndex = 1
         Me.Label5.Text = "Velg en ledig time"
         '
         'datoInkallLst
         '
         Me.datoInkallLst.FormattingEnabled = True
+        Me.datoInkallLst.ItemHeight = 16
         Me.datoInkallLst.Location = New System.Drawing.Point(335, 24)
         Me.datoInkallLst.Name = "datoInkallLst"
-        Me.datoInkallLst.Size = New System.Drawing.Size(87, 147)
+        Me.datoInkallLst.Size = New System.Drawing.Size(87, 132)
         Me.datoInkallLst.TabIndex = 2
         '
         'btnSokTime
@@ -94,9 +95,10 @@ Partial Class brukerSide
         'ListBox5
         '
         Me.ListBox5.FormattingEnabled = True
+        Me.ListBox5.ItemHeight = 16
         Me.ListBox5.Location = New System.Drawing.Point(289, 50)
         Me.ListBox5.Name = "ListBox5"
-        Me.ListBox5.Size = New System.Drawing.Size(85, 108)
+        Me.ListBox5.Size = New System.Drawing.Size(85, 100)
         Me.ListBox5.TabIndex = 4
         '
         'Label6
@@ -104,7 +106,7 @@ Partial Class brukerSide
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(297, 21)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(49, 13)
+        Me.Label6.Size = New System.Drawing.Size(65, 17)
         Me.Label6.TabIndex = 5
         Me.Label6.Text = "Giverinfo"
         '
@@ -113,16 +115,17 @@ Partial Class brukerSide
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(165, 21)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(70, 13)
+        Me.Label7.Size = New System.Drawing.Size(94, 17)
         Me.Label7.TabIndex = 6
         Me.Label7.Text = "Personlig info"
         '
         'innkallingLst
         '
         Me.innkallingLst.FormattingEnabled = True
+        Me.innkallingLst.ItemHeight = 16
         Me.innkallingLst.Location = New System.Drawing.Point(12, 50)
         Me.innkallingLst.Name = "innkallingLst"
-        Me.innkallingLst.Size = New System.Drawing.Size(119, 108)
+        Me.innkallingLst.Size = New System.Drawing.Size(119, 100)
         Me.innkallingLst.TabIndex = 8
         '
         'btnAvbestillTime
@@ -139,7 +142,7 @@ Partial Class brukerSide
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(9, 21)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(93, 13)
+        Me.Label8.Size = New System.Drawing.Size(122, 17)
         Me.Label8.TabIndex = 10
         Me.Label8.Text = "Aktive innkallinger"
         '
@@ -165,7 +168,7 @@ Partial Class brukerSide
         '
         Me.fornavnTxt.Location = New System.Drawing.Point(159, 50)
         Me.fornavnTxt.Name = "fornavnTxt"
-        Me.fornavnTxt.Size = New System.Drawing.Size(100, 20)
+        Me.fornavnTxt.Size = New System.Drawing.Size(100, 22)
         Me.fornavnTxt.TabIndex = 13
         Me.fornavnTxt.Visible = False
         '
@@ -173,7 +176,7 @@ Partial Class brukerSide
         '
         Me.etternavnTxt.Location = New System.Drawing.Point(159, 87)
         Me.etternavnTxt.Name = "etternavnTxt"
-        Me.etternavnTxt.Size = New System.Drawing.Size(100, 20)
+        Me.etternavnTxt.Size = New System.Drawing.Size(100, 22)
         Me.etternavnTxt.TabIndex = 14
         Me.etternavnTxt.Visible = False
         '
@@ -181,7 +184,7 @@ Partial Class brukerSide
         '
         Me.telefonTxt.Location = New System.Drawing.Point(159, 125)
         Me.telefonTxt.Name = "telefonTxt"
-        Me.telefonTxt.Size = New System.Drawing.Size(100, 20)
+        Me.telefonTxt.Size = New System.Drawing.Size(100, 22)
         Me.telefonTxt.TabIndex = 15
         Me.telefonTxt.Visible = False
         '
@@ -189,7 +192,7 @@ Partial Class brukerSide
         '
         Me.epostTxt.Location = New System.Drawing.Point(159, 171)
         Me.epostTxt.Name = "epostTxt"
-        Me.epostTxt.Size = New System.Drawing.Size(100, 20)
+        Me.epostTxt.Size = New System.Drawing.Size(100, 22)
         Me.epostTxt.TabIndex = 16
         Me.epostTxt.Visible = False
         '
@@ -224,10 +227,10 @@ Partial Class brukerSide
         Me.TabPage1.Controls.Add(Me.Label7)
         Me.TabPage1.Controls.Add(Me.ListBox5)
         Me.TabPage1.Controls.Add(Me.Label6)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 25)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(745, 377)
+        Me.TabPage1.Size = New System.Drawing.Size(745, 374)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Min side"
         '
@@ -235,7 +238,7 @@ Partial Class brukerSide
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Location = New System.Drawing.Point(3, 309)
+        Me.Panel1.Location = New System.Drawing.Point(3, 306)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(739, 65)
         Me.Panel1.TabIndex = 25
@@ -254,7 +257,7 @@ Partial Class brukerSide
         Me.lblEpost.AutoSize = True
         Me.lblEpost.Location = New System.Drawing.Point(156, 176)
         Me.lblEpost.Name = "lblEpost"
-        Me.lblEpost.Size = New System.Drawing.Size(45, 13)
+        Me.lblEpost.Size = New System.Drawing.Size(59, 17)
         Me.lblEpost.TabIndex = 21
         Me.lblEpost.Text = "Label12"
         '
@@ -263,7 +266,7 @@ Partial Class brukerSide
         Me.lblTlf.AutoSize = True
         Me.lblTlf.Location = New System.Drawing.Point(156, 128)
         Me.lblTlf.Name = "lblTlf"
-        Me.lblTlf.Size = New System.Drawing.Size(45, 13)
+        Me.lblTlf.Size = New System.Drawing.Size(59, 17)
         Me.lblTlf.TabIndex = 20
         Me.lblTlf.Text = "Label11"
         '
@@ -272,7 +275,7 @@ Partial Class brukerSide
         Me.lblEtternavn.AutoSize = True
         Me.lblEtternavn.Location = New System.Drawing.Point(156, 92)
         Me.lblEtternavn.Name = "lblEtternavn"
-        Me.lblEtternavn.Size = New System.Drawing.Size(45, 13)
+        Me.lblEtternavn.Size = New System.Drawing.Size(59, 17)
         Me.lblEtternavn.TabIndex = 19
         Me.lblEtternavn.Text = "Label10"
         '
@@ -281,7 +284,7 @@ Partial Class brukerSide
         Me.lblFornavn.AutoSize = True
         Me.lblFornavn.Location = New System.Drawing.Point(156, 53)
         Me.lblFornavn.Name = "lblFornavn"
-        Me.lblFornavn.Size = New System.Drawing.Size(39, 13)
+        Me.lblFornavn.Size = New System.Drawing.Size(51, 17)
         Me.lblFornavn.TabIndex = 18
         Me.lblFornavn.Text = "Label9"
         '
@@ -301,10 +304,10 @@ Partial Class brukerSide
         Me.TabPage2.Controls.Add(Me.Label5)
         Me.TabPage2.Controls.Add(Me.datoInkallLst)
         Me.TabPage2.Controls.Add(Me.btnSokTime)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 25)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(745, 377)
+        Me.TabPage2.Size = New System.Drawing.Size(745, 374)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Bestill time"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -313,7 +316,7 @@ Partial Class brukerSide
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel3.Location = New System.Drawing.Point(3, 309)
+        Me.Panel3.Location = New System.Drawing.Point(3, 306)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(739, 65)
         Me.Panel3.TabIndex = 25

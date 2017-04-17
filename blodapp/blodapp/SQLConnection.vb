@@ -308,9 +308,48 @@ Public Class info
     End Sub
 End Class
 
+Public Class EgenErk
+    Public Sub sendEgenErk(pnummer As String)
+        'Importerer oppkobling fra SQL klassen
+        Dim info As New info
+        Dim connect As New SQL
+        Dim oppkobling = connect.oppkobling
+
+        Try
+            oppkobling.Open()
+
+            'SQL spørring som utføres 
+            Dim sqlSporring = "insert into skjema (person_nr, dato) values (" & pnummer & ", CURDATE())"
+
+            Dim sql As New MySqlCommand(sqlSporring, oppkobling)
+            sql.ExecuteNonQuery()
+
+            info.queryUpdate("blodgiver", "sendSms = " & egenerklaering.svar(0) & ", sendEpost= '" & egenerklaering.svar(1) & "'", "person_nr = '" & pnummer & "'")
+
+            'Dim sqlSporring2 = "UPDATE blodgiver SET sendSms= '" & egenerklaering.svar(1) & "', sendEpost= '" & egenerklaering.svar(2) & "' WHERE person_nr = '" & pnummer & "')"
+            'Dim sqlSporring2 = "INSERT INTO besvar VALUES(" & pnummer & ")"
+            'Dim sqlSporring2 = "INSERT INTO fire_uker VALUES(" & pnummer & ")"
+            'Dim sqlSporring2 = "INSERT INTO to_aar VALUES(" & pnummer & ")"
+            'Dim sqlSporring2 = "INSERT INTO seks_mnd VALUES(" & pnummer & ")"
+            'Dim sqlSporring2 = "INSERT INTO livet VALUES(" & pnummer & ")"
+            'Dim sqlSporring2 = "INSERT INTO kvinner VALUES(" & pnummer & ")"
+            'Dim sqlSporring2 = "INSERT INTO menn VALUES(" & pnummer & ")"
+
+            'Dim sql2 As New MySqlCommand(sqlSporring2, oppkobling)
+
+            'Utfører SQL-spørringen
+            'sql2.ExecuteNonQuery()
+
+            oppkobling.Close()
+        Catch ex As Exception
+            MessageBox.Show("Noe gikk galt " & ex.Message)
+        End Try
+    End Sub
+End Class
+
 
 '    Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
-'        Dim sqlsporring = "select brukernavn from brukere"
+'        Dim sqlsporring = "Select brukernavn from brukere"
 '        Dim sql As New MySqlCommand(sqlsporring, oppkobling)
 '        Dim leser = sql.ExecuteReader()
 

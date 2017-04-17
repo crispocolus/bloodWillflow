@@ -98,5 +98,4 @@ Public Class brukerSide
         pros.endrePw(LoginForm.bnavn)
     End Sub
 
-
 End Class
