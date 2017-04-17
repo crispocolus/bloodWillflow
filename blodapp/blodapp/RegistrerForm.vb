@@ -14,7 +14,7 @@ Public Class RegistrerForm
         Dim data As DataTable
         data = info.query("epost", "bruker", "epost = '" & epost & "';")
 
-        MsgBox(data.Rows.Count)
+        'MsgBox(data.Rows.Count)
 
         Dim godkjentEpost As Boolean = False
         Dim godkjentTelefon As Boolean = False
@@ -25,7 +25,7 @@ Public Class RegistrerForm
                 MsgBox("E-posten finnes fra før. Har du glemt passord?")
             Else
                 godkjentEpost = True
-                MsgBox(godkjentEpost)
+                'MsgBox(godkjentEpost)
             End If
         Else
             MsgBox("Epost ikke godkjent. Sjekk om du har husket @")
@@ -76,7 +76,7 @@ Public Class RegistrerForm
             fdato += (Mid(person_nr, i, 1))
         Next i
 
-        MsgBox(fdato)
+        'MsgBox(fdato)
         Return fdato
     End Function
 

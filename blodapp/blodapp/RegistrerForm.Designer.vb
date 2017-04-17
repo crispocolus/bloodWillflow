@@ -171,6 +171,7 @@ Partial Class RegistrerForm
         '
         Me.passordcTxt.Location = New System.Drawing.Point(189, 200)
         Me.passordcTxt.Name = "passordcTxt"
+        Me.passordcTxt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.passordcTxt.Size = New System.Drawing.Size(100, 20)
         Me.passordcTxt.TabIndex = 9
         '
@@ -178,6 +179,7 @@ Partial Class RegistrerForm
         '
         Me.passordTxt.Location = New System.Drawing.Point(189, 156)
         Me.passordTxt.Name = "passordTxt"
+        Me.passordTxt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.passordTxt.Size = New System.Drawing.Size(100, 20)
         Me.passordTxt.TabIndex = 8
         '
