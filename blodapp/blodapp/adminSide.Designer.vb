@@ -68,6 +68,22 @@ Partial Class adminSide
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnLoggUt = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -88,6 +104,22 @@ Partial Class adminSide
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Button3)
+        Me.TabPage1.Controls.Add(Me.Label21)
+        Me.TabPage1.Controls.Add(Me.Label20)
+        Me.TabPage1.Controls.Add(Me.Label19)
+        Me.TabPage1.Controls.Add(Me.Label18)
+        Me.TabPage1.Controls.Add(Me.Label17)
+        Me.TabPage1.Controls.Add(Me.Label16)
+        Me.TabPage1.Controls.Add(Me.Label15)
+        Me.TabPage1.Controls.Add(Me.Label8)
+        Me.TabPage1.Controls.Add(Me.TextBox7)
+        Me.TabPage1.Controls.Add(Me.TextBox6)
+        Me.TabPage1.Controls.Add(Me.TextBox5)
+        Me.TabPage1.Controls.Add(Me.TextBox4)
+        Me.TabPage1.Controls.Add(Me.TextBox3)
+        Me.TabPage1.Controls.Add(Me.TextBox2)
+        Me.TabPage1.Controls.Add(Me.TextBox1)
         Me.TabPage1.Controls.Add(Me.Panel1)
         Me.TabPage1.Controls.Add(Me.endrePwBtn)
         Me.TabPage1.Controls.Add(Me.Label6)
@@ -179,7 +211,7 @@ Partial Class adminSide
         Me.btnEndrePersoninfo.Name = "btnEndrePersoninfo"
         Me.btnEndrePersoninfo.Size = New System.Drawing.Size(161, 28)
         Me.btnEndrePersoninfo.TabIndex = 17
-        Me.btnEndrePersoninfo.Text = "Personinformasjon"
+        Me.btnEndrePersoninfo.Text = "Lagre ny info"
         Me.btnEndrePersoninfo.UseVisualStyleBackColor = True
         '
         'Label4
@@ -239,7 +271,7 @@ Partial Class adminSide
         Me.sokTxt.Name = "sokTxt"
         Me.sokTxt.Size = New System.Drawing.Size(135, 22)
         Me.sokTxt.TabIndex = 11
-        Me.sokTxt.Text = "Søk etter navn"
+        Me.sokTxt.Text = "bjarne"
         '
         'Label1
         '
@@ -255,7 +287,7 @@ Partial Class adminSide
         '
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.ItemHeight = 16
-        Me.ListBox1.Location = New System.Drawing.Point(11, 31)
+        Me.ListBox1.Location = New System.Drawing.Point(8, 31)
         Me.ListBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(212, 196)
@@ -548,6 +580,137 @@ Partial Class adminSide
         Me.btnLoggUt.Text = "Logg ut"
         Me.btnLoggUt.UseVisualStyleBackColor = True
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(663, 28)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(130, 22)
+        Me.TextBox1.TabIndex = 0
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(663, 56)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(130, 22)
+        Me.TextBox2.TabIndex = 24
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(663, 84)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(130, 22)
+        Me.TextBox3.TabIndex = 25
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(663, 112)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(130, 22)
+        Me.TextBox4.TabIndex = 26
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(663, 140)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(130, 22)
+        Me.TextBox5.TabIndex = 27
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Location = New System.Drawing.Point(663, 168)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(130, 22)
+        Me.TextBox6.TabIndex = 28
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Location = New System.Drawing.Point(663, 196)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(130, 22)
+        Me.TextBox7.TabIndex = 29
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(248, 245)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(51, 17)
+        Me.Label8.TabIndex = 30
+        Me.Label8.Text = "Label8"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(566, 28)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(60, 17)
+        Me.Label15.TabIndex = 31
+        Me.Label15.Text = "Fornavn"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(566, 56)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(62, 20)
+        Me.Label16.TabIndex = 32
+        Me.Label16.Text = "Etternavn"
+        Me.Label16.UseCompatibleTextRendering = True
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(566, 84)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(49, 17)
+        Me.Label17.TabIndex = 33
+        Me.Label17.Text = "E-post"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(566, 111)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(24, 17)
+        Me.Label18.TabIndex = 34
+        Me.Label18.Text = "Tlf"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(566, 140)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(60, 17)
+        Me.Label19.TabIndex = 35
+        Me.Label19.Text = "Adresse"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(566, 168)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(53, 17)
+        Me.Label20.TabIndex = 36
+        Me.Label20.Text = "Post nr"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(566, 196)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(63, 17)
+        Me.Label21.TabIndex = 37
+        Me.Label21.Text = "Blodtype"
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(417, 105)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(115, 65)
+        Me.Button3.TabIndex = 38
+        Me.Button3.Text = "Test - Last inn info"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'adminSide
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -613,4 +776,20 @@ Partial Class adminSide
     Friend WithEvents Panel2 As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnLoggUt As Button
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents Label19 As Label
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Button3 As Button
 End Class
