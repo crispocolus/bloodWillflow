@@ -52,25 +52,78 @@ Partial Class egenerklaering
         Me.radEgenSMSNei = New System.Windows.Forms.RadioButton()
         Me.radEgenSMSJa = New System.Windows.Forms.RadioButton()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Panel64 = New System.Windows.Forms.Panel()
         Me.radEgen2SorAmerikaNei = New System.Windows.Forms.RadioButton()
         Me.radEgen2SorAmerikaJa = New System.Windows.Forms.RadioButton()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.radEgen2infoJa = New System.Windows.Forms.RadioButton()
+        Me.radEgen2infoNei = New System.Windows.Forms.RadioButton()
+        Me.Panel20 = New System.Windows.Forms.Panel()
+        Me.Panel21 = New System.Windows.Forms.Panel()
+        Me.radEgen2Forskning12mndJa = New System.Windows.Forms.RadioButton()
+        Me.radEgen2Forskning12mndNei = New System.Windows.Forms.RadioButton()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Panel18 = New System.Windows.Forms.Panel()
+        Me.radEgen2Afrika5AarJa = New System.Windows.Forms.RadioButton()
+        Me.radEgen2Afrika5AarNei = New System.Windows.Forms.RadioButton()
+        Me.radEgen2SamtykkeNei = New System.Windows.Forms.RadioButton()
+        Me.Panel16 = New System.Windows.Forms.Panel()
+        Me.rbMalariaNei = New System.Windows.Forms.RadioButton()
+        Me.rbMalariaJa = New System.Windows.Forms.RadioButton()
         Me.Label41 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
         Me.Label40 = New System.Windows.Forms.Label()
+        Me.Panel14 = New System.Windows.Forms.Panel()
+        Me.rbBGNei = New System.Windows.Forms.RadioButton()
+        Me.rbGBJa = New System.Windows.Forms.RadioButton()
         Me.Label39 = New System.Windows.Forms.Label()
+        Me.Label30 = New System.Windows.Forms.Label()
         Me.Label38 = New System.Windows.Forms.Label()
         Me.Label37 = New System.Windows.Forms.Label()
+        Me.Panel11 = New System.Windows.Forms.Panel()
+        Me.radEgen2Narkotika12mndJa = New System.Windows.Forms.RadioButton()
+        Me.radEgen2Narkotika12mndNei = New System.Windows.Forms.RadioButton()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.radEgen2FemtiJa = New System.Windows.Forms.RadioButton()
+        Me.radEgen2FemtiNei = New System.Windows.Forms.RadioButton()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.radEgen2FriskJa = New System.Windows.Forms.RadioButton()
+        Me.radEgen2FriskNei = New System.Windows.Forms.RadioButton()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.radEgen2FriskSistJa = New System.Windows.Forms.RadioButton()
+        Me.radEgen2FriskSistNei = New System.Windows.Forms.RadioButton()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.radEgen2HudSykJa = New System.Windows.Forms.RadioButton()
+        Me.radEgen2HudSykNei = New System.Windows.Forms.RadioButton()
         Me.Label35 = New System.Windows.Forms.Label()
+        Me.Label36 = New System.Windows.Forms.Label()
         Me.Label34 = New System.Windows.Forms.Label()
+        Me.Panel12 = New System.Windows.Forms.Panel()
+        Me.radEgen2CjdJa = New System.Windows.Forms.RadioButton()
+        Me.radEgen2CjdNei = New System.Windows.Forms.RadioButton()
         Me.Label33 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label32 = New System.Windows.Forms.Label()
+        Me.Panel17 = New System.Windows.Forms.Panel()
+        Me.radEgen2Malaria6MndJa = New System.Windows.Forms.RadioButton()
+        Me.radEgen2Malaria6MndNei = New System.Windows.Forms.RadioButton()
         Me.Label29 = New System.Windows.Forms.Label()
+        Me.Panel13 = New System.Windows.Forms.Panel()
+        Me.radEgen2PiercJa = New System.Windows.Forms.RadioButton()
+        Me.radEgen2PiercNei = New System.Windows.Forms.RadioButton()
         Me.Label28 = New System.Windows.Forms.Label()
+        Me.Panel19 = New System.Windows.Forms.Panel()
+        Me.radEgen2ForskningJa = New System.Windows.Forms.RadioButton()
+        Me.radEgen2ForskningNei = New System.Windows.Forms.RadioButton()
         Me.Label27 = New System.Windows.Forms.Label()
+        Me.radEgen2SamtykkeJa = New System.Windows.Forms.RadioButton()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -97,59 +150,7 @@ Partial Class egenerklaering
         Me.lblEgen2Frisk = New System.Windows.Forms.Label()
         Me.lblEgen2InfoBlod = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Panel20 = New System.Windows.Forms.Panel()
-        Me.Panel21 = New System.Windows.Forms.Panel()
-        Me.radEgen2Forskning12mndJa = New System.Windows.Forms.RadioButton()
-        Me.radEgen2Forskning12mndNei = New System.Windows.Forms.RadioButton()
-        Me.Panel19 = New System.Windows.Forms.Panel()
-        Me.radEgen2ForskningJa = New System.Windows.Forms.RadioButton()
-        Me.radEgen2ForskningNei = New System.Windows.Forms.RadioButton()
-        Me.Panel18 = New System.Windows.Forms.Panel()
-        Me.radEgen2Afrika5AarJa = New System.Windows.Forms.RadioButton()
-        Me.radEgen2Afrika5AarNei = New System.Windows.Forms.RadioButton()
-        Me.Panel17 = New System.Windows.Forms.Panel()
-        Me.radEgen2Malaria6MndJa = New System.Windows.Forms.RadioButton()
-        Me.radEgen2Malaria6MndNei = New System.Windows.Forms.RadioButton()
-        Me.Panel16 = New System.Windows.Forms.Panel()
-        Me.rbMalariaNei = New System.Windows.Forms.RadioButton()
-        Me.rbMalariaJa = New System.Windows.Forms.RadioButton()
-        Me.Panel14 = New System.Windows.Forms.Panel()
-        Me.rbBGNei = New System.Windows.Forms.RadioButton()
-        Me.rbGBJa = New System.Windows.Forms.RadioButton()
-        Me.Panel12 = New System.Windows.Forms.Panel()
-        Me.radEgen2CjdJa = New System.Windows.Forms.RadioButton()
-        Me.radEgen2CjdNei = New System.Windows.Forms.RadioButton()
-        Me.Panel11 = New System.Windows.Forms.Panel()
-        Me.radEgen2Narkotika12mndJa = New System.Windows.Forms.RadioButton()
-        Me.radEgen2Narkotika12mndNei = New System.Windows.Forms.RadioButton()
-        Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.Panel10 = New System.Windows.Forms.Panel()
-        Me.Panel9 = New System.Windows.Forms.Panel()
-        Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.radEgen2HudSykJa = New System.Windows.Forms.RadioButton()
-        Me.radEgen2HudSykNei = New System.Windows.Forms.RadioButton()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.radEgen2FemtiJa = New System.Windows.Forms.RadioButton()
-        Me.radEgen2FemtiNei = New System.Windows.Forms.RadioButton()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.radEgen2FriskSistJa = New System.Windows.Forms.RadioButton()
-        Me.radEgen2FriskSistNei = New System.Windows.Forms.RadioButton()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.radEgen2FriskJa = New System.Windows.Forms.RadioButton()
-        Me.radEgen2FriskNei = New System.Windows.Forms.RadioButton()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.radEgen2infoJa = New System.Windows.Forms.RadioButton()
-        Me.radEgen2infoNei = New System.Windows.Forms.RadioButton()
-        Me.Label36 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label30 = New System.Windows.Forms.Label()
-        Me.Label31 = New System.Windows.Forms.Label()
-        Me.Panel13 = New System.Windows.Forms.Panel()
-        Me.radEgen2PiercJa = New System.Windows.Forms.RadioButton()
-        Me.radEgen2PiercNei = New System.Windows.Forms.RadioButton()
-        Me.radEgen2SamtykkeJa = New System.Windows.Forms.RadioButton()
         Me.Label25 = New System.Windows.Forms.Label()
-        Me.radEgen2SamtykkeNei = New System.Windows.Forms.RadioButton()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label86 = New System.Windows.Forms.Label()
@@ -417,21 +418,21 @@ Partial Class egenerklaering
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
+        Me.Panel64.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         Me.Panel20.SuspendLayout()
-        Me.Panel19.SuspendLayout()
         Me.Panel18.SuspendLayout()
-        Me.Panel17.SuspendLayout()
         Me.Panel16.SuspendLayout()
         Me.Panel14.SuspendLayout()
-        Me.Panel12.SuspendLayout()
         Me.Panel11.SuspendLayout()
-        Me.Panel7.SuspendLayout()
         Me.Panel6.SuspendLayout()
-        Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        Me.Panel3.SuspendLayout()
+        Me.Panel5.SuspendLayout()
+        Me.Panel7.SuspendLayout()
+        Me.Panel12.SuspendLayout()
+        Me.Panel17.SuspendLayout()
         Me.Panel13.SuspendLayout()
+        Me.Panel19.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.Panel25.SuspendLayout()
@@ -499,7 +500,7 @@ Partial Class egenerklaering
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(4)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(780, 943)
+        Me.TabControl1.Size = New System.Drawing.Size(1551, 943)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage1
@@ -530,7 +531,7 @@ Partial Class egenerklaering
         Me.TabPage1.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(4)
-        Me.TabPage1.Size = New System.Drawing.Size(772, 914)
+        Me.TabPage1.Size = New System.Drawing.Size(1543, 914)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Personinfo"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -541,7 +542,7 @@ Partial Class egenerklaering
         Me.btnEgenNext.Margin = New System.Windows.Forms.Padding(4)
         Me.btnEgenNext.Name = "btnEgenNext"
         Me.btnEgenNext.Size = New System.Drawing.Size(316, 28)
-        Me.btnEgenNext.TabIndex = 47
+        Me.btnEgenNext.TabIndex = 10
         Me.btnEgenNext.Text = "Jeg har lest og vil vidre til neste side."
         Me.btnEgenNext.UseVisualStyleBackColor = True
         '
@@ -582,7 +583,7 @@ Partial Class egenerklaering
         Me.txtEgenEpost.Margin = New System.Windows.Forms.Padding(4)
         Me.txtEgenEpost.Name = "txtEgenEpost"
         Me.txtEgenEpost.Size = New System.Drawing.Size(132, 22)
-        Me.txtEgenEpost.TabIndex = 39
+        Me.txtEgenEpost.TabIndex = 7
         '
         'lblEgenEpost
         '
@@ -600,7 +601,7 @@ Partial Class egenerklaering
         Me.txtEgenTlf.Margin = New System.Windows.Forms.Padding(4)
         Me.txtEgenTlf.Name = "txtEgenTlf"
         Me.txtEgenTlf.Size = New System.Drawing.Size(132, 22)
-        Me.txtEgenTlf.TabIndex = 37
+        Me.txtEgenTlf.TabIndex = 6
         '
         'lblEgenTlf
         '
@@ -618,7 +619,7 @@ Partial Class egenerklaering
         Me.txtEgenPost_nr.Margin = New System.Windows.Forms.Padding(4)
         Me.txtEgenPost_nr.Name = "txtEgenPost_nr"
         Me.txtEgenPost_nr.Size = New System.Drawing.Size(132, 22)
-        Me.txtEgenPost_nr.TabIndex = 32
+        Me.txtEgenPost_nr.TabIndex = 5
         '
         'lblEgenPost_nr
         '
@@ -636,7 +637,7 @@ Partial Class egenerklaering
         Me.txtEgenPrivatadresse.Margin = New System.Windows.Forms.Padding(4)
         Me.txtEgenPrivatadresse.Name = "txtEgenPrivatadresse"
         Me.txtEgenPrivatadresse.Size = New System.Drawing.Size(132, 22)
-        Me.txtEgenPrivatadresse.TabIndex = 30
+        Me.txtEgenPrivatadresse.TabIndex = 4
         '
         'lblEgenPrivatadresse
         '
@@ -684,7 +685,7 @@ Partial Class egenerklaering
         Me.txtEgenPerson_nr.Margin = New System.Windows.Forms.Padding(4)
         Me.txtEgenPerson_nr.Name = "txtEgenPerson_nr"
         Me.txtEgenPerson_nr.Size = New System.Drawing.Size(132, 22)
-        Me.txtEgenPerson_nr.TabIndex = 28
+        Me.txtEgenPerson_nr.TabIndex = 3
         '
         'txtEgenEtternavn
         '
@@ -692,7 +693,7 @@ Partial Class egenerklaering
         Me.txtEgenEtternavn.Margin = New System.Windows.Forms.Padding(4)
         Me.txtEgenEtternavn.Name = "txtEgenEtternavn"
         Me.txtEgenEtternavn.Size = New System.Drawing.Size(132, 22)
-        Me.txtEgenEtternavn.TabIndex = 27
+        Me.txtEgenEtternavn.TabIndex = 2
         '
         'txtEgenFornavn
         '
@@ -700,7 +701,7 @@ Partial Class egenerklaering
         Me.txtEgenFornavn.Margin = New System.Windows.Forms.Padding(4)
         Me.txtEgenFornavn.Name = "txtEgenFornavn"
         Me.txtEgenFornavn.Size = New System.Drawing.Size(132, 22)
-        Me.txtEgenFornavn.TabIndex = 26
+        Me.txtEgenFornavn.TabIndex = 1
         '
         'ChkSomFor
         '
@@ -731,7 +732,7 @@ Partial Class egenerklaering
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(136, 31)
-        Me.Panel1.TabIndex = 48
+        Me.Panel1.TabIndex = 8
         '
         'radEgenEpostNei
         '
@@ -765,7 +766,7 @@ Partial Class egenerklaering
         Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(136, 33)
-        Me.Panel2.TabIndex = 49
+        Me.Panel2.TabIndex = 9
         '
         'radEgenSMSNei
         '
@@ -793,25 +794,44 @@ Partial Class egenerklaering
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.Panel64)
+        Me.TabPage2.Controls.Add(Me.Panel3)
+        Me.TabPage2.Controls.Add(Me.Panel20)
         Me.TabPage2.Controls.Add(Me.Button1)
         Me.TabPage2.Controls.Add(Me.Label4)
-        Me.TabPage2.Controls.Add(Me.radEgen2SorAmerikaNei)
-        Me.TabPage2.Controls.Add(Me.radEgen2SorAmerikaJa)
+        Me.TabPage2.Controls.Add(Me.Panel18)
+        Me.TabPage2.Controls.Add(Me.radEgen2SamtykkeNei)
+        Me.TabPage2.Controls.Add(Me.Panel16)
         Me.TabPage2.Controls.Add(Me.Label41)
+        Me.TabPage2.Controls.Add(Me.Label31)
         Me.TabPage2.Controls.Add(Me.Label40)
+        Me.TabPage2.Controls.Add(Me.Panel14)
         Me.TabPage2.Controls.Add(Me.Label39)
+        Me.TabPage2.Controls.Add(Me.Label30)
         Me.TabPage2.Controls.Add(Me.Label38)
         Me.TabPage2.Controls.Add(Me.Label37)
+        Me.TabPage2.Controls.Add(Me.Panel11)
         Me.TabPage2.Controls.Add(Me.Label8)
+        Me.TabPage2.Controls.Add(Me.Panel6)
+        Me.TabPage2.Controls.Add(Me.Panel4)
         Me.TabPage2.Controls.Add(Me.Label7)
+        Me.TabPage2.Controls.Add(Me.Panel5)
         Me.TabPage2.Controls.Add(Me.Label6)
+        Me.TabPage2.Controls.Add(Me.Panel7)
         Me.TabPage2.Controls.Add(Me.Label35)
+        Me.TabPage2.Controls.Add(Me.Label36)
         Me.TabPage2.Controls.Add(Me.Label34)
+        Me.TabPage2.Controls.Add(Me.Panel12)
         Me.TabPage2.Controls.Add(Me.Label33)
+        Me.TabPage2.Controls.Add(Me.ComboBox1)
         Me.TabPage2.Controls.Add(Me.Label32)
+        Me.TabPage2.Controls.Add(Me.Panel17)
         Me.TabPage2.Controls.Add(Me.Label29)
+        Me.TabPage2.Controls.Add(Me.Panel13)
         Me.TabPage2.Controls.Add(Me.Label28)
+        Me.TabPage2.Controls.Add(Me.Panel19)
         Me.TabPage2.Controls.Add(Me.Label27)
+        Me.TabPage2.Controls.Add(Me.radEgen2SamtykkeJa)
         Me.TabPage2.Controls.Add(Me.Label26)
         Me.TabPage2.Controls.Add(Me.Label11)
         Me.TabPage2.Controls.Add(Me.Label10)
@@ -838,14 +858,120 @@ Partial Class egenerklaering
         Me.TabPage2.Controls.Add(Me.lblEgen2Frisk)
         Me.TabPage2.Controls.Add(Me.lblEgen2InfoBlod)
         Me.TabPage2.Controls.Add(Me.GroupBox2)
+        Me.TabPage2.Controls.Add(Me.Label25)
         Me.TabPage2.Location = New System.Drawing.Point(4, 25)
         Me.TabPage2.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(4)
-        Me.TabPage2.Size = New System.Drawing.Size(772, 914)
+        Me.TabPage2.Size = New System.Drawing.Size(1543, 914)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Side 1"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'Panel64
+        '
+        Me.Panel64.Controls.Add(Me.radEgen2SorAmerikaNei)
+        Me.Panel64.Controls.Add(Me.radEgen2SorAmerikaJa)
+        Me.Panel64.Location = New System.Drawing.Point(1039, 609)
+        Me.Panel64.Name = "Panel64"
+        Me.Panel64.Size = New System.Drawing.Size(146, 41)
+        Me.Panel64.TabIndex = 164
+        '
+        'radEgen2SorAmerikaNei
+        '
+        Me.radEgen2SorAmerikaNei.AutoSize = True
+        Me.radEgen2SorAmerikaNei.Location = New System.Drawing.Point(74, 12)
+        Me.radEgen2SorAmerikaNei.Margin = New System.Windows.Forms.Padding(4)
+        Me.radEgen2SorAmerikaNei.Name = "radEgen2SorAmerikaNei"
+        Me.radEgen2SorAmerikaNei.Size = New System.Drawing.Size(50, 21)
+        Me.radEgen2SorAmerikaNei.TabIndex = 99
+        Me.radEgen2SorAmerikaNei.Text = "Nei"
+        Me.radEgen2SorAmerikaNei.UseVisualStyleBackColor = True
+        '
+        'radEgen2SorAmerikaJa
+        '
+        Me.radEgen2SorAmerikaJa.AutoSize = True
+        Me.radEgen2SorAmerikaJa.Location = New System.Drawing.Point(14, 13)
+        Me.radEgen2SorAmerikaJa.Margin = New System.Windows.Forms.Padding(4)
+        Me.radEgen2SorAmerikaJa.Name = "radEgen2SorAmerikaJa"
+        Me.radEgen2SorAmerikaJa.Size = New System.Drawing.Size(44, 21)
+        Me.radEgen2SorAmerikaJa.TabIndex = 98
+        Me.radEgen2SorAmerikaJa.Text = "Ja"
+        Me.radEgen2SorAmerikaJa.UseVisualStyleBackColor = True
+        '
+        'Panel3
+        '
+        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel3.Controls.Add(Me.radEgen2infoJa)
+        Me.Panel3.Controls.Add(Me.radEgen2infoNei)
+        Me.Panel3.Location = New System.Drawing.Point(1008, 30)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(107, 27)
+        Me.Panel3.TabIndex = 11
+        '
+        'radEgen2infoJa
+        '
+        Me.radEgen2infoJa.AutoSize = True
+        Me.radEgen2infoJa.Location = New System.Drawing.Point(4, 1)
+        Me.radEgen2infoJa.Margin = New System.Windows.Forms.Padding(4)
+        Me.radEgen2infoJa.Name = "radEgen2infoJa"
+        Me.radEgen2infoJa.Size = New System.Drawing.Size(44, 21)
+        Me.radEgen2infoJa.TabIndex = 185
+        Me.radEgen2infoJa.Text = "Ja"
+        Me.radEgen2infoJa.UseVisualStyleBackColor = True
+        '
+        'radEgen2infoNei
+        '
+        Me.radEgen2infoNei.AutoSize = True
+        Me.radEgen2infoNei.Location = New System.Drawing.Point(52, 1)
+        Me.radEgen2infoNei.Margin = New System.Windows.Forms.Padding(4)
+        Me.radEgen2infoNei.Name = "radEgen2infoNei"
+        Me.radEgen2infoNei.Size = New System.Drawing.Size(50, 21)
+        Me.radEgen2infoNei.TabIndex = 63
+        Me.radEgen2infoNei.Text = "Nei"
+        Me.radEgen2infoNei.UseVisualStyleBackColor = True
+        '
+        'Panel20
+        '
+        Me.Panel20.Controls.Add(Me.Panel21)
+        Me.Panel20.Controls.Add(Me.radEgen2Forskning12mndJa)
+        Me.Panel20.Controls.Add(Me.radEgen2Forskning12mndNei)
+        Me.Panel20.Location = New System.Drawing.Point(1044, 698)
+        Me.Panel20.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel20.Name = "Panel20"
+        Me.Panel20.Size = New System.Drawing.Size(141, 49)
+        Me.Panel20.TabIndex = 163
+        '
+        'Panel21
+        '
+        Me.Panel21.Location = New System.Drawing.Point(9, 47)
+        Me.Panel21.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel21.Name = "Panel21"
+        Me.Panel21.Size = New System.Drawing.Size(115, 48)
+        Me.Panel21.TabIndex = 142
+        '
+        'radEgen2Forskning12mndJa
+        '
+        Me.radEgen2Forskning12mndJa.AutoSize = True
+        Me.radEgen2Forskning12mndJa.Location = New System.Drawing.Point(13, 5)
+        Me.radEgen2Forskning12mndJa.Margin = New System.Windows.Forms.Padding(4)
+        Me.radEgen2Forskning12mndJa.Name = "radEgen2Forskning12mndJa"
+        Me.radEgen2Forskning12mndJa.Size = New System.Drawing.Size(44, 21)
+        Me.radEgen2Forskning12mndJa.TabIndex = 104
+        Me.radEgen2Forskning12mndJa.Text = "Ja"
+        Me.radEgen2Forskning12mndJa.UseVisualStyleBackColor = True
+        '
+        'radEgen2Forskning12mndNei
+        '
+        Me.radEgen2Forskning12mndNei.AutoSize = True
+        Me.radEgen2Forskning12mndNei.Location = New System.Drawing.Point(69, 5)
+        Me.radEgen2Forskning12mndNei.Margin = New System.Windows.Forms.Padding(4)
+        Me.radEgen2Forskning12mndNei.Name = "radEgen2Forskning12mndNei"
+        Me.radEgen2Forskning12mndNei.Size = New System.Drawing.Size(50, 21)
+        Me.radEgen2Forskning12mndNei.TabIndex = 105
+        Me.radEgen2Forskning12mndNei.Text = "Nei"
+        Me.radEgen2Forskning12mndNei.UseVisualStyleBackColor = True
         '
         'Button1
         '
@@ -867,37 +993,102 @@ Partial Class egenerklaering
         Me.Label4.TabIndex = 114
         Me.Label4.Text = "et år til sammen i perioden 1980 og 1996?"
         '
-        'radEgen2SorAmerikaNei
+        'Panel18
         '
-        Me.radEgen2SorAmerikaNei.AutoSize = True
-        Me.radEgen2SorAmerikaNei.Location = New System.Drawing.Point(375, 610)
-        Me.radEgen2SorAmerikaNei.Margin = New System.Windows.Forms.Padding(4)
-        Me.radEgen2SorAmerikaNei.Name = "radEgen2SorAmerikaNei"
-        Me.radEgen2SorAmerikaNei.Size = New System.Drawing.Size(50, 21)
-        Me.radEgen2SorAmerikaNei.TabIndex = 99
-        Me.radEgen2SorAmerikaNei.Text = "Nei"
-        Me.radEgen2SorAmerikaNei.UseVisualStyleBackColor = True
+        Me.Panel18.Controls.Add(Me.radEgen2Afrika5AarJa)
+        Me.Panel18.Controls.Add(Me.radEgen2Afrika5AarNei)
+        Me.Panel18.Location = New System.Drawing.Point(1035, 563)
+        Me.Panel18.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel18.Name = "Panel18"
+        Me.Panel18.Size = New System.Drawing.Size(145, 43)
+        Me.Panel18.TabIndex = 161
         '
-        'radEgen2SorAmerikaJa
+        'radEgen2Afrika5AarJa
         '
-        Me.radEgen2SorAmerikaJa.AutoSize = True
-        Me.radEgen2SorAmerikaJa.Location = New System.Drawing.Point(319, 609)
-        Me.radEgen2SorAmerikaJa.Margin = New System.Windows.Forms.Padding(4)
-        Me.radEgen2SorAmerikaJa.Name = "radEgen2SorAmerikaJa"
-        Me.radEgen2SorAmerikaJa.Size = New System.Drawing.Size(44, 21)
-        Me.radEgen2SorAmerikaJa.TabIndex = 98
-        Me.radEgen2SorAmerikaJa.Text = "Ja"
-        Me.radEgen2SorAmerikaJa.UseVisualStyleBackColor = True
+        Me.radEgen2Afrika5AarJa.AutoSize = True
+        Me.radEgen2Afrika5AarJa.Location = New System.Drawing.Point(23, 15)
+        Me.radEgen2Afrika5AarJa.Margin = New System.Windows.Forms.Padding(4)
+        Me.radEgen2Afrika5AarJa.Name = "radEgen2Afrika5AarJa"
+        Me.radEgen2Afrika5AarJa.Size = New System.Drawing.Size(44, 21)
+        Me.radEgen2Afrika5AarJa.TabIndex = 95
+        Me.radEgen2Afrika5AarJa.Text = "Ja"
+        Me.radEgen2Afrika5AarJa.UseVisualStyleBackColor = True
+        '
+        'radEgen2Afrika5AarNei
+        '
+        Me.radEgen2Afrika5AarNei.AutoSize = True
+        Me.radEgen2Afrika5AarNei.Location = New System.Drawing.Point(79, 15)
+        Me.radEgen2Afrika5AarNei.Margin = New System.Windows.Forms.Padding(4)
+        Me.radEgen2Afrika5AarNei.Name = "radEgen2Afrika5AarNei"
+        Me.radEgen2Afrika5AarNei.Size = New System.Drawing.Size(50, 21)
+        Me.radEgen2Afrika5AarNei.TabIndex = 96
+        Me.radEgen2Afrika5AarNei.Text = "Nei"
+        Me.radEgen2Afrika5AarNei.UseVisualStyleBackColor = True
+        '
+        'radEgen2SamtykkeNei
+        '
+        Me.radEgen2SamtykkeNei.AutoSize = True
+        Me.radEgen2SamtykkeNei.Location = New System.Drawing.Point(1110, 761)
+        Me.radEgen2SamtykkeNei.Margin = New System.Windows.Forms.Padding(4)
+        Me.radEgen2SamtykkeNei.Name = "radEgen2SamtykkeNei"
+        Me.radEgen2SamtykkeNei.Size = New System.Drawing.Size(50, 21)
+        Me.radEgen2SamtykkeNei.TabIndex = 144
+        Me.radEgen2SamtykkeNei.Text = "Nei"
+        Me.radEgen2SamtykkeNei.UseVisualStyleBackColor = True
+        '
+        'Panel16
+        '
+        Me.Panel16.Controls.Add(Me.rbMalariaNei)
+        Me.Panel16.Controls.Add(Me.rbMalariaJa)
+        Me.Panel16.Location = New System.Drawing.Point(1044, 447)
+        Me.Panel16.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel16.Name = "Panel16"
+        Me.Panel16.Size = New System.Drawing.Size(125, 42)
+        Me.Panel16.TabIndex = 159
+        '
+        'rbMalariaNei
+        '
+        Me.rbMalariaNei.AutoSize = True
+        Me.rbMalariaNei.Location = New System.Drawing.Point(69, 5)
+        Me.rbMalariaNei.Margin = New System.Windows.Forms.Padding(4)
+        Me.rbMalariaNei.Name = "rbMalariaNei"
+        Me.rbMalariaNei.Size = New System.Drawing.Size(50, 21)
+        Me.rbMalariaNei.TabIndex = 141
+        Me.rbMalariaNei.TabStop = True
+        Me.rbMalariaNei.Text = "Nei"
+        Me.rbMalariaNei.UseVisualStyleBackColor = True
+        '
+        'rbMalariaJa
+        '
+        Me.rbMalariaJa.AutoSize = True
+        Me.rbMalariaJa.Location = New System.Drawing.Point(13, 5)
+        Me.rbMalariaJa.Margin = New System.Windows.Forms.Padding(4)
+        Me.rbMalariaJa.Name = "rbMalariaJa"
+        Me.rbMalariaJa.Size = New System.Drawing.Size(44, 21)
+        Me.rbMalariaJa.TabIndex = 140
+        Me.rbMalariaJa.TabStop = True
+        Me.rbMalariaJa.Text = "Ja"
+        Me.rbMalariaJa.UseVisualStyleBackColor = True
         '
         'Label41
         '
         Me.Label41.AutoSize = True
-        Me.Label41.Location = New System.Drawing.Point(24, 7)
+        Me.Label41.Location = New System.Drawing.Point(592, 7)
         Me.Label41.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label41.Name = "Label41"
         Me.Label41.Size = New System.Drawing.Size(408, 17)
         Me.Label41.TabIndex = 138
         Me.Label41.Text = "__________________________________________________"
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Location = New System.Drawing.Point(768, 326)
+        Me.Label31.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(408, 17)
+        Me.Label31.TabIndex = 147
+        Me.Label31.Text = "__________________________________________________"
         '
         'Label40
         '
@@ -909,6 +1100,40 @@ Partial Class egenerklaering
         Me.Label40.TabIndex = 137
         Me.Label40.Text = "__________________________________________________"
         '
+        'Panel14
+        '
+        Me.Panel14.Controls.Add(Me.rbBGNei)
+        Me.Panel14.Controls.Add(Me.rbGBJa)
+        Me.Panel14.Location = New System.Drawing.Point(1044, 397)
+        Me.Panel14.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel14.Name = "Panel14"
+        Me.Panel14.Size = New System.Drawing.Size(132, 43)
+        Me.Panel14.TabIndex = 157
+        '
+        'rbBGNei
+        '
+        Me.rbBGNei.AutoSize = True
+        Me.rbBGNei.Location = New System.Drawing.Point(71, 5)
+        Me.rbBGNei.Margin = New System.Windows.Forms.Padding(4)
+        Me.rbBGNei.Name = "rbBGNei"
+        Me.rbBGNei.Size = New System.Drawing.Size(50, 21)
+        Me.rbBGNei.TabIndex = 1
+        Me.rbBGNei.TabStop = True
+        Me.rbBGNei.Text = "Nei"
+        Me.rbBGNei.UseVisualStyleBackColor = True
+        '
+        'rbGBJa
+        '
+        Me.rbGBJa.AutoSize = True
+        Me.rbGBJa.Location = New System.Drawing.Point(13, 5)
+        Me.rbGBJa.Margin = New System.Windows.Forms.Padding(4)
+        Me.rbGBJa.Name = "rbGBJa"
+        Me.rbGBJa.Size = New System.Drawing.Size(44, 21)
+        Me.rbGBJa.TabIndex = 0
+        Me.rbGBJa.TabStop = True
+        Me.rbGBJa.Text = "Ja"
+        Me.rbGBJa.UseVisualStyleBackColor = True
+        '
         'Label39
         '
         Me.Label39.AutoSize = True
@@ -918,6 +1143,16 @@ Partial Class egenerklaering
         Me.Label39.Size = New System.Drawing.Size(408, 17)
         Me.Label39.TabIndex = 136
         Me.Label39.Text = "__________________________________________________"
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Location = New System.Drawing.Point(767, 287)
+        Me.Label30.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(408, 17)
+        Me.Label30.TabIndex = 146
+        Me.Label30.Text = "__________________________________________________"
         '
         'Label38
         '
@@ -939,6 +1174,38 @@ Partial Class egenerklaering
         Me.Label37.TabIndex = 134
         Me.Label37.Text = "__________________________________________________"
         '
+        'Panel11
+        '
+        Me.Panel11.Controls.Add(Me.radEgen2Narkotika12mndJa)
+        Me.Panel11.Controls.Add(Me.radEgen2Narkotika12mndNei)
+        Me.Panel11.Location = New System.Drawing.Point(1035, 303)
+        Me.Panel11.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel11.Name = "Panel11"
+        Me.Panel11.Size = New System.Drawing.Size(143, 38)
+        Me.Panel11.TabIndex = 155
+        '
+        'radEgen2Narkotika12mndJa
+        '
+        Me.radEgen2Narkotika12mndJa.AutoSize = True
+        Me.radEgen2Narkotika12mndJa.Location = New System.Drawing.Point(23, 7)
+        Me.radEgen2Narkotika12mndJa.Margin = New System.Windows.Forms.Padding(4)
+        Me.radEgen2Narkotika12mndJa.Name = "radEgen2Narkotika12mndJa"
+        Me.radEgen2Narkotika12mndJa.Size = New System.Drawing.Size(44, 21)
+        Me.radEgen2Narkotika12mndJa.TabIndex = 80
+        Me.radEgen2Narkotika12mndJa.Text = "Ja"
+        Me.radEgen2Narkotika12mndJa.UseVisualStyleBackColor = True
+        '
+        'radEgen2Narkotika12mndNei
+        '
+        Me.radEgen2Narkotika12mndNei.AutoSize = True
+        Me.radEgen2Narkotika12mndNei.Location = New System.Drawing.Point(80, 7)
+        Me.radEgen2Narkotika12mndNei.Margin = New System.Windows.Forms.Padding(4)
+        Me.radEgen2Narkotika12mndNei.Name = "radEgen2Narkotika12mndNei"
+        Me.radEgen2Narkotika12mndNei.Size = New System.Drawing.Size(50, 21)
+        Me.radEgen2Narkotika12mndNei.TabIndex = 81
+        Me.radEgen2Narkotika12mndNei.Text = "Nei"
+        Me.radEgen2Narkotika12mndNei.UseVisualStyleBackColor = True
+        '
         'Label8
         '
         Me.Label8.AutoSize = True
@@ -948,6 +1215,71 @@ Partial Class egenerklaering
         Me.Label8.Size = New System.Drawing.Size(183, 17)
         Me.Label8.TabIndex = 118
         Me.Label8.Text = "mer enn fem år til sammen?"
+        '
+        'Panel6
+        '
+        Me.Panel6.Controls.Add(Me.radEgen2FemtiJa)
+        Me.Panel6.Controls.Add(Me.radEgen2FemtiNei)
+        Me.Panel6.Location = New System.Drawing.Point(1028, 170)
+        Me.Panel6.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(143, 57)
+        Me.Panel6.TabIndex = 14
+        '
+        'radEgen2FemtiJa
+        '
+        Me.radEgen2FemtiJa.AutoSize = True
+        Me.radEgen2FemtiJa.Location = New System.Drawing.Point(29, 12)
+        Me.radEgen2FemtiJa.Margin = New System.Windows.Forms.Padding(4)
+        Me.radEgen2FemtiJa.Name = "radEgen2FemtiJa"
+        Me.radEgen2FemtiJa.Size = New System.Drawing.Size(44, 21)
+        Me.radEgen2FemtiJa.TabIndex = 71
+        Me.radEgen2FemtiJa.Text = "Ja"
+        Me.radEgen2FemtiJa.UseVisualStyleBackColor = True
+        '
+        'radEgen2FemtiNei
+        '
+        Me.radEgen2FemtiNei.AutoSize = True
+        Me.radEgen2FemtiNei.Location = New System.Drawing.Point(85, 12)
+        Me.radEgen2FemtiNei.Margin = New System.Windows.Forms.Padding(4)
+        Me.radEgen2FemtiNei.Name = "radEgen2FemtiNei"
+        Me.radEgen2FemtiNei.Size = New System.Drawing.Size(50, 21)
+        Me.radEgen2FemtiNei.TabIndex = 72
+        Me.radEgen2FemtiNei.Text = "Nei"
+        Me.radEgen2FemtiNei.UseVisualStyleBackColor = True
+        '
+        'Panel4
+        '
+        Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel4.Controls.Add(Me.radEgen2FriskJa)
+        Me.Panel4.Controls.Add(Me.radEgen2FriskNei)
+        Me.Panel4.Location = New System.Drawing.Point(1008, 76)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(107, 35)
+        Me.Panel4.TabIndex = 12
+        '
+        'radEgen2FriskJa
+        '
+        Me.radEgen2FriskJa.AutoSize = True
+        Me.radEgen2FriskJa.Location = New System.Drawing.Point(4, 3)
+        Me.radEgen2FriskJa.Margin = New System.Windows.Forms.Padding(4)
+        Me.radEgen2FriskJa.Name = "radEgen2FriskJa"
+        Me.radEgen2FriskJa.Size = New System.Drawing.Size(44, 21)
+        Me.radEgen2FriskJa.TabIndex = 65
+        Me.radEgen2FriskJa.Text = "Ja"
+        Me.radEgen2FriskJa.UseVisualStyleBackColor = True
+        '
+        'radEgen2FriskNei
+        '
+        Me.radEgen2FriskNei.AutoSize = True
+        Me.radEgen2FriskNei.Location = New System.Drawing.Point(47, 3)
+        Me.radEgen2FriskNei.Margin = New System.Windows.Forms.Padding(4)
+        Me.radEgen2FriskNei.Name = "radEgen2FriskNei"
+        Me.radEgen2FriskNei.Size = New System.Drawing.Size(50, 21)
+        Me.radEgen2FriskNei.TabIndex = 66
+        Me.radEgen2FriskNei.Text = "Nei"
+        Me.radEgen2FriskNei.UseVisualStyleBackColor = True
         '
         'Label7
         '
@@ -959,6 +1291,38 @@ Partial Class egenerklaering
         Me.Label7.TabIndex = 117
         Me.Label7.Text = "forekommer?"
         '
+        'Panel5
+        '
+        Me.Panel5.Controls.Add(Me.radEgen2FriskSistJa)
+        Me.Panel5.Controls.Add(Me.radEgen2FriskSistNei)
+        Me.Panel5.Location = New System.Drawing.Point(1237, 118)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(144, 54)
+        Me.Panel5.TabIndex = 13
+        '
+        'radEgen2FriskSistJa
+        '
+        Me.radEgen2FriskSistJa.AutoSize = True
+        Me.radEgen2FriskSistJa.Location = New System.Drawing.Point(33, 16)
+        Me.radEgen2FriskSistJa.Margin = New System.Windows.Forms.Padding(4)
+        Me.radEgen2FriskSistJa.Name = "radEgen2FriskSistJa"
+        Me.radEgen2FriskSistJa.Size = New System.Drawing.Size(44, 21)
+        Me.radEgen2FriskSistJa.TabIndex = 68
+        Me.radEgen2FriskSistJa.Text = "Ja"
+        Me.radEgen2FriskSistJa.UseVisualStyleBackColor = True
+        '
+        'radEgen2FriskSistNei
+        '
+        Me.radEgen2FriskSistNei.AutoSize = True
+        Me.radEgen2FriskSistNei.Location = New System.Drawing.Point(89, 16)
+        Me.radEgen2FriskSistNei.Margin = New System.Windows.Forms.Padding(4)
+        Me.radEgen2FriskSistNei.Name = "radEgen2FriskSistNei"
+        Me.radEgen2FriskSistNei.Size = New System.Drawing.Size(50, 21)
+        Me.radEgen2FriskSistNei.TabIndex = 69
+        Me.radEgen2FriskSistNei.Text = "Nei"
+        Me.radEgen2FriskSistNei.UseVisualStyleBackColor = True
+        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -968,6 +1332,65 @@ Partial Class egenerklaering
         Me.Label6.Size = New System.Drawing.Size(291, 17)
         Me.Label6.TabIndex = 116
         Me.Label6.Text = "minst seks måneder i et område hvor malaria"
+        '
+        'Panel7
+        '
+        Me.Panel7.Controls.Add(Me.Panel10)
+        Me.Panel7.Controls.Add(Me.Panel9)
+        Me.Panel7.Controls.Add(Me.Panel8)
+        Me.Panel7.Controls.Add(Me.radEgen2HudSykJa)
+        Me.Panel7.Controls.Add(Me.radEgen2HudSykNei)
+        Me.Panel7.Location = New System.Drawing.Point(1035, 228)
+        Me.Panel7.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(137, 36)
+        Me.Panel7.TabIndex = 15
+        '
+        'Panel10
+        '
+        Me.Panel10.Location = New System.Drawing.Point(0, 34)
+        Me.Panel10.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(136, 37)
+        Me.Panel10.TabIndex = 140
+        '
+        'Panel9
+        '
+        Me.Panel9.Location = New System.Drawing.Point(5, 34)
+        Me.Panel9.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel9.Name = "Panel9"
+        Me.Panel9.Size = New System.Drawing.Size(128, 38)
+        Me.Panel9.TabIndex = 140
+        '
+        'Panel8
+        '
+        Me.Panel8.Location = New System.Drawing.Point(8, 31)
+        Me.Panel8.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(129, 44)
+        Me.Panel8.TabIndex = 140
+        '
+        'radEgen2HudSykJa
+        '
+        Me.radEgen2HudSykJa.AutoSize = True
+        Me.radEgen2HudSykJa.Location = New System.Drawing.Point(23, 2)
+        Me.radEgen2HudSykJa.Margin = New System.Windows.Forms.Padding(4)
+        Me.radEgen2HudSykJa.Name = "radEgen2HudSykJa"
+        Me.radEgen2HudSykJa.Size = New System.Drawing.Size(44, 21)
+        Me.radEgen2HudSykJa.TabIndex = 74
+        Me.radEgen2HudSykJa.Text = "Ja"
+        Me.radEgen2HudSykJa.UseVisualStyleBackColor = True
+        '
+        'radEgen2HudSykNei
+        '
+        Me.radEgen2HudSykNei.AutoSize = True
+        Me.radEgen2HudSykNei.Location = New System.Drawing.Point(80, 2)
+        Me.radEgen2HudSykNei.Margin = New System.Windows.Forms.Padding(4)
+        Me.radEgen2HudSykNei.Name = "radEgen2HudSykNei"
+        Me.radEgen2HudSykNei.Size = New System.Drawing.Size(50, 21)
+        Me.radEgen2HudSykNei.TabIndex = 75
+        Me.radEgen2HudSykNei.Text = "Nei"
+        Me.radEgen2HudSykNei.UseVisualStyleBackColor = True
         '
         'Label35
         '
@@ -979,6 +1402,16 @@ Partial Class egenerklaering
         Me.Label35.TabIndex = 132
         Me.Label35.Text = "__________________________________________________"
         '
+        'Label36
+        '
+        Me.Label36.AutoSize = True
+        Me.Label36.Location = New System.Drawing.Point(763, 591)
+        Me.Label36.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(408, 17)
+        Me.Label36.TabIndex = 148
+        Me.Label36.Text = "__________________________________________________"
+        '
         'Label34
         '
         Me.Label34.AutoSize = True
@@ -988,6 +1421,38 @@ Partial Class egenerklaering
         Me.Label34.Size = New System.Drawing.Size(408, 17)
         Me.Label34.TabIndex = 131
         Me.Label34.Text = "__________________________________________________"
+        '
+        'Panel12
+        '
+        Me.Panel12.Controls.Add(Me.radEgen2CjdJa)
+        Me.Panel12.Controls.Add(Me.radEgen2CjdNei)
+        Me.Panel12.Location = New System.Drawing.Point(1043, 349)
+        Me.Panel12.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel12.Name = "Panel12"
+        Me.Panel12.Size = New System.Drawing.Size(125, 31)
+        Me.Panel12.TabIndex = 156
+        '
+        'radEgen2CjdJa
+        '
+        Me.radEgen2CjdJa.AutoSize = True
+        Me.radEgen2CjdJa.Location = New System.Drawing.Point(15, 6)
+        Me.radEgen2CjdJa.Margin = New System.Windows.Forms.Padding(4)
+        Me.radEgen2CjdJa.Name = "radEgen2CjdJa"
+        Me.radEgen2CjdJa.Size = New System.Drawing.Size(44, 21)
+        Me.radEgen2CjdJa.TabIndex = 83
+        Me.radEgen2CjdJa.Text = "Ja"
+        Me.radEgen2CjdJa.UseVisualStyleBackColor = True
+        '
+        'radEgen2CjdNei
+        '
+        Me.radEgen2CjdNei.AutoSize = True
+        Me.radEgen2CjdNei.Location = New System.Drawing.Point(71, 6)
+        Me.radEgen2CjdNei.Margin = New System.Windows.Forms.Padding(4)
+        Me.radEgen2CjdNei.Name = "radEgen2CjdNei"
+        Me.radEgen2CjdNei.Size = New System.Drawing.Size(50, 21)
+        Me.radEgen2CjdNei.TabIndex = 84
+        Me.radEgen2CjdNei.Text = "Nei"
+        Me.radEgen2CjdNei.UseVisualStyleBackColor = True
         '
         'Label33
         '
@@ -999,6 +1464,15 @@ Partial Class egenerklaering
         Me.Label33.TabIndex = 130
         Me.Label33.Text = "__________________________________________________"
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(1003, 801)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(160, 24)
+        Me.ComboBox1.TabIndex = 150
+        '
         'Label32
         '
         Me.Label32.AutoSize = True
@@ -1008,6 +1482,38 @@ Partial Class egenerklaering
         Me.Label32.Size = New System.Drawing.Size(408, 17)
         Me.Label32.TabIndex = 129
         Me.Label32.Text = "__________________________________________________"
+        '
+        'Panel17
+        '
+        Me.Panel17.Controls.Add(Me.radEgen2Malaria6MndJa)
+        Me.Panel17.Controls.Add(Me.radEgen2Malaria6MndNei)
+        Me.Panel17.Location = New System.Drawing.Point(1058, 513)
+        Me.Panel17.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel17.Name = "Panel17"
+        Me.Panel17.Size = New System.Drawing.Size(112, 38)
+        Me.Panel17.TabIndex = 160
+        '
+        'radEgen2Malaria6MndJa
+        '
+        Me.radEgen2Malaria6MndJa.AutoSize = True
+        Me.radEgen2Malaria6MndJa.Location = New System.Drawing.Point(0, 4)
+        Me.radEgen2Malaria6MndJa.Margin = New System.Windows.Forms.Padding(4)
+        Me.radEgen2Malaria6MndJa.Name = "radEgen2Malaria6MndJa"
+        Me.radEgen2Malaria6MndJa.Size = New System.Drawing.Size(44, 21)
+        Me.radEgen2Malaria6MndJa.TabIndex = 92
+        Me.radEgen2Malaria6MndJa.Text = "Ja"
+        Me.radEgen2Malaria6MndJa.UseVisualStyleBackColor = True
+        '
+        'radEgen2Malaria6MndNei
+        '
+        Me.radEgen2Malaria6MndNei.AutoSize = True
+        Me.radEgen2Malaria6MndNei.Location = New System.Drawing.Point(56, 4)
+        Me.radEgen2Malaria6MndNei.Margin = New System.Windows.Forms.Padding(4)
+        Me.radEgen2Malaria6MndNei.Name = "radEgen2Malaria6MndNei"
+        Me.radEgen2Malaria6MndNei.Size = New System.Drawing.Size(50, 21)
+        Me.radEgen2Malaria6MndNei.TabIndex = 93
+        Me.radEgen2Malaria6MndNei.Text = "Nei"
+        Me.radEgen2Malaria6MndNei.UseVisualStyleBackColor = True
         '
         'Label29
         '
@@ -1019,6 +1525,38 @@ Partial Class egenerklaering
         Me.Label29.TabIndex = 126
         Me.Label29.Text = "__________________________________________________"
         '
+        'Panel13
+        '
+        Me.Panel13.Controls.Add(Me.radEgen2PiercJa)
+        Me.Panel13.Controls.Add(Me.radEgen2PiercNei)
+        Me.Panel13.Location = New System.Drawing.Point(1034, 264)
+        Me.Panel13.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel13.Name = "Panel13"
+        Me.Panel13.Size = New System.Drawing.Size(137, 39)
+        Me.Panel13.TabIndex = 149
+        '
+        'radEgen2PiercJa
+        '
+        Me.radEgen2PiercJa.AutoSize = True
+        Me.radEgen2PiercJa.Location = New System.Drawing.Point(24, 4)
+        Me.radEgen2PiercJa.Margin = New System.Windows.Forms.Padding(4)
+        Me.radEgen2PiercJa.Name = "radEgen2PiercJa"
+        Me.radEgen2PiercJa.Size = New System.Drawing.Size(44, 21)
+        Me.radEgen2PiercJa.TabIndex = 77
+        Me.radEgen2PiercJa.Text = "Ja"
+        Me.radEgen2PiercJa.UseVisualStyleBackColor = True
+        '
+        'radEgen2PiercNei
+        '
+        Me.radEgen2PiercNei.AutoSize = True
+        Me.radEgen2PiercNei.Location = New System.Drawing.Point(81, 4)
+        Me.radEgen2PiercNei.Margin = New System.Windows.Forms.Padding(4)
+        Me.radEgen2PiercNei.Name = "radEgen2PiercNei"
+        Me.radEgen2PiercNei.Size = New System.Drawing.Size(50, 21)
+        Me.radEgen2PiercNei.TabIndex = 78
+        Me.radEgen2PiercNei.Text = "Nei"
+        Me.radEgen2PiercNei.UseVisualStyleBackColor = True
+        '
         'Label28
         '
         Me.Label28.AutoSize = True
@@ -1029,6 +1567,38 @@ Partial Class egenerklaering
         Me.Label28.TabIndex = 125
         Me.Label28.Text = "__________________________________________________"
         '
+        'Panel19
+        '
+        Me.Panel19.Controls.Add(Me.radEgen2ForskningJa)
+        Me.Panel19.Controls.Add(Me.radEgen2ForskningNei)
+        Me.Panel19.Location = New System.Drawing.Point(1055, 651)
+        Me.Panel19.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel19.Name = "Panel19"
+        Me.Panel19.Size = New System.Drawing.Size(120, 45)
+        Me.Panel19.TabIndex = 162
+        '
+        'radEgen2ForskningJa
+        '
+        Me.radEgen2ForskningJa.AutoSize = True
+        Me.radEgen2ForskningJa.Location = New System.Drawing.Point(7, 25)
+        Me.radEgen2ForskningJa.Margin = New System.Windows.Forms.Padding(4)
+        Me.radEgen2ForskningJa.Name = "radEgen2ForskningJa"
+        Me.radEgen2ForskningJa.Size = New System.Drawing.Size(44, 21)
+        Me.radEgen2ForskningJa.TabIndex = 101
+        Me.radEgen2ForskningJa.Text = "Ja"
+        Me.radEgen2ForskningJa.UseVisualStyleBackColor = True
+        '
+        'radEgen2ForskningNei
+        '
+        Me.radEgen2ForskningNei.AutoSize = True
+        Me.radEgen2ForskningNei.Location = New System.Drawing.Point(63, 23)
+        Me.radEgen2ForskningNei.Margin = New System.Windows.Forms.Padding(4)
+        Me.radEgen2ForskningNei.Name = "radEgen2ForskningNei"
+        Me.radEgen2ForskningNei.Size = New System.Drawing.Size(50, 21)
+        Me.radEgen2ForskningNei.TabIndex = 102
+        Me.radEgen2ForskningNei.Text = "Nei"
+        Me.radEgen2ForskningNei.UseVisualStyleBackColor = True
+        '
         'Label27
         '
         Me.Label27.AutoSize = True
@@ -1038,6 +1608,17 @@ Partial Class egenerklaering
         Me.Label27.Size = New System.Drawing.Size(408, 17)
         Me.Label27.TabIndex = 124
         Me.Label27.Text = "__________________________________________________"
+        '
+        'radEgen2SamtykkeJa
+        '
+        Me.radEgen2SamtykkeJa.AutoSize = True
+        Me.radEgen2SamtykkeJa.Location = New System.Drawing.Point(1058, 761)
+        Me.radEgen2SamtykkeJa.Margin = New System.Windows.Forms.Padding(4)
+        Me.radEgen2SamtykkeJa.Name = "radEgen2SamtykkeJa"
+        Me.radEgen2SamtykkeJa.Size = New System.Drawing.Size(44, 21)
+        Me.radEgen2SamtykkeJa.TabIndex = 143
+        Me.radEgen2SamtykkeJa.Text = "Ja"
+        Me.radEgen2SamtykkeJa.UseVisualStyleBackColor = True
         '
         'Label26
         '
@@ -1272,7 +1853,7 @@ Partial Class egenerklaering
         'lblEgen2Frisk
         '
         Me.lblEgen2Frisk.AutoSize = True
-        Me.lblEgen2Frisk.Location = New System.Drawing.Point(25, 60)
+        Me.lblEgen2Frisk.Location = New System.Drawing.Point(601, 76)
         Me.lblEgen2Frisk.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblEgen2Frisk.Name = "lblEgen2Frisk"
         Me.lblEgen2Frisk.Size = New System.Drawing.Size(146, 17)
@@ -1282,7 +1863,7 @@ Partial Class egenerklaering
         'lblEgen2InfoBlod
         '
         Me.lblEgen2InfoBlod.AutoSize = True
-        Me.lblEgen2InfoBlod.Location = New System.Drawing.Point(25, 27)
+        Me.lblEgen2InfoBlod.Location = New System.Drawing.Point(592, 35)
         Me.lblEgen2InfoBlod.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblEgen2InfoBlod.Name = "lblEgen2InfoBlod"
         Me.lblEgen2InfoBlod.Size = New System.Drawing.Size(209, 17)
@@ -1291,593 +1872,23 @@ Partial Class egenerklaering
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.Panel20)
-        Me.GroupBox2.Controls.Add(Me.Panel19)
-        Me.GroupBox2.Controls.Add(Me.Panel18)
-        Me.GroupBox2.Controls.Add(Me.Panel17)
-        Me.GroupBox2.Controls.Add(Me.Panel16)
-        Me.GroupBox2.Controls.Add(Me.Panel14)
-        Me.GroupBox2.Controls.Add(Me.Panel12)
-        Me.GroupBox2.Controls.Add(Me.Panel11)
-        Me.GroupBox2.Controls.Add(Me.Panel7)
-        Me.GroupBox2.Controls.Add(Me.Panel6)
-        Me.GroupBox2.Controls.Add(Me.Panel5)
-        Me.GroupBox2.Controls.Add(Me.Panel4)
-        Me.GroupBox2.Controls.Add(Me.Panel3)
-        Me.GroupBox2.Controls.Add(Me.Label36)
-        Me.GroupBox2.Controls.Add(Me.ComboBox1)
-        Me.GroupBox2.Controls.Add(Me.Label30)
-        Me.GroupBox2.Controls.Add(Me.Label31)
-        Me.GroupBox2.Controls.Add(Me.Panel13)
-        Me.GroupBox2.Controls.Add(Me.radEgen2SamtykkeJa)
-        Me.GroupBox2.Controls.Add(Me.Label25)
-        Me.GroupBox2.Controls.Add(Me.radEgen2SamtykkeNei)
         Me.GroupBox2.Location = New System.Drawing.Point(20, 7)
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox2.Size = New System.Drawing.Size(419, 844)
+        Me.GroupBox2.Size = New System.Drawing.Size(479, 844)
         Me.GroupBox2.TabIndex = 139
         Me.GroupBox2.TabStop = False
-        '
-        'Panel20
-        '
-        Me.Panel20.Controls.Add(Me.Panel21)
-        Me.Panel20.Controls.Add(Me.radEgen2Forskning12mndJa)
-        Me.Panel20.Controls.Add(Me.radEgen2Forskning12mndNei)
-        Me.Panel20.Location = New System.Drawing.Point(285, 690)
-        Me.Panel20.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel20.Name = "Panel20"
-        Me.Panel20.Size = New System.Drawing.Size(141, 49)
-        Me.Panel20.TabIndex = 142
-        '
-        'Panel21
-        '
-        Me.Panel21.Location = New System.Drawing.Point(9, 47)
-        Me.Panel21.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel21.Name = "Panel21"
-        Me.Panel21.Size = New System.Drawing.Size(115, 48)
-        Me.Panel21.TabIndex = 142
-        '
-        'radEgen2Forskning12mndJa
-        '
-        Me.radEgen2Forskning12mndJa.AutoSize = True
-        Me.radEgen2Forskning12mndJa.Location = New System.Drawing.Point(13, 5)
-        Me.radEgen2Forskning12mndJa.Margin = New System.Windows.Forms.Padding(4)
-        Me.radEgen2Forskning12mndJa.Name = "radEgen2Forskning12mndJa"
-        Me.radEgen2Forskning12mndJa.Size = New System.Drawing.Size(44, 21)
-        Me.radEgen2Forskning12mndJa.TabIndex = 104
-        Me.radEgen2Forskning12mndJa.Text = "Ja"
-        Me.radEgen2Forskning12mndJa.UseVisualStyleBackColor = True
-        '
-        'radEgen2Forskning12mndNei
-        '
-        Me.radEgen2Forskning12mndNei.AutoSize = True
-        Me.radEgen2Forskning12mndNei.Location = New System.Drawing.Point(69, 5)
-        Me.radEgen2Forskning12mndNei.Margin = New System.Windows.Forms.Padding(4)
-        Me.radEgen2Forskning12mndNei.Name = "radEgen2Forskning12mndNei"
-        Me.radEgen2Forskning12mndNei.Size = New System.Drawing.Size(50, 21)
-        Me.radEgen2Forskning12mndNei.TabIndex = 105
-        Me.radEgen2Forskning12mndNei.Text = "Nei"
-        Me.radEgen2Forskning12mndNei.UseVisualStyleBackColor = True
-        '
-        'Panel19
-        '
-        Me.Panel19.Controls.Add(Me.radEgen2ForskningJa)
-        Me.Panel19.Controls.Add(Me.radEgen2ForskningNei)
-        Me.Panel19.Location = New System.Drawing.Point(296, 638)
-        Me.Panel19.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel19.Name = "Panel19"
-        Me.Panel19.Size = New System.Drawing.Size(120, 50)
-        Me.Panel19.TabIndex = 142
-        '
-        'radEgen2ForskningJa
-        '
-        Me.radEgen2ForskningJa.AutoSize = True
-        Me.radEgen2ForskningJa.Location = New System.Drawing.Point(3, 7)
-        Me.radEgen2ForskningJa.Margin = New System.Windows.Forms.Padding(4)
-        Me.radEgen2ForskningJa.Name = "radEgen2ForskningJa"
-        Me.radEgen2ForskningJa.Size = New System.Drawing.Size(44, 21)
-        Me.radEgen2ForskningJa.TabIndex = 101
-        Me.radEgen2ForskningJa.Text = "Ja"
-        Me.radEgen2ForskningJa.UseVisualStyleBackColor = True
-        '
-        'radEgen2ForskningNei
-        '
-        Me.radEgen2ForskningNei.AutoSize = True
-        Me.radEgen2ForskningNei.Location = New System.Drawing.Point(59, 7)
-        Me.radEgen2ForskningNei.Margin = New System.Windows.Forms.Padding(4)
-        Me.radEgen2ForskningNei.Name = "radEgen2ForskningNei"
-        Me.radEgen2ForskningNei.Size = New System.Drawing.Size(50, 21)
-        Me.radEgen2ForskningNei.TabIndex = 102
-        Me.radEgen2ForskningNei.Text = "Nei"
-        Me.radEgen2ForskningNei.UseVisualStyleBackColor = True
-        '
-        'Panel18
-        '
-        Me.Panel18.Controls.Add(Me.radEgen2Afrika5AarJa)
-        Me.Panel18.Controls.Add(Me.radEgen2Afrika5AarNei)
-        Me.Panel18.Location = New System.Drawing.Point(276, 555)
-        Me.Panel18.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel18.Name = "Panel18"
-        Me.Panel18.Size = New System.Drawing.Size(145, 43)
-        Me.Panel18.TabIndex = 142
-        '
-        'radEgen2Afrika5AarJa
-        '
-        Me.radEgen2Afrika5AarJa.AutoSize = True
-        Me.radEgen2Afrika5AarJa.Location = New System.Drawing.Point(23, 15)
-        Me.radEgen2Afrika5AarJa.Margin = New System.Windows.Forms.Padding(4)
-        Me.radEgen2Afrika5AarJa.Name = "radEgen2Afrika5AarJa"
-        Me.radEgen2Afrika5AarJa.Size = New System.Drawing.Size(44, 21)
-        Me.radEgen2Afrika5AarJa.TabIndex = 95
-        Me.radEgen2Afrika5AarJa.Text = "Ja"
-        Me.radEgen2Afrika5AarJa.UseVisualStyleBackColor = True
-        '
-        'radEgen2Afrika5AarNei
-        '
-        Me.radEgen2Afrika5AarNei.AutoSize = True
-        Me.radEgen2Afrika5AarNei.Location = New System.Drawing.Point(79, 15)
-        Me.radEgen2Afrika5AarNei.Margin = New System.Windows.Forms.Padding(4)
-        Me.radEgen2Afrika5AarNei.Name = "radEgen2Afrika5AarNei"
-        Me.radEgen2Afrika5AarNei.Size = New System.Drawing.Size(50, 21)
-        Me.radEgen2Afrika5AarNei.TabIndex = 96
-        Me.radEgen2Afrika5AarNei.Text = "Nei"
-        Me.radEgen2Afrika5AarNei.UseVisualStyleBackColor = True
-        '
-        'Panel17
-        '
-        Me.Panel17.Controls.Add(Me.radEgen2Malaria6MndJa)
-        Me.Panel17.Controls.Add(Me.radEgen2Malaria6MndNei)
-        Me.Panel17.Location = New System.Drawing.Point(299, 505)
-        Me.Panel17.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel17.Name = "Panel17"
-        Me.Panel17.Size = New System.Drawing.Size(112, 38)
-        Me.Panel17.TabIndex = 142
-        '
-        'radEgen2Malaria6MndJa
-        '
-        Me.radEgen2Malaria6MndJa.AutoSize = True
-        Me.radEgen2Malaria6MndJa.Location = New System.Drawing.Point(0, 4)
-        Me.radEgen2Malaria6MndJa.Margin = New System.Windows.Forms.Padding(4)
-        Me.radEgen2Malaria6MndJa.Name = "radEgen2Malaria6MndJa"
-        Me.radEgen2Malaria6MndJa.Size = New System.Drawing.Size(44, 21)
-        Me.radEgen2Malaria6MndJa.TabIndex = 92
-        Me.radEgen2Malaria6MndJa.Text = "Ja"
-        Me.radEgen2Malaria6MndJa.UseVisualStyleBackColor = True
-        '
-        'radEgen2Malaria6MndNei
-        '
-        Me.radEgen2Malaria6MndNei.AutoSize = True
-        Me.radEgen2Malaria6MndNei.Location = New System.Drawing.Point(56, 4)
-        Me.radEgen2Malaria6MndNei.Margin = New System.Windows.Forms.Padding(4)
-        Me.radEgen2Malaria6MndNei.Name = "radEgen2Malaria6MndNei"
-        Me.radEgen2Malaria6MndNei.Size = New System.Drawing.Size(50, 21)
-        Me.radEgen2Malaria6MndNei.TabIndex = 93
-        Me.radEgen2Malaria6MndNei.Text = "Nei"
-        Me.radEgen2Malaria6MndNei.UseVisualStyleBackColor = True
-        '
-        'Panel16
-        '
-        Me.Panel16.Controls.Add(Me.rbMalariaNei)
-        Me.Panel16.Controls.Add(Me.rbMalariaJa)
-        Me.Panel16.Location = New System.Drawing.Point(285, 439)
-        Me.Panel16.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel16.Name = "Panel16"
-        Me.Panel16.Size = New System.Drawing.Size(125, 42)
-        Me.Panel16.TabIndex = 142
-        '
-        'rbMalariaNei
-        '
-        Me.rbMalariaNei.AutoSize = True
-        Me.rbMalariaNei.Location = New System.Drawing.Point(69, 5)
-        Me.rbMalariaNei.Margin = New System.Windows.Forms.Padding(4)
-        Me.rbMalariaNei.Name = "rbMalariaNei"
-        Me.rbMalariaNei.Size = New System.Drawing.Size(50, 21)
-        Me.rbMalariaNei.TabIndex = 141
-        Me.rbMalariaNei.TabStop = True
-        Me.rbMalariaNei.Text = "Nei"
-        Me.rbMalariaNei.UseVisualStyleBackColor = True
-        '
-        'rbMalariaJa
-        '
-        Me.rbMalariaJa.AutoSize = True
-        Me.rbMalariaJa.Location = New System.Drawing.Point(13, 5)
-        Me.rbMalariaJa.Margin = New System.Windows.Forms.Padding(4)
-        Me.rbMalariaJa.Name = "rbMalariaJa"
-        Me.rbMalariaJa.Size = New System.Drawing.Size(44, 21)
-        Me.rbMalariaJa.TabIndex = 140
-        Me.rbMalariaJa.TabStop = True
-        Me.rbMalariaJa.Text = "Ja"
-        Me.rbMalariaJa.UseVisualStyleBackColor = True
-        '
-        'Panel14
-        '
-        Me.Panel14.Controls.Add(Me.rbBGNei)
-        Me.Panel14.Controls.Add(Me.rbGBJa)
-        Me.Panel14.Location = New System.Drawing.Point(285, 389)
-        Me.Panel14.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel14.Name = "Panel14"
-        Me.Panel14.Size = New System.Drawing.Size(132, 43)
-        Me.Panel14.TabIndex = 140
-        '
-        'rbBGNei
-        '
-        Me.rbBGNei.AutoSize = True
-        Me.rbBGNei.Location = New System.Drawing.Point(71, 5)
-        Me.rbBGNei.Margin = New System.Windows.Forms.Padding(4)
-        Me.rbBGNei.Name = "rbBGNei"
-        Me.rbBGNei.Size = New System.Drawing.Size(50, 21)
-        Me.rbBGNei.TabIndex = 1
-        Me.rbBGNei.TabStop = True
-        Me.rbBGNei.Text = "Nei"
-        Me.rbBGNei.UseVisualStyleBackColor = True
-        '
-        'rbGBJa
-        '
-        Me.rbGBJa.AutoSize = True
-        Me.rbGBJa.Location = New System.Drawing.Point(13, 5)
-        Me.rbGBJa.Margin = New System.Windows.Forms.Padding(4)
-        Me.rbGBJa.Name = "rbGBJa"
-        Me.rbGBJa.Size = New System.Drawing.Size(44, 21)
-        Me.rbGBJa.TabIndex = 0
-        Me.rbGBJa.TabStop = True
-        Me.rbGBJa.Text = "Ja"
-        Me.rbGBJa.UseVisualStyleBackColor = True
-        '
-        'Panel12
-        '
-        Me.Panel12.Controls.Add(Me.radEgen2CjdJa)
-        Me.Panel12.Controls.Add(Me.radEgen2CjdNei)
-        Me.Panel12.Location = New System.Drawing.Point(284, 341)
-        Me.Panel12.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel12.Name = "Panel12"
-        Me.Panel12.Size = New System.Drawing.Size(125, 31)
-        Me.Panel12.TabIndex = 140
-        '
-        'radEgen2CjdJa
-        '
-        Me.radEgen2CjdJa.AutoSize = True
-        Me.radEgen2CjdJa.Location = New System.Drawing.Point(15, 6)
-        Me.radEgen2CjdJa.Margin = New System.Windows.Forms.Padding(4)
-        Me.radEgen2CjdJa.Name = "radEgen2CjdJa"
-        Me.radEgen2CjdJa.Size = New System.Drawing.Size(44, 21)
-        Me.radEgen2CjdJa.TabIndex = 83
-        Me.radEgen2CjdJa.Text = "Ja"
-        Me.radEgen2CjdJa.UseVisualStyleBackColor = True
-        '
-        'radEgen2CjdNei
-        '
-        Me.radEgen2CjdNei.AutoSize = True
-        Me.radEgen2CjdNei.Location = New System.Drawing.Point(71, 6)
-        Me.radEgen2CjdNei.Margin = New System.Windows.Forms.Padding(4)
-        Me.radEgen2CjdNei.Name = "radEgen2CjdNei"
-        Me.radEgen2CjdNei.Size = New System.Drawing.Size(50, 21)
-        Me.radEgen2CjdNei.TabIndex = 84
-        Me.radEgen2CjdNei.Text = "Nei"
-        Me.radEgen2CjdNei.UseVisualStyleBackColor = True
-        '
-        'Panel11
-        '
-        Me.Panel11.Controls.Add(Me.radEgen2Narkotika12mndJa)
-        Me.Panel11.Controls.Add(Me.radEgen2Narkotika12mndNei)
-        Me.Panel11.Location = New System.Drawing.Point(276, 295)
-        Me.Panel11.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(143, 38)
-        Me.Panel11.TabIndex = 140
-        '
-        'radEgen2Narkotika12mndJa
-        '
-        Me.radEgen2Narkotika12mndJa.AutoSize = True
-        Me.radEgen2Narkotika12mndJa.Location = New System.Drawing.Point(23, 7)
-        Me.radEgen2Narkotika12mndJa.Margin = New System.Windows.Forms.Padding(4)
-        Me.radEgen2Narkotika12mndJa.Name = "radEgen2Narkotika12mndJa"
-        Me.radEgen2Narkotika12mndJa.Size = New System.Drawing.Size(44, 21)
-        Me.radEgen2Narkotika12mndJa.TabIndex = 80
-        Me.radEgen2Narkotika12mndJa.Text = "Ja"
-        Me.radEgen2Narkotika12mndJa.UseVisualStyleBackColor = True
-        '
-        'radEgen2Narkotika12mndNei
-        '
-        Me.radEgen2Narkotika12mndNei.AutoSize = True
-        Me.radEgen2Narkotika12mndNei.Location = New System.Drawing.Point(80, 7)
-        Me.radEgen2Narkotika12mndNei.Margin = New System.Windows.Forms.Padding(4)
-        Me.radEgen2Narkotika12mndNei.Name = "radEgen2Narkotika12mndNei"
-        Me.radEgen2Narkotika12mndNei.Size = New System.Drawing.Size(50, 21)
-        Me.radEgen2Narkotika12mndNei.TabIndex = 81
-        Me.radEgen2Narkotika12mndNei.Text = "Nei"
-        Me.radEgen2Narkotika12mndNei.UseVisualStyleBackColor = True
-        '
-        'Panel7
-        '
-        Me.Panel7.Controls.Add(Me.Panel10)
-        Me.Panel7.Controls.Add(Me.Panel9)
-        Me.Panel7.Controls.Add(Me.Panel8)
-        Me.Panel7.Controls.Add(Me.radEgen2HudSykJa)
-        Me.Panel7.Controls.Add(Me.radEgen2HudSykNei)
-        Me.Panel7.Location = New System.Drawing.Point(276, 220)
-        Me.Panel7.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(137, 36)
-        Me.Panel7.TabIndex = 140
-        '
-        'Panel10
-        '
-        Me.Panel10.Location = New System.Drawing.Point(0, 34)
-        Me.Panel10.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(136, 37)
-        Me.Panel10.TabIndex = 140
-        '
-        'Panel9
-        '
-        Me.Panel9.Location = New System.Drawing.Point(5, 34)
-        Me.Panel9.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(128, 38)
-        Me.Panel9.TabIndex = 140
-        '
-        'Panel8
-        '
-        Me.Panel8.Location = New System.Drawing.Point(8, 31)
-        Me.Panel8.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(129, 44)
-        Me.Panel8.TabIndex = 140
-        '
-        'radEgen2HudSykJa
-        '
-        Me.radEgen2HudSykJa.AutoSize = True
-        Me.radEgen2HudSykJa.Location = New System.Drawing.Point(23, 2)
-        Me.radEgen2HudSykJa.Margin = New System.Windows.Forms.Padding(4)
-        Me.radEgen2HudSykJa.Name = "radEgen2HudSykJa"
-        Me.radEgen2HudSykJa.Size = New System.Drawing.Size(44, 21)
-        Me.radEgen2HudSykJa.TabIndex = 74
-        Me.radEgen2HudSykJa.Text = "Ja"
-        Me.radEgen2HudSykJa.UseVisualStyleBackColor = True
-        '
-        'radEgen2HudSykNei
-        '
-        Me.radEgen2HudSykNei.AutoSize = True
-        Me.radEgen2HudSykNei.Location = New System.Drawing.Point(80, 2)
-        Me.radEgen2HudSykNei.Margin = New System.Windows.Forms.Padding(4)
-        Me.radEgen2HudSykNei.Name = "radEgen2HudSykNei"
-        Me.radEgen2HudSykNei.Size = New System.Drawing.Size(50, 21)
-        Me.radEgen2HudSykNei.TabIndex = 75
-        Me.radEgen2HudSykNei.Text = "Nei"
-        Me.radEgen2HudSykNei.UseVisualStyleBackColor = True
-        '
-        'Panel6
-        '
-        Me.Panel6.Controls.Add(Me.radEgen2FemtiJa)
-        Me.Panel6.Controls.Add(Me.radEgen2FemtiNei)
-        Me.Panel6.Location = New System.Drawing.Point(269, 162)
-        Me.Panel6.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(143, 57)
-        Me.Panel6.TabIndex = 140
-        '
-        'radEgen2FemtiJa
-        '
-        Me.radEgen2FemtiJa.AutoSize = True
-        Me.radEgen2FemtiJa.Location = New System.Drawing.Point(29, 12)
-        Me.radEgen2FemtiJa.Margin = New System.Windows.Forms.Padding(4)
-        Me.radEgen2FemtiJa.Name = "radEgen2FemtiJa"
-        Me.radEgen2FemtiJa.Size = New System.Drawing.Size(44, 21)
-        Me.radEgen2FemtiJa.TabIndex = 71
-        Me.radEgen2FemtiJa.Text = "Ja"
-        Me.radEgen2FemtiJa.UseVisualStyleBackColor = True
-        '
-        'radEgen2FemtiNei
-        '
-        Me.radEgen2FemtiNei.AutoSize = True
-        Me.radEgen2FemtiNei.Location = New System.Drawing.Point(85, 12)
-        Me.radEgen2FemtiNei.Margin = New System.Windows.Forms.Padding(4)
-        Me.radEgen2FemtiNei.Name = "radEgen2FemtiNei"
-        Me.radEgen2FemtiNei.Size = New System.Drawing.Size(50, 21)
-        Me.radEgen2FemtiNei.TabIndex = 72
-        Me.radEgen2FemtiNei.Text = "Nei"
-        Me.radEgen2FemtiNei.UseVisualStyleBackColor = True
-        '
-        'Panel5
-        '
-        Me.Panel5.Controls.Add(Me.radEgen2FriskSistJa)
-        Me.Panel5.Controls.Add(Me.radEgen2FriskSistNei)
-        Me.Panel5.Location = New System.Drawing.Point(265, 101)
-        Me.Panel5.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(144, 54)
-        Me.Panel5.TabIndex = 140
-        '
-        'radEgen2FriskSistJa
-        '
-        Me.radEgen2FriskSistJa.AutoSize = True
-        Me.radEgen2FriskSistJa.Location = New System.Drawing.Point(33, 16)
-        Me.radEgen2FriskSistJa.Margin = New System.Windows.Forms.Padding(4)
-        Me.radEgen2FriskSistJa.Name = "radEgen2FriskSistJa"
-        Me.radEgen2FriskSistJa.Size = New System.Drawing.Size(44, 21)
-        Me.radEgen2FriskSistJa.TabIndex = 68
-        Me.radEgen2FriskSistJa.Text = "Ja"
-        Me.radEgen2FriskSistJa.UseVisualStyleBackColor = True
-        '
-        'radEgen2FriskSistNei
-        '
-        Me.radEgen2FriskSistNei.AutoSize = True
-        Me.radEgen2FriskSistNei.Location = New System.Drawing.Point(89, 16)
-        Me.radEgen2FriskSistNei.Margin = New System.Windows.Forms.Padding(4)
-        Me.radEgen2FriskSistNei.Name = "radEgen2FriskSistNei"
-        Me.radEgen2FriskSistNei.Size = New System.Drawing.Size(50, 21)
-        Me.radEgen2FriskSistNei.TabIndex = 69
-        Me.radEgen2FriskSistNei.Text = "Nei"
-        Me.radEgen2FriskSistNei.UseVisualStyleBackColor = True
-        '
-        'Panel4
-        '
-        Me.Panel4.Controls.Add(Me.radEgen2FriskJa)
-        Me.Panel4.Controls.Add(Me.radEgen2FriskNei)
-        Me.Panel4.Location = New System.Drawing.Point(280, 53)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(133, 41)
-        Me.Panel4.TabIndex = 140
-        '
-        'radEgen2FriskJa
-        '
-        Me.radEgen2FriskJa.AutoSize = True
-        Me.radEgen2FriskJa.Location = New System.Drawing.Point(19, 4)
-        Me.radEgen2FriskJa.Margin = New System.Windows.Forms.Padding(4)
-        Me.radEgen2FriskJa.Name = "radEgen2FriskJa"
-        Me.radEgen2FriskJa.Size = New System.Drawing.Size(44, 21)
-        Me.radEgen2FriskJa.TabIndex = 65
-        Me.radEgen2FriskJa.Text = "Ja"
-        Me.radEgen2FriskJa.UseVisualStyleBackColor = True
-        '
-        'radEgen2FriskNei
-        '
-        Me.radEgen2FriskNei.AutoSize = True
-        Me.radEgen2FriskNei.Location = New System.Drawing.Point(77, 4)
-        Me.radEgen2FriskNei.Margin = New System.Windows.Forms.Padding(4)
-        Me.radEgen2FriskNei.Name = "radEgen2FriskNei"
-        Me.radEgen2FriskNei.Size = New System.Drawing.Size(50, 21)
-        Me.radEgen2FriskNei.TabIndex = 66
-        Me.radEgen2FriskNei.Text = "Nei"
-        Me.radEgen2FriskNei.UseVisualStyleBackColor = True
-        '
-        'Panel3
-        '
-        Me.Panel3.Controls.Add(Me.radEgen2infoJa)
-        Me.Panel3.Controls.Add(Me.radEgen2infoNei)
-        Me.Panel3.Location = New System.Drawing.Point(280, 20)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(139, 27)
-        Me.Panel3.TabIndex = 140
-        '
-        'radEgen2infoJa
-        '
-        Me.radEgen2infoJa.AutoSize = True
-        Me.radEgen2infoJa.Location = New System.Drawing.Point(20, 1)
-        Me.radEgen2infoJa.Margin = New System.Windows.Forms.Padding(4)
-        Me.radEgen2infoJa.Name = "radEgen2infoJa"
-        Me.radEgen2infoJa.Size = New System.Drawing.Size(44, 21)
-        Me.radEgen2infoJa.TabIndex = 62
-        Me.radEgen2infoJa.Text = "Ja"
-        Me.radEgen2infoJa.UseVisualStyleBackColor = True
-        '
-        'radEgen2infoNei
-        '
-        Me.radEgen2infoNei.AutoSize = True
-        Me.radEgen2infoNei.Location = New System.Drawing.Point(76, 1)
-        Me.radEgen2infoNei.Margin = New System.Windows.Forms.Padding(4)
-        Me.radEgen2infoNei.Name = "radEgen2infoNei"
-        Me.radEgen2infoNei.Size = New System.Drawing.Size(50, 21)
-        Me.radEgen2infoNei.TabIndex = 63
-        Me.radEgen2infoNei.Text = "Nei"
-        Me.radEgen2infoNei.UseVisualStyleBackColor = True
-        '
-        'Label36
-        '
-        Me.Label36.AutoSize = True
-        Me.Label36.Location = New System.Drawing.Point(4, 583)
-        Me.Label36.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(408, 17)
-        Me.Label36.TabIndex = 133
-        Me.Label36.Text = "__________________________________________________"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(244, 793)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(160, 24)
-        Me.ComboBox1.TabIndex = 140
-        '
-        'Label30
-        '
-        Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(8, 279)
-        Me.Label30.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(408, 17)
-        Me.Label30.TabIndex = 127
-        Me.Label30.Text = "__________________________________________________"
-        '
-        'Label31
-        '
-        Me.Label31.AutoSize = True
-        Me.Label31.Location = New System.Drawing.Point(9, 318)
-        Me.Label31.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(408, 17)
-        Me.Label31.TabIndex = 128
-        Me.Label31.Text = "__________________________________________________"
-        '
-        'Panel13
-        '
-        Me.Panel13.Controls.Add(Me.radEgen2PiercJa)
-        Me.Panel13.Controls.Add(Me.radEgen2PiercNei)
-        Me.Panel13.Location = New System.Drawing.Point(275, 256)
-        Me.Panel13.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel13.Name = "Panel13"
-        Me.Panel13.Size = New System.Drawing.Size(137, 39)
-        Me.Panel13.TabIndex = 140
-        '
-        'radEgen2PiercJa
-        '
-        Me.radEgen2PiercJa.AutoSize = True
-        Me.radEgen2PiercJa.Location = New System.Drawing.Point(24, 4)
-        Me.radEgen2PiercJa.Margin = New System.Windows.Forms.Padding(4)
-        Me.radEgen2PiercJa.Name = "radEgen2PiercJa"
-        Me.radEgen2PiercJa.Size = New System.Drawing.Size(44, 21)
-        Me.radEgen2PiercJa.TabIndex = 77
-        Me.radEgen2PiercJa.Text = "Ja"
-        Me.radEgen2PiercJa.UseVisualStyleBackColor = True
-        '
-        'radEgen2PiercNei
-        '
-        Me.radEgen2PiercNei.AutoSize = True
-        Me.radEgen2PiercNei.Location = New System.Drawing.Point(81, 4)
-        Me.radEgen2PiercNei.Margin = New System.Windows.Forms.Padding(4)
-        Me.radEgen2PiercNei.Name = "radEgen2PiercNei"
-        Me.radEgen2PiercNei.Size = New System.Drawing.Size(50, 21)
-        Me.radEgen2PiercNei.TabIndex = 78
-        Me.radEgen2PiercNei.Text = "Nei"
-        Me.radEgen2PiercNei.UseVisualStyleBackColor = True
-        '
-        'radEgen2SamtykkeJa
-        '
-        Me.radEgen2SamtykkeJa.AutoSize = True
-        Me.radEgen2SamtykkeJa.Location = New System.Drawing.Point(299, 753)
-        Me.radEgen2SamtykkeJa.Margin = New System.Windows.Forms.Padding(4)
-        Me.radEgen2SamtykkeJa.Name = "radEgen2SamtykkeJa"
-        Me.radEgen2SamtykkeJa.Size = New System.Drawing.Size(44, 21)
-        Me.radEgen2SamtykkeJa.TabIndex = 107
-        Me.radEgen2SamtykkeJa.Text = "Ja"
-        Me.radEgen2SamtykkeJa.UseVisualStyleBackColor = True
         '
         'Label25
         '
         Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(3, 37)
+        Me.Label25.Location = New System.Drawing.Point(592, 48)
         Me.Label25.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(408, 17)
-        Me.Label25.TabIndex = 122
+        Me.Label25.TabIndex = 145
         Me.Label25.Text = "__________________________________________________"
-        '
-        'radEgen2SamtykkeNei
-        '
-        Me.radEgen2SamtykkeNei.AutoSize = True
-        Me.radEgen2SamtykkeNei.Location = New System.Drawing.Point(351, 753)
-        Me.radEgen2SamtykkeNei.Margin = New System.Windows.Forms.Padding(4)
-        Me.radEgen2SamtykkeNei.Name = "radEgen2SamtykkeNei"
-        Me.radEgen2SamtykkeNei.Size = New System.Drawing.Size(50, 21)
-        Me.radEgen2SamtykkeNei.TabIndex = 108
-        Me.radEgen2SamtykkeNei.Text = "Nei"
-        Me.radEgen2SamtykkeNei.UseVisualStyleBackColor = True
         '
         'TabPage3
         '
@@ -1928,7 +1939,7 @@ Partial Class egenerklaering
         Me.TabPage3.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(4)
-        Me.TabPage3.Size = New System.Drawing.Size(772, 914)
+        Me.TabPage3.Size = New System.Drawing.Size(1543, 914)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Side 2"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -2846,7 +2857,7 @@ Partial Class egenerklaering
         Me.TabPage4.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(4)
-        Me.TabPage4.Size = New System.Drawing.Size(772, 914)
+        Me.TabPage4.Size = New System.Drawing.Size(1543, 914)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Side 3"
         Me.TabPage4.UseVisualStyleBackColor = True
@@ -3502,7 +3513,7 @@ Partial Class egenerklaering
         Me.TabPage5.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.Padding = New System.Windows.Forms.Padding(4)
-        Me.TabPage5.Size = New System.Drawing.Size(772, 914)
+        Me.TabPage5.Size = New System.Drawing.Size(1543, 914)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Side 4"
         Me.TabPage5.UseVisualStyleBackColor = True
@@ -4401,7 +4412,7 @@ Partial Class egenerklaering
         Me.TabPage6.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage6.Name = "TabPage6"
         Me.TabPage6.Padding = New System.Windows.Forms.Padding(4)
-        Me.TabPage6.Size = New System.Drawing.Size(772, 914)
+        Me.TabPage6.Size = New System.Drawing.Size(1543, 914)
         Me.TabPage6.TabIndex = 5
         Me.TabPage6.Text = "Side 5"
         Me.TabPage6.UseVisualStyleBackColor = True
@@ -4796,7 +4807,7 @@ Partial Class egenerklaering
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(765, 942)
+        Me.ClientSize = New System.Drawing.Size(1595, 942)
         Me.Controls.Add(Me.TabControl1)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "egenerklaering"
@@ -4810,36 +4821,36 @@ Partial Class egenerklaering
         Me.Panel2.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
+        Me.Panel64.ResumeLayout(False)
+        Me.Panel64.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
         Me.Panel20.ResumeLayout(False)
         Me.Panel20.PerformLayout()
-        Me.Panel19.ResumeLayout(False)
-        Me.Panel19.PerformLayout()
         Me.Panel18.ResumeLayout(False)
         Me.Panel18.PerformLayout()
-        Me.Panel17.ResumeLayout(False)
-        Me.Panel17.PerformLayout()
         Me.Panel16.ResumeLayout(False)
         Me.Panel16.PerformLayout()
         Me.Panel14.ResumeLayout(False)
         Me.Panel14.PerformLayout()
-        Me.Panel12.ResumeLayout(False)
-        Me.Panel12.PerformLayout()
         Me.Panel11.ResumeLayout(False)
         Me.Panel11.PerformLayout()
-        Me.Panel7.ResumeLayout(False)
-        Me.Panel7.PerformLayout()
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
-        Me.Panel5.ResumeLayout(False)
-        Me.Panel5.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
+        Me.Panel7.ResumeLayout(False)
+        Me.Panel7.PerformLayout()
+        Me.Panel12.ResumeLayout(False)
+        Me.Panel12.PerformLayout()
+        Me.Panel17.ResumeLayout(False)
+        Me.Panel17.PerformLayout()
         Me.Panel13.ResumeLayout(False)
         Me.Panel13.PerformLayout()
+        Me.Panel19.ResumeLayout(False)
+        Me.Panel19.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
@@ -4974,20 +4985,6 @@ Partial Class egenerklaering
     Friend WithEvents txtEgenFornavn As TextBox
     Friend WithEvents ChkSomFor As CheckBox
     Friend WithEvents lblEgenFyllut As Label
-    Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents lblEgen2Gb As Label
-    Friend WithEvents lblEgen2CJD As Label
-    Friend WithEvents lblEgen2Narkotika12mnd As Label
-    Friend WithEvents lblEgen2Pierc As Label
-    Friend WithEvents lblEgen2HudSyk As Label
-    Friend WithEvents lblEgen2Femti As Label
-    Friend WithEvents lblEgen2FriskSidenSist As Label
-    Friend WithEvents lblEgen2Frisk As Label
-    Friend WithEvents lblEgen2InfoBlod As Label
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents Label24 As Label
     Friend WithEvents Label23 As Label
@@ -5004,9 +5001,6 @@ Partial Class egenerklaering
     Friend WithEvents Label14 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents Label32 As Label
-    Friend WithEvents Label29 As Label
-    Friend WithEvents Label28 As Label
     Friend WithEvents Label45 As Label
     Friend WithEvents Label44 As Label
     Friend WithEvents Label43 As Label
@@ -5146,8 +5140,6 @@ Partial Class egenerklaering
     Friend WithEvents RadioButton30 As RadioButton
     Friend WithEvents RadioButton63 As RadioButton
     Friend WithEvents RadioButton64 As RadioButton
-    Friend WithEvents Label27 As Label
-    Friend WithEvents Label26 As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents GroupBox4 As GroupBox
@@ -5253,6 +5245,41 @@ Partial Class egenerklaering
     Friend WithEvents RadioButton59 As RadioButton
     Friend WithEvents RadioButton60 As RadioButton
     Friend WithEvents Panel59 As Panel
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button5 As Button
+    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents Panel20 As Panel
+    Friend WithEvents Panel21 As Panel
+    Friend WithEvents radEgen2Forskning12mndJa As RadioButton
+    Friend WithEvents radEgen2Forskning12mndNei As RadioButton
+    Friend WithEvents Panel18 As Panel
+    Friend WithEvents radEgen2Afrika5AarJa As RadioButton
+    Friend WithEvents radEgen2Afrika5AarNei As RadioButton
+    Friend WithEvents Panel16 As Panel
+    Friend WithEvents rbMalariaNei As RadioButton
+    Friend WithEvents rbMalariaJa As RadioButton
+    Friend WithEvents Panel14 As Panel
+    Friend WithEvents rbBGNei As RadioButton
+    Friend WithEvents rbGBJa As RadioButton
+    Friend WithEvents Panel11 As Panel
+    Friend WithEvents radEgen2Narkotika12mndJa As RadioButton
+    Friend WithEvents radEgen2Narkotika12mndNei As RadioButton
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents radEgen2FemtiJa As RadioButton
+    Friend WithEvents radEgen2FemtiNei As RadioButton
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents radEgen2FriskSistJa As RadioButton
+    Friend WithEvents radEgen2FriskSistNei As RadioButton
+    Friend WithEvents Label36 As Label
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Panel13 As Panel
+    Friend WithEvents radEgen2PiercJa As RadioButton
+    Friend WithEvents radEgen2PiercNei As RadioButton
+    Friend WithEvents radEgen2SamtykkeJa As RadioButton
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Label4 As Label
     Friend WithEvents radEgen2SorAmerikaNei As RadioButton
     Friend WithEvents radEgen2SorAmerikaJa As RadioButton
     Friend WithEvents Label41 As Label
@@ -5266,10 +5293,18 @@ Partial Class egenerklaering
     Friend WithEvents Label35 As Label
     Friend WithEvents Label34 As Label
     Friend WithEvents Label33 As Label
+    Friend WithEvents Label32 As Label
+    Friend WithEvents Label29 As Label
+    Friend WithEvents Label28 As Label
+    Friend WithEvents Label27 As Label
+    Friend WithEvents Label26 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label5 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
     Friend WithEvents lblEgen2Land As Label
     Friend WithEvents lblEgen2Samtykke As Label
     Friend WithEvents lblEgen2Medikament12mnd As Label
@@ -5278,63 +5313,40 @@ Partial Class egenerklaering
     Friend WithEvents lblEgen2Afrika5Aar As Label
     Friend WithEvents lblEgen2Malaria6Mnd As Label
     Friend WithEvents lblEgen2Malaria As Label
+    Friend WithEvents lblEgen2Gb As Label
+    Friend WithEvents lblEgen2CJD As Label
+    Friend WithEvents lblEgen2Narkotika12mnd As Label
+    Friend WithEvents lblEgen2Pierc As Label
+    Friend WithEvents lblEgen2HudSyk As Label
+    Friend WithEvents lblEgen2Femti As Label
+    Friend WithEvents lblEgen2FriskSidenSist As Label
+    Friend WithEvents lblEgen2Frisk As Label
+    Friend WithEvents lblEgen2InfoBlod As Label
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents Panel20 As Panel
-    Friend WithEvents Panel21 As Panel
-    Friend WithEvents radEgen2Forskning12mndJa As RadioButton
-    Friend WithEvents radEgen2Forskning12mndNei As RadioButton
     Friend WithEvents Panel19 As Panel
     Friend WithEvents radEgen2ForskningJa As RadioButton
     Friend WithEvents radEgen2ForskningNei As RadioButton
-    Friend WithEvents Panel18 As Panel
-    Friend WithEvents radEgen2Afrika5AarJa As RadioButton
-    Friend WithEvents radEgen2Afrika5AarNei As RadioButton
     Friend WithEvents Panel17 As Panel
     Friend WithEvents radEgen2Malaria6MndJa As RadioButton
     Friend WithEvents radEgen2Malaria6MndNei As RadioButton
-    Friend WithEvents Panel16 As Panel
-    Friend WithEvents rbMalariaNei As RadioButton
-    Friend WithEvents rbMalariaJa As RadioButton
-    Friend WithEvents Panel14 As Panel
-    Friend WithEvents rbBGNei As RadioButton
-    Friend WithEvents rbGBJa As RadioButton
     Friend WithEvents Panel12 As Panel
     Friend WithEvents radEgen2CjdJa As RadioButton
     Friend WithEvents radEgen2CjdNei As RadioButton
-    Friend WithEvents Panel11 As Panel
-    Friend WithEvents radEgen2Narkotika12mndJa As RadioButton
-    Friend WithEvents radEgen2Narkotika12mndNei As RadioButton
     Friend WithEvents Panel7 As Panel
     Friend WithEvents Panel10 As Panel
     Friend WithEvents Panel9 As Panel
     Friend WithEvents Panel8 As Panel
     Friend WithEvents radEgen2HudSykJa As RadioButton
     Friend WithEvents radEgen2HudSykNei As RadioButton
-    Friend WithEvents Panel6 As Panel
-    Friend WithEvents radEgen2FemtiJa As RadioButton
-    Friend WithEvents radEgen2FemtiNei As RadioButton
-    Friend WithEvents Panel5 As Panel
-    Friend WithEvents radEgen2FriskSistJa As RadioButton
-    Friend WithEvents radEgen2FriskSistNei As RadioButton
     Friend WithEvents Panel4 As Panel
     Friend WithEvents radEgen2FriskJa As RadioButton
     Friend WithEvents radEgen2FriskNei As RadioButton
     Friend WithEvents Panel3 As Panel
     Friend WithEvents radEgen2infoJa As RadioButton
     Friend WithEvents radEgen2infoNei As RadioButton
-    Friend WithEvents Label36 As Label
-    Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Label30 As Label
     Friend WithEvents Label31 As Label
-    Friend WithEvents Panel13 As Panel
-    Friend WithEvents radEgen2PiercJa As RadioButton
-    Friend WithEvents radEgen2PiercNei As RadioButton
-    Friend WithEvents radEgen2SamtykkeJa As RadioButton
     Friend WithEvents Label25 As Label
     Friend WithEvents radEgen2SamtykkeNei As RadioButton
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
+    Friend WithEvents Panel64 As Panel
 End Class
