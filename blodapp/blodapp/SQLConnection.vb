@@ -233,7 +233,7 @@ Public Class info
             Return tabell
             oppkobling.Close()
 
-        Catch ex As Exception
+        Catch ex As MySqlException
             MessageBox.Show("Noe gikk galt: " & ex.Message)
             Return tabell
         End Try

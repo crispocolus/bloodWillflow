@@ -68,6 +68,22 @@ Partial Class adminSide
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnLoggUt = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -79,14 +95,31 @@ Partial Class adminSide
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(0, 61)
+        Me.TabControl1.Location = New System.Drawing.Point(0, 75)
+        Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(737, 416)
+        Me.TabControl1.Size = New System.Drawing.Size(983, 512)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Button3)
+        Me.TabPage1.Controls.Add(Me.Label21)
+        Me.TabPage1.Controls.Add(Me.Label20)
+        Me.TabPage1.Controls.Add(Me.Label19)
+        Me.TabPage1.Controls.Add(Me.Label18)
+        Me.TabPage1.Controls.Add(Me.Label17)
+        Me.TabPage1.Controls.Add(Me.Label16)
+        Me.TabPage1.Controls.Add(Me.Label15)
+        Me.TabPage1.Controls.Add(Me.Label8)
+        Me.TabPage1.Controls.Add(Me.TextBox7)
+        Me.TabPage1.Controls.Add(Me.TextBox6)
+        Me.TabPage1.Controls.Add(Me.TextBox5)
+        Me.TabPage1.Controls.Add(Me.TextBox4)
+        Me.TabPage1.Controls.Add(Me.TextBox3)
+        Me.TabPage1.Controls.Add(Me.TextBox2)
+        Me.TabPage1.Controls.Add(Me.TextBox1)
         Me.TabPage1.Controls.Add(Me.Panel1)
         Me.TabPage1.Controls.Add(Me.endrePwBtn)
         Me.TabPage1.Controls.Add(Me.Label6)
@@ -103,10 +136,11 @@ Partial Class adminSide
         Me.TabPage1.Controls.Add(Me.Label1)
         Me.TabPage1.Controls.Add(Me.ListBox1)
         Me.TabPage1.Controls.Add(Me.btnSokBruker)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(729, 390)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage1.Size = New System.Drawing.Size(975, 483)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Brukeradministrasjon"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -115,17 +149,18 @@ Partial Class adminSide
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Location = New System.Drawing.Point(3, 304)
+        Me.Panel1.Location = New System.Drawing.Point(4, 377)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(723, 83)
+        Me.Panel1.Size = New System.Drawing.Size(967, 102)
         Me.Panel1.TabIndex = 23
         '
         'endrePwBtn
         '
-        Me.endrePwBtn.Location = New System.Drawing.Point(229, 234)
-        Me.endrePwBtn.Margin = New System.Windows.Forms.Padding(2)
+        Me.endrePwBtn.Location = New System.Drawing.Point(305, 288)
+        Me.endrePwBtn.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.endrePwBtn.Name = "endrePwBtn"
-        Me.endrePwBtn.Size = New System.Drawing.Size(90, 33)
+        Me.endrePwBtn.Size = New System.Drawing.Size(120, 41)
         Me.endrePwBtn.TabIndex = 22
         Me.endrePwBtn.Text = "Endre passord"
         Me.endrePwBtn.UseVisualStyleBackColor = True
@@ -133,10 +168,9 @@ Partial Class adminSide
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(6, 218)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Location = New System.Drawing.Point(8, 268)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(50, 13)
+        Me.Label6.Size = New System.Drawing.Size(67, 17)
         Me.Label6.TabIndex = 21
         Me.Label6.Text = "Velg rolle"
         '
@@ -144,17 +178,18 @@ Partial Class adminSide
         '
         Me.sokSpesCmb.FormattingEnabled = True
         Me.sokSpesCmb.Items.AddRange(New Object() {"fornavn", "etternavn", "e-post"})
-        Me.sokSpesCmb.Location = New System.Drawing.Point(65, 215)
-        Me.sokSpesCmb.Margin = New System.Windows.Forms.Padding(2)
+        Me.sokSpesCmb.Location = New System.Drawing.Point(87, 265)
+        Me.sokSpesCmb.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.sokSpesCmb.Name = "sokSpesCmb"
-        Me.sokSpesCmb.Size = New System.Drawing.Size(92, 21)
+        Me.sokSpesCmb.Size = New System.Drawing.Size(121, 24)
         Me.sokSpesCmb.TabIndex = 20
         '
         'btnFjernBruker
         '
-        Me.btnFjernBruker.Location = New System.Drawing.Point(186, 144)
+        Me.btnFjernBruker.Location = New System.Drawing.Point(248, 177)
+        Me.btnFjernBruker.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnFjernBruker.Name = "btnFjernBruker"
-        Me.btnFjernBruker.Size = New System.Drawing.Size(133, 23)
+        Me.btnFjernBruker.Size = New System.Drawing.Size(177, 28)
         Me.btnFjernBruker.TabIndex = 19
         Me.btnFjernBruker.Text = "Fjern bruker fra database"
         Me.btnFjernBruker.UseVisualStyleBackColor = True
@@ -162,35 +197,39 @@ Partial Class adminSide
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(186, 127)
+        Me.Label5.Location = New System.Drawing.Point(248, 156)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(95, 13)
+        Me.Label5.Size = New System.Drawing.Size(127, 17)
         Me.Label5.TabIndex = 18
         Me.Label5.Text = "Fjerne valgt bruker"
         '
         'btnEndrePersoninfo
         '
-        Me.btnEndrePersoninfo.Location = New System.Drawing.Point(186, 85)
+        Me.btnEndrePersoninfo.Location = New System.Drawing.Point(248, 105)
+        Me.btnEndrePersoninfo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnEndrePersoninfo.Name = "btnEndrePersoninfo"
-        Me.btnEndrePersoninfo.Size = New System.Drawing.Size(121, 23)
+        Me.btnEndrePersoninfo.Size = New System.Drawing.Size(161, 28)
         Me.btnEndrePersoninfo.TabIndex = 17
-        Me.btnEndrePersoninfo.Text = "Personinformasjon"
+        Me.btnEndrePersoninfo.Text = "Lagre ny info"
         Me.btnEndrePersoninfo.UseVisualStyleBackColor = True
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(186, 69)
+        Me.Label4.Location = New System.Drawing.Point(248, 85)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(85, 13)
+        Me.Label4.Size = New System.Drawing.Size(114, 17)
         Me.Label4.TabIndex = 16
         Me.Label4.Text = "Endre brukerinfo"
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(313, 23)
+        Me.Button2.Location = New System.Drawing.Point(417, 28)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(48, 23)
+        Me.Button2.Size = New System.Drawing.Size(64, 28)
         Me.Button2.TabIndex = 15
         Me.Button2.Text = "Endre"
         Me.Button2.UseVisualStyleBackColor = True
@@ -198,9 +237,10 @@ Partial Class adminSide
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(186, 8)
+        Me.Label3.Location = New System.Drawing.Point(248, 10)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(96, 13)
+        Me.Label3.Size = New System.Drawing.Size(129, 17)
         Me.Label3.TabIndex = 14
         Me.Label3.Text = "Endre brukerstatus"
         '
@@ -208,50 +248,57 @@ Partial Class adminSide
         '
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Ansatt", "Blodgiver", "Leder", "IT"})
-        Me.ComboBox1.Location = New System.Drawing.Point(186, 25)
+        Me.ComboBox1.Location = New System.Drawing.Point(248, 31)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.Size = New System.Drawing.Size(160, 24)
         Me.ComboBox1.TabIndex = 13
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(5, 199)
+        Me.Label2.Location = New System.Drawing.Point(7, 245)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(83, 13)
+        Me.Label2.Size = New System.Drawing.Size(110, 17)
         Me.Label2.TabIndex = 12
         Me.Label2.Text = "Søk etter bruker"
         '
         'sokTxt
         '
-        Me.sokTxt.Location = New System.Drawing.Point(6, 246)
+        Me.sokTxt.Location = New System.Drawing.Point(8, 303)
+        Me.sokTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.sokTxt.Name = "sokTxt"
-        Me.sokTxt.Size = New System.Drawing.Size(102, 20)
+        Me.sokTxt.Size = New System.Drawing.Size(135, 22)
         Me.sokTxt.TabIndex = 11
-        Me.sokTxt.Text = "Søk etter navn"
+        Me.sokTxt.Text = "bjarne"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(14, 8)
+        Me.Label1.Location = New System.Drawing.Point(19, 10)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(126, 13)
+        Me.Label1.Size = New System.Drawing.Size(170, 17)
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "Velg en bruker å redigere"
         '
         'ListBox1
         '
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(8, 25)
+        Me.ListBox1.ItemHeight = 16
+        Me.ListBox1.Location = New System.Drawing.Point(8, 31)
+        Me.ListBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(160, 160)
+        Me.ListBox1.Size = New System.Drawing.Size(212, 196)
         Me.ListBox1.TabIndex = 9
         '
         'btnSokBruker
         '
-        Me.btnSokBruker.Location = New System.Drawing.Point(113, 244)
+        Me.btnSokBruker.Location = New System.Drawing.Point(151, 300)
+        Me.btnSokBruker.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnSokBruker.Name = "btnSokBruker"
-        Me.btnSokBruker.Size = New System.Drawing.Size(52, 23)
+        Me.btnSokBruker.Size = New System.Drawing.Size(69, 28)
         Me.btnSokBruker.TabIndex = 8
         Me.btnSokBruker.Text = "Søk"
         Me.btnSokBruker.UseVisualStyleBackColor = True
@@ -281,10 +328,11 @@ Partial Class adminSide
         Me.TabPage2.Controls.Add(Me.etternavnTxt)
         Me.TabPage2.Controls.Add(Me.fornavnTxt)
         Me.TabPage2.Controls.Add(Me.epostTxt)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(729, 390)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage2.Size = New System.Drawing.Size(975, 483)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Legg til ny bruker"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -292,10 +340,9 @@ Partial Class adminSide
         'brkStatLbl
         '
         Me.brkStatLbl.AutoSize = True
-        Me.brkStatLbl.Location = New System.Drawing.Point(95, 228)
-        Me.brkStatLbl.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.brkStatLbl.Location = New System.Drawing.Point(127, 281)
         Me.brkStatLbl.Name = "brkStatLbl"
-        Me.brkStatLbl.Size = New System.Drawing.Size(69, 13)
+        Me.brkStatLbl.Size = New System.Drawing.Size(92, 17)
         Me.brkStatLbl.TabIndex = 53
         Me.brkStatLbl.Text = "Brukerstatus:"
         '
@@ -303,113 +350,126 @@ Partial Class adminSide
         '
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Items.AddRange(New Object() {"blodgiver", "ansatt", "leder", "admin"})
-        Me.ComboBox2.Location = New System.Drawing.Point(169, 225)
-        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(2)
+        Me.ComboBox2.Location = New System.Drawing.Point(225, 277)
+        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(92, 21)
+        Me.ComboBox2.Size = New System.Drawing.Size(121, 24)
         Me.ComboBox2.TabIndex = 52
         '
         'stdnavnLbl
         '
         Me.stdnavnLbl.AutoSize = True
-        Me.stdnavnLbl.Location = New System.Drawing.Point(214, 85)
+        Me.stdnavnLbl.Location = New System.Drawing.Point(285, 105)
+        Me.stdnavnLbl.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.stdnavnLbl.Name = "stdnavnLbl"
-        Me.stdnavnLbl.Size = New System.Drawing.Size(58, 13)
+        Me.stdnavnLbl.Size = New System.Drawing.Size(75, 17)
         Me.stdnavnLbl.TabIndex = 49
         Me.stdnavnLbl.Text = "Stedsnavn"
         '
         'stdnavnTxt
         '
-        Me.stdnavnTxt.Location = New System.Drawing.Point(217, 102)
+        Me.stdnavnTxt.Location = New System.Drawing.Point(289, 126)
+        Me.stdnavnTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.stdnavnTxt.Name = "stdnavnTxt"
-        Me.stdnavnTxt.Size = New System.Drawing.Size(100, 20)
+        Me.stdnavnTxt.Size = New System.Drawing.Size(132, 22)
         Me.stdnavnTxt.TabIndex = 48
         '
         'postnrLbl
         '
         Me.postnrLbl.AutoSize = True
-        Me.postnrLbl.Location = New System.Drawing.Point(214, 48)
+        Me.postnrLbl.Location = New System.Drawing.Point(285, 59)
+        Me.postnrLbl.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.postnrLbl.Name = "postnrLbl"
-        Me.postnrLbl.Size = New System.Drawing.Size(71, 13)
+        Me.postnrLbl.Size = New System.Drawing.Size(95, 17)
         Me.postnrLbl.TabIndex = 47
         Me.postnrLbl.Text = "Postnunmmer"
         '
         'postnrTxt
         '
-        Me.postnrTxt.Location = New System.Drawing.Point(217, 63)
+        Me.postnrTxt.Location = New System.Drawing.Point(289, 78)
+        Me.postnrTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.postnrTxt.Name = "postnrTxt"
-        Me.postnrTxt.Size = New System.Drawing.Size(100, 20)
+        Me.postnrTxt.Size = New System.Drawing.Size(132, 22)
         Me.postnrTxt.TabIndex = 46
         '
         'adresseLbl
         '
         Me.adresseLbl.AutoSize = True
-        Me.adresseLbl.Location = New System.Drawing.Point(214, 6)
+        Me.adresseLbl.Location = New System.Drawing.Point(285, 7)
+        Me.adresseLbl.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.adresseLbl.Name = "adresseLbl"
-        Me.adresseLbl.Size = New System.Drawing.Size(45, 13)
+        Me.adresseLbl.Size = New System.Drawing.Size(60, 17)
         Me.adresseLbl.TabIndex = 45
         Me.adresseLbl.Text = "Adresse"
         '
         'adresseTxt
         '
-        Me.adresseTxt.Location = New System.Drawing.Point(217, 23)
+        Me.adresseTxt.Location = New System.Drawing.Point(289, 28)
+        Me.adresseTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.adresseTxt.Name = "adresseTxt"
-        Me.adresseTxt.Size = New System.Drawing.Size(100, 20)
+        Me.adresseTxt.Size = New System.Drawing.Size(132, 22)
         Me.adresseTxt.TabIndex = 44
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(214, 171)
+        Me.Label7.Location = New System.Drawing.Point(285, 210)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(84, 13)
+        Me.Label7.Size = New System.Drawing.Size(112, 17)
         Me.Label7.TabIndex = 41
         Me.Label7.Text = "Bekreft passord:"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(62, 171)
+        Me.Label9.Location = New System.Drawing.Point(83, 210)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(45, 13)
+        Me.Label9.Size = New System.Drawing.Size(60, 17)
         Me.Label9.TabIndex = 40
         Me.Label9.Text = "Passord"
         '
         'passordcTxt
         '
-        Me.passordcTxt.Location = New System.Drawing.Point(217, 188)
+        Me.passordcTxt.Location = New System.Drawing.Point(289, 231)
+        Me.passordcTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.passordcTxt.Name = "passordcTxt"
-        Me.passordcTxt.Size = New System.Drawing.Size(100, 20)
+        Me.passordcTxt.Size = New System.Drawing.Size(132, 22)
         Me.passordcTxt.TabIndex = 39
         '
         'passordTxt
         '
-        Me.passordTxt.Location = New System.Drawing.Point(65, 188)
+        Me.passordTxt.Location = New System.Drawing.Point(87, 231)
+        Me.passordTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.passordTxt.Name = "passordTxt"
-        Me.passordTxt.Size = New System.Drawing.Size(100, 20)
+        Me.passordTxt.Size = New System.Drawing.Size(132, 22)
         Me.passordTxt.TabIndex = 38
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(62, 87)
+        Me.Label10.Location = New System.Drawing.Point(83, 107)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(80, 13)
+        Me.Label10.Size = New System.Drawing.Size(108, 17)
         Me.Label10.TabIndex = 37
         Me.Label10.Text = "Personnummer:"
         '
         'pnummerTxt
         '
-        Me.pnummerTxt.Location = New System.Drawing.Point(65, 102)
+        Me.pnummerTxt.Location = New System.Drawing.Point(87, 126)
+        Me.pnummerTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pnummerTxt.Name = "pnummerTxt"
-        Me.pnummerTxt.Size = New System.Drawing.Size(100, 20)
+        Me.pnummerTxt.Size = New System.Drawing.Size(132, 22)
         Me.pnummerTxt.TabIndex = 36
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(151, 263)
+        Me.Button1.Location = New System.Drawing.Point(201, 324)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(78, 36)
+        Me.Button1.Size = New System.Drawing.Size(104, 44)
         Me.Button1.TabIndex = 35
         Me.Button1.Text = "Registrer"
         Me.Button1.UseVisualStyleBackColor = True
@@ -417,65 +477,73 @@ Partial Class adminSide
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(214, 127)
+        Me.Label11.Location = New System.Drawing.Point(285, 156)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(43, 13)
+        Me.Label11.Size = New System.Drawing.Size(56, 17)
         Me.Label11.TabIndex = 34
         Me.Label11.Text = "Telefon"
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(62, 48)
+        Me.Label12.Location = New System.Drawing.Point(83, 59)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(53, 13)
+        Me.Label12.Size = New System.Drawing.Size(69, 17)
         Me.Label12.TabIndex = 33
         Me.Label12.Text = "Etternavn"
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(62, 6)
+        Me.Label13.Location = New System.Drawing.Point(83, 7)
+        Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(46, 13)
+        Me.Label13.Size = New System.Drawing.Size(60, 17)
         Me.Label13.TabIndex = 32
         Me.Label13.Text = "Fornavn"
         '
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(63, 127)
+        Me.Label14.Location = New System.Drawing.Point(84, 156)
+        Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(34, 13)
+        Me.Label14.Size = New System.Drawing.Size(44, 17)
         Me.Label14.TabIndex = 31
         Me.Label14.Text = "Epost"
         '
         'tlfTxt
         '
-        Me.tlfTxt.Location = New System.Drawing.Point(217, 143)
+        Me.tlfTxt.Location = New System.Drawing.Point(289, 176)
+        Me.tlfTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.tlfTxt.Name = "tlfTxt"
-        Me.tlfTxt.Size = New System.Drawing.Size(100, 20)
+        Me.tlfTxt.Size = New System.Drawing.Size(132, 22)
         Me.tlfTxt.TabIndex = 30
         '
         'etternavnTxt
         '
-        Me.etternavnTxt.Location = New System.Drawing.Point(65, 63)
+        Me.etternavnTxt.Location = New System.Drawing.Point(87, 78)
+        Me.etternavnTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.etternavnTxt.Name = "etternavnTxt"
-        Me.etternavnTxt.Size = New System.Drawing.Size(100, 20)
+        Me.etternavnTxt.Size = New System.Drawing.Size(132, 22)
         Me.etternavnTxt.TabIndex = 29
         '
         'fornavnTxt
         '
-        Me.fornavnTxt.Location = New System.Drawing.Point(65, 22)
+        Me.fornavnTxt.Location = New System.Drawing.Point(87, 27)
+        Me.fornavnTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.fornavnTxt.Name = "fornavnTxt"
-        Me.fornavnTxt.Size = New System.Drawing.Size(100, 20)
+        Me.fornavnTxt.Size = New System.Drawing.Size(132, 22)
         Me.fornavnTxt.TabIndex = 28
         '
         'epostTxt
         '
-        Me.epostTxt.Location = New System.Drawing.Point(65, 143)
+        Me.epostTxt.Location = New System.Drawing.Point(87, 176)
+        Me.epostTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.epostTxt.Name = "epostTxt"
-        Me.epostTxt.Size = New System.Drawing.Size(100, 20)
+        Me.epostTxt.Size = New System.Drawing.Size(132, 22)
         Me.epostTxt.TabIndex = 27
         '
         'Panel2
@@ -485,8 +553,9 @@ Partial Class adminSide
         Me.Panel2.Controls.Add(Me.btnLoggUt)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(739, 55)
+        Me.Panel2.Size = New System.Drawing.Size(985, 68)
         Me.Panel2.TabIndex = 20
         '
         'PictureBox1
@@ -494,28 +563,162 @@ Partial Class adminSide
         Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(135, 55)
+        Me.PictureBox1.Size = New System.Drawing.Size(180, 68)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 8
         Me.PictureBox1.TabStop = False
         '
         'btnLoggUt
         '
-        Me.btnLoggUt.Location = New System.Drawing.Point(634, 12)
+        Me.btnLoggUt.Location = New System.Drawing.Point(845, 15)
+        Me.btnLoggUt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnLoggUt.Name = "btnLoggUt"
-        Me.btnLoggUt.Size = New System.Drawing.Size(103, 23)
+        Me.btnLoggUt.Size = New System.Drawing.Size(137, 28)
         Me.btnLoggUt.TabIndex = 12
         Me.btnLoggUt.Text = "Logg ut"
         Me.btnLoggUt.UseVisualStyleBackColor = True
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(663, 28)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(130, 22)
+        Me.TextBox1.TabIndex = 0
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(663, 56)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(130, 22)
+        Me.TextBox2.TabIndex = 24
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(663, 84)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(130, 22)
+        Me.TextBox3.TabIndex = 25
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(663, 112)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(130, 22)
+        Me.TextBox4.TabIndex = 26
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(663, 140)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(130, 22)
+        Me.TextBox5.TabIndex = 27
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Location = New System.Drawing.Point(663, 168)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(130, 22)
+        Me.TextBox6.TabIndex = 28
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Location = New System.Drawing.Point(663, 196)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(130, 22)
+        Me.TextBox7.TabIndex = 29
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(248, 245)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(51, 17)
+        Me.Label8.TabIndex = 30
+        Me.Label8.Text = "Label8"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(566, 28)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(60, 17)
+        Me.Label15.TabIndex = 31
+        Me.Label15.Text = "Fornavn"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(566, 56)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(62, 20)
+        Me.Label16.TabIndex = 32
+        Me.Label16.Text = "Etternavn"
+        Me.Label16.UseCompatibleTextRendering = True
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(566, 84)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(49, 17)
+        Me.Label17.TabIndex = 33
+        Me.Label17.Text = "E-post"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(566, 111)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(24, 17)
+        Me.Label18.TabIndex = 34
+        Me.Label18.Text = "Tlf"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(566, 140)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(60, 17)
+        Me.Label19.TabIndex = 35
+        Me.Label19.Text = "Adresse"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(566, 168)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(53, 17)
+        Me.Label20.TabIndex = 36
+        Me.Label20.Text = "Post nr"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(566, 196)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(63, 17)
+        Me.Label21.TabIndex = 37
+        Me.Label21.Text = "Blodtype"
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(417, 105)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(115, 65)
+        Me.Button3.TabIndex = 38
+        Me.Button3.Text = "Test - Last inn info"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'adminSide
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(739, 455)
+        Me.ClientSize = New System.Drawing.Size(985, 560)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.TabControl1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "adminSide"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
@@ -573,4 +776,20 @@ Partial Class adminSide
     Friend WithEvents Panel2 As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnLoggUt As Button
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents Label19 As Label
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Button3 As Button
 End Class
