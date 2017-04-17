@@ -149,6 +149,7 @@
         'Tømmer combo - box før query
         lstKandidater.Items.Clear()
 
+
         'Utfører query ved hjelp av funksjonen query under klassen info. 
         Tabell = info.queryJoin("fornavn, etternavn, bruker.person_nr", "bruker", "blodgiver ON bruker.person_nr = blodgiver.person_nr", "blodtype = '" & blodtype & "';")
 

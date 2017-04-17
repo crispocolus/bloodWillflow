@@ -25,7 +25,7 @@
 
         ListBox1.Items.Clear()
         For Each rad As DataRow In resultatTab.Rows
-            ListBox1.Items.Add(rad("Fornavn") & " " & rad("Etternavn") & " " & rad("Epost") & " " & rad("Fdato"))
+            ListBox1.Items.Add(New ansattSide.listItem With {.display = rad("Fornavn") & " " & rad("Etternavn") & " " & rad("Epost") & " " & rad("Fdato"), .value = rad("person_nr")})
         Next
 
     End Sub
@@ -43,6 +43,38 @@
     Private Sub endrePwBtn_Click(sender As Object, e As EventArgs) Handles endrePwBtn.Click
         Dim pros As New prosedyrer
         pros.endrePw(LoginForm.bnavn)
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Try
+
+
+            Dim info As New info
+
+            Dim bruker As String
+            bruker = CType(ListBox1.SelectedItem, ansattSide.listItem).value
+            Dim brukerstatus As Integer
+            brukerstatus = 0
+
+            Select Case ComboBox1.Text
+                Case "Blodgiver"
+                    brukerstatus = 0
+                Case "Ansatt"
+                    brukerstatus = 1
+                Case "Leder"
+                    brukerstatus = 2
+                Case "IT"
+                    brukerstatus = 3
+
+            End Select
+
+
+            info.queryUpdate("bruker", "brukerstatus = '" & brukerstatus & "'", "person_nr = '" & bruker & "';")
+
+            MsgBox("Bruker har fått brukerstatus endret til " & ComboBox1.Text)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 End Class
 
