@@ -39,10 +39,12 @@ C:\Users\Even\Documents\Skole\OOPS\Prosjekt\gruppe25blodapp_try2\bloodWillflow\b
 C:\Users\Even\Documents\Skole\OOPS\Prosjekt\gruppe25blodapp_try2\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.vbprojResolveAssemblyReference.cache
 C:\Users\Even\Documents\Skole\OOPS\Prosjekt\gruppe25blodapp_try2\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.adminSide.resources
 C:\Users\Even\Documents\Skole\OOPS\Prosjekt\gruppe25blodapp_try2\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.egenerklaering.resources
+C:\Users\Even\Documents\Skole\OOPS\Prosjekt\gruppe25blodapp_try2\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.egenerklaering2.resources
 C:\Users\Even\Documents\Skole\OOPS\Prosjekt\gruppe25blodapp_try2\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.lederSide.resources
 C:\Users\Even\Documents\Skole\OOPS\Prosjekt\gruppe25blodapp_try2\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.ansattSide.resources
 C:\Users\Even\Documents\Skole\OOPS\Prosjekt\gruppe25blodapp_try2\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.LoginForm.resources
 C:\Users\Even\Documents\Skole\OOPS\Prosjekt\gruppe25blodapp_try2\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.Resources.resources
+C:\Users\Even\Documents\Skole\OOPS\Prosjekt\gruppe25blodapp_try2\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.ProsFunk.resources
 C:\Users\Even\Documents\Skole\OOPS\Prosjekt\gruppe25blodapp_try2\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.RegistrerForm.resources
 C:\Users\Even\Documents\Skole\OOPS\Prosjekt\gruppe25blodapp_try2\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.vbproj.GenerateResource.Cache
 C:\Users\Even\Documents\Skole\OOPS\Prosjekt\gruppe25blodapp_try2\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.exe
@@ -75,4 +77,3 @@ C:\g25\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.egenerklaering.resources
 C:\g25\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.lederSide.resources
 C:\g25\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.ansattSide.resources
 C:\bloodwillflow\blodapp\blodapp\obj\Debug\blodapp.hurtigBestilling.resources
-C:\Users\Even\Documents\Skole\OOPS\Prosjekt\gruppe25blodapp_try2\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.hurtigBestilling.resources
