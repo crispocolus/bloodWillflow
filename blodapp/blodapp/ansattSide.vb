@@ -4,6 +4,8 @@
 
     Public literBehov As String = 0
 
+
+
     'Kode som utføres når siden lastes
     Private Sub ansattSide_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim tabell As New DataTable
@@ -12,6 +14,11 @@
         For Each rad In tabell.Rows
             CBoxBlodtype.Items.Add(rad("blodtype"))
         Next
+
+        'Kalender for inkalling skal kun vise dato minst to uker etter dagens dato
+        Dim toUker As New Date
+        toUker = Today.AddDays(14)
+        tappeKalender.MinDate = toUker
     End Sub
 
     'Knapp for å endre passord. 
@@ -29,29 +36,25 @@
     End Sub
 
     '*****INNKALLING****
-    Private Sub btnBehov_Click(sender As Object, e As EventArgs) Handles btnBehov.Click
-        '    If IsNumeric(txtMengde) Then
-        '        Label9.Text = "Du trenger minst: " & giverBehov & "antall blodgivere"
-        '    Else
-        '        MsgBox("Du må skrive et tall når du skriver literbehov")
-        '    End If
 
-        '*******Skal vi ha denne?**************
+
+    Private Sub btnbehov_click(sender As Object, e As EventArgs) Handles btnBehov.Click
+
+        Dim literbehov As Double
+        Dim giverbehov As Integer
+        Try
+            If IsNumeric(TextBox1.Text) = False Then
+                MsgBox("du må skrive et tall når du skriver literbehov (bruk komma, ikke punktum for desimal)")
+            Else
+                literbehov = TextBox1.Text
+                giverbehov = Math.Ceiling(literBehov / 0.45)
+                Label9.Text = "du trenger minst: " & giverbehov & " blodgivere" & vbCrLf & "for å få " & literBehov & " liter blod."
+            End If
+        Catch feil As Exception
+
+            MsgBox(feil.Message)
+        End Try
     End Sub
-
-    'Private Sub btnBehov_Click(sender As Object, e As EventArgs) Handles btnBehov.Click
-    '    literBehov = TextBox1.Text
-    '    Dim giverBehov As Integer
-    '    giverBehov = (literBehov / 0.45) + 1
-    '    If IsNumeric(TextBox1.Text) = False Then
-    '        MsgBox("Du må skrive et heltall når du skriver literbehov")
-    '    Else
-    '        Label9.Text = "Du trenger minst: " & giverBehov & " blodgivere" & vbCrLf & "for å få " & literBehov & " liter blod."
-    '    End If
-
-
-    '***********Skal vi ha denne?********
-    'End Sub
 
     'Oppdaterer listbox når man skifter blodtype. 
     Private Sub CBoxBlodtype_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBoxBlodtype.SelectedIndexChanged
@@ -68,6 +71,9 @@
         hurtigbestilling.lastBGTlf(CBoxBlodtype.Text)
         hurtigbestilling.Show()
     End Sub
+    'Kalender
+
+
 
     'Knapp for å sende bestilling. 
     Private Sub btnInnkalling_Click(sender As Object, e As EventArgs) Handles btnInnkalling.Click
@@ -252,5 +258,6 @@
         End Try
 
     End Sub
+
 End Class
 

@@ -31,6 +31,7 @@ Partial Class ansattSide
         Me.cmbTime = New System.Windows.Forms.ComboBox()
         Me.lblKlokkeslett = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnLoggUt = New System.Windows.Forms.Button()
         Me.endrePwBtn = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.btnBehov = New System.Windows.Forms.Button()
@@ -70,7 +71,6 @@ Partial Class ansattSide
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.loggutBtn = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.btnLoggUt = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -176,6 +176,15 @@ Partial Class ansattSide
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(718, 102)
         Me.Panel1.TabIndex = 24
+        '
+        'btnLoggUt
+        '
+        Me.btnLoggUt.Location = New System.Drawing.Point(625, 16)
+        Me.btnLoggUt.Name = "btnLoggUt"
+        Me.btnLoggUt.Size = New System.Drawing.Size(75, 23)
+        Me.btnLoggUt.TabIndex = 14
+        Me.btnLoggUt.Text = "Logg ut"
+        Me.btnLoggUt.UseVisualStyleBackColor = True
         '
         'endrePwBtn
         '
@@ -580,15 +589,6 @@ Partial Class ansattSide
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(734, 68)
         Me.Panel2.TabIndex = 20
-        '
-        'btnLoggUt
-        '
-        Me.btnLoggUt.Location = New System.Drawing.Point(625, 16)
-        Me.btnLoggUt.Name = "btnLoggUt"
-        Me.btnLoggUt.Size = New System.Drawing.Size(75, 23)
-        Me.btnLoggUt.TabIndex = 14
-        Me.btnLoggUt.Text = "Logg ut"
-        Me.btnLoggUt.UseVisualStyleBackColor = True
         '
         'ansattSide
         '
