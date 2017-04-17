@@ -28,10 +28,26 @@ Public Class prosedyrer
 
 
         newPass = InputBox("Skriv inn ditt ønskede passord")
-        connewPass = InputBox("Bekreft passordet")
-        If Not newPass = connewPass Then
-            MsgBox("Passordene stemmer ikke overens.")
-            endrePw(e_post)
+        If newPass = " " Then
+            MsgBox("Feltet kan ikke være blankt")
+            Exit Sub
+        ElseIf newPass = "" Then
+            ' Nødvendig?
+            MsgBox("Passord ble ikke oppdatert")
+            Exit Sub
+
+        Else
+            connewPass = InputBox("Bekreft passordet")
+            If connewPass = "" Then
+                MsgBox("Passord ble ikke oppdatert")
+                Exit Sub
+            End If
+
+
+            If Not newPass = connewPass Then
+                MsgBox("Passordene stemmer ikke overens.")
+                Exit Sub
+            End If
         End If
         salt = pHash.lagSalt
         hashPas = pHash.lagSaltetHash(newPass, salt)
@@ -39,6 +55,7 @@ Public Class prosedyrer
 
         MsgBox("Ditt passord har blitt oppdatert")
     End Sub
+
 
     Public Sub glemtPw()
         Dim info As New info
