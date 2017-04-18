@@ -41,6 +41,11 @@ Partial Class brukerSide
         Me.epostTxt = New System.Windows.Forms.TextBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.lblPostnr = New System.Windows.Forms.Label()
+        Me.postnrTxt = New System.Windows.Forms.TextBox()
+        Me.lblAdresse = New System.Windows.Forms.Label()
+        Me.adresseTxt = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.endrePwBtn = New System.Windows.Forms.Button()
         Me.lblEpost = New System.Windows.Forms.Label()
@@ -52,11 +57,7 @@ Partial Class brukerSide
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.adresseTxt = New System.Windows.Forms.TextBox()
-        Me.lblAdresse = New System.Windows.Forms.Label()
-        Me.postnrTxt = New System.Windows.Forms.TextBox()
-        Me.lblPostnr = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -137,7 +138,7 @@ Partial Class brukerSide
         '
         Me.btnAvbestillTime.Location = New System.Drawing.Point(12, 185)
         Me.btnAvbestillTime.Name = "btnAvbestillTime"
-        Me.btnAvbestillTime.Size = New System.Drawing.Size(103, 23)
+        Me.btnAvbestillTime.Size = New System.Drawing.Size(138, 23)
         Me.btnAvbestillTime.TabIndex = 9
         Me.btnAvbestillTime.Text = "Avbestill time"
         Me.btnAvbestillTime.UseVisualStyleBackColor = True
@@ -214,6 +215,7 @@ Partial Class brukerSide
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.Gainsboro
+        Me.TabPage1.Controls.Add(Me.Button3)
         Me.TabPage1.Controls.Add(Me.Button2)
         Me.TabPage1.Controls.Add(Me.lblPostnr)
         Me.TabPage1.Controls.Add(Me.postnrTxt)
@@ -243,6 +245,49 @@ Partial Class brukerSide
         Me.TabPage1.Size = New System.Drawing.Size(745, 374)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Min side"
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(289, 214)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(103, 23)
+        Me.Button2.TabIndex = 30
+        Me.Button2.Text = "Lagre"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'lblPostnr
+        '
+        Me.lblPostnr.AutoSize = True
+        Me.lblPostnr.Location = New System.Drawing.Point(156, 193)
+        Me.lblPostnr.Name = "lblPostnr"
+        Me.lblPostnr.Size = New System.Drawing.Size(59, 17)
+        Me.lblPostnr.TabIndex = 29
+        Me.lblPostnr.Text = "Label14"
+        '
+        'postnrTxt
+        '
+        Me.postnrTxt.Location = New System.Drawing.Point(159, 190)
+        Me.postnrTxt.Name = "postnrTxt"
+        Me.postnrTxt.Size = New System.Drawing.Size(100, 22)
+        Me.postnrTxt.TabIndex = 28
+        Me.postnrTxt.Visible = False
+        '
+        'lblAdresse
+        '
+        Me.lblAdresse.AutoSize = True
+        Me.lblAdresse.Location = New System.Drawing.Point(156, 165)
+        Me.lblAdresse.Name = "lblAdresse"
+        Me.lblAdresse.Size = New System.Drawing.Size(59, 17)
+        Me.lblAdresse.TabIndex = 27
+        Me.lblAdresse.Text = "Label13"
+        '
+        'adresseTxt
+        '
+        Me.adresseTxt.Location = New System.Drawing.Point(159, 162)
+        Me.adresseTxt.Name = "adresseTxt"
+        Me.adresseTxt.Size = New System.Drawing.Size(100, 22)
+        Me.adresseTxt.TabIndex = 26
+        Me.adresseTxt.Visible = False
         '
         'Panel1
         '
@@ -353,48 +398,14 @@ Partial Class brukerSide
         Me.PictureBox1.TabIndex = 8
         Me.PictureBox1.TabStop = False
         '
-        'adresseTxt
+        'Button3
         '
-        Me.adresseTxt.Location = New System.Drawing.Point(159, 162)
-        Me.adresseTxt.Name = "adresseTxt"
-        Me.adresseTxt.Size = New System.Drawing.Size(100, 22)
-        Me.adresseTxt.TabIndex = 26
-        Me.adresseTxt.Visible = False
-        '
-        'lblAdresse
-        '
-        Me.lblAdresse.AutoSize = True
-        Me.lblAdresse.Location = New System.Drawing.Point(156, 165)
-        Me.lblAdresse.Name = "lblAdresse"
-        Me.lblAdresse.Size = New System.Drawing.Size(59, 17)
-        Me.lblAdresse.TabIndex = 27
-        Me.lblAdresse.Text = "Label13"
-        '
-        'postnrTxt
-        '
-        Me.postnrTxt.Location = New System.Drawing.Point(159, 190)
-        Me.postnrTxt.Name = "postnrTxt"
-        Me.postnrTxt.Size = New System.Drawing.Size(100, 22)
-        Me.postnrTxt.TabIndex = 28
-        Me.postnrTxt.Visible = False
-        '
-        'lblPostnr
-        '
-        Me.lblPostnr.AutoSize = True
-        Me.lblPostnr.Location = New System.Drawing.Point(156, 193)
-        Me.lblPostnr.Name = "lblPostnr"
-        Me.lblPostnr.Size = New System.Drawing.Size(59, 17)
-        Me.lblPostnr.TabIndex = 29
-        Me.lblPostnr.Text = "Label14"
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(289, 214)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(103, 23)
-        Me.Button2.TabIndex = 30
-        Me.Button2.Text = "Lagre"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button3.Location = New System.Drawing.Point(12, 156)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(138, 23)
+        Me.Button3.TabIndex = 31
+        Me.Button3.Text = "Svar på innkalling"
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'brukerSide
         '
@@ -459,4 +470,5 @@ Partial Class brukerSide
     Friend WithEvents lblAdresse As Label
     Friend WithEvents adresseTxt As TextBox
     Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
 End Class

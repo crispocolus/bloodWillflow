@@ -41,13 +41,13 @@ Public Class brukerSide
 
         'Opretter en datatabell og putter resultatet fra spørringen inni. Henter innkallinger basert på brukernavn og status. 
         Dim resultatTab As New DataTable
-        resultatTab = info.queryJoin("innkallinger.person_nr, innkallinger.oppmote, fritekst_innkalling", "innkallinger", "bruker ON bruker.person_nr = innkallinger.person_nr", " bruker.epost = '" & LoginForm.bnavn & "' AND innkallinger.status = 0;")
+        resultatTab = info.queryJoin("innkallinger.person_nr, innkallinger.oppmote, innkallinger.innkallings_id, fritekst_innkalling", "innkallinger", "bruker ON bruker.person_nr = innkallinger.person_nr", " bruker.epost = '" & LoginForm.bnavn & "' AND innkallinger.status = 0;")
 
         'Sjekker innholdet i tabellen, hvis det er resultat får brukeren melding
         If resultatTab.Rows.Count > 0 Then
             MsgBox("DU HAR FÅTT " & resultatTab.Rows.Count & " innkalling(er)")
             For Each rad As DataRow In resultatTab.Rows
-                innkallingLst.Items.Add(rad("fritekst_innkalling") & " " & rad("oppmote"))
+                innkallingLst.Items.Add(New ansattSide.listItem With {.display = rad("fritekst_innkalling") & " " & rad("oppmote"), .value = rad("innkallings_id")})
             Next
         Else
         End If
@@ -164,4 +164,49 @@ Public Class brukerSide
             MsgBox(ex.Message)
         End Try
     End Sub
+
+    Private Sub btnAvbestillTime_Click(sender As Object, e As EventArgs) Handles btnAvbestillTime.Click
+        Dim info As New info
+        Dim innNr As Double
+        innNr = CType(innkallingLst.SelectedItem, ansattSide.listItem).value
+        Dim svar
+        svar = MsgBox("Er du sikker på at du vil avbestille timen?", MsgBoxStyle.YesNo Or MsgBoxStyle.Critical)
+
+        If svar = MsgBoxResult.Yes Then
+            info.queryUpdate("innkallinger", "status = 3", "innkallings_id = '" & innNr & "';")
+
+            MsgBox("Time er avbestilt")
+        Else
+            Exit Sub
+        End If
+    End Sub
+
+
+
+
+
+
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim info As New info
+        Dim innNr As Double
+        innNr = CType(innkallingLst.SelectedItem, ansattSide.listItem).value
+
+        Dim customMsgBox As New MsgBoxCustom
+
+        customMsgBox.Label1.Text = "Vil du bekrefte eller avkrefte denne innkallingen?"
+        customMsgBox.Button1.Text = "Bekrefte"
+        customMsgBox.Button2.Text = "Avkrefte"
+
+        customMsgBox.ShowDialog()
+
+        If customMsgBox.button1click = True Then
+            info.queryUpdate("innkallinger", "status = 1", "innkallings_id = '" & innNr & "';")
+        ElseIf customMsgBox.button2click = True Then
+            info.queryUpdate("innkallinger", "status = 3", "innkallings_id = '" & innNr & "';")
+        End If
+
+    End Sub
+
+
 End Class

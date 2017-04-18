@@ -112,6 +112,12 @@
     <Compile Include="brukerSide.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MsgBoxCustom.Designer.vb">
+      <DependentUpon>MsgBoxCustom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MsgBoxCustom.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="passordHash.vb" />
     <Compile Include="prosedyrer.vb" />
     <Compile Include="RegistrerForm.Designer.vb">
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MsgBoxCustom.resx">
+      <DependentUpon>MsgBoxCustom.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
