@@ -81,3 +81,5 @@ C:\Users\Valla\Skole\Prosjekt Vår 2017\bloodWillflow\blodapp\blodapp\obj\Debug\
 C:\g25\bloodWillflow\blodapp\blodapp\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
 C:\g25\bloodWillflow\blodapp\blodapp\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 C:\g25\bloodWillflow\blodapp\blodapp\obj\Debug\blodapp.hurtigBestilling.resources
+C:\bloodwillflow\blodapp\blodapp\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\bloodwillflow\blodapp\blodapp\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml

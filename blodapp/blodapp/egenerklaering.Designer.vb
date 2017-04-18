@@ -25,9 +25,12 @@ Partial Class egenerklaering
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(egenerklaering))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.lblSomFør = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.btnEgenNext = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.btnEgenNext1 = New System.Windows.Forms.Button()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.lblEgenTillatSMS = New System.Windows.Forms.Label()
         Me.lblEgenTillatEpost = New System.Windows.Forms.Label()
@@ -47,9 +50,11 @@ Partial Class egenerklaering
         Me.txtEgenFornavn = New System.Windows.Forms.TextBox()
         Me.ChkSomFor = New System.Windows.Forms.CheckBox()
         Me.lblEgenFyllut = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.btnEgenBack1 = New System.Windows.Forms.Button()
+        Me.btnEgenNext2 = New System.Windows.Forms.Button()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
         Me.Panel19 = New System.Windows.Forms.Panel()
         Me.CheckBox18 = New System.Windows.Forms.CheckBox()
         Me.Panel18 = New System.Windows.Forms.Panel()
@@ -97,8 +102,6 @@ Partial Class egenerklaering
         Me.lblEgen2InfoBlod = New System.Windows.Forms.Label()
         Me.lblEgen2Frisk = New System.Windows.Forms.Label()
         Me.lblEgen2SorAmerika = New System.Windows.Forms.Label()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -114,7 +117,32 @@ Partial Class egenerklaering
         Me.lblEgen2Afrika5Aar = New System.Windows.Forms.Label()
         Me.lblEgen2Malaria6Mnd = New System.Windows.Forms.Label()
         Me.lblEgen2Malaria = New System.Windows.Forms.Label()
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.LineShape23 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape22 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape21 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape20 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape19 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape18 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape17 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape16 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape15 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape14 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape13 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape12 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape11 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape10 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape9 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape8 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape7 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape6 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape5 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape4 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape3 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.btnEgenBack2 = New System.Windows.Forms.Button()
         Me.Label536 = New System.Windows.Forms.Label()
         Me.Panel31 = New System.Windows.Forms.Panel()
         Me.CheckBox31 = New System.Windows.Forms.CheckBox()
@@ -142,7 +170,7 @@ Partial Class egenerklaering
         Me.CheckBox20 = New System.Windows.Forms.CheckBox()
         Me.Panel20 = New System.Windows.Forms.Panel()
         Me.CheckBox19 = New System.Windows.Forms.CheckBox()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnEgenNext3 = New System.Windows.Forms.Button()
         Me.Label87 = New System.Windows.Forms.Label()
         Me.Label89 = New System.Windows.Forms.Label()
         Me.Label90 = New System.Windows.Forms.Label()
@@ -169,8 +197,50 @@ Partial Class egenerklaering
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
+        Me.ShapeContainer2 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.LineShape43 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape42 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape41 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape40 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape39 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape38 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape37 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape36 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape35 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape34 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape33 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape32 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape31 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape30 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape29 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape28 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape27 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape26 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape25 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape24 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnEgenBack3 = New System.Windows.Forms.Button()
+        Me.Panel41 = New System.Windows.Forms.Panel()
+        Me.CheckBox41 = New System.Windows.Forms.CheckBox()
+        Me.Panel40 = New System.Windows.Forms.Panel()
+        Me.CheckBox40 = New System.Windows.Forms.CheckBox()
+        Me.Panel39 = New System.Windows.Forms.Panel()
+        Me.CheckBox39 = New System.Windows.Forms.CheckBox()
+        Me.Panel38 = New System.Windows.Forms.Panel()
+        Me.CheckBox38 = New System.Windows.Forms.CheckBox()
+        Me.Panel37 = New System.Windows.Forms.Panel()
+        Me.CheckBox37 = New System.Windows.Forms.CheckBox()
+        Me.Panel36 = New System.Windows.Forms.Panel()
+        Me.CheckBox36 = New System.Windows.Forms.CheckBox()
+        Me.Panel35 = New System.Windows.Forms.Panel()
+        Me.CheckBox35 = New System.Windows.Forms.CheckBox()
+        Me.Panel34 = New System.Windows.Forms.Panel()
+        Me.CheckBox34 = New System.Windows.Forms.CheckBox()
+        Me.Panel33 = New System.Windows.Forms.Panel()
+        Me.CheckBox33 = New System.Windows.Forms.CheckBox()
+        Me.Panel32 = New System.Windows.Forms.Panel()
+        Me.CheckBox32 = New System.Windows.Forms.CheckBox()
+        Me.btnEgenNext4 = New System.Windows.Forms.Button()
         Me.Label68 = New System.Windows.Forms.Label()
         Me.Label66 = New System.Windows.Forms.Label()
         Me.Label64 = New System.Windows.Forms.Label()
@@ -186,8 +256,51 @@ Partial Class egenerklaering
         Me.Label50 = New System.Windows.Forms.Label()
         Me.Label48 = New System.Windows.Forms.Label()
         Me.Label85 = New System.Windows.Forms.Label()
+        Me.ShapeContainer3 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.LineShape56 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape55 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape54 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape53 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape52 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape51 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape50 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape49 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape48 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape47 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape46 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape45 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape44 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.btnEgenBack4 = New System.Windows.Forms.Button()
+        Me.Panel55 = New System.Windows.Forms.Panel()
+        Me.CheckBox55 = New System.Windows.Forms.CheckBox()
+        Me.Panel54 = New System.Windows.Forms.Panel()
+        Me.CheckBox54 = New System.Windows.Forms.CheckBox()
+        Me.Panel53 = New System.Windows.Forms.Panel()
+        Me.CheckBox53 = New System.Windows.Forms.CheckBox()
+        Me.Panel52 = New System.Windows.Forms.Panel()
+        Me.CheckBox52 = New System.Windows.Forms.CheckBox()
+        Me.Panel51 = New System.Windows.Forms.Panel()
+        Me.CheckBox51 = New System.Windows.Forms.CheckBox()
+        Me.Panel50 = New System.Windows.Forms.Panel()
+        Me.CheckBox50 = New System.Windows.Forms.CheckBox()
+        Me.Panel49 = New System.Windows.Forms.Panel()
+        Me.CheckBox49 = New System.Windows.Forms.CheckBox()
+        Me.Panel48 = New System.Windows.Forms.Panel()
+        Me.CheckBox48 = New System.Windows.Forms.CheckBox()
+        Me.Panel47 = New System.Windows.Forms.Panel()
+        Me.CheckBox47 = New System.Windows.Forms.CheckBox()
+        Me.Panel46 = New System.Windows.Forms.Panel()
+        Me.CheckBox46 = New System.Windows.Forms.CheckBox()
+        Me.Panel45 = New System.Windows.Forms.Panel()
+        Me.CheckBox45 = New System.Windows.Forms.CheckBox()
+        Me.Panel44 = New System.Windows.Forms.Panel()
+        Me.CheckBox44 = New System.Windows.Forms.CheckBox()
+        Me.Panel43 = New System.Windows.Forms.Panel()
+        Me.CheckBox43 = New System.Windows.Forms.CheckBox()
+        Me.Panel42 = New System.Windows.Forms.Panel()
+        Me.CheckBox42 = New System.Windows.Forms.CheckBox()
+        Me.btnEgenNext5 = New System.Windows.Forms.Button()
         Me.Label126 = New System.Windows.Forms.Label()
         Me.Label125 = New System.Windows.Forms.Label()
         Me.Label123 = New System.Windows.Forms.Label()
@@ -205,8 +318,39 @@ Partial Class egenerklaering
         Me.Label74 = New System.Windows.Forms.Label()
         Me.Label72 = New System.Windows.Forms.Label()
         Me.Label70 = New System.Windows.Forms.Label()
+        Me.ShapeContainer4 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.LineShape73 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape72 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape71 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape70 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape69 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape68 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape67 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape66 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape65 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape64 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape63 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape62 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape61 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape60 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape59 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape58 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape57 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.TabPage6 = New System.Windows.Forms.TabPage()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.btnEgenBack5 = New System.Windows.Forms.Button()
+        Me.Panel60 = New System.Windows.Forms.Panel()
+        Me.CheckBox60 = New System.Windows.Forms.CheckBox()
+        Me.Panel59 = New System.Windows.Forms.Panel()
+        Me.CheckBox59 = New System.Windows.Forms.CheckBox()
+        Me.Panel58 = New System.Windows.Forms.Panel()
+        Me.CheckBox58 = New System.Windows.Forms.CheckBox()
+        Me.Panel57 = New System.Windows.Forms.Panel()
+        Me.CheckBox57 = New System.Windows.Forms.CheckBox()
+        Me.Panel56 = New System.Windows.Forms.Panel()
+        Me.CheckBox56 = New System.Windows.Forms.CheckBox()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.btnEgenSubmit = New System.Windows.Forms.Button()
         Me.Label147 = New System.Windows.Forms.Label()
         Me.Label145 = New System.Windows.Forms.Label()
         Me.Label143 = New System.Windows.Forms.Label()
@@ -219,159 +363,24 @@ Partial Class egenerklaering
         Me.Label134 = New System.Windows.Forms.Label()
         Me.Label132 = New System.Windows.Forms.Label()
         Me.Label130 = New System.Windows.Forms.Label()
-        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
-        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape3 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape4 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape5 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape6 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape7 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape8 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape9 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape10 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape11 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape12 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape13 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape14 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape15 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape16 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape17 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape18 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape19 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape20 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape21 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape22 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape23 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape24 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.ShapeContainer2 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
-        Me.LineShape25 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape26 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape27 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape28 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape29 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape30 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape31 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape32 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape33 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape34 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape35 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape36 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape37 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape38 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape39 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape40 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape41 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape42 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape43 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.ShapeContainer3 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
-        Me.LineShape44 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape45 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape46 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape47 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape48 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape49 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape50 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape51 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape52 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape53 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape54 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape55 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape56 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.ShapeContainer4 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
-        Me.LineShape57 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape58 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape59 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape60 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape61 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape62 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape63 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape64 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape65 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape66 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape67 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape68 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape69 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape70 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape71 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape72 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape73 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.Panel32 = New System.Windows.Forms.Panel()
-        Me.CheckBox32 = New System.Windows.Forms.CheckBox()
-        Me.Panel33 = New System.Windows.Forms.Panel()
-        Me.CheckBox33 = New System.Windows.Forms.CheckBox()
-        Me.Panel34 = New System.Windows.Forms.Panel()
-        Me.CheckBox34 = New System.Windows.Forms.CheckBox()
-        Me.Panel35 = New System.Windows.Forms.Panel()
-        Me.CheckBox35 = New System.Windows.Forms.CheckBox()
-        Me.Panel36 = New System.Windows.Forms.Panel()
-        Me.CheckBox36 = New System.Windows.Forms.CheckBox()
-        Me.Panel37 = New System.Windows.Forms.Panel()
-        Me.CheckBox37 = New System.Windows.Forms.CheckBox()
-        Me.Panel38 = New System.Windows.Forms.Panel()
-        Me.CheckBox38 = New System.Windows.Forms.CheckBox()
-        Me.Panel39 = New System.Windows.Forms.Panel()
-        Me.CheckBox39 = New System.Windows.Forms.CheckBox()
-        Me.Panel40 = New System.Windows.Forms.Panel()
-        Me.CheckBox40 = New System.Windows.Forms.CheckBox()
-        Me.Panel41 = New System.Windows.Forms.Panel()
-        Me.CheckBox41 = New System.Windows.Forms.CheckBox()
-        Me.Panel42 = New System.Windows.Forms.Panel()
-        Me.CheckBox42 = New System.Windows.Forms.CheckBox()
-        Me.Panel43 = New System.Windows.Forms.Panel()
-        Me.CheckBox43 = New System.Windows.Forms.CheckBox()
-        Me.Panel44 = New System.Windows.Forms.Panel()
-        Me.CheckBox44 = New System.Windows.Forms.CheckBox()
-        Me.Panel45 = New System.Windows.Forms.Panel()
-        Me.CheckBox45 = New System.Windows.Forms.CheckBox()
-        Me.Panel46 = New System.Windows.Forms.Panel()
-        Me.CheckBox46 = New System.Windows.Forms.CheckBox()
-        Me.Panel47 = New System.Windows.Forms.Panel()
-        Me.CheckBox47 = New System.Windows.Forms.CheckBox()
-        Me.Panel48 = New System.Windows.Forms.Panel()
-        Me.CheckBox48 = New System.Windows.Forms.CheckBox()
-        Me.Panel49 = New System.Windows.Forms.Panel()
-        Me.CheckBox49 = New System.Windows.Forms.CheckBox()
-        Me.Panel50 = New System.Windows.Forms.Panel()
-        Me.CheckBox50 = New System.Windows.Forms.CheckBox()
-        Me.Panel51 = New System.Windows.Forms.Panel()
-        Me.CheckBox51 = New System.Windows.Forms.CheckBox()
-        Me.Panel52 = New System.Windows.Forms.Panel()
-        Me.CheckBox52 = New System.Windows.Forms.CheckBox()
-        Me.Panel53 = New System.Windows.Forms.Panel()
-        Me.CheckBox53 = New System.Windows.Forms.CheckBox()
-        Me.Panel54 = New System.Windows.Forms.Panel()
-        Me.CheckBox54 = New System.Windows.Forms.CheckBox()
-        Me.Panel55 = New System.Windows.Forms.Panel()
-        Me.CheckBox55 = New System.Windows.Forms.CheckBox()
         Me.ShapeContainer5 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
-        Me.LineShape74 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape75 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape76 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape77 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape78 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape79 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape80 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape81 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape82 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape83 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape84 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.Panel56 = New System.Windows.Forms.Panel()
-        Me.CheckBox56 = New System.Windows.Forms.CheckBox()
-        Me.Panel57 = New System.Windows.Forms.Panel()
-        Me.CheckBox57 = New System.Windows.Forms.CheckBox()
-        Me.Panel58 = New System.Windows.Forms.Panel()
-        Me.CheckBox58 = New System.Windows.Forms.CheckBox()
-        Me.Panel59 = New System.Windows.Forms.Panel()
-        Me.CheckBox59 = New System.Windows.Forms.CheckBox()
-        Me.Panel60 = New System.Windows.Forms.Panel()
-        Me.CheckBox60 = New System.Windows.Forms.CheckBox()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.LineShape83 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape82 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape81 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape80 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape79 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape78 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape77 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape76 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape75 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape74 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         Me.Panel19.SuspendLayout()
         Me.Panel18.SuspendLayout()
         Me.Panel17.SuspendLayout()
@@ -387,7 +396,6 @@ Partial Class egenerklaering
         Me.Panel6.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        Me.Panel3.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         Me.Panel31.SuspendLayout()
         Me.Panel25.SuspendLayout()
@@ -403,37 +411,37 @@ Partial Class egenerklaering
         Me.Panel21.SuspendLayout()
         Me.Panel20.SuspendLayout()
         Me.TabPage4.SuspendLayout()
-        Me.TabPage5.SuspendLayout()
-        Me.TabPage6.SuspendLayout()
-        Me.Panel32.SuspendLayout()
-        Me.Panel33.SuspendLayout()
-        Me.Panel34.SuspendLayout()
-        Me.Panel35.SuspendLayout()
-        Me.Panel36.SuspendLayout()
-        Me.Panel37.SuspendLayout()
-        Me.Panel38.SuspendLayout()
-        Me.Panel39.SuspendLayout()
-        Me.Panel40.SuspendLayout()
         Me.Panel41.SuspendLayout()
-        Me.Panel42.SuspendLayout()
-        Me.Panel43.SuspendLayout()
-        Me.Panel44.SuspendLayout()
-        Me.Panel45.SuspendLayout()
-        Me.Panel46.SuspendLayout()
-        Me.Panel47.SuspendLayout()
-        Me.Panel48.SuspendLayout()
-        Me.Panel49.SuspendLayout()
-        Me.Panel50.SuspendLayout()
-        Me.Panel51.SuspendLayout()
-        Me.Panel52.SuspendLayout()
-        Me.Panel53.SuspendLayout()
-        Me.Panel54.SuspendLayout()
+        Me.Panel40.SuspendLayout()
+        Me.Panel39.SuspendLayout()
+        Me.Panel38.SuspendLayout()
+        Me.Panel37.SuspendLayout()
+        Me.Panel36.SuspendLayout()
+        Me.Panel35.SuspendLayout()
+        Me.Panel34.SuspendLayout()
+        Me.Panel33.SuspendLayout()
+        Me.Panel32.SuspendLayout()
+        Me.TabPage5.SuspendLayout()
         Me.Panel55.SuspendLayout()
-        Me.Panel56.SuspendLayout()
-        Me.Panel57.SuspendLayout()
-        Me.Panel58.SuspendLayout()
-        Me.Panel59.SuspendLayout()
+        Me.Panel54.SuspendLayout()
+        Me.Panel53.SuspendLayout()
+        Me.Panel52.SuspendLayout()
+        Me.Panel51.SuspendLayout()
+        Me.Panel50.SuspendLayout()
+        Me.Panel49.SuspendLayout()
+        Me.Panel48.SuspendLayout()
+        Me.Panel47.SuspendLayout()
+        Me.Panel46.SuspendLayout()
+        Me.Panel45.SuspendLayout()
+        Me.Panel44.SuspendLayout()
+        Me.Panel43.SuspendLayout()
+        Me.Panel42.SuspendLayout()
+        Me.TabPage6.SuspendLayout()
         Me.Panel60.SuspendLayout()
+        Me.Panel59.SuspendLayout()
+        Me.Panel58.SuspendLayout()
+        Me.Panel57.SuspendLayout()
+        Me.Panel56.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -452,8 +460,10 @@ Partial Class egenerklaering
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.lblSomFør)
         Me.TabPage1.Controls.Add(Me.Panel2)
-        Me.TabPage1.Controls.Add(Me.btnEgenNext)
+        Me.TabPage1.Controls.Add(Me.Panel1)
+        Me.TabPage1.Controls.Add(Me.btnEgenNext1)
         Me.TabPage1.Controls.Add(Me.RichTextBox1)
         Me.TabPage1.Controls.Add(Me.lblEgenTillatSMS)
         Me.TabPage1.Controls.Add(Me.lblEgenTillatEpost)
@@ -473,7 +483,6 @@ Partial Class egenerklaering
         Me.TabPage1.Controls.Add(Me.txtEgenFornavn)
         Me.TabPage1.Controls.Add(Me.ChkSomFor)
         Me.TabPage1.Controls.Add(Me.lblEgenFyllut)
-        Me.TabPage1.Controls.Add(Me.Panel1)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
@@ -482,39 +491,65 @@ Partial Class egenerklaering
         Me.TabPage1.Text = "Personinfo"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'lblSomFør
+        '
+        Me.lblSomFør.AutoSize = True
+        Me.lblSomFør.Location = New System.Drawing.Point(11, 31)
+        Me.lblSomFør.Name = "lblSomFør"
+        Me.lblSomFør.Size = New System.Drawing.Size(303, 13)
+        Me.lblSomFør.TabIndex = 47
+        Me.lblSomFør.Text = "Hvis du ikke ønsker å endre personalia, huker du av ""Som før"""
+        '
         'Panel2
         '
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel2.Controls.Add(Me.CheckBox2)
-        Me.Panel2.Location = New System.Drawing.Point(14, 182)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel2.Location = New System.Drawing.Point(14, 220)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(87, 19)
+        Me.Panel2.Size = New System.Drawing.Size(22, 18)
         Me.Panel2.TabIndex = 9
         '
         'CheckBox2
         '
         Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(-2, -2)
+        Me.CheckBox2.Location = New System.Drawing.Point(2, 2)
         Me.CheckBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(81, 17)
+        Me.CheckBox2.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox2.TabIndex = 9
-        Me.CheckBox2.Text = "CheckBox2"
         Me.CheckBox2.UseVisualStyleBackColor = True
         '
-        'btnEgenNext
+        'Panel1
         '
-        Me.btnEgenNext.Location = New System.Drawing.Point(326, 468)
-        Me.btnEgenNext.Name = "btnEgenNext"
-        Me.btnEgenNext.Size = New System.Drawing.Size(237, 23)
-        Me.btnEgenNext.TabIndex = 10
-        Me.btnEgenNext.Text = "Jeg har lest og vil vidre til neste side."
-        Me.btnEgenNext.UseVisualStyleBackColor = True
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel1.Controls.Add(Me.CheckBox1)
+        Me.Panel1.Location = New System.Drawing.Point(17, 181)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(23, 20)
+        Me.Panel1.TabIndex = 8
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(2, 2)
+        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox1.TabIndex = 8
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'btnEgenNext1
+        '
+        Me.btnEgenNext1.Location = New System.Drawing.Point(165, 492)
+        Me.btnEgenNext1.Name = "btnEgenNext1"
+        Me.btnEgenNext1.Size = New System.Drawing.Size(237, 23)
+        Me.btnEgenNext1.TabIndex = 10
+        Me.btnEgenNext1.Text = "Jeg har lest og vil videre til neste side"
+        Me.btnEgenNext1.UseVisualStyleBackColor = True
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(11, 206)
+        Me.RichTextBox1.Location = New System.Drawing.Point(14, 244)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(552, 242)
         Me.RichTextBox1.TabIndex = 46
@@ -523,7 +558,7 @@ Partial Class egenerklaering
         'lblEgenTillatSMS
         '
         Me.lblEgenTillatSMS.AutoSize = True
-        Me.lblEgenTillatSMS.Location = New System.Drawing.Point(8, 166)
+        Me.lblEgenTillatSMS.Location = New System.Drawing.Point(11, 204)
         Me.lblEgenTillatSMS.Name = "lblEgenTillatSMS"
         Me.lblEgenTillatSMS.Size = New System.Drawing.Size(505, 13)
         Me.lblEgenTillatSMS.TabIndex = 43
@@ -533,7 +568,7 @@ Partial Class egenerklaering
         'lblEgenTillatEpost
         '
         Me.lblEgenTillatEpost.AutoSize = True
-        Me.lblEgenTillatEpost.Location = New System.Drawing.Point(8, 126)
+        Me.lblEgenTillatEpost.Location = New System.Drawing.Point(11, 164)
         Me.lblEgenTillatEpost.Name = "lblEgenTillatEpost"
         Me.lblEgenTillatEpost.Size = New System.Drawing.Size(505, 13)
         Me.lblEgenTillatEpost.TabIndex = 40
@@ -542,7 +577,7 @@ Partial Class egenerklaering
         '
         'txtEgenEpost
         '
-        Me.txtEgenEpost.Location = New System.Drawing.Point(331, 87)
+        Me.txtEgenEpost.Location = New System.Drawing.Point(334, 125)
         Me.txtEgenEpost.Name = "txtEgenEpost"
         Me.txtEgenEpost.Size = New System.Drawing.Size(100, 20)
         Me.txtEgenEpost.TabIndex = 7
@@ -550,7 +585,7 @@ Partial Class egenerklaering
         'lblEgenEpost
         '
         Me.lblEgenEpost.AutoSize = True
-        Me.lblEgenEpost.Location = New System.Drawing.Point(328, 71)
+        Me.lblEgenEpost.Location = New System.Drawing.Point(331, 109)
         Me.lblEgenEpost.Name = "lblEgenEpost"
         Me.lblEgenEpost.Size = New System.Drawing.Size(37, 13)
         Me.lblEgenEpost.TabIndex = 38
@@ -558,7 +593,7 @@ Partial Class egenerklaering
         '
         'txtEgenTlf
         '
-        Me.txtEgenTlf.Location = New System.Drawing.Point(223, 87)
+        Me.txtEgenTlf.Location = New System.Drawing.Point(226, 125)
         Me.txtEgenTlf.Name = "txtEgenTlf"
         Me.txtEgenTlf.Size = New System.Drawing.Size(100, 20)
         Me.txtEgenTlf.TabIndex = 6
@@ -566,7 +601,7 @@ Partial Class egenerklaering
         'lblEgenTlf
         '
         Me.lblEgenTlf.AutoSize = True
-        Me.lblEgenTlf.Location = New System.Drawing.Point(223, 71)
+        Me.lblEgenTlf.Location = New System.Drawing.Point(226, 109)
         Me.lblEgenTlf.Name = "lblEgenTlf"
         Me.lblEgenTlf.Size = New System.Drawing.Size(51, 13)
         Me.lblEgenTlf.TabIndex = 36
@@ -574,7 +609,7 @@ Partial Class egenerklaering
         '
         'txtEgenPost_nr
         '
-        Me.txtEgenPost_nr.Location = New System.Drawing.Point(117, 87)
+        Me.txtEgenPost_nr.Location = New System.Drawing.Point(120, 125)
         Me.txtEgenPost_nr.Name = "txtEgenPost_nr"
         Me.txtEgenPost_nr.Size = New System.Drawing.Size(100, 20)
         Me.txtEgenPost_nr.TabIndex = 5
@@ -582,7 +617,7 @@ Partial Class egenerklaering
         'lblEgenPost_nr
         '
         Me.lblEgenPost_nr.AutoSize = True
-        Me.lblEgenPost_nr.Location = New System.Drawing.Point(114, 71)
+        Me.lblEgenPost_nr.Location = New System.Drawing.Point(117, 109)
         Me.lblEgenPost_nr.Name = "lblEgenPost_nr"
         Me.lblEgenPost_nr.Size = New System.Drawing.Size(65, 13)
         Me.lblEgenPost_nr.TabIndex = 35
@@ -590,7 +625,7 @@ Partial Class egenerklaering
         '
         'txtEgenPrivatadresse
         '
-        Me.txtEgenPrivatadresse.Location = New System.Drawing.Point(11, 87)
+        Me.txtEgenPrivatadresse.Location = New System.Drawing.Point(14, 125)
         Me.txtEgenPrivatadresse.Name = "txtEgenPrivatadresse"
         Me.txtEgenPrivatadresse.Size = New System.Drawing.Size(100, 20)
         Me.txtEgenPrivatadresse.TabIndex = 4
@@ -598,7 +633,7 @@ Partial Class egenerklaering
         'lblEgenPrivatadresse
         '
         Me.lblEgenPrivatadresse.AutoSize = True
-        Me.lblEgenPrivatadresse.Location = New System.Drawing.Point(11, 71)
+        Me.lblEgenPrivatadresse.Location = New System.Drawing.Point(14, 109)
         Me.lblEgenPrivatadresse.Name = "lblEgenPrivatadresse"
         Me.lblEgenPrivatadresse.Size = New System.Drawing.Size(71, 13)
         Me.lblEgenPrivatadresse.TabIndex = 34
@@ -607,7 +642,7 @@ Partial Class egenerklaering
         'lblEgenPerson_nr
         '
         Me.lblEgenPerson_nr.AutoSize = True
-        Me.lblEgenPerson_nr.Location = New System.Drawing.Point(220, 29)
+        Me.lblEgenPerson_nr.Location = New System.Drawing.Point(223, 67)
         Me.lblEgenPerson_nr.Name = "lblEgenPerson_nr"
         Me.lblEgenPerson_nr.Size = New System.Drawing.Size(77, 13)
         Me.lblEgenPerson_nr.TabIndex = 33
@@ -616,7 +651,7 @@ Partial Class egenerklaering
         'lblEgenEtternavn
         '
         Me.lblEgenEtternavn.AutoSize = True
-        Me.lblEgenEtternavn.Location = New System.Drawing.Point(114, 32)
+        Me.lblEgenEtternavn.Location = New System.Drawing.Point(117, 67)
         Me.lblEgenEtternavn.Name = "lblEgenEtternavn"
         Me.lblEgenEtternavn.Size = New System.Drawing.Size(53, 13)
         Me.lblEgenEtternavn.TabIndex = 31
@@ -625,7 +660,7 @@ Partial Class egenerklaering
         'lblEgenFornavn
         '
         Me.lblEgenFornavn.AutoSize = True
-        Me.lblEgenFornavn.Location = New System.Drawing.Point(11, 29)
+        Me.lblEgenFornavn.Location = New System.Drawing.Point(14, 67)
         Me.lblEgenFornavn.Name = "lblEgenFornavn"
         Me.lblEgenFornavn.Size = New System.Drawing.Size(46, 13)
         Me.lblEgenFornavn.TabIndex = 29
@@ -633,21 +668,21 @@ Partial Class egenerklaering
         '
         'txtEgenPerson_nr
         '
-        Me.txtEgenPerson_nr.Location = New System.Drawing.Point(223, 48)
+        Me.txtEgenPerson_nr.Location = New System.Drawing.Point(226, 86)
         Me.txtEgenPerson_nr.Name = "txtEgenPerson_nr"
         Me.txtEgenPerson_nr.Size = New System.Drawing.Size(100, 20)
         Me.txtEgenPerson_nr.TabIndex = 3
         '
         'txtEgenEtternavn
         '
-        Me.txtEgenEtternavn.Location = New System.Drawing.Point(117, 48)
+        Me.txtEgenEtternavn.Location = New System.Drawing.Point(120, 86)
         Me.txtEgenEtternavn.Name = "txtEgenEtternavn"
         Me.txtEgenEtternavn.Size = New System.Drawing.Size(100, 20)
         Me.txtEgenEtternavn.TabIndex = 2
         '
         'txtEgenFornavn
         '
-        Me.txtEgenFornavn.Location = New System.Drawing.Point(11, 48)
+        Me.txtEgenFornavn.Location = New System.Drawing.Point(14, 86)
         Me.txtEgenFornavn.Name = "txtEgenFornavn"
         Me.txtEgenFornavn.Size = New System.Drawing.Size(100, 20)
         Me.txtEgenFornavn.TabIndex = 1
@@ -655,10 +690,10 @@ Partial Class egenerklaering
         'ChkSomFor
         '
         Me.ChkSomFor.AutoSize = True
-        Me.ChkSomFor.Location = New System.Drawing.Point(501, 6)
+        Me.ChkSomFor.Location = New System.Drawing.Point(14, 47)
         Me.ChkSomFor.Name = "ChkSomFor"
         Me.ChkSomFor.Size = New System.Drawing.Size(62, 17)
-        Me.ChkSomFor.TabIndex = 25
+        Me.ChkSomFor.TabIndex = 99999
         Me.ChkSomFor.Text = "Som før"
         Me.ChkSomFor.UseVisualStyleBackColor = True
         '
@@ -672,29 +707,11 @@ Partial Class egenerklaering
         Me.lblEgenFyllut.TabIndex = 24
         Me.lblEgenFyllut.Text = "Fyll ut alle feltene:"
         '
-        'Panel1
-        '
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel1.Controls.Add(Me.CheckBox1)
-        Me.Panel1.Location = New System.Drawing.Point(10, 139)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(90, 25)
-        Me.Panel1.TabIndex = 8
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(3, 2)
-        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(81, 17)
-        Me.CheckBox1.TabIndex = 8
-        Me.CheckBox1.Text = "CheckBox1"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.btnEgenBack1)
+        Me.TabPage2.Controls.Add(Me.btnEgenNext2)
+        Me.TabPage2.Controls.Add(Me.Panel3)
         Me.TabPage2.Controls.Add(Me.Panel19)
         Me.TabPage2.Controls.Add(Me.Panel18)
         Me.TabPage2.Controls.Add(Me.Panel17)
@@ -727,7 +744,6 @@ Partial Class egenerklaering
         Me.TabPage2.Controls.Add(Me.lblEgen2InfoBlod)
         Me.TabPage2.Controls.Add(Me.lblEgen2Frisk)
         Me.TabPage2.Controls.Add(Me.lblEgen2SorAmerika)
-        Me.TabPage2.Controls.Add(Me.Panel3)
         Me.TabPage2.Controls.Add(Me.Label8)
         Me.TabPage2.Controls.Add(Me.Label7)
         Me.TabPage2.Controls.Add(Me.Label6)
@@ -752,6 +768,43 @@ Partial Class egenerklaering
         Me.TabPage2.Text = "Side 1"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'btnEgenBack1
+        '
+        Me.btnEgenBack1.Location = New System.Drawing.Point(299, 625)
+        Me.btnEgenBack1.Name = "btnEgenBack1"
+        Me.btnEgenBack1.Size = New System.Drawing.Size(75, 23)
+        Me.btnEgenBack1.TabIndex = 28
+        Me.btnEgenBack1.Text = "Button1"
+        Me.btnEgenBack1.UseVisualStyleBackColor = True
+        '
+        'btnEgenNext2
+        '
+        Me.btnEgenNext2.Location = New System.Drawing.Point(380, 625)
+        Me.btnEgenNext2.Name = "btnEgenNext2"
+        Me.btnEgenNext2.Size = New System.Drawing.Size(75, 23)
+        Me.btnEgenNext2.TabIndex = 29
+        Me.btnEgenNext2.Text = "Neste side"
+        Me.btnEgenNext2.UseVisualStyleBackColor = True
+        '
+        'Panel3
+        '
+        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel3.Controls.Add(Me.CheckBox3)
+        Me.Panel3.Location = New System.Drawing.Point(262, 46)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(19, 20)
+        Me.Panel3.TabIndex = 11
+        '
+        'CheckBox3
+        '
+        Me.CheckBox3.AutoSize = True
+        Me.CheckBox3.Location = New System.Drawing.Point(1, 2)
+        Me.CheckBox3.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox3.Name = "CheckBox3"
+        Me.CheckBox3.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox3.TabIndex = 258
+        Me.CheckBox3.UseVisualStyleBackColor = True
+        '
         'Panel19
         '
         Me.Panel19.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
@@ -759,7 +812,7 @@ Partial Class egenerklaering
         Me.Panel19.Location = New System.Drawing.Point(690, 503)
         Me.Panel19.Name = "Panel19"
         Me.Panel19.Size = New System.Drawing.Size(23, 23)
-        Me.Panel19.TabIndex = 380
+        Me.Panel19.TabIndex = 27
         '
         'CheckBox18
         '
@@ -778,7 +831,7 @@ Partial Class egenerklaering
         Me.Panel18.Location = New System.Drawing.Point(690, 427)
         Me.Panel18.Name = "Panel18"
         Me.Panel18.Size = New System.Drawing.Size(23, 23)
-        Me.Panel18.TabIndex = 379
+        Me.Panel18.TabIndex = 26
         '
         'CheckBox17
         '
@@ -797,7 +850,7 @@ Partial Class egenerklaering
         Me.Panel17.Location = New System.Drawing.Point(690, 355)
         Me.Panel17.Name = "Panel17"
         Me.Panel17.Size = New System.Drawing.Size(23, 23)
-        Me.Panel17.TabIndex = 378
+        Me.Panel17.TabIndex = 25
         '
         'CheckBox16
         '
@@ -816,7 +869,7 @@ Partial Class egenerklaering
         Me.Panel16.Location = New System.Drawing.Point(690, 292)
         Me.Panel16.Name = "Panel16"
         Me.Panel16.Size = New System.Drawing.Size(23, 23)
-        Me.Panel16.TabIndex = 377
+        Me.Panel16.TabIndex = 24
         '
         'CheckBox15
         '
@@ -835,7 +888,7 @@ Partial Class egenerklaering
         Me.Panel14.Location = New System.Drawing.Point(690, 234)
         Me.Panel14.Name = "Panel14"
         Me.Panel14.Size = New System.Drawing.Size(23, 23)
-        Me.Panel14.TabIndex = 376
+        Me.Panel14.TabIndex = 23
         '
         'CheckBox14
         '
@@ -854,7 +907,7 @@ Partial Class egenerklaering
         Me.Panel13.Location = New System.Drawing.Point(690, 165)
         Me.Panel13.Name = "Panel13"
         Me.Panel13.Size = New System.Drawing.Size(23, 23)
-        Me.Panel13.TabIndex = 375
+        Me.Panel13.TabIndex = 22
         '
         'CheckBox13
         '
@@ -873,7 +926,7 @@ Partial Class egenerklaering
         Me.Panel12.Location = New System.Drawing.Point(690, 100)
         Me.Panel12.Name = "Panel12"
         Me.Panel12.Size = New System.Drawing.Size(23, 23)
-        Me.Panel12.TabIndex = 374
+        Me.Panel12.TabIndex = 21
         '
         'CheckBox12
         '
@@ -892,7 +945,7 @@ Partial Class egenerklaering
         Me.Panel11.Location = New System.Drawing.Point(690, 40)
         Me.Panel11.Name = "Panel11"
         Me.Panel11.Size = New System.Drawing.Size(23, 23)
-        Me.Panel11.TabIndex = 373
+        Me.Panel11.TabIndex = 20
         '
         'CheckBox11
         '
@@ -929,7 +982,7 @@ Partial Class egenerklaering
         Me.Panel10.Location = New System.Drawing.Point(262, 500)
         Me.Panel10.Name = "Panel10"
         Me.Panel10.Size = New System.Drawing.Size(23, 23)
-        Me.Panel10.TabIndex = 264
+        Me.Panel10.TabIndex = 18
         '
         'CheckBox10
         '
@@ -948,7 +1001,7 @@ Partial Class egenerklaering
         Me.Panel9.Location = New System.Drawing.Point(262, 427)
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(23, 23)
-        Me.Panel9.TabIndex = 263
+        Me.Panel9.TabIndex = 17
         '
         'CheckBox9
         '
@@ -967,7 +1020,7 @@ Partial Class egenerklaering
         Me.Panel8.Location = New System.Drawing.Point(262, 355)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(23, 23)
-        Me.Panel8.TabIndex = 262
+        Me.Panel8.TabIndex = 16
         '
         'CheckBox8
         '
@@ -986,7 +1039,7 @@ Partial Class egenerklaering
         Me.Panel7.Location = New System.Drawing.Point(262, 292)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(23, 23)
-        Me.Panel7.TabIndex = 261
+        Me.Panel7.TabIndex = 15
         '
         'CheckBox7
         '
@@ -1005,7 +1058,7 @@ Partial Class egenerklaering
         Me.Panel6.Location = New System.Drawing.Point(262, 230)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(23, 23)
-        Me.Panel6.TabIndex = 260
+        Me.Panel6.TabIndex = 14
         '
         'CheckBox6
         '
@@ -1024,7 +1077,7 @@ Partial Class egenerklaering
         Me.Panel5.Location = New System.Drawing.Point(262, 168)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(23, 23)
-        Me.Panel5.TabIndex = 259
+        Me.Panel5.TabIndex = 13
         '
         'CheckBox5
         '
@@ -1043,12 +1096,12 @@ Partial Class egenerklaering
         Me.Panel4.Location = New System.Drawing.Point(262, 103)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(23, 23)
-        Me.Panel4.TabIndex = 258
+        Me.Panel4.TabIndex = 12
         '
         'CheckBox4
         '
         Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox4.Location = New System.Drawing.Point(2, 2)
         Me.CheckBox4.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox4.Name = "CheckBox4"
         Me.CheckBox4.Size = New System.Drawing.Size(15, 14)
@@ -1190,25 +1243,6 @@ Partial Class egenerklaering
         Me.lblEgen2SorAmerika.TabIndex = 97
         Me.lblEgen2SorAmerika.Text = "Er din mor født i Amerika sør for USA?"
         '
-        'Panel3
-        '
-        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel3.Controls.Add(Me.CheckBox3)
-        Me.Panel3.Location = New System.Drawing.Point(262, 39)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(23, 23)
-        Me.Panel3.TabIndex = 11
-        '
-        'CheckBox3
-        '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(2, 3)
-        Me.CheckBox3.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox3.TabIndex = 258
-        Me.CheckBox3.UseVisualStyleBackColor = True
-        '
         'Label8
         '
         Me.Label8.AutoSize = True
@@ -1242,7 +1276,7 @@ Partial Class egenerklaering
         Me.ComboBox1.Location = New System.Drawing.Point(193, 565)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 27
+        Me.ComboBox1.TabIndex = 19
         '
         'Label11
         '
@@ -1343,8 +1377,203 @@ Partial Class egenerklaering
         Me.lblEgen2Malaria.TabIndex = 88
         Me.lblEgen2Malaria.Text = "Har du i løpet av de siste tre år vært i "
         '
+        'ShapeContainer1
+        '
+        Me.ShapeContainer1.Location = New System.Drawing.Point(3, 3)
+        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer1.Name = "ShapeContainer1"
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape23, Me.LineShape22, Me.LineShape21, Me.LineShape20, Me.LineShape19, Me.LineShape18, Me.LineShape17, Me.LineShape16, Me.LineShape15, Me.LineShape14, Me.LineShape13, Me.LineShape12, Me.LineShape11, Me.LineShape10, Me.LineShape9, Me.LineShape8, Me.LineShape7, Me.LineShape6, Me.LineShape5, Me.LineShape4, Me.LineShape3, Me.LineShape2, Me.LineShape1})
+        Me.ShapeContainer1.Size = New System.Drawing.Size(1149, 734)
+        Me.ShapeContainer1.TabIndex = 381
+        Me.ShapeContainer1.TabStop = False
+        '
+        'LineShape23
+        '
+        Me.LineShape23.Name = "LineShape23"
+        Me.LineShape23.X1 = 427
+        Me.LineShape23.X2 = 722
+        Me.LineShape23.Y1 = 79
+        Me.LineShape23.Y2 = 78
+        '
+        'LineShape22
+        '
+        Me.LineShape22.Name = "LineShape22"
+        Me.LineShape22.X1 = 427
+        Me.LineShape22.X2 = 722
+        Me.LineShape22.Y1 = 140
+        Me.LineShape22.Y2 = 139
+        '
+        'LineShape21
+        '
+        Me.LineShape21.Name = "LineShape21"
+        Me.LineShape21.X1 = 427
+        Me.LineShape21.X2 = 722
+        Me.LineShape21.Y1 = 213
+        Me.LineShape21.Y2 = 212
+        '
+        'LineShape20
+        '
+        Me.LineShape20.Name = "LineShape20"
+        Me.LineShape20.X1 = 427
+        Me.LineShape20.X2 = 722
+        Me.LineShape20.Y1 = 267
+        Me.LineShape20.Y2 = 266
+        '
+        'LineShape19
+        '
+        Me.LineShape19.Name = "LineShape19"
+        Me.LineShape19.X1 = 427
+        Me.LineShape19.X2 = 722
+        Me.LineShape19.Y1 = 334
+        Me.LineShape19.Y2 = 333
+        '
+        'LineShape18
+        '
+        Me.LineShape18.Name = "LineShape18"
+        Me.LineShape18.X1 = 427
+        Me.LineShape18.X2 = 722
+        Me.LineShape18.Y1 = 399
+        Me.LineShape18.Y2 = 398
+        '
+        'LineShape17
+        '
+        Me.LineShape17.Name = "LineShape17"
+        Me.LineShape17.X1 = 428
+        Me.LineShape17.X2 = 723
+        Me.LineShape17.Y1 = 468
+        Me.LineShape17.Y2 = 467
+        '
+        'LineShape16
+        '
+        Me.LineShape16.Name = "LineShape16"
+        Me.LineShape16.X1 = 427
+        Me.LineShape16.X2 = 722
+        Me.LineShape16.Y1 = 11
+        Me.LineShape16.Y2 = 10
+        '
+        'LineShape15
+        '
+        Me.LineShape15.Name = "LineShape15"
+        Me.LineShape15.X1 = 428
+        Me.LineShape15.X2 = 723
+        Me.LineShape15.Y1 = 545
+        Me.LineShape15.Y2 = 544
+        '
+        'LineShape14
+        '
+        Me.LineShape14.Name = "LineShape14"
+        Me.LineShape14.X1 = 427
+        Me.LineShape14.X2 = 427
+        Me.LineShape14.Y1 = 10
+        Me.LineShape14.Y2 = 544
+        '
+        'LineShape13
+        '
+        Me.LineShape13.Name = "LineShape13"
+        Me.LineShape13.X1 = 723
+        Me.LineShape13.X2 = 723
+        Me.LineShape13.Y1 = 10
+        Me.LineShape13.Y2 = 544
+        '
+        'LineShape12
+        '
+        Me.LineShape12.Name = "LineShape12"
+        Me.LineShape12.X1 = 22
+        Me.LineShape12.X2 = 324
+        Me.LineShape12.Y1 = 546
+        Me.LineShape12.Y2 = 547
+        '
+        'LineShape11
+        '
+        Me.LineShape11.Name = "LineShape11"
+        Me.LineShape11.X1 = 23
+        Me.LineShape11.X2 = 325
+        Me.LineShape11.Y1 = 466
+        Me.LineShape11.Y2 = 467
+        '
+        'LineShape10
+        '
+        Me.LineShape10.Name = "LineShape10"
+        Me.LineShape10.X1 = 23
+        Me.LineShape10.X2 = 325
+        Me.LineShape10.Y1 = 399
+        Me.LineShape10.Y2 = 400
+        '
+        'LineShape9
+        '
+        Me.LineShape9.Name = "LineShape9"
+        Me.LineShape9.X1 = 23
+        Me.LineShape9.X2 = 325
+        Me.LineShape9.Y1 = 333
+        Me.LineShape9.Y2 = 334
+        '
+        'LineShape8
+        '
+        Me.LineShape8.Name = "LineShape8"
+        Me.LineShape8.X1 = 21
+        Me.LineShape8.X2 = 323
+        Me.LineShape8.Y1 = 266
+        Me.LineShape8.Y2 = 267
+        '
+        'LineShape7
+        '
+        Me.LineShape7.Name = "LineShape7"
+        Me.LineShape7.X1 = 22
+        Me.LineShape7.X2 = 324
+        Me.LineShape7.Y1 = 211
+        Me.LineShape7.Y2 = 212
+        '
+        'LineShape6
+        '
+        Me.LineShape6.Name = "LineShape6"
+        Me.LineShape6.X1 = 22
+        Me.LineShape6.X2 = 324
+        Me.LineShape6.Y1 = 139
+        Me.LineShape6.Y2 = 140
+        '
+        'LineShape5
+        '
+        Me.LineShape5.Name = "LineShape5"
+        Me.LineShape5.X1 = 22
+        Me.LineShape5.X2 = 324
+        Me.LineShape5.Y1 = 78
+        Me.LineShape5.Y2 = 79
+        '
+        'LineShape4
+        '
+        Me.LineShape4.Name = "LineShape4"
+        Me.LineShape4.X1 = 22
+        Me.LineShape4.X2 = 324
+        Me.LineShape4.Y1 = 11
+        Me.LineShape4.Y2 = 12
+        '
+        'LineShape3
+        '
+        Me.LineShape3.Name = "LineShape3"
+        Me.LineShape3.X1 = 21
+        Me.LineShape3.X2 = 323
+        Me.LineShape3.Y1 = 606
+        Me.LineShape3.Y2 = 607
+        '
+        'LineShape2
+        '
+        Me.LineShape2.Name = "LineShape2"
+        Me.LineShape2.X1 = 22
+        Me.LineShape2.X2 = 22
+        Me.LineShape2.Y1 = 10
+        Me.LineShape2.Y2 = 605
+        '
+        'LineShape1
+        '
+        Me.LineShape1.Name = "LineShape1"
+        Me.LineShape1.X1 = 324
+        Me.LineShape1.X2 = 324
+        Me.LineShape1.Y1 = 12
+        Me.LineShape1.Y2 = 607
+        '
         'TabPage3
         '
+        Me.TabPage3.Controls.Add(Me.btnEgenBack2)
         Me.TabPage3.Controls.Add(Me.Label536)
         Me.TabPage3.Controls.Add(Me.Panel31)
         Me.TabPage3.Controls.Add(Me.Panel25)
@@ -1359,7 +1588,7 @@ Partial Class egenerklaering
         Me.TabPage3.Controls.Add(Me.Panel26)
         Me.TabPage3.Controls.Add(Me.Panel21)
         Me.TabPage3.Controls.Add(Me.Panel20)
-        Me.TabPage3.Controls.Add(Me.Button2)
+        Me.TabPage3.Controls.Add(Me.btnEgenNext3)
         Me.TabPage3.Controls.Add(Me.Label87)
         Me.TabPage3.Controls.Add(Me.Label89)
         Me.TabPage3.Controls.Add(Me.Label90)
@@ -1395,11 +1624,20 @@ Partial Class egenerklaering
         Me.TabPage3.Text = "Side 2"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
+        'btnEgenBack2
+        '
+        Me.btnEgenBack2.Location = New System.Drawing.Point(333, 621)
+        Me.btnEgenBack2.Name = "btnEgenBack2"
+        Me.btnEgenBack2.Size = New System.Drawing.Size(75, 23)
+        Me.btnEgenBack2.TabIndex = 43
+        Me.btnEgenBack2.Text = "Button1"
+        Me.btnEgenBack2.UseVisualStyleBackColor = True
+        '
         'Label536
         '
         Me.Label536.AutoSize = True
         Me.Label536.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label536.Location = New System.Drawing.Point(513, 495)
+        Me.Label536.Location = New System.Drawing.Point(54, 466)
         Me.Label536.Name = "Label536"
         Me.Label536.Size = New System.Drawing.Size(180, 13)
         Me.Label536.TabIndex = 553
@@ -1409,10 +1647,10 @@ Partial Class egenerklaering
         '
         Me.Panel31.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel31.Controls.Add(Me.CheckBox31)
-        Me.Panel31.Location = New System.Drawing.Point(674, 542)
+        Me.Panel31.Location = New System.Drawing.Point(215, 513)
         Me.Panel31.Name = "Panel31"
         Me.Panel31.Size = New System.Drawing.Size(23, 23)
-        Me.Panel31.TabIndex = 280
+        Me.Panel31.TabIndex = 35
         '
         'CheckBox31
         '
@@ -1428,10 +1666,10 @@ Partial Class egenerklaering
         '
         Me.Panel25.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel25.Controls.Add(Me.CheckBox30)
-        Me.Panel25.Location = New System.Drawing.Point(674, 369)
+        Me.Panel25.Location = New System.Drawing.Point(215, 340)
         Me.Panel25.Name = "Panel25"
         Me.Panel25.Size = New System.Drawing.Size(23, 23)
-        Me.Panel25.TabIndex = 278
+        Me.Panel25.TabIndex = 34
         '
         'CheckBox30
         '
@@ -1447,10 +1685,10 @@ Partial Class egenerklaering
         '
         Me.Panel24.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel24.Controls.Add(Me.CheckBox29)
-        Me.Panel24.Location = New System.Drawing.Point(674, 295)
+        Me.Panel24.Location = New System.Drawing.Point(215, 266)
         Me.Panel24.Name = "Panel24"
         Me.Panel24.Size = New System.Drawing.Size(23, 23)
-        Me.Panel24.TabIndex = 277
+        Me.Panel24.TabIndex = 33
         '
         'CheckBox29
         '
@@ -1466,10 +1704,10 @@ Partial Class egenerklaering
         '
         Me.Panel23.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel23.Controls.Add(Me.CheckBox28)
-        Me.Panel23.Location = New System.Drawing.Point(674, 220)
+        Me.Panel23.Location = New System.Drawing.Point(215, 191)
         Me.Panel23.Name = "Panel23"
         Me.Panel23.Size = New System.Drawing.Size(23, 23)
-        Me.Panel23.TabIndex = 276
+        Me.Panel23.TabIndex = 32
         '
         'CheckBox28
         '
@@ -1485,10 +1723,10 @@ Partial Class egenerklaering
         '
         Me.Panel22.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel22.Controls.Add(Me.CheckBox27)
-        Me.Panel22.Location = New System.Drawing.Point(674, 153)
+        Me.Panel22.Location = New System.Drawing.Point(215, 124)
         Me.Panel22.Name = "Panel22"
         Me.Panel22.Size = New System.Drawing.Size(23, 23)
-        Me.Panel22.TabIndex = 275
+        Me.Panel22.TabIndex = 31
         '
         'CheckBox27
         '
@@ -1504,10 +1742,10 @@ Partial Class egenerklaering
         '
         Me.Panel15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel15.Controls.Add(Me.CheckBox26)
-        Me.Panel15.Location = New System.Drawing.Point(674, 89)
+        Me.Panel15.Location = New System.Drawing.Point(215, 60)
         Me.Panel15.Name = "Panel15"
         Me.Panel15.Size = New System.Drawing.Size(23, 23)
-        Me.Panel15.TabIndex = 274
+        Me.Panel15.TabIndex = 30
         '
         'CheckBox26
         '
@@ -1523,10 +1761,10 @@ Partial Class egenerklaering
         '
         Me.Panel30.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel30.Controls.Add(Me.CheckBox25)
-        Me.Panel30.Location = New System.Drawing.Point(316, 541)
+        Me.Panel30.Location = New System.Drawing.Point(587, 525)
         Me.Panel30.Name = "Panel30"
         Me.Panel30.Size = New System.Drawing.Size(23, 23)
-        Me.Panel30.TabIndex = 271
+        Me.Panel30.TabIndex = 42
         '
         'CheckBox25
         '
@@ -1542,10 +1780,10 @@ Partial Class egenerklaering
         '
         Me.Panel29.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel29.Controls.Add(Me.CheckBox24)
-        Me.Panel29.Location = New System.Drawing.Point(316, 472)
+        Me.Panel29.Location = New System.Drawing.Point(587, 456)
         Me.Panel29.Name = "Panel29"
         Me.Panel29.Size = New System.Drawing.Size(23, 23)
-        Me.Panel29.TabIndex = 270
+        Me.Panel29.TabIndex = 41
         '
         'CheckBox24
         '
@@ -1561,10 +1799,10 @@ Partial Class egenerklaering
         '
         Me.Panel28.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel28.Controls.Add(Me.CheckBox23)
-        Me.Panel28.Location = New System.Drawing.Point(316, 399)
+        Me.Panel28.Location = New System.Drawing.Point(587, 383)
         Me.Panel28.Name = "Panel28"
         Me.Panel28.Size = New System.Drawing.Size(23, 23)
-        Me.Panel28.TabIndex = 269
+        Me.Panel28.TabIndex = 40
         '
         'CheckBox23
         '
@@ -1580,10 +1818,10 @@ Partial Class egenerklaering
         '
         Me.Panel27.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel27.Controls.Add(Me.CheckBox22)
-        Me.Panel27.Location = New System.Drawing.Point(316, 305)
+        Me.Panel27.Location = New System.Drawing.Point(587, 289)
         Me.Panel27.Name = "Panel27"
         Me.Panel27.Size = New System.Drawing.Size(23, 23)
-        Me.Panel27.TabIndex = 268
+        Me.Panel27.TabIndex = 39
         '
         'CheckBox22
         '
@@ -1599,10 +1837,10 @@ Partial Class egenerklaering
         '
         Me.Panel26.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel26.Controls.Add(Me.CheckBox21)
-        Me.Panel26.Location = New System.Drawing.Point(316, 220)
+        Me.Panel26.Location = New System.Drawing.Point(587, 204)
         Me.Panel26.Name = "Panel26"
         Me.Panel26.Size = New System.Drawing.Size(23, 23)
-        Me.Panel26.TabIndex = 267
+        Me.Panel26.TabIndex = 38
         '
         'CheckBox21
         '
@@ -1618,10 +1856,10 @@ Partial Class egenerklaering
         '
         Me.Panel21.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel21.Controls.Add(Me.CheckBox20)
-        Me.Panel21.Location = New System.Drawing.Point(316, 157)
+        Me.Panel21.Location = New System.Drawing.Point(587, 141)
         Me.Panel21.Name = "Panel21"
         Me.Panel21.Size = New System.Drawing.Size(23, 23)
-        Me.Panel21.TabIndex = 266
+        Me.Panel21.TabIndex = 37
         '
         'CheckBox20
         '
@@ -1637,10 +1875,10 @@ Partial Class egenerklaering
         '
         Me.Panel20.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel20.Controls.Add(Me.CheckBox19)
-        Me.Panel20.Location = New System.Drawing.Point(316, 89)
+        Me.Panel20.Location = New System.Drawing.Point(587, 73)
         Me.Panel20.Name = "Panel20"
         Me.Panel20.Size = New System.Drawing.Size(23, 23)
-        Me.Panel20.TabIndex = 265
+        Me.Panel20.TabIndex = 36
         '
         'CheckBox19
         '
@@ -1652,19 +1890,19 @@ Partial Class egenerklaering
         Me.CheckBox19.TabIndex = 258
         Me.CheckBox19.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnEgenNext3
         '
-        Me.Button2.Location = New System.Drawing.Point(224, 652)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 119
-        Me.Button2.Text = "Neste side"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnEgenNext3.Location = New System.Drawing.Point(414, 621)
+        Me.btnEgenNext3.Name = "btnEgenNext3"
+        Me.btnEgenNext3.Size = New System.Drawing.Size(75, 23)
+        Me.btnEgenNext3.TabIndex = 44
+        Me.btnEgenNext3.Text = "Neste side"
+        Me.btnEgenNext3.UseVisualStyleBackColor = True
         '
         'Label87
         '
         Me.Label87.AutoSize = True
-        Me.Label87.Location = New System.Drawing.Point(31, 540)
+        Me.Label87.Location = New System.Drawing.Point(302, 524)
         Me.Label87.Name = "Label87"
         Me.Label87.Size = New System.Drawing.Size(224, 13)
         Me.Label87.TabIndex = 89
@@ -1673,7 +1911,7 @@ Partial Class egenerklaering
         'Label89
         '
         Me.Label89.AutoSize = True
-        Me.Label89.Location = New System.Drawing.Point(31, 482)
+        Me.Label89.Location = New System.Drawing.Point(302, 466)
         Me.Label89.Name = "Label89"
         Me.Label89.Size = New System.Drawing.Size(104, 13)
         Me.Label89.TabIndex = 87
@@ -1682,7 +1920,7 @@ Partial Class egenerklaering
         'Label90
         '
         Me.Label90.AutoSize = True
-        Me.Label90.Location = New System.Drawing.Point(31, 469)
+        Me.Label90.Location = New System.Drawing.Point(302, 453)
         Me.Label90.Name = "Label90"
         Me.Label90.Size = New System.Drawing.Size(207, 13)
         Me.Label90.TabIndex = 86
@@ -1691,7 +1929,7 @@ Partial Class egenerklaering
         'Label92
         '
         Me.Label92.AutoSize = True
-        Me.Label92.Location = New System.Drawing.Point(31, 414)
+        Me.Label92.Location = New System.Drawing.Point(302, 398)
         Me.Label92.Name = "Label92"
         Me.Label92.Size = New System.Drawing.Size(102, 13)
         Me.Label92.TabIndex = 84
@@ -1700,7 +1938,7 @@ Partial Class egenerklaering
         'Label93
         '
         Me.Label93.AutoSize = True
-        Me.Label93.Location = New System.Drawing.Point(31, 401)
+        Me.Label93.Location = New System.Drawing.Point(302, 385)
         Me.Label93.Name = "Label93"
         Me.Label93.Size = New System.Drawing.Size(207, 13)
         Me.Label93.TabIndex = 83
@@ -1709,7 +1947,7 @@ Partial Class egenerklaering
         'Label94
         '
         Me.Label94.AutoSize = True
-        Me.Label94.Location = New System.Drawing.Point(31, 388)
+        Me.Label94.Location = New System.Drawing.Point(302, 372)
         Me.Label94.Name = "Label94"
         Me.Label94.Size = New System.Drawing.Size(217, 13)
         Me.Label94.TabIndex = 82
@@ -1718,7 +1956,7 @@ Partial Class egenerklaering
         'Label96
         '
         Me.Label96.AutoSize = True
-        Me.Label96.Location = New System.Drawing.Point(31, 331)
+        Me.Label96.Location = New System.Drawing.Point(302, 315)
         Me.Label96.Name = "Label96"
         Me.Label96.Size = New System.Drawing.Size(147, 13)
         Me.Label96.TabIndex = 80
@@ -1727,7 +1965,7 @@ Partial Class egenerklaering
         'Label97
         '
         Me.Label97.AutoSize = True
-        Me.Label97.Location = New System.Drawing.Point(31, 318)
+        Me.Label97.Location = New System.Drawing.Point(302, 302)
         Me.Label97.Name = "Label97"
         Me.Label97.Size = New System.Drawing.Size(198, 13)
         Me.Label97.TabIndex = 79
@@ -1736,7 +1974,7 @@ Partial Class egenerklaering
         'Label98
         '
         Me.Label98.AutoSize = True
-        Me.Label98.Location = New System.Drawing.Point(31, 305)
+        Me.Label98.Location = New System.Drawing.Point(302, 289)
         Me.Label98.Name = "Label98"
         Me.Label98.Size = New System.Drawing.Size(213, 13)
         Me.Label98.TabIndex = 78
@@ -1745,7 +1983,7 @@ Partial Class egenerklaering
         'Label99
         '
         Me.Label99.AutoSize = True
-        Me.Label99.Location = New System.Drawing.Point(31, 292)
+        Me.Label99.Location = New System.Drawing.Point(302, 276)
         Me.Label99.Name = "Label99"
         Me.Label99.Size = New System.Drawing.Size(188, 13)
         Me.Label99.TabIndex = 77
@@ -1754,7 +1992,7 @@ Partial Class egenerklaering
         'Label101
         '
         Me.Label101.AutoSize = True
-        Me.Label101.Location = New System.Drawing.Point(31, 233)
+        Me.Label101.Location = New System.Drawing.Point(302, 217)
         Me.Label101.Name = "Label101"
         Me.Label101.Size = New System.Drawing.Size(95, 13)
         Me.Label101.TabIndex = 75
@@ -1763,7 +2001,7 @@ Partial Class egenerklaering
         'Label102
         '
         Me.Label102.AutoSize = True
-        Me.Label102.Location = New System.Drawing.Point(31, 220)
+        Me.Label102.Location = New System.Drawing.Point(302, 204)
         Me.Label102.Name = "Label102"
         Me.Label102.Size = New System.Drawing.Size(195, 13)
         Me.Label102.TabIndex = 74
@@ -1772,7 +2010,7 @@ Partial Class egenerklaering
         'Label104
         '
         Me.Label104.AutoSize = True
-        Me.Label104.Location = New System.Drawing.Point(31, 157)
+        Me.Label104.Location = New System.Drawing.Point(302, 141)
         Me.Label104.Name = "Label104"
         Me.Label104.Size = New System.Drawing.Size(149, 13)
         Me.Label104.TabIndex = 72
@@ -1781,7 +2019,7 @@ Partial Class egenerklaering
         'Label107
         '
         Me.Label107.AutoSize = True
-        Me.Label107.Location = New System.Drawing.Point(31, 99)
+        Me.Label107.Location = New System.Drawing.Point(302, 83)
         Me.Label107.Name = "Label107"
         Me.Label107.Size = New System.Drawing.Size(186, 13)
         Me.Label107.TabIndex = 69
@@ -1790,7 +2028,7 @@ Partial Class egenerklaering
         'Label108
         '
         Me.Label108.AutoSize = True
-        Me.Label108.Location = New System.Drawing.Point(31, 86)
+        Me.Label108.Location = New System.Drawing.Point(302, 70)
         Me.Label108.Name = "Label108"
         Me.Label108.Size = New System.Drawing.Size(208, 13)
         Me.Label108.TabIndex = 68
@@ -1800,7 +2038,7 @@ Partial Class egenerklaering
         '
         Me.Label109.AutoSize = True
         Me.Label109.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label109.Location = New System.Drawing.Point(73, 30)
+        Me.Label109.Location = New System.Drawing.Point(313, 21)
         Me.Label109.Name = "Label109"
         Me.Label109.Size = New System.Drawing.Size(236, 13)
         Me.Label109.TabIndex = 67
@@ -1809,7 +2047,7 @@ Partial Class egenerklaering
         'Label45
         '
         Me.Label45.AutoSize = True
-        Me.Label45.Location = New System.Drawing.Point(505, 552)
+        Me.Label45.Location = New System.Drawing.Point(46, 523)
         Me.Label45.Name = "Label45"
         Me.Label45.Size = New System.Drawing.Size(113, 13)
         Me.Label45.TabIndex = 23
@@ -1818,7 +2056,7 @@ Partial Class egenerklaering
         'Label43
         '
         Me.Label43.AutoSize = True
-        Me.Label43.Location = New System.Drawing.Point(505, 539)
+        Me.Label43.Location = New System.Drawing.Point(46, 510)
         Me.Label43.Name = "Label43"
         Me.Label43.Size = New System.Drawing.Size(127, 13)
         Me.Label43.TabIndex = 21
@@ -1836,7 +2074,7 @@ Partial Class egenerklaering
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(500, 379)
+        Me.Label18.Location = New System.Drawing.Point(41, 350)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(59, 13)
         Me.Label18.TabIndex = 6
@@ -1845,7 +2083,7 @@ Partial Class egenerklaering
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(500, 366)
+        Me.Label17.Location = New System.Drawing.Point(41, 337)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(116, 13)
         Me.Label17.TabIndex = 5
@@ -1854,7 +2092,7 @@ Partial Class egenerklaering
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(500, 301)
+        Me.Label16.Location = New System.Drawing.Point(41, 272)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(71, 13)
         Me.Label16.TabIndex = 4
@@ -1863,7 +2101,7 @@ Partial Class egenerklaering
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(500, 225)
+        Me.Label15.Location = New System.Drawing.Point(41, 196)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(90, 13)
         Me.Label15.TabIndex = 3
@@ -1872,7 +2110,7 @@ Partial Class egenerklaering
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(500, 157)
+        Me.Label14.Location = New System.Drawing.Point(41, 128)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(125, 13)
         Me.Label14.TabIndex = 2
@@ -1881,7 +2119,7 @@ Partial Class egenerklaering
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(500, 94)
+        Me.Label13.Location = New System.Drawing.Point(41, 65)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(85, 13)
         Me.Label13.TabIndex = 1
@@ -1891,14 +2129,185 @@ Partial Class egenerklaering
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(500, 30)
+        Me.Label12.Location = New System.Drawing.Point(33, 21)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(205, 13)
         Me.Label12.TabIndex = 0
         Me.Label12.Text = "Har du i løpet av de siste fire uker:"
         '
+        'ShapeContainer2
+        '
+        Me.ShapeContainer2.Location = New System.Drawing.Point(3, 3)
+        Me.ShapeContainer2.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer2.Name = "ShapeContainer2"
+        Me.ShapeContainer2.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape43, Me.LineShape42, Me.LineShape41, Me.LineShape40, Me.LineShape39, Me.LineShape38, Me.LineShape37, Me.LineShape36, Me.LineShape35, Me.LineShape34, Me.LineShape33, Me.LineShape32, Me.LineShape31, Me.LineShape30, Me.LineShape29, Me.LineShape28, Me.LineShape27, Me.LineShape26, Me.LineShape25, Me.LineShape24})
+        Me.ShapeContainer2.Size = New System.Drawing.Size(1149, 734)
+        Me.ShapeContainer2.TabIndex = 554
+        Me.ShapeContainer2.TabStop = False
+        '
+        'LineShape43
+        '
+        Me.LineShape43.Name = "LineShape43"
+        Me.LineShape43.X1 = 292
+        Me.LineShape43.X2 = 625
+        Me.LineShape43.Y1 = 499
+        Me.LineShape43.Y2 = 499
+        '
+        'LineShape42
+        '
+        Me.LineShape42.Name = "LineShape42"
+        Me.LineShape42.X1 = 291
+        Me.LineShape42.X2 = 626
+        Me.LineShape42.Y1 = 428
+        Me.LineShape42.Y2 = 428
+        '
+        'LineShape41
+        '
+        Me.LineShape41.Name = "LineShape41"
+        Me.LineShape41.X1 = 290
+        Me.LineShape41.X2 = 623
+        Me.LineShape41.Y1 = 344
+        Me.LineShape41.Y2 = 344
+        '
+        'LineShape40
+        '
+        Me.LineShape40.Name = "LineShape40"
+        Me.LineShape40.X1 = 290
+        Me.LineShape40.X2 = 626
+        Me.LineShape40.Y1 = 247
+        Me.LineShape40.Y2 = 247
+        '
+        'LineShape39
+        '
+        Me.LineShape39.Name = "LineShape39"
+        Me.LineShape39.X1 = 290
+        Me.LineShape39.X2 = 625
+        Me.LineShape39.Y1 = 179
+        Me.LineShape39.Y2 = 179
+        '
+        'LineShape38
+        '
+        Me.LineShape38.Name = "LineShape38"
+        Me.LineShape38.X1 = 287
+        Me.LineShape38.X2 = 624
+        Me.LineShape38.Y1 = 111
+        Me.LineShape38.Y2 = 111
+        '
+        'LineShape37
+        '
+        Me.LineShape37.Name = "LineShape37"
+        Me.LineShape37.X1 = 23
+        Me.LineShape37.X2 = 252
+        Me.LineShape37.Y1 = 106
+        Me.LineShape37.Y2 = 106
+        '
+        'LineShape36
+        '
+        Me.LineShape36.Name = "LineShape36"
+        Me.LineShape36.X1 = 25
+        Me.LineShape36.X2 = 254
+        Me.LineShape36.Y1 = 178
+        Me.LineShape36.Y2 = 178
+        '
+        'LineShape35
+        '
+        Me.LineShape35.Name = "LineShape35"
+        Me.LineShape35.X1 = 26
+        Me.LineShape35.X2 = 255
+        Me.LineShape35.Y1 = 247
+        Me.LineShape35.Y2 = 247
+        '
+        'LineShape34
+        '
+        Me.LineShape34.Name = "LineShape34"
+        Me.LineShape34.X1 = 26
+        Me.LineShape34.X2 = 253
+        Me.LineShape34.Y1 = 321
+        Me.LineShape34.Y2 = 321
+        '
+        'LineShape33
+        '
+        Me.LineShape33.Name = "LineShape33"
+        Me.LineShape33.X1 = 28
+        Me.LineShape33.X2 = 254
+        Me.LineShape33.Y1 = 387
+        Me.LineShape33.Y2 = 387
+        '
+        'LineShape32
+        '
+        Me.LineShape32.Name = "LineShape32"
+        Me.LineShape32.X1 = 28
+        Me.LineShape32.X2 = 257
+        Me.LineShape32.Y1 = 501
+        Me.LineShape32.Y2 = 501
+        '
+        'LineShape31
+        '
+        Me.LineShape31.Name = "LineShape31"
+        Me.LineShape31.X1 = 30
+        Me.LineShape31.X2 = 259
+        Me.LineShape31.Y1 = 566
+        Me.LineShape31.Y2 = 566
+        '
+        'LineShape30
+        '
+        Me.LineShape30.Name = "LineShape30"
+        Me.LineShape30.X1 = 24
+        Me.LineShape30.X2 = 253
+        Me.LineShape30.Y1 = 42
+        Me.LineShape30.Y2 = 43
+        '
+        'LineShape29
+        '
+        Me.LineShape29.Name = "LineShape29"
+        Me.LineShape29.X1 = 286
+        Me.LineShape29.X2 = 622
+        Me.LineShape29.Y1 = 43
+        Me.LineShape29.Y2 = 45
+        '
+        'LineShape28
+        '
+        Me.LineShape28.Name = "LineShape28"
+        Me.LineShape28.X1 = 291
+        Me.LineShape28.X2 = 626
+        Me.LineShape28.Y1 = 567
+        Me.LineShape28.Y2 = 567
+        '
+        'LineShape27
+        '
+        Me.LineShape27.Name = "LineShape27"
+        Me.LineShape27.X1 = 254
+        Me.LineShape27.X2 = 259
+        Me.LineShape27.Y1 = 43
+        Me.LineShape27.Y2 = 567
+        '
+        'LineShape26
+        '
+        Me.LineShape26.Name = "LineShape26"
+        Me.LineShape26.X1 = 23
+        Me.LineShape26.X2 = 28
+        Me.LineShape26.Y1 = 42
+        Me.LineShape26.Y2 = 566
+        '
+        'LineShape25
+        '
+        Me.LineShape25.Name = "LineShape25"
+        Me.LineShape25.X1 = 287
+        Me.LineShape25.X2 = 292
+        Me.LineShape25.Y1 = 44
+        Me.LineShape25.Y2 = 568
+        '
+        'LineShape24
+        '
+        Me.LineShape24.Name = "LineShape24"
+        Me.LineShape24.X1 = 623
+        Me.LineShape24.X2 = 628
+        Me.LineShape24.Y1 = 44
+        Me.LineShape24.Y2 = 568
+        '
         'TabPage4
         '
+        Me.TabPage4.Controls.Add(Me.btnEgenBack3)
         Me.TabPage4.Controls.Add(Me.Panel41)
         Me.TabPage4.Controls.Add(Me.Panel40)
         Me.TabPage4.Controls.Add(Me.Panel39)
@@ -1909,7 +2318,7 @@ Partial Class egenerklaering
         Me.TabPage4.Controls.Add(Me.Panel34)
         Me.TabPage4.Controls.Add(Me.Panel33)
         Me.TabPage4.Controls.Add(Me.Panel32)
-        Me.TabPage4.Controls.Add(Me.Button3)
+        Me.TabPage4.Controls.Add(Me.btnEgenNext4)
         Me.TabPage4.Controls.Add(Me.Label68)
         Me.TabPage4.Controls.Add(Me.Label66)
         Me.TabPage4.Controls.Add(Me.Label64)
@@ -1934,14 +2343,213 @@ Partial Class egenerklaering
         Me.TabPage4.Text = "Side 3"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnEgenBack3
         '
-        Me.Button3.Location = New System.Drawing.Point(119, 576)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 128
-        Me.Button3.Text = "Neste side"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnEgenBack3.Location = New System.Drawing.Point(129, 576)
+        Me.btnEgenBack3.Name = "btnEgenBack3"
+        Me.btnEgenBack3.Size = New System.Drawing.Size(75, 23)
+        Me.btnEgenBack3.TabIndex = 55
+        Me.btnEgenBack3.Text = "Button1"
+        Me.btnEgenBack3.UseVisualStyleBackColor = True
+        '
+        'Panel41
+        '
+        Me.Panel41.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel41.Controls.Add(Me.CheckBox41)
+        Me.Panel41.Location = New System.Drawing.Point(313, 515)
+        Me.Panel41.Name = "Panel41"
+        Me.Panel41.Size = New System.Drawing.Size(23, 23)
+        Me.Panel41.TabIndex = 54
+        '
+        'CheckBox41
+        '
+        Me.CheckBox41.AutoSize = True
+        Me.CheckBox41.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox41.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox41.Name = "CheckBox41"
+        Me.CheckBox41.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox41.TabIndex = 258
+        Me.CheckBox41.UseVisualStyleBackColor = True
+        '
+        'Panel40
+        '
+        Me.Panel40.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel40.Controls.Add(Me.CheckBox40)
+        Me.Panel40.Location = New System.Drawing.Point(313, 458)
+        Me.Panel40.Name = "Panel40"
+        Me.Panel40.Size = New System.Drawing.Size(23, 23)
+        Me.Panel40.TabIndex = 53
+        '
+        'CheckBox40
+        '
+        Me.CheckBox40.AutoSize = True
+        Me.CheckBox40.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox40.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox40.Name = "CheckBox40"
+        Me.CheckBox40.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox40.TabIndex = 258
+        Me.CheckBox40.UseVisualStyleBackColor = True
+        '
+        'Panel39
+        '
+        Me.Panel39.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel39.Controls.Add(Me.CheckBox39)
+        Me.Panel39.Location = New System.Drawing.Point(313, 406)
+        Me.Panel39.Name = "Panel39"
+        Me.Panel39.Size = New System.Drawing.Size(23, 23)
+        Me.Panel39.TabIndex = 52
+        '
+        'CheckBox39
+        '
+        Me.CheckBox39.AutoSize = True
+        Me.CheckBox39.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox39.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox39.Name = "CheckBox39"
+        Me.CheckBox39.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox39.TabIndex = 258
+        Me.CheckBox39.UseVisualStyleBackColor = True
+        '
+        'Panel38
+        '
+        Me.Panel38.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel38.Controls.Add(Me.CheckBox38)
+        Me.Panel38.Location = New System.Drawing.Point(313, 349)
+        Me.Panel38.Name = "Panel38"
+        Me.Panel38.Size = New System.Drawing.Size(23, 23)
+        Me.Panel38.TabIndex = 51
+        '
+        'CheckBox38
+        '
+        Me.CheckBox38.AutoSize = True
+        Me.CheckBox38.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox38.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox38.Name = "CheckBox38"
+        Me.CheckBox38.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox38.TabIndex = 258
+        Me.CheckBox38.UseVisualStyleBackColor = True
+        '
+        'Panel37
+        '
+        Me.Panel37.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel37.Controls.Add(Me.CheckBox37)
+        Me.Panel37.Location = New System.Drawing.Point(313, 302)
+        Me.Panel37.Name = "Panel37"
+        Me.Panel37.Size = New System.Drawing.Size(23, 23)
+        Me.Panel37.TabIndex = 50
+        '
+        'CheckBox37
+        '
+        Me.CheckBox37.AutoSize = True
+        Me.CheckBox37.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox37.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox37.Name = "CheckBox37"
+        Me.CheckBox37.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox37.TabIndex = 258
+        Me.CheckBox37.UseVisualStyleBackColor = True
+        '
+        'Panel36
+        '
+        Me.Panel36.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel36.Controls.Add(Me.CheckBox36)
+        Me.Panel36.Location = New System.Drawing.Point(313, 258)
+        Me.Panel36.Name = "Panel36"
+        Me.Panel36.Size = New System.Drawing.Size(23, 23)
+        Me.Panel36.TabIndex = 49
+        '
+        'CheckBox36
+        '
+        Me.CheckBox36.AutoSize = True
+        Me.CheckBox36.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox36.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox36.Name = "CheckBox36"
+        Me.CheckBox36.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox36.TabIndex = 258
+        Me.CheckBox36.UseVisualStyleBackColor = True
+        '
+        'Panel35
+        '
+        Me.Panel35.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel35.Controls.Add(Me.CheckBox35)
+        Me.Panel35.Location = New System.Drawing.Point(313, 216)
+        Me.Panel35.Name = "Panel35"
+        Me.Panel35.Size = New System.Drawing.Size(23, 23)
+        Me.Panel35.TabIndex = 48
+        '
+        'CheckBox35
+        '
+        Me.CheckBox35.AutoSize = True
+        Me.CheckBox35.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox35.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox35.Name = "CheckBox35"
+        Me.CheckBox35.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox35.TabIndex = 258
+        Me.CheckBox35.UseVisualStyleBackColor = True
+        '
+        'Panel34
+        '
+        Me.Panel34.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel34.Controls.Add(Me.CheckBox34)
+        Me.Panel34.Location = New System.Drawing.Point(313, 163)
+        Me.Panel34.Name = "Panel34"
+        Me.Panel34.Size = New System.Drawing.Size(23, 23)
+        Me.Panel34.TabIndex = 47
+        '
+        'CheckBox34
+        '
+        Me.CheckBox34.AutoSize = True
+        Me.CheckBox34.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox34.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox34.Name = "CheckBox34"
+        Me.CheckBox34.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox34.TabIndex = 258
+        Me.CheckBox34.UseVisualStyleBackColor = True
+        '
+        'Panel33
+        '
+        Me.Panel33.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel33.Controls.Add(Me.CheckBox33)
+        Me.Panel33.Location = New System.Drawing.Point(313, 106)
+        Me.Panel33.Name = "Panel33"
+        Me.Panel33.Size = New System.Drawing.Size(23, 23)
+        Me.Panel33.TabIndex = 46
+        '
+        'CheckBox33
+        '
+        Me.CheckBox33.AutoSize = True
+        Me.CheckBox33.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox33.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox33.Name = "CheckBox33"
+        Me.CheckBox33.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox33.TabIndex = 258
+        Me.CheckBox33.UseVisualStyleBackColor = True
+        '
+        'Panel32
+        '
+        Me.Panel32.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel32.Controls.Add(Me.CheckBox32)
+        Me.Panel32.Location = New System.Drawing.Point(313, 54)
+        Me.Panel32.Name = "Panel32"
+        Me.Panel32.Size = New System.Drawing.Size(23, 23)
+        Me.Panel32.TabIndex = 45
+        '
+        'CheckBox32
+        '
+        Me.CheckBox32.AutoSize = True
+        Me.CheckBox32.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox32.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox32.Name = "CheckBox32"
+        Me.CheckBox32.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox32.TabIndex = 258
+        Me.CheckBox32.UseVisualStyleBackColor = True
+        '
+        'btnEgenNext4
+        '
+        Me.btnEgenNext4.Location = New System.Drawing.Point(210, 576)
+        Me.btnEgenNext4.Name = "btnEgenNext4"
+        Me.btnEgenNext4.Size = New System.Drawing.Size(75, 23)
+        Me.btnEgenNext4.TabIndex = 56
+        Me.btnEgenNext4.Text = "Neste side"
+        Me.btnEgenNext4.UseVisualStyleBackColor = True
         '
         'Label68
         '
@@ -2079,8 +2687,123 @@ Partial Class egenerklaering
         Me.Label85.TabIndex = 43
         Me.Label85.Text = "Har du i løpet av de siste seks måneder:"
         '
+        'ShapeContainer3
+        '
+        Me.ShapeContainer3.Location = New System.Drawing.Point(3, 3)
+        Me.ShapeContainer3.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer3.Name = "ShapeContainer3"
+        Me.ShapeContainer3.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape56, Me.LineShape55, Me.LineShape54, Me.LineShape53, Me.LineShape52, Me.LineShape51, Me.LineShape50, Me.LineShape49, Me.LineShape48, Me.LineShape47, Me.LineShape46, Me.LineShape45, Me.LineShape44})
+        Me.ShapeContainer3.Size = New System.Drawing.Size(1149, 734)
+        Me.ShapeContainer3.TabIndex = 129
+        Me.ShapeContainer3.TabStop = False
+        '
+        'LineShape56
+        '
+        Me.LineShape56.Name = "LineShape56"
+        Me.LineShape56.X1 = 12
+        Me.LineShape56.X2 = 362
+        Me.LineShape56.Y1 = 81
+        Me.LineShape56.Y2 = 81
+        '
+        'LineShape55
+        '
+        Me.LineShape55.Name = "LineShape55"
+        Me.LineShape55.X1 = 11
+        Me.LineShape55.X2 = 361
+        Me.LineShape55.Y1 = 141
+        Me.LineShape55.Y2 = 141
+        '
+        'LineShape54
+        '
+        Me.LineShape54.Name = "LineShape54"
+        Me.LineShape54.X1 = 11
+        Me.LineShape54.X2 = 361
+        Me.LineShape54.Y1 = 196
+        Me.LineShape54.Y2 = 196
+        '
+        'LineShape53
+        '
+        Me.LineShape53.Name = "LineShape53"
+        Me.LineShape53.X1 = 12
+        Me.LineShape53.X2 = 362
+        Me.LineShape53.Y1 = 241
+        Me.LineShape53.Y2 = 241
+        '
+        'LineShape52
+        '
+        Me.LineShape52.Name = "LineShape52"
+        Me.LineShape52.X1 = 12
+        Me.LineShape52.X2 = 362
+        Me.LineShape52.Y1 = 283
+        Me.LineShape52.Y2 = 283
+        '
+        'LineShape51
+        '
+        Me.LineShape51.Name = "LineShape51"
+        Me.LineShape51.X1 = 13
+        Me.LineShape51.X2 = 363
+        Me.LineShape51.Y1 = 336
+        Me.LineShape51.Y2 = 336
+        '
+        'LineShape50
+        '
+        Me.LineShape50.Name = "LineShape50"
+        Me.LineShape50.X1 = 12
+        Me.LineShape50.X2 = 362
+        Me.LineShape50.Y1 = 384
+        Me.LineShape50.Y2 = 384
+        '
+        'LineShape49
+        '
+        Me.LineShape49.Name = "LineShape49"
+        Me.LineShape49.X1 = 12
+        Me.LineShape49.X2 = 362
+        Me.LineShape49.Y1 = 440
+        Me.LineShape49.Y2 = 440
+        '
+        'LineShape48
+        '
+        Me.LineShape48.Name = "LineShape48"
+        Me.LineShape48.X1 = 11
+        Me.LineShape48.X2 = 361
+        Me.LineShape48.Y1 = 492
+        Me.LineShape48.Y2 = 492
+        '
+        'LineShape47
+        '
+        Me.LineShape47.Name = "LineShape47"
+        Me.LineShape47.X1 = 11
+        Me.LineShape47.X2 = 11
+        Me.LineShape47.Y1 = 32
+        Me.LineShape47.Y2 = 551
+        '
+        'LineShape46
+        '
+        Me.LineShape46.Name = "LineShape46"
+        Me.LineShape46.X1 = 362
+        Me.LineShape46.X2 = 362
+        Me.LineShape46.Y1 = 33
+        Me.LineShape46.Y2 = 552
+        '
+        'LineShape45
+        '
+        Me.LineShape45.Name = "LineShape45"
+        Me.LineShape45.X1 = 11
+        Me.LineShape45.X2 = 361
+        Me.LineShape45.Y1 = 551
+        Me.LineShape45.Y2 = 551
+        '
+        'LineShape44
+        '
+        Me.LineShape44.Name = "LineShape44"
+        Me.LineShape44.X1 = 11
+        Me.LineShape44.X2 = 361
+        Me.LineShape44.Y1 = 33
+        Me.LineShape44.Y2 = 33
+        '
         'TabPage5
         '
+        Me.TabPage5.Controls.Add(Me.btnEgenBack4)
         Me.TabPage5.Controls.Add(Me.Panel55)
         Me.TabPage5.Controls.Add(Me.Panel54)
         Me.TabPage5.Controls.Add(Me.Panel53)
@@ -2095,7 +2818,7 @@ Partial Class egenerklaering
         Me.TabPage5.Controls.Add(Me.Panel44)
         Me.TabPage5.Controls.Add(Me.Panel43)
         Me.TabPage5.Controls.Add(Me.Panel42)
-        Me.TabPage5.Controls.Add(Me.Button4)
+        Me.TabPage5.Controls.Add(Me.btnEgenNext5)
         Me.TabPage5.Controls.Add(Me.Label126)
         Me.TabPage5.Controls.Add(Me.Label125)
         Me.TabPage5.Controls.Add(Me.Label123)
@@ -2122,14 +2845,289 @@ Partial Class egenerklaering
         Me.TabPage5.Text = "Side 4"
         Me.TabPage5.UseVisualStyleBackColor = True
         '
-        'Button4
+        'btnEgenBack4
         '
-        Me.Button4.Location = New System.Drawing.Point(111, 649)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 138
-        Me.Button4.Text = "Neste side"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnEgenBack4.Location = New System.Drawing.Point(117, 649)
+        Me.btnEgenBack4.Name = "btnEgenBack4"
+        Me.btnEgenBack4.Size = New System.Drawing.Size(75, 23)
+        Me.btnEgenBack4.TabIndex = 71
+        Me.btnEgenBack4.Text = "Button1"
+        Me.btnEgenBack4.UseVisualStyleBackColor = True
+        '
+        'Panel55
+        '
+        Me.Panel55.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel55.Controls.Add(Me.CheckBox55)
+        Me.Panel55.Location = New System.Drawing.Point(287, 577)
+        Me.Panel55.Name = "Panel55"
+        Me.Panel55.Size = New System.Drawing.Size(23, 23)
+        Me.Panel55.TabIndex = 70
+        '
+        'CheckBox55
+        '
+        Me.CheckBox55.AutoSize = True
+        Me.CheckBox55.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox55.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox55.Name = "CheckBox55"
+        Me.CheckBox55.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox55.TabIndex = 258
+        Me.CheckBox55.UseVisualStyleBackColor = True
+        '
+        'Panel54
+        '
+        Me.Panel54.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel54.Controls.Add(Me.CheckBox54)
+        Me.Panel54.Location = New System.Drawing.Point(287, 530)
+        Me.Panel54.Name = "Panel54"
+        Me.Panel54.Size = New System.Drawing.Size(23, 23)
+        Me.Panel54.TabIndex = 69
+        '
+        'CheckBox54
+        '
+        Me.CheckBox54.AutoSize = True
+        Me.CheckBox54.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox54.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox54.Name = "CheckBox54"
+        Me.CheckBox54.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox54.TabIndex = 258
+        Me.CheckBox54.UseVisualStyleBackColor = True
+        '
+        'Panel53
+        '
+        Me.Panel53.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel53.Controls.Add(Me.CheckBox53)
+        Me.Panel53.Location = New System.Drawing.Point(287, 493)
+        Me.Panel53.Name = "Panel53"
+        Me.Panel53.Size = New System.Drawing.Size(23, 23)
+        Me.Panel53.TabIndex = 68
+        '
+        'CheckBox53
+        '
+        Me.CheckBox53.AutoSize = True
+        Me.CheckBox53.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox53.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox53.Name = "CheckBox53"
+        Me.CheckBox53.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox53.TabIndex = 258
+        Me.CheckBox53.UseVisualStyleBackColor = True
+        '
+        'Panel52
+        '
+        Me.Panel52.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel52.Controls.Add(Me.CheckBox52)
+        Me.Panel52.Location = New System.Drawing.Point(287, 454)
+        Me.Panel52.Name = "Panel52"
+        Me.Panel52.Size = New System.Drawing.Size(23, 23)
+        Me.Panel52.TabIndex = 67
+        '
+        'CheckBox52
+        '
+        Me.CheckBox52.AutoSize = True
+        Me.CheckBox52.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox52.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox52.Name = "CheckBox52"
+        Me.CheckBox52.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox52.TabIndex = 258
+        Me.CheckBox52.UseVisualStyleBackColor = True
+        '
+        'Panel51
+        '
+        Me.Panel51.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel51.Controls.Add(Me.CheckBox51)
+        Me.Panel51.Location = New System.Drawing.Point(287, 417)
+        Me.Panel51.Name = "Panel51"
+        Me.Panel51.Size = New System.Drawing.Size(23, 23)
+        Me.Panel51.TabIndex = 66
+        '
+        'CheckBox51
+        '
+        Me.CheckBox51.AutoSize = True
+        Me.CheckBox51.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox51.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox51.Name = "CheckBox51"
+        Me.CheckBox51.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox51.TabIndex = 258
+        Me.CheckBox51.UseVisualStyleBackColor = True
+        '
+        'Panel50
+        '
+        Me.Panel50.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel50.Controls.Add(Me.CheckBox50)
+        Me.Panel50.Location = New System.Drawing.Point(287, 382)
+        Me.Panel50.Name = "Panel50"
+        Me.Panel50.Size = New System.Drawing.Size(23, 23)
+        Me.Panel50.TabIndex = 65
+        '
+        'CheckBox50
+        '
+        Me.CheckBox50.AutoSize = True
+        Me.CheckBox50.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox50.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox50.Name = "CheckBox50"
+        Me.CheckBox50.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox50.TabIndex = 258
+        Me.CheckBox50.UseVisualStyleBackColor = True
+        '
+        'Panel49
+        '
+        Me.Panel49.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel49.Controls.Add(Me.CheckBox49)
+        Me.Panel49.Location = New System.Drawing.Point(287, 334)
+        Me.Panel49.Name = "Panel49"
+        Me.Panel49.Size = New System.Drawing.Size(23, 23)
+        Me.Panel49.TabIndex = 64
+        '
+        'CheckBox49
+        '
+        Me.CheckBox49.AutoSize = True
+        Me.CheckBox49.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox49.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox49.Name = "CheckBox49"
+        Me.CheckBox49.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox49.TabIndex = 258
+        Me.CheckBox49.UseVisualStyleBackColor = True
+        '
+        'Panel48
+        '
+        Me.Panel48.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel48.Controls.Add(Me.CheckBox48)
+        Me.Panel48.Location = New System.Drawing.Point(287, 295)
+        Me.Panel48.Name = "Panel48"
+        Me.Panel48.Size = New System.Drawing.Size(23, 23)
+        Me.Panel48.TabIndex = 63
+        '
+        'CheckBox48
+        '
+        Me.CheckBox48.AutoSize = True
+        Me.CheckBox48.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox48.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox48.Name = "CheckBox48"
+        Me.CheckBox48.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox48.TabIndex = 258
+        Me.CheckBox48.UseVisualStyleBackColor = True
+        '
+        'Panel47
+        '
+        Me.Panel47.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel47.Controls.Add(Me.CheckBox47)
+        Me.Panel47.Location = New System.Drawing.Point(287, 250)
+        Me.Panel47.Name = "Panel47"
+        Me.Panel47.Size = New System.Drawing.Size(23, 23)
+        Me.Panel47.TabIndex = 62
+        '
+        'CheckBox47
+        '
+        Me.CheckBox47.AutoSize = True
+        Me.CheckBox47.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox47.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox47.Name = "CheckBox47"
+        Me.CheckBox47.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox47.TabIndex = 258
+        Me.CheckBox47.UseVisualStyleBackColor = True
+        '
+        'Panel46
+        '
+        Me.Panel46.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel46.Controls.Add(Me.CheckBox46)
+        Me.Panel46.Location = New System.Drawing.Point(287, 209)
+        Me.Panel46.Name = "Panel46"
+        Me.Panel46.Size = New System.Drawing.Size(23, 23)
+        Me.Panel46.TabIndex = 61
+        '
+        'CheckBox46
+        '
+        Me.CheckBox46.AutoSize = True
+        Me.CheckBox46.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox46.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox46.Name = "CheckBox46"
+        Me.CheckBox46.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox46.TabIndex = 258
+        Me.CheckBox46.UseVisualStyleBackColor = True
+        '
+        'Panel45
+        '
+        Me.Panel45.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel45.Controls.Add(Me.CheckBox45)
+        Me.Panel45.Location = New System.Drawing.Point(287, 174)
+        Me.Panel45.Name = "Panel45"
+        Me.Panel45.Size = New System.Drawing.Size(23, 23)
+        Me.Panel45.TabIndex = 60
+        '
+        'CheckBox45
+        '
+        Me.CheckBox45.AutoSize = True
+        Me.CheckBox45.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox45.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox45.Name = "CheckBox45"
+        Me.CheckBox45.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox45.TabIndex = 258
+        Me.CheckBox45.UseVisualStyleBackColor = True
+        '
+        'Panel44
+        '
+        Me.Panel44.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel44.Controls.Add(Me.CheckBox44)
+        Me.Panel44.Location = New System.Drawing.Point(287, 137)
+        Me.Panel44.Name = "Panel44"
+        Me.Panel44.Size = New System.Drawing.Size(23, 23)
+        Me.Panel44.TabIndex = 59
+        '
+        'CheckBox44
+        '
+        Me.CheckBox44.AutoSize = True
+        Me.CheckBox44.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox44.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox44.Name = "CheckBox44"
+        Me.CheckBox44.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox44.TabIndex = 258
+        Me.CheckBox44.UseVisualStyleBackColor = True
+        '
+        'Panel43
+        '
+        Me.Panel43.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel43.Controls.Add(Me.CheckBox43)
+        Me.Panel43.Location = New System.Drawing.Point(287, 100)
+        Me.Panel43.Name = "Panel43"
+        Me.Panel43.Size = New System.Drawing.Size(23, 23)
+        Me.Panel43.TabIndex = 58
+        '
+        'CheckBox43
+        '
+        Me.CheckBox43.AutoSize = True
+        Me.CheckBox43.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox43.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox43.Name = "CheckBox43"
+        Me.CheckBox43.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox43.TabIndex = 258
+        Me.CheckBox43.UseVisualStyleBackColor = True
+        '
+        'Panel42
+        '
+        Me.Panel42.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel42.Controls.Add(Me.CheckBox42)
+        Me.Panel42.Location = New System.Drawing.Point(287, 64)
+        Me.Panel42.Name = "Panel42"
+        Me.Panel42.Size = New System.Drawing.Size(23, 23)
+        Me.Panel42.TabIndex = 57
+        '
+        'CheckBox42
+        '
+        Me.CheckBox42.AutoSize = True
+        Me.CheckBox42.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox42.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox42.Name = "CheckBox42"
+        Me.CheckBox42.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox42.TabIndex = 258
+        Me.CheckBox42.UseVisualStyleBackColor = True
+        '
+        'btnEgenNext5
+        '
+        Me.btnEgenNext5.Location = New System.Drawing.Point(192, 649)
+        Me.btnEgenNext5.Name = "btnEgenNext5"
+        Me.btnEgenNext5.Size = New System.Drawing.Size(75, 23)
+        Me.btnEgenNext5.TabIndex = 72
+        Me.btnEgenNext5.Text = "Neste side"
+        Me.btnEgenNext5.UseVisualStyleBackColor = True
         '
         'Label126
         '
@@ -2285,15 +3283,163 @@ Partial Class egenerklaering
         Me.Label70.TabIndex = 0
         Me.Label70.Text = "Har du på noe tidspunkt gjennom livet:"
         '
+        'ShapeContainer4
+        '
+        Me.ShapeContainer4.Location = New System.Drawing.Point(3, 3)
+        Me.ShapeContainer4.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer4.Name = "ShapeContainer4"
+        Me.ShapeContainer4.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape73, Me.LineShape72, Me.LineShape71, Me.LineShape70, Me.LineShape69, Me.LineShape68, Me.LineShape67, Me.LineShape66, Me.LineShape65, Me.LineShape64, Me.LineShape63, Me.LineShape62, Me.LineShape61, Me.LineShape60, Me.LineShape59, Me.LineShape58, Me.LineShape57})
+        Me.ShapeContainer4.Size = New System.Drawing.Size(1149, 734)
+        Me.ShapeContainer4.TabIndex = 139
+        Me.ShapeContainer4.TabStop = False
+        '
+        'LineShape73
+        '
+        Me.LineShape73.Name = "LineShape73"
+        Me.LineShape73.X1 = 24
+        Me.LineShape73.X2 = 326
+        Me.LineShape73.Y1 = 617
+        Me.LineShape73.Y2 = 617
+        '
+        'LineShape72
+        '
+        Me.LineShape72.Name = "LineShape72"
+        Me.LineShape72.X1 = 23
+        Me.LineShape72.X2 = 325
+        Me.LineShape72.Y1 = 555
+        Me.LineShape72.Y2 = 555
+        '
+        'LineShape71
+        '
+        Me.LineShape71.Name = "LineShape71"
+        Me.LineShape71.X1 = 24
+        Me.LineShape71.X2 = 326
+        Me.LineShape71.Y1 = 517
+        Me.LineShape71.Y2 = 517
+        '
+        'LineShape70
+        '
+        Me.LineShape70.Name = "LineShape70"
+        Me.LineShape70.X1 = 24
+        Me.LineShape70.X2 = 326
+        Me.LineShape70.Y1 = 476
+        Me.LineShape70.Y2 = 476
+        '
+        'LineShape69
+        '
+        Me.LineShape69.Name = "LineShape69"
+        Me.LineShape69.X1 = 24
+        Me.LineShape69.X2 = 326
+        Me.LineShape69.Y1 = 440
+        Me.LineShape69.Y2 = 440
+        '
+        'LineShape68
+        '
+        Me.LineShape68.Name = "LineShape68"
+        Me.LineShape68.X1 = 23
+        Me.LineShape68.X2 = 325
+        Me.LineShape68.Y1 = 404
+        Me.LineShape68.Y2 = 404
+        '
+        'LineShape67
+        '
+        Me.LineShape67.Name = "LineShape67"
+        Me.LineShape67.X1 = 25
+        Me.LineShape67.X2 = 327
+        Me.LineShape67.Y1 = 365
+        Me.LineShape67.Y2 = 365
+        '
+        'LineShape66
+        '
+        Me.LineShape66.Name = "LineShape66"
+        Me.LineShape66.X1 = 25
+        Me.LineShape66.X2 = 327
+        Me.LineShape66.Y1 = 319
+        Me.LineShape66.Y2 = 319
+        '
+        'LineShape65
+        '
+        Me.LineShape65.Name = "LineShape65"
+        Me.LineShape65.X1 = 24
+        Me.LineShape65.X2 = 326
+        Me.LineShape65.Y1 = 274
+        Me.LineShape65.Y2 = 274
+        '
+        'LineShape64
+        '
+        Me.LineShape64.Name = "LineShape64"
+        Me.LineShape64.X1 = 24
+        Me.LineShape64.X2 = 326
+        Me.LineShape64.Y1 = 230
+        Me.LineShape64.Y2 = 230
+        '
+        'LineShape63
+        '
+        Me.LineShape63.Name = "LineShape63"
+        Me.LineShape63.X1 = 25
+        Me.LineShape63.X2 = 327
+        Me.LineShape63.Y1 = 196
+        Me.LineShape63.Y2 = 196
+        '
+        'LineShape62
+        '
+        Me.LineShape62.Name = "LineShape62"
+        Me.LineShape62.X1 = 23
+        Me.LineShape62.X2 = 325
+        Me.LineShape62.Y1 = 159
+        Me.LineShape62.Y2 = 159
+        '
+        'LineShape61
+        '
+        Me.LineShape61.Name = "LineShape61"
+        Me.LineShape61.X1 = 24
+        Me.LineShape61.X2 = 326
+        Me.LineShape61.Y1 = 122
+        Me.LineShape61.Y2 = 122
+        '
+        'LineShape60
+        '
+        Me.LineShape60.Name = "LineShape60"
+        Me.LineShape60.X1 = 23
+        Me.LineShape60.X2 = 325
+        Me.LineShape60.Y1 = 86
+        Me.LineShape60.Y2 = 86
+        '
+        'LineShape59
+        '
+        Me.LineShape59.Name = "LineShape59"
+        Me.LineShape59.X1 = 23
+        Me.LineShape59.X2 = 325
+        Me.LineShape59.Y1 = 43
+        Me.LineShape59.Y2 = 43
+        '
+        'LineShape58
+        '
+        Me.LineShape58.Name = "LineShape58"
+        Me.LineShape58.X1 = 325
+        Me.LineShape58.X2 = 325
+        Me.LineShape58.Y1 = 43
+        Me.LineShape58.Y2 = 617
+        '
+        'LineShape57
+        '
+        Me.LineShape57.Name = "LineShape57"
+        Me.LineShape57.X1 = 24
+        Me.LineShape57.X2 = 24
+        Me.LineShape57.Y1 = 43
+        Me.LineShape57.Y2 = 617
+        '
         'TabPage6
         '
+        Me.TabPage6.Controls.Add(Me.Label19)
+        Me.TabPage6.Controls.Add(Me.btnEgenBack5)
         Me.TabPage6.Controls.Add(Me.Panel60)
         Me.TabPage6.Controls.Add(Me.Panel59)
         Me.TabPage6.Controls.Add(Me.Panel58)
         Me.TabPage6.Controls.Add(Me.Panel57)
         Me.TabPage6.Controls.Add(Me.Panel56)
         Me.TabPage6.Controls.Add(Me.Button6)
-        Me.TabPage6.Controls.Add(Me.Button5)
+        Me.TabPage6.Controls.Add(Me.btnEgenSubmit)
         Me.TabPage6.Controls.Add(Me.Label147)
         Me.TabPage6.Controls.Add(Me.Label145)
         Me.TabPage6.Controls.Add(Me.Label143)
@@ -2315,14 +3461,137 @@ Partial Class egenerklaering
         Me.TabPage6.Text = "Side 5"
         Me.TabPage6.UseVisualStyleBackColor = True
         '
-        'Button5
+        'Label19
         '
-        Me.Button5.Location = New System.Drawing.Point(258, 322)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(116, 23)
-        Me.Button5.TabIndex = 120
-        Me.Button5.Text = "Lever inn skjema"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(498, 190)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(45, 13)
+        Me.Label19.TabIndex = 124
+        Me.Label19.Text = "Label19"
+        '
+        'btnEgenBack5
+        '
+        Me.btnEgenBack5.Location = New System.Drawing.Point(169, 322)
+        Me.btnEgenBack5.Name = "btnEgenBack5"
+        Me.btnEgenBack5.Size = New System.Drawing.Size(75, 23)
+        Me.btnEgenBack5.TabIndex = 78
+        Me.btnEgenBack5.Text = "Button1"
+        Me.btnEgenBack5.UseVisualStyleBackColor = True
+        '
+        'Panel60
+        '
+        Me.Panel60.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel60.Controls.Add(Me.CheckBox60)
+        Me.Panel60.Location = New System.Drawing.Point(626, 63)
+        Me.Panel60.Name = "Panel60"
+        Me.Panel60.Size = New System.Drawing.Size(23, 23)
+        Me.Panel60.TabIndex = 77
+        '
+        'CheckBox60
+        '
+        Me.CheckBox60.AutoSize = True
+        Me.CheckBox60.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox60.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox60.Name = "CheckBox60"
+        Me.CheckBox60.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox60.TabIndex = 258
+        Me.CheckBox60.UseVisualStyleBackColor = True
+        '
+        'Panel59
+        '
+        Me.Panel59.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel59.Controls.Add(Me.CheckBox59)
+        Me.Panel59.Location = New System.Drawing.Point(285, 208)
+        Me.Panel59.Name = "Panel59"
+        Me.Panel59.Size = New System.Drawing.Size(23, 23)
+        Me.Panel59.TabIndex = 76
+        '
+        'CheckBox59
+        '
+        Me.CheckBox59.AutoSize = True
+        Me.CheckBox59.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox59.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox59.Name = "CheckBox59"
+        Me.CheckBox59.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox59.TabIndex = 258
+        Me.CheckBox59.UseVisualStyleBackColor = True
+        '
+        'Panel58
+        '
+        Me.Panel58.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel58.Controls.Add(Me.CheckBox58)
+        Me.Panel58.Location = New System.Drawing.Point(285, 150)
+        Me.Panel58.Name = "Panel58"
+        Me.Panel58.Size = New System.Drawing.Size(23, 23)
+        Me.Panel58.TabIndex = 75
+        '
+        'CheckBox58
+        '
+        Me.CheckBox58.AutoSize = True
+        Me.CheckBox58.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox58.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox58.Name = "CheckBox58"
+        Me.CheckBox58.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox58.TabIndex = 258
+        Me.CheckBox58.UseVisualStyleBackColor = True
+        '
+        'Panel57
+        '
+        Me.Panel57.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel57.Controls.Add(Me.CheckBox57)
+        Me.Panel57.Location = New System.Drawing.Point(285, 95)
+        Me.Panel57.Name = "Panel57"
+        Me.Panel57.Size = New System.Drawing.Size(23, 23)
+        Me.Panel57.TabIndex = 74
+        '
+        'CheckBox57
+        '
+        Me.CheckBox57.AutoSize = True
+        Me.CheckBox57.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox57.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox57.Name = "CheckBox57"
+        Me.CheckBox57.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox57.TabIndex = 258
+        Me.CheckBox57.UseVisualStyleBackColor = True
+        '
+        'Panel56
+        '
+        Me.Panel56.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel56.Controls.Add(Me.CheckBox56)
+        Me.Panel56.Location = New System.Drawing.Point(285, 55)
+        Me.Panel56.Name = "Panel56"
+        Me.Panel56.Size = New System.Drawing.Size(23, 23)
+        Me.Panel56.TabIndex = 73
+        '
+        'CheckBox56
+        '
+        Me.CheckBox56.AutoSize = True
+        Me.CheckBox56.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox56.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox56.Name = "CheckBox56"
+        Me.CheckBox56.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox56.TabIndex = 258
+        Me.CheckBox56.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(484, 322)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(285, 98)
+        Me.Button6.TabIndex = 121
+        Me.Button6.Text = "Test utfør SQL"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'btnEgenSubmit
+        '
+        Me.btnEgenSubmit.Location = New System.Drawing.Point(258, 322)
+        Me.btnEgenSubmit.Name = "btnEgenSubmit"
+        Me.btnEgenSubmit.Size = New System.Drawing.Size(116, 23)
+        Me.btnEgenSubmit.TabIndex = 79
+        Me.btnEgenSubmit.Text = "Lever inn skjema"
+        Me.btnEgenSubmit.UseVisualStyleBackColor = True
         '
         'Label147
         '
@@ -2434,1086 +3703,6 @@ Partial Class egenerklaering
         Me.Label130.TabIndex = 81
         Me.Label130.Text = "Besvares av kvinner:"
         '
-        'ShapeContainer1
-        '
-        Me.ShapeContainer1.Location = New System.Drawing.Point(3, 3)
-        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
-        Me.ShapeContainer1.Name = "ShapeContainer1"
-        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape23, Me.LineShape22, Me.LineShape21, Me.LineShape20, Me.LineShape19, Me.LineShape18, Me.LineShape17, Me.LineShape16, Me.LineShape15, Me.LineShape14, Me.LineShape13, Me.LineShape12, Me.LineShape11, Me.LineShape10, Me.LineShape9, Me.LineShape8, Me.LineShape7, Me.LineShape6, Me.LineShape5, Me.LineShape4, Me.LineShape3, Me.LineShape2, Me.LineShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(1149, 734)
-        Me.ShapeContainer1.TabIndex = 381
-        Me.ShapeContainer1.TabStop = False
-        '
-        'LineShape1
-        '
-        Me.LineShape1.Name = "LineShape1"
-        Me.LineShape1.X1 = 324
-        Me.LineShape1.X2 = 324
-        Me.LineShape1.Y1 = 12
-        Me.LineShape1.Y2 = 607
-        '
-        'LineShape2
-        '
-        Me.LineShape2.Name = "LineShape2"
-        Me.LineShape2.X1 = 22
-        Me.LineShape2.X2 = 22
-        Me.LineShape2.Y1 = 10
-        Me.LineShape2.Y2 = 605
-        '
-        'LineShape3
-        '
-        Me.LineShape3.Name = "LineShape3"
-        Me.LineShape3.X1 = 21
-        Me.LineShape3.X2 = 323
-        Me.LineShape3.Y1 = 606
-        Me.LineShape3.Y2 = 607
-        '
-        'LineShape4
-        '
-        Me.LineShape4.Name = "LineShape4"
-        Me.LineShape4.X1 = 22
-        Me.LineShape4.X2 = 324
-        Me.LineShape4.Y1 = 11
-        Me.LineShape4.Y2 = 12
-        '
-        'LineShape5
-        '
-        Me.LineShape5.Name = "LineShape5"
-        Me.LineShape5.X1 = 22
-        Me.LineShape5.X2 = 324
-        Me.LineShape5.Y1 = 78
-        Me.LineShape5.Y2 = 79
-        '
-        'LineShape6
-        '
-        Me.LineShape6.Name = "LineShape6"
-        Me.LineShape6.X1 = 22
-        Me.LineShape6.X2 = 324
-        Me.LineShape6.Y1 = 139
-        Me.LineShape6.Y2 = 140
-        '
-        'LineShape7
-        '
-        Me.LineShape7.Name = "LineShape7"
-        Me.LineShape7.X1 = 22
-        Me.LineShape7.X2 = 324
-        Me.LineShape7.Y1 = 211
-        Me.LineShape7.Y2 = 212
-        '
-        'LineShape8
-        '
-        Me.LineShape8.Name = "LineShape8"
-        Me.LineShape8.X1 = 21
-        Me.LineShape8.X2 = 323
-        Me.LineShape8.Y1 = 266
-        Me.LineShape8.Y2 = 267
-        '
-        'LineShape9
-        '
-        Me.LineShape9.Name = "LineShape9"
-        Me.LineShape9.X1 = 23
-        Me.LineShape9.X2 = 325
-        Me.LineShape9.Y1 = 333
-        Me.LineShape9.Y2 = 334
-        '
-        'LineShape10
-        '
-        Me.LineShape10.Name = "LineShape10"
-        Me.LineShape10.X1 = 23
-        Me.LineShape10.X2 = 325
-        Me.LineShape10.Y1 = 399
-        Me.LineShape10.Y2 = 400
-        '
-        'LineShape11
-        '
-        Me.LineShape11.Name = "LineShape11"
-        Me.LineShape11.X1 = 23
-        Me.LineShape11.X2 = 325
-        Me.LineShape11.Y1 = 466
-        Me.LineShape11.Y2 = 467
-        '
-        'LineShape12
-        '
-        Me.LineShape12.Name = "LineShape12"
-        Me.LineShape12.X1 = 22
-        Me.LineShape12.X2 = 324
-        Me.LineShape12.Y1 = 546
-        Me.LineShape12.Y2 = 547
-        '
-        'LineShape13
-        '
-        Me.LineShape13.Name = "LineShape13"
-        Me.LineShape13.X1 = 723
-        Me.LineShape13.X2 = 723
-        Me.LineShape13.Y1 = 10
-        Me.LineShape13.Y2 = 544
-        '
-        'LineShape14
-        '
-        Me.LineShape14.Name = "LineShape14"
-        Me.LineShape14.X1 = 427
-        Me.LineShape14.X2 = 427
-        Me.LineShape14.Y1 = 10
-        Me.LineShape14.Y2 = 544
-        '
-        'LineShape15
-        '
-        Me.LineShape15.Name = "LineShape15"
-        Me.LineShape15.X1 = 428
-        Me.LineShape15.X2 = 723
-        Me.LineShape15.Y1 = 545
-        Me.LineShape15.Y2 = 544
-        '
-        'LineShape16
-        '
-        Me.LineShape16.Name = "LineShape16"
-        Me.LineShape16.X1 = 427
-        Me.LineShape16.X2 = 722
-        Me.LineShape16.Y1 = 11
-        Me.LineShape16.Y2 = 10
-        '
-        'LineShape17
-        '
-        Me.LineShape17.Name = "LineShape17"
-        Me.LineShape17.X1 = 428
-        Me.LineShape17.X2 = 723
-        Me.LineShape17.Y1 = 468
-        Me.LineShape17.Y2 = 467
-        '
-        'LineShape18
-        '
-        Me.LineShape18.Name = "LineShape18"
-        Me.LineShape18.X1 = 427
-        Me.LineShape18.X2 = 722
-        Me.LineShape18.Y1 = 399
-        Me.LineShape18.Y2 = 398
-        '
-        'LineShape19
-        '
-        Me.LineShape19.Name = "LineShape19"
-        Me.LineShape19.X1 = 427
-        Me.LineShape19.X2 = 722
-        Me.LineShape19.Y1 = 334
-        Me.LineShape19.Y2 = 333
-        '
-        'LineShape20
-        '
-        Me.LineShape20.Name = "LineShape20"
-        Me.LineShape20.X1 = 427
-        Me.LineShape20.X2 = 722
-        Me.LineShape20.Y1 = 267
-        Me.LineShape20.Y2 = 266
-        '
-        'LineShape21
-        '
-        Me.LineShape21.Name = "LineShape21"
-        Me.LineShape21.X1 = 427
-        Me.LineShape21.X2 = 722
-        Me.LineShape21.Y1 = 213
-        Me.LineShape21.Y2 = 212
-        '
-        'LineShape22
-        '
-        Me.LineShape22.Name = "LineShape22"
-        Me.LineShape22.X1 = 427
-        Me.LineShape22.X2 = 722
-        Me.LineShape22.Y1 = 140
-        Me.LineShape22.Y2 = 139
-        '
-        'LineShape23
-        '
-        Me.LineShape23.Name = "LineShape23"
-        Me.LineShape23.X1 = 427
-        Me.LineShape23.X2 = 722
-        Me.LineShape23.Y1 = 79
-        Me.LineShape23.Y2 = 78
-        '
-        'LineShape24
-        '
-        Me.LineShape24.Name = "LineShape24"
-        Me.LineShape24.X1 = 353
-        Me.LineShape24.X2 = 358
-        Me.LineShape24.Y1 = 60
-        Me.LineShape24.Y2 = 584
-        '
-        'ShapeContainer2
-        '
-        Me.ShapeContainer2.Location = New System.Drawing.Point(3, 3)
-        Me.ShapeContainer2.Margin = New System.Windows.Forms.Padding(0)
-        Me.ShapeContainer2.Name = "ShapeContainer2"
-        Me.ShapeContainer2.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape43, Me.LineShape42, Me.LineShape41, Me.LineShape40, Me.LineShape39, Me.LineShape38, Me.LineShape37, Me.LineShape36, Me.LineShape35, Me.LineShape34, Me.LineShape33, Me.LineShape32, Me.LineShape31, Me.LineShape30, Me.LineShape29, Me.LineShape28, Me.LineShape27, Me.LineShape26, Me.LineShape25, Me.LineShape24})
-        Me.ShapeContainer2.Size = New System.Drawing.Size(1149, 734)
-        Me.ShapeContainer2.TabIndex = 554
-        Me.ShapeContainer2.TabStop = False
-        '
-        'LineShape25
-        '
-        Me.LineShape25.Name = "LineShape25"
-        Me.LineShape25.X1 = 17
-        Me.LineShape25.X2 = 22
-        Me.LineShape25.Y1 = 60
-        Me.LineShape25.Y2 = 584
-        '
-        'LineShape26
-        '
-        Me.LineShape26.Name = "LineShape26"
-        Me.LineShape26.X1 = 480
-        Me.LineShape26.X2 = 485
-        Me.LineShape26.Y1 = 60
-        Me.LineShape26.Y2 = 584
-        '
-        'LineShape27
-        '
-        Me.LineShape27.Name = "LineShape27"
-        Me.LineShape27.X1 = 711
-        Me.LineShape27.X2 = 716
-        Me.LineShape27.Y1 = 61
-        Me.LineShape27.Y2 = 585
-        '
-        'LineShape28
-        '
-        Me.LineShape28.Name = "LineShape28"
-        Me.LineShape28.X1 = 21
-        Me.LineShape28.X2 = 356
-        Me.LineShape28.Y1 = 583
-        Me.LineShape28.Y2 = 583
-        '
-        'LineShape29
-        '
-        Me.LineShape29.Name = "LineShape29"
-        Me.LineShape29.X1 = 16
-        Me.LineShape29.X2 = 352
-        Me.LineShape29.Y1 = 59
-        Me.LineShape29.Y2 = 61
-        '
-        'LineShape30
-        '
-        Me.LineShape30.Name = "LineShape30"
-        Me.LineShape30.X1 = 481
-        Me.LineShape30.X2 = 710
-        Me.LineShape30.Y1 = 60
-        Me.LineShape30.Y2 = 61
-        '
-        'LineShape31
-        '
-        Me.LineShape31.Name = "LineShape31"
-        Me.LineShape31.X1 = 487
-        Me.LineShape31.X2 = 716
-        Me.LineShape31.Y1 = 584
-        Me.LineShape31.Y2 = 584
-        '
-        'LineShape32
-        '
-        Me.LineShape32.Name = "LineShape32"
-        Me.LineShape32.X1 = 485
-        Me.LineShape32.X2 = 714
-        Me.LineShape32.Y1 = 519
-        Me.LineShape32.Y2 = 519
-        '
-        'LineShape33
-        '
-        Me.LineShape33.Name = "LineShape33"
-        Me.LineShape33.X1 = 485
-        Me.LineShape33.X2 = 711
-        Me.LineShape33.Y1 = 405
-        Me.LineShape33.Y2 = 405
-        '
-        'LineShape34
-        '
-        Me.LineShape34.Name = "LineShape34"
-        Me.LineShape34.X1 = 483
-        Me.LineShape34.X2 = 710
-        Me.LineShape34.Y1 = 339
-        Me.LineShape34.Y2 = 339
-        '
-        'LineShape35
-        '
-        Me.LineShape35.Name = "LineShape35"
-        Me.LineShape35.X1 = 483
-        Me.LineShape35.X2 = 712
-        Me.LineShape35.Y1 = 265
-        Me.LineShape35.Y2 = 265
-        '
-        'LineShape36
-        '
-        Me.LineShape36.Name = "LineShape36"
-        Me.LineShape36.X1 = 482
-        Me.LineShape36.X2 = 711
-        Me.LineShape36.Y1 = 196
-        Me.LineShape36.Y2 = 196
-        '
-        'LineShape37
-        '
-        Me.LineShape37.Name = "LineShape37"
-        Me.LineShape37.X1 = 480
-        Me.LineShape37.X2 = 709
-        Me.LineShape37.Y1 = 124
-        Me.LineShape37.Y2 = 124
-        '
-        'LineShape38
-        '
-        Me.LineShape38.Name = "LineShape38"
-        Me.LineShape38.X1 = 17
-        Me.LineShape38.X2 = 354
-        Me.LineShape38.Y1 = 127
-        Me.LineShape38.Y2 = 127
-        '
-        'LineShape39
-        '
-        Me.LineShape39.Name = "LineShape39"
-        Me.LineShape39.X1 = 20
-        Me.LineShape39.X2 = 355
-        Me.LineShape39.Y1 = 195
-        Me.LineShape39.Y2 = 195
-        '
-        'LineShape40
-        '
-        Me.LineShape40.Name = "LineShape40"
-        Me.LineShape40.X1 = 20
-        Me.LineShape40.X2 = 356
-        Me.LineShape40.Y1 = 263
-        Me.LineShape40.Y2 = 263
-        '
-        'LineShape41
-        '
-        Me.LineShape41.Name = "LineShape41"
-        Me.LineShape41.X1 = 20
-        Me.LineShape41.X2 = 353
-        Me.LineShape41.Y1 = 360
-        Me.LineShape41.Y2 = 360
-        '
-        'LineShape42
-        '
-        Me.LineShape42.Name = "LineShape42"
-        Me.LineShape42.X1 = 21
-        Me.LineShape42.X2 = 356
-        Me.LineShape42.Y1 = 444
-        Me.LineShape42.Y2 = 444
-        '
-        'LineShape43
-        '
-        Me.LineShape43.Name = "LineShape43"
-        Me.LineShape43.X1 = 22
-        Me.LineShape43.X2 = 355
-        Me.LineShape43.Y1 = 515
-        Me.LineShape43.Y2 = 515
-        '
-        'ShapeContainer3
-        '
-        Me.ShapeContainer3.Location = New System.Drawing.Point(3, 3)
-        Me.ShapeContainer3.Margin = New System.Windows.Forms.Padding(0)
-        Me.ShapeContainer3.Name = "ShapeContainer3"
-        Me.ShapeContainer3.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape56, Me.LineShape55, Me.LineShape54, Me.LineShape53, Me.LineShape52, Me.LineShape51, Me.LineShape50, Me.LineShape49, Me.LineShape48, Me.LineShape47, Me.LineShape46, Me.LineShape45, Me.LineShape44})
-        Me.ShapeContainer3.Size = New System.Drawing.Size(1149, 734)
-        Me.ShapeContainer3.TabIndex = 129
-        Me.ShapeContainer3.TabStop = False
-        '
-        'LineShape44
-        '
-        Me.LineShape44.Name = "LineShape44"
-        Me.LineShape44.X1 = 11
-        Me.LineShape44.X2 = 361
-        Me.LineShape44.Y1 = 33
-        Me.LineShape44.Y2 = 33
-        '
-        'LineShape45
-        '
-        Me.LineShape45.Name = "LineShape45"
-        Me.LineShape45.X1 = 11
-        Me.LineShape45.X2 = 361
-        Me.LineShape45.Y1 = 551
-        Me.LineShape45.Y2 = 551
-        '
-        'LineShape46
-        '
-        Me.LineShape46.Name = "LineShape46"
-        Me.LineShape46.X1 = 362
-        Me.LineShape46.X2 = 362
-        Me.LineShape46.Y1 = 33
-        Me.LineShape46.Y2 = 552
-        '
-        'LineShape47
-        '
-        Me.LineShape47.Name = "LineShape47"
-        Me.LineShape47.X1 = 11
-        Me.LineShape47.X2 = 11
-        Me.LineShape47.Y1 = 32
-        Me.LineShape47.Y2 = 551
-        '
-        'LineShape48
-        '
-        Me.LineShape48.Name = "LineShape48"
-        Me.LineShape48.X1 = 11
-        Me.LineShape48.X2 = 361
-        Me.LineShape48.Y1 = 492
-        Me.LineShape48.Y2 = 492
-        '
-        'LineShape49
-        '
-        Me.LineShape49.Name = "LineShape49"
-        Me.LineShape49.X1 = 12
-        Me.LineShape49.X2 = 362
-        Me.LineShape49.Y1 = 440
-        Me.LineShape49.Y2 = 440
-        '
-        'LineShape50
-        '
-        Me.LineShape50.Name = "LineShape50"
-        Me.LineShape50.X1 = 12
-        Me.LineShape50.X2 = 362
-        Me.LineShape50.Y1 = 384
-        Me.LineShape50.Y2 = 384
-        '
-        'LineShape51
-        '
-        Me.LineShape51.Name = "LineShape51"
-        Me.LineShape51.X1 = 13
-        Me.LineShape51.X2 = 363
-        Me.LineShape51.Y1 = 336
-        Me.LineShape51.Y2 = 336
-        '
-        'LineShape52
-        '
-        Me.LineShape52.Name = "LineShape52"
-        Me.LineShape52.X1 = 12
-        Me.LineShape52.X2 = 362
-        Me.LineShape52.Y1 = 283
-        Me.LineShape52.Y2 = 283
-        '
-        'LineShape53
-        '
-        Me.LineShape53.Name = "LineShape53"
-        Me.LineShape53.X1 = 12
-        Me.LineShape53.X2 = 362
-        Me.LineShape53.Y1 = 241
-        Me.LineShape53.Y2 = 241
-        '
-        'LineShape54
-        '
-        Me.LineShape54.Name = "LineShape54"
-        Me.LineShape54.X1 = 11
-        Me.LineShape54.X2 = 361
-        Me.LineShape54.Y1 = 196
-        Me.LineShape54.Y2 = 196
-        '
-        'LineShape55
-        '
-        Me.LineShape55.Name = "LineShape55"
-        Me.LineShape55.X1 = 11
-        Me.LineShape55.X2 = 361
-        Me.LineShape55.Y1 = 141
-        Me.LineShape55.Y2 = 141
-        '
-        'LineShape56
-        '
-        Me.LineShape56.Name = "LineShape56"
-        Me.LineShape56.X1 = 12
-        Me.LineShape56.X2 = 362
-        Me.LineShape56.Y1 = 81
-        Me.LineShape56.Y2 = 81
-        '
-        'ShapeContainer4
-        '
-        Me.ShapeContainer4.Location = New System.Drawing.Point(3, 3)
-        Me.ShapeContainer4.Margin = New System.Windows.Forms.Padding(0)
-        Me.ShapeContainer4.Name = "ShapeContainer4"
-        Me.ShapeContainer4.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape73, Me.LineShape72, Me.LineShape71, Me.LineShape70, Me.LineShape69, Me.LineShape68, Me.LineShape67, Me.LineShape66, Me.LineShape65, Me.LineShape64, Me.LineShape63, Me.LineShape62, Me.LineShape61, Me.LineShape60, Me.LineShape59, Me.LineShape58, Me.LineShape57})
-        Me.ShapeContainer4.Size = New System.Drawing.Size(1149, 734)
-        Me.ShapeContainer4.TabIndex = 139
-        Me.ShapeContainer4.TabStop = False
-        '
-        'LineShape57
-        '
-        Me.LineShape57.Name = "LineShape57"
-        Me.LineShape57.X1 = 24
-        Me.LineShape57.X2 = 24
-        Me.LineShape57.Y1 = 43
-        Me.LineShape57.Y2 = 617
-        '
-        'LineShape58
-        '
-        Me.LineShape58.Name = "LineShape58"
-        Me.LineShape58.X1 = 325
-        Me.LineShape58.X2 = 325
-        Me.LineShape58.Y1 = 43
-        Me.LineShape58.Y2 = 617
-        '
-        'LineShape59
-        '
-        Me.LineShape59.Name = "LineShape59"
-        Me.LineShape59.X1 = 23
-        Me.LineShape59.X2 = 325
-        Me.LineShape59.Y1 = 43
-        Me.LineShape59.Y2 = 43
-        '
-        'LineShape60
-        '
-        Me.LineShape60.Name = "LineShape60"
-        Me.LineShape60.X1 = 23
-        Me.LineShape60.X2 = 325
-        Me.LineShape60.Y1 = 86
-        Me.LineShape60.Y2 = 86
-        '
-        'LineShape61
-        '
-        Me.LineShape61.Name = "LineShape61"
-        Me.LineShape61.X1 = 24
-        Me.LineShape61.X2 = 326
-        Me.LineShape61.Y1 = 122
-        Me.LineShape61.Y2 = 122
-        '
-        'LineShape62
-        '
-        Me.LineShape62.Name = "LineShape62"
-        Me.LineShape62.X1 = 23
-        Me.LineShape62.X2 = 325
-        Me.LineShape62.Y1 = 159
-        Me.LineShape62.Y2 = 159
-        '
-        'LineShape63
-        '
-        Me.LineShape63.Name = "LineShape63"
-        Me.LineShape63.X1 = 25
-        Me.LineShape63.X2 = 327
-        Me.LineShape63.Y1 = 196
-        Me.LineShape63.Y2 = 196
-        '
-        'LineShape64
-        '
-        Me.LineShape64.Name = "LineShape64"
-        Me.LineShape64.X1 = 24
-        Me.LineShape64.X2 = 326
-        Me.LineShape64.Y1 = 230
-        Me.LineShape64.Y2 = 230
-        '
-        'LineShape65
-        '
-        Me.LineShape65.Name = "LineShape65"
-        Me.LineShape65.X1 = 24
-        Me.LineShape65.X2 = 326
-        Me.LineShape65.Y1 = 274
-        Me.LineShape65.Y2 = 274
-        '
-        'LineShape66
-        '
-        Me.LineShape66.Name = "LineShape66"
-        Me.LineShape66.X1 = 25
-        Me.LineShape66.X2 = 327
-        Me.LineShape66.Y1 = 319
-        Me.LineShape66.Y2 = 319
-        '
-        'LineShape67
-        '
-        Me.LineShape67.Name = "LineShape67"
-        Me.LineShape67.X1 = 25
-        Me.LineShape67.X2 = 327
-        Me.LineShape67.Y1 = 365
-        Me.LineShape67.Y2 = 365
-        '
-        'LineShape68
-        '
-        Me.LineShape68.Name = "LineShape68"
-        Me.LineShape68.X1 = 23
-        Me.LineShape68.X2 = 325
-        Me.LineShape68.Y1 = 404
-        Me.LineShape68.Y2 = 404
-        '
-        'LineShape69
-        '
-        Me.LineShape69.Name = "LineShape69"
-        Me.LineShape69.X1 = 24
-        Me.LineShape69.X2 = 326
-        Me.LineShape69.Y1 = 440
-        Me.LineShape69.Y2 = 440
-        '
-        'LineShape70
-        '
-        Me.LineShape70.Name = "LineShape70"
-        Me.LineShape70.X1 = 24
-        Me.LineShape70.X2 = 326
-        Me.LineShape70.Y1 = 476
-        Me.LineShape70.Y2 = 476
-        '
-        'LineShape71
-        '
-        Me.LineShape71.Name = "LineShape71"
-        Me.LineShape71.X1 = 24
-        Me.LineShape71.X2 = 326
-        Me.LineShape71.Y1 = 517
-        Me.LineShape71.Y2 = 517
-        '
-        'LineShape72
-        '
-        Me.LineShape72.Name = "LineShape72"
-        Me.LineShape72.X1 = 23
-        Me.LineShape72.X2 = 325
-        Me.LineShape72.Y1 = 555
-        Me.LineShape72.Y2 = 555
-        '
-        'LineShape73
-        '
-        Me.LineShape73.Name = "LineShape73"
-        Me.LineShape73.X1 = 24
-        Me.LineShape73.X2 = 326
-        Me.LineShape73.Y1 = 617
-        Me.LineShape73.Y2 = 617
-        '
-        'Panel32
-        '
-        Me.Panel32.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel32.Controls.Add(Me.CheckBox32)
-        Me.Panel32.Location = New System.Drawing.Point(313, 54)
-        Me.Panel32.Name = "Panel32"
-        Me.Panel32.Size = New System.Drawing.Size(23, 23)
-        Me.Panel32.TabIndex = 281
-        '
-        'CheckBox32
-        '
-        Me.CheckBox32.AutoSize = True
-        Me.CheckBox32.Location = New System.Drawing.Point(2, 3)
-        Me.CheckBox32.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox32.Name = "CheckBox32"
-        Me.CheckBox32.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox32.TabIndex = 258
-        Me.CheckBox32.UseVisualStyleBackColor = True
-        '
-        'Panel33
-        '
-        Me.Panel33.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel33.Controls.Add(Me.CheckBox33)
-        Me.Panel33.Location = New System.Drawing.Point(313, 106)
-        Me.Panel33.Name = "Panel33"
-        Me.Panel33.Size = New System.Drawing.Size(23, 23)
-        Me.Panel33.TabIndex = 282
-        '
-        'CheckBox33
-        '
-        Me.CheckBox33.AutoSize = True
-        Me.CheckBox33.Location = New System.Drawing.Point(2, 3)
-        Me.CheckBox33.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox33.Name = "CheckBox33"
-        Me.CheckBox33.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox33.TabIndex = 258
-        Me.CheckBox33.UseVisualStyleBackColor = True
-        '
-        'Panel34
-        '
-        Me.Panel34.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel34.Controls.Add(Me.CheckBox34)
-        Me.Panel34.Location = New System.Drawing.Point(313, 163)
-        Me.Panel34.Name = "Panel34"
-        Me.Panel34.Size = New System.Drawing.Size(23, 23)
-        Me.Panel34.TabIndex = 283
-        '
-        'CheckBox34
-        '
-        Me.CheckBox34.AutoSize = True
-        Me.CheckBox34.Location = New System.Drawing.Point(2, 3)
-        Me.CheckBox34.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox34.Name = "CheckBox34"
-        Me.CheckBox34.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox34.TabIndex = 258
-        Me.CheckBox34.UseVisualStyleBackColor = True
-        '
-        'Panel35
-        '
-        Me.Panel35.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel35.Controls.Add(Me.CheckBox35)
-        Me.Panel35.Location = New System.Drawing.Point(313, 216)
-        Me.Panel35.Name = "Panel35"
-        Me.Panel35.Size = New System.Drawing.Size(23, 23)
-        Me.Panel35.TabIndex = 284
-        '
-        'CheckBox35
-        '
-        Me.CheckBox35.AutoSize = True
-        Me.CheckBox35.Location = New System.Drawing.Point(2, 3)
-        Me.CheckBox35.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox35.Name = "CheckBox35"
-        Me.CheckBox35.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox35.TabIndex = 258
-        Me.CheckBox35.UseVisualStyleBackColor = True
-        '
-        'Panel36
-        '
-        Me.Panel36.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel36.Controls.Add(Me.CheckBox36)
-        Me.Panel36.Location = New System.Drawing.Point(313, 258)
-        Me.Panel36.Name = "Panel36"
-        Me.Panel36.Size = New System.Drawing.Size(23, 23)
-        Me.Panel36.TabIndex = 285
-        '
-        'CheckBox36
-        '
-        Me.CheckBox36.AutoSize = True
-        Me.CheckBox36.Location = New System.Drawing.Point(2, 3)
-        Me.CheckBox36.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox36.Name = "CheckBox36"
-        Me.CheckBox36.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox36.TabIndex = 258
-        Me.CheckBox36.UseVisualStyleBackColor = True
-        '
-        'Panel37
-        '
-        Me.Panel37.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel37.Controls.Add(Me.CheckBox37)
-        Me.Panel37.Location = New System.Drawing.Point(313, 302)
-        Me.Panel37.Name = "Panel37"
-        Me.Panel37.Size = New System.Drawing.Size(23, 23)
-        Me.Panel37.TabIndex = 286
-        '
-        'CheckBox37
-        '
-        Me.CheckBox37.AutoSize = True
-        Me.CheckBox37.Location = New System.Drawing.Point(2, 3)
-        Me.CheckBox37.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox37.Name = "CheckBox37"
-        Me.CheckBox37.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox37.TabIndex = 258
-        Me.CheckBox37.UseVisualStyleBackColor = True
-        '
-        'Panel38
-        '
-        Me.Panel38.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel38.Controls.Add(Me.CheckBox38)
-        Me.Panel38.Location = New System.Drawing.Point(313, 349)
-        Me.Panel38.Name = "Panel38"
-        Me.Panel38.Size = New System.Drawing.Size(23, 23)
-        Me.Panel38.TabIndex = 287
-        '
-        'CheckBox38
-        '
-        Me.CheckBox38.AutoSize = True
-        Me.CheckBox38.Location = New System.Drawing.Point(2, 3)
-        Me.CheckBox38.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox38.Name = "CheckBox38"
-        Me.CheckBox38.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox38.TabIndex = 258
-        Me.CheckBox38.UseVisualStyleBackColor = True
-        '
-        'Panel39
-        '
-        Me.Panel39.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel39.Controls.Add(Me.CheckBox39)
-        Me.Panel39.Location = New System.Drawing.Point(313, 406)
-        Me.Panel39.Name = "Panel39"
-        Me.Panel39.Size = New System.Drawing.Size(23, 23)
-        Me.Panel39.TabIndex = 288
-        '
-        'CheckBox39
-        '
-        Me.CheckBox39.AutoSize = True
-        Me.CheckBox39.Location = New System.Drawing.Point(2, 3)
-        Me.CheckBox39.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox39.Name = "CheckBox39"
-        Me.CheckBox39.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox39.TabIndex = 258
-        Me.CheckBox39.UseVisualStyleBackColor = True
-        '
-        'Panel40
-        '
-        Me.Panel40.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel40.Controls.Add(Me.CheckBox40)
-        Me.Panel40.Location = New System.Drawing.Point(313, 458)
-        Me.Panel40.Name = "Panel40"
-        Me.Panel40.Size = New System.Drawing.Size(23, 23)
-        Me.Panel40.TabIndex = 289
-        '
-        'CheckBox40
-        '
-        Me.CheckBox40.AutoSize = True
-        Me.CheckBox40.Location = New System.Drawing.Point(2, 3)
-        Me.CheckBox40.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox40.Name = "CheckBox40"
-        Me.CheckBox40.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox40.TabIndex = 258
-        Me.CheckBox40.UseVisualStyleBackColor = True
-        '
-        'Panel41
-        '
-        Me.Panel41.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel41.Controls.Add(Me.CheckBox41)
-        Me.Panel41.Location = New System.Drawing.Point(313, 515)
-        Me.Panel41.Name = "Panel41"
-        Me.Panel41.Size = New System.Drawing.Size(23, 23)
-        Me.Panel41.TabIndex = 290
-        '
-        'CheckBox41
-        '
-        Me.CheckBox41.AutoSize = True
-        Me.CheckBox41.Location = New System.Drawing.Point(2, 3)
-        Me.CheckBox41.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox41.Name = "CheckBox41"
-        Me.CheckBox41.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox41.TabIndex = 258
-        Me.CheckBox41.UseVisualStyleBackColor = True
-        '
-        'Panel42
-        '
-        Me.Panel42.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel42.Controls.Add(Me.CheckBox42)
-        Me.Panel42.Location = New System.Drawing.Point(287, 64)
-        Me.Panel42.Name = "Panel42"
-        Me.Panel42.Size = New System.Drawing.Size(23, 23)
-        Me.Panel42.TabIndex = 281
-        '
-        'CheckBox42
-        '
-        Me.CheckBox42.AutoSize = True
-        Me.CheckBox42.Location = New System.Drawing.Point(2, 3)
-        Me.CheckBox42.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox42.Name = "CheckBox42"
-        Me.CheckBox42.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox42.TabIndex = 258
-        Me.CheckBox42.UseVisualStyleBackColor = True
-        '
-        'Panel43
-        '
-        Me.Panel43.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel43.Controls.Add(Me.CheckBox43)
-        Me.Panel43.Location = New System.Drawing.Point(287, 100)
-        Me.Panel43.Name = "Panel43"
-        Me.Panel43.Size = New System.Drawing.Size(23, 23)
-        Me.Panel43.TabIndex = 282
-        '
-        'CheckBox43
-        '
-        Me.CheckBox43.AutoSize = True
-        Me.CheckBox43.Location = New System.Drawing.Point(2, 3)
-        Me.CheckBox43.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox43.Name = "CheckBox43"
-        Me.CheckBox43.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox43.TabIndex = 258
-        Me.CheckBox43.UseVisualStyleBackColor = True
-        '
-        'Panel44
-        '
-        Me.Panel44.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel44.Controls.Add(Me.CheckBox44)
-        Me.Panel44.Location = New System.Drawing.Point(287, 137)
-        Me.Panel44.Name = "Panel44"
-        Me.Panel44.Size = New System.Drawing.Size(23, 23)
-        Me.Panel44.TabIndex = 283
-        '
-        'CheckBox44
-        '
-        Me.CheckBox44.AutoSize = True
-        Me.CheckBox44.Location = New System.Drawing.Point(2, 3)
-        Me.CheckBox44.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox44.Name = "CheckBox44"
-        Me.CheckBox44.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox44.TabIndex = 258
-        Me.CheckBox44.UseVisualStyleBackColor = True
-        '
-        'Panel45
-        '
-        Me.Panel45.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel45.Controls.Add(Me.CheckBox45)
-        Me.Panel45.Location = New System.Drawing.Point(287, 174)
-        Me.Panel45.Name = "Panel45"
-        Me.Panel45.Size = New System.Drawing.Size(23, 23)
-        Me.Panel45.TabIndex = 284
-        '
-        'CheckBox45
-        '
-        Me.CheckBox45.AutoSize = True
-        Me.CheckBox45.Location = New System.Drawing.Point(2, 3)
-        Me.CheckBox45.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox45.Name = "CheckBox45"
-        Me.CheckBox45.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox45.TabIndex = 258
-        Me.CheckBox45.UseVisualStyleBackColor = True
-        '
-        'Panel46
-        '
-        Me.Panel46.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel46.Controls.Add(Me.CheckBox46)
-        Me.Panel46.Location = New System.Drawing.Point(287, 209)
-        Me.Panel46.Name = "Panel46"
-        Me.Panel46.Size = New System.Drawing.Size(23, 23)
-        Me.Panel46.TabIndex = 285
-        '
-        'CheckBox46
-        '
-        Me.CheckBox46.AutoSize = True
-        Me.CheckBox46.Location = New System.Drawing.Point(2, 3)
-        Me.CheckBox46.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox46.Name = "CheckBox46"
-        Me.CheckBox46.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox46.TabIndex = 258
-        Me.CheckBox46.UseVisualStyleBackColor = True
-        '
-        'Panel47
-        '
-        Me.Panel47.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel47.Controls.Add(Me.CheckBox47)
-        Me.Panel47.Location = New System.Drawing.Point(287, 250)
-        Me.Panel47.Name = "Panel47"
-        Me.Panel47.Size = New System.Drawing.Size(23, 23)
-        Me.Panel47.TabIndex = 286
-        '
-        'CheckBox47
-        '
-        Me.CheckBox47.AutoSize = True
-        Me.CheckBox47.Location = New System.Drawing.Point(2, 3)
-        Me.CheckBox47.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox47.Name = "CheckBox47"
-        Me.CheckBox47.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox47.TabIndex = 258
-        Me.CheckBox47.UseVisualStyleBackColor = True
-        '
-        'Panel48
-        '
-        Me.Panel48.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel48.Controls.Add(Me.CheckBox48)
-        Me.Panel48.Location = New System.Drawing.Point(287, 295)
-        Me.Panel48.Name = "Panel48"
-        Me.Panel48.Size = New System.Drawing.Size(23, 23)
-        Me.Panel48.TabIndex = 287
-        '
-        'CheckBox48
-        '
-        Me.CheckBox48.AutoSize = True
-        Me.CheckBox48.Location = New System.Drawing.Point(2, 3)
-        Me.CheckBox48.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox48.Name = "CheckBox48"
-        Me.CheckBox48.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox48.TabIndex = 258
-        Me.CheckBox48.UseVisualStyleBackColor = True
-        '
-        'Panel49
-        '
-        Me.Panel49.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel49.Controls.Add(Me.CheckBox49)
-        Me.Panel49.Location = New System.Drawing.Point(287, 334)
-        Me.Panel49.Name = "Panel49"
-        Me.Panel49.Size = New System.Drawing.Size(23, 23)
-        Me.Panel49.TabIndex = 288
-        '
-        'CheckBox49
-        '
-        Me.CheckBox49.AutoSize = True
-        Me.CheckBox49.Location = New System.Drawing.Point(2, 3)
-        Me.CheckBox49.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox49.Name = "CheckBox49"
-        Me.CheckBox49.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox49.TabIndex = 258
-        Me.CheckBox49.UseVisualStyleBackColor = True
-        '
-        'Panel50
-        '
-        Me.Panel50.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel50.Controls.Add(Me.CheckBox50)
-        Me.Panel50.Location = New System.Drawing.Point(287, 382)
-        Me.Panel50.Name = "Panel50"
-        Me.Panel50.Size = New System.Drawing.Size(23, 23)
-        Me.Panel50.TabIndex = 289
-        '
-        'CheckBox50
-        '
-        Me.CheckBox50.AutoSize = True
-        Me.CheckBox50.Location = New System.Drawing.Point(2, 3)
-        Me.CheckBox50.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox50.Name = "CheckBox50"
-        Me.CheckBox50.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox50.TabIndex = 258
-        Me.CheckBox50.UseVisualStyleBackColor = True
-        '
-        'Panel51
-        '
-        Me.Panel51.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel51.Controls.Add(Me.CheckBox51)
-        Me.Panel51.Location = New System.Drawing.Point(287, 417)
-        Me.Panel51.Name = "Panel51"
-        Me.Panel51.Size = New System.Drawing.Size(23, 23)
-        Me.Panel51.TabIndex = 290
-        '
-        'CheckBox51
-        '
-        Me.CheckBox51.AutoSize = True
-        Me.CheckBox51.Location = New System.Drawing.Point(2, 3)
-        Me.CheckBox51.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox51.Name = "CheckBox51"
-        Me.CheckBox51.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox51.TabIndex = 258
-        Me.CheckBox51.UseVisualStyleBackColor = True
-        '
-        'Panel52
-        '
-        Me.Panel52.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel52.Controls.Add(Me.CheckBox52)
-        Me.Panel52.Location = New System.Drawing.Point(287, 454)
-        Me.Panel52.Name = "Panel52"
-        Me.Panel52.Size = New System.Drawing.Size(23, 23)
-        Me.Panel52.TabIndex = 291
-        '
-        'CheckBox52
-        '
-        Me.CheckBox52.AutoSize = True
-        Me.CheckBox52.Location = New System.Drawing.Point(2, 3)
-        Me.CheckBox52.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox52.Name = "CheckBox52"
-        Me.CheckBox52.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox52.TabIndex = 258
-        Me.CheckBox52.UseVisualStyleBackColor = True
-        '
-        'Panel53
-        '
-        Me.Panel53.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel53.Controls.Add(Me.CheckBox53)
-        Me.Panel53.Location = New System.Drawing.Point(287, 493)
-        Me.Panel53.Name = "Panel53"
-        Me.Panel53.Size = New System.Drawing.Size(23, 23)
-        Me.Panel53.TabIndex = 292
-        '
-        'CheckBox53
-        '
-        Me.CheckBox53.AutoSize = True
-        Me.CheckBox53.Location = New System.Drawing.Point(2, 3)
-        Me.CheckBox53.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox53.Name = "CheckBox53"
-        Me.CheckBox53.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox53.TabIndex = 258
-        Me.CheckBox53.UseVisualStyleBackColor = True
-        '
-        'Panel54
-        '
-        Me.Panel54.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel54.Controls.Add(Me.CheckBox54)
-        Me.Panel54.Location = New System.Drawing.Point(287, 530)
-        Me.Panel54.Name = "Panel54"
-        Me.Panel54.Size = New System.Drawing.Size(23, 23)
-        Me.Panel54.TabIndex = 293
-        '
-        'CheckBox54
-        '
-        Me.CheckBox54.AutoSize = True
-        Me.CheckBox54.Location = New System.Drawing.Point(2, 3)
-        Me.CheckBox54.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox54.Name = "CheckBox54"
-        Me.CheckBox54.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox54.TabIndex = 258
-        Me.CheckBox54.UseVisualStyleBackColor = True
-        '
-        'Panel55
-        '
-        Me.Panel55.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel55.Controls.Add(Me.CheckBox55)
-        Me.Panel55.Location = New System.Drawing.Point(287, 577)
-        Me.Panel55.Name = "Panel55"
-        Me.Panel55.Size = New System.Drawing.Size(23, 23)
-        Me.Panel55.TabIndex = 294
-        '
-        'CheckBox55
-        '
-        Me.CheckBox55.AutoSize = True
-        Me.CheckBox55.Location = New System.Drawing.Point(2, 3)
-        Me.CheckBox55.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox55.Name = "CheckBox55"
-        Me.CheckBox55.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox55.TabIndex = 258
-        Me.CheckBox55.UseVisualStyleBackColor = True
-        '
         'ShapeContainer5
         '
         Me.ShapeContainer5.Location = New System.Drawing.Point(3, 3)
@@ -3524,77 +3713,13 @@ Partial Class egenerklaering
         Me.ShapeContainer5.TabIndex = 122
         Me.ShapeContainer5.TabStop = False
         '
-        'LineShape74
+        'LineShape84
         '
-        Me.LineShape74.Name = "LineShape74"
-        Me.LineShape74.X1 = 32
-        Me.LineShape74.X2 = 32
-        Me.LineShape74.Y1 = 42
-        Me.LineShape74.Y2 = 253
-        '
-        'LineShape75
-        '
-        Me.LineShape75.Name = "LineShape75"
-        Me.LineShape75.X1 = 315
-        Me.LineShape75.X2 = 315
-        Me.LineShape75.Y1 = 42
-        Me.LineShape75.Y2 = 253
-        '
-        'LineShape76
-        '
-        Me.LineShape76.Name = "LineShape76"
-        Me.LineShape76.X1 = 33
-        Me.LineShape76.X2 = 313
-        Me.LineShape76.Y1 = 43
-        Me.LineShape76.Y2 = 43
-        '
-        'LineShape77
-        '
-        Me.LineShape77.Name = "LineShape77"
-        Me.LineShape77.X1 = 32
-        Me.LineShape77.X2 = 314
-        Me.LineShape77.Y1 = 253
-        Me.LineShape77.Y2 = 253
-        '
-        'LineShape78
-        '
-        Me.LineShape78.Name = "LineShape78"
-        Me.LineShape78.X1 = 33
-        Me.LineShape78.X2 = 314
-        Me.LineShape78.Y1 = 181
-        Me.LineShape78.Y2 = 181
-        '
-        'LineShape79
-        '
-        Me.LineShape79.Name = "LineShape79"
-        Me.LineShape79.X1 = 32
-        Me.LineShape79.X2 = 313
-        Me.LineShape79.Y1 = 127
-        Me.LineShape79.Y2 = 127
-        '
-        'LineShape80
-        '
-        Me.LineShape80.Name = "LineShape80"
-        Me.LineShape80.X1 = 33
-        Me.LineShape80.X2 = 314
-        Me.LineShape80.Y1 = 82
-        Me.LineShape80.Y2 = 82
-        '
-        'LineShape81
-        '
-        Me.LineShape81.Name = "LineShape81"
-        Me.LineShape81.X1 = 390
-        Me.LineShape81.X2 = 390
-        Me.LineShape81.Y1 = 41
-        Me.LineShape81.Y2 = 99
-        '
-        'LineShape82
-        '
-        Me.LineShape82.Name = "LineShape82"
-        Me.LineShape82.X1 = 390
-        Me.LineShape82.X2 = 672
-        Me.LineShape82.Y1 = 99
-        Me.LineShape82.Y2 = 99
+        Me.LineShape84.Name = "LineShape84"
+        Me.LineShape84.X1 = 389
+        Me.LineShape84.X2 = 671
+        Me.LineShape84.Y1 = 42
+        Me.LineShape84.Y2 = 42
         '
         'LineShape83
         '
@@ -3604,118 +3729,77 @@ Partial Class egenerklaering
         Me.LineShape83.Y1 = 42
         Me.LineShape83.Y2 = 100
         '
-        'LineShape84
+        'LineShape82
         '
-        Me.LineShape84.Name = "LineShape84"
-        Me.LineShape84.X1 = 389
-        Me.LineShape84.X2 = 671
-        Me.LineShape84.Y1 = 42
-        Me.LineShape84.Y2 = 42
+        Me.LineShape82.Name = "LineShape82"
+        Me.LineShape82.X1 = 390
+        Me.LineShape82.X2 = 672
+        Me.LineShape82.Y1 = 99
+        Me.LineShape82.Y2 = 99
         '
-        'Panel56
+        'LineShape81
         '
-        Me.Panel56.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel56.Controls.Add(Me.CheckBox56)
-        Me.Panel56.Location = New System.Drawing.Point(285, 55)
-        Me.Panel56.Name = "Panel56"
-        Me.Panel56.Size = New System.Drawing.Size(23, 23)
-        Me.Panel56.TabIndex = 295
+        Me.LineShape81.Name = "LineShape81"
+        Me.LineShape81.X1 = 390
+        Me.LineShape81.X2 = 390
+        Me.LineShape81.Y1 = 41
+        Me.LineShape81.Y2 = 99
         '
-        'CheckBox56
+        'LineShape80
         '
-        Me.CheckBox56.AutoSize = True
-        Me.CheckBox56.Location = New System.Drawing.Point(2, 3)
-        Me.CheckBox56.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox56.Name = "CheckBox56"
-        Me.CheckBox56.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox56.TabIndex = 258
-        Me.CheckBox56.UseVisualStyleBackColor = True
+        Me.LineShape80.Name = "LineShape80"
+        Me.LineShape80.X1 = 33
+        Me.LineShape80.X2 = 314
+        Me.LineShape80.Y1 = 82
+        Me.LineShape80.Y2 = 82
         '
-        'Panel57
+        'LineShape79
         '
-        Me.Panel57.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel57.Controls.Add(Me.CheckBox57)
-        Me.Panel57.Location = New System.Drawing.Point(285, 95)
-        Me.Panel57.Name = "Panel57"
-        Me.Panel57.Size = New System.Drawing.Size(23, 23)
-        Me.Panel57.TabIndex = 296
+        Me.LineShape79.Name = "LineShape79"
+        Me.LineShape79.X1 = 32
+        Me.LineShape79.X2 = 313
+        Me.LineShape79.Y1 = 127
+        Me.LineShape79.Y2 = 127
         '
-        'CheckBox57
+        'LineShape78
         '
-        Me.CheckBox57.AutoSize = True
-        Me.CheckBox57.Location = New System.Drawing.Point(2, 3)
-        Me.CheckBox57.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox57.Name = "CheckBox57"
-        Me.CheckBox57.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox57.TabIndex = 258
-        Me.CheckBox57.UseVisualStyleBackColor = True
+        Me.LineShape78.Name = "LineShape78"
+        Me.LineShape78.X1 = 33
+        Me.LineShape78.X2 = 314
+        Me.LineShape78.Y1 = 181
+        Me.LineShape78.Y2 = 181
         '
-        'Panel58
+        'LineShape77
         '
-        Me.Panel58.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel58.Controls.Add(Me.CheckBox58)
-        Me.Panel58.Location = New System.Drawing.Point(285, 150)
-        Me.Panel58.Name = "Panel58"
-        Me.Panel58.Size = New System.Drawing.Size(23, 23)
-        Me.Panel58.TabIndex = 297
+        Me.LineShape77.Name = "LineShape77"
+        Me.LineShape77.X1 = 32
+        Me.LineShape77.X2 = 314
+        Me.LineShape77.Y1 = 253
+        Me.LineShape77.Y2 = 253
         '
-        'CheckBox58
+        'LineShape76
         '
-        Me.CheckBox58.AutoSize = True
-        Me.CheckBox58.Location = New System.Drawing.Point(2, 3)
-        Me.CheckBox58.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox58.Name = "CheckBox58"
-        Me.CheckBox58.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox58.TabIndex = 258
-        Me.CheckBox58.UseVisualStyleBackColor = True
+        Me.LineShape76.Name = "LineShape76"
+        Me.LineShape76.X1 = 33
+        Me.LineShape76.X2 = 313
+        Me.LineShape76.Y1 = 43
+        Me.LineShape76.Y2 = 43
         '
-        'Panel59
+        'LineShape75
         '
-        Me.Panel59.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel59.Controls.Add(Me.CheckBox59)
-        Me.Panel59.Location = New System.Drawing.Point(285, 208)
-        Me.Panel59.Name = "Panel59"
-        Me.Panel59.Size = New System.Drawing.Size(23, 23)
-        Me.Panel59.TabIndex = 298
+        Me.LineShape75.Name = "LineShape75"
+        Me.LineShape75.X1 = 315
+        Me.LineShape75.X2 = 315
+        Me.LineShape75.Y1 = 42
+        Me.LineShape75.Y2 = 253
         '
-        'CheckBox59
+        'LineShape74
         '
-        Me.CheckBox59.AutoSize = True
-        Me.CheckBox59.Location = New System.Drawing.Point(2, 3)
-        Me.CheckBox59.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox59.Name = "CheckBox59"
-        Me.CheckBox59.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox59.TabIndex = 258
-        Me.CheckBox59.UseVisualStyleBackColor = True
-        '
-        'Panel60
-        '
-        Me.Panel60.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel60.Controls.Add(Me.CheckBox60)
-        Me.Panel60.Location = New System.Drawing.Point(626, 63)
-        Me.Panel60.Name = "Panel60"
-        Me.Panel60.Size = New System.Drawing.Size(23, 23)
-        Me.Panel60.TabIndex = 299
-        '
-        'CheckBox60
-        '
-        Me.CheckBox60.AutoSize = True
-        Me.CheckBox60.Location = New System.Drawing.Point(2, 3)
-        Me.CheckBox60.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox60.Name = "CheckBox60"
-        Me.CheckBox60.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox60.TabIndex = 258
-        Me.CheckBox60.UseVisualStyleBackColor = True
-        '
-        'Button6
-        '
-        Me.Button6.Location = New System.Drawing.Point(404, 326)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(56, 19)
-        Me.Button6.TabIndex = 121
-        Me.Button6.Text = "Button6"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.LineShape74.Name = "LineShape74"
+        Me.LineShape74.X1 = 32
+        Me.LineShape74.X2 = 32
+        Me.LineShape74.Y1 = 42
+        Me.LineShape74.Y2 = 253
         '
         'egenerklaering
         '
@@ -3734,6 +3818,8 @@ Partial Class egenerklaering
         Me.Panel1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
         Me.Panel19.ResumeLayout(False)
         Me.Panel19.PerformLayout()
         Me.Panel18.ResumeLayout(False)
@@ -3764,8 +3850,6 @@ Partial Class egenerklaering
         Me.Panel5.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
         Me.Panel31.ResumeLayout(False)
@@ -3796,75 +3880,75 @@ Partial Class egenerklaering
         Me.Panel20.PerformLayout()
         Me.TabPage4.ResumeLayout(False)
         Me.TabPage4.PerformLayout()
-        Me.TabPage5.ResumeLayout(False)
-        Me.TabPage5.PerformLayout()
-        Me.TabPage6.ResumeLayout(False)
-        Me.TabPage6.PerformLayout()
-        Me.Panel32.ResumeLayout(False)
-        Me.Panel32.PerformLayout()
-        Me.Panel33.ResumeLayout(False)
-        Me.Panel33.PerformLayout()
-        Me.Panel34.ResumeLayout(False)
-        Me.Panel34.PerformLayout()
-        Me.Panel35.ResumeLayout(False)
-        Me.Panel35.PerformLayout()
-        Me.Panel36.ResumeLayout(False)
-        Me.Panel36.PerformLayout()
-        Me.Panel37.ResumeLayout(False)
-        Me.Panel37.PerformLayout()
-        Me.Panel38.ResumeLayout(False)
-        Me.Panel38.PerformLayout()
-        Me.Panel39.ResumeLayout(False)
-        Me.Panel39.PerformLayout()
-        Me.Panel40.ResumeLayout(False)
-        Me.Panel40.PerformLayout()
         Me.Panel41.ResumeLayout(False)
         Me.Panel41.PerformLayout()
-        Me.Panel42.ResumeLayout(False)
-        Me.Panel42.PerformLayout()
-        Me.Panel43.ResumeLayout(False)
-        Me.Panel43.PerformLayout()
-        Me.Panel44.ResumeLayout(False)
-        Me.Panel44.PerformLayout()
-        Me.Panel45.ResumeLayout(False)
-        Me.Panel45.PerformLayout()
-        Me.Panel46.ResumeLayout(False)
-        Me.Panel46.PerformLayout()
-        Me.Panel47.ResumeLayout(False)
-        Me.Panel47.PerformLayout()
-        Me.Panel48.ResumeLayout(False)
-        Me.Panel48.PerformLayout()
-        Me.Panel49.ResumeLayout(False)
-        Me.Panel49.PerformLayout()
-        Me.Panel50.ResumeLayout(False)
-        Me.Panel50.PerformLayout()
-        Me.Panel51.ResumeLayout(False)
-        Me.Panel51.PerformLayout()
-        Me.Panel52.ResumeLayout(False)
-        Me.Panel52.PerformLayout()
-        Me.Panel53.ResumeLayout(False)
-        Me.Panel53.PerformLayout()
-        Me.Panel54.ResumeLayout(False)
-        Me.Panel54.PerformLayout()
+        Me.Panel40.ResumeLayout(False)
+        Me.Panel40.PerformLayout()
+        Me.Panel39.ResumeLayout(False)
+        Me.Panel39.PerformLayout()
+        Me.Panel38.ResumeLayout(False)
+        Me.Panel38.PerformLayout()
+        Me.Panel37.ResumeLayout(False)
+        Me.Panel37.PerformLayout()
+        Me.Panel36.ResumeLayout(False)
+        Me.Panel36.PerformLayout()
+        Me.Panel35.ResumeLayout(False)
+        Me.Panel35.PerformLayout()
+        Me.Panel34.ResumeLayout(False)
+        Me.Panel34.PerformLayout()
+        Me.Panel33.ResumeLayout(False)
+        Me.Panel33.PerformLayout()
+        Me.Panel32.ResumeLayout(False)
+        Me.Panel32.PerformLayout()
+        Me.TabPage5.ResumeLayout(False)
+        Me.TabPage5.PerformLayout()
         Me.Panel55.ResumeLayout(False)
         Me.Panel55.PerformLayout()
-        Me.Panel56.ResumeLayout(False)
-        Me.Panel56.PerformLayout()
-        Me.Panel57.ResumeLayout(False)
-        Me.Panel57.PerformLayout()
-        Me.Panel58.ResumeLayout(False)
-        Me.Panel58.PerformLayout()
-        Me.Panel59.ResumeLayout(False)
-        Me.Panel59.PerformLayout()
+        Me.Panel54.ResumeLayout(False)
+        Me.Panel54.PerformLayout()
+        Me.Panel53.ResumeLayout(False)
+        Me.Panel53.PerformLayout()
+        Me.Panel52.ResumeLayout(False)
+        Me.Panel52.PerformLayout()
+        Me.Panel51.ResumeLayout(False)
+        Me.Panel51.PerformLayout()
+        Me.Panel50.ResumeLayout(False)
+        Me.Panel50.PerformLayout()
+        Me.Panel49.ResumeLayout(False)
+        Me.Panel49.PerformLayout()
+        Me.Panel48.ResumeLayout(False)
+        Me.Panel48.PerformLayout()
+        Me.Panel47.ResumeLayout(False)
+        Me.Panel47.PerformLayout()
+        Me.Panel46.ResumeLayout(False)
+        Me.Panel46.PerformLayout()
+        Me.Panel45.ResumeLayout(False)
+        Me.Panel45.PerformLayout()
+        Me.Panel44.ResumeLayout(False)
+        Me.Panel44.PerformLayout()
+        Me.Panel43.ResumeLayout(False)
+        Me.Panel43.PerformLayout()
+        Me.Panel42.ResumeLayout(False)
+        Me.Panel42.PerformLayout()
+        Me.TabPage6.ResumeLayout(False)
+        Me.TabPage6.PerformLayout()
         Me.Panel60.ResumeLayout(False)
         Me.Panel60.PerformLayout()
+        Me.Panel59.ResumeLayout(False)
+        Me.Panel59.PerformLayout()
+        Me.Panel58.ResumeLayout(False)
+        Me.Panel58.PerformLayout()
+        Me.Panel57.ResumeLayout(False)
+        Me.Panel57.PerformLayout()
+        Me.Panel56.ResumeLayout(False)
+        Me.Panel56.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents btnEgenNext As Button
+    Friend WithEvents btnEgenNext1 As Button
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents lblEgenTillatSMS As Label
     Friend WithEvents lblEgenTillatEpost As Label
@@ -3958,10 +4042,10 @@ Partial Class egenerklaering
     Friend WithEvents Label141 As Label
     Friend WithEvents Label140 As Label
     Friend WithEvents Label139 As Label
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
+    Friend WithEvents btnEgenNext3 As Button
+    Friend WithEvents btnEgenNext4 As Button
+    Friend WithEvents btnEgenNext5 As Button
+    Friend WithEvents btnEgenSubmit As Button
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Label4 As Label
@@ -3993,10 +4077,6 @@ Partial Class egenerklaering
     Friend WithEvents lblEgen2Frisk As Label
     Friend WithEvents lblEgen2InfoBlod As Label
     Friend WithEvents CheckBox2 As CheckBox
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents Panel1 As Panel
     Friend WithEvents Label248 As Label
     Friend WithEvents Label247 As Label
     Friend WithEvents Label246 As Label
@@ -4206,4 +4286,16 @@ Partial Class egenerklaering
     Friend WithEvents Panel56 As Panel
     Friend WithEvents CheckBox56 As CheckBox
     Friend WithEvents Button6 As Button
+    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents btnEgenNext2 As Button
+    Friend WithEvents lblSomFør As Label
+    Friend WithEvents btnEgenBack1 As Button
+    Friend WithEvents btnEgenBack2 As Button
+    Friend WithEvents btnEgenBack3 As Button
+    Friend WithEvents btnEgenBack4 As Button
+    Friend WithEvents btnEgenBack5 As Button
+    Friend WithEvents Label19 As Label
 End Class

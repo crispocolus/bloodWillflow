@@ -313,9 +313,10 @@ Public Class EgenErk
         Dim info As New info
         Dim connect As New SQL
         Dim oppkobling = connect.oppkobling
+        Dim skjema_id As String
 
-        Try
-            oppkobling.Open()
+        'Try
+        oppkobling.Open()
 
             'SQL spørring som utføres 
             Dim sqlSporring = "insert into skjema (person_nr, dato) values (" & pnummer & ", CURDATE())"
@@ -323,25 +324,75 @@ Public Class EgenErk
             Dim sql As New MySqlCommand(sqlSporring, oppkobling)
             sql.ExecuteNonQuery()
 
+            skjema_id = hentSenesteEgenErk(pnummer)
+
             info.queryUpdate("blodgiver", "sendSms = " & egenerklaering.svar(0) & ", sendEpost= '" & egenerklaering.svar(1) & "'", "person_nr = '" & pnummer & "'")
-            'Dim sqlSporring2 = "INSERT INTO besvar VALUES(" & pnummer & ")"
-            'Dim sqlSporring2 = "INSERT INTO fire_uker VALUES(" & pnummer & ")"
-            'Dim sqlSporring2 = "INSERT INTO to_aar VALUES(" & pnummer & ")"
-            'Dim sqlSporring2 = "INSERT INTO seks_mnd VALUES(" & pnummer & ")"
-            'Dim sqlSporring2 = "INSERT INTO livet VALUES(" & pnummer & ")"
-            'Dim sqlSporring2 = "INSERT INTO kvinner VALUES(" & pnummer & ")"
-            'Dim sqlSporring2 = "INSERT INTO menn VALUES(" & pnummer & ")"
+        Dim sqlSporring2 = "INSERT INTO skjema_besvar VALUES(" & hentDataTabLand(skjema_id, "Norge") & ");
+                                INSERT INTO skjema_fire_uker VALUES(" & hentDataTab(skjema_id, 18, 23) & ");  
+                                INSERT INTO skjema_to_aar VALUES(" & hentDataTab(skjema_id, 23, 24) & ");               
+                                INSERT INTO skjema_seks_mnd VALUES(" & hentDataTab(skjema_id, 24, 40) & ");
+                                INSERT INTO skjema_livet VALUES(" & hentDataTab(skjema_id, 41, 54) & ");
+                                INSERT INTO skjema_kvinner VALUES(" & hentDataTab(skjema_id, 55, 58) & ");
+                                INSERT INTO skjema_menn VALUES(" & hentDataTab(skjema_id, 59, 59) & ")"
 
-            'Dim sql2 As New MySqlCommand(sqlSporring2, oppkobling)
+        MsgBox(sqlSporring2)
 
-            'Utfører SQL-spørringen
-            'sql2.ExecuteNonQuery()
+        '
+        '
 
-            oppkobling.Close()
-        Catch ex As Exception
-            MessageBox.Show("Noe gikk galt " & ex.Message)
-        End Try
+        Dim sql2 As New MySqlCommand(sqlSporring2, oppkobling)
+
+        'Utfører SQL-spørringen
+        sql2.ExecuteNonQuery()
+
+        oppkobling.Close()
+            'Catch ex As Exception
+        'MessageBox.Show("Noe gikk galt " & ex.Message)
+        'End Try
     End Sub
+
+    Public Function hentSenesteEgenErk(personnummer As String)
+        Dim info As New info
+        Dim tabell As New DataTable
+
+        tabell = info.query("skjema_id", "skjema", "person_nr = " & personnummer & " ORDER BY skjema_id DESC LIMIT 1")
+        For Each rad In tabell.Rows
+            Return rad("skjema_id")
+        Next
+
+    End Function
+    Public Function hentDataTabLand(skjema_id As String, land As String)
+        Dim mid As String = skjema_id & ", "
+        For i = 2 To 17
+            If i < 17 Then
+                mid += egenerklaering.svar(i) & ", "
+            Else
+                mid += "'" & land & "'"
+            End If
+        Next
+        MsgBox(mid)
+        Return mid
+    End Function
+    Public Function hentDataTab(skjema_id As String, start As Double, slutt As Double)
+        Dim mid2 As String = skjema_id & ", "
+
+        'If start = slutt Then
+        'mid += egenerklaering.svar(start)
+        'Else
+        MsgBox(start)
+        MsgBox(slutt)
+        For i = start To slutt
+                If i < slutt Then
+                mid2 += egenerklaering.svar(i) & ", "
+            Else
+                mid2 += egenerklaering.svar(i)
+            End If
+            MsgBox(mid2)
+            Return mid2
+        Next
+        'End If
+
+    End Function
 End Class
 
 
