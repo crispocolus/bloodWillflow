@@ -1,17 +1,15 @@
 ﻿Imports System.IO
-Imports System.Linq
+Imports System.Drawing
 Public Class egenerklaering
     Public svar As New ArrayList(12)
 
     Private Sub egenerklaering_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'ComboBox1.Items.AddRange(File.ReadAllLines("land.txt"))
 
-        Dim RButtons As List(Of RadioButton) = New List(Of RadioButton)
-        For Each C As Control In GroupBox1.Controls
-            If TypeOf (C) Is RadioButton Then
-                RButtons.Add(DirectCast(C, RadioButton))
-            End If
-        Next
+
+
+
+
 
     End Sub
 
@@ -19,7 +17,7 @@ Public Class egenerklaering
         TabControl1.SelectedIndex = TabControl1.SelectedIndex + 1
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         TabControl1.SelectedIndex = TabControl1.SelectedIndex + 1
     End Sub
 
@@ -92,4 +90,6 @@ Public Class egenerklaering
         Next
         EgenErk.sendEgenErk(pnummer)
     End Sub
+
+
 End Class
