@@ -29,7 +29,6 @@ Public Class Login
 
             'Sjekker om det kommer noe restultat tilbake. Hvis ja, sier "Logget på" og utfører sjekkBrukerStat() som sjekker hvilken type bruker det er
             If interTabell.Rows.Count > 0 Then
-                MsgBox("Innlogget", MsgBoxStyle.Information)
                 brukerstat.sjekkBrukerStat(LoginForm.bnavn)
                 connect.paakoblet = True
                 LoginForm.attempts = 0
@@ -50,6 +49,7 @@ Public Class Login
                 Return "Feil brukernavn eller passord"
             End If
             oppkobling.Close()
+            Return "oppkobling, close"
         Catch ex As MySqlException
             'Gir feilmelding om noe har gått galt
             MessageBox.Show("Noe gikk galt: " & ex.Message)
@@ -298,7 +298,6 @@ Public Class info
                                                                                                                            " & status & ", 
                                                                                                                            '" & innkallingTekst & "', 
                                                                                                                            '" & dato & "');" '
-
             Dim sql As New MySqlCommand(sqlSporring, oppkobling)
             sql.ExecuteNonQuery()
             oppkobling.Close()
@@ -325,8 +324,6 @@ Public Class EgenErk
             sql.ExecuteNonQuery()
 
             info.queryUpdate("blodgiver", "sendSms = " & egenerklaering.svar(0) & ", sendEpost= '" & egenerklaering.svar(1) & "'", "person_nr = '" & pnummer & "'")
-
-            'Dim sqlSporring2 = "UPDATE blodgiver SET sendSms= '" & egenerklaering.svar(1) & "', sendEpost= '" & egenerklaering.svar(2) & "' WHERE person_nr = '" & pnummer & "')"
             'Dim sqlSporring2 = "INSERT INTO besvar VALUES(" & pnummer & ")"
             'Dim sqlSporring2 = "INSERT INTO fire_uker VALUES(" & pnummer & ")"
             'Dim sqlSporring2 = "INSERT INTO to_aar VALUES(" & pnummer & ")"
@@ -347,15 +344,5 @@ Public Class EgenErk
     End Sub
 End Class
 
-
-'    Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
-'        Dim sqlsporring = "Select brukernavn from brukere"
-'        Dim sql As New MySqlCommand(sqlsporring, oppkobling)
-'        Dim leser = sql.ExecuteReader()
-
-'        While leser.Read()
-'            MsgBox("Bruker : " & leser("brukernavn"))
-'        End While
-'    End Sub
 
 

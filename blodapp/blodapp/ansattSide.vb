@@ -4,21 +4,11 @@
 
     Public literBehov As String = 0
 
-
-
     'Kode som utføres når siden lastes
     Private Sub ansattSide_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim tabell As New DataTable
-        Dim prosedyrer As New prosedyrer
-        tabell = prosedyrer.lastinnBlodtype()
-        For Each rad In tabell.Rows
-            CBoxBlodtype.Items.Add(rad("blodtype"))
-        Next
-
-        'Kalender for inkalling skal kun vise dato minst to uker etter dagens dato
-        Dim toUker As New Date
-        toUker = Today.AddDays(14)
-        tappeKalender.MinDate = toUker
+        hentBestillinger()
+        fyllBlodtype()
+        kalenderToUker()
     End Sub
 
     'Knapp for å endre passord. 
@@ -36,8 +26,6 @@
     End Sub
 
     '*****INNKALLING****
-
-
     Private Sub btnbehov_click(sender As Object, e As EventArgs) Handles btnBehov.Click
 
         Dim literbehov As Double
@@ -71,9 +59,6 @@
         hurtigbestilling.lastBGTlf(CBoxBlodtype.Text)
         hurtigbestilling.Show()
     End Sub
-    'Kalender
-
-
 
     'Knapp for å sende bestilling. 
     Private Sub btnInnkalling_Click(sender As Object, e As EventArgs) Handles btnInnkalling.Click
@@ -83,22 +68,38 @@
     '********BESTILLINGER*********
 
     Private Sub btnRetur_Click(sender As Object, e As EventArgs) Handles btnRetur.Click
+        'Importerer SQL-funksjon
+        Dim info As New info
 
+        Dim valgtBestilling As String
+        valgtBestilling = CType(lstBestillinger.SelectedItem, listItem).value
         kommentar = InputBox("Skriv en kommentar til bestillingen")
+
+        info.queryUpdate("bestilling", "status = 9, fritekst_svar = '" & kommentar & "'", "bestilling_id = " & valgtBestilling & "")
+        hentBestillinger()
     End Sub
 
-    Private Sub btnSend_Click(sender As Object, e As EventArgs) Handles btnSend.Click
+    Private Sub btnSend_Click(sender As Object, e As EventArgs) Handles btnGodkjenn.Click
+        'Importerer SQL-funksjon
+        Dim info As New info
+
+        Dim valgtBestilling As String
+        valgtBestilling = CType(lstBestillinger.SelectedItem, listItem).value
+
         If chkBekreft.Checked = False Then
             MsgBox("Du må godkjenne bestillingen før du kan sende den")
         Else
+            info.queryUpdate("bestilling", "status = 1", "bestilling_id = " & valgtBestilling & "")
         End If
+
+        hentBestillinger()
     End Sub
 
     Private Sub chkBekreft_CheckedChanged(sender As Object, e As EventArgs) Handles chkBekreft.CheckedChanged
         If chkBekreft.Checked = False Then
-            btnSend.Enabled = False
+            btnGodkjenn.Enabled = False
         Else
-            btnSend.Enabled = True
+            btnGodkjenn.Enabled = True
         End If
     End Sub
 
@@ -260,5 +261,64 @@
 
     End Sub
 
+    Public Sub kalenderToUker()
+        'Kalender for inkalling skal kun vise dato minst to uker etter dagens dato
+        Dim toUker As New Date
+        toUker = Today.AddDays(14)
+        tappeKalender.MinDate = toUker
+    End Sub
+
+    Public Sub fyllBlodtype()
+        Dim tabell As New DataTable
+        Dim prosedyrer As New prosedyrer
+        tabell = prosedyrer.lastinnBlodtype()
+        For Each rad In tabell.Rows
+            CBoxBlodtype.Items.Add(rad("blodtype"))
+        Next
+    End Sub
+
+    Public Sub hentBestillinger()
+        'Importerer info - klassen som inneholder query-funksjon
+        Dim info As New info
+        'Lager en ny tabell som inneholder data fra query
+        Dim Tabell As New DataTable
+        'Tømmer combo - box før query
+        lstBestillinger.Items.Clear()
+
+
+        'Utfører query ved hjelp av funksjonen query under klassen info. 
+        Tabell = info.query("bestilling_id, til_bank, dato_sendt", "bestilling", "status = 0")
+
+        'Legger til kandidater basert på hva som er valgt i ComboBox
+        For Each rad In Tabell.Rows
+            lstBestillinger.Items.Add(New listItem With {.display = "Fra = " & rad("til_bank") & ", sendt:" & rad("dato_sendt"), .value = rad("bestilling_id")})
+        Next
+    End Sub
+
+    Private Sub lstBestillinger_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstBestillinger.SelectedIndexChanged
+        fyllBestilling()
+    End Sub
+
+    Private Sub fyllBestilling()
+        Dim valgtBestilling As String
+        valgtBestilling = CType(lstBestillinger.SelectedItem, listItem).value
+
+        'Importerer info - klassen som inneholder query-funksjon
+        Dim info As New info
+        'Lager en ny tabell som inneholder data fra query
+        Dim Tabell As New DataTable
+
+        'Utfører query ved hjelp av funksjonen query under klassen info. 
+        Tabell = info.query("*", "bestilling", "bestilling_id = " & valgtBestilling & "")
+
+        'Legger til kandidater basert på hva som er valgt i ComboBox
+        For Each rad In Tabell.Rows
+            txtBlodtype.Text = rad("blodtype")
+            txtLegemer.Text = rad("legemer") & " poser"
+            txtPlasma.Text = rad("plasma") & " poser"
+            txtPlater.Text = rad("plater") & " poser"
+            txtLevering.Text = rad("dato_til")
+        Next
+    End Sub
 End Class
 
