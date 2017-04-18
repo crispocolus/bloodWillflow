@@ -28,6 +28,8 @@ Public Class brukerSide
             lblEtternavn.Text = (rad("etternavn"))
             lblTlf.Text = (rad("telefon"))
             lblEpost.Text = (rad("epost"))
+            lblAdresse.Text = (rad("gateadresse"))
+            lblPostnr.Text = (rad("post_nr"))
 
         Next
     End Sub
@@ -80,6 +82,8 @@ Public Class brukerSide
         lblEtternavn.Hide()
         lblTlf.Hide()
         lblEpost.Hide()
+        lblAdresse.Hide()
+        lblPostnr.Hide()
 
         fornavnTxt.Text = lblFornavn.Text
         fornavnTxt.Visible = True
@@ -89,6 +93,10 @@ Public Class brukerSide
         epostTxt.Visible = True
         telefonTxt.Text = lblTlf.Text
         telefonTxt.Visible = True
+        adresseTxt.Text = lblAdresse.Text
+        adresseTxt.Visible = True
+        postnrTxt.Text = lblPostnr.Text
+        postnrTxt.Visible = True
 
 
     End Sub
@@ -98,4 +106,62 @@ Public Class brukerSide
         pros.endrePw(LoginForm.bnavn)
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Try
+
+
+
+            Dim info As New info
+            Dim bruker As String = LoginForm.bnavn
+            Dim fornavn As String = fornavnTxt.Text
+            Dim etternavn As String = etternavnTxt.Text
+            Dim epost As String = epostTxt.Text
+            Dim telefon As Double = telefonTxt.Text
+            Dim gateadresse As String = adresseTxt.Text
+            Dim post_nr As Double = postnrTxt.Text
+
+            info.queryUpdate("bruker", "fornavn = '" & fornavn & "', etternavn = '" & etternavn & "', epost = '" & epost & "', telefon = '" & telefon & "', gateadresse = '" & gateadresse & "'", "epost = '" & bruker & "';")
+
+            MsgBox("Brukerinfo er blitt oppdatert")
+
+
+            Dim tabell As New DataTable
+            tabell = info.queryJoin("*", "bruker", "postnummer ON bruker.post_nr = postnummer.post_nr", "epost = '" & epostTxt.Text & "';")
+
+            For Each rad In tabell.Rows
+                lblFornavn.Text = (rad("fornavn"))
+                lblEtternavn.Text = (rad("etternavn"))
+                lblTlf.Text = (rad("telefon"))
+                lblEpost.Text = (rad("epost"))
+                lblAdresse.Text = (rad("gateadresse"))
+                lblPostnr.Text = (rad("post_nr"))
+            Next
+
+            fornavnTxt.Text = lblFornavn.Text
+            fornavnTxt.Visible = False
+            etternavnTxt.Text = lblEtternavn.Text
+            etternavnTxt.Visible = False
+            epostTxt.Text = lblEpost.Text
+            epostTxt.Visible = False
+            telefonTxt.Text = lblTlf.Text
+            telefonTxt.Visible = False
+            adresseTxt.Text = lblAdresse.Text
+            adresseTxt.Visible = False
+            postnrTxt.Text = lblPostnr.Text
+            postnrTxt.Visible = False
+
+            lblFornavn.Show()
+            lblEtternavn.Show()
+            lblEpost.Show()
+            lblAdresse.Show()
+            lblPostnr.Show()
+            lblTlf.Show()
+
+
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
 End Class

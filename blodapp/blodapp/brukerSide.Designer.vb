@@ -52,6 +52,11 @@ Partial Class brukerSide
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.adresseTxt = New System.Windows.Forms.TextBox()
+        Me.lblAdresse = New System.Windows.Forms.Label()
+        Me.postnrTxt = New System.Windows.Forms.TextBox()
+        Me.lblPostnr = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -174,7 +179,7 @@ Partial Class brukerSide
         '
         'etternavnTxt
         '
-        Me.etternavnTxt.Location = New System.Drawing.Point(159, 87)
+        Me.etternavnTxt.Location = New System.Drawing.Point(159, 78)
         Me.etternavnTxt.Name = "etternavnTxt"
         Me.etternavnTxt.Size = New System.Drawing.Size(100, 22)
         Me.etternavnTxt.TabIndex = 14
@@ -182,7 +187,7 @@ Partial Class brukerSide
         '
         'telefonTxt
         '
-        Me.telefonTxt.Location = New System.Drawing.Point(159, 125)
+        Me.telefonTxt.Location = New System.Drawing.Point(159, 106)
         Me.telefonTxt.Name = "telefonTxt"
         Me.telefonTxt.Size = New System.Drawing.Size(100, 22)
         Me.telefonTxt.TabIndex = 15
@@ -190,7 +195,7 @@ Partial Class brukerSide
         '
         'epostTxt
         '
-        Me.epostTxt.Location = New System.Drawing.Point(159, 171)
+        Me.epostTxt.Location = New System.Drawing.Point(159, 134)
         Me.epostTxt.Name = "epostTxt"
         Me.epostTxt.Size = New System.Drawing.Size(100, 22)
         Me.epostTxt.TabIndex = 16
@@ -209,6 +214,11 @@ Partial Class brukerSide
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.Gainsboro
+        Me.TabPage1.Controls.Add(Me.Button2)
+        Me.TabPage1.Controls.Add(Me.lblPostnr)
+        Me.TabPage1.Controls.Add(Me.postnrTxt)
+        Me.TabPage1.Controls.Add(Me.lblAdresse)
+        Me.TabPage1.Controls.Add(Me.adresseTxt)
         Me.TabPage1.Controls.Add(Me.Panel1)
         Me.TabPage1.Controls.Add(Me.endrePwBtn)
         Me.TabPage1.Controls.Add(Me.lblEpost)
@@ -255,7 +265,7 @@ Partial Class brukerSide
         'lblEpost
         '
         Me.lblEpost.AutoSize = True
-        Me.lblEpost.Location = New System.Drawing.Point(156, 176)
+        Me.lblEpost.Location = New System.Drawing.Point(156, 137)
         Me.lblEpost.Name = "lblEpost"
         Me.lblEpost.Size = New System.Drawing.Size(59, 17)
         Me.lblEpost.TabIndex = 21
@@ -264,7 +274,7 @@ Partial Class brukerSide
         'lblTlf
         '
         Me.lblTlf.AutoSize = True
-        Me.lblTlf.Location = New System.Drawing.Point(156, 128)
+        Me.lblTlf.Location = New System.Drawing.Point(156, 108)
         Me.lblTlf.Name = "lblTlf"
         Me.lblTlf.Size = New System.Drawing.Size(59, 17)
         Me.lblTlf.TabIndex = 20
@@ -273,7 +283,7 @@ Partial Class brukerSide
         'lblEtternavn
         '
         Me.lblEtternavn.AutoSize = True
-        Me.lblEtternavn.Location = New System.Drawing.Point(156, 92)
+        Me.lblEtternavn.Location = New System.Drawing.Point(156, 81)
         Me.lblEtternavn.Name = "lblEtternavn"
         Me.lblEtternavn.Size = New System.Drawing.Size(59, 17)
         Me.lblEtternavn.TabIndex = 19
@@ -343,6 +353,49 @@ Partial Class brukerSide
         Me.PictureBox1.TabIndex = 8
         Me.PictureBox1.TabStop = False
         '
+        'adresseTxt
+        '
+        Me.adresseTxt.Location = New System.Drawing.Point(159, 162)
+        Me.adresseTxt.Name = "adresseTxt"
+        Me.adresseTxt.Size = New System.Drawing.Size(100, 22)
+        Me.adresseTxt.TabIndex = 26
+        Me.adresseTxt.Visible = False
+        '
+        'lblAdresse
+        '
+        Me.lblAdresse.AutoSize = True
+        Me.lblAdresse.Location = New System.Drawing.Point(156, 165)
+        Me.lblAdresse.Name = "lblAdresse"
+        Me.lblAdresse.Size = New System.Drawing.Size(59, 17)
+        Me.lblAdresse.TabIndex = 27
+        Me.lblAdresse.Text = "Label13"
+        '
+        'postnrTxt
+        '
+        Me.postnrTxt.Location = New System.Drawing.Point(159, 190)
+        Me.postnrTxt.Name = "postnrTxt"
+        Me.postnrTxt.Size = New System.Drawing.Size(100, 22)
+        Me.postnrTxt.TabIndex = 28
+        Me.postnrTxt.Visible = False
+        '
+        'lblPostnr
+        '
+        Me.lblPostnr.AutoSize = True
+        Me.lblPostnr.Location = New System.Drawing.Point(156, 193)
+        Me.lblPostnr.Name = "lblPostnr"
+        Me.lblPostnr.Size = New System.Drawing.Size(59, 17)
+        Me.lblPostnr.TabIndex = 29
+        Me.lblPostnr.Text = "Label14"
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(289, 214)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(103, 23)
+        Me.Button2.TabIndex = 30
+        Me.Button2.Text = "Lagre"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'brukerSide
         '
         Me.ClientSize = New System.Drawing.Size(751, 476)
@@ -401,4 +454,9 @@ Partial Class brukerSide
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel3 As Panel
+    Friend WithEvents lblPostnr As Label
+    Friend WithEvents postnrTxt As TextBox
+    Friend WithEvents lblAdresse As Label
+    Friend WithEvents adresseTxt As TextBox
+    Friend WithEvents Button2 As Button
 End Class
