@@ -88,23 +88,23 @@ Public Class egenerklaering
         End Try
     End Sub
 
-    Public Sub fyllSkjema()
-        info.query()
+    'Public Sub fyllSkjema()
+    '    info.query()
 
-        For Each tb In TabControl1.Controls.OfType(Of TabPage)()
-            For Each pnl In tb.Controls.OfType(Of Panel)().OrderBy(Function(c) c.TabIndex)
-                For Each cb In pnl.Controls.OfType(Of CheckBox)()
-                    If cb.Checked = True Then
-                        nr += 1
-                        svar.Add(1)
-                        'MsgBox(cb.Name & ", " & svar.Item(nr - 1) & ", nr: " & nr)
-                    Else
-                        nr += 1
-                        svar.Add(0)
-                        'MsgBox(cb.Name & ", " & svar.Item(nr - 1) & ", nr: " & nr)
-                    End If
-                Next
-            Next
-        Next
-    End Sub
+    '    For Each tb In TabControl1.Controls.OfType(Of TabPage)()
+    '        For Each pnl In tb.Controls.OfType(Of Panel)().OrderBy(Function(c) c.TabIndex)
+    '            For Each cb In pnl.Controls.OfType(Of CheckBox)()
+    '                If cb.Checked = True Then
+    '                    nr += 1
+    '                    svar.Add(1)
+    '                    'MsgBox(cb.Name & ", " & svar.Item(nr - 1) & ", nr: " & nr)
+    '                Else
+    '                    nr += 1
+    '                    svar.Add(0)
+    '                    'MsgBox(cb.Name & ", " & svar.Item(nr - 1) & ", nr: " & nr)
+    '                End If
+    '            Next
+    '        Next
+    '    Next
+    'End Sub
 End Class
