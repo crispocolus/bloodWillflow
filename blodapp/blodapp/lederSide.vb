@@ -44,7 +44,7 @@
         Dim ItemSelected As String
         ItemSelected = CType(lstKandidater.SelectedItem, listItem).value
 
-        info.sendInnkalling(ItemSelected, InputBox("Her skriver du din tekst"), tappeKalender.SelectionStart.ToString("yyyy/MM/dd") & " " & ComboBox2.SelectedItem & ":" & ComboBox3.SelectedItem & ":00")
+        info.sendInnkalling(ItemSelected, 0, InputBox("Her skriver du din tekst"), tappeKalender.SelectionStart.ToString("yyyy/MM/dd") & " " & ComboBox2.SelectedItem & ":" & ComboBox3.SelectedItem & ":00")
     End Sub
 
     Private Sub CBoxBlodtype_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBoxBlodtype.SelectedIndexChanged

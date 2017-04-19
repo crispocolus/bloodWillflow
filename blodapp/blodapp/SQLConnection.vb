@@ -283,12 +283,11 @@ Public Class info
         End Try
     End Sub
     'Prosedyre for å sende innkalling. Bruker person_nr, innkallingsTekst og dato som parametre. 
-    Public Sub sendInnkalling(personnummer As String, innkallingTekst As String, dato As String)
+    Public Sub sendInnkalling(personnummer As String, status As Integer, innkallingTekst As String, dato As String)
         'Importerer oppkobling fra SQL klassen
         Dim connect As New SQL
         Dim oppkobling = connect.oppkobling
 
-        Dim status As String = 0
 
         Try
             oppkobling.Open()
