@@ -60,6 +60,8 @@ Partial Class brukerSide
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.cmbTime = New System.Windows.Forms.ComboBox()
+        Me.cmbMin = New System.Windows.Forms.ComboBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -256,7 +258,7 @@ Partial Class brukerSide
         Me.timeLst.ItemHeight = 16
         Me.timeLst.Location = New System.Drawing.Point(567, 55)
         Me.timeLst.Name = "timeLst"
-        Me.timeLst.Size = New System.Drawing.Size(116, 132)
+        Me.timeLst.Size = New System.Drawing.Size(166, 132)
         Me.timeLst.TabIndex = 20
         '
         'Button3
@@ -376,6 +378,8 @@ Partial Class brukerSide
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.cmbMin)
+        Me.TabPage2.Controls.Add(Me.cmbTime)
         Me.TabPage2.Controls.Add(Me.Panel3)
         Me.TabPage2.Controls.Add(Me.MonthCalendar2)
         Me.TabPage2.Controls.Add(Me.Label5)
@@ -428,6 +432,26 @@ Partial Class brukerSide
         Me.Label9.Size = New System.Drawing.Size(64, 17)
         Me.Label9.TabIndex = 20
         Me.Label9.Text = "Timeliste"
+        '
+        'cmbTime
+        '
+        Me.cmbTime.FormattingEnabled = True
+        Me.cmbTime.Items.AddRange(New Object() {"10", "11", "12", "13", "14", "15", "16", "17", "18"})
+        Me.cmbTime.Location = New System.Drawing.Point(90, 268)
+        Me.cmbTime.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.cmbTime.Name = "cmbTime"
+        Me.cmbTime.Size = New System.Drawing.Size(41, 24)
+        Me.cmbTime.TabIndex = 27
+        '
+        'cmbMin
+        '
+        Me.cmbMin.FormattingEnabled = True
+        Me.cmbMin.Items.AddRange(New Object() {"00", "15", "30", "45"})
+        Me.cmbMin.Location = New System.Drawing.Point(161, 268)
+        Me.cmbMin.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.cmbMin.Name = "cmbMin"
+        Me.cmbMin.Size = New System.Drawing.Size(37, 24)
+        Me.cmbMin.TabIndex = 28
         '
         'brukerSide
         '
@@ -496,4 +520,6 @@ Partial Class brukerSide
     Friend WithEvents Button3 As Button
     Friend WithEvents timeLst As ListBox
     Friend WithEvents Label9 As Label
+    Friend WithEvents cmbTime As ComboBox
+    Friend WithEvents cmbMin As ComboBox
 End Class
