@@ -5,6 +5,7 @@ Public Class brukerSide
     Private Sub brukerSide_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         info()
         sjekkMelding()
+        sjekkTime()
         Me.CenterToParent()
     End Sub
 
@@ -52,6 +53,36 @@ Public Class brukerSide
             Next
         Else
         End If
+    End Sub
+
+    Private Sub sjekkTime()
+        Dim info As New info
+
+        Dim tabell As New DataTable
+        tabell = info.queryJoin("innkallinger.person_nr, innkallinger.oppmote, innkallinger.innkallings_id, fritekst_innkalling", "innkallinger", "bruker ON bruker.person_nr = innkallinger.person_nr", " bruker.epost = '" & LoginForm.bnavn & "' AND innkallinger.status = 1;")
+
+
+        timeLst.Items.Clear()
+        If tabell.Rows.Count > 0 Then
+            For Each rad As DataRow In tabell.Rows
+                timeLst.Items.Add(New ansattSide.listItem With {.display = rad("fritekst_innkalling") & " " & rad("oppmote"), .value = rad("innkallings_id")})
+            Next
+        Else
+        End If
+    End Sub
+
+    Private Sub sjekkInn()
+        Dim info As New info
+        Dim sql As New SQL
+
+        Dim resultatTab As New DataTable
+        resultatTab = info.queryJoin("innkallinger.person_nr, innkallinger.oppmote, innkallinger.innkallings_id, fritekst_innkalling", "innkallinger", "bruker ON bruker.person_nr = innkallinger.person_nr", " bruker.epost = '" & LoginForm.bnavn & "' AND innkallinger.status = 0;")
+
+        innkallingLst.Items.Clear()
+        For Each rad As DataRow In resultatTab.Rows
+                innkallingLst.Items.Add(New ansattSide.listItem With {.display = rad("fritekst_innkalling") & " " & rad("oppmote"), .value = rad("innkallings_id")})
+            Next
+
     End Sub
 
     Private Sub MonthCalendar2_DateChanged(sender As Object, e As DateRangeEventArgs) Handles MonthCalendar2.DateChanged
@@ -169,17 +200,26 @@ Public Class brukerSide
     Private Sub btnAvbestillTime_Click(sender As Object, e As EventArgs) Handles btnAvbestillTime.Click
         Dim info As New info
         Dim innNr As Double
-        innNr = CType(innkallingLst.SelectedItem, ansattSide.listItem).value
-        Dim svar
-        svar = MsgBox("Er du sikker på at du vil avbestille timen?", MsgBoxStyle.YesNo Or MsgBoxStyle.Critical)
+        Try
 
-        If svar = MsgBoxResult.Yes Then
-            info.queryUpdate("innkallinger", "status = 3", "innkallings_id = '" & innNr & "';")
 
-            MsgBox("Time er avbestilt")
-        Else
-            Exit Sub
-        End If
+            innNr = CType(timeLst.SelectedItem, ansattSide.listItem).value
+            Dim svar
+            svar = MsgBox("Er du sikker på at du vil avbestille timen?", MsgBoxStyle.YesNo Or MsgBoxStyle.Critical)
+
+            If svar = MsgBoxResult.Yes Then
+                info.queryUpdate("innkallinger", "status = 3", "innkallings_id = '" & innNr & "';")
+
+                MsgBox("Time er avbestilt")
+            Else
+                Exit Sub
+            End If
+
+            sjekkTime()
+
+        Catch ex As Exception
+            MsgBox("Du må velge en time")
+        End Try
     End Sub
 
 
@@ -206,6 +246,9 @@ Public Class brukerSide
         ElseIf customMsgBox.button2click = True Then
             info.queryUpdate("innkallinger", "status = 3", "innkallings_id = '" & innNr & "';")
         End If
+
+        sjekkTime()
+        sjekkInn()
 
     End Sub
 
