@@ -66,7 +66,7 @@ Public Class brukerSide
         If tabell.Rows.Count > 0 Then
             For Each rad As DataRow In tabell.Rows
 
-                timeLst.Items.Add(New ansattSide.listItem With {.display = rad("fritekst_innkalling") & " " & rad("oppmote") & " - UBEKREFTET", .value = rad("innkallings_id")})
+                timeLst.Items.Add(New ansattSide.listItem With {.display = rad("oppmote") & " - UBEKREFTET", .value = rad("innkallings_id")})
 
 
             Next

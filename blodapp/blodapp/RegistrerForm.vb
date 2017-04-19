@@ -26,9 +26,27 @@ Public Class RegistrerForm
 
         If pros.validateEmail(epost) = True Then
             If data.Rows.Count > 0 Then
-                MsgBox("E-posten finnes fra før. Har du glemt passord?")
+                Dim customMsgBox As New MsgBoxCustom
+                customMsgBox.Label1.Text = "E-post er registrert fra før av. " & vbCrLf & "Vil du logge inn eller har du glemt passord?"
+                customMsgBox.Button1.Text = "Gå til logg inn"
+                customMsgBox.Button2.Text = "Gå til glemt passord"
+                customMsgBox.Button3.Visible = True
+                customMsgBox.Button3.Text = "Tilbake til registrering"
+                customMsgBox.ShowDialog()
+
+                If customMsgBox.button1click = True Then
+                    Me.Close()
+                    LoginForm.Show()
+                ElseIf customMsgBox.button2click = True Then
+                    Me.Close()
+                    Dim glemtPw As New prosedyrer
+                    glemtPw.glemtPw()
+                ElseIf customMsgBox.button3click = True Then
+                    customMsgBox.Close()
+                End If
+
             Else
-                godkjentEpost = True
+                    godkjentEpost = True
                 'MsgBox(godkjentEpost)
             End If
         Else
