@@ -347,36 +347,59 @@ Public Class EgenErk
         'End Try
     End Sub
 
-    Public Sub hentEgenErk(pnummer As String)
+    Public Function hentEgenErk(pnummer As String)
         'Importerer oppkobling fra SQL klassen
         Dim info As New info
         Dim connect As New SQL
         Dim oppkobling = connect.oppkobling
         Dim skjema_id As String
-        Dim table As New DataTable
-        Dim mottatSvar As New ArrayList()
+        Dim tabell As New DataTable
 
-        skjema_id = hentSenesteEgenErk(pnummer)
+        skjema_id = hentSenesteEgenErk(1231231231)
+        oppkobling.Open()
+
+        Dim sqlSporring = "SHOW COLUMNS FROM skjema_besvar"
+
+        Dim sqlSporring2 = "SELECT group_concat( concat( * ) SEPARATOR ', ')
+                           FROM skjema_besvar"
+        Dim SQL As New MySqlCommand(sqlSporring, oppkobling)
+        Dim SQL2 As New MySqlCommand(sqlSporring2, oppkobling)
+
+        Dim da As New MySqlDataAdapter
+        da.SelectCommand = SQL
+        da.Fill(tabell)
+        Return tabell
+        oppkobling.Close()
+
+        'skjema_id = hentSenesteEgenErk(pnummer)
+
+        'table = info.query("*, NULL As skjema_id", "skjema_besvar", "skjema_id = " & skjema_id & "")
+
+        'For Each rad In table.Rows
+        '    For Each column In rad.columns
+        '        MsgBox(column)
+        '        table2.Add(column)
+        '    Next
+        'Next
+
+        'Return table2
+
+        'sql2.ExecuteNonQuery()
+
+        'oppkobling.Close()
 
 
-        table = info.query("*, NULL AS skjema_id", "skjema_besvar", "skjema_id = " & skjema_id & "")
 
-        For Each kolonne In table.Columns
-            mottatSvar.Add(kolonne)
-        Next
+        'info.query("*", "skjema_besvar", "pnummer = " & pnummer & "")
 
-        MsgBox(mottatSvar)
+        'info.query("*", "skjema_besvar", "pnummer = " & pnummer & "")
 
-        info.query("*", "skjema_besvar", "pnummer = " & pnummer & "")
+        'info.query("*", "skjema_besvar", "pnummer = " & pnummer & "")
 
-        info.query("*", "skjema_besvar", "pnummer = " & pnummer & "")
+        'info.query("*", "skjema_besvar", "pnummer = " & pnummer & "")
 
-        info.query("*", "skjema_besvar", "pnummer = " & pnummer & "")
-
-        info.query("*", "skjema_besvar", "pnummer = " & pnummer & "")
-
-        info.query("*", "skjema_besvar", "pnummer = " & pnummer & "")
-        info.query("*", "skjema_besvar", "pnummer = " & pnummer & "")
+        'info.query("*", "skjema_besvar", "pnummer = " & pnummer & "")
+        'info.query("*", "skjema_besvar", "pnummer = " & pnummer & "")
 
         'info.queryUpdate("blodgiver", "sendSms = " & egenerklaering.svar(0) & ", sendEpost= '" & egenerklaering.svar(1) & "'", "person_nr = '" & pnummer & "'")
         'Dim sqlSporring2 = "SELECT * FROM skjema_besvar VALUES(" & hentDataTabLand(skjema_id, "Norge") & ");
@@ -390,7 +413,7 @@ Public Class EgenErk
         'Catch ex As Exception
         'MessageBox.Show("Noe gikk galt " & ex.Message)
         'End Try
-    End Sub
+    End Function
 
     Public Function hentSenesteEgenErk(personnummer As String)
         Dim info As New info
