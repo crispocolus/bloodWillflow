@@ -319,5 +319,7 @@
             txtLevering.Text = rad("dato_til")
         Next
     End Sub
+
+
 End Class
 
