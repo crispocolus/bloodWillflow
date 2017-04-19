@@ -450,28 +450,23 @@ Partial Class ansattSide
         Me.TabPage3.Text = "Oversikt blodbank"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
-<<<<<<< HEAD
+
         'lblResultat
         '
         Me.lblResultat.AutoSize = True
         Me.lblResultat.Location = New System.Drawing.Point(313, 37)
         Me.lblResultat.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-=======
+
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(579, 42)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(91, 53)
-        Me.Button1.TabIndex = 30
-        Me.Button1.Text = "Oversikt Test"
-        Me.Button1.UseVisualStyleBackColor = True
+
+
         '
         'lblResultat
         '
         Me.lblResultat.AutoSize = True
         Me.lblResultat.Location = New System.Drawing.Point(676, 49)
->>>>>>> origin/master
+
         Me.lblResultat.Name = "lblResultat"
         Me.lblResultat.Size = New System.Drawing.Size(0, 17)
         Me.lblResultat.TabIndex = 29

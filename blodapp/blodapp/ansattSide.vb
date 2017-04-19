@@ -10,6 +10,8 @@
         fyllBlodtype()
         kalenderToUker()
         Me.CenterToParent()
+        blodFullOversikt()
+
     End Sub
 
     'Knapp for å endre passord. 
@@ -108,7 +110,7 @@
 
     'Oppdaterer **(??)** når verdien endres. 
     Private Sub CBoxProdukt_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cBoxProdukt.SelectedIndexChanged
-        ListBox1.Items.Clear()
+
 
         Dim blodtype As String
         Dim produkt As String
@@ -119,10 +121,6 @@
         blodInfo()
     End Sub
 
-    'Knapp for å hente ut full blod-oversikt. 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        blodFullOversikt()
-    End Sub
 
     '*******FUNKSJONER OG PROSEDYRER************
 
