@@ -633,6 +633,24 @@ Blodbanken har informasjonsmateriell om blodgivning. Hvis du ikke har lest dette
   <metadata name="LineShape44.Size" type="System.Drawing.Size, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>350, 0</value>
   </metadata>
+  <metadata name="LineShape86.Bounds" type="System.Drawing.Rectangle, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>22, 656, 303, 0</value>
+  </metadata>
+  <metadata name="LineShape86.Location" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>22, 656</value>
+  </metadata>
+  <metadata name="LineShape86.Size" type="System.Drawing.Size, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>303, 0</value>
+  </metadata>
+  <metadata name="LineShape85.Bounds" type="System.Drawing.Rectangle, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>325, 616, 0, 41</value>
+  </metadata>
+  <metadata name="LineShape85.Location" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>325, 616</value>
+  </metadata>
+  <metadata name="LineShape85.Size" type="System.Drawing.Size, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 41</value>
+  </metadata>
   <metadata name="LineShape73.Bounds" type="System.Drawing.Rectangle, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>24, 617, 302, 0</value>
   </metadata>
@@ -778,13 +796,13 @@ Blodbanken har informasjonsmateriell om blodgivning. Hvis du ikke har lest dette
     <value>0, 574</value>
   </metadata>
   <metadata name="LineShape57.Bounds" type="System.Drawing.Rectangle, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>24, 43, 0, 574</value>
+    <value>23, 43, 1, 613</value>
   </metadata>
   <metadata name="LineShape57.Location" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>24, 43</value>
+    <value>23, 43</value>
   </metadata>
   <metadata name="LineShape57.Size" type="System.Drawing.Size, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 574</value>
+    <value>1, 613</value>
   </metadata>
   <metadata name="LineShape84.Bounds" type="System.Drawing.Rectangle, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>389, 42, 282, 0</value>

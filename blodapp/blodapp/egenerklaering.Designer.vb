@@ -337,7 +337,6 @@ Partial Class egenerklaering
         Me.LineShape58 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape57 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.TabPage6 = New System.Windows.Forms.TabPage()
-        Me.Label19 = New System.Windows.Forms.Label()
         Me.btnEgenBack5 = New System.Windows.Forms.Button()
         Me.Panel60 = New System.Windows.Forms.Panel()
         Me.CheckBox60 = New System.Windows.Forms.CheckBox()
@@ -375,6 +374,13 @@ Partial Class egenerklaering
         Me.LineShape76 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape75 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape74 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape85 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape86 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Panel61 = New System.Windows.Forms.Panel()
+        Me.CheckBox61 = New System.Windows.Forms.CheckBox()
+        Me.Panel62 = New System.Windows.Forms.Panel()
+        Me.CheckBox62 = New System.Windows.Forms.CheckBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -442,6 +448,8 @@ Partial Class egenerklaering
         Me.Panel58.SuspendLayout()
         Me.Panel57.SuspendLayout()
         Me.Panel56.SuspendLayout()
+        Me.Panel61.SuspendLayout()
+        Me.Panel62.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -774,7 +782,7 @@ Partial Class egenerklaering
         Me.btnEgenBack1.Name = "btnEgenBack1"
         Me.btnEgenBack1.Size = New System.Drawing.Size(75, 23)
         Me.btnEgenBack1.TabIndex = 28
-        Me.btnEgenBack1.Text = "Button1"
+        Me.btnEgenBack1.Text = "Forrige side"
         Me.btnEgenBack1.UseVisualStyleBackColor = True
         '
         'btnEgenNext2
@@ -1630,7 +1638,7 @@ Partial Class egenerklaering
         Me.btnEgenBack2.Name = "btnEgenBack2"
         Me.btnEgenBack2.Size = New System.Drawing.Size(75, 23)
         Me.btnEgenBack2.TabIndex = 43
-        Me.btnEgenBack2.Text = "Button1"
+        Me.btnEgenBack2.Text = "Forrige side"
         Me.btnEgenBack2.UseVisualStyleBackColor = True
         '
         'Label536
@@ -2349,7 +2357,7 @@ Partial Class egenerklaering
         Me.btnEgenBack3.Name = "btnEgenBack3"
         Me.btnEgenBack3.Size = New System.Drawing.Size(75, 23)
         Me.btnEgenBack3.TabIndex = 55
-        Me.btnEgenBack3.Text = "Button1"
+        Me.btnEgenBack3.Text = "Forrige side"
         Me.btnEgenBack3.UseVisualStyleBackColor = True
         '
         'Panel41
@@ -2803,6 +2811,8 @@ Partial Class egenerklaering
         '
         'TabPage5
         '
+        Me.TabPage5.Controls.Add(Me.Panel62)
+        Me.TabPage5.Controls.Add(Me.Label20)
         Me.TabPage5.Controls.Add(Me.btnEgenBack4)
         Me.TabPage5.Controls.Add(Me.Panel55)
         Me.TabPage5.Controls.Add(Me.Panel54)
@@ -2847,16 +2857,17 @@ Partial Class egenerklaering
         '
         'btnEgenBack4
         '
-        Me.btnEgenBack4.Location = New System.Drawing.Point(117, 649)
+        Me.btnEgenBack4.Location = New System.Drawing.Point(98, 683)
         Me.btnEgenBack4.Name = "btnEgenBack4"
         Me.btnEgenBack4.Size = New System.Drawing.Size(75, 23)
-        Me.btnEgenBack4.TabIndex = 71
-        Me.btnEgenBack4.Text = "Button1"
+        Me.btnEgenBack4.TabIndex = 72
+        Me.btnEgenBack4.Text = "Forrige side"
         Me.btnEgenBack4.UseVisualStyleBackColor = True
         '
         'Panel55
         '
         Me.Panel55.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel55.Controls.Add(Me.Panel61)
         Me.Panel55.Controls.Add(Me.CheckBox55)
         Me.Panel55.Location = New System.Drawing.Point(287, 577)
         Me.Panel55.Name = "Panel55"
@@ -3122,10 +3133,10 @@ Partial Class egenerklaering
         '
         'btnEgenNext5
         '
-        Me.btnEgenNext5.Location = New System.Drawing.Point(192, 649)
+        Me.btnEgenNext5.Location = New System.Drawing.Point(192, 683)
         Me.btnEgenNext5.Name = "btnEgenNext5"
         Me.btnEgenNext5.Size = New System.Drawing.Size(75, 23)
-        Me.btnEgenNext5.TabIndex = 72
+        Me.btnEgenNext5.TabIndex = 73
         Me.btnEgenNext5.Text = "Neste side"
         Me.btnEgenNext5.UseVisualStyleBackColor = True
         '
@@ -3288,7 +3299,7 @@ Partial Class egenerklaering
         Me.ShapeContainer4.Location = New System.Drawing.Point(3, 3)
         Me.ShapeContainer4.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer4.Name = "ShapeContainer4"
-        Me.ShapeContainer4.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape73, Me.LineShape72, Me.LineShape71, Me.LineShape70, Me.LineShape69, Me.LineShape68, Me.LineShape67, Me.LineShape66, Me.LineShape65, Me.LineShape64, Me.LineShape63, Me.LineShape62, Me.LineShape61, Me.LineShape60, Me.LineShape59, Me.LineShape58, Me.LineShape57})
+        Me.ShapeContainer4.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape86, Me.LineShape85, Me.LineShape73, Me.LineShape72, Me.LineShape71, Me.LineShape70, Me.LineShape69, Me.LineShape68, Me.LineShape67, Me.LineShape66, Me.LineShape65, Me.LineShape64, Me.LineShape63, Me.LineShape62, Me.LineShape61, Me.LineShape60, Me.LineShape59, Me.LineShape58, Me.LineShape57})
         Me.ShapeContainer4.Size = New System.Drawing.Size(1149, 734)
         Me.ShapeContainer4.TabIndex = 139
         Me.ShapeContainer4.TabStop = False
@@ -3425,13 +3436,12 @@ Partial Class egenerklaering
         '
         Me.LineShape57.Name = "LineShape57"
         Me.LineShape57.X1 = 24
-        Me.LineShape57.X2 = 24
+        Me.LineShape57.X2 = 23
         Me.LineShape57.Y1 = 43
-        Me.LineShape57.Y2 = 617
+        Me.LineShape57.Y2 = 656
         '
         'TabPage6
         '
-        Me.TabPage6.Controls.Add(Me.Label19)
         Me.TabPage6.Controls.Add(Me.btnEgenBack5)
         Me.TabPage6.Controls.Add(Me.Panel60)
         Me.TabPage6.Controls.Add(Me.Panel59)
@@ -3461,22 +3471,13 @@ Partial Class egenerklaering
         Me.TabPage6.Text = "Side 5"
         Me.TabPage6.UseVisualStyleBackColor = True
         '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(498, 190)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(45, 13)
-        Me.Label19.TabIndex = 124
-        Me.Label19.Text = "Label19"
-        '
         'btnEgenBack5
         '
         Me.btnEgenBack5.Location = New System.Drawing.Point(169, 322)
         Me.btnEgenBack5.Name = "btnEgenBack5"
         Me.btnEgenBack5.Size = New System.Drawing.Size(75, 23)
-        Me.btnEgenBack5.TabIndex = 78
-        Me.btnEgenBack5.Text = "Button1"
+        Me.btnEgenBack5.TabIndex = 79
+        Me.btnEgenBack5.Text = "Forrige side"
         Me.btnEgenBack5.UseVisualStyleBackColor = True
         '
         'Panel60
@@ -3486,7 +3487,7 @@ Partial Class egenerklaering
         Me.Panel60.Location = New System.Drawing.Point(626, 63)
         Me.Panel60.Name = "Panel60"
         Me.Panel60.Size = New System.Drawing.Size(23, 23)
-        Me.Panel60.TabIndex = 77
+        Me.Panel60.TabIndex = 78
         '
         'CheckBox60
         '
@@ -3505,7 +3506,7 @@ Partial Class egenerklaering
         Me.Panel59.Location = New System.Drawing.Point(285, 208)
         Me.Panel59.Name = "Panel59"
         Me.Panel59.Size = New System.Drawing.Size(23, 23)
-        Me.Panel59.TabIndex = 76
+        Me.Panel59.TabIndex = 77
         '
         'CheckBox59
         '
@@ -3524,7 +3525,7 @@ Partial Class egenerklaering
         Me.Panel58.Location = New System.Drawing.Point(285, 150)
         Me.Panel58.Name = "Panel58"
         Me.Panel58.Size = New System.Drawing.Size(23, 23)
-        Me.Panel58.TabIndex = 75
+        Me.Panel58.TabIndex = 76
         '
         'CheckBox58
         '
@@ -3543,7 +3544,7 @@ Partial Class egenerklaering
         Me.Panel57.Location = New System.Drawing.Point(285, 95)
         Me.Panel57.Name = "Panel57"
         Me.Panel57.Size = New System.Drawing.Size(23, 23)
-        Me.Panel57.TabIndex = 74
+        Me.Panel57.TabIndex = 75
         '
         'CheckBox57
         '
@@ -3562,7 +3563,7 @@ Partial Class egenerklaering
         Me.Panel56.Location = New System.Drawing.Point(285, 55)
         Me.Panel56.Name = "Panel56"
         Me.Panel56.Size = New System.Drawing.Size(23, 23)
-        Me.Panel56.TabIndex = 73
+        Me.Panel56.TabIndex = 74
         '
         'CheckBox56
         '
@@ -3576,7 +3577,7 @@ Partial Class egenerklaering
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(484, 322)
+        Me.Button6.Location = New System.Drawing.Point(428, 170)
         Me.Button6.Margin = New System.Windows.Forms.Padding(2)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(285, 98)
@@ -3589,7 +3590,7 @@ Partial Class egenerklaering
         Me.btnEgenSubmit.Location = New System.Drawing.Point(258, 322)
         Me.btnEgenSubmit.Name = "btnEgenSubmit"
         Me.btnEgenSubmit.Size = New System.Drawing.Size(116, 23)
-        Me.btnEgenSubmit.TabIndex = 79
+        Me.btnEgenSubmit.TabIndex = 80
         Me.btnEgenSubmit.Text = "Lever inn skjema"
         Me.btnEgenSubmit.UseVisualStyleBackColor = True
         '
@@ -3801,6 +3802,69 @@ Partial Class egenerklaering
         Me.LineShape74.Y1 = 42
         Me.LineShape74.Y2 = 253
         '
+        'LineShape85
+        '
+        Me.LineShape85.Name = "LineShape85"
+        Me.LineShape85.X1 = 325
+        Me.LineShape85.X2 = 325
+        Me.LineShape85.Y1 = 616
+        Me.LineShape85.Y2 = 657
+        '
+        'LineShape86
+        '
+        Me.LineShape86.Name = "LineShape86"
+        Me.LineShape86.X1 = 22
+        Me.LineShape86.X2 = 325
+        Me.LineShape86.Y1 = 656
+        Me.LineShape86.Y2 = 656
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(39, 633)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(183, 13)
+        Me.Label20.TabIndex = 140
+        Me.Label20.Text = "Solgt seksuelle tjenester (prostitusjon)"
+        '
+        'Panel61
+        '
+        Me.Panel61.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel61.Controls.Add(Me.CheckBox61)
+        Me.Panel61.Location = New System.Drawing.Point(-2, -2)
+        Me.Panel61.Name = "Panel61"
+        Me.Panel61.Size = New System.Drawing.Size(23, 23)
+        Me.Panel61.TabIndex = 70
+        '
+        'CheckBox61
+        '
+        Me.CheckBox61.AutoSize = True
+        Me.CheckBox61.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox61.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox61.Name = "CheckBox61"
+        Me.CheckBox61.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox61.TabIndex = 258
+        Me.CheckBox61.UseVisualStyleBackColor = True
+        '
+        'Panel62
+        '
+        Me.Panel62.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel62.Controls.Add(Me.CheckBox62)
+        Me.Panel62.Location = New System.Drawing.Point(287, 633)
+        Me.Panel62.Name = "Panel62"
+        Me.Panel62.Size = New System.Drawing.Size(23, 23)
+        Me.Panel62.TabIndex = 71
+        '
+        'CheckBox62
+        '
+        Me.CheckBox62.AutoSize = True
+        Me.CheckBox62.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox62.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox62.Name = "CheckBox62"
+        Me.CheckBox62.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox62.TabIndex = 258
+        Me.CheckBox62.UseVisualStyleBackColor = True
+        '
         'egenerklaering
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -3943,6 +4007,10 @@ Partial Class egenerklaering
         Me.Panel57.PerformLayout()
         Me.Panel56.ResumeLayout(False)
         Me.Panel56.PerformLayout()
+        Me.Panel61.ResumeLayout(False)
+        Me.Panel61.PerformLayout()
+        Me.Panel62.ResumeLayout(False)
+        Me.Panel62.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -4298,5 +4366,11 @@ Partial Class egenerklaering
     Friend WithEvents btnEgenBack3 As Button
     Friend WithEvents btnEgenBack4 As Button
     Friend WithEvents btnEgenBack5 As Button
-    Friend WithEvents Label19 As Label
+    Friend WithEvents Panel62 As Panel
+    Friend WithEvents CheckBox62 As CheckBox
+    Friend WithEvents Label20 As Label
+    Friend WithEvents Panel61 As Panel
+    Friend WithEvents CheckBox61 As CheckBox
+    Friend WithEvents LineShape86 As PowerPacks.LineShape
+    Friend WithEvents LineShape85 As PowerPacks.LineShape
 End Class

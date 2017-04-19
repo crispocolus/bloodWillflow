@@ -1,7 +1,7 @@
 ﻿Imports System.IO
 Imports System.Drawing
 Public Class egenerklaering
-    Public svar As New ArrayList(12)
+    Public svar As New ArrayList()
 
     Private Sub egenerklaering_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'ComboBox1.Items.AddRange(File.ReadAllLines("land.txt"))
@@ -27,7 +27,7 @@ Public Class egenerklaering
         TabControl1.SelectedIndex = TabControl1.SelectedIndex - 1
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles btnEgenSubmit.Click
+    Private Sub btnEgenSubmit_Click(sender As Object, e As EventArgs) Handles btnEgenSubmit.Click
         submitSkjema()
     End Sub
 
@@ -86,5 +86,25 @@ Public Class egenerklaering
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
+    End Sub
+
+    Public Sub fyllSkjema()
+        info.query()
+
+        For Each tb In TabControl1.Controls.OfType(Of TabPage)()
+            For Each pnl In tb.Controls.OfType(Of Panel)().OrderBy(Function(c) c.TabIndex)
+                For Each cb In pnl.Controls.OfType(Of CheckBox)()
+                    If cb.Checked = True Then
+                        nr += 1
+                        svar.Add(1)
+                        'MsgBox(cb.Name & ", " & svar.Item(nr - 1) & ", nr: " & nr)
+                    Else
+                        nr += 1
+                        svar.Add(0)
+                        'MsgBox(cb.Name & ", " & svar.Item(nr - 1) & ", nr: " & nr)
+                    End If
+                Next
+            Next
+        Next
     End Sub
 End Class
