@@ -255,4 +255,55 @@ Public Class brukerSide
 
     End Sub
 
+    Private Sub bestillTime()
+        Dim info As New info
+        Dim epost As New epost
+        Dim janei As Integer
+        Dim kommentar As String
+        Dim epostAddr As String = ""
+        Dim tabell As DataTable
+        Dim pNr As Double
+        Try
+
+
+            Dim bruker As String
+            bruker = LoginForm.bnavn
+
+
+
+            '****Tanken er å sjekke om alt er fyllt ut, ellers virker ikke koden (kræsj)*****
+            'If lstKandidater.SelectedItem Or cmbTime.SelectedItem Or cmbMin.SelectedItem = "" Then
+            '    MsgBox("Du må fylle ut alle feltene!")
+            '    Return
+            'End If
+
+            kommentar = InputBox("Kommentar: (frivillig)")
+
+            tabell = info.query("epost, person_nr", "bruker", "epost = '" & bruker & "'")
+
+            For Each rad As DataRow In tabell.Rows
+                epostAddr = rad("epost")
+                pNr = rad("person_nr")
+            Next
+            MsgBox(epostAddr & " " & pNr & " " & kommentar)
+
+            '*************Oppsummering funker ikke enda, bare småplukk!!*****
+            'MsgBox("Oppsummering: " & vbCrLf & "Navn: " & lstKandidater.SelectedItem & vbCrLf & "Dato: " & tappeKalender.SelectionStart.ToString("yyyy/MM/dd") & "Klokkeslett: " & cmbTime.SelectedItem & ":" & cmbMin.SelectedItem & vbCrLf & "Kommentar: " & kommentar & vbCrLf)
+
+            janei = MsgBox("Vil du sende bestillingen?", MsgBoxStyle.YesNo)
+            If janei = DialogResult.Yes Then
+                info.sendInnkalling(pNr, 1, kommentar, MonthCalendar2.SelectionStart.ToString("yyyy/MM/dd") & " " & cmbTime.SelectedItem & ":" & cmbMin.SelectedItem & ":00")
+                'epost.sendEpost("Innkalling " & MonthCalendar2.SelectionStart.ToString("dd/MM/yyyy"), "Du har fått en innkalling til blodtapping den " & MonthCalendar2.SelectionStart.ToString("dd/MM/yyyy") & " klokken " & cmbTime.SelectedItem & ":" & cmbMin.SelectedItem & vbCrLf & "Har du spørsmål kan du ringe oss på 12345678" & vbCrLf & "Mvh Blodbanken", epostAddr)
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub btnSokTime_Click(sender As Object, e As EventArgs) Handles btnSokTime.Click
+        bestillTime()
+        sjekkTime()
+        sjekkInn()
+    End Sub
 End Class
