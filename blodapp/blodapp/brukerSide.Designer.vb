@@ -256,7 +256,7 @@ Partial Class brukerSide
         Me.timeLst.ItemHeight = 16
         Me.timeLst.Location = New System.Drawing.Point(567, 55)
         Me.timeLst.Name = "timeLst"
-        Me.timeLst.Size = New System.Drawing.Size(116, 132)
+        Me.timeLst.Size = New System.Drawing.Size(166, 132)
         Me.timeLst.TabIndex = 20
         '
         'Button3
