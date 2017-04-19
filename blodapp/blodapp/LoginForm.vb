@@ -7,6 +7,12 @@ Public Class LoginForm
     Public bnavn As String
     Public attempts As Integer
 
+    Private Sub LoginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.CenterToScreen()
+    End Sub
+
+
+
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         'Lager et nytt SQL og et nytt Login-objekt. 
         Dim connect As New SQL
@@ -42,6 +48,7 @@ Public Class LoginForm
 
             leser.Close()
             oppkobling.Close()
+
         Catch ex As MySqlException
             MessageBox.Show("Noe gikk galt: " & ex.Message)
         End Try
@@ -65,4 +72,6 @@ Public Class LoginForm
         Dim pros As New prosedyrer
         pros.glemtPw()
     End Sub
+
+
 End Class

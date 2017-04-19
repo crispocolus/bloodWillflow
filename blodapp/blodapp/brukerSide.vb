@@ -5,6 +5,7 @@ Public Class brukerSide
     Private Sub brukerSide_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         info()
         sjekkMelding()
+        Me.CenterToParent()
     End Sub
 
 
@@ -207,6 +208,5 @@ Public Class brukerSide
         End If
 
     End Sub
-
 
 End Class

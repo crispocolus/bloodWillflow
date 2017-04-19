@@ -30,6 +30,12 @@
 
     End Sub
 
+    Private Sub adminSide_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.CenterToParent()
+    End Sub
+
+
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim reg As New RegistrerForm
         reg.SjekkInfo(postnrTxt.Text, adresseTxt.Text, pnummerTxt.Text, fornavnTxt.Text, etternavnTxt.Text, epostTxt.Text, tlfTxt.Text, RegistrerForm.finnFdato(pnummerTxt.Text), passordcTxt.Text, passordTxt.Text)
@@ -167,6 +173,8 @@
             MsgBox(ex.Message)
         End Try
     End Sub
+
+
 End Class
 
 

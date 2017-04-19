@@ -25,6 +25,7 @@ Partial Class ansattSide
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ansattSide))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.lblKolon = New System.Windows.Forms.Label()
         Me.cmbMin = New System.Windows.Forms.ComboBox()
         Me.cmbTime = New System.Windows.Forms.ComboBox()
@@ -72,7 +73,6 @@ Partial Class ansattSide
         Me.loggutBtn = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -112,11 +112,20 @@ Partial Class ansattSide
         Me.TabPage1.Controls.Add(Me.CBoxBlodtype)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(745, 410)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Innkalling"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(311, 73)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(58, 13)
+        Me.Label2.TabIndex = 29
+        Me.Label2.Text = "Kandidater"
         '
         'lblKolon
         '
@@ -133,7 +142,7 @@ Partial Class ansattSide
         Me.cmbMin.FormattingEnabled = True
         Me.cmbMin.Items.AddRange(New Object() {"00", "15", "30", "45"})
         Me.cmbMin.Location = New System.Drawing.Point(599, 214)
-        Me.cmbMin.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmbMin.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbMin.Name = "cmbMin"
         Me.cmbMin.Size = New System.Drawing.Size(29, 21)
         Me.cmbMin.TabIndex = 27
@@ -143,7 +152,7 @@ Partial Class ansattSide
         Me.cmbTime.FormattingEnabled = True
         Me.cmbTime.Items.AddRange(New Object() {"10", "11", "12", "13", "14", "15", "16", "17", "18"})
         Me.cmbTime.Location = New System.Drawing.Point(551, 214)
-        Me.cmbTime.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmbTime.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbTime.Name = "cmbTime"
         Me.cmbTime.Size = New System.Drawing.Size(32, 21)
         Me.cmbTime.TabIndex = 26
@@ -260,7 +269,7 @@ Partial Class ansattSide
         Me.TabPage2.Controls.Add(Me.lstBestillinger)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(745, 410)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Bestillinger"
@@ -405,7 +414,7 @@ Partial Class ansattSide
         Me.TabPage3.Controls.Add(Me.cBoxOversikt)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage3.Size = New System.Drawing.Size(745, 410)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Oversikt blodbank"
@@ -414,7 +423,7 @@ Partial Class ansattSide
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(434, 34)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(68, 43)
         Me.Button1.TabIndex = 30
@@ -496,7 +505,7 @@ Partial Class ansattSide
         'btnHurtigB
         '
         Me.btnHurtigB.Location = New System.Drawing.Point(334, 15)
-        Me.btnHurtigB.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnHurtigB.Margin = New System.Windows.Forms.Padding(2)
         Me.btnHurtigB.Name = "btnHurtigB"
         Me.btnHurtigB.Size = New System.Drawing.Size(92, 32)
         Me.btnHurtigB.TabIndex = 29
@@ -506,7 +515,7 @@ Partial Class ansattSide
         'btnLoggUt
         '
         Me.btnLoggUt.Location = New System.Drawing.Point(661, 14)
-        Me.btnLoggUt.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnLoggUt.Margin = New System.Windows.Forms.Padding(2)
         Me.btnLoggUt.Name = "btnLoggUt"
         Me.btnLoggUt.Size = New System.Drawing.Size(76, 32)
         Me.btnLoggUt.TabIndex = 14
@@ -516,7 +525,7 @@ Partial Class ansattSide
         'endrePwBtn
         '
         Me.endrePwBtn.Location = New System.Drawing.Point(9, 15)
-        Me.endrePwBtn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.endrePwBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.endrePwBtn.Name = "endrePwBtn"
         Me.endrePwBtn.Size = New System.Drawing.Size(91, 32)
         Me.endrePwBtn.TabIndex = 13
@@ -566,15 +575,6 @@ Partial Class ansattSide
         Me.Panel3.Size = New System.Drawing.Size(753, 57)
         Me.Panel3.TabIndex = 26
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(311, 73)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(58, 13)
-        Me.Label2.TabIndex = 29
-        Me.Label2.Text = "Kandidater"
-        '
         'ansattSide
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -584,6 +584,7 @@ Partial Class ansattSide
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "ansattSide"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "ansattSide"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)

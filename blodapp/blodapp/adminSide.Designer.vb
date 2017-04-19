@@ -27,32 +27,32 @@ Partial Class adminSide
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label20 = New System.Windows.Forms.Label()
         Me.endrePwBtn = New System.Windows.Forms.Button()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
         Me.sokSpesCmb = New System.Windows.Forms.ComboBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.btnFjernBruker = New System.Windows.Forms.Button()
+        Me.Label18 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.btnEndrePersoninfo = New System.Windows.Forms.Button()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.sokTxt = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
@@ -137,7 +137,7 @@ Partial Class adminSide
         Me.TabPage1.Controls.Add(Me.btnSokBruker)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(730, 390)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Brukeradministrasjon"
@@ -146,7 +146,7 @@ Partial Class adminSide
         'Button3
         '
         Me.Button3.Location = New System.Drawing.Point(622, 89)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(2)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(86, 53)
         Me.Button3.TabIndex = 38
@@ -163,6 +163,25 @@ Partial Class adminSide
         Me.Label21.TabIndex = 37
         Me.Label21.Text = "Blodtype"
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(495, 203)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(39, 13)
+        Me.Label8.TabIndex = 30
+        Me.Label8.Text = "Label8"
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel1.Location = New System.Drawing.Point(3, 304)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(724, 83)
+        Me.Panel1.TabIndex = 23
+        '
         'Label20
         '
         Me.Label20.AutoSize = True
@@ -172,6 +191,34 @@ Partial Class adminSide
         Me.Label20.Size = New System.Drawing.Size(40, 13)
         Me.Label20.TabIndex = 36
         Me.Label20.Text = "Post nr"
+        '
+        'endrePwBtn
+        '
+        Me.endrePwBtn.Location = New System.Drawing.Point(538, 238)
+        Me.endrePwBtn.Margin = New System.Windows.Forms.Padding(2)
+        Me.endrePwBtn.Name = "endrePwBtn"
+        Me.endrePwBtn.Size = New System.Drawing.Size(90, 33)
+        Me.endrePwBtn.TabIndex = 22
+        Me.endrePwBtn.Text = "Endre passord"
+        Me.endrePwBtn.UseVisualStyleBackColor = True
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(89, 55)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(98, 20)
+        Me.TextBox2.TabIndex = 24
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(246, 220)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(50, 13)
+        Me.Label6.TabIndex = 21
+        Me.Label6.Text = "Velg rolle"
         '
         'Label19
         '
@@ -183,6 +230,33 @@ Partial Class adminSide
         Me.Label19.TabIndex = 35
         Me.Label19.Text = "Adresse"
         '
+        'sokSpesCmb
+        '
+        Me.sokSpesCmb.FormattingEnabled = True
+        Me.sokSpesCmb.Items.AddRange(New Object() {"fornavn", "etternavn", "e-post"})
+        Me.sokSpesCmb.Location = New System.Drawing.Point(305, 217)
+        Me.sokSpesCmb.Margin = New System.Windows.Forms.Padding(2)
+        Me.sokSpesCmb.Name = "sokSpesCmb"
+        Me.sokSpesCmb.Size = New System.Drawing.Size(92, 21)
+        Me.sokSpesCmb.TabIndex = 20
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(89, 32)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(98, 20)
+        Me.TextBox1.TabIndex = 0
+        '
+        'btnFjernBruker
+        '
+        Me.btnFjernBruker.Location = New System.Drawing.Point(495, 148)
+        Me.btnFjernBruker.Name = "btnFjernBruker"
+        Me.btnFjernBruker.Size = New System.Drawing.Size(133, 23)
+        Me.btnFjernBruker.TabIndex = 19
+        Me.btnFjernBruker.Text = "Fjern bruker fra database"
+        Me.btnFjernBruker.UseVisualStyleBackColor = True
+        '
         'Label18
         '
         Me.Label18.AutoSize = True
@@ -193,6 +267,32 @@ Partial Class adminSide
         Me.Label18.TabIndex = 34
         Me.Label18.Text = "Tlf"
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(495, 131)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(95, 13)
+        Me.Label5.TabIndex = 18
+        Me.Label5.Text = "Fjerne valgt bruker"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(89, 77)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(98, 20)
+        Me.TextBox3.TabIndex = 25
+        '
+        'btnEndrePersoninfo
+        '
+        Me.btnEndrePersoninfo.Location = New System.Drawing.Point(495, 89)
+        Me.btnEndrePersoninfo.Name = "btnEndrePersoninfo"
+        Me.btnEndrePersoninfo.Size = New System.Drawing.Size(121, 23)
+        Me.btnEndrePersoninfo.TabIndex = 17
+        Me.btnEndrePersoninfo.Text = "Lagre ny info"
+        Me.btnEndrePersoninfo.UseVisualStyleBackColor = True
+        '
         'Label17
         '
         Me.Label17.AutoSize = True
@@ -202,6 +302,32 @@ Partial Class adminSide
         Me.Label17.Size = New System.Drawing.Size(37, 13)
         Me.Label17.TabIndex = 33
         Me.Label17.Text = "E-post"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(495, 73)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(85, 13)
+        Me.Label4.TabIndex = 16
+        Me.Label4.Text = "Endre brukerinfo"
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(89, 100)
+        Me.TextBox4.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(98, 20)
+        Me.TextBox4.TabIndex = 26
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(622, 27)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(48, 23)
+        Me.Button2.TabIndex = 15
+        Me.Button2.Text = "Endre"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'Label16
         '
@@ -214,166 +340,6 @@ Partial Class adminSide
         Me.Label16.Text = "Etternavn"
         Me.Label16.UseCompatibleTextRendering = True
         '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(16, 32)
-        Me.Label15.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(46, 13)
-        Me.Label15.TabIndex = 31
-        Me.Label15.Text = "Fornavn"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(495, 203)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(39, 13)
-        Me.Label8.TabIndex = 30
-        Me.Label8.Text = "Label8"
-        '
-        'TextBox7
-        '
-        Me.TextBox7.Location = New System.Drawing.Point(89, 168)
-        Me.TextBox7.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(98, 20)
-        Me.TextBox7.TabIndex = 29
-        '
-        'TextBox6
-        '
-        Me.TextBox6.Location = New System.Drawing.Point(89, 145)
-        Me.TextBox6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(98, 20)
-        Me.TextBox6.TabIndex = 28
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(89, 123)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(98, 20)
-        Me.TextBox5.TabIndex = 27
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(89, 100)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(98, 20)
-        Me.TextBox4.TabIndex = 26
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(89, 77)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(98, 20)
-        Me.TextBox3.TabIndex = 25
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(89, 55)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(98, 20)
-        Me.TextBox2.TabIndex = 24
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(89, 32)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(98, 20)
-        Me.TextBox1.TabIndex = 0
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Location = New System.Drawing.Point(3, 304)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(724, 83)
-        Me.Panel1.TabIndex = 23
-        '
-        'endrePwBtn
-        '
-        Me.endrePwBtn.Location = New System.Drawing.Point(538, 238)
-        Me.endrePwBtn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.endrePwBtn.Name = "endrePwBtn"
-        Me.endrePwBtn.Size = New System.Drawing.Size(90, 33)
-        Me.endrePwBtn.TabIndex = 22
-        Me.endrePwBtn.Text = "Endre passord"
-        Me.endrePwBtn.UseVisualStyleBackColor = True
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(246, 220)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(50, 13)
-        Me.Label6.TabIndex = 21
-        Me.Label6.Text = "Velg rolle"
-        '
-        'sokSpesCmb
-        '
-        Me.sokSpesCmb.FormattingEnabled = True
-        Me.sokSpesCmb.Items.AddRange(New Object() {"fornavn", "etternavn", "e-post"})
-        Me.sokSpesCmb.Location = New System.Drawing.Point(305, 217)
-        Me.sokSpesCmb.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.sokSpesCmb.Name = "sokSpesCmb"
-        Me.sokSpesCmb.Size = New System.Drawing.Size(92, 21)
-        Me.sokSpesCmb.TabIndex = 20
-        '
-        'btnFjernBruker
-        '
-        Me.btnFjernBruker.Location = New System.Drawing.Point(495, 148)
-        Me.btnFjernBruker.Name = "btnFjernBruker"
-        Me.btnFjernBruker.Size = New System.Drawing.Size(133, 23)
-        Me.btnFjernBruker.TabIndex = 19
-        Me.btnFjernBruker.Text = "Fjern bruker fra database"
-        Me.btnFjernBruker.UseVisualStyleBackColor = True
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(495, 131)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(95, 13)
-        Me.Label5.TabIndex = 18
-        Me.Label5.Text = "Fjerne valgt bruker"
-        '
-        'btnEndrePersoninfo
-        '
-        Me.btnEndrePersoninfo.Location = New System.Drawing.Point(495, 89)
-        Me.btnEndrePersoninfo.Name = "btnEndrePersoninfo"
-        Me.btnEndrePersoninfo.Size = New System.Drawing.Size(121, 23)
-        Me.btnEndrePersoninfo.TabIndex = 17
-        Me.btnEndrePersoninfo.Text = "Lagre ny info"
-        Me.btnEndrePersoninfo.UseVisualStyleBackColor = True
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(495, 73)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(85, 13)
-        Me.Label4.TabIndex = 16
-        Me.Label4.Text = "Endre brukerinfo"
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(622, 27)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(48, 23)
-        Me.Button2.TabIndex = 15
-        Me.Button2.Text = "Endre"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -382,6 +348,14 @@ Partial Class adminSide
         Me.Label3.Size = New System.Drawing.Size(96, 13)
         Me.Label3.TabIndex = 14
         Me.Label3.Text = "Endre brukerstatus"
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(89, 123)
+        Me.TextBox5.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(98, 20)
+        Me.TextBox5.TabIndex = 27
         '
         'ComboBox1
         '
@@ -392,6 +366,24 @@ Partial Class adminSide
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox1.TabIndex = 13
         '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(16, 32)
+        Me.Label15.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(46, 13)
+        Me.Label15.TabIndex = 31
+        Me.Label15.Text = "Fornavn"
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Location = New System.Drawing.Point(89, 145)
+        Me.TextBox6.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(98, 20)
+        Me.TextBox6.TabIndex = 28
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -400,6 +392,14 @@ Partial Class adminSide
         Me.Label2.Size = New System.Drawing.Size(83, 13)
         Me.Label2.TabIndex = 12
         Me.Label2.Text = "Søk etter bruker"
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Location = New System.Drawing.Point(89, 168)
+        Me.TextBox7.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(98, 20)
+        Me.TextBox7.TabIndex = 29
         '
         'sokTxt
         '
@@ -462,8 +462,8 @@ Partial Class adminSide
         Me.TabPage2.Controls.Add(Me.epostTxt)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
-        Me.TabPage2.Size = New System.Drawing.Size(729, 390)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(730, 390)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Legg til ny bruker"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -483,7 +483,7 @@ Partial Class adminSide
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Items.AddRange(New Object() {"blodgiver", "ansatt", "leder", "admin"})
         Me.ComboBox2.Location = New System.Drawing.Point(169, 225)
-        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(92, 21)
         Me.ComboBox2.TabIndex = 52
@@ -665,7 +665,7 @@ Partial Class adminSide
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(738, 55)
+        Me.Panel2.Size = New System.Drawing.Size(734, 55)
         Me.Panel2.TabIndex = 20
         '
         'PictureBox1
@@ -692,10 +692,11 @@ Partial Class adminSide
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(738, 455)
+        Me.ClientSize = New System.Drawing.Size(734, 459)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "adminSide"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()

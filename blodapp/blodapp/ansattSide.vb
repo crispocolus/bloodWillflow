@@ -9,6 +9,7 @@
         hentBestillinger()
         fyllBlodtype()
         kalenderToUker()
+        Me.CenterToParent()
     End Sub
 
     'Knapp for å endre passord. 

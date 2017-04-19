@@ -5,6 +5,7 @@ Public Class egenerklaering
 
     Private Sub egenerklaering_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'ComboBox1.Items.AddRange(File.ReadAllLines("land.txt"))
+        Me.CenterToParent()
     End Sub
 
     Private Sub nesteSide(sender As Object, e As EventArgs) Handles btnEgenNext1.Click, btnEgenNext2.Click, btnEgenNext3.Click, btnEgenNext4.Click, btnEgenNext5.Click

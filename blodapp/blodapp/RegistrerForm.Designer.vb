@@ -48,34 +48,30 @@ Partial Class RegistrerForm
         '
         'epostTxt
         '
-        Me.epostTxt.Location = New System.Drawing.Point(51, 192)
-        Me.epostTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.epostTxt.Location = New System.Drawing.Point(38, 156)
         Me.epostTxt.Name = "epostTxt"
-        Me.epostTxt.Size = New System.Drawing.Size(132, 22)
+        Me.epostTxt.Size = New System.Drawing.Size(100, 20)
         Me.epostTxt.TabIndex = 4
         '
         'fornavnTxt
         '
-        Me.fornavnTxt.Location = New System.Drawing.Point(49, 31)
-        Me.fornavnTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.fornavnTxt.Location = New System.Drawing.Point(37, 25)
         Me.fornavnTxt.Name = "fornavnTxt"
-        Me.fornavnTxt.Size = New System.Drawing.Size(132, 22)
+        Me.fornavnTxt.Size = New System.Drawing.Size(100, 20)
         Me.fornavnTxt.TabIndex = 1
         '
         'etternavnTxt
         '
-        Me.etternavnTxt.Location = New System.Drawing.Point(49, 82)
-        Me.etternavnTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.etternavnTxt.Location = New System.Drawing.Point(37, 67)
         Me.etternavnTxt.Name = "etternavnTxt"
-        Me.etternavnTxt.Size = New System.Drawing.Size(132, 22)
+        Me.etternavnTxt.Size = New System.Drawing.Size(100, 20)
         Me.etternavnTxt.TabIndex = 2
         '
         'tlfTxt
         '
-        Me.tlfTxt.Location = New System.Drawing.Point(51, 246)
-        Me.tlfTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tlfTxt.Location = New System.Drawing.Point(38, 200)
         Me.tlfTxt.Name = "tlfTxt"
-        Me.tlfTxt.Size = New System.Drawing.Size(132, 22)
+        Me.tlfTxt.Size = New System.Drawing.Size(100, 20)
         Me.tlfTxt.TabIndex = 5
         '
         'Label1
@@ -83,10 +79,9 @@ Partial Class RegistrerForm
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label1.Location = New System.Drawing.Point(45, 172)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(34, 140)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(44, 17)
+        Me.Label1.Size = New System.Drawing.Size(34, 13)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Epost"
         '
@@ -95,10 +90,9 @@ Partial Class RegistrerForm
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label2.Location = New System.Drawing.Point(45, 11)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(34, 9)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(60, 17)
+        Me.Label2.Size = New System.Drawing.Size(46, 13)
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "Fornavn"
         '
@@ -107,10 +101,9 @@ Partial Class RegistrerForm
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label3.Location = New System.Drawing.Point(45, 63)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(34, 51)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(69, 17)
+        Me.Label3.Size = New System.Drawing.Size(53, 13)
         Me.Label3.TabIndex = 7
         Me.Label3.Text = "Etternavn"
         '
@@ -119,19 +112,17 @@ Partial Class RegistrerForm
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label4.Location = New System.Drawing.Point(45, 225)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(34, 183)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(56, 17)
+        Me.Label4.Size = New System.Drawing.Size(43, 13)
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "Telefon"
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(137, 322)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button1.Location = New System.Drawing.Point(103, 262)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(149, 44)
+        Me.Button1.Size = New System.Drawing.Size(112, 36)
         Me.Button1.TabIndex = 11
         Me.Button1.Text = "Registrer"
         Me.Button1.UseVisualStyleBackColor = True
@@ -141,19 +132,17 @@ Partial Class RegistrerForm
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label5.Location = New System.Drawing.Point(45, 111)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(34, 90)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(108, 17)
+        Me.Label5.Size = New System.Drawing.Size(80, 13)
         Me.Label5.TabIndex = 12
         Me.Label5.Text = "Personnummer:"
         '
         'pnummerTxt
         '
-        Me.pnummerTxt.Location = New System.Drawing.Point(49, 130)
-        Me.pnummerTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pnummerTxt.Location = New System.Drawing.Point(37, 106)
         Me.pnummerTxt.Name = "pnummerTxt"
-        Me.pnummerTxt.Size = New System.Drawing.Size(132, 22)
+        Me.pnummerTxt.Size = New System.Drawing.Size(100, 20)
         Me.pnummerTxt.TabIndex = 3
         '
         'Label6
@@ -161,10 +150,9 @@ Partial Class RegistrerForm
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label6.Location = New System.Drawing.Point(249, 225)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(187, 183)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(112, 17)
+        Me.Label6.Size = New System.Drawing.Size(84, 13)
         Me.Label6.TabIndex = 16
         Me.Label6.Text = "Bekreft passord:"
         '
@@ -173,38 +161,34 @@ Partial Class RegistrerForm
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label7.Location = New System.Drawing.Point(248, 171)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(186, 139)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(60, 17)
+        Me.Label7.Size = New System.Drawing.Size(45, 13)
         Me.Label7.TabIndex = 15
         Me.Label7.Text = "Passord"
         '
         'passordcTxt
         '
-        Me.passordcTxt.Location = New System.Drawing.Point(252, 246)
-        Me.passordcTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.passordcTxt.Location = New System.Drawing.Point(189, 200)
         Me.passordcTxt.Name = "passordcTxt"
         Me.passordcTxt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.passordcTxt.Size = New System.Drawing.Size(132, 22)
+        Me.passordcTxt.Size = New System.Drawing.Size(100, 20)
         Me.passordcTxt.TabIndex = 9
         '
         'passordTxt
         '
-        Me.passordTxt.Location = New System.Drawing.Point(252, 192)
-        Me.passordTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.passordTxt.Location = New System.Drawing.Point(189, 156)
         Me.passordTxt.Name = "passordTxt"
         Me.passordTxt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.passordTxt.Size = New System.Drawing.Size(132, 22)
+        Me.passordTxt.Size = New System.Drawing.Size(100, 20)
         Me.passordTxt.TabIndex = 8
         '
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(48, 276)
-        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CheckBox1.Location = New System.Drawing.Point(36, 224)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(18, 17)
+        Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox1.TabIndex = 10
         Me.CheckBox1.TextAlign = System.Drawing.ContentAlignment.TopLeft
         Me.CheckBox1.UseVisualStyleBackColor = True
@@ -214,19 +198,17 @@ Partial Class RegistrerForm
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label8.Location = New System.Drawing.Point(85, 276)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Location = New System.Drawing.Point(64, 224)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(335, 17)
+        Me.Label8.Size = New System.Drawing.Size(247, 13)
         Me.Label8.TabIndex = 18
         Me.Label8.Text = "Jeg har lest og godkjent brukervilkår for registrering"
         '
         'adresseTxt
         '
-        Me.adresseTxt.Location = New System.Drawing.Point(251, 32)
-        Me.adresseTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.adresseTxt.Location = New System.Drawing.Point(188, 26)
         Me.adresseTxt.Name = "adresseTxt"
-        Me.adresseTxt.Size = New System.Drawing.Size(132, 22)
+        Me.adresseTxt.Size = New System.Drawing.Size(100, 20)
         Me.adresseTxt.TabIndex = 6
         '
         'adresseLbl
@@ -234,19 +216,17 @@ Partial Class RegistrerForm
         Me.adresseLbl.AutoSize = True
         Me.adresseLbl.BackColor = System.Drawing.Color.Transparent
         Me.adresseLbl.ForeColor = System.Drawing.SystemColors.Control
-        Me.adresseLbl.Location = New System.Drawing.Point(248, 11)
-        Me.adresseLbl.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.adresseLbl.Location = New System.Drawing.Point(186, 9)
         Me.adresseLbl.Name = "adresseLbl"
-        Me.adresseLbl.Size = New System.Drawing.Size(60, 17)
+        Me.adresseLbl.Size = New System.Drawing.Size(45, 13)
         Me.adresseLbl.TabIndex = 20
         Me.adresseLbl.Text = "Adresse"
         '
         'postnrTxt
         '
-        Me.postnrTxt.Location = New System.Drawing.Point(251, 82)
-        Me.postnrTxt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.postnrTxt.Location = New System.Drawing.Point(188, 67)
         Me.postnrTxt.Name = "postnrTxt"
-        Me.postnrTxt.Size = New System.Drawing.Size(132, 22)
+        Me.postnrTxt.Size = New System.Drawing.Size(100, 20)
         Me.postnrTxt.TabIndex = 7
         '
         'postnrLbl
@@ -254,29 +234,28 @@ Partial Class RegistrerForm
         Me.postnrLbl.AutoSize = True
         Me.postnrLbl.BackColor = System.Drawing.Color.Transparent
         Me.postnrLbl.ForeColor = System.Drawing.SystemColors.Control
-        Me.postnrLbl.Location = New System.Drawing.Point(248, 63)
-        Me.postnrLbl.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.postnrLbl.Location = New System.Drawing.Point(186, 51)
         Me.postnrLbl.Name = "postnrLbl"
-        Me.postnrLbl.Size = New System.Drawing.Size(95, 17)
+        Me.postnrLbl.Size = New System.Drawing.Size(71, 13)
         Me.postnrLbl.TabIndex = 22
         Me.postnrLbl.Text = "Postnunmmer"
         '
         'tilbakeBtn
         '
-        Me.tilbakeBtn.Location = New System.Drawing.Point(12, 366)
-        Me.tilbakeBtn.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.tilbakeBtn.Location = New System.Drawing.Point(9, 297)
+        Me.tilbakeBtn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.tilbakeBtn.Name = "tilbakeBtn"
-        Me.tilbakeBtn.Size = New System.Drawing.Size(75, 23)
+        Me.tilbakeBtn.Size = New System.Drawing.Size(56, 19)
         Me.tilbakeBtn.TabIndex = 23
         Me.tilbakeBtn.Text = "Tilbake"
         Me.tilbakeBtn.UseVisualStyleBackColor = True
         '
         'RegistrerForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(433, 400)
+        Me.ClientSize = New System.Drawing.Size(325, 325)
         Me.Controls.Add(Me.tilbakeBtn)
         Me.Controls.Add(Me.postnrLbl)
         Me.Controls.Add(Me.postnrTxt)
@@ -299,8 +278,8 @@ Partial Class RegistrerForm
         Me.Controls.Add(Me.etternavnTxt)
         Me.Controls.Add(Me.fornavnTxt)
         Me.Controls.Add(Me.epostTxt)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "RegistrerForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "RegistrerForm"
         Me.ResumeLayout(False)
         Me.PerformLayout()

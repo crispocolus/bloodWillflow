@@ -2,6 +2,12 @@
 
     Public button1click As Boolean
     Public button2click As Boolean
+
+    Private Sub MsgBoxCustom_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.CenterToParent()
+    End Sub
+
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         button1click = True
         Me.Close()
@@ -11,4 +17,6 @@
         button2click = True
         Me.Close()
     End Sub
+
+
 End Class

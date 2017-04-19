@@ -1,6 +1,12 @@
 ﻿Public Class lederSide
     Dim kommentar As String
 
+    Private Sub lederSide_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.CenterToParent()
+    End Sub
+
+
+
     'Dim giverBehov As String = TextBox1.Text
     Private Sub btnRetur_Click(sender As Object, e As EventArgs) Handles btnRetur.Click
 
@@ -88,6 +94,7 @@
     Private Sub lstKandidater_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstKandidater.SelectedIndexChanged
 
     End Sub
+
 
     'Private Sub btnBehov_Click(sender As Object, e As EventArgs) Handles btnBehov.Click
     '    If IsNumeric(txtMengde) Then

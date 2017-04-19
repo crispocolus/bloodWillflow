@@ -4,6 +4,10 @@ Public Class RegistrerForm
         SjekkInfo(postnrTxt.Text, adresseTxt.Text, pnummerTxt.Text, fornavnTxt.Text, etternavnTxt.Text, epostTxt.Text, tlfTxt.Text, finnFdato(pnummerTxt.Text), passordcTxt.Text, passordTxt.Text)
     End Sub
 
+    Private Sub RegistrerForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.CenterToParent()
+    End Sub
+
 
     Public Sub SjekkInfo(post_nr As String, adresse As String, pnummer As String, fornavn As String, etternavn As String, epost As String, tlf As String, fdato As String, passordc As String, passord As String)
         Dim Registrering As New RegBruker
@@ -84,5 +88,6 @@ Public Class RegistrerForm
         Me.Close()
         LoginForm.Show()
     End Sub
+
 
 End Class
