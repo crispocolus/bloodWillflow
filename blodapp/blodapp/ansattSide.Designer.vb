@@ -57,7 +57,6 @@ Partial Class ansattSide
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lstBestillinger = New System.Windows.Forms.ListBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.lblResultat = New System.Windows.Forms.Label()
         Me.cBoxProdukt = New System.Windows.Forms.ComboBox()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -403,7 +402,6 @@ Partial Class ansattSide
         '
         'TabPage3
         '
-        Me.TabPage3.Controls.Add(Me.Button1)
         Me.TabPage3.Controls.Add(Me.lblResultat)
         Me.TabPage3.Controls.Add(Me.cBoxProdukt)
         Me.TabPage3.Controls.Add(Me.Label13)
@@ -420,20 +418,10 @@ Partial Class ansattSide
         Me.TabPage3.Text = "Oversikt blodbank"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(434, 34)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(68, 43)
-        Me.Button1.TabIndex = 30
-        Me.Button1.Text = "Oversikt Test"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'lblResultat
         '
         Me.lblResultat.AutoSize = True
-        Me.lblResultat.Location = New System.Drawing.Point(507, 40)
+        Me.lblResultat.Location = New System.Drawing.Point(313, 37)
         Me.lblResultat.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblResultat.Name = "lblResultat"
         Me.lblResultat.Size = New System.Drawing.Size(0, 13)
@@ -637,7 +625,6 @@ Partial Class ansattSide
     Friend WithEvents Label13 As Label
     Friend WithEvents cBoxProdukt As ComboBox
     Friend WithEvents lblResultat As Label
-    Friend WithEvents Button1 As Button
     Friend WithEvents lblKolon As Label
     Friend WithEvents cmbMin As ComboBox
     Friend WithEvents cmbTime As ComboBox
