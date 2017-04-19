@@ -9,7 +9,6 @@
         hentBestillinger()
         fyllBlodtype()
         kalenderToUker()
-        blodFullOversikt()
         Me.CenterToParent()
     End Sub
 
@@ -109,7 +108,7 @@
 
     'Oppdaterer **(??)** når verdien endres. 
     Private Sub CBoxProdukt_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cBoxProdukt.SelectedIndexChanged
-
+        ListBox1.Items.Clear()
 
         Dim blodtype As String
         Dim produkt As String
@@ -118,6 +117,11 @@
         produkt = cBoxProdukt.SelectedItem
 
         blodInfo()
+    End Sub
+
+    'Knapp for å hente ut full blod-oversikt. 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        blodFullOversikt()
     End Sub
 
     '*******FUNKSJONER OG PROSEDYRER************
@@ -237,18 +241,18 @@
 
             ListBox1.Items.Add("Blodplasma: ")
             For Each rad In tabellPlasma.Rows
-                ListBox1.Items.Add(rad("blodtype") & vbTab & rad("count(blodtype)") * 0.45 & "L")
+                ListBox1.Items.Add(rad("blodtype") & vbTab & rad("count(blodtype)"))
 
             Next
             ListBox1.Items.Add("Blodplater")
             For Each rad In tabellPlater.Rows
 
-                ListBox1.Items.Add(rad("blodtype") & vbTab & rad("count(blodtype)") * 0.45 & "L")
+                ListBox1.Items.Add(rad("blodtype") & vbTab & rad("count(blodtype)"))
 
             Next
             ListBox1.Items.Add("Blodlegemer: ")
             For Each rad In tabellLegemer.Rows
-                ListBox1.Items.Add(rad("blodtype") & vbTab & rad("count(blodtype)") * 0.45 & "L")
+                ListBox1.Items.Add(rad("blodtype") & vbTab & rad("count(blodtype)"))
 
             Next
 
