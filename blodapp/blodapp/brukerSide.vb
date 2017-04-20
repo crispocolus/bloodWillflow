@@ -32,7 +32,6 @@ Public Class brukerSide
             lblEpost.Text = (rad("epost"))
             lblAdresse.Text = (rad("gateadresse"))
             lblPostnr.Text = (rad("post_nr"))
-
         Next
     End Sub
 
@@ -67,8 +66,6 @@ Public Class brukerSide
             For Each rad As DataRow In tabell.Rows
 
                 timeLst.Items.Add(New ansattSide.listItem With {.display = rad("oppmote") & " - UBEKREFTET", .value = rad("innkallings_id")})
-
-
             Next
         Else
         End If
@@ -83,9 +80,8 @@ Public Class brukerSide
 
         innkallingLst.Items.Clear()
         For Each rad As DataRow In resultatTab.Rows
-                innkallingLst.Items.Add(New ansattSide.listItem With {.display = rad("fritekst_innkalling") & " " & rad("oppmote"), .value = rad("innkallings_id")})
-            Next
-
+            innkallingLst.Items.Add(New ansattSide.listItem With {.display = rad("fritekst_innkalling") & " " & rad("oppmote"), .value = rad("innkallings_id")})
+        Next
     End Sub
 
     Private Sub MonthCalendar2_DateChanged(sender As Object, e As DateRangeEventArgs) Handles MonthCalendar2.DateChanged
@@ -102,10 +98,6 @@ Public Class brukerSide
         For Each rad As DataRow In data.Rows
             datoInkallLst.Items.Add(rad("fritekst_innkalling") & " " & rad("oppmote"))
         Next
-    End Sub
-
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
-
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -132,8 +124,6 @@ Public Class brukerSide
         adresseTxt.Visible = True
         postnrTxt.Text = lblPostnr.Text
         postnrTxt.Visible = True
-
-
     End Sub
 
     Private Sub endrePwBtn_Click(sender As Object, e As EventArgs) Handles endrePwBtn.Click
@@ -143,9 +133,6 @@ Public Class brukerSide
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Try
-
-
-
             Dim info As New info
             Dim bruker As String = LoginForm.bnavn
             Dim fornavn As String = fornavnTxt.Text
@@ -192,9 +179,6 @@ Public Class brukerSide
             lblPostnr.Show()
             lblTlf.Show()
 
-
-
-
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -224,12 +208,6 @@ Public Class brukerSide
             MsgBox("Du må velge en time")
         End Try
     End Sub
-
-
-
-
-
-
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Dim info As New info
@@ -264,12 +242,8 @@ Public Class brukerSide
         Dim tabell As DataTable
         Dim pNr As Double
         Try
-
-
             Dim bruker As String
             bruker = LoginForm.bnavn
-
-
 
             '****Tanken er å sjekke om alt er fyllt ut, ellers virker ikke koden (kræsj)*****
             'If lstKandidater.SelectedItem Or cmbTime.SelectedItem Or cmbMin.SelectedItem = "" Then
@@ -309,12 +283,13 @@ Public Class brukerSide
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Dim Egenerk As New EgenErk
-        Dim table As New DataTable
+        Dim table As New ArrayList
+        Dim sql As New SQL
 
         table = Egenerk.hentEgenErk(1231231231)
-        For i = 1 To table.Rows.Count
-            For Each rad In table.Rows
-                ListBox4.Items.Add(rad(i))
+        For i = 1 To table.Count
+            For Each rad In table
+                'ListBox4.Items.Add(rad(i))
             Next
         Next
     End Sub

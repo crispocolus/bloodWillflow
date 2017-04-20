@@ -3,6 +3,7 @@ Public Class SQL
     'Her ligger oppkoblingsdata, pluss en variabel for å se om tilkobling er 'aktiv'
     Public oppkobling = New MySqlConnection("server=mysql.stud.iie.ntnu.no;database=g_oops_25;uid=g_oops_25;Pwd=M3PV7P9e;Convert Zero Datetime=true;")
     Public paakoblet As Boolean = False
+    Public testArray As New ArrayList
 End Class
 Public Class Login
     'Bruker ligger som eget objekt
@@ -353,22 +354,46 @@ Public Class EgenErk
         Dim connect As New SQL
         Dim oppkobling = connect.oppkobling
         Dim skjema_id As String
-        Dim tabell As New DataTable
+        Dim navnTabell As New DataTable
+        Dim setningReturn As String = ""
+        Dim dataTabell As New DataTable
+        Dim returnTabell As New DataTable
+        Dim sqel As New SQL
 
-        skjema_id = hentSenesteEgenErk(1231231231)
+        skjema_id = hentSenesteEgenErk(pnummer)
         oppkobling.Open()
 
         Dim sqlSporring = "SHOW COLUMNS FROM skjema_besvar"
 
-        Dim sqlSporring2 = "SELECT group_concat( concat( * ) SEPARATOR ', ')
-                           FROM skjema_besvar"
         Dim SQL As New MySqlCommand(sqlSporring, oppkobling)
-        Dim SQL2 As New MySqlCommand(sqlSporring2, oppkobling)
 
         Dim da As New MySqlDataAdapter
         da.SelectCommand = SQL
-        da.Fill(tabell)
-        Return tabell
+        da.Fill(navnTabell)
+
+        For Each rad In navnTabell.Rows
+            setningReturn = setningReturn & rad("Field") & ", "
+        Next
+
+        MsgBox(setningReturn)
+
+        Dim sqlSporring2 = "SELECT *
+                            FROM skjema_besvar WHERE skjema_id = " & skjema_id & ""
+        Dim SQL2 As New MySqlCommand(sqlSporring2, oppkobling)
+
+        Dim da2 As New MySqlDataAdapter
+        da2.SelectCommand = SQL2
+        da2.Fill(dataTabell)
+
+        For Each navn In navnTabell.Rows
+            For Each rad In dataTabell.Rows
+                MsgBox(rad(navn("Field")))
+                sqel.testArray.Add(rad(navn("Field")))
+            Next
+        Next
+
+        Return sqel.testArray
+
         oppkobling.Close()
 
         'skjema_id = hentSenesteEgenErk(pnummer)
