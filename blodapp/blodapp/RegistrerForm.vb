@@ -27,12 +27,14 @@ Public Class RegistrerForm
         If pros.validateEmail(epost) = True Then
             If data.Rows.Count > 0 Then
                 Dim customMsgBox As New MsgBoxCustom
-                customMsgBox.Label1.Text = "E-post er registrert fra før av. " & vbCrLf & "Vil du logge inn eller har du glemt passord?"
-                customMsgBox.Button1.Text = "Gå til logg inn"
-                customMsgBox.Button2.Text = "Gå til glemt passord"
-                customMsgBox.Button3.Visible = True
-                customMsgBox.Button3.Text = "Tilbake til registrering"
-                customMsgBox.ShowDialog()
+                With customMsgBox
+                    .Label1.Text = "E-post er registrert fra før av. " & vbCrLf & "Vil du logge inn eller har du glemt passord?"
+                    .Button1.Text = "Gå til logg inn"
+                    .Button2.Text = "Gå til glemt passord"
+                    .Button3.Visible = True
+                    .Button3.Text = "Tilbake til registrering"
+                    .ShowDialog()
+                End With
 
                 If customMsgBox.button1click = True Then
                     Me.Close()

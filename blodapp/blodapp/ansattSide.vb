@@ -11,6 +11,7 @@
         kalenderToUker()
         Me.CenterToParent()
         blodFullOversikt()
+        sjekkInnSvar()
 
     End Sub
 
@@ -160,6 +161,23 @@
         Next
         Dim sResult As String = ""
 
+    End Sub
+
+    Private Sub sjekkInnSvar()
+        Dim info As New info
+        Dim tabell As New DataTable
+        svarInnLst.Items.Clear()
+
+
+
+        tabell = info.queryJoin("innkallinger.person_nr, innkallinger.oppmote, bruker.fornavn, bruker.etternavn, innkallinger.innkallings_id, fritekst_innkalling, innkallinger.status", "innkallinger", "bruker ON bruker.person_nr = innkallinger.person_nr", "innkallinger.status = 1;")
+
+
+        svarInnLst.Items.Clear()
+
+        For Each rad As DataRow In tabell.Rows
+            svarInnLst.Items.Add(New ansattSide.listItem With {.display = rad("oppmote") & " " & rad("fornavn") & " " & rad("etternavn"), .value = rad("innkallings_id")})
+        Next
     End Sub
 
     Public Sub sendInnkalling()
@@ -320,6 +338,27 @@
         Next
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
+        Dim info As New info
+        Dim tabell As New DataTable
+        Dim innId As Double
+        innId = CType(svarInnLst.SelectedItem, ansattSide.listItem).value
+
+        Dim customMsgBox As New MsgBoxCustom
+
+        customMsgBox.Label1.Text = "Skal den valgte timen bekreftes eller kanselleres"
+        customMsgBox.Button1.Text = "Bekrefte"
+        customMsgBox.Button2.Text = "Kansellere"
+
+        customMsgBox.ShowDialog()
+
+        If customMsgBox.button1click = True Then
+            info.queryUpdate("innkallinger", "status = 2", "innkallings_id = '" & innId & "';")
+        ElseIf customMsgBox.button2click = True Then
+            info.queryUpdate("innkallinger", "status = 3", "innkallings_id = '" & innId & "';")
+        End If
+        sjekkInnSvar()
+    End Sub
 End Class
 
