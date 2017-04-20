@@ -25,7 +25,7 @@
 
         ListBox1.Items.Clear()
         For Each rad As DataRow In resultatTab.Rows
-            ListBox1.Items.Add(New ansattSide.listItem With {.display = rad("Fornavn") & " " & rad("Etternavn") & " " & rad("Epost") & " " & rad("Fdato"), .value = rad("person_nr")})
+            ListBox1.Items.Add(New listItem With {.display = rad("Fornavn") & " " & rad("Etternavn") & " " & rad("Epost") & " " & rad("Fdato"), .value = rad("person_nr")})
         Next
 
     End Sub
@@ -75,7 +75,7 @@
             Dim info As New info
 
             Dim bruker As Double
-            bruker = CType(ListBox1.SelectedItem, ansattSide.listItem).value
+            bruker = CType(ListBox1.SelectedItem, listItem).value
             Dim brukerstatus As Integer
             brukerstatus = 0
 
@@ -107,7 +107,7 @@
 
             Dim info As New info
             Dim bruker As Double
-            bruker = CType(ListBox1.SelectedItem, ansattSide.listItem).value
+            bruker = CType(ListBox1.SelectedItem, listItem).value
             Dim brukerstatus As Integer
             brukerstatus = 9
             info.queryUpdate("bruker", "brukerstatus = '" & brukerstatus & "'", "person_nr = '" & bruker & "';")
@@ -128,7 +128,7 @@
             Dim info As New info
             Dim tabell As New DataTable
             Dim pNummer As Double
-            pNummer = CType(ListBox1.SelectedItem, ansattSide.listItem).value
+            pNummer = CType(ListBox1.SelectedItem, listItem).value
 
 
 
@@ -157,7 +157,7 @@
 
             Dim info As New info
             Dim bruker As Double
-            bruker = CType(ListBox1.SelectedItem, ansattSide.listItem).value
+            bruker = CType(ListBox1.SelectedItem, listItem).value
             Dim fornavn As String = TextBox1.Text
             Dim etternavn As String = TextBox2.Text
             Dim epost As String = TextBox3.Text

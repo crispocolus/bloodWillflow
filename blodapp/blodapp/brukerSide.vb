@@ -1,7 +1,4 @@
-﻿Imports System.Globalization
-Imports MySql.Data.MySqlClient
-
-Public Class brukerSide
+﻿Public Class brukerSide
     Private Sub brukerSide_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         info()
         sjekkMelding()
@@ -48,7 +45,7 @@ Public Class brukerSide
         If resultatTab.Rows.Count > 0 Then
             MsgBox("DU HAR FÅTT " & resultatTab.Rows.Count & " innkalling(er)")
             For Each rad As DataRow In resultatTab.Rows
-                innkallingLst.Items.Add(New ansattSide.listItem With {.display = rad("fritekst_innkalling") & " " & rad("oppmote"), .value = rad("innkallings_id")})
+                innkallingLst.Items.Add(New listItem With {.display = rad("fritekst_innkalling") & " " & rad("oppmote"), .value = rad("innkallings_id")})
             Next
         Else
         End If
@@ -60,12 +57,10 @@ Public Class brukerSide
         Dim tabell As New DataTable
         tabell = info.queryJoin("innkallinger.person_nr, innkallinger.oppmote, innkallinger.innkallings_id, fritekst_innkalling, innkallinger.status", "innkallinger", "bruker ON bruker.person_nr = innkallinger.person_nr", " bruker.epost = '" & LoginForm.bnavn & "' AND innkallinger.status = 1;")
 
-
         timeLst.Items.Clear()
         If tabell.Rows.Count > 0 Then
             For Each rad As DataRow In tabell.Rows
-
-                timeLst.Items.Add(New ansattSide.listItem With {.display = rad("oppmote") & " - UBEKREFTET", .value = rad("innkallings_id")})
+                timeLst.Items.Add(New listItem With {.display = rad("oppmote") & " - UBEKREFTET", .value = rad("innkallings_id")})
             Next
         Else
         End If
@@ -80,7 +75,7 @@ Public Class brukerSide
 
         innkallingLst.Items.Clear()
         For Each rad As DataRow In resultatTab.Rows
-            innkallingLst.Items.Add(New ansattSide.listItem With {.display = rad("fritekst_innkalling") & " " & rad("oppmote"), .value = rad("innkallings_id")})
+            innkallingLst.Items.Add(New listItem With {.display = rad("fritekst_innkalling") & " " & rad("oppmote"), .value = rad("innkallings_id")})
         Next
     End Sub
 
@@ -100,7 +95,7 @@ Public Class brukerSide
         Next
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub btnEgenErk_Click(sender As Object, e As EventArgs) Handles btnEgenErk.Click
         egenerklaering.Show()
     End Sub
 
@@ -126,12 +121,12 @@ Public Class brukerSide
         postnrTxt.Visible = True
     End Sub
 
-    Private Sub endrePwBtn_Click(sender As Object, e As EventArgs) Handles endrePwBtn.Click
+    Private Sub endrePwBtn_Click(sender As Object, e As EventArgs) Handles btnEndrePw.Click
         Dim pros As New prosedyrer
         pros.endrePw(LoginForm.bnavn)
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub btnLagrePInfo_Click(sender As Object, e As EventArgs) Handles btnLagrePInfo.Click
         Try
             Dim info As New info
             Dim bruker As String = LoginForm.bnavn
@@ -145,7 +140,6 @@ Public Class brukerSide
             info.queryUpdate("bruker", "fornavn = '" & fornavn & "', etternavn = '" & etternavn & "', epost = '" & epost & "', telefon = '" & telefon & "', gateadresse = '" & gateadresse & "'", "epost = '" & bruker & "';")
 
             MsgBox("Brukerinfo er blitt oppdatert")
-
 
             Dim tabell As New DataTable
             tabell = info.queryJoin("*", "bruker", "postnummer ON bruker.post_nr = postnummer.post_nr", "epost = '" & epostTxt.Text & "';")
@@ -190,7 +184,7 @@ Public Class brukerSide
         Try
 
 
-            innNr = CType(timeLst.SelectedItem, ansattSide.listItem).value
+            innNr = CType(timeLst.SelectedItem, listItem).value
             Dim svar
             svar = MsgBox("Er du sikker på at du vil avbestille timen?", MsgBoxStyle.YesNo Or MsgBoxStyle.Critical)
 
@@ -209,10 +203,10 @@ Public Class brukerSide
         End Try
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub bnSvarInkalling_Click(sender As Object, e As EventArgs) Handles btnSvarInkalling.Click
         Dim info As New info
         Dim innNr As Double
-        innNr = CType(innkallingLst.SelectedItem, ansattSide.listItem).value
+        innNr = CType(innkallingLst.SelectedItem, listItem).value
 
         Dim customMsgBox As New MsgBoxCustom
 
@@ -281,16 +275,16 @@ Public Class brukerSide
         sjekkInn()
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Dim Egenerk As New EgenErk
-        Dim table As New ArrayList
-        Dim sql As New SQL
+    Private Sub Button4_Click(sender As Object, e As EventArgs)
+        'Dim Egenerk As New EgenErk
+        'Dim table As New ArrayList
+        'Dim sql As New SQL
 
-        table = Egenerk.hentEgenErk(1231231231)
-        For i = 1 To table.Count
-            For Each rad In table
-                'ListBox4.Items.Add(rad(i))
-            Next
-        Next
+        'table = Egenerk.hentEgenErk(1231231231)
+        'For i = 1 To table.Count
+        '    For Each rad In table
+        '        'ListBox4.Items.Add(rad(i))
+        '    Next
+        'Next
     End Sub
 End Class

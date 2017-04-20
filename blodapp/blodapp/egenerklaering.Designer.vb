@@ -105,7 +105,7 @@ Partial Class egenerklaering
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cmbEgenLand = New System.Windows.Forms.ComboBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -271,8 +271,13 @@ Partial Class egenerklaering
         Me.LineShape45 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape44 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.Panel62 = New System.Windows.Forms.Panel()
+        Me.CheckBox62 = New System.Windows.Forms.CheckBox()
+        Me.Label20 = New System.Windows.Forms.Label()
         Me.btnEgenBack4 = New System.Windows.Forms.Button()
         Me.Panel55 = New System.Windows.Forms.Panel()
+        Me.Panel61 = New System.Windows.Forms.Panel()
+        Me.CheckBox61 = New System.Windows.Forms.CheckBox()
         Me.CheckBox55 = New System.Windows.Forms.CheckBox()
         Me.Panel54 = New System.Windows.Forms.Panel()
         Me.CheckBox54 = New System.Windows.Forms.CheckBox()
@@ -319,6 +324,8 @@ Partial Class egenerklaering
         Me.Label72 = New System.Windows.Forms.Label()
         Me.Label70 = New System.Windows.Forms.Label()
         Me.ShapeContainer4 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.LineShape86 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape85 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape73 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape72 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape71 = New Microsoft.VisualBasic.PowerPacks.LineShape()
@@ -374,13 +381,7 @@ Partial Class egenerklaering
         Me.LineShape76 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape75 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape74 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape85 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape86 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Panel61 = New System.Windows.Forms.Panel()
-        Me.CheckBox61 = New System.Windows.Forms.CheckBox()
-        Me.Panel62 = New System.Windows.Forms.Panel()
-        Me.CheckBox62 = New System.Windows.Forms.CheckBox()
+        Me.Label19 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -428,7 +429,9 @@ Partial Class egenerklaering
         Me.Panel33.SuspendLayout()
         Me.Panel32.SuspendLayout()
         Me.TabPage5.SuspendLayout()
+        Me.Panel62.SuspendLayout()
         Me.Panel55.SuspendLayout()
+        Me.Panel61.SuspendLayout()
         Me.Panel54.SuspendLayout()
         Me.Panel53.SuspendLayout()
         Me.Panel52.SuspendLayout()
@@ -448,8 +451,6 @@ Partial Class egenerklaering
         Me.Panel58.SuspendLayout()
         Me.Panel57.SuspendLayout()
         Me.Panel56.SuspendLayout()
-        Me.Panel61.SuspendLayout()
-        Me.Panel62.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -468,6 +469,7 @@ Partial Class egenerklaering
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Label19)
         Me.TabPage1.Controls.Add(Me.lblSomFør)
         Me.TabPage1.Controls.Add(Me.Panel2)
         Me.TabPage1.Controls.Add(Me.Panel1)
@@ -755,7 +757,7 @@ Partial Class egenerklaering
         Me.TabPage2.Controls.Add(Me.Label8)
         Me.TabPage2.Controls.Add(Me.Label7)
         Me.TabPage2.Controls.Add(Me.Label6)
-        Me.TabPage2.Controls.Add(Me.ComboBox1)
+        Me.TabPage2.Controls.Add(Me.cmbEgenLand)
         Me.TabPage2.Controls.Add(Me.Label11)
         Me.TabPage2.Controls.Add(Me.Label10)
         Me.TabPage2.Controls.Add(Me.Label9)
@@ -1278,13 +1280,13 @@ Partial Class egenerklaering
         Me.Label6.TabIndex = 116
         Me.Label6.Text = "minst seks måneder i et område hvor malaria"
         '
-        'ComboBox1
+        'cmbEgenLand
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(193, 565)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 19
+        Me.cmbEgenLand.FormattingEnabled = True
+        Me.cmbEgenLand.Location = New System.Drawing.Point(193, 565)
+        Me.cmbEgenLand.Name = "cmbEgenLand"
+        Me.cmbEgenLand.Size = New System.Drawing.Size(121, 21)
+        Me.cmbEgenLand.TabIndex = 19
         '
         'Label11
         '
@@ -2855,6 +2857,34 @@ Partial Class egenerklaering
         Me.TabPage5.Text = "Side 4"
         Me.TabPage5.UseVisualStyleBackColor = True
         '
+        'Panel62
+        '
+        Me.Panel62.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel62.Controls.Add(Me.CheckBox62)
+        Me.Panel62.Location = New System.Drawing.Point(287, 633)
+        Me.Panel62.Name = "Panel62"
+        Me.Panel62.Size = New System.Drawing.Size(23, 23)
+        Me.Panel62.TabIndex = 71
+        '
+        'CheckBox62
+        '
+        Me.CheckBox62.AutoSize = True
+        Me.CheckBox62.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox62.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox62.Name = "CheckBox62"
+        Me.CheckBox62.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox62.TabIndex = 258
+        Me.CheckBox62.UseVisualStyleBackColor = True
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(39, 633)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(183, 13)
+        Me.Label20.TabIndex = 140
+        Me.Label20.Text = "Solgt seksuelle tjenester (prostitusjon)"
+        '
         'btnEgenBack4
         '
         Me.btnEgenBack4.Location = New System.Drawing.Point(98, 683)
@@ -2873,6 +2903,25 @@ Partial Class egenerklaering
         Me.Panel55.Name = "Panel55"
         Me.Panel55.Size = New System.Drawing.Size(23, 23)
         Me.Panel55.TabIndex = 70
+        '
+        'Panel61
+        '
+        Me.Panel61.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel61.Controls.Add(Me.CheckBox61)
+        Me.Panel61.Location = New System.Drawing.Point(-2, -2)
+        Me.Panel61.Name = "Panel61"
+        Me.Panel61.Size = New System.Drawing.Size(23, 23)
+        Me.Panel61.TabIndex = 70
+        '
+        'CheckBox61
+        '
+        Me.CheckBox61.AutoSize = True
+        Me.CheckBox61.Location = New System.Drawing.Point(2, 3)
+        Me.CheckBox61.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox61.Name = "CheckBox61"
+        Me.CheckBox61.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox61.TabIndex = 258
+        Me.CheckBox61.UseVisualStyleBackColor = True
         '
         'CheckBox55
         '
@@ -3303,6 +3352,22 @@ Partial Class egenerklaering
         Me.ShapeContainer4.Size = New System.Drawing.Size(1149, 734)
         Me.ShapeContainer4.TabIndex = 139
         Me.ShapeContainer4.TabStop = False
+        '
+        'LineShape86
+        '
+        Me.LineShape86.Name = "LineShape86"
+        Me.LineShape86.X1 = 22
+        Me.LineShape86.X2 = 325
+        Me.LineShape86.Y1 = 656
+        Me.LineShape86.Y2 = 656
+        '
+        'LineShape85
+        '
+        Me.LineShape85.Name = "LineShape85"
+        Me.LineShape85.X1 = 325
+        Me.LineShape85.X2 = 325
+        Me.LineShape85.Y1 = 616
+        Me.LineShape85.Y2 = 657
         '
         'LineShape73
         '
@@ -3802,68 +3867,14 @@ Partial Class egenerklaering
         Me.LineShape74.Y1 = 42
         Me.LineShape74.Y2 = 253
         '
-        'LineShape85
+        'Label19
         '
-        Me.LineShape85.Name = "LineShape85"
-        Me.LineShape85.X1 = 325
-        Me.LineShape85.X2 = 325
-        Me.LineShape85.Y1 = 616
-        Me.LineShape85.Y2 = 657
-        '
-        'LineShape86
-        '
-        Me.LineShape86.Name = "LineShape86"
-        Me.LineShape86.X1 = 22
-        Me.LineShape86.X2 = 325
-        Me.LineShape86.Y1 = 656
-        Me.LineShape86.Y2 = 656
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(39, 633)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(183, 13)
-        Me.Label20.TabIndex = 140
-        Me.Label20.Text = "Solgt seksuelle tjenester (prostitusjon)"
-        '
-        'Panel61
-        '
-        Me.Panel61.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel61.Controls.Add(Me.CheckBox61)
-        Me.Panel61.Location = New System.Drawing.Point(-2, -2)
-        Me.Panel61.Name = "Panel61"
-        Me.Panel61.Size = New System.Drawing.Size(23, 23)
-        Me.Panel61.TabIndex = 70
-        '
-        'CheckBox61
-        '
-        Me.CheckBox61.AutoSize = True
-        Me.CheckBox61.Location = New System.Drawing.Point(2, 3)
-        Me.CheckBox61.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox61.Name = "CheckBox61"
-        Me.CheckBox61.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox61.TabIndex = 258
-        Me.CheckBox61.UseVisualStyleBackColor = True
-        '
-        'Panel62
-        '
-        Me.Panel62.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel62.Controls.Add(Me.CheckBox62)
-        Me.Panel62.Location = New System.Drawing.Point(287, 633)
-        Me.Panel62.Name = "Panel62"
-        Me.Panel62.Size = New System.Drawing.Size(23, 23)
-        Me.Panel62.TabIndex = 71
-        '
-        'CheckBox62
-        '
-        Me.CheckBox62.AutoSize = True
-        Me.CheckBox62.Location = New System.Drawing.Point(2, 3)
-        Me.CheckBox62.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox62.Name = "CheckBox62"
-        Me.CheckBox62.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox62.TabIndex = 258
-        Me.CheckBox62.UseVisualStyleBackColor = True
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(175, 543)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(45, 13)
+        Me.Label19.TabIndex = 100000
+        Me.Label19.Text = "Label19"
         '
         'egenerklaering
         '
@@ -3967,8 +3978,12 @@ Partial Class egenerklaering
         Me.Panel32.PerformLayout()
         Me.TabPage5.ResumeLayout(False)
         Me.TabPage5.PerformLayout()
+        Me.Panel62.ResumeLayout(False)
+        Me.Panel62.PerformLayout()
         Me.Panel55.ResumeLayout(False)
         Me.Panel55.PerformLayout()
+        Me.Panel61.ResumeLayout(False)
+        Me.Panel61.PerformLayout()
         Me.Panel54.ResumeLayout(False)
         Me.Panel54.PerformLayout()
         Me.Panel53.ResumeLayout(False)
@@ -4007,10 +4022,6 @@ Partial Class egenerklaering
         Me.Panel57.PerformLayout()
         Me.Panel56.ResumeLayout(False)
         Me.Panel56.PerformLayout()
-        Me.Panel61.ResumeLayout(False)
-        Me.Panel61.PerformLayout()
-        Me.Panel62.ResumeLayout(False)
-        Me.Panel62.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -4116,7 +4127,7 @@ Partial Class egenerklaering
     Friend WithEvents btnEgenNext5 As Button
     Friend WithEvents btnEgenSubmit As Button
     Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cmbEgenLand As ComboBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
@@ -4373,4 +4384,5 @@ Partial Class egenerklaering
     Friend WithEvents CheckBox61 As CheckBox
     Friend WithEvents LineShape86 As PowerPacks.LineShape
     Friend WithEvents LineShape85 As PowerPacks.LineShape
+    Friend WithEvents Label19 As Label
 End Class

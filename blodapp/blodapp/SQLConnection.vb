@@ -3,7 +3,6 @@ Public Class SQL
     'Her ligger oppkoblingsdata, pluss en variabel for å se om tilkobling er 'aktiv'
     Public oppkobling = New MySqlConnection("server=mysql.stud.iie.ntnu.no;database=g_oops_25;uid=g_oops_25;Pwd=M3PV7P9e;Convert Zero Datetime=true;")
     Public paakoblet As Boolean = False
-    Public testArray As New ArrayList
 End Class
 Public Class Login
     'Bruker ligger som eget objekt
@@ -308,26 +307,27 @@ Public Class info
 End Class
 
 Public Class EgenErk
-    Public Sub sendEgenErk(pnummer As String)
+    Public svarTabell As New ArrayList
+    Public Function sendEgenErk(pnummer As String, land As String)
         'Importerer oppkobling fra SQL klassen
         Dim info As New info
         Dim connect As New SQL
         Dim oppkobling = connect.oppkobling
         Dim skjema_id As String
 
-        'Try
-        oppkobling.Open()
+        Try
+            oppkobling.Open()
 
-        'SQL spørring som utføres 
-        Dim sqlSporring = "insert into skjema (person_nr, dato) values (" & pnummer & ", CURDATE())"
+            'SQL spørring som utføres 
+            Dim sqlSporring = "insert into skjema (person_nr, dato) values (" & pnummer & ", CURDATE())"
 
-        Dim sql As New MySqlCommand(sqlSporring, oppkobling)
-        sql.ExecuteNonQuery()
+            Dim sql As New MySqlCommand(sqlSporring, oppkobling)
+            sql.ExecuteNonQuery()
 
-        skjema_id = hentSenesteEgenErk(pnummer)
+            skjema_id = hentSenesteEgenErk(pnummer)
 
-        info.queryUpdate("blodgiver", "sendSms = " & egenerklaering.svar(0) & ", sendEpost= '" & egenerklaering.svar(1) & "'", "person_nr = '" & pnummer & "'")
-        Dim sqlSporring2 = "INSERT INTO skjema_besvar VALUES(" & hentDataTabLand(skjema_id, "Norge") & ");
+            info.queryUpdate("blodgiver", "sendSms = " & egenerklaering.svar(0) & ", sendEpost= '" & egenerklaering.svar(1) & "'", "person_nr = '" & pnummer & "'")
+            Dim sqlSporring2 = "INSERT INTO skjema_besvar VALUES(" & hentDataTabLand(skjema_id, land) & ");
                             INSERT INTO skjema_fire_uker VALUES(" & hentDataTab(skjema_id, 18, 22) & ");
                             INSERT INTO skjema_to_aar VALUES(" & hentDataTab(skjema_id, 23, 23) & ");               
                             INSERT INTO skjema_seks_mnd VALUES(" & hentDataTab(skjema_id, 24, 40) & ");
@@ -335,120 +335,30 @@ Public Class EgenErk
                             INSERT INTO skjema_kvinner VALUES(" & hentDataTab(skjema_id, 56, 59) & ");
                             INSERT INTO skjema_menn VALUES(" & hentDataTab(skjema_id, 60, 60) & ")"
 
-        MsgBox(sqlSporring2)
+            Dim sql2 As New MySqlCommand(sqlSporring2, oppkobling)
 
-        Dim sql2 As New MySqlCommand(sqlSporring2, oppkobling)
+            'Utfører SQL-spørringen
+            sql2.ExecuteNonQuery()
+            Return "Egenerklæring er innlevert." & vbCrLf & "Ta kontakt i resepsjonen for videre oppfølging."
 
-        'Utfører SQL-spørringen
-        sql2.ExecuteNonQuery()
-
-        oppkobling.Close()
-        'Catch ex As Exception
-        'MessageBox.Show("Noe gikk galt " & ex.Message)
-        'End Try
-    End Sub
-
-    Public Function hentEgenErk(pnummer As String)
-        'Importerer oppkobling fra SQL klassen
-        Dim info As New info
-        Dim connect As New SQL
-        Dim oppkobling = connect.oppkobling
-        Dim skjema_id As String
-        Dim navnTabell As New DataTable
-        Dim setningReturn As String = ""
-        Dim dataTabell As New DataTable
-        Dim returnTabell As New DataTable
-        Dim sqel As New SQL
-
-        skjema_id = hentSenesteEgenErk(pnummer)
-        oppkobling.Open()
-
-        Dim sqlSporring = "SHOW COLUMNS FROM skjema_besvar"
-
-        Dim SQL As New MySqlCommand(sqlSporring, oppkobling)
-
-        Dim da As New MySqlDataAdapter
-        da.SelectCommand = SQL
-        da.Fill(navnTabell)
-
-        For Each rad In navnTabell.Rows
-            setningReturn = setningReturn & rad("Field") & ", "
-        Next
-
-        MsgBox(setningReturn)
-
-        Dim sqlSporring2 = "SELECT *
-                            FROM skjema_besvar WHERE skjema_id = " & skjema_id & ""
-        Dim SQL2 As New MySqlCommand(sqlSporring2, oppkobling)
-
-        Dim da2 As New MySqlDataAdapter
-        da2.SelectCommand = SQL2
-        da2.Fill(dataTabell)
-
-        For Each navn In navnTabell.Rows
-            For Each rad In dataTabell.Rows
-                MsgBox(rad(navn("Field")))
-                sqel.testArray.Add(rad(navn("Field")))
-            Next
-        Next
-
-        Return sqel.testArray
-
-        oppkobling.Close()
-
-        'skjema_id = hentSenesteEgenErk(pnummer)
-
-        'table = info.query("*, NULL As skjema_id", "skjema_besvar", "skjema_id = " & skjema_id & "")
-
-        'For Each rad In table.Rows
-        '    For Each column In rad.columns
-        '        MsgBox(column)
-        '        table2.Add(column)
-        '    Next
-        'Next
-
-        'Return table2
-
-        'sql2.ExecuteNonQuery()
-
-        'oppkobling.Close()
-
-
-
-        'info.query("*", "skjema_besvar", "pnummer = " & pnummer & "")
-
-        'info.query("*", "skjema_besvar", "pnummer = " & pnummer & "")
-
-        'info.query("*", "skjema_besvar", "pnummer = " & pnummer & "")
-
-        'info.query("*", "skjema_besvar", "pnummer = " & pnummer & "")
-
-        'info.query("*", "skjema_besvar", "pnummer = " & pnummer & "")
-        'info.query("*", "skjema_besvar", "pnummer = " & pnummer & "")
-
-        'info.queryUpdate("blodgiver", "sendSms = " & egenerklaering.svar(0) & ", sendEpost= '" & egenerklaering.svar(1) & "'", "person_nr = '" & pnummer & "'")
-        'Dim sqlSporring2 = "SELECT * FROM skjema_besvar VALUES(" & hentDataTabLand(skjema_id, "Norge") & ");
-        '                    INSERT INTO skjema_fire_uker VALUES(" & hentDataTab(skjema_id, 18, 22) & ");
-        '                    INSERT INTO skjema_to_aar VALUES(" & hentDataTab(skjema_id, 23, 23) & ");               
-        '                    INSERT INTO skjema_seks_mnd VALUES(" & hentDataTab(skjema_id, 24, 40) & ");
-        '                    INSERT INTO skjema_livet VALUES(" & hentDataTab(skjema_id, 41, 55) & ");
-        '                    INSERT INTO skjema_kvinner VALUES(" & hentDataTab(skjema_id, 56, 59) & ");
-        '                    INSERT INTO skjema_menn VALUES(" & hentDataTab(skjema_id, 60, 60) & ")"
-
-        'Catch ex As Exception
-        'MessageBox.Show("Noe gikk galt " & ex.Message)
-        'End Try
+            oppkobling.Close()
+        Catch ex As Exception
+            MessageBox.Show("Noe gikk galt " & ex.Message)
+            Return ex.Message
+        End Try
     End Function
 
     Public Function hentSenesteEgenErk(personnummer As String)
         Dim info As New info
         Dim tabell As New DataTable
+        Dim skjema_id As String = ""
 
         tabell = info.query("skjema_id", "skjema", "person_nr = " & personnummer & " ORDER BY skjema_id DESC LIMIT 1")
         For Each rad In tabell.Rows
-            Return rad("skjema_id")
+            skjema_id = rad("skjema_id")
         Next
 
+        Return skjema_id
     End Function
     Public Function hentDataTabLand(skjema_id As String, land As String)
         Dim mid As String = skjema_id & ", "
@@ -459,7 +369,6 @@ Public Class EgenErk
                 mid += "'" & land & "'"
             End If
         Next
-        'MsgBox(mid)
         Return mid
     End Function
     Public Function hentDataTab(skjema_id As String, start As Double, slutt As Double)
@@ -469,8 +378,6 @@ Public Class EgenErk
             mid = mid & egenerklaering.svar(start)
             Return mid
         Else
-            MsgBox(start)
-            MsgBox(slutt)
             For i = start To slutt
                 If i = slutt Then
                     mid = mid & egenerklaering.svar(i)
@@ -478,10 +385,77 @@ Public Class EgenErk
                     mid = mid & egenerklaering.svar(i) & ", "
                 End If
             Next
-            'MsgBox(mid2)
             Return CStr(mid)
         End If
     End Function
+
+    Public Sub hentEgenTabell(tabell As String, skjema_id As String)
+        Dim info As New info
+        Dim connect As New SQL
+        Dim oppkobling = connect.oppkobling
+        Dim navnTabell As New ArrayList
+        Dim dataTabell As New DataTable
+        Dim returnTabell As New ArrayList
+        Dim setningReturn As String = ""
+
+        navnTabell.Clear()
+        dataTabell.Clear()
+        returnTabell.Clear()
+
+        oppkobling.open()
+
+        'SQL spørring som utføres
+        Dim sqlSporring = "SHOW COLUMNS FROM " & tabell & ""
+        Dim sql As New MySqlCommand(sqlSporring, oppkobling)
+
+        'Setter en leser på sql-spørringen
+        Dim leser = sql.ExecuteReader()
+        While leser.Read()
+            Select Case leser("Field")
+                Case "Land_oppvokst"
+                    Continue While
+                Case "skjema_id"
+                    Continue While
+                Case Else
+                    navnTabell.Add(leser("Field"))
+            End Select
+        End While
+        leser.Close()
+
+        For Each rad In navnTabell
+            If navnTabell.IndexOf(rad) < navnTabell.Count - 1 Then
+                setningReturn = setningReturn & rad & ", "
+            Else
+                setningReturn = setningReturn & rad
+            End If
+        Next
+
+        Dim sqlSporring2 = "SELECT " & setningReturn & " FROM " & tabell & " WHERE skjema_id = " & skjema_id & ""
+        Dim SQL2 As New MySqlCommand(sqlSporring2, oppkobling)
+
+        Dim da2 As New MySqlDataAdapter
+        da2.SelectCommand = SQL2
+        da2.Fill(dataTabell)
+
+        For Each navn In navnTabell
+            For Each rad In dataTabell.Rows
+                svarTabell.Add((rad(navn)))
+            Next
+        Next
+        oppkobling.Close()
+    End Sub
+
+    Public Sub hentEgenTabellBruker(person_nr As String, skjema_id As String)
+        Dim info As New info
+        Dim dataTable As New DataTable
+
+        dataTable = info.query("sendSms, sendEpost", "blodgiver", "person_nr = " & person_nr & "")
+
+        For Each rad In dataTable.Rows
+            svarTabell.Add(rad("sendSms"))
+            svarTabell.Add(rad("sendEpost"))
+        Next
+    End Sub
 End Class
 
 

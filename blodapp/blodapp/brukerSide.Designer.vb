@@ -24,7 +24,7 @@ Partial Class brukerSide
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(brukerSide))
         Me.MonthCalendar2 = New System.Windows.Forms.MonthCalendar()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.lblVelgLedigTime = New System.Windows.Forms.Label()
         Me.datoInkallLst = New System.Windows.Forms.ListBox()
         Me.btnSokTime = New System.Windows.Forms.Button()
         Me.ListBox5 = New System.Windows.Forms.ListBox()
@@ -43,25 +43,25 @@ Partial Class brukerSide
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.timeLst = New System.Windows.Forms.ListBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnSvarInkalling = New System.Windows.Forms.Button()
+        Me.btnLagrePInfo = New System.Windows.Forms.Button()
         Me.lblPostnr = New System.Windows.Forms.Label()
         Me.postnrTxt = New System.Windows.Forms.TextBox()
         Me.lblAdresse = New System.Windows.Forms.Label()
         Me.adresseTxt = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.endrePwBtn = New System.Windows.Forms.Button()
         Me.lblEpost = New System.Windows.Forms.Label()
         Me.lblTlf = New System.Windows.Forms.Label()
         Me.lblEtternavn = New System.Windows.Forms.Label()
         Me.lblFornavn = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnEgenErk = New System.Windows.Forms.Button()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.ListBox4 = New System.Windows.Forms.ListBox()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.lblKolon = New System.Windows.Forms.Label()
+        Me.lblKlokkeslett = New System.Windows.Forms.Label()
         Me.cmbMin = New System.Windows.Forms.ComboBox()
         Me.cmbTime = New System.Windows.Forms.ComboBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.btnEndrePw = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TabControl1.SuspendLayout()
@@ -73,30 +73,30 @@ Partial Class brukerSide
         '
         'MonthCalendar2
         '
-        Me.MonthCalendar2.Location = New System.Drawing.Point(25, 50)
+        Me.MonthCalendar2.Location = New System.Drawing.Point(11, 36)
         Me.MonthCalendar2.Name = "MonthCalendar2"
         Me.MonthCalendar2.TabIndex = 0
         '
-        'Label5
+        'lblVelgLedigTime
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(34, 24)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(90, 13)
-        Me.Label5.TabIndex = 1
-        Me.Label5.Text = "Velg en ledig time"
+        Me.lblVelgLedigTime.AutoSize = True
+        Me.lblVelgLedigTime.Location = New System.Drawing.Point(73, 14)
+        Me.lblVelgLedigTime.Name = "lblVelgLedigTime"
+        Me.lblVelgLedigTime.Size = New System.Drawing.Size(90, 13)
+        Me.lblVelgLedigTime.TabIndex = 1
+        Me.lblVelgLedigTime.Text = "Velg en ledig time"
         '
         'datoInkallLst
         '
         Me.datoInkallLst.FormattingEnabled = True
-        Me.datoInkallLst.Location = New System.Drawing.Point(335, 24)
+        Me.datoInkallLst.Location = New System.Drawing.Point(260, 36)
         Me.datoInkallLst.Name = "datoInkallLst"
-        Me.datoInkallLst.Size = New System.Drawing.Size(87, 108)
+        Me.datoInkallLst.Size = New System.Drawing.Size(160, 160)
         Me.datoInkallLst.TabIndex = 2
         '
         'btnSokTime
         '
-        Me.btnSokTime.Location = New System.Drawing.Point(335, 199)
+        Me.btnSokTime.Location = New System.Drawing.Point(64, 249)
         Me.btnSokTime.Name = "btnSokTime"
         Me.btnSokTime.Size = New System.Drawing.Size(108, 23)
         Me.btnSokTime.TabIndex = 3
@@ -108,13 +108,13 @@ Partial Class brukerSide
         Me.ListBox5.FormattingEnabled = True
         Me.ListBox5.Location = New System.Drawing.Point(289, 50)
         Me.ListBox5.Name = "ListBox5"
-        Me.ListBox5.Size = New System.Drawing.Size(85, 82)
+        Me.ListBox5.Size = New System.Drawing.Size(85, 186)
         Me.ListBox5.TabIndex = 4
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(297, 21)
+        Me.Label6.Location = New System.Drawing.Point(304, 21)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(49, 13)
         Me.Label6.TabIndex = 5
@@ -123,7 +123,7 @@ Partial Class brukerSide
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(165, 21)
+        Me.Label7.Location = New System.Drawing.Point(172, 21)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(70, 13)
         Me.Label7.TabIndex = 6
@@ -134,14 +134,14 @@ Partial Class brukerSide
         Me.innkallingLst.FormattingEnabled = True
         Me.innkallingLst.Location = New System.Drawing.Point(12, 50)
         Me.innkallingLst.Name = "innkallingLst"
-        Me.innkallingLst.Size = New System.Drawing.Size(119, 82)
+        Me.innkallingLst.Size = New System.Drawing.Size(119, 186)
         Me.innkallingLst.TabIndex = 8
         '
         'btnAvbestillTime
         '
-        Me.btnAvbestillTime.Location = New System.Drawing.Point(567, 193)
+        Me.btnAvbestillTime.Location = New System.Drawing.Point(399, 245)
         Me.btnAvbestillTime.Name = "btnAvbestillTime"
-        Me.btnAvbestillTime.Size = New System.Drawing.Size(138, 23)
+        Me.btnAvbestillTime.Size = New System.Drawing.Size(166, 23)
         Me.btnAvbestillTime.TabIndex = 9
         Me.btnAvbestillTime.Text = "Avbestill time"
         Me.btnAvbestillTime.UseVisualStyleBackColor = True
@@ -149,7 +149,7 @@ Partial Class brukerSide
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(9, 21)
+        Me.Label8.Location = New System.Drawing.Point(26, 21)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(93, 13)
         Me.Label8.TabIndex = 10
@@ -157,7 +157,7 @@ Partial Class brukerSide
         '
         'btnEndrePersinfo
         '
-        Me.btnEndrePersinfo.Location = New System.Drawing.Point(289, 185)
+        Me.btnEndrePersinfo.Location = New System.Drawing.Point(159, 216)
         Me.btnEndrePersinfo.Name = "btnEndrePersinfo"
         Me.btnEndrePersinfo.Size = New System.Drawing.Size(103, 23)
         Me.btnEndrePersinfo.TabIndex = 11
@@ -220,19 +220,18 @@ Partial Class brukerSide
         Me.TabPage1.BackColor = System.Drawing.Color.Gainsboro
         Me.TabPage1.Controls.Add(Me.Label9)
         Me.TabPage1.Controls.Add(Me.timeLst)
-        Me.TabPage1.Controls.Add(Me.Button3)
-        Me.TabPage1.Controls.Add(Me.Button2)
+        Me.TabPage1.Controls.Add(Me.btnSvarInkalling)
+        Me.TabPage1.Controls.Add(Me.btnLagrePInfo)
         Me.TabPage1.Controls.Add(Me.lblPostnr)
         Me.TabPage1.Controls.Add(Me.postnrTxt)
         Me.TabPage1.Controls.Add(Me.lblAdresse)
         Me.TabPage1.Controls.Add(Me.adresseTxt)
         Me.TabPage1.Controls.Add(Me.Panel1)
-        Me.TabPage1.Controls.Add(Me.endrePwBtn)
         Me.TabPage1.Controls.Add(Me.lblEpost)
         Me.TabPage1.Controls.Add(Me.lblTlf)
         Me.TabPage1.Controls.Add(Me.lblEtternavn)
         Me.TabPage1.Controls.Add(Me.lblFornavn)
-        Me.TabPage1.Controls.Add(Me.Button1)
+        Me.TabPage1.Controls.Add(Me.btnEgenErk)
         Me.TabPage1.Controls.Add(Me.btnEndrePersinfo)
         Me.TabPage1.Controls.Add(Me.fornavnTxt)
         Me.TabPage1.Controls.Add(Me.Label8)
@@ -254,7 +253,7 @@ Partial Class brukerSide
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(564, 21)
+        Me.Label9.Location = New System.Drawing.Point(456, 21)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(48, 13)
         Me.Label9.TabIndex = 20
@@ -263,33 +262,33 @@ Partial Class brukerSide
         'timeLst
         '
         Me.timeLst.FormattingEnabled = True
-        Me.timeLst.Location = New System.Drawing.Point(567, 55)
+        Me.timeLst.Location = New System.Drawing.Point(399, 50)
         Me.timeLst.Name = "timeLst"
-        Me.timeLst.Size = New System.Drawing.Size(166, 121)
+        Me.timeLst.Size = New System.Drawing.Size(166, 186)
         Me.timeLst.TabIndex = 20
         '
-        'Button3
+        'btnSvarInkalling
         '
-        Me.Button3.Location = New System.Drawing.Point(12, 156)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(138, 23)
-        Me.Button3.TabIndex = 31
-        Me.Button3.Text = "Svar på innkalling"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnSvarInkalling.Location = New System.Drawing.Point(12, 245)
+        Me.btnSvarInkalling.Name = "btnSvarInkalling"
+        Me.btnSvarInkalling.Size = New System.Drawing.Size(119, 23)
+        Me.btnSvarInkalling.TabIndex = 31
+        Me.btnSvarInkalling.Text = "Svar på innkalling"
+        Me.btnSvarInkalling.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnLagrePInfo
         '
-        Me.Button2.Location = New System.Drawing.Point(289, 214)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(103, 23)
-        Me.Button2.TabIndex = 30
-        Me.Button2.Text = "Lagre"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnLagrePInfo.Location = New System.Drawing.Point(159, 245)
+        Me.btnLagrePInfo.Name = "btnLagrePInfo"
+        Me.btnLagrePInfo.Size = New System.Drawing.Size(103, 23)
+        Me.btnLagrePInfo.TabIndex = 30
+        Me.btnLagrePInfo.Text = "Lagre"
+        Me.btnLagrePInfo.UseVisualStyleBackColor = True
         '
         'lblPostnr
         '
         Me.lblPostnr.AutoSize = True
-        Me.lblPostnr.Location = New System.Drawing.Point(156, 193)
+        Me.lblPostnr.Location = New System.Drawing.Point(162, 193)
         Me.lblPostnr.Name = "lblPostnr"
         Me.lblPostnr.Size = New System.Drawing.Size(45, 13)
         Me.lblPostnr.TabIndex = 29
@@ -306,7 +305,7 @@ Partial Class brukerSide
         'lblAdresse
         '
         Me.lblAdresse.AutoSize = True
-        Me.lblAdresse.Location = New System.Drawing.Point(156, 165)
+        Me.lblAdresse.Location = New System.Drawing.Point(162, 165)
         Me.lblAdresse.Name = "lblAdresse"
         Me.lblAdresse.Size = New System.Drawing.Size(45, 13)
         Me.lblAdresse.TabIndex = 27
@@ -329,19 +328,10 @@ Partial Class brukerSide
         Me.Panel1.Size = New System.Drawing.Size(739, 65)
         Me.Panel1.TabIndex = 25
         '
-        'endrePwBtn
-        '
-        Me.endrePwBtn.Location = New System.Drawing.Point(416, 70)
-        Me.endrePwBtn.Name = "endrePwBtn"
-        Me.endrePwBtn.Size = New System.Drawing.Size(136, 55)
-        Me.endrePwBtn.TabIndex = 22
-        Me.endrePwBtn.Text = "Endre passord"
-        Me.endrePwBtn.UseVisualStyleBackColor = True
-        '
         'lblEpost
         '
         Me.lblEpost.AutoSize = True
-        Me.lblEpost.Location = New System.Drawing.Point(156, 137)
+        Me.lblEpost.Location = New System.Drawing.Point(162, 137)
         Me.lblEpost.Name = "lblEpost"
         Me.lblEpost.Size = New System.Drawing.Size(45, 13)
         Me.lblEpost.TabIndex = 21
@@ -350,7 +340,7 @@ Partial Class brukerSide
         'lblTlf
         '
         Me.lblTlf.AutoSize = True
-        Me.lblTlf.Location = New System.Drawing.Point(156, 108)
+        Me.lblTlf.Location = New System.Drawing.Point(162, 109)
         Me.lblTlf.Name = "lblTlf"
         Me.lblTlf.Size = New System.Drawing.Size(45, 13)
         Me.lblTlf.TabIndex = 20
@@ -359,7 +349,7 @@ Partial Class brukerSide
         'lblEtternavn
         '
         Me.lblEtternavn.AutoSize = True
-        Me.lblEtternavn.Location = New System.Drawing.Point(156, 81)
+        Me.lblEtternavn.Location = New System.Drawing.Point(162, 81)
         Me.lblEtternavn.Name = "lblEtternavn"
         Me.lblEtternavn.Size = New System.Drawing.Size(45, 13)
         Me.lblEtternavn.TabIndex = 19
@@ -368,30 +358,30 @@ Partial Class brukerSide
         'lblFornavn
         '
         Me.lblFornavn.AutoSize = True
-        Me.lblFornavn.Location = New System.Drawing.Point(156, 53)
+        Me.lblFornavn.Location = New System.Drawing.Point(162, 53)
         Me.lblFornavn.Name = "lblFornavn"
         Me.lblFornavn.Size = New System.Drawing.Size(39, 13)
         Me.lblFornavn.TabIndex = 18
         Me.lblFornavn.Text = "Label9"
         '
-        'Button1
+        'btnEgenErk
         '
-        Me.Button1.Location = New System.Drawing.Point(436, 185)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(117, 41)
-        Me.Button1.TabIndex = 17
-        Me.Button1.Text = "Egenerklæring"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnEgenErk.Location = New System.Drawing.Point(598, 50)
+        Me.btnEgenErk.Name = "btnEgenErk"
+        Me.btnEgenErk.Size = New System.Drawing.Size(117, 41)
+        Me.btnEgenErk.TabIndex = 17
+        Me.btnEgenErk.Text = "Lever egenerklæring"
+        Me.btnEgenErk.UseVisualStyleBackColor = True
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.ListBox4)
-        Me.TabPage2.Controls.Add(Me.Button4)
+        Me.TabPage2.Controls.Add(Me.lblKolon)
+        Me.TabPage2.Controls.Add(Me.lblKlokkeslett)
         Me.TabPage2.Controls.Add(Me.cmbMin)
         Me.TabPage2.Controls.Add(Me.cmbTime)
         Me.TabPage2.Controls.Add(Me.Panel3)
         Me.TabPage2.Controls.Add(Me.MonthCalendar2)
-        Me.TabPage2.Controls.Add(Me.Label5)
+        Me.TabPage2.Controls.Add(Me.lblVelgLedigTime)
         Me.TabPage2.Controls.Add(Me.datoInkallLst)
         Me.TabPage2.Controls.Add(Me.btnSokTime)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
@@ -402,28 +392,29 @@ Partial Class brukerSide
         Me.TabPage2.Text = "Bestill time"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'ListBox4
+        'lblKolon
         '
-        Me.ListBox4.FormattingEnabled = True
-        Me.ListBox4.Location = New System.Drawing.Point(443, 24)
-        Me.ListBox4.Name = "ListBox4"
-        Me.ListBox4.Size = New System.Drawing.Size(290, 95)
-        Me.ListBox4.TabIndex = 30
+        Me.lblKolon.AutoSize = True
+        Me.lblKolon.Location = New System.Drawing.Point(119, 212)
+        Me.lblKolon.Name = "lblKolon"
+        Me.lblKolon.Size = New System.Drawing.Size(10, 13)
+        Me.lblKolon.TabIndex = 30
+        Me.lblKolon.Text = ":"
         '
-        'Button4
+        'lblKlokkeslett
         '
-        Me.Button4.Location = New System.Drawing.Point(487, 126)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 29
-        Me.Button4.Text = "Button4"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.lblKlokkeslett.AutoSize = True
+        Me.lblKlokkeslett.Location = New System.Drawing.Point(8, 212)
+        Me.lblKlokkeslett.Name = "lblKlokkeslett"
+        Me.lblKlokkeslett.Size = New System.Drawing.Size(62, 13)
+        Me.lblKlokkeslett.TabIndex = 29
+        Me.lblKlokkeslett.Text = "Klokkeslett:"
         '
         'cmbMin
         '
         Me.cmbMin.FormattingEnabled = True
         Me.cmbMin.Items.AddRange(New Object() {"00", "15", "30", "45"})
-        Me.cmbMin.Location = New System.Drawing.Point(161, 268)
+        Me.cmbMin.Location = New System.Drawing.Point(135, 209)
         Me.cmbMin.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cmbMin.Name = "cmbMin"
         Me.cmbMin.Size = New System.Drawing.Size(37, 21)
@@ -433,7 +424,7 @@ Partial Class brukerSide
         '
         Me.cmbTime.FormattingEnabled = True
         Me.cmbTime.Items.AddRange(New Object() {"10", "11", "12", "13", "14", "15", "16", "17", "18"})
-        Me.cmbTime.Location = New System.Drawing.Point(90, 268)
+        Me.cmbTime.Location = New System.Drawing.Point(76, 209)
         Me.cmbTime.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cmbTime.Name = "cmbTime"
         Me.cmbTime.Size = New System.Drawing.Size(41, 21)
@@ -448,11 +439,21 @@ Partial Class brukerSide
         Me.Panel3.Size = New System.Drawing.Size(739, 65)
         Me.Panel3.TabIndex = 25
         '
+        'btnEndrePw
+        '
+        Me.btnEndrePw.Location = New System.Drawing.Point(513, 12)
+        Me.btnEndrePw.Name = "btnEndrePw"
+        Me.btnEndrePw.Size = New System.Drawing.Size(104, 23)
+        Me.btnEndrePw.TabIndex = 22
+        Me.btnEndrePw.Text = "Endre passord"
+        Me.btnEndrePw.UseVisualStyleBackColor = True
+        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Panel2.Controls.Add(Me.PictureBox1)
         Me.Panel2.Controls.Add(Me.btnLoggUt)
+        Me.Panel2.Controls.Add(Me.btnEndrePw)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
@@ -501,7 +502,7 @@ Partial Class brukerSide
     Friend WithEvents Label4 As Label
     Friend WithEvents btnAvbestill As Button
     Friend WithEvents MonthCalendar2 As MonthCalendar
-    Friend WithEvents Label5 As Label
+    Friend WithEvents lblVelgLedigTime As Label
     Friend WithEvents datoInkallLst As ListBox
     Friend WithEvents btnSokTime As Button
     Friend WithEvents ListBox5 As ListBox
@@ -519,12 +520,12 @@ Partial Class brukerSide
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnEgenErk As Button
     Friend WithEvents lblEpost As Label
     Friend WithEvents lblTlf As Label
     Friend WithEvents lblEtternavn As Label
     Friend WithEvents lblFornavn As Label
-    Friend WithEvents endrePwBtn As Button
+    Friend WithEvents btnEndrePw As Button
     Friend WithEvents Panel2 As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel1 As Panel
@@ -533,12 +534,12 @@ Partial Class brukerSide
     Friend WithEvents postnrTxt As TextBox
     Friend WithEvents lblAdresse As Label
     Friend WithEvents adresseTxt As TextBox
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents btnLagrePInfo As Button
+    Friend WithEvents btnSvarInkalling As Button
     Friend WithEvents timeLst As ListBox
     Friend WithEvents Label9 As Label
     Friend WithEvents cmbTime As ComboBox
     Friend WithEvents cmbMin As ComboBox
-    Friend WithEvents Button4 As Button
-    Friend WithEvents ListBox4 As ListBox
+    Friend WithEvents lblKolon As Label
+    Friend WithEvents lblKlokkeslett As Label
 End Class

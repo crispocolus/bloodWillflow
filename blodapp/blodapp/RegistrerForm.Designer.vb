@@ -26,24 +26,24 @@ Partial Class RegistrerForm
         Me.fornavnTxt = New System.Windows.Forms.TextBox()
         Me.etternavnTxt = New System.Windows.Forms.TextBox()
         Me.tlfTxt = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.lblEpost = New System.Windows.Forms.Label()
+        Me.lblFornavn = New System.Windows.Forms.Label()
+        Me.lblEtternavn = New System.Windows.Forms.Label()
+        Me.lblTelefon = New System.Windows.Forms.Label()
+        Me.btnRegistrer = New System.Windows.Forms.Button()
+        Me.lblPnummer = New System.Windows.Forms.Label()
         Me.pnummerTxt = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.lblBekreftPW = New System.Windows.Forms.Label()
+        Me.lblPassord = New System.Windows.Forms.Label()
         Me.passordcTxt = New System.Windows.Forms.TextBox()
         Me.passordTxt = New System.Windows.Forms.TextBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.Label8 = New System.Windows.Forms.Label()
+        Me.chkJegHarLest = New System.Windows.Forms.CheckBox()
+        Me.lblJegHar = New System.Windows.Forms.Label()
         Me.adresseTxt = New System.Windows.Forms.TextBox()
-        Me.adresseLbl = New System.Windows.Forms.Label()
+        Me.lblAdresse = New System.Windows.Forms.Label()
         Me.postnrTxt = New System.Windows.Forms.TextBox()
-        Me.postnrLbl = New System.Windows.Forms.Label()
-        Me.tilbakeBtn = New System.Windows.Forms.Button()
+        Me.lblPostnr = New System.Windows.Forms.Label()
+        Me.btnTilbake = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'epostTxt
@@ -74,102 +74,103 @@ Partial Class RegistrerForm
         Me.tlfTxt.Size = New System.Drawing.Size(100, 20)
         Me.tlfTxt.TabIndex = 5
         '
-        'Label1
+        'lblEpost
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label1.Location = New System.Drawing.Point(34, 140)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(34, 13)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Epost"
+        Me.lblEpost.AutoSize = True
+        Me.lblEpost.BackColor = System.Drawing.Color.Transparent
+        Me.lblEpost.ForeColor = System.Drawing.SystemColors.Control
+        Me.lblEpost.Location = New System.Drawing.Point(34, 140)
+        Me.lblEpost.Name = "lblEpost"
+        Me.lblEpost.Size = New System.Drawing.Size(34, 13)
+        Me.lblEpost.TabIndex = 5
+        Me.lblEpost.Text = "Epost"
         '
-        'Label2
+        'lblFornavn
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label2.Location = New System.Drawing.Point(34, 9)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(46, 13)
-        Me.Label2.TabIndex = 6
-        Me.Label2.Text = "Fornavn"
+        Me.lblFornavn.AutoSize = True
+        Me.lblFornavn.BackColor = System.Drawing.Color.Transparent
+        Me.lblFornavn.ForeColor = System.Drawing.SystemColors.Control
+        Me.lblFornavn.Location = New System.Drawing.Point(34, 9)
+        Me.lblFornavn.Name = "lblFornavn"
+        Me.lblFornavn.Size = New System.Drawing.Size(46, 13)
+        Me.lblFornavn.TabIndex = 6
+        Me.lblFornavn.Text = "Fornavn"
         '
-        'Label3
+        'lblEtternavn
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label3.Location = New System.Drawing.Point(34, 51)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(53, 13)
-        Me.Label3.TabIndex = 7
-        Me.Label3.Text = "Etternavn"
+        Me.lblEtternavn.AutoSize = True
+        Me.lblEtternavn.BackColor = System.Drawing.Color.Transparent
+        Me.lblEtternavn.ForeColor = System.Drawing.SystemColors.Control
+        Me.lblEtternavn.Location = New System.Drawing.Point(34, 51)
+        Me.lblEtternavn.Name = "lblEtternavn"
+        Me.lblEtternavn.Size = New System.Drawing.Size(53, 13)
+        Me.lblEtternavn.TabIndex = 7
+        Me.lblEtternavn.Text = "Etternavn"
         '
-        'Label4
+        'lblTelefon
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label4.Location = New System.Drawing.Point(34, 183)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(43, 13)
-        Me.Label4.TabIndex = 8
-        Me.Label4.Text = "Telefon"
+        Me.lblTelefon.AutoSize = True
+        Me.lblTelefon.BackColor = System.Drawing.Color.Transparent
+        Me.lblTelefon.ForeColor = System.Drawing.SystemColors.Control
+        Me.lblTelefon.Location = New System.Drawing.Point(34, 183)
+        Me.lblTelefon.Name = "lblTelefon"
+        Me.lblTelefon.Size = New System.Drawing.Size(43, 13)
+        Me.lblTelefon.TabIndex = 8
+        Me.lblTelefon.Text = "Telefon"
         '
-        'Button1
+        'btnRegistrer
         '
-        Me.Button1.Location = New System.Drawing.Point(103, 262)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(112, 36)
-        Me.Button1.TabIndex = 11
-        Me.Button1.Text = "Registrer"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnRegistrer.Enabled = False
+        Me.btnRegistrer.Location = New System.Drawing.Point(177, 261)
+        Me.btnRegistrer.Name = "btnRegistrer"
+        Me.btnRegistrer.Size = New System.Drawing.Size(112, 36)
+        Me.btnRegistrer.TabIndex = 11
+        Me.btnRegistrer.Text = "Registrer"
+        Me.btnRegistrer.UseVisualStyleBackColor = True
         '
-        'Label5
+        'lblPnummer
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label5.Location = New System.Drawing.Point(34, 90)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(80, 13)
-        Me.Label5.TabIndex = 12
-        Me.Label5.Text = "Personnummer:"
+        Me.lblPnummer.AutoSize = True
+        Me.lblPnummer.BackColor = System.Drawing.Color.Transparent
+        Me.lblPnummer.ForeColor = System.Drawing.SystemColors.Control
+        Me.lblPnummer.Location = New System.Drawing.Point(34, 90)
+        Me.lblPnummer.Name = "lblPnummer"
+        Me.lblPnummer.Size = New System.Drawing.Size(80, 13)
+        Me.lblPnummer.TabIndex = 12
+        Me.lblPnummer.Text = "Personnummer:"
         '
         'pnummerTxt
         '
-        Me.pnummerTxt.Location = New System.Drawing.Point(37, 106)
+        Me.pnummerTxt.Location = New System.Drawing.Point(38, 106)
         Me.pnummerTxt.Name = "pnummerTxt"
         Me.pnummerTxt.Size = New System.Drawing.Size(100, 20)
         Me.pnummerTxt.TabIndex = 3
         '
-        'Label6
+        'lblBekreftPW
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label6.Location = New System.Drawing.Point(187, 183)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(84, 13)
-        Me.Label6.TabIndex = 16
-        Me.Label6.Text = "Bekreft passord:"
+        Me.lblBekreftPW.AutoSize = True
+        Me.lblBekreftPW.BackColor = System.Drawing.Color.Transparent
+        Me.lblBekreftPW.ForeColor = System.Drawing.SystemColors.Control
+        Me.lblBekreftPW.Location = New System.Drawing.Point(174, 183)
+        Me.lblBekreftPW.Name = "lblBekreftPW"
+        Me.lblBekreftPW.Size = New System.Drawing.Size(84, 13)
+        Me.lblBekreftPW.TabIndex = 16
+        Me.lblBekreftPW.Text = "Bekreft passord:"
         '
-        'Label7
+        'lblPassord
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label7.Location = New System.Drawing.Point(186, 139)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(45, 13)
-        Me.Label7.TabIndex = 15
-        Me.Label7.Text = "Passord"
+        Me.lblPassord.AutoSize = True
+        Me.lblPassord.BackColor = System.Drawing.Color.Transparent
+        Me.lblPassord.ForeColor = System.Drawing.SystemColors.Control
+        Me.lblPassord.Location = New System.Drawing.Point(174, 140)
+        Me.lblPassord.Name = "lblPassord"
+        Me.lblPassord.Size = New System.Drawing.Size(45, 13)
+        Me.lblPassord.TabIndex = 15
+        Me.lblPassord.Text = "Passord"
         '
         'passordcTxt
         '
-        Me.passordcTxt.Location = New System.Drawing.Point(189, 200)
+        Me.passordcTxt.Location = New System.Drawing.Point(177, 200)
         Me.passordcTxt.Name = "passordcTxt"
         Me.passordcTxt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.passordcTxt.Size = New System.Drawing.Size(100, 20)
@@ -177,78 +178,78 @@ Partial Class RegistrerForm
         '
         'passordTxt
         '
-        Me.passordTxt.Location = New System.Drawing.Point(189, 156)
+        Me.passordTxt.Location = New System.Drawing.Point(177, 156)
         Me.passordTxt.Name = "passordTxt"
         Me.passordTxt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.passordTxt.Size = New System.Drawing.Size(100, 20)
         Me.passordTxt.TabIndex = 8
         '
-        'CheckBox1
+        'chkJegHarLest
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(36, 224)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox1.TabIndex = 10
-        Me.CheckBox1.TextAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.chkJegHarLest.AutoSize = True
+        Me.chkJegHarLest.Location = New System.Drawing.Point(38, 234)
+        Me.chkJegHarLest.Name = "chkJegHarLest"
+        Me.chkJegHarLest.Size = New System.Drawing.Size(15, 14)
+        Me.chkJegHarLest.TabIndex = 10
+        Me.chkJegHarLest.TextAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.chkJegHarLest.UseVisualStyleBackColor = True
         '
-        'Label8
+        'lblJegHar
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label8.Location = New System.Drawing.Point(64, 224)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(247, 13)
-        Me.Label8.TabIndex = 18
-        Me.Label8.Text = "Jeg har lest og godkjent brukervilkår for registrering"
+        Me.lblJegHar.AutoSize = True
+        Me.lblJegHar.BackColor = System.Drawing.Color.Transparent
+        Me.lblJegHar.ForeColor = System.Drawing.SystemColors.Control
+        Me.lblJegHar.Location = New System.Drawing.Point(66, 234)
+        Me.lblJegHar.Name = "lblJegHar"
+        Me.lblJegHar.Size = New System.Drawing.Size(247, 13)
+        Me.lblJegHar.TabIndex = 18
+        Me.lblJegHar.Text = "Jeg har lest og godkjent brukervilkår for registrering"
         '
         'adresseTxt
         '
-        Me.adresseTxt.Location = New System.Drawing.Point(188, 26)
+        Me.adresseTxt.Location = New System.Drawing.Point(177, 25)
         Me.adresseTxt.Name = "adresseTxt"
         Me.adresseTxt.Size = New System.Drawing.Size(100, 20)
         Me.adresseTxt.TabIndex = 6
         '
-        'adresseLbl
+        'lblAdresse
         '
-        Me.adresseLbl.AutoSize = True
-        Me.adresseLbl.BackColor = System.Drawing.Color.Transparent
-        Me.adresseLbl.ForeColor = System.Drawing.SystemColors.Control
-        Me.adresseLbl.Location = New System.Drawing.Point(186, 9)
-        Me.adresseLbl.Name = "adresseLbl"
-        Me.adresseLbl.Size = New System.Drawing.Size(45, 13)
-        Me.adresseLbl.TabIndex = 20
-        Me.adresseLbl.Text = "Adresse"
+        Me.lblAdresse.AutoSize = True
+        Me.lblAdresse.BackColor = System.Drawing.Color.Transparent
+        Me.lblAdresse.ForeColor = System.Drawing.SystemColors.Control
+        Me.lblAdresse.Location = New System.Drawing.Point(174, 9)
+        Me.lblAdresse.Name = "lblAdresse"
+        Me.lblAdresse.Size = New System.Drawing.Size(45, 13)
+        Me.lblAdresse.TabIndex = 20
+        Me.lblAdresse.Text = "Adresse"
         '
         'postnrTxt
         '
-        Me.postnrTxt.Location = New System.Drawing.Point(188, 67)
+        Me.postnrTxt.Location = New System.Drawing.Point(177, 67)
         Me.postnrTxt.Name = "postnrTxt"
         Me.postnrTxt.Size = New System.Drawing.Size(100, 20)
         Me.postnrTxt.TabIndex = 7
         '
-        'postnrLbl
+        'lblPostnr
         '
-        Me.postnrLbl.AutoSize = True
-        Me.postnrLbl.BackColor = System.Drawing.Color.Transparent
-        Me.postnrLbl.ForeColor = System.Drawing.SystemColors.Control
-        Me.postnrLbl.Location = New System.Drawing.Point(186, 51)
-        Me.postnrLbl.Name = "postnrLbl"
-        Me.postnrLbl.Size = New System.Drawing.Size(71, 13)
-        Me.postnrLbl.TabIndex = 22
-        Me.postnrLbl.Text = "Postnunmmer"
+        Me.lblPostnr.AutoSize = True
+        Me.lblPostnr.BackColor = System.Drawing.Color.Transparent
+        Me.lblPostnr.ForeColor = System.Drawing.SystemColors.Control
+        Me.lblPostnr.Location = New System.Drawing.Point(174, 51)
+        Me.lblPostnr.Name = "lblPostnr"
+        Me.lblPostnr.Size = New System.Drawing.Size(71, 13)
+        Me.lblPostnr.TabIndex = 22
+        Me.lblPostnr.Text = "Postnunmmer"
         '
-        'tilbakeBtn
+        'btnTilbake
         '
-        Me.tilbakeBtn.Location = New System.Drawing.Point(9, 297)
-        Me.tilbakeBtn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.tilbakeBtn.Name = "tilbakeBtn"
-        Me.tilbakeBtn.Size = New System.Drawing.Size(56, 19)
-        Me.tilbakeBtn.TabIndex = 23
-        Me.tilbakeBtn.Text = "Tilbake"
-        Me.tilbakeBtn.UseVisualStyleBackColor = True
+        Me.btnTilbake.Location = New System.Drawing.Point(31, 261)
+        Me.btnTilbake.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnTilbake.Name = "btnTilbake"
+        Me.btnTilbake.Size = New System.Drawing.Size(106, 36)
+        Me.btnTilbake.TabIndex = 23
+        Me.btnTilbake.Text = "Tilbake"
+        Me.btnTilbake.UseVisualStyleBackColor = True
         '
         'RegistrerForm
         '
@@ -256,24 +257,24 @@ Partial Class RegistrerForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(325, 325)
-        Me.Controls.Add(Me.tilbakeBtn)
-        Me.Controls.Add(Me.postnrLbl)
+        Me.Controls.Add(Me.btnTilbake)
+        Me.Controls.Add(Me.lblPostnr)
         Me.Controls.Add(Me.postnrTxt)
-        Me.Controls.Add(Me.adresseLbl)
+        Me.Controls.Add(Me.lblAdresse)
         Me.Controls.Add(Me.adresseTxt)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.CheckBox1)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.lblJegHar)
+        Me.Controls.Add(Me.chkJegHarLest)
+        Me.Controls.Add(Me.lblBekreftPW)
+        Me.Controls.Add(Me.lblPassord)
         Me.Controls.Add(Me.passordcTxt)
         Me.Controls.Add(Me.passordTxt)
-        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.lblPnummer)
         Me.Controls.Add(Me.pnummerTxt)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.btnRegistrer)
+        Me.Controls.Add(Me.lblTelefon)
+        Me.Controls.Add(Me.lblEtternavn)
+        Me.Controls.Add(Me.lblFornavn)
+        Me.Controls.Add(Me.lblEpost)
         Me.Controls.Add(Me.tlfTxt)
         Me.Controls.Add(Me.etternavnTxt)
         Me.Controls.Add(Me.fornavnTxt)
@@ -290,22 +291,22 @@ Partial Class RegistrerForm
     Friend WithEvents fornavnTxt As TextBox
     Friend WithEvents etternavnTxt As TextBox
     Friend WithEvents tlfTxt As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Label5 As Label
+    Friend WithEvents lblEpost As Label
+    Friend WithEvents lblFornavn As Label
+    Friend WithEvents lblEtternavn As Label
+    Friend WithEvents lblTelefon As Label
+    Friend WithEvents btnRegistrer As Button
+    Friend WithEvents lblPnummer As Label
     Friend WithEvents pnummerTxt As TextBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
+    Friend WithEvents lblBekreftPW As Label
+    Friend WithEvents lblPassord As Label
     Friend WithEvents passordcTxt As TextBox
     Friend WithEvents passordTxt As TextBox
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents Label8 As Label
+    Friend WithEvents chkJegHarLest As CheckBox
+    Friend WithEvents lblJegHar As Label
     Friend WithEvents adresseTxt As TextBox
-    Friend WithEvents adresseLbl As Label
+    Friend WithEvents lblAdresse As Label
     Friend WithEvents postnrTxt As TextBox
-    Friend WithEvents postnrLbl As Label
-    Friend WithEvents tilbakeBtn As Button
+    Friend WithEvents lblPostnr As Label
+    Friend WithEvents btnTilbake As Button
 End Class

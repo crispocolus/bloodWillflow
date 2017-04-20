@@ -4,7 +4,7 @@ Public Class egenerklaering
     Public svar As New ArrayList()
 
     Private Sub egenerklaering_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'ComboBox1.Items.AddRange(File.ReadAllLines("land.txt"))
+        cmbEgenLand.Items.AddRange(File.ReadAllLines("land.txt"))
         Me.CenterToParent()
     End Sub
 
@@ -14,9 +14,6 @@ Public Class egenerklaering
 
     Private Sub forrigeSide(sender As Object, e As EventArgs) Handles btnEgenBack1.Click, btnEgenBack2.Click, btnEgenBack3.Click, btnEgenBack4.Click, btnEgenBack5.Click
         forrigeSide()
-    End Sub
-    Private Sub radEgenEpostJa_CheckedChanged(sender As Object, e As EventArgs)
-
     End Sub
 
     Private Sub nesteSide()
@@ -67,11 +64,9 @@ Public Class egenerklaering
                         If cb.Checked = True Then
                             nr += 1
                             svar.Add(1)
-                            'MsgBox(cb.Name & ", " & svar.Item(nr - 1) & ", nr: " & nr)
                         Else
                             nr += 1
                             svar.Add(0)
-                            'MsgBox(cb.Name & ", " & svar.Item(nr - 1) & ", nr: " & nr)
                         End If
                     Next
                 Next
@@ -81,31 +76,48 @@ Public Class egenerklaering
             For Each rad In dt.Rows
                 pnummer = rad("person_nr")
             Next
-            EgenErk.sendEgenErk(pnummer)
+            MsgBox(EgenErk.sendEgenErk(pnummer, cmbEgenLand.SelectedIndex))
+
 
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
     End Sub
 
-    'Public Sub fyllSkjema()
-    '    info.query()
+    Public Sub fyllSkjema(pnummer As String, skjema_id As String)
+        Dim egenerk As New EgenErk
+        Dim info As New info
+        Dim tabell As New DataTable
 
-    '    For Each tb In TabControl1.Controls.OfType(Of TabPage)()
-    '        For Each pnl In tb.Controls.OfType(Of Panel)().OrderBy(Function(c) c.TabIndex)
-    '            For Each cb In pnl.Controls.OfType(Of CheckBox)()
-    '                For Each rad In motatSvar
-    '                    If cb.Checked = True Then
-    '                        nr += 1
-    '                        svar.Add(1)
-    '                        'MsgBox(cb.Name & ", " & svar.Item(nr - 1) & ", nr: " & nr)
-    '                    Else
-    '                        nr += 1
-    '                        svar.Add(0)
-    '                        'MsgBox(cb.Name & ", " & svar.Item(nr - 1) & ", nr: " & nr)
-    '                    End If
-    '                Next
-    '            Next
-    '    Next
-    'End Sub
+        egenerk.hentEgenTabellBruker(pnummer, skjema_id)
+        egenerk.hentEgenTabell("skjema_besvar", skjema_id)
+        egenerk.svarTabell.Add(0)
+        egenerk.hentEgenTabell("skjema_fire_uker", skjema_id)
+        egenerk.hentEgenTabell("skjema_to_aar", skjema_id)
+        egenerk.hentEgenTabell("skjema_seks_mnd", skjema_id)
+        egenerk.hentEgenTabell("skjema_livet", skjema_id)
+        egenerk.hentEgenTabell("skjema_kvinner", skjema_id)
+        egenerk.hentEgenTabell("skjema_menn", skjema_id)
+
+        tabell = info.query("Land_oppvokst", "skjema_besvar", "skjema_id = " & skjema_id & "")
+        For Each rad In tabell.Rows
+            MsgBox(rad("Land_oppvokst"))
+            cmbEgenLand.Text = (rad("Land_oppvokst"))
+        Next
+
+        Dim idx = 0
+        For Each tb In TabControl1.Controls.OfType(Of TabPage)()
+            For Each pnl In tb.Controls.OfType(Of Panel)().OrderBy(Function(c) c.TabIndex)
+                For Each cb In pnl.Controls.OfType(Of CheckBox)()
+                    If idx = egenerk.svarTabell.Count - 1 Then
+                        cb.Checked = egenerk.svarTabell(idx)
+                        Exit Sub
+                    Else
+                        cb.Checked = egenerk.svarTabell(idx)
+                        idx += 1
+                    End If
+                Next
+            Next
+        Next
+    End Sub
 End Class
