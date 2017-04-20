@@ -59,15 +59,14 @@ Public Class brukerSide
         Dim info As New info
 
         Dim tabell As New DataTable
-        tabell = info.queryJoin("innkallinger.person_nr, innkallinger.oppmote, innkallinger.innkallings_id, fritekst_innkalling, innkallinger.status", "innkallinger", "bruker ON bruker.person_nr = innkallinger.person_nr", " bruker.epost = '" & LoginForm.bnavn & "' AND innkallinger.status = 1;")
+        tabell = info.queryJoin("innkallinger.person_nr, innkallinger.oppmote, innkallinger.innkallings_id, fritekst_innkalling, innkallinger.status", "innkallinger", "bruker ON bruker.person_nr = innkallinger.person_nr", " bruker.epost = '" & LoginForm.bnavn & "' AND innkallinger.status = 1 OR innkallinger.status = 2;")
 
 
         timeLst.Items.Clear()
         If tabell.Rows.Count > 0 Then
             For Each rad As DataRow In tabell.Rows
 
-                timeLst.Items.Add(New ansattSide.listItem With {.display = rad("oppmote") & " - UBEKREFTET", .value = rad("innkallings_id")})
-
+                timeLst.Items.Add(New ansattSide.listItem With {.display = rad("oppmote"), .value = rad("innkallings_id")})
 
             Next
         Else
@@ -83,8 +82,9 @@ Public Class brukerSide
 
         innkallingLst.Items.Clear()
         For Each rad As DataRow In resultatTab.Rows
-                innkallingLst.Items.Add(New ansattSide.listItem With {.display = rad("fritekst_innkalling") & " " & rad("oppmote"), .value = rad("innkallings_id")})
-            Next
+
+            innkallingLst.Items.Add(New ansattSide.listItem With {.display = rad("fritekst_innkalling") & " " & rad("oppmote"), .value = rad("innkallings_id")})
+        Next
 
     End Sub
 
