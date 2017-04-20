@@ -57,13 +57,13 @@ Partial Class brukerSide
         Me.lblFornavn = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.ListBox4 = New System.Windows.Forms.ListBox()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.cmbMin = New System.Windows.Forms.ComboBox()
         Me.cmbTime = New System.Windows.Forms.ComboBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.ListBox4 = New System.Windows.Forms.ListBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -402,6 +402,23 @@ Partial Class brukerSide
         Me.TabPage2.Text = "Bestill time"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'ListBox4
+        '
+        Me.ListBox4.FormattingEnabled = True
+        Me.ListBox4.Location = New System.Drawing.Point(443, 24)
+        Me.ListBox4.Name = "ListBox4"
+        Me.ListBox4.Size = New System.Drawing.Size(290, 95)
+        Me.ListBox4.TabIndex = 30
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(487, 126)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 29
+        Me.Button4.Text = "Button4"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'cmbMin
         '
         Me.cmbMin.FormattingEnabled = True
@@ -452,23 +469,6 @@ Partial Class brukerSide
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 8
         Me.PictureBox1.TabStop = False
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(487, 126)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 29
-        Me.Button4.Text = "Button4"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'ListBox4
-        '
-        Me.ListBox4.FormattingEnabled = True
-        Me.ListBox4.Location = New System.Drawing.Point(443, 24)
-        Me.ListBox4.Name = "ListBox4"
-        Me.ListBox4.Size = New System.Drawing.Size(290, 95)
-        Me.ListBox4.TabIndex = 30
         '
         'brukerSide
         '
