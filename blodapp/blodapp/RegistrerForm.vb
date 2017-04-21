@@ -99,7 +99,6 @@ Public Class RegistrerForm
             fdato += (Mid(person_nr, i, 1))
         Next i
 
-        MsgBox(fdato)
         Return fdato
     End Function
 
