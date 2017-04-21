@@ -7,6 +7,7 @@
     Private Sub ansattSide_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Sentrerer siden når den lastes
         Me.CenterToParent()
+        lastBlodType()
         oppdaterBestillinger()
         kalenderToUker()
         blodFullOversikt()
@@ -359,7 +360,7 @@
         Dim tabell As New DataTable
         Dim innId As Double
 
-        If lstSvarInn.SelectedItem = "" Then
+        If Not lstSvarInn.SelectedIndex >= 0 Then
             MsgBox("Du må velge en innkalling!")
             Exit Sub
         End If
