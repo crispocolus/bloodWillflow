@@ -88,6 +88,8 @@ Partial Class ansattSide
         Me.sokTxt = New System.Windows.Forms.TextBox()
         Me.btnSokBruker = New System.Windows.Forms.Button()
         Me.sokSpesCmb = New System.Windows.Forms.ComboBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -114,6 +116,8 @@ Partial Class ansattSide
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Label7)
+        Me.TabPage1.Controls.Add(Me.Button1)
         Me.TabPage1.Controls.Add(Me.sokSpesCmb)
         Me.TabPage1.Controls.Add(Me.sokTxt)
         Me.TabPage1.Controls.Add(Me.btnSokBruker)
@@ -240,7 +244,7 @@ Partial Class ansattSide
         '
         'btnInnkalling
         '
-        Me.btnInnkalling.Location = New System.Drawing.Point(471, 324)
+        Me.btnInnkalling.Location = New System.Drawing.Point(403, 322)
         Me.btnInnkalling.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnInnkalling.Name = "btnInnkalling"
         Me.btnInnkalling.Size = New System.Drawing.Size(115, 48)
@@ -795,6 +799,25 @@ Partial Class ansattSide
         Me.sokSpesCmb.Size = New System.Drawing.Size(121, 24)
         Me.sokSpesCmb.TabIndex = 33
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(542, 322)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(115, 48)
+        Me.Button1.TabIndex = 34
+        Me.Button1.Text = "Legg inn time"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(20, 316)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(94, 17)
+        Me.Label7.TabIndex = 35
+        Me.Label7.Text = "Søk blodgiver"
+        '
         'ansattSide
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -889,4 +912,6 @@ Partial Class ansattSide
     Friend WithEvents sokTxt As TextBox
     Friend WithEvents btnSokBruker As Button
     Friend WithEvents sokSpesCmb As ComboBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Button1 As Button
 End Class

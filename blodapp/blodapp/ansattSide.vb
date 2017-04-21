@@ -164,6 +164,7 @@
         Dim epostAddr As String = ""
         Dim epostTab As DataTable
 
+
         Dim valgtPnummer As String
         valgtPnummer = CType(lstKandidater.SelectedItem, listItem).value
 
@@ -454,6 +455,17 @@
         For Each rad As DataRow In resultatTab.Rows
             lstKandidater.Items.Add(New listItem With {.display = rad("Fornavn") & " " & rad("Etternavn") & " " & rad("Epost") & " " & rad("Fdato"), .value = rad("person_nr")})
         Next
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim info As New info
+        Dim status As Integer
+        status = 2
+        Dim pNr As Double
+        pNr = CType(lstKandidater.SelectedItem, listItem).value
+
+
+        info.sendInnkalling(pNr, status, kommentar, tappeKalender.SelectionStart.ToString("yyyy/MM/dd") & " " & cmbTime.SelectedItem & ":" & cmbMin.SelectedItem & ":00")
     End Sub
 End Class
 

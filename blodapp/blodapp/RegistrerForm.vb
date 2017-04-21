@@ -32,6 +32,8 @@ Public Class RegistrerForm
         Dim godkjentEpost As Boolean = False
         Dim godkjentTelefon As Boolean = False
         Dim godkjentPassord As Boolean = False
+        Dim godkjentPostnr As Boolean = False
+        Dim godkjentPnr As Boolean = False
 
         fdato = finnFdato(pnummer)
 
@@ -73,6 +75,20 @@ Public Class RegistrerForm
             Return False
         End If
 
+        If IsNumeric(pnummer) And pnummer.Length = 11 Then
+            godkjentPnr = True
+        Else
+            MsgBox("Personnummer må være 11 siffer")
+            Return False
+        End If
+
+        If IsNumeric(post_nr) And post_nr.Length = 4 Then
+            godkjentPostnr = True
+        Else
+            MsgBox("Postnummer må være 4 siffer")
+            Return False
+        End If
+
         If passordc = passord Then
             godkjentPassord = True
         Else
@@ -81,7 +97,7 @@ Public Class RegistrerForm
         End If
 
         'Når info er sjekket og godkjent så utføres funksjonen *sendInfo* som finnes i regbruker.vb
-        If godkjentEpost = True And godkjentTelefon = True And godkjentPassord = True Then
+        If godkjentEpost = True And godkjentTelefon = True And godkjentPassord = True And godkjentPostnr = True And godkjentPnr = True Then
             Dim salt As String
             Dim passordHash As String = ""
             salt = pHash.lagSalt
@@ -100,6 +116,8 @@ Public Class RegistrerForm
                                   passordHash,
                                   salt)
             Return True
+        Else
+            Return MsgBox("Feil utfylt skjema")
         End If
     End Function
 

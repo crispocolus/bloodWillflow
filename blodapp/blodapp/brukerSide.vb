@@ -55,12 +55,16 @@
         Dim info As New info
 
         Dim tabell As New DataTable
-        tabell = info.queryJoin("innkallinger.person_nr, innkallinger.oppmote, innkallinger.innkallings_id, fritekst_innkalling, innkallinger.status", "innkallinger", "bruker ON bruker.person_nr = innkallinger.person_nr", " bruker.epost = '" & LoginForm.bnavn & "' AND innkallinger.status = 1;")
+        tabell = info.queryJoin("innkallinger.person_nr, innkallinger.oppmote, innkallinger.innkallings_id, fritekst_innkalling, innkallinger.status", "innkallinger", "bruker ON bruker.person_nr = innkallinger.person_nr", " bruker.epost = '" & LoginForm.bnavn & "' AND (innkallinger.status = '1' OR innkallinger.status ='2');")
 
         timeLst.Items.Clear()
         If tabell.Rows.Count > 0 Then
             For Each rad As DataRow In tabell.Rows
-                timeLst.Items.Add(New listItem With {.display = rad("oppmote") & " - UBEKREFTET", .value = rad("innkallings_id")})
+                If rad("status") = 1 Then
+                    timeLst.Items.Add(New listItem With {.display = rad("oppmote") & " - UBEKREFTET", .value = rad("innkallings_id")})
+                ElseIf rad("status") = 2 Then
+                    timeLst.Items.Add(New listItem With {.display = rad("oppmote") & " - BEKREFTET", .value = rad("innkallings_id")})
+                End If
             Next
         Else
         End If
