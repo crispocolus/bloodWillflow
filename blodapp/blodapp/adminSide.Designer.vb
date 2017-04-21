@@ -377,7 +377,6 @@ Partial Class adminSide
         Me.sokTxt.Name = "sokTxt"
         Me.sokTxt.Size = New System.Drawing.Size(135, 22)
         Me.sokTxt.TabIndex = 11
-        Me.sokTxt.Text = "bjarne"
         '
         'Label1
         '

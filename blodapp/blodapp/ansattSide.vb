@@ -137,8 +137,8 @@
         lstSvarInn.Items.Clear()
         lstBehandlet.Items.Clear()
 
-        ubehandletTabell = info.queryJoin("innkallinger.person_nr, innkallinger.oppmote, bruker.fornavn, bruker.etternavn, innkallinger.innkallings_id, fritekst_innkalling, innkallinger.status", "innkallinger", "bruker ON bruker.person_nr = innkallinger.person_nr", "innkallinger.status = 1 ORDER BY innkallinger.innkallings_id DESC;")
-        behandletTabell = info.queryJoin("innkallinger.person_nr, innkallinger.oppmote, bruker.fornavn, bruker.etternavn, innkallinger.innkallings_id, fritekst_innkalling, innkallinger.status", "innkallinger", "bruker ON bruker.person_nr = innkallinger.person_nr", "(innkallinger.status = 2 OR innkallinger.status = 3) ORDER BY innkallinger.innkallings_id DESC;")
+        ubehandletTabell = info.queryJoin("innkallinger.person_nr, innkallinger.oppmote, bruker.fornavn, bruker.etternavn, innkallinger.innkallings_id, fritekst_innkalling, innkallinger.status", "innkallinger", "bruker ON bruker.person_nr = innkallinger.person_nr", "innkallinger.status = 1 ORDER BY innkallinger.oppmote ASC;")
+        behandletTabell = info.queryJoin("innkallinger.person_nr, innkallinger.oppmote, bruker.fornavn, bruker.etternavn, innkallinger.innkallings_id, fritekst_innkalling, innkallinger.status", "innkallinger", "bruker ON bruker.person_nr = innkallinger.person_nr", "(innkallinger.status = 2 OR innkallinger.status = 3) ORDER BY innkallinger.oppmote ASC;")
 
         For Each rad As DataRow In ubehandletTabell.Rows
             lstSvarInn.Items.Add(New listItem With {.display = rad("oppmote") & ", " & rad("fornavn") & ", " & rad("etternavn"), .value = rad("innkallings_id")})
