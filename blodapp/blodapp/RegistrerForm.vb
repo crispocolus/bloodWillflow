@@ -1,14 +1,18 @@
 ﻿
 Public Class RegistrerForm
     Private Sub btnRegistrer_Click(sender As Object, e As EventArgs) Handles btnRegistrer.Click, Me.KeyPress
-        SjekkInfo(postnrTxt.Text, adresseTxt.Text, pnummerTxt.Text, fornavnTxt.Text, etternavnTxt.Text, epostTxt.Text, tlfTxt.Text, finnFdato(pnummerTxt.Text), passordcTxt.Text, passordTxt.Text)
+        If SjekkInfo(postnrTxt.Text, adresseTxt.Text, pnummerTxt.Text, fornavnTxt.Text, etternavnTxt.Text, epostTxt.Text, tlfTxt.Text, finnFdato(pnummerTxt.Text), passordcTxt.Text, passordTxt.Text) = False Then
+            MsgBox("Bruker ble ikke registrert")
+        Else
+            MsgBox("Registrering fullført." & vbCrLf & "Brukernavnet ditt er: " & epostTxt.Text & vbCrLf & vbCrLf & "Du kan nå gi samtykke ved resepsjonen")
+        End If
     End Sub
 
     Private Sub RegistrerForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CenterToParent()
     End Sub
 
-    Public Sub SjekkInfo(post_nr As String, adresse As String, pnummer As String, fornavn As String, etternavn As String, epost As String, tlf As String, fdato As String, passordc As String, passord As String)
+    Public Function SjekkInfo(post_nr As String, adresse As String, pnummer As String, fornavn As String, etternavn As String, epost As String, tlf As String, fdato As String, passordc As String, passord As String)
         Dim Registrering As New RegBruker
         Dim info As New info
         Dim pHash As New passordHash
@@ -49,21 +53,21 @@ Public Class RegistrerForm
             End If
         Else
             MsgBox("Epost ikke godkjent. Sjekk om du har husket @")
-            Exit Sub
+            Return False
         End If
 
         If IsNumeric(tlf) And tlf.Length = 8 Then
             godkjentTelefon = True
         Else
             MsgBox("Telefonnummeret må være 8 siffer")
-            Exit Sub
+            Return False
         End If
 
         If passordc = passord Then
             godkjentPassord = True
         Else
             MsgBox("Passordene du anga stemmer ikke overens")
-            Exit Sub
+            Return False
         End If
 
         'Når info er sjekket og godkjent så utføres funksjonen *sendInfo* som finnes i regbruker.vb
@@ -85,20 +89,39 @@ Public Class RegistrerForm
                                   adresse,
                                   passordHash,
                                   salt)
-            MsgBox("Registrering fullført." & vbCrLf & "Brukernavnet ditt er: " & epost & vbCrLf & vbCrLf & "Du kan nå gi samtykke ved resepsjonen")
+            Return True
             Me.Close()
-            LoginForm.Show()
         End If
-    End Sub
+    End Function
 
     Function finnFdato(person_nr As String)
         Dim fdato As String = ""
         Dim i As Integer
 
-        For i = 1 To 6
-            fdato += (Mid(person_nr, i, 1))
+        fdato += "1"
+        fdato += "9"
+
+        For i = 5 To 6
+            If i = 6 Then
+                fdato += (Mid(person_nr, i, 1)) & "-"
+            Else
+                fdato += (Mid(person_nr, i, 1))
+            End If
         Next i
 
+        For i = 3 To 4
+            If i = 4 Then
+                fdato += (Mid(person_nr, i, 1)) & "-"
+            Else
+                fdato += (Mid(person_nr, i, 1))
+            End If
+        Next i
+
+        For i = 1 To 2
+            fdato += (Mid(person_nr, i, 1))
+        Next
+
+        MsgBox(fdato)
         Return fdato
     End Function
 
