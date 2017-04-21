@@ -83,6 +83,7 @@ Partial Class ansattSide
         Me.loggutBtn = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -109,6 +110,7 @@ Partial Class ansattSide
         'TabPage1
         '
         Me.TabPage1.Controls.Add(Me.Label2)
+        Me.TabPage1.Controls.Add(Me.Label6)
         Me.TabPage1.Controls.Add(Me.lblKolon)
         Me.TabPage1.Controls.Add(Me.cmbMin)
         Me.TabPage1.Controls.Add(Me.cmbTime)
@@ -134,16 +136,16 @@ Partial Class ansattSide
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(152, 61)
+        Me.Label2.Location = New System.Drawing.Point(151, 33)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(58, 13)
+        Me.Label2.Size = New System.Drawing.Size(81, 13)
         Me.Label2.TabIndex = 29
-        Me.Label2.Text = "Kandidater"
+        Me.Label2.Text = "Kandidater med"
         '
         'lblKolon
         '
         Me.lblKolon.AutoSize = True
-        Me.lblKolon.Location = New System.Drawing.Point(407, 214)
+        Me.lblKolon.Location = New System.Drawing.Point(409, 233)
         Me.lblKolon.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblKolon.Name = "lblKolon"
         Me.lblKolon.Size = New System.Drawing.Size(10, 13)
@@ -154,7 +156,7 @@ Partial Class ansattSide
         '
         Me.cmbMin.FormattingEnabled = True
         Me.cmbMin.Items.AddRange(New Object() {"00", "15", "30", "45"})
-        Me.cmbMin.Location = New System.Drawing.Point(421, 209)
+        Me.cmbMin.Location = New System.Drawing.Point(423, 228)
         Me.cmbMin.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbMin.Name = "cmbMin"
         Me.cmbMin.Size = New System.Drawing.Size(29, 21)
@@ -164,7 +166,7 @@ Partial Class ansattSide
         '
         Me.cmbTime.FormattingEnabled = True
         Me.cmbTime.Items.AddRange(New Object() {"10", "11", "12", "13", "14", "15", "16", "17", "18"})
-        Me.cmbTime.Location = New System.Drawing.Point(371, 209)
+        Me.cmbTime.Location = New System.Drawing.Point(373, 228)
         Me.cmbTime.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbTime.Name = "cmbTime"
         Me.cmbTime.Size = New System.Drawing.Size(32, 21)
@@ -173,7 +175,7 @@ Partial Class ansattSide
         'lblKlokkeslett
         '
         Me.lblKlokkeslett.AutoSize = True
-        Me.lblKlokkeslett.Location = New System.Drawing.Point(305, 214)
+        Me.lblKlokkeslett.Location = New System.Drawing.Point(307, 233)
         Me.lblKlokkeslett.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblKlokkeslett.Name = "lblKlokkeslett"
         Me.lblKlokkeslett.Size = New System.Drawing.Size(62, 13)
@@ -183,7 +185,7 @@ Partial Class ansattSide
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(6, 89)
+        Me.Label9.Location = New System.Drawing.Point(26, 231)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(112, 13)
         Me.Label9.TabIndex = 10
@@ -191,7 +193,7 @@ Partial Class ansattSide
         '
         'btnBehov
         '
-        Me.btnBehov.Location = New System.Drawing.Point(22, 56)
+        Me.btnBehov.Location = New System.Drawing.Point(74, 197)
         Me.btnBehov.Name = "btnBehov"
         Me.btnBehov.Size = New System.Drawing.Size(74, 22)
         Me.btnBehov.TabIndex = 9
@@ -201,7 +203,7 @@ Partial Class ansattSide
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(26, 14)
+        Me.Label8.Location = New System.Drawing.Point(78, 155)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(60, 13)
         Me.Label8.TabIndex = 8
@@ -209,14 +211,14 @@ Partial Class ansattSide
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(22, 30)
+        Me.TextBox1.Location = New System.Drawing.Point(74, 171)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(74, 20)
         Me.TextBox1.TabIndex = 7
         '
         'btnInnkalling
         '
-        Me.btnInnkalling.Location = New System.Drawing.Point(351, 244)
+        Me.btnInnkalling.Location = New System.Drawing.Point(353, 263)
         Me.btnInnkalling.Name = "btnInnkalling"
         Me.btnInnkalling.Size = New System.Drawing.Size(86, 39)
         Me.btnInnkalling.TabIndex = 6
@@ -226,7 +228,7 @@ Partial Class ansattSide
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(281, 14)
+        Me.Label3.Location = New System.Drawing.Point(283, 33)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(59, 13)
         Me.Label3.TabIndex = 5
@@ -234,14 +236,14 @@ Partial Class ansattSide
         '
         'tappeKalender
         '
-        Me.tappeKalender.Location = New System.Drawing.Point(284, 30)
+        Me.tappeKalender.Location = New System.Drawing.Point(286, 49)
         Me.tappeKalender.Name = "tappeKalender"
         Me.tappeKalender.TabIndex = 4
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(152, 14)
+        Me.Label1.Location = New System.Drawing.Point(74, 74)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(74, 13)
         Me.Label1.TabIndex = 2
@@ -250,7 +252,7 @@ Partial Class ansattSide
         'lstKandidater
         '
         Me.lstKandidater.FormattingEnabled = True
-        Me.lstKandidater.Location = New System.Drawing.Point(141, 77)
+        Me.lstKandidater.Location = New System.Drawing.Point(154, 75)
         Me.lstKandidater.Name = "lstKandidater"
         Me.lstKandidater.Size = New System.Drawing.Size(108, 264)
         Me.lstKandidater.TabIndex = 1
@@ -258,7 +260,7 @@ Partial Class ansattSide
         'CBoxBlodtype
         '
         Me.CBoxBlodtype.FormattingEnabled = True
-        Me.CBoxBlodtype.Location = New System.Drawing.Point(152, 30)
+        Me.CBoxBlodtype.Location = New System.Drawing.Point(74, 90)
         Me.CBoxBlodtype.Name = "CBoxBlodtype"
         Me.CBoxBlodtype.Size = New System.Drawing.Size(74, 21)
         Me.CBoxBlodtype.TabIndex = 0
@@ -583,7 +585,7 @@ Partial Class ansattSide
         'lblSistEgen
         '
         Me.lblSistEgen.AutoSize = True
-        Me.lblSistEgen.Location = New System.Drawing.Point(151, 6)
+        Me.lblSistEgen.Location = New System.Drawing.Point(167, 30)
         Me.lblSistEgen.Name = "lblSistEgen"
         Me.lblSistEgen.Size = New System.Drawing.Size(110, 13)
         Me.lblSistEgen.TabIndex = 4
@@ -592,7 +594,7 @@ Partial Class ansattSide
         'lblSisteBrukere
         '
         Me.lblSisteBrukere.AutoSize = True
-        Me.lblSisteBrukere.Location = New System.Drawing.Point(8, 6)
+        Me.lblSisteBrukere.Location = New System.Drawing.Point(24, 30)
         Me.lblSisteBrukere.Name = "lblSisteBrukere"
         Me.lblSisteBrukere.Size = New System.Drawing.Size(69, 13)
         Me.lblSisteBrukere.TabIndex = 3
@@ -600,7 +602,7 @@ Partial Class ansattSide
         '
         'btnSeEgen
         '
-        Me.btnSeEgen.Location = New System.Drawing.Point(296, 22)
+        Me.btnSeEgen.Location = New System.Drawing.Point(312, 46)
         Me.btnSeEgen.Name = "btnSeEgen"
         Me.btnSeEgen.Size = New System.Drawing.Size(108, 23)
         Me.btnSeEgen.TabIndex = 2
@@ -610,7 +612,7 @@ Partial Class ansattSide
         'lstEgenDato
         '
         Me.lstEgenDato.FormattingEnabled = True
-        Me.lstEgenDato.Location = New System.Drawing.Point(154, 22)
+        Me.lstEgenDato.Location = New System.Drawing.Point(170, 46)
         Me.lstEgenDato.Name = "lstEgenDato"
         Me.lstEgenDato.Size = New System.Drawing.Size(120, 95)
         Me.lstEgenDato.TabIndex = 1
@@ -618,7 +620,7 @@ Partial Class ansattSide
         'lstEgenNavn
         '
         Me.lstEgenNavn.FormattingEnabled = True
-        Me.lstEgenNavn.Location = New System.Drawing.Point(11, 22)
+        Me.lstEgenNavn.Location = New System.Drawing.Point(27, 46)
         Me.lstEgenNavn.Name = "lstEgenNavn"
         Me.lstEgenNavn.Size = New System.Drawing.Size(120, 95)
         Me.lstEgenNavn.TabIndex = 0
@@ -684,6 +686,15 @@ Partial Class ansattSide
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(753, 57)
         Me.Panel3.TabIndex = 26
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(151, 46)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(76, 13)
+        Me.Label6.TabIndex = 30
+        Me.Label6.Text = "valgt blodtype:"
         '
         'ansattSide
         '
@@ -773,4 +784,5 @@ Partial Class ansattSide
     Friend WithEvents lblSisteBrukere As Label
     Friend WithEvents lstBehandlet As ListBox
     Friend WithEvents lblBehInka As Label
+    Friend WithEvents Label6 As Label
 End Class
