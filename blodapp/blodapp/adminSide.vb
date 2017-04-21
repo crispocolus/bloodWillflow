@@ -43,24 +43,32 @@
     End Sub
 
     Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
-        'Try
+        Try
 
 
-        '    Dim info As New info
-        '    Dim tabell As New DataTable
-        '    Dim pNummer As Double
-        '    pNummer = ListBox1.SelectedValue
+            Dim info As New info
+            Dim tabell As New DataTable
+            Dim pNummer As Double
+            pNummer = CType(ListBox1.SelectedItem, listItem).value
 
 
-        '    tabell = info.queryJoin("fornavn, etternavn, epost, telefon, gateadresse, post_nr, blodgiver.blodtype", "bruker", "blodgiver ON bruker.person_nr = blodgiver.person_nr", "bruker.person_nr = '" & pNummer & "';")
 
-        '    For Each rad In tabell.Rows
-        '        TextBox1.Text = rad("fornavn")
-        '    Next
+            tabell = info.queryJoin("fornavn, etternavn, epost, telefon, gateadresse, post_nr", "bruker", "blodgiver ON bruker.person_nr = blodgiver.person_nr", "bruker.person_nr = '" & pNummer & "';")
 
-        'Catch ex As Exception
-        '    MsgBox(ex.Message)
-        'End Try
+            For Each rad In tabell.Rows
+                TextBox1.Text = rad("fornavn")
+                TextBox2.Text = rad("etternavn")
+                TextBox3.Text = rad("epost")
+                TextBox4.Text = rad("telefon")
+                TextBox5.Text = rad("gateadresse")
+                TextBox6.Text = rad("post_nr")
+
+
+            Next
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 
     Private Sub endrePwBtn_Click(sender As Object, e As EventArgs) Handles endrePwBtn.Click
@@ -121,34 +129,6 @@
 
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Try
-
-
-            Dim info As New info
-            Dim tabell As New DataTable
-            Dim pNummer As Double
-            pNummer = CType(ListBox1.SelectedItem, listItem).value
-
-
-
-            tabell = info.queryJoin("fornavn, etternavn, epost, telefon, gateadresse, post_nr, blodgiver.blodtype", "bruker", "blodgiver ON bruker.person_nr = blodgiver.person_nr", "bruker.person_nr = '" & pNummer & "';")
-
-            For Each rad In tabell.Rows
-                TextBox1.Text = rad("fornavn")
-                TextBox2.Text = rad("etternavn")
-                TextBox3.Text = rad("epost")
-                TextBox4.Text = rad("telefon")
-                TextBox5.Text = rad("gateadresse")
-                TextBox6.Text = rad("post_nr")
-                TextBox7.Text = rad("blodtype")
-
-            Next
-
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
-    End Sub
 
     Private Sub btnEndrePersoninfo_Click(sender As Object, e As EventArgs) Handles btnEndrePersoninfo.Click
         Try
@@ -164,7 +144,7 @@
             Dim telefon As Double = TextBox4.Text
             Dim gateadresse As String = TextBox5.Text
             Dim post_nr As Double = TextBox6.Text
-            Dim blodtype As String = TextBox7.Text
+
             info.queryUpdate("bruker", "fornavn = '" & fornavn & "', etternavn = '" & etternavn & "', epost = '" & epost & "', telefon = '" & telefon & "', gateadresse = '" & gateadresse & "'", "person_nr = '" & bruker & "';")
 
             MsgBox("Brukerinfo er blitt oppdatert")
