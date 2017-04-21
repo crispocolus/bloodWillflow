@@ -427,5 +427,9 @@
         egenerklaering.Show()
         egenerklaering.fyllSkjema(CType(lstEgenNavn.SelectedItem, listItem).value, CType(lstEgenDato.SelectedItem, listItem).value)
     End Sub
+
+    Private Sub btnRegBruker_Click(sender As Object, e As EventArgs) Handles btnRegBruker.Click
+        RegistrerForm.Show()
+    End Sub
 End Class
 

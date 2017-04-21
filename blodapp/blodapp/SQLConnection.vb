@@ -124,6 +124,7 @@ Public Class RegBruker
                         salt As String
                         )
         'Importerer oppkobling fra SQL klassen
+        Dim info As New info
         Dim connect As New SQL
         Dim oppkobling = connect.oppkobling
 
@@ -144,11 +145,12 @@ Public Class RegBruker
                                                                                                                                                                   '" & enavn & "', 
                                                                                                                                                                   '" & epost & "', 
                                                                                                                                                                   " & telefon & ", 
-                                                                                                                                                                  " & fdato & ", 
+                                                                                                                                                                  '" & fdato & "', 
                                                                                                                                                                   " & postnr & ", 
                                                                                                                                                                   '" & gateadresse & "', 
                                                                                                                                                                   '" & passordHash & "', 
-                                                                                                                                                                  '" & salt & "');"
+                                                                                                                                                                  '" & salt & "');
+                              insert into blodgiver (person_nr) values (" & pnummer & ");"
 
             Dim sql2 As New MySqlCommand(sqlSporring2, oppkobling)
 

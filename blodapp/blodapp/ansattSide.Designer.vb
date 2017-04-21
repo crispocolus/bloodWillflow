@@ -26,6 +26,7 @@ Partial Class ansattSide
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.lblKolon = New System.Windows.Forms.Label()
         Me.cmbMin = New System.Windows.Forms.ComboBox()
         Me.cmbTime = New System.Windows.Forms.ComboBox()
@@ -83,7 +84,7 @@ Partial Class ansattSide
         Me.loggutBtn = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.btnRegBruker = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -141,6 +142,15 @@ Partial Class ansattSide
         Me.Label2.Size = New System.Drawing.Size(81, 13)
         Me.Label2.TabIndex = 29
         Me.Label2.Text = "Kandidater med"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(151, 46)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(76, 13)
+        Me.Label6.TabIndex = 30
+        Me.Label6.Text = "valgt blodtype:"
         '
         'lblKolon
         '
@@ -668,6 +678,7 @@ Partial Class ansattSide
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.btnRegBruker)
         Me.Panel2.Controls.Add(Me.btnHurtigB)
         Me.Panel2.Controls.Add(Me.PictureBox1)
         Me.Panel2.Controls.Add(Me.endrePwBtn)
@@ -687,14 +698,14 @@ Partial Class ansattSide
         Me.Panel3.Size = New System.Drawing.Size(753, 57)
         Me.Panel3.TabIndex = 26
         '
-        'Label6
+        'btnRegBruker
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(151, 46)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(76, 13)
-        Me.Label6.TabIndex = 30
-        Me.Label6.Text = "valgt blodtype:"
+        Me.btnRegBruker.Location = New System.Drawing.Point(305, 12)
+        Me.btnRegBruker.Name = "btnRegBruker"
+        Me.btnRegBruker.Size = New System.Drawing.Size(104, 28)
+        Me.btnRegBruker.TabIndex = 30
+        Me.btnRegBruker.Text = "Registrer bruker"
+        Me.btnRegBruker.UseVisualStyleBackColor = True
         '
         'ansattSide
         '
@@ -785,4 +796,5 @@ Partial Class ansattSide
     Friend WithEvents lstBehandlet As ListBox
     Friend WithEvents lblBehInka As Label
     Friend WithEvents Label6 As Label
+    Friend WithEvents btnRegBruker As Button
 End Class

@@ -1,10 +1,17 @@
 ﻿
 Public Class RegistrerForm
     Private Sub btnRegistrer_Click(sender As Object, e As EventArgs) Handles btnRegistrer.Click, Me.KeyPress
-        If SjekkInfo(postnrTxt.Text, adresseTxt.Text, pnummerTxt.Text, fornavnTxt.Text, etternavnTxt.Text, epostTxt.Text, tlfTxt.Text, finnFdato(pnummerTxt.Text), passordcTxt.Text, passordTxt.Text) = False Then
+        If SjekkInfo(postnrTxt.Text, adresseTxt.Text, pnummerTxt.Text, fornavnTxt.Text, etternavnTxt.Text, epostTxt.Text, tlfTxt.Text, passordcTxt.Text, passordTxt.Text) = False Then
             MsgBox("Bruker ble ikke registrert")
         Else
-            MsgBox("Registrering fullført." & vbCrLf & "Brukernavnet ditt er: " & epostTxt.Text & vbCrLf & vbCrLf & "Du kan nå gi samtykke ved resepsjonen")
+            If LoginForm.bnavn = "" Then
+                MsgBox("Registrering fullført." & vbCrLf & "Brukernavnet ditt er: " & epostTxt.Text & vbCrLf & vbCrLf & "Du kan nå gi samtykke ved resepsjonen")
+                Me.Close()
+                LoginForm.Show()
+            Else
+                MsgBox("Registrering fullført.")
+                Me.Close()
+            End If
         End If
     End Sub
 
@@ -12,11 +19,12 @@ Public Class RegistrerForm
         Me.CenterToParent()
     End Sub
 
-    Public Function SjekkInfo(post_nr As String, adresse As String, pnummer As String, fornavn As String, etternavn As String, epost As String, tlf As String, fdato As String, passordc As String, passord As String)
+    Public Function SjekkInfo(post_nr As String, adresse As String, pnummer As String, fornavn As String, etternavn As String, epost As String, tlf As String, passordc As String, passord As String)
         Dim Registrering As New RegBruker
         Dim info As New info
         Dim pHash As New passordHash
         Dim pros As New prosedyrer
+        Dim fdato As String
 
         Dim data As DataTable
         data = info.query("epost", "bruker", "epost = '" & epost & "';")
@@ -24,6 +32,8 @@ Public Class RegistrerForm
         Dim godkjentEpost As Boolean = False
         Dim godkjentTelefon As Boolean = False
         Dim godkjentPassord As Boolean = False
+
+        fdato = finnFdato(pnummer)
 
         If pros.validateEmail(epost) = True Then
             If data.Rows.Count > 0 Then
@@ -90,7 +100,6 @@ Public Class RegistrerForm
                                   passordHash,
                                   salt)
             Return True
-            Me.Close()
         End If
     End Function
 
@@ -121,7 +130,6 @@ Public Class RegistrerForm
             fdato += (Mid(person_nr, i, 1))
         Next
 
-        MsgBox(fdato)
         Return fdato
     End Function
 
