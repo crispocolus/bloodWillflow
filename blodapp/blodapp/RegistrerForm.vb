@@ -76,14 +76,51 @@ Public Class RegistrerForm
         End If
 
         If IsNumeric(pnummer) And pnummer.Length = 11 Then
-            godkjentPnr = True
+            Dim tabell As New DataTable
+            tabell = info.query("*", "bruker", "person_nr ='" & pnummer & "';")
+
+            If tabell.Rows.Count > 0 Then
+                Dim customMsgBox As New MsgBoxCustom
+                With customMsgBox
+                    .Label1.Text = "Personnummer er registrert fra før av. " & vbCrLf & "Vil du logge inn eller har du glemt passord?"
+                    .Button1.Text = "Logg inn"
+                    .Button2.Text = "Glemt passord"
+                    .Button3.Visible = True
+                    .Button3.Text = "Tilbake til registrering"
+                    .ShowDialog()
+                End With
+
+                If customMsgBox.button1click = True Then
+                    Me.Close()
+                    LoginForm.Show()
+                ElseIf customMsgBox.button2click = True Then
+                    Me.Close()
+                    Dim glemtPw As New prosedyrer
+                    glemtPw.glemtPw()
+                ElseIf customMsgBox.button3click = True Then
+                    customMsgBox.Close()
+                End If
+                Return False
+            Else
+                godkjentPnr = True
+            End If
+
         Else
-            MsgBox("Personnummer må være 11 siffer")
+                MsgBox("Personnummer må være 11 siffer")
             Return False
         End If
 
         If IsNumeric(post_nr) And post_nr.Length = 4 Then
-            godkjentPostnr = True
+            Dim info2 As New info
+            Dim tabell2 As New DataTable
+            tabell2 = info.query("post_nr", "postnummer", "post_nr ='" & post_nr & "';")
+            If tabell2.Rows.Count > 0 Then
+                godkjentPostnr = True
+            Else
+                MsgBox("Ugyldig postnummer")
+                Return False
+            End If
+
         Else
             MsgBox("Postnummer må være 4 siffer")
             Return False
@@ -117,7 +154,7 @@ Public Class RegistrerForm
                                   salt)
             Return True
         Else
-            Return MsgBox("Feil utfylt skjema")
+            Return False
         End If
     End Function
 
