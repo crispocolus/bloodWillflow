@@ -431,5 +431,29 @@
     Private Sub btnRegBruker_Click(sender As Object, e As EventArgs) Handles btnRegBruker.Click
         RegistrerForm.Show()
     End Sub
+
+    Private Sub btnSokBruker_Click(sender As Object, e As EventArgs) Handles btnSokBruker.Click
+        Dim soking As New soking
+
+        Dim sokeord As String = sokTxt.Text
+        Dim resultatTab As New DataTable
+        Dim sorter As String = "fornavn"
+
+        Select Case sokSpesCmb.Text
+            Case "fornavn"
+                sorter = "fornavn"
+            Case "etternavn"
+                sorter = "etternavn"
+            Case "e-post"
+                sorter = "epost"
+        End Select
+
+        resultatTab = soking.sokBruker(sokeord, sorter)
+
+        lstKandidater.Items.Clear()
+        For Each rad As DataRow In resultatTab.Rows
+            lstKandidater.Items.Add(New listItem With {.display = rad("Fornavn") & " " & rad("Etternavn") & " " & rad("Epost") & " " & rad("Fdato"), .value = rad("person_nr")})
+        Next
+    End Sub
 End Class
 
