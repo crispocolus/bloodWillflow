@@ -26,6 +26,7 @@ Public Class egenerklaering
 
     Private Sub btnEgenSubmit_Click(sender As Object, e As EventArgs) Handles btnEgenSubmit.Click
         submitSkjema()
+        Me.Close()
     End Sub
 
     Private Sub ChkSomFor_CheckedChanged(sender As Object, e As EventArgs) Handles ChkSomFor.CheckedChanged

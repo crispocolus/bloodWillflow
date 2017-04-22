@@ -3,6 +3,7 @@
         info()
         sjekkMelding()
         sjekkTime()
+        MonthCalendar2.MinDate = Today.AddDays(14)
         Me.CenterToParent()
     End Sub
 
@@ -291,4 +292,5 @@
         '    Next
         'Next
     End Sub
+
 End Class

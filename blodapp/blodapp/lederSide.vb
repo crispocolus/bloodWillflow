@@ -427,5 +427,69 @@
         egenerklaering.Show()
         egenerklaering.fyllSkjema(CType(lstEgenNavn.SelectedItem, listItem).value, CType(lstEgenDato.SelectedItem, listItem).value)
     End Sub
+
+    Private Sub antallGivere(blodtype As String)
+        Dim info As New info
+        Dim tabell As New DataTable
+
+
+        tabell = info.queryJoin("COUNT(bruker.person_nr)", "bruker", "blodgiver ON bruker.person_nr = blodgiver.person_nr", "blodgiver.blodtype = '" & blodtype & "';")
+
+        For Each rad In tabell.Rows
+            ListBox2.Items.Add(blodtype & ": " & rad("COUNT(bruker.person_nr)") & " aktive blodgivere registrert")
+        Next
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+        antallGivere("A+")
+        antallGivere("A-")
+        antallGivere("B+")
+        antallGivere("B-")
+        antallGivere("AB+")
+        antallGivere("AB-")
+        antallGivere("O+")
+        antallGivere("O-")
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim info As New info
+        Dim tabell As New DataTable
+        tabell = info.query("COUNT(tappe_id), MONTH(tappedato)", "tappesesjon", "YEAR(tappedato) = YEAR(CURDATE()) GROUP BY MONTH(tappedato)")
+
+        For Each rad In tabell.Rows
+            Select Case rad("MONTH(tappedato)")
+                Case 1
+                    ListBox3.Items.Add("Januar: " & rad("COUNT(tappe_id)"))
+                Case 2
+                    ListBox3.Items.Add("Februar: " & rad("COUNT(tappe_id)"))
+                Case 3
+                    ListBox3.Items.Add("Mars: " & rad("COUNT(tappe_id)"))
+                Case 4
+                    ListBox3.Items.Add("April: " & rad("COUNT(tappe_id)"))
+                Case 5
+                    ListBox3.Items.Add("Mai: " & rad("COUNT(tappe_id)"))
+                Case 6
+                    ListBox3.Items.Add("Juni: " & rad("COUNT(tappe_id)"))
+                Case 7
+                    ListBox3.Items.Add("Juli: " & rad("COUNT(tappe_id)"))
+                Case 8
+                    ListBox3.Items.Add("August: " & rad("COUNT(tappe_id)"))
+                Case 9
+                    ListBox3.Items.Add("September: " & rad("COUNT(tappe_id)"))
+                Case 10
+                    ListBox3.Items.Add("Oktober: " & rad("COUNT(tappe_id)"))
+                Case 11
+                    ListBox3.Items.Add("November: " & rad("COUNT(tappe_id)"))
+                Case 12
+                    ListBox3.Items.Add("Desember: " & rad("COUNT(tappe_id)"))
+            End Select
+
+
+
+        Next
+    End Sub
 End Class
 

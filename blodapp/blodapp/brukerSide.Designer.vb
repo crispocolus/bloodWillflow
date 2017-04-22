@@ -82,17 +82,17 @@ Partial Class brukerSide
         'lblVelgLedigTime
         '
         Me.lblVelgLedigTime.AutoSize = True
-        Me.lblVelgLedigTime.Location = New System.Drawing.Point(336, 41)
+        Me.lblVelgLedigTime.Location = New System.Drawing.Point(230, 43)
         Me.lblVelgLedigTime.Name = "lblVelgLedigTime"
-        Me.lblVelgLedigTime.Size = New System.Drawing.Size(120, 17)
+        Me.lblVelgLedigTime.Size = New System.Drawing.Size(269, 17)
         Me.lblVelgLedigTime.TabIndex = 1
-        Me.lblVelgLedigTime.Text = "Velg en ledig time"
+        Me.lblVelgLedigTime.Text = "Velg en ledig time (minst 2 uker frem i tid)"
         '
         'datoInkallLst
         '
         Me.datoInkallLst.FormattingEnabled = True
         Me.datoInkallLst.ItemHeight = 16
-        Me.datoInkallLst.Location = New System.Drawing.Point(419, 63)
+        Me.datoInkallLst.Location = New System.Drawing.Point(458, 63)
         Me.datoInkallLst.Name = "datoInkallLst"
         Me.datoInkallLst.Size = New System.Drawing.Size(160, 148)
         Me.datoInkallLst.TabIndex = 2

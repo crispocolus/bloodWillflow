@@ -11,6 +11,7 @@ Public Class RegistrerForm
             Else
                 MsgBox("Registrering fullført.")
                 Me.Close()
+                LoginForm.Show()
             End If
         End If
     End Sub
