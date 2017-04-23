@@ -28,30 +28,30 @@ Partial Class adminSide
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label20 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtEtternavn = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.sokSpesCmb = New System.Windows.Forms.ComboBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtFornavn = New System.Windows.Forms.TextBox()
         Me.btnFjernBruker = New System.Windows.Forms.Button()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtEpost = New System.Windows.Forms.TextBox()
         Me.btnEndrePersoninfo = New System.Windows.Forms.Button()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.txtTelefon = New System.Windows.Forms.TextBox()
+        Me.btnEndreStatus = New System.Windows.Forms.Button()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txtAdresse = New System.Windows.Forms.TextBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.txtPostnr = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.sokTxt = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.lstBrukere = New System.Windows.Forms.ListBox()
         Me.btnSokBruker = New System.Windows.Forms.Button()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.brkStatLbl = New System.Windows.Forms.Label()
@@ -103,30 +103,30 @@ Partial Class adminSide
         Me.TabPage1.Controls.Add(Me.Label8)
         Me.TabPage1.Controls.Add(Me.Panel1)
         Me.TabPage1.Controls.Add(Me.Label20)
-        Me.TabPage1.Controls.Add(Me.TextBox2)
+        Me.TabPage1.Controls.Add(Me.txtEtternavn)
         Me.TabPage1.Controls.Add(Me.Label6)
         Me.TabPage1.Controls.Add(Me.Label19)
         Me.TabPage1.Controls.Add(Me.sokSpesCmb)
-        Me.TabPage1.Controls.Add(Me.TextBox1)
+        Me.TabPage1.Controls.Add(Me.txtFornavn)
         Me.TabPage1.Controls.Add(Me.btnFjernBruker)
         Me.TabPage1.Controls.Add(Me.Label18)
         Me.TabPage1.Controls.Add(Me.Label5)
-        Me.TabPage1.Controls.Add(Me.TextBox3)
+        Me.TabPage1.Controls.Add(Me.txtEpost)
         Me.TabPage1.Controls.Add(Me.btnEndrePersoninfo)
         Me.TabPage1.Controls.Add(Me.Label17)
         Me.TabPage1.Controls.Add(Me.Label4)
-        Me.TabPage1.Controls.Add(Me.TextBox4)
-        Me.TabPage1.Controls.Add(Me.Button2)
+        Me.TabPage1.Controls.Add(Me.txtTelefon)
+        Me.TabPage1.Controls.Add(Me.btnEndreStatus)
         Me.TabPage1.Controls.Add(Me.Label16)
         Me.TabPage1.Controls.Add(Me.Label3)
-        Me.TabPage1.Controls.Add(Me.TextBox5)
+        Me.TabPage1.Controls.Add(Me.txtAdresse)
         Me.TabPage1.Controls.Add(Me.ComboBox1)
         Me.TabPage1.Controls.Add(Me.Label15)
-        Me.TabPage1.Controls.Add(Me.TextBox6)
+        Me.TabPage1.Controls.Add(Me.txtPostnr)
         Me.TabPage1.Controls.Add(Me.Label2)
         Me.TabPage1.Controls.Add(Me.sokTxt)
         Me.TabPage1.Controls.Add(Me.Label1)
-        Me.TabPage1.Controls.Add(Me.ListBox1)
+        Me.TabPage1.Controls.Add(Me.lstBrukere)
         Me.TabPage1.Controls.Add(Me.btnSokBruker)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
@@ -165,13 +165,13 @@ Partial Class adminSide
         Me.Label20.TabIndex = 36
         Me.Label20.Text = "Post nr"
         '
-        'TextBox2
+        'txtEtternavn
         '
-        Me.TextBox2.Location = New System.Drawing.Point(580, 64)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(98, 20)
-        Me.TextBox2.TabIndex = 24
+        Me.txtEtternavn.Location = New System.Drawing.Point(580, 64)
+        Me.txtEtternavn.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtEtternavn.Name = "txtEtternavn"
+        Me.txtEtternavn.Size = New System.Drawing.Size(98, 20)
+        Me.txtEtternavn.TabIndex = 24
         '
         'Label6
         '
@@ -203,13 +203,13 @@ Partial Class adminSide
         Me.sokSpesCmb.Size = New System.Drawing.Size(111, 21)
         Me.sokSpesCmb.TabIndex = 20
         '
-        'TextBox1
+        'txtFornavn
         '
-        Me.TextBox1.Location = New System.Drawing.Point(580, 41)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(98, 20)
-        Me.TextBox1.TabIndex = 0
+        Me.txtFornavn.Location = New System.Drawing.Point(580, 41)
+        Me.txtFornavn.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtFornavn.Name = "txtFornavn"
+        Me.txtFornavn.Size = New System.Drawing.Size(98, 20)
+        Me.txtFornavn.TabIndex = 0
         '
         'btnFjernBruker
         '
@@ -239,13 +239,13 @@ Partial Class adminSide
         Me.Label5.TabIndex = 18
         Me.Label5.Text = "Fjerne valgt bruker"
         '
-        'TextBox3
+        'txtEpost
         '
-        Me.TextBox3.Location = New System.Drawing.Point(580, 86)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(98, 20)
-        Me.TextBox3.TabIndex = 25
+        Me.txtEpost.Location = New System.Drawing.Point(580, 86)
+        Me.txtEpost.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtEpost.Name = "txtEpost"
+        Me.txtEpost.Size = New System.Drawing.Size(98, 20)
+        Me.txtEpost.TabIndex = 25
         '
         'btnEndrePersoninfo
         '
@@ -275,22 +275,22 @@ Partial Class adminSide
         Me.Label4.TabIndex = 16
         Me.Label4.Text = "Se og endre brukerinfo"
         '
-        'TextBox4
+        'txtTelefon
         '
-        Me.TextBox4.Location = New System.Drawing.Point(580, 109)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(98, 20)
-        Me.TextBox4.TabIndex = 26
+        Me.txtTelefon.Location = New System.Drawing.Point(580, 109)
+        Me.txtTelefon.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtTelefon.Name = "txtTelefon"
+        Me.txtTelefon.Size = New System.Drawing.Size(98, 20)
+        Me.txtTelefon.TabIndex = 26
         '
-        'Button2
+        'btnEndreStatus
         '
-        Me.Button2.Location = New System.Drawing.Point(388, 279)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(48, 23)
-        Me.Button2.TabIndex = 15
-        Me.Button2.Text = "Endre"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnEndreStatus.Location = New System.Drawing.Point(388, 279)
+        Me.btnEndreStatus.Name = "btnEndreStatus"
+        Me.btnEndreStatus.Size = New System.Drawing.Size(48, 23)
+        Me.btnEndreStatus.TabIndex = 15
+        Me.btnEndreStatus.Text = "Endre"
+        Me.btnEndreStatus.UseVisualStyleBackColor = True
         '
         'Label16
         '
@@ -312,13 +312,13 @@ Partial Class adminSide
         Me.Label3.TabIndex = 14
         Me.Label3.Text = "Endre brukerstatus"
         '
-        'TextBox5
+        'txtAdresse
         '
-        Me.TextBox5.Location = New System.Drawing.Point(580, 132)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(98, 20)
-        Me.TextBox5.TabIndex = 27
+        Me.txtAdresse.Location = New System.Drawing.Point(580, 132)
+        Me.txtAdresse.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtAdresse.Name = "txtAdresse"
+        Me.txtAdresse.Size = New System.Drawing.Size(98, 20)
+        Me.txtAdresse.TabIndex = 27
         '
         'ComboBox1
         '
@@ -339,13 +339,13 @@ Partial Class adminSide
         Me.Label15.TabIndex = 31
         Me.Label15.Text = "Fornavn"
         '
-        'TextBox6
+        'txtPostnr
         '
-        Me.TextBox6.Location = New System.Drawing.Point(580, 154)
-        Me.TextBox6.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(98, 20)
-        Me.TextBox6.TabIndex = 28
+        Me.txtPostnr.Location = New System.Drawing.Point(580, 154)
+        Me.txtPostnr.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtPostnr.Name = "txtPostnr"
+        Me.txtPostnr.Size = New System.Drawing.Size(98, 20)
+        Me.txtPostnr.TabIndex = 28
         '
         'Label2
         '
@@ -372,13 +372,13 @@ Partial Class adminSide
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "Velg en bruker å redigere"
         '
-        'ListBox1
+        'lstBrukere
         '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(279, 39)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(177, 160)
-        Me.ListBox1.TabIndex = 9
+        Me.lstBrukere.FormattingEnabled = True
+        Me.lstBrukere.Location = New System.Drawing.Point(279, 39)
+        Me.lstBrukere.Name = "lstBrukere"
+        Me.lstBrukere.Size = New System.Drawing.Size(177, 160)
+        Me.lstBrukere.TabIndex = 9
         '
         'btnSokBruker
         '
@@ -679,13 +679,13 @@ Partial Class adminSide
     Friend WithEvents Label5 As Label
     Friend WithEvents btnEndrePersoninfo As Button
     Friend WithEvents Label4 As Label
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnEndreStatus As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Label2 As Label
     Friend WithEvents sokTxt As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents lstBrukere As ListBox
     Friend WithEvents btnSokBruker As Button
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents Label6 As Label
@@ -724,11 +724,11 @@ Partial Class adminSide
     Friend WithEvents Label17 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents Label15 As Label
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtPostnr As TextBox
+    Friend WithEvents txtAdresse As TextBox
+    Friend WithEvents txtTelefon As TextBox
+    Friend WithEvents txtEpost As TextBox
+    Friend WithEvents txtEtternavn As TextBox
+    Friend WithEvents txtFornavn As TextBox
     Friend WithEvents Label8 As Label
 End Class
