@@ -33,15 +33,17 @@ Public Class egenerklaering
     'utfører funksjon når chkSomFor krysses av
     'data beholdes selv om den krysses ut igjen fordi bruker kan verifisere at det stemmer uavhengig
     Private Sub ChkSomFor_CheckedChanged(sender As Object, e As EventArgs) Handles ChkSomFor.CheckedChanged
-        hentPersonaliaPersonNr()
+        Dim pros As New prosedyrer
+        hentPersonalia(pros.finnPersonNummer(LoginForm.bnavn))
     End Sub
     'brukes for å hente ut personalia. personnummer som variabel
-    Private Sub hentPersonalia(pnummer As String)
+    Private Sub hentPersonalia(person_nr As String)
         'importerer klassen info fra SQLCOnnection.vb 
         Dim info As New info
+        Dim pros As New prosedyrer
         Dim tabell As New DataTable
 
-        tabell = info.query("*", "bruker", "person_nr = '" & pnummer & "'")
+        tabell = info.query("*", "bruker", "person_nr = '" & person_nr & "'")
 
         For Each rad In tabell.Rows
             txtEgenFornavn.Text = rad("fornavn")
@@ -163,17 +165,19 @@ Public Class egenerklaering
             Next
         Next
     End Sub
-    'brukes for å hente ut person-info til egenerklæring. 
-    'brukes både når bruker fyller ut og når ansatt ser på egenerklæring
-    Public Sub hentPersonaliaPersonNr()
-        'importerer info-klassen fra SQLConnection.vb som inneholder generelle query
-        Dim info As New info
-        Dim midTabell As New DataTable
 
-        midTabell = info.query("person_nr", "bruker", "epost = '" & LoginForm.bnavn & "'")
 
-        For Each rad In midTabell.Rows
-            hentPersonalia(rad("person_nr"))
-        Next
-    End Sub
+    ''brukes for å hente ut person-info til egenerklæring. 
+    ''brukes både når bruker fyller ut og når ansatt ser på egenerklæring
+    'Public Sub hentPersonaliaPersonNr()
+    '    'importerer info-klassen fra SQLConnection.vb som inneholder generelle query
+    '    Dim info As New info
+    '    Dim midTabell As New DataTable
+
+    '    midTabell = info.query("person_nr", "bruker", "epost = '" & LoginForm.bnavn & "'")
+
+    '    For Each rad In midTabell.Rows
+    '        hentPersonalia(rad("person_nr"))
+    '    Next
+    'End Sub
 End Class

@@ -210,15 +210,15 @@
         Dim epostAddr As String = ""
         Dim epostTab As DataTable
 
+        MsgBox(lstKandidater.SelectedIndex)
+
+        If lstKandidater.SelectedIndex = -1 Or cmbTime.SelectedIndex = -1 Or cmbMin.SelectedIndex = -1 Then
+            MsgBox("Du må fylle ut alle feltene!")
+            Exit Sub
+        End If
+
         Dim valgtPnummer As String
         valgtPnummer = CType(lstKandidater.SelectedItem, listItem).value
-
-
-        '****Tanken er å sjekke om alt er fyllt ut, ellers virker ikke koden (kræsj)*****
-        'If lstKandidater.SelectedItem = "" Or cmbTime.SelectedItem = "" Or cmbMin.SelectedItem = "" Then
-        '    MsgBox("Du må fylle ut alle feltene!")
-        '    Return
-        'End If
 
         kommentar = InputBox("Kommentar: (frivillig)")
 
@@ -227,10 +227,6 @@
         For Each rad As DataRow In epostTab.Rows
             epostAddr = rad("epost")
         Next
-        MsgBox(epostAddr & " " & valgtPnummer & " " & kommentar)
-
-        '*************Oppsummering funker ikke enda, bare småplukk!!*****
-        'MsgBox("Oppsummering: " & vbCrLf & "Navn: " & lstKandidater.SelectedItem & vbCrLf & "Dato: " & tappeKalender.SelectionStart.ToString("yyyy/MM/dd") & "Klokkeslett: " & cmbTime.SelectedItem & ":" & cmbMin.SelectedItem & vbCrLf & "Kommentar: " & kommentar & vbCrLf)
 
         janei = MsgBox("Vil du sende innkallingen?", MsgBoxStyle.YesNo)
         If janei = DialogResult.Yes Then
@@ -367,7 +363,7 @@
         Dim tabell As New DataTable
         lstEgenNavn.Items.Clear()
 
-        tabell = info.queryJoin("skjema.person_nr, bruker.fornavn, bruker.etternavn", "skjema", "bruker ON bruker.person_nr = skjema.person_nr", "skjema_id = 1")
+        tabell = info.queryJoin("DISTINCT skjema.person_nr, bruker.fornavn, bruker.etternavn", "skjema", "bruker ON bruker.person_nr = skjema.person_nr", "1 = 1")
 
         For Each rad As DataRow In tabell.Rows
             lstEgenNavn.Items.Add(New listItem With {.display = rad("fornavn") & " " & rad("etternavn"), .value = rad("person_nr")})
@@ -462,12 +458,14 @@
     Public Sub seEgenerklaering()
         Dim egenerklaering As New egenerklaering
 
-        If lstEgenNavn.SelectedIndex = "" Then
-            MsgBox("Du må velge en blodgiver!")
+        If Not lstEgenNavn.SelectedIndex >= 0 Then
+            MsgBox("Du må velge en person!")
+            Exit Sub
         End If
 
-        If lstEgenDato.SelectedIndex = "" Then
+        If Not lstEgenDato.SelectedIndex >= 0 Then
             MsgBox("Du må velge en egenerklæring!")
+            Exit Sub
         End If
 
         egenerklaering.Show()

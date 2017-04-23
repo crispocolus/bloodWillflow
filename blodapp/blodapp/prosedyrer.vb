@@ -97,6 +97,20 @@ Public Class prosedyrer
         LoginForm.Show()
         MsgBox("Du er nå logget ut")
     End Sub
+
+    Public Function finnPersonNummer(brukernavn As String)
+        Dim info As New info
+        Dim midTabell As New DataTable
+        Dim personNr As String = ""
+
+        midTabell = info.query("person_nr", "bruker", "epost = '" & brukernavn & "'")
+
+        For Each rad In midTabell.Rows
+            personNr = (rad("person_nr"))
+        Next
+
+        Return personNr
+    End Function
 End Class
 
 'Lar en item i listbox ha en annen verdi. Brukes til bla. "sendInnkalling" etc.
