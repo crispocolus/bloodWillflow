@@ -42,10 +42,8 @@ Partial Class egenerklaering
         Me.lblEgenPost_nr = New System.Windows.Forms.Label()
         Me.txtEgenPrivatadresse = New System.Windows.Forms.TextBox()
         Me.lblEgenPrivatadresse = New System.Windows.Forms.Label()
-        Me.lblEgenPerson_nr = New System.Windows.Forms.Label()
         Me.lblEgenEtternavn = New System.Windows.Forms.Label()
         Me.lblEgenFornavn = New System.Windows.Forms.Label()
-        Me.txtEgenPerson_nr = New System.Windows.Forms.TextBox()
         Me.txtEgenEtternavn = New System.Windows.Forms.TextBox()
         Me.txtEgenFornavn = New System.Windows.Forms.TextBox()
         Me.ChkSomFor = New System.Windows.Forms.CheckBox()
@@ -355,7 +353,6 @@ Partial Class egenerklaering
         Me.CheckBox57 = New System.Windows.Forms.CheckBox()
         Me.Panel56 = New System.Windows.Forms.Panel()
         Me.CheckBox56 = New System.Windows.Forms.CheckBox()
-        Me.Button6 = New System.Windows.Forms.Button()
         Me.btnEgenSubmit = New System.Windows.Forms.Button()
         Me.Label147 = New System.Windows.Forms.Label()
         Me.Label145 = New System.Windows.Forms.Label()
@@ -463,7 +460,7 @@ Partial Class egenerklaering
         Me.TabControl1.Location = New System.Drawing.Point(0, 1)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1163, 766)
+        Me.TabControl1.Size = New System.Drawing.Size(751, 766)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage1
@@ -483,10 +480,8 @@ Partial Class egenerklaering
         Me.TabPage1.Controls.Add(Me.lblEgenPost_nr)
         Me.TabPage1.Controls.Add(Me.txtEgenPrivatadresse)
         Me.TabPage1.Controls.Add(Me.lblEgenPrivatadresse)
-        Me.TabPage1.Controls.Add(Me.lblEgenPerson_nr)
         Me.TabPage1.Controls.Add(Me.lblEgenEtternavn)
         Me.TabPage1.Controls.Add(Me.lblEgenFornavn)
-        Me.TabPage1.Controls.Add(Me.txtEgenPerson_nr)
         Me.TabPage1.Controls.Add(Me.txtEgenEtternavn)
         Me.TabPage1.Controls.Add(Me.txtEgenFornavn)
         Me.TabPage1.Controls.Add(Me.ChkSomFor)
@@ -494,7 +489,7 @@ Partial Class egenerklaering
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1155, 740)
+        Me.TabPage1.Size = New System.Drawing.Size(743, 740)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Personinfo"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -539,16 +534,19 @@ Partial Class egenerklaering
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.BackColor = System.Drawing.Color.Transparent
+        Me.CheckBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CheckBox1.ForeColor = System.Drawing.SystemColors.ControlText
         Me.CheckBox1.Location = New System.Drawing.Point(2, 2)
         Me.CheckBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox1.Size = New System.Drawing.Size(12, 11)
         Me.CheckBox1.TabIndex = 8
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.CheckBox1.UseVisualStyleBackColor = False
         '
         'btnEgenNext1
         '
-        Me.btnEgenNext1.Location = New System.Drawing.Point(165, 492)
+        Me.btnEgenNext1.Location = New System.Drawing.Point(165, 501)
         Me.btnEgenNext1.Name = "btnEgenNext1"
         Me.btnEgenNext1.Size = New System.Drawing.Size(237, 23)
         Me.btnEgenNext1.TabIndex = 10
@@ -585,7 +583,7 @@ Partial Class egenerklaering
         '
         'txtEgenEpost
         '
-        Me.txtEgenEpost.Location = New System.Drawing.Point(334, 125)
+        Me.txtEgenEpost.Location = New System.Drawing.Point(226, 125)
         Me.txtEgenEpost.Name = "txtEgenEpost"
         Me.txtEgenEpost.Size = New System.Drawing.Size(100, 20)
         Me.txtEgenEpost.TabIndex = 7
@@ -593,7 +591,7 @@ Partial Class egenerklaering
         'lblEgenEpost
         '
         Me.lblEgenEpost.AutoSize = True
-        Me.lblEgenEpost.Location = New System.Drawing.Point(331, 109)
+        Me.lblEgenEpost.Location = New System.Drawing.Point(223, 109)
         Me.lblEgenEpost.Name = "lblEgenEpost"
         Me.lblEgenEpost.Size = New System.Drawing.Size(37, 13)
         Me.lblEgenEpost.TabIndex = 38
@@ -601,7 +599,7 @@ Partial Class egenerklaering
         '
         'txtEgenTlf
         '
-        Me.txtEgenTlf.Location = New System.Drawing.Point(226, 125)
+        Me.txtEgenTlf.Location = New System.Drawing.Point(226, 86)
         Me.txtEgenTlf.Name = "txtEgenTlf"
         Me.txtEgenTlf.Size = New System.Drawing.Size(100, 20)
         Me.txtEgenTlf.TabIndex = 6
@@ -609,7 +607,7 @@ Partial Class egenerklaering
         'lblEgenTlf
         '
         Me.lblEgenTlf.AutoSize = True
-        Me.lblEgenTlf.Location = New System.Drawing.Point(226, 109)
+        Me.lblEgenTlf.Location = New System.Drawing.Point(223, 67)
         Me.lblEgenTlf.Name = "lblEgenTlf"
         Me.lblEgenTlf.Size = New System.Drawing.Size(51, 13)
         Me.lblEgenTlf.TabIndex = 36
@@ -647,15 +645,6 @@ Partial Class egenerklaering
         Me.lblEgenPrivatadresse.TabIndex = 34
         Me.lblEgenPrivatadresse.Text = "Privatadresse"
         '
-        'lblEgenPerson_nr
-        '
-        Me.lblEgenPerson_nr.AutoSize = True
-        Me.lblEgenPerson_nr.Location = New System.Drawing.Point(223, 67)
-        Me.lblEgenPerson_nr.Name = "lblEgenPerson_nr"
-        Me.lblEgenPerson_nr.Size = New System.Drawing.Size(77, 13)
-        Me.lblEgenPerson_nr.TabIndex = 33
-        Me.lblEgenPerson_nr.Text = "Personnummer"
-        '
         'lblEgenEtternavn
         '
         Me.lblEgenEtternavn.AutoSize = True
@@ -673,13 +662,6 @@ Partial Class egenerklaering
         Me.lblEgenFornavn.Size = New System.Drawing.Size(46, 13)
         Me.lblEgenFornavn.TabIndex = 29
         Me.lblEgenFornavn.Text = "Fornavn"
-        '
-        'txtEgenPerson_nr
-        '
-        Me.txtEgenPerson_nr.Location = New System.Drawing.Point(226, 86)
-        Me.txtEgenPerson_nr.Name = "txtEgenPerson_nr"
-        Me.txtEgenPerson_nr.Size = New System.Drawing.Size(100, 20)
-        Me.txtEgenPerson_nr.TabIndex = 3
         '
         'txtEgenEtternavn
         '
@@ -771,7 +753,7 @@ Partial Class egenerklaering
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1155, 740)
+        Me.TabPage2.Size = New System.Drawing.Size(743, 740)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Side 1"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -1391,7 +1373,7 @@ Partial Class egenerklaering
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape23, Me.LineShape22, Me.LineShape21, Me.LineShape20, Me.LineShape19, Me.LineShape18, Me.LineShape17, Me.LineShape16, Me.LineShape15, Me.LineShape14, Me.LineShape13, Me.LineShape12, Me.LineShape11, Me.LineShape10, Me.LineShape9, Me.LineShape8, Me.LineShape7, Me.LineShape6, Me.LineShape5, Me.LineShape4, Me.LineShape3, Me.LineShape2, Me.LineShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(1149, 734)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(737, 734)
         Me.ShapeContainer1.TabIndex = 381
         Me.ShapeContainer1.TabStop = False
         '
@@ -1627,7 +1609,7 @@ Partial Class egenerklaering
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(1155, 740)
+        Me.TabPage3.Size = New System.Drawing.Size(743, 740)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Side 2"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -2149,7 +2131,7 @@ Partial Class egenerklaering
         Me.ShapeContainer2.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer2.Name = "ShapeContainer2"
         Me.ShapeContainer2.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape43, Me.LineShape42, Me.LineShape41, Me.LineShape40, Me.LineShape39, Me.LineShape38, Me.LineShape37, Me.LineShape36, Me.LineShape35, Me.LineShape34, Me.LineShape33, Me.LineShape32, Me.LineShape31, Me.LineShape30, Me.LineShape29, Me.LineShape28, Me.LineShape27, Me.LineShape26, Me.LineShape25, Me.LineShape24})
-        Me.ShapeContainer2.Size = New System.Drawing.Size(1149, 734)
+        Me.ShapeContainer2.Size = New System.Drawing.Size(737, 734)
         Me.ShapeContainer2.TabIndex = 554
         Me.ShapeContainer2.TabStop = False
         '
@@ -2346,7 +2328,7 @@ Partial Class egenerklaering
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(1155, 740)
+        Me.TabPage4.Size = New System.Drawing.Size(743, 740)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Side 3"
         Me.TabPage4.UseVisualStyleBackColor = True
@@ -2701,7 +2683,7 @@ Partial Class egenerklaering
         Me.ShapeContainer3.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer3.Name = "ShapeContainer3"
         Me.ShapeContainer3.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape56, Me.LineShape55, Me.LineShape54, Me.LineShape53, Me.LineShape52, Me.LineShape51, Me.LineShape50, Me.LineShape49, Me.LineShape48, Me.LineShape47, Me.LineShape46, Me.LineShape45, Me.LineShape44})
-        Me.ShapeContainer3.Size = New System.Drawing.Size(1149, 734)
+        Me.ShapeContainer3.Size = New System.Drawing.Size(737, 734)
         Me.ShapeContainer3.TabIndex = 129
         Me.ShapeContainer3.TabStop = False
         '
@@ -2850,7 +2832,7 @@ Partial Class egenerklaering
         Me.TabPage5.Location = New System.Drawing.Point(4, 22)
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage5.Size = New System.Drawing.Size(1155, 740)
+        Me.TabPage5.Size = New System.Drawing.Size(743, 740)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Side 4"
         Me.TabPage5.UseVisualStyleBackColor = True
@@ -3347,7 +3329,7 @@ Partial Class egenerklaering
         Me.ShapeContainer4.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer4.Name = "ShapeContainer4"
         Me.ShapeContainer4.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape86, Me.LineShape85, Me.LineShape73, Me.LineShape72, Me.LineShape71, Me.LineShape70, Me.LineShape69, Me.LineShape68, Me.LineShape67, Me.LineShape66, Me.LineShape65, Me.LineShape64, Me.LineShape63, Me.LineShape62, Me.LineShape61, Me.LineShape60, Me.LineShape59, Me.LineShape58, Me.LineShape57})
-        Me.ShapeContainer4.Size = New System.Drawing.Size(1149, 734)
+        Me.ShapeContainer4.Size = New System.Drawing.Size(737, 734)
         Me.ShapeContainer4.TabIndex = 139
         Me.ShapeContainer4.TabStop = False
         '
@@ -3511,7 +3493,6 @@ Partial Class egenerklaering
         Me.TabPage6.Controls.Add(Me.Panel58)
         Me.TabPage6.Controls.Add(Me.Panel57)
         Me.TabPage6.Controls.Add(Me.Panel56)
-        Me.TabPage6.Controls.Add(Me.Button6)
         Me.TabPage6.Controls.Add(Me.btnEgenSubmit)
         Me.TabPage6.Controls.Add(Me.Label147)
         Me.TabPage6.Controls.Add(Me.Label145)
@@ -3529,14 +3510,14 @@ Partial Class egenerklaering
         Me.TabPage6.Location = New System.Drawing.Point(4, 22)
         Me.TabPage6.Name = "TabPage6"
         Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage6.Size = New System.Drawing.Size(1155, 740)
+        Me.TabPage6.Size = New System.Drawing.Size(743, 740)
         Me.TabPage6.TabIndex = 5
         Me.TabPage6.Text = "Side 5"
         Me.TabPage6.UseVisualStyleBackColor = True
         '
         'btnEgenBack5
         '
-        Me.btnEgenBack5.Location = New System.Drawing.Point(169, 322)
+        Me.btnEgenBack5.Location = New System.Drawing.Point(233, 322)
         Me.btnEgenBack5.Name = "btnEgenBack5"
         Me.btnEgenBack5.Size = New System.Drawing.Size(75, 23)
         Me.btnEgenBack5.TabIndex = 79
@@ -3638,19 +3619,9 @@ Partial Class egenerklaering
         Me.CheckBox56.TabIndex = 258
         Me.CheckBox56.UseVisualStyleBackColor = True
         '
-        'Button6
-        '
-        Me.Button6.Location = New System.Drawing.Point(428, 170)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(285, 98)
-        Me.Button6.TabIndex = 121
-        Me.Button6.Text = "Test utfør SQL"
-        Me.Button6.UseVisualStyleBackColor = True
-        '
         'btnEgenSubmit
         '
-        Me.btnEgenSubmit.Location = New System.Drawing.Point(258, 322)
+        Me.btnEgenSubmit.Location = New System.Drawing.Point(318, 322)
         Me.btnEgenSubmit.Name = "btnEgenSubmit"
         Me.btnEgenSubmit.Size = New System.Drawing.Size(116, 23)
         Me.btnEgenSubmit.TabIndex = 80
@@ -3773,7 +3744,7 @@ Partial Class egenerklaering
         Me.ShapeContainer5.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer5.Name = "ShapeContainer5"
         Me.ShapeContainer5.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape84, Me.LineShape83, Me.LineShape82, Me.LineShape81, Me.LineShape80, Me.LineShape79, Me.LineShape78, Me.LineShape77, Me.LineShape76, Me.LineShape75, Me.LineShape74})
-        Me.ShapeContainer5.Size = New System.Drawing.Size(1149, 734)
+        Me.ShapeContainer5.Size = New System.Drawing.Size(737, 734)
         Me.ShapeContainer5.TabIndex = 122
         Me.ShapeContainer5.TabStop = False
         '
@@ -3869,7 +3840,7 @@ Partial Class egenerklaering
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1196, 741)
+        Me.ClientSize = New System.Drawing.Size(762, 741)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "egenerklaering"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
@@ -4029,10 +4000,8 @@ Partial Class egenerklaering
     Friend WithEvents lblEgenPost_nr As Label
     Friend WithEvents txtEgenPrivatadresse As TextBox
     Friend WithEvents lblEgenPrivatadresse As Label
-    Friend WithEvents lblEgenPerson_nr As Label
     Friend WithEvents lblEgenEtternavn As Label
     Friend WithEvents lblEgenFornavn As Label
-    Friend WithEvents txtEgenPerson_nr As TextBox
     Friend WithEvents txtEgenEtternavn As TextBox
     Friend WithEvents txtEgenFornavn As TextBox
     Friend WithEvents ChkSomFor As CheckBox
@@ -4354,7 +4323,6 @@ Partial Class egenerklaering
     Friend WithEvents CheckBox57 As CheckBox
     Friend WithEvents Panel56 As Panel
     Friend WithEvents CheckBox56 As CheckBox
-    Friend WithEvents Button6 As Button
     Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel1 As Panel

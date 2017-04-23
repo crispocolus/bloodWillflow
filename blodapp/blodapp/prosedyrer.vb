@@ -99,7 +99,6 @@ Public Class prosedyrer
     End Sub
 End Class
 
-
 'Lar en item i listbox ha en annen verdi. Brukes til bla. "sendInnkalling" etc.
 Public Class listItem
     Public display As String

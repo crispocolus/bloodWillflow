@@ -362,6 +362,14 @@ Public Class EgenErk
 
         Return skjema_id
     End Function
+
+    Public Sub oppdaterBrukerInfo(person_nr As String, fornavn As String, etternavn As String, telefon As String, adresse As String, postnr As String, epost As String)
+        Dim info As New info
+        If person_nr = "" Or fornavn = "" Or etternavn = "" Or telefon = "" Or adresse = "" Or postnr = "" Or epost = "" Then
+            MsgBox("Du må fylle ut alle feltene i personalia. " & vbCrLf & "Hvis du ikke skal oppdatere huker du av 'Som før'.")
+        End If
+        info.queryUpdate("bruker", "fornavn = '" & fornavn & "', etternavn = '" & etternavn & "', telefon = '" & telefon & "', gateadresse = '" & adresse & "', post_nr = " & postnr & ", epost = '" & epost & "'", "person_nr = '" & person_nr & "'")
+    End Sub
     Public Function hentDataTabLand(skjema_id As String, land As String)
         Dim mid As String = skjema_id & ", "
         For i = 2 To 17
