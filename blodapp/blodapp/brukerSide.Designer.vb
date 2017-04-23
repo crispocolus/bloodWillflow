@@ -23,7 +23,7 @@ Partial Class brukerSide
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(brukerSide))
-        Me.MonthCalendar2 = New System.Windows.Forms.MonthCalendar()
+        Me.mndKal1 = New System.Windows.Forms.MonthCalendar()
         Me.lblVelgLedigTime = New System.Windows.Forms.Label()
         Me.datoInkallLst = New System.Windows.Forms.ListBox()
         Me.btnSokTime = New System.Windows.Forms.Button()
@@ -55,8 +55,14 @@ Partial Class brukerSide
         Me.lblEtternavn = New System.Windows.Forms.Label()
         Me.lblFornavn = New System.Windows.Forms.Label()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.LineShape5 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape4 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape3 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.btnEgenErk = New System.Windows.Forms.Button()
         Me.lblKolon = New System.Windows.Forms.Label()
         Me.lblKlokkeslett = New System.Windows.Forms.Label()
         Me.cmbMin = New System.Windows.Forms.ComboBox()
@@ -65,12 +71,6 @@ Partial Class brukerSide
         Me.btnEndrePw = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape3 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape4 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape5 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.btnEgenErk = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -78,11 +78,11 @@ Partial Class brukerSide
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'MonthCalendar2
+        'mndKal1
         '
-        Me.MonthCalendar2.Location = New System.Drawing.Point(27, 42)
-        Me.MonthCalendar2.Name = "MonthCalendar2"
-        Me.MonthCalendar2.TabIndex = 0
+        Me.mndKal1.Location = New System.Drawing.Point(27, 42)
+        Me.mndKal1.Name = "mndKal1"
+        Me.mndKal1.TabIndex = 0
         '
         'lblVelgLedigTime
         '
@@ -381,6 +381,38 @@ Partial Class brukerSide
         Me.ShapeContainer1.TabIndex = 32
         Me.ShapeContainer1.TabStop = False
         '
+        'LineShape5
+        '
+        Me.LineShape5.Name = "LineShape5"
+        Me.LineShape5.X1 = 413
+        Me.LineShape5.X2 = 519
+        Me.LineShape5.Y1 = 53
+        Me.LineShape5.Y2 = 53
+        '
+        'LineShape4
+        '
+        Me.LineShape4.Name = "LineShape4"
+        Me.LineShape4.X1 = 519
+        Me.LineShape4.X2 = 519
+        Me.LineShape4.Y1 = 53
+        Me.LineShape4.Y2 = 216
+        '
+        'LineShape3
+        '
+        Me.LineShape3.Name = "LineShape3"
+        Me.LineShape3.X1 = 412
+        Me.LineShape3.X2 = 518
+        Me.LineShape3.Y1 = 216
+        Me.LineShape3.Y2 = 216
+        '
+        'LineShape2
+        '
+        Me.LineShape2.Name = "LineShape2"
+        Me.LineShape2.X1 = 412
+        Me.LineShape2.X2 = 412
+        Me.LineShape2.Y1 = 53
+        Me.LineShape2.Y2 = 216
+        '
         'LineShape1
         '
         Me.LineShape1.Name = "LineShape1"
@@ -398,7 +430,7 @@ Partial Class brukerSide
         Me.TabPage2.Controls.Add(Me.cmbMin)
         Me.TabPage2.Controls.Add(Me.cmbTime)
         Me.TabPage2.Controls.Add(Me.Panel3)
-        Me.TabPage2.Controls.Add(Me.MonthCalendar2)
+        Me.TabPage2.Controls.Add(Me.mndKal1)
         Me.TabPage2.Controls.Add(Me.lblVelgLedigTime)
         Me.TabPage2.Controls.Add(Me.datoInkallLst)
         Me.TabPage2.Controls.Add(Me.btnSokTime)
@@ -409,6 +441,24 @@ Partial Class brukerSide
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Bestill time"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(312, 272)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(334, 13)
+        Me.Label5.TabIndex = 35
+        Me.Label5.Text = "En egenerklæring må leveres inn for hver gang du har tenkt å gi blod:"
+        '
+        'btnEgenErk
+        '
+        Me.btnEgenErk.Location = New System.Drawing.Point(402, 298)
+        Me.btnEgenErk.Name = "btnEgenErk"
+        Me.btnEgenErk.Size = New System.Drawing.Size(131, 22)
+        Me.btnEgenErk.TabIndex = 34
+        Me.btnEgenErk.Text = "Lever egenerklæring"
+        Me.btnEgenErk.UseVisualStyleBackColor = True
         '
         'lblKolon
         '
@@ -489,56 +539,6 @@ Partial Class brukerSide
         Me.PictureBox1.TabIndex = 8
         Me.PictureBox1.TabStop = False
         '
-        'LineShape2
-        '
-        Me.LineShape2.Name = "LineShape2"
-        Me.LineShape2.X1 = 412
-        Me.LineShape2.X2 = 412
-        Me.LineShape2.Y1 = 53
-        Me.LineShape2.Y2 = 216
-        '
-        'LineShape3
-        '
-        Me.LineShape3.Name = "LineShape3"
-        Me.LineShape3.X1 = 412
-        Me.LineShape3.X2 = 518
-        Me.LineShape3.Y1 = 216
-        Me.LineShape3.Y2 = 216
-        '
-        'LineShape4
-        '
-        Me.LineShape4.Name = "LineShape4"
-        Me.LineShape4.X1 = 519
-        Me.LineShape4.X2 = 519
-        Me.LineShape4.Y1 = 53
-        Me.LineShape4.Y2 = 216
-        '
-        'LineShape5
-        '
-        Me.LineShape5.Name = "LineShape5"
-        Me.LineShape5.X1 = 413
-        Me.LineShape5.X2 = 519
-        Me.LineShape5.Y1 = 53
-        Me.LineShape5.Y2 = 53
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(312, 272)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(334, 13)
-        Me.Label5.TabIndex = 35
-        Me.Label5.Text = "En egenerklæring må leveres inn for hver gang du har tenkt å gi blod:"
-        '
-        'btnEgenErk
-        '
-        Me.btnEgenErk.Location = New System.Drawing.Point(402, 298)
-        Me.btnEgenErk.Name = "btnEgenErk"
-        Me.btnEgenErk.Size = New System.Drawing.Size(131, 22)
-        Me.btnEgenErk.TabIndex = 34
-        Me.btnEgenErk.Text = "Lever egenerklæring"
-        Me.btnEgenErk.UseVisualStyleBackColor = True
-        '
         'brukerSide
         '
         Me.ClientSize = New System.Drawing.Size(760, 554)
@@ -569,7 +569,7 @@ Partial Class brukerSide
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents Label4 As Label
     Friend WithEvents btnAvbestill As Button
-    Friend WithEvents MonthCalendar2 As MonthCalendar
+    Friend WithEvents mndKal1 As MonthCalendar
     Friend WithEvents lblVelgLedigTime As Label
     Friend WithEvents datoInkallLst As ListBox
     Friend WithEvents btnSokTime As Button

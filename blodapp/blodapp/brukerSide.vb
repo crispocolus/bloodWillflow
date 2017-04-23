@@ -1,26 +1,65 @@
 ﻿Public Class brukerSide
     Private Sub brukerSide_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        info()
+        'Henter inn diverse info ved innlasting av side
+        hentPersonInfo()
         sjekkMelding()
         sjekkTime()
-        MonthCalendar2.MinDate = Today.AddDays(14)
+        'sørger for at kalenderen alltid er 14 dager i forveien 
+        mndKal1.MinDate = Today.AddDays(14)
         Me.CenterToParent()
     End Sub
 
-
+    'utfører utloggings-prosedyre når brukeren logger ut
     Private Sub btnLoggUt_Click(sender As Object, e As EventArgs) Handles btnLoggUt.Click
-        LoginForm.bnavn = ""
+        Dim pros As New prosedyrer
         Me.Close()
-        LoginForm.Show()
-        MsgBox("Du er nå logget ut")
+        pros.loggUt()
     End Sub
 
-    Public Sub info()
+    Private Sub mndKal1_DateChanged(sender As Object, e As DateRangeEventArgs) Handles mndKal1.DateChanged
+        hentInnkallingDato()
+    End Sub
+
+    'viser egenerklæring når knapp trykkes
+    Private Sub btnEgenErk_Click(sender As Object, e As EventArgs)
+        egenerklaering.Show()
+    End Sub
+
+    Private Sub btnEndrePersinfo_Click(sender As Object, e As EventArgs) Handles btnEndrePersinfo.Click
+        endrePersonInfo()
+    End Sub
+
+    '
+    Private Sub btnSokTime_Click(sender As Object, e As EventArgs) Handles btnSokTime.Click
+        sendOnsketTime()
+        sjekkTime()
+        sjekkInn()
+    End Sub
+
+    Private Sub endrePwBtn_Click(sender As Object, e As EventArgs) Handles btnEndrePw.Click
+        Dim pros As New prosedyrer
+        pros.endrePw(LoginForm.bnavn)
+    End Sub
+
+    Private Sub btnLagrePInfo_Click(sender As Object, e As EventArgs) Handles btnLagrePInfo.Click
+        lagrePersonInfo()
+    End Sub
+
+    Private Sub bnSvarInkalling_Click(sender As Object, e As EventArgs) Handles btnSvarInkalling.Click
+        svarInnkalling()
+    End Sub
+
+    Private Sub btnAvbestillTime_Click(sender As Object, e As EventArgs) Handles btnAvbestillTime.Click
+        avbestillTime()
+    End Sub
+
+    'henter ut info om brukeren ved innloggin
+    Public Sub hentpersonInfo()
         'Importerer SQL og info ved nye objekt
         Dim info As New info
         Dim sql As New SQL
 
-        'Oppretter 
+        'lister ut info i tekstboksene
         Dim resultatTab As New DataTable
         resultatTab = info.queryJoin("*", "bruker", "postnummer ON bruker.post_nr = postnummer.post_nr", "epost = '" & LoginForm.bnavn & "';")
         For Each rad As DataRow In resultatTab.Rows
@@ -33,6 +72,7 @@
         Next
     End Sub
 
+    'sjekker om brukeren har fått noen innkallinger
     Public Sub sjekkMelding()
         'Importerer SQL og info objekt
         Dim info As New info
@@ -44,7 +84,7 @@
 
         'Sjekker innholdet i tabellen, hvis det er resultat får brukeren melding
         If resultatTab.Rows.Count > 0 Then
-            MsgBox("DU HAR FÅTT " & resultatTab.Rows.Count & " innkalling(er)")
+            MsgBox("Du har mottatt " & resultatTab.Rows.Count & " innkalling(er)")
             For Each rad As DataRow In resultatTab.Rows
                 innkallingLst.Items.Add(New listItem With {.display = rad("fritekst_innkalling") & " " & rad("oppmote"), .value = rad("innkallings_id")})
             Next
@@ -72,6 +112,7 @@
         End If
     End Sub
 
+    'prosedyre for å hente inn innkallinger som brukeren kan ha fått
     Private Sub sjekkInn()
         Dim info As New info
         Dim sql As New SQL
@@ -85,15 +126,12 @@
         Next
     End Sub
 
-    Private Sub MonthCalendar2_DateChanged(sender As Object, e As DateRangeEventArgs) Handles MonthCalendar2.DateChanged
-        hentInnkallingDato()
-    End Sub
-
+    'henter aktuelle innkallinger på valgt dato
     Private Sub hentInnkallingDato()
         Dim info As New info
         Dim dato As String
         Dim data As New DataTable
-        dato = MonthCalendar2.SelectionStart.ToString("yyyy/MM/dd")
+        dato = mndKal1.SelectionStart.ToString("yyyy/MM/dd")
         data = info.queryDato(dato)
 
         For Each rad As DataRow In data.Rows
@@ -101,11 +139,41 @@
         Next
     End Sub
 
-    Private Sub btnEgenErk_Click(sender As Object, e As EventArgs)
-        egenerklaering.Show()
+    'prosedyre for å sende inn en ønsket time
+    Private Sub sendOnsketTime()
+        Dim info As New info
+        Dim epost As New epost
+        Dim janei As Integer
+        Dim kommentar As String
+        Dim epostAddr As String = ""
+        Dim tabell As DataTable
+        Dim pNr As Double
+        Try
+            Dim bruker As String
+            bruker = LoginForm.bnavn
+
+            kommentar = InputBox("Kommentar: (frivillig)")
+
+            tabell = info.query("epost, person_nr", "bruker", "epost = '" & bruker & "'")
+
+            For Each rad As DataRow In tabell.Rows
+                epostAddr = rad("epost")
+                pNr = rad("person_nr")
+            Next
+            MsgBox(epostAddr & " " & pNr & " " & kommentar)
+
+            janei = MsgBox("Vil du sende bestillingen?", MsgBoxStyle.YesNo)
+            If janei = DialogResult.Yes Then
+                info.sendInnkalling(pNr, 1, kommentar, mndKal1.SelectionStart.ToString("yyyy/MM/dd") & " " & cmbTime.SelectedItem & ":" & cmbMin.SelectedItem & ":00")
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 
-    Private Sub btnEndrePersinfo_Click(sender As Object, e As EventArgs) Handles btnEndrePersinfo.Click
+    'gjemmer labels og viser tekstbokser når man skal endre brukerinfo
+    Private Sub endrePersonInfo()
         lblFornavn.Hide()
         lblEtternavn.Hide()
         lblTlf.Hide()
@@ -127,12 +195,8 @@
         postnrTxt.Visible = True
     End Sub
 
-    Private Sub endrePwBtn_Click(sender As Object, e As EventArgs) Handles btnEndrePw.Click
-        Dim pros As New prosedyrer
-        pros.endrePw(LoginForm.bnavn)
-    End Sub
-
-    Private Sub btnLagrePInfo_Click(sender As Object, e As EventArgs) Handles btnLagrePInfo.Click
+    'prosedyre for å lagre personinfo. utfører spørring som oppdaterer databasen
+    Private Sub lagrePersonInfo()
         Try
             Dim info As New info
             Dim bruker As String = LoginForm.bnavn
@@ -184,32 +248,8 @@
         End Try
     End Sub
 
-    Private Sub btnAvbestillTime_Click(sender As Object, e As EventArgs) Handles btnAvbestillTime.Click
-        Dim info As New info
-        Dim innNr As Double
-        Try
-
-
-            innNr = CType(timeLst.SelectedItem, listItem).value
-            Dim svar
-            svar = MsgBox("Er du sikker på at du vil avbestille timen?", MsgBoxStyle.YesNo Or MsgBoxStyle.Critical)
-
-            If svar = MsgBoxResult.Yes Then
-                info.queryUpdate("innkallinger", "status = 3", "innkallings_id = '" & innNr & "';")
-
-                MsgBox("Time er avbestilt")
-            Else
-                Exit Sub
-            End If
-
-            sjekkTime()
-
-        Catch ex As Exception
-            MsgBox("Du må velge en time")
-        End Try
-    End Sub
-
-    Private Sub bnSvarInkalling_Click(sender As Object, e As EventArgs) Handles btnSvarInkalling.Click
+    'prosedyre som sender svar på mottatt innkalling
+    Private Sub svarInnkalling()
         Dim info As New info
         Dim innNr As Double
         innNr = CType(innkallingLst.SelectedItem, listItem).value
@@ -230,57 +270,28 @@
 
         sjekkTime()
         sjekkInn()
-
     End Sub
 
-    Private Sub bestillTime()
+    'proesdyre for å avbestille en mottatt time
+    Private Sub avbestillTime()
         Dim info As New info
-        Dim epost As New epost
-        Dim janei As Integer
-        Dim kommentar As String
-        Dim epostAddr As String = ""
-        Dim tabell As DataTable
-        Dim pNr As Double
+        Dim innNr As Double
         Try
-            Dim bruker As String
-            bruker = LoginForm.bnavn
+            innNr = CType(timeLst.SelectedItem, listItem).value
+            Dim svar
+            svar = MsgBox("Er du sikker på at du vil avbestille timen?", MsgBoxStyle.YesNo Or MsgBoxStyle.Critical)
 
-            '****Tanken er å sjekke om alt er fyllt ut, ellers virker ikke koden (kræsj)*****
-            'If lstKandidater.SelectedItem Or cmbTime.SelectedItem Or cmbMin.SelectedItem = "" Then
-            '    MsgBox("Du må fylle ut alle feltene!")
-            '    Return
-            'End If
+            If svar = MsgBoxResult.Yes Then
+                info.queryUpdate("innkallinger", "status = 3", "innkallings_id = '" & innNr & "';")
 
-            kommentar = InputBox("Kommentar: (frivillig)")
-
-            tabell = info.query("epost, person_nr", "bruker", "epost = '" & bruker & "'")
-
-            For Each rad As DataRow In tabell.Rows
-                epostAddr = rad("epost")
-                pNr = rad("person_nr")
-            Next
-            MsgBox(epostAddr & " " & pNr & " " & kommentar)
-
-            '*************Oppsummering funker ikke enda, bare småplukk!!*****
-            'MsgBox("Oppsummering: " & vbCrLf & "Navn: " & lstKandidater.SelectedItem & vbCrLf & "Dato: " & tappeKalender.SelectionStart.ToString("yyyy/MM/dd") & "Klokkeslett: " & cmbTime.SelectedItem & ":" & cmbMin.SelectedItem & vbCrLf & "Kommentar: " & kommentar & vbCrLf)
-
-            janei = MsgBox("Vil du sende bestillingen?", MsgBoxStyle.YesNo)
-            If janei = DialogResult.Yes Then
-                info.sendInnkalling(pNr, 1, kommentar, MonthCalendar2.SelectionStart.ToString("yyyy/MM/dd") & " " & cmbTime.SelectedItem & ":" & cmbMin.SelectedItem & ":00")
-                'epost.sendEpost("Innkalling " & MonthCalendar2.SelectionStart.ToString("dd/MM/yyyy"), "Du har fått en innkalling til blodtapping den " & MonthCalendar2.SelectionStart.ToString("dd/MM/yyyy") & " klokken " & cmbTime.SelectedItem & ":" & cmbMin.SelectedItem & vbCrLf & "Har du spørsmål kan du ringe oss på 12345678" & vbCrLf & "Mvh Blodbanken", epostAddr)
+                MsgBox("Time er avbestilt")
+            Else
+                Exit Sub
             End If
 
+            sjekkTime()
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MsgBox("Du må velge en time")
         End Try
     End Sub
-
-    Private Sub btnSokTime_Click(sender As Object, e As EventArgs) Handles btnSokTime.Click
-        bestillTime()
-        sjekkTime()
-        sjekkInn()
-    End Sub
-
-
-
 End Class

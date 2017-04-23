@@ -9,7 +9,7 @@ Public Class egenerklaering
         'sentrerer vinduet basert på forrige åpne vindu
         Me.CenterToParent()
     End Sub
-    'utføres når knaoo for fram-klikkes
+    'utføres når knapp for fram-klikkes
     Private Sub nesteSide(sender As Object, e As EventArgs) Handles btnEgenNext1.Click, btnEgenNext2.Click, btnEgenNext3.Click, btnEgenNext4.Click, btnEgenNext5.Click
         nesteSide()
     End Sub
@@ -108,6 +108,7 @@ Public Class egenerklaering
         Dim info As New info
         Dim tabell As New DataTable
 
+        'henter og fyller ut personalia basert på personnummer
         hentPersonalia(pnummer)
 
         'sørger for at knapper ikke kan trykkes på (egenerklæring skal bare vises, ikke bli sendt på nytt)
@@ -165,19 +166,4 @@ Public Class egenerklaering
             Next
         Next
     End Sub
-
-
-    ''brukes for å hente ut person-info til egenerklæring. 
-    ''brukes både når bruker fyller ut og når ansatt ser på egenerklæring
-    'Public Sub hentPersonaliaPersonNr()
-    '    'importerer info-klassen fra SQLConnection.vb som inneholder generelle query
-    '    Dim info As New info
-    '    Dim midTabell As New DataTable
-
-    '    midTabell = info.query("person_nr", "bruker", "epost = '" & LoginForm.bnavn & "'")
-
-    '    For Each rad In midTabell.Rows
-    '        hentPersonalia(rad("person_nr"))
-    '    Next
-    'End Sub
 End Class

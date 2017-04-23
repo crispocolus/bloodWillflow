@@ -31,7 +31,7 @@ Partial Class adminSide
         Me.txtEtternavn = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
-        Me.sokSpesCmb = New System.Windows.Forms.ComboBox()
+        Me.cmbsokSpes = New System.Windows.Forms.ComboBox()
         Me.txtFornavn = New System.Windows.Forms.TextBox()
         Me.btnFjernBruker = New System.Windows.Forms.Button()
         Me.Label18 = New System.Windows.Forms.Label()
@@ -45,11 +45,11 @@ Partial Class adminSide
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtAdresse = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cmbBrukerStatus = New System.Windows.Forms.ComboBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.txtPostnr = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.sokTxt = New System.Windows.Forms.TextBox()
+        Me.cmbsokTxt = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lstBrukere = New System.Windows.Forms.ListBox()
         Me.btnSokBruker = New System.Windows.Forms.Button()
@@ -106,7 +106,7 @@ Partial Class adminSide
         Me.TabPage1.Controls.Add(Me.txtEtternavn)
         Me.TabPage1.Controls.Add(Me.Label6)
         Me.TabPage1.Controls.Add(Me.Label19)
-        Me.TabPage1.Controls.Add(Me.sokSpesCmb)
+        Me.TabPage1.Controls.Add(Me.cmbsokSpes)
         Me.TabPage1.Controls.Add(Me.txtFornavn)
         Me.TabPage1.Controls.Add(Me.btnFjernBruker)
         Me.TabPage1.Controls.Add(Me.Label18)
@@ -120,11 +120,11 @@ Partial Class adminSide
         Me.TabPage1.Controls.Add(Me.Label16)
         Me.TabPage1.Controls.Add(Me.Label3)
         Me.TabPage1.Controls.Add(Me.txtAdresse)
-        Me.TabPage1.Controls.Add(Me.ComboBox1)
+        Me.TabPage1.Controls.Add(Me.cmbBrukerStatus)
         Me.TabPage1.Controls.Add(Me.Label15)
         Me.TabPage1.Controls.Add(Me.txtPostnr)
         Me.TabPage1.Controls.Add(Me.Label2)
-        Me.TabPage1.Controls.Add(Me.sokTxt)
+        Me.TabPage1.Controls.Add(Me.cmbsokTxt)
         Me.TabPage1.Controls.Add(Me.Label1)
         Me.TabPage1.Controls.Add(Me.lstBrukere)
         Me.TabPage1.Controls.Add(Me.btnSokBruker)
@@ -193,15 +193,15 @@ Partial Class adminSide
         Me.Label19.TabIndex = 35
         Me.Label19.Text = "Adresse"
         '
-        'sokSpesCmb
+        'cmbsokSpes
         '
-        Me.sokSpesCmb.FormattingEnabled = True
-        Me.sokSpesCmb.Items.AddRange(New Object() {"fornavn", "etternavn", "e-post"})
-        Me.sokSpesCmb.Location = New System.Drawing.Point(105, 39)
-        Me.sokSpesCmb.Margin = New System.Windows.Forms.Padding(2)
-        Me.sokSpesCmb.Name = "sokSpesCmb"
-        Me.sokSpesCmb.Size = New System.Drawing.Size(111, 21)
-        Me.sokSpesCmb.TabIndex = 20
+        Me.cmbsokSpes.FormattingEnabled = True
+        Me.cmbsokSpes.Items.AddRange(New Object() {"fornavn", "etternavn", "e-post"})
+        Me.cmbsokSpes.Location = New System.Drawing.Point(105, 39)
+        Me.cmbsokSpes.Margin = New System.Windows.Forms.Padding(2)
+        Me.cmbsokSpes.Name = "cmbsokSpes"
+        Me.cmbsokSpes.Size = New System.Drawing.Size(111, 21)
+        Me.cmbsokSpes.TabIndex = 20
         '
         'txtFornavn
         '
@@ -320,14 +320,14 @@ Partial Class adminSide
         Me.txtAdresse.Size = New System.Drawing.Size(98, 20)
         Me.txtAdresse.TabIndex = 27
         '
-        'ComboBox1
+        'cmbBrukerStatus
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Ansatt", "Blodgiver", "Leder", "IT"})
-        Me.ComboBox1.Location = New System.Drawing.Point(282, 281)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(100, 21)
-        Me.ComboBox1.TabIndex = 13
+        Me.cmbBrukerStatus.FormattingEnabled = True
+        Me.cmbBrukerStatus.Items.AddRange(New Object() {"Ansatt", "Blodgiver", "Leder", "IT"})
+        Me.cmbBrukerStatus.Location = New System.Drawing.Point(282, 281)
+        Me.cmbBrukerStatus.Name = "cmbBrukerStatus"
+        Me.cmbBrukerStatus.Size = New System.Drawing.Size(100, 21)
+        Me.cmbBrukerStatus.TabIndex = 13
         '
         'Label15
         '
@@ -356,12 +356,12 @@ Partial Class adminSide
         Me.Label2.TabIndex = 12
         Me.Label2.Text = "Søk etter bruker"
         '
-        'sokTxt
+        'cmbsokTxt
         '
-        Me.sokTxt.Location = New System.Drawing.Point(105, 74)
-        Me.sokTxt.Name = "sokTxt"
-        Me.sokTxt.Size = New System.Drawing.Size(111, 20)
-        Me.sokTxt.TabIndex = 11
+        Me.cmbsokTxt.Location = New System.Drawing.Point(105, 74)
+        Me.cmbsokTxt.Name = "cmbsokTxt"
+        Me.cmbsokTxt.Size = New System.Drawing.Size(111, 20)
+        Me.cmbsokTxt.TabIndex = 11
         '
         'Label1
         '
@@ -681,15 +681,15 @@ Partial Class adminSide
     Friend WithEvents Label4 As Label
     Friend WithEvents btnEndreStatus As Button
     Friend WithEvents Label3 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cmbBrukerStatus As ComboBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents sokTxt As TextBox
+    Friend WithEvents cmbsokTxt As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents lstBrukere As ListBox
     Friend WithEvents btnSokBruker As Button
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents Label6 As Label
-    Friend WithEvents sokSpesCmb As ComboBox
+    Friend WithEvents cmbsokSpes As ComboBox
     Friend WithEvents brkStatLbl As Label
     Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents stdnavnLbl As Label

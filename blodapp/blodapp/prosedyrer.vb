@@ -18,6 +18,7 @@ Public Class prosedyrer
             Return False
         End If
     End Function
+
     'Funksjon for å endre passord, avhengig av at bruker kan logge inn
     Public Sub endrePw(e_post As String)
         Dim info As New info
@@ -98,6 +99,7 @@ Public Class prosedyrer
         MsgBox("Du er nå logget ut")
     End Sub
 
+    'finner personnummer ved hjelp av epost/brukernavn
     Public Function finnPersonNummer(brukernavn As String)
         Dim info As New info
         Dim midTabell As New DataTable

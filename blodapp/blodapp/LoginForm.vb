@@ -1,19 +1,32 @@
 ﻿Imports MySql.Data.MySqlClient
-Imports System.Security.Cryptography
-Imports System.Text
 
 Public Class LoginForm
-    'Brukes for å vite hvem som er innlogget
+    'Brukes for å vite hvem som er innlogget og antall forsøk på å logge inn
     Public bnavn As String
     Public attempts As Integer
 
     Private Sub LoginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'sentrerer vinduet til midten av skjermen
         Me.CenterToScreen()
     End Sub
 
-
-
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+        loggInn()
+    End Sub
+
+    Private Sub llblLoginReg_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llblLoginReg.LinkClicked
+        'Viser registreringskjema når brukeren trykker på "Registrer" knappen
+        RegistrerForm.Show()
+        Me.Hide()
+    End Sub
+
+    'knapp for glemt passord
+    Private Sub llblLoginFgtPwd_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llblLoginFgtPwd.LinkClicked
+        Dim pros As New prosedyrer
+        pros.glemtPw()
+    End Sub
+
+    Private Sub loggInn()
         'Lager et nytt SQL og et nytt Login-objekt. 
         Dim connect As New SQL
         Dim logginntest As New Login
@@ -58,20 +71,8 @@ Public Class LoginForm
 
         logginntest.passord = hashed
 
+        'sender info videre til innlogging i SQLConnection
         logginntest.innlogging()
 
     End Sub
-
-    Private Sub llblLoginReg_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llblLoginReg.LinkClicked
-        'Viser registreringskjema når brukeren trykker på "Registrer" knappen
-        RegistrerForm.Show()
-        Me.Hide()
-    End Sub
-
-    Private Sub llblLoginFgtPwd_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llblLoginFgtPwd.LinkClicked
-        Dim pros As New prosedyrer
-        pros.glemtPw()
-    End Sub
-
-
 End Class

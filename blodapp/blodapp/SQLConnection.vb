@@ -59,6 +59,7 @@ Public Class Login
 End Class
 
 Public Class BrukerStat
+    'sjekker hvilken status bruker har (admin, leder etc..)
     Public Sub sjekkBrukerStat(bnavn As String)
         'Importerer oppkobling fra SQL klassen
         Dim connect As New SQL
@@ -310,6 +311,8 @@ End Class
 
 Public Class EgenErk
     Public svarTabell As New ArrayList
+
+    'funksjon for å sende inn egenerklæring
     Public Function sendEgenErk(pnummer As String, land As String)
         'Importerer oppkobling fra SQL klassen
         Dim info As New info
@@ -350,6 +353,7 @@ Public Class EgenErk
         End Try
     End Function
 
+    'henter skjema_id på seneste egenerklæring basert på personnr
     Public Function hentSenesteEgenErk(personnummer As String)
         Dim info As New info
         Dim tabell As New DataTable
@@ -363,6 +367,7 @@ Public Class EgenErk
         Return skjema_id
     End Function
 
+    'oppdaterer bruker info basert på hva som blir skrevet i egenerklæring
     Public Sub oppdaterBrukerInfo(person_nr As String, fornavn As String, etternavn As String, telefon As String, adresse As String, postnr As String, epost As String)
         Dim info As New info
         If person_nr = "" Or fornavn = "" Or etternavn = "" Or telefon = "" Or adresse = "" Or postnr = "" Or epost = "" Then
@@ -370,6 +375,8 @@ Public Class EgenErk
         End If
         info.queryUpdate("bruker", "fornavn = '" & fornavn & "', etternavn = '" & etternavn & "', telefon = '" & telefon & "', gateadresse = '" & adresse & "', post_nr = " & postnr & ", epost = '" & epost & "'", "person_nr = '" & person_nr & "'")
     End Sub
+
+    'brukes for å danne streng for innsending av egenerklæring
     Public Function hentDataTabLand(skjema_id As String, land As String)
         Dim mid As String = skjema_id & ", "
         For i = 2 To 17
@@ -381,6 +388,8 @@ Public Class EgenErk
         Next
         Return mid
     End Function
+
+    'brukes for å danne streng for innsending av egenerklæring
     Public Function hentDataTab(skjema_id As String, start As Double, slutt As Double)
         Dim mid As String = skjema_id & ", "
 
@@ -399,6 +408,7 @@ Public Class EgenErk
         End If
     End Function
 
+    'henter egenerklæring og putter denne i en arraylist
     Public Sub hentEgenTabell(tabell As String, skjema_id As String)
         Dim info As New info
         Dim connect As New SQL
@@ -455,6 +465,7 @@ Public Class EgenErk
         oppkobling.Close()
     End Sub
 
+    'henter info spesifikt om blodgiver for bruk i henting av egenerklæring
     Public Sub hentEgenTabellBruker(person_nr As String, skjema_id As String)
         Dim info As New info
         Dim dataTable As New DataTable

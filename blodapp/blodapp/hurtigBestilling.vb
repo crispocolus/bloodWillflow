@@ -1,4 +1,26 @@
 ﻿Public Class hurtigBestilling
+
+    Private Sub hurtigBestilling_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'utføres når siden lastes
+        Me.CenterToParent()
+        fyllBlodTypeHurtig()
+    End Sub
+
+    'lukker hurtigbestillingen ved trykk av knapp
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        Me.Close()
+    End Sub
+
+    'fyller cmbHurtigBType med tilgjengelige blodtyper
+    Public Sub fyllBlodTypeHurtig()
+        Dim tabell As New DataTable
+        Dim prosedyrer As New prosedyrer
+        tabell = prosedyrer.lastinnBlodtype()
+        For Each rad In tabell.Rows
+            cmbHurtigBType.Items.Add(rad("blodtype"))
+        Next
+    End Sub
+    'brukes for å laste inn listen med blodgivere + telefon
     Public Sub lastBGTlf(blodtype As String)
         'Importerer info - klassen som inneholder query-funksjon
         Dim info As New info
@@ -15,25 +37,6 @@
         'Legger til kandidater basert på hva som er valgt i ComboBox
         For Each rad In Tabell.Rows
             lstBGTlf.Items.Add(rad("fornavn") & " " & rad("etternavn") & ", " & rad("telefon"))
-        Next
-
-    End Sub
-
-    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
-        Me.Close()
-    End Sub
-
-    Private Sub hurtigBestilling_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.CenterToParent()
-        fyllBlodTypeHurtig()
-    End Sub
-
-    Public Sub fyllBlodTypeHurtig()
-        Dim tabell As New DataTable
-        Dim prosedyrer As New prosedyrer
-        tabell = prosedyrer.lastinnBlodtype()
-        For Each rad In tabell.Rows
-            cmbHurtigBType.Items.Add(rad("blodtype"))
         Next
     End Sub
 End Class

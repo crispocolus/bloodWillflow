@@ -1,26 +1,32 @@
 ﻿
 Public Class RegistrerForm
-    Private Sub btnRegistrer_Click(sender As Object, e As EventArgs) Handles btnRegistrer.Click, Me.KeyPress
-        If SjekkInfo(postnrTxt.Text, adresseTxt.Text, pnummerTxt.Text, fornavnTxt.Text, etternavnTxt.Text, epostTxt.Text, tlfTxt.Text, passordcTxt.Text, passordTxt.Text) = False Then
-            MsgBox("Bruker ble ikke registrert")
-        Else
-            If LoginForm.bnavn = "" Then
-                MsgBox("Registrering fullført." & vbCrLf & "Brukernavnet ditt er: " & epostTxt.Text & vbCrLf & vbCrLf & "Du kan nå gi samtykke ved resepsjonen")
-                Me.Close()
-                LoginForm.Show()
-            Else
-                MsgBox("Registrering fullført.")
-                Me.Close()
-                LoginForm.Show()
-            End If
-        End If
-    End Sub
-
     Private Sub RegistrerForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'sentrerer vinduet i forhold til forrige vindu
         Me.CenterToParent()
     End Sub
 
-    Public Function SjekkInfo(post_nr As String, adresse As String, pnummer As String, fornavn As String, etternavn As String, epost As String, tlf As String, passordc As String, passord As String)
+    'knapp for å registrere bruker
+    Private Sub btnRegistrer_Click(sender As Object, e As EventArgs) Handles btnRegistrer.Click, Me.KeyPress
+        registrerBruker()
+    End Sub
+
+    'går tilbake til LoginForm
+    Private Sub btnTilbake_Click(sender As Object, e As EventArgs) Handles btnTilbake.Click
+        Me.Close()
+        LoginForm.Show()
+    End Sub
+
+    'sørger for at bruker har lest vilkår, lar ikke bruker trykke på knapp uten
+    Private Sub chkJegHarLest_CheckedChanged(sender As Object, e As EventArgs) Handles chkJegHarLest.CheckedChanged
+        If chkJegHarLest.Checked = True Then
+            btnRegistrer.Enabled = True
+        Else
+            btnRegistrer.Enabled = False
+        End If
+    End Sub
+
+    'funksjon som sjekker info som skrives inn, for så å sende videre til query-funksjon i annen klasse
+    Public Function SjekkSendInfo(post_nr As String, adresse As String, pnummer As String, fornavn As String, etternavn As String, epost As String, tlf As String, passordc As String, passord As String)
         Dim Registrering As New RegBruker
         Dim info As New info
         Dim pHash As New passordHash
@@ -40,6 +46,7 @@ Public Class RegistrerForm
 
         If pros.validateEmail(epost) = True Then
             If data.Rows.Count > 0 Then
+                'bruker egendefinert MsgBoxCustom-klasse
                 Dim customMsgBox As New MsgBoxCustom
                 With customMsgBox
                     .Label1.Text = "E-post er registrert fra før av. " & vbCrLf & "Vil du logge inn eller har du glemt passord?"
@@ -107,7 +114,7 @@ Public Class RegistrerForm
             End If
 
         Else
-                MsgBox("Personnummer må være 11 siffer")
+            MsgBox("Personnummer må være 11 siffer")
             Return False
         End If
 
@@ -159,6 +166,8 @@ Public Class RegistrerForm
         End If
     End Function
 
+    'finner fødselsdato basert på personnr
+    'finner bare født FØR 2000 (dårlig implementasjon)
     Function finnFdato(person_nr As String)
         Dim fdato As String = ""
         Dim i As Integer
@@ -189,16 +198,22 @@ Public Class RegistrerForm
         Return fdato
     End Function
 
-    Private Sub btnTilbake_Click(sender As Object, e As EventArgs) Handles btnTilbake.Click
-        Me.Close()
-        LoginForm.Show()
-    End Sub
-
-    Private Sub chkJegHarLest_CheckedChanged(sender As Object, e As EventArgs) Handles chkJegHarLest.CheckedChanged
-        If chkJegHarLest.Checked = True Then
-            btnRegistrer.Enabled = True
+    'kode som utføres for å registrere bruker
+    Private Sub registrerBruker()
+        If SjekkSendInfo(postnrTxt.Text, adresseTxt.Text, pnummerTxt.Text, fornavnTxt.Text, etternavnTxt.Text, epostTxt.Text, tlfTxt.Text, passordcTxt.Text, passordTxt.Text) = False Then
+            MsgBox("Bruker ble ikke registrert")
         Else
-            btnRegistrer.Enabled = False
+
+            'sjekker om brukeren ble registret i programmet eller utenfor (ansatt kan registrere bruker, men da trenger man ikke loggge ut av applikasjonen)
+            If LoginForm.bnavn = "" Then
+                MsgBox("Registrering fullført." & vbCrLf & "Brukernavnet ditt er: " & epostTxt.Text & vbCrLf & vbCrLf & "Du kan nå gi samtykke ved resepsjonen")
+                Me.Close()
+                LoginForm.Show()
+            Else
+                MsgBox("Registrering fullført.")
+                Me.Close()
+                LoginForm.Show()
+            End If
         End If
     End Sub
 End Class

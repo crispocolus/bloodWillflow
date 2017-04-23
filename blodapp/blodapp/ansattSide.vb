@@ -1,12 +1,12 @@
 ﻿Public Class ansattSide
     Dim kommentar As String
-    Dim blod_pnummer As String
-    Public literBehov As String = 0
 
     'Kode som utføres når siden lastes
     Private Sub ansattSide_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Sentrerer siden når den lastes
         Me.CenterToParent()
+
+        'utfører diverse funksjoner når siden lastes
         lastBlodType()
         oppdaterBestillinger()
         kalenderToUker()
@@ -15,13 +15,19 @@
         fyllEgenNavn()
     End Sub
 
+    'logger ut den gjeldende brukeren
+    Private Sub loggutBtn_Click(sender As Object, e As EventArgs) Handles loggutBtn.Click
+        Dim pros As New prosedyrer
+        Me.Close()
+        pros.loggUt()
+    End Sub
+
     'Knapp for å endre passord. 
     Private Sub endrePwBtn_Click(sender As Object, e As EventArgs) Handles endrePwBtn.Click
         Dim pros As New prosedyrer
         pros.endrePw(LoginForm.bnavn)
     End Sub
 
-    '*****INNKALLING****
     Private Sub btnbehov_click(sender As Object, e As EventArgs) Handles btnBehov.Click
         regnUtBehov()
     End Sub
@@ -47,38 +53,25 @@
         sendInnkalling()
     End Sub
 
-    '********BESTILLINGER*********
     'Knapp for å sende 
-    Private Sub btnRetur_Click(sender As Object, e As EventArgs) Handles btnRetur.Click
-        sendRetur()
+    Private Sub btnRetur_Click(sender As Object, e As EventArgs) Handles btnReturBestilling.Click
+        sendBestillingRetur()
     End Sub
 
-    Private Sub btnSend_Click(sender As Object, e As EventArgs) Handles btnGodkjenn.Click
-        'Importerer SQL-funksjon
-        Dim info As New info
-
-        Dim valgtBestilling As String
-        valgtBestilling = CType(lstBestillinger.SelectedItem, listItem).value
-
-        If chkBekreft.Checked = False Then
-            MsgBox("Du må godkjenne bestillingen før du kan sende den")
-        Else
-            info.queryUpdate("bestilling", "status = 1", "bestilling_id = " & valgtBestilling & "")
-        End If
-        oppdaterBestillinger()
+    Private Sub btnSend_Click(sender As Object, e As EventArgs) Handles btnGodkjennBestilling.Click
+        sendGodkjentBestilling()
     End Sub
 
+    'utfører funksjon hvis chkBekreft er huket av
     Private Sub chkBekreft_CheckedChanged(sender As Object, e As EventArgs) Handles chkBekreft.CheckedChanged
         If chkBekreft.Checked = False Then
-            btnGodkjenn.Enabled = False
+            btnGodkjennBestilling.Enabled = False
         Else
-            btnGodkjenn.Enabled = True
+            btnGodkjennBestilling.Enabled = True
         End If
     End Sub
 
-    '*******OVERSIKT BLODBANK *************
-
-    'Oppdaterer **(??)** når verdien endres. 
+    'fyller ut info basert på blodtype og blodprodukt 
     Private Sub CBoxProdukt_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cBoxProdukt.SelectedIndexChanged
         Dim blodtype As String
         Dim produkt As String
@@ -89,9 +82,39 @@
         blodInfo()
     End Sub
 
+    'Utføres når en bruker velges på egenerklæring
+    Private Sub lstEgenerk_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstEgenNavn.SelectedIndexChanged
+        fyllEgenSkjema(CType(lstEgenNavn.SelectedItem, listItem).value)
+    End Sub
 
-    '*******FUNKSJONER OG PROSEDYRER************
+    'Knapp for å se egenerklæring. avhengig av lstEgennavn og lstEgenDato
+    Private Sub btnSeEgen_Click(sender As Object, e As EventArgs) Handles btnSeEgen.Click
+        seEgenerklaering()
+    End Sub
 
+    Private Sub btnBehandle_Click(sender As Object, e As EventArgs) Handles btnBehandle.Click
+        behandleInnkalling()
+    End Sub
+
+    Private Sub btnRegBruker_Click(sender As Object, e As EventArgs) Handles btnRegBruker.Click
+        RegistrerForm.Show()
+    End Sub
+
+    Private Sub btnSokBruker_Click(sender As Object, e As EventArgs) Handles btnSokBruker.Click
+        sokbruker()
+    End Sub
+
+    Private Sub btnLeggInnTime_Click(sender As Object, e As EventArgs) Handles btnLeggInnTime.Click
+        leggInnTime()
+    End Sub
+
+    Private Sub lstBestillinger_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstBestillinger.SelectedIndexChanged
+        fyllBestilling()
+    End Sub
+
+    '******************FUNKSJONER OG PROSEDYRER***********************
+
+    'laster inn blodtype i CBoxBlodType
     Public Sub lastBlodType()
         'Importerer info-klassen som inneholder query-funksjon
         Dim info As New info
@@ -109,6 +132,7 @@
         Next
     End Sub
 
+    'henter aktuelle blodgivere sortert på blodtype
     Public Sub hentBlodGiverInfo(blodtype As String)
         'Importerer info - klassen som inneholder query-funksjon
         Dim info As New info
@@ -117,19 +141,18 @@
         'Tømmer combo - box før query
         lstKandidater.Items.Clear()
 
-
         'Utfører query ved hjelp av funksjonen query under klassen info. 
         Tabell = info.queryJoin("fornavn, etternavn, bruker.person_nr", "bruker", "blodgiver ON bruker.person_nr = blodgiver.person_nr", "blodtype = '" & blodtype & "';")
 
         'Legger til kandidater basert på hva som er valgt i ComboBox
         For Each rad In Tabell.Rows
-            'lstKandidater.Items.Add(rad("fornavn") & " " & rad("etternavn"))
             lstKandidater.Items.Add(New listItem With {.display = rad("fornavn") & " " & rad("etternavn"), .value = rad("person_nr")})
         Next
         Dim sResult As String = ""
 
     End Sub
 
+    'oppdaterer innkallinger, både ubehandlede og behandlede, og fyller disse i lstBehandlet og lstUbehandlet
     Private Sub oppdaterInnkallinger()
         Dim info As New info
         Dim ubehandletTabell As New DataTable
@@ -155,6 +178,7 @@
         Next
     End Sub
 
+    'prosedyre som brukes for å sende inn innkalling
     Public Sub sendInnkalling()
         Dim info As New info
         Dim pros As New prosedyrer
@@ -189,9 +213,8 @@
         End If
     End Sub
 
-
+    'henter ut info om blod basert på blodtype og blodprodukt
     Public Sub blodInfo()
-
         Dim info As New info
         Dim tabell As New DataTable
 
@@ -203,6 +226,7 @@
         lblResultat.Text = (tabell.Rows.Count * 0.45) & " liter"
     End Sub
 
+    'henter ut full oversikt over blodbanken
     Public Sub blodFullOversikt()
         Dim connect As New SQL
         Dim oppkobling = connect.oppkobling
@@ -216,30 +240,28 @@
         tabellPlater = info.query("count(blodtype), blodtype", "blodplater", "1 GROUP BY blodtype")
 
         Try
-
-            ListBox1.Items.Add("Blodplasma: ")
+            lstFullOversikt.Items.Add("Blodplasma: ")
             For Each rad In tabellPlasma.Rows
-                ListBox1.Items.Add(rad("blodtype") & vbTab & rad("count(blodtype)"))
+                lstFullOversikt.Items.Add(rad("blodtype") & vbTab & rad("count(blodtype)"))
 
             Next
-            ListBox1.Items.Add("Blodplater")
+            lstFullOversikt.Items.Add("Blodplater")
             For Each rad In tabellPlater.Rows
 
-                ListBox1.Items.Add(rad("blodtype") & vbTab & rad("count(blodtype)"))
+                lstFullOversikt.Items.Add(rad("blodtype") & vbTab & rad("count(blodtype)"))
 
             Next
-            ListBox1.Items.Add("Blodlegemer: ")
+            lstFullOversikt.Items.Add("Blodlegemer: ")
             For Each rad In tabellLegemer.Rows
-                ListBox1.Items.Add(rad("blodtype") & vbTab & rad("count(blodtype)"))
+                lstFullOversikt.Items.Add(rad("blodtype") & vbTab & rad("count(blodtype)"))
             Next
         Catch feil As Exception
             MsgBox(feil.Message)
         End Try
-
     End Sub
 
+    'Kalender for inkalling skal kun vise dato minst to uker etter dagens dato
     Public Sub kalenderToUker()
-        'Kalender for inkalling skal kun vise dato minst to uker etter dagens dato
         Dim toUker As New Date
         toUker = Today.AddDays(14)
         tappeKalender.MinDate = toUker
@@ -264,7 +286,6 @@
         'Tømmer combo - box før query
         lstBestillinger.Items.Clear()
 
-
         'Utfører query ved hjelp av funksjonen query under klassen info. 
         Tabell = info.query("bestilling_id, til_bank, dato_sendt", "bestilling", "status = 0")
 
@@ -274,9 +295,7 @@
         Next
     End Sub
 
-    Private Sub lstBestillinger_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstBestillinger.SelectedIndexChanged
-        fyllBestilling()
-    End Sub
+
 
     'Fyller ut valgt bestilling
     Private Sub fyllBestilling()
@@ -299,16 +318,6 @@
             txtPlater.Text = rad("plater") & " poser"
             txtLevering.Text = rad("dato_til")
         Next
-    End Sub
-
-
-    Private Sub btnBehandle_Click(sender As Object, e As EventArgs) Handles btnBehandle.Click
-        behandleInnkalling()
-    End Sub
-
-    'Utføres når en bruker velges på egenerklæring
-    Private Sub lstEgenerk_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstEgenNavn.SelectedIndexChanged
-        fyllEgenSkjema(CType(lstEgenNavn.SelectedItem, listItem).value)
     End Sub
 
     'Fyller lstEgenNavn med  brukere som har levert egenerklæring. Brukes for å hente egenerklæring
@@ -335,19 +344,6 @@
         For Each rad As DataRow In tabell.Rows
             lstEgenDato.Items.Add(New listItem With {.display = rad("dato"), .value = rad("skjema_id")})
         Next
-
-    End Sub
-
-    'Knapp for å se egenerklæring. avhengig av lstEgennavn og lstEgenDato
-    Private Sub btnSeEgen_Click(sender As Object, e As EventArgs) Handles btnSeEgen.Click
-        seEgenerklaering()
-    End Sub
-
-    'logger ut den gjeldende brukeren
-    Private Sub loggutBtn_Click(sender As Object, e As EventArgs) Handles loggutBtn.Click
-        Dim pros As New prosedyrer
-        Me.Close()
-        pros.loggUt()
     End Sub
 
     'prosedyre for å behandle innkalling. kan bekrefte eller kansellere
@@ -383,10 +379,10 @@
         Dim literbehov As Double
         Dim giverbehov As Integer
         Try
-            If IsNumeric(TextBox1.Text) = False Then
+            If IsNumeric(txtLiterBehov.Text) = False Then
                 MsgBox("du må skrive et tall når du skriver literbehov (bruk komma, ikke punktum for desimal)")
             Else
-                literbehov = TextBox1.Text
+                literbehov = txtLiterBehov.Text
                 giverbehov = Math.Ceiling(literbehov / 0.45)
                 Label9.Text = "du trenger minst: " & giverbehov & " blodgivere" & vbCrLf & "for å få " & literbehov & " liter blod."
             End If
@@ -397,7 +393,7 @@
     End Sub
 
     'Sender bestilling i retur
-    Public Sub sendRetur()
+    Public Sub sendBestillingRetur()
         'Importerer SQL-funksjon
         Dim info As New info
 
@@ -409,6 +405,7 @@
         oppdaterBestillinger()
     End Sub
 
+    'henter ut egenerklæring basert på bruker og hvilken egenerklæring det skal has tak i 
     Public Sub seEgenerklaering()
         Dim egenerklaering As New egenerklaering
 
@@ -426,11 +423,36 @@
         egenerklaering.fyllSkjema(CType(lstEgenNavn.SelectedItem, listItem).value, CType(lstEgenDato.SelectedItem, listItem).value)
     End Sub
 
-    Private Sub btnRegBruker_Click(sender As Object, e As EventArgs) Handles btnRegBruker.Click
-        RegistrerForm.Show()
+    'sender tilbake bestilling til lege/institusjon etc.
+    Public Sub sendGodkjentBestilling()
+        'Importerer SQL-funksjon
+        Dim info As New info
+
+        Dim valgtBestilling As String
+        valgtBestilling = CType(lstBestillinger.SelectedItem, listItem).value
+
+        If chkBekreft.Checked = False Then
+            MsgBox("Du må godkjenne bestillingen før du kan sende den")
+        Else
+            info.queryUpdate("bestilling", "status = 1", "bestilling_id = " & valgtBestilling & "")
+        End If
+        oppdaterBestillinger()
     End Sub
 
-    Private Sub btnSokBruker_Click(sender As Object, e As EventArgs) Handles btnSokBruker.Click
+    'legger inn time manuelt, uten at bruker må godkjenne denne på forhånd
+    Private Sub leggInnTime()
+        Dim info As New info
+        Dim status As Integer
+        status = 2
+        Dim pNr As Double
+        pNr = CType(lstKandidater.SelectedItem, listItem).value
+
+
+        info.sendInnkalling(pNr, status, kommentar, tappeKalender.SelectionStart.ToString("yyyy/MM/dd") & " " & cmbTime.SelectedItem & ":" & cmbMin.SelectedItem & ":00")
+    End Sub
+
+    'brukes for å søke i brukere i databasen
+    Private Sub sokbruker()
         Dim soking As New soking
 
         Dim sokeord As String = sokTxt.Text
@@ -452,17 +474,6 @@
         For Each rad As DataRow In resultatTab.Rows
             lstKandidater.Items.Add(New listItem With {.display = rad("Fornavn") & " " & rad("Etternavn") & " " & rad("Epost") & " " & rad("Fdato"), .value = rad("person_nr")})
         Next
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim info As New info
-        Dim status As Integer
-        status = 2
-        Dim pNr As Double
-        pNr = CType(lstKandidater.SelectedItem, listItem).value
-
-
-        info.sendInnkalling(pNr, status, kommentar, tappeKalender.SelectionStart.ToString("yyyy/MM/dd") & " " & cmbTime.SelectedItem & ":" & cmbMin.SelectedItem & ":00")
     End Sub
 End Class
 

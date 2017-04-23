@@ -1,18 +1,18 @@
 ﻿Public Class lederSide
     Dim kommentar As String
-    Dim blod_pnummer As String
-    Public literBehov As String = 0
 
     'Kode som utføres når siden lastes
     Private Sub lederSide_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Sentrerer siden når den lastes
         Me.CenterToParent()
+
         lastBlodType()
         oppdaterBestillinger()
         kalenderToUker()
         blodFullOversikt()
         oppdaterInnkallinger()
         fyllEgenNavn()
+        antBlodTapp()
 
         'Fyller info for antall personer med x blodtype på statistikk
         antallGivere("A+")
@@ -23,42 +23,18 @@
         antallGivere("AB-")
         antallGivere("O+")
         antallGivere("O-")
+    End Sub
 
+    'logger ut den gjeldende brukeren
+    Private Sub loggutBtn_Click(sender As Object, e As EventArgs) Handles loggutBtn.Click
+        Dim pros As New prosedyrer
+        Me.Close()
+        pros.loggUt()
+    End Sub
 
-        'Fyller info for antall blodtappinger statistikk
-        Dim info As New info
-        Dim tabell As New DataTable
-        tabell = info.query("COUNT(tappe_id), MONTH(tappedato)", "tappesesjon", "YEAR(tappedato) = YEAR(CURDATE()) GROUP BY MONTH(tappedato)")
-
-        For Each rad In tabell.Rows
-            Select Case rad("MONTH(tappedato)")
-                Case 1
-                    lstAntallTappinger.Items.Add("Januar: " & rad("COUNT(tappe_id)"))
-                Case 2
-                    lstAntallTappinger.Items.Add("Februar: " & rad("COUNT(tappe_id)"))
-                Case 3
-                    lstAntallTappinger.Items.Add("Mars: " & rad("COUNT(tappe_id)"))
-                Case 4
-                    lstAntallTappinger.Items.Add("April: " & rad("COUNT(tappe_id)"))
-                Case 5
-                    lstAntallTappinger.Items.Add("Mai: " & rad("COUNT(tappe_id)"))
-                Case 6
-                    lstAntallTappinger.Items.Add("Juni: " & rad("COUNT(tappe_id)"))
-                Case 7
-                    lstAntallTappinger.Items.Add("Juli: " & rad("COUNT(tappe_id)"))
-                Case 8
-                    lstAntallTappinger.Items.Add("August: " & rad("COUNT(tappe_id)"))
-                Case 9
-                    lstAntallTappinger.Items.Add("September: " & rad("COUNT(tappe_id)"))
-                Case 10
-                    lstAntallTappinger.Items.Add("Oktober: " & rad("COUNT(tappe_id)"))
-                Case 11
-                    lstAntallTappinger.Items.Add("November: " & rad("COUNT(tappe_id)"))
-                Case 12
-                    lstAntallTappinger.Items.Add("Desember: " & rad("COUNT(tappe_id)"))
-            End Select
-
-        Next
+    'Knapp for å se egenerklæring. avhengig av lstEgennavn og lstEgenDato
+    Private Sub btnSeEgen_Click(sender As Object, e As EventArgs) Handles btnSeEgen.Click
+        seEgenerklaering()
     End Sub
 
     'Knapp for å endre passord. 
@@ -67,7 +43,12 @@
         pros.endrePw(LoginForm.bnavn)
     End Sub
 
-    '*****INNKALLING****
+    'kaller prosedyren blodTappetSiste() ved endret verdi
+    Private Sub cmbSiste_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbSiste.SelectedIndexChanged
+        blodTappetSiste()
+    End Sub
+
+    'regner ut literbehovet ved klikk
     Private Sub btnbehov_click(sender As Object, e As EventArgs) Handles btnBehov.Click
         regnUtBehov()
     End Sub
@@ -88,32 +69,21 @@
         hurtigbestilling.Show()
     End Sub
 
-    'Knapp for å sende bestilling. 
+    'Knapp for å sende normal innkalling 
     Private Sub btnInnkalling_Click(sender As Object, e As EventArgs) Handles btnInnkalling.Click
         sendInnkalling()
     End Sub
 
-    '********BESTILLINGER*********
-    'Knapp for å sende 
+    'Knapp for å sende bestilling i retur
     Private Sub btnRetur_Click(sender As Object, e As EventArgs) Handles btnRetur.Click
-        sendRetur()
+        sendBestillingRetur()
     End Sub
 
-    Private Sub btnSend_Click(sender As Object, e As EventArgs) Handles btnGodkjenn.Click
-        'Importerer SQL-funksjon
-        Dim info As New info
-
-        Dim valgtBestilling As String
-        valgtBestilling = CType(lstBestillinger.SelectedItem, listItem).value
-
-        If chkBekreft.Checked = False Then
-            MsgBox("Du må godkjenne bestillingen før du kan sende den")
-        Else
-            info.queryUpdate("bestilling", "status = 1", "bestilling_id = " & valgtBestilling & "")
-        End If
-        oppdaterBestillinger()
+    Private Sub btnGodkjenn_Click(sender As Object, e As EventArgs) Handles btnGodkjenn.Click
+        sendBestillingGodkjent()
     End Sub
 
+    'lar ikke bestilling godkjennen før chkbox er huket av 
     Private Sub chkBekreft_CheckedChanged(sender As Object, e As EventArgs) Handles chkBekreft.CheckedChanged
         If chkBekreft.Checked = False Then
             btnGodkjenn.Enabled = False
@@ -122,9 +92,7 @@
         End If
     End Sub
 
-    '*******OVERSIKT BLODBANK *************
-
-    'Oppdaterer **(??)** når verdien endres. 
+    'Oppdaterer blodinfo når verdien endres. 
     Private Sub CBoxProdukt_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cBoxProdukt.SelectedIndexChanged
         Dim blodtype As String
         Dim produkt As String
@@ -135,6 +103,18 @@
         blodInfo()
     End Sub
 
+    Private Sub lstBestillinger_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstBestillinger.SelectedIndexChanged
+        fyllBestilling()
+    End Sub
+
+    Private Sub btnBehandle_Click(sender As Object, e As EventArgs) Handles btnBehandle.Click
+        behandleInnkalling()
+    End Sub
+
+    'Utføres når en bruker velges på egenerklæring
+    Private Sub lstEgenerk_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstEgenNavn.SelectedIndexChanged
+        fyllEgenSkjema(CType(lstEgenNavn.SelectedItem, listItem).value)
+    End Sub
 
     '*******FUNKSJONER OG PROSEDYRER************
 
@@ -176,6 +156,8 @@
 
     End Sub
 
+    'prosedyre som oppdaterer både behandlede og ubehandlede innkallinger.
+    'hentes ut fra databasen
     Private Sub oppdaterInnkallinger()
         Dim info As New info
         Dim ubehandletTabell As New DataTable
@@ -201,6 +183,7 @@
         Next
     End Sub
 
+    'prosedyre som benyttes for å sende innkalling
     Public Sub sendInnkalling()
         Dim info As New info
         Dim pros As New prosedyrer
@@ -209,8 +192,6 @@
         Dim kommentar As String
         Dim epostAddr As String = ""
         Dim epostTab As DataTable
-
-        MsgBox(lstKandidater.SelectedIndex)
 
         If lstKandidater.SelectedIndex = -1 Or cmbTime.SelectedIndex = -1 Or cmbMin.SelectedIndex = -1 Then
             MsgBox("Du må fylle ut alle feltene!")
@@ -235,9 +216,8 @@
         End If
     End Sub
 
-
+    'gir info over lagerbeholdning for en spesifikk blodtype
     Public Sub blodInfo()
-
         Dim info As New info
         Dim tabell As New DataTable
 
@@ -249,6 +229,7 @@
         lblResultat.Text = (tabell.Rows.Count * 0.45) & " liter"
     End Sub
 
+    'fyller inn fyll oversikt over blodmengde
     Public Sub blodFullOversikt()
         Dim connect As New SQL
         Dim oppkobling = connect.oppkobling
@@ -310,7 +291,6 @@
         'Tømmer combo - box før query
         lstBestillinger.Items.Clear()
 
-
         'Utfører query ved hjelp av funksjonen query under klassen info. 
         Tabell = info.query("bestilling_id, til_bank, dato_sendt", "bestilling", "status = 0")
 
@@ -318,10 +298,6 @@
         For Each rad In Tabell.Rows
             lstBestillinger.Items.Add(New listItem With {.display = "Fra = " & rad("til_bank") & ", sendt:" & rad("dato_sendt"), .value = rad("bestilling_id")})
         Next
-    End Sub
-
-    Private Sub lstBestillinger_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstBestillinger.SelectedIndexChanged
-        fyllBestilling()
     End Sub
 
     'Fyller ut valgt bestilling
@@ -345,16 +321,6 @@
             txtPlater.Text = rad("plater") & " poser"
             txtLevering.Text = rad("dato_til")
         Next
-    End Sub
-
-
-    Private Sub btnBehandle_Click(sender As Object, e As EventArgs) Handles btnBehandle.Click
-        behandleInnkalling()
-    End Sub
-
-    'Utføres når en bruker velges på egenerklæring
-    Private Sub lstEgenerk_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstEgenNavn.SelectedIndexChanged
-        fyllEgenSkjema(CType(lstEgenNavn.SelectedItem, listItem).value)
     End Sub
 
     'Fyller lstEgenNavn med  brukere som har levert egenerklæring. Brukes for å hente egenerklæring
@@ -382,18 +348,6 @@
             lstEgenDato.Items.Add(New listItem With {.display = rad("dato"), .value = rad("skjema_id")})
         Next
 
-    End Sub
-
-    'Knapp for å se egenerklæring. avhengig av lstEgennavn og lstEgenDato
-    Private Sub btnSeEgen_Click(sender As Object, e As EventArgs) Handles btnSeEgen.Click
-        seEgenerklaering()
-    End Sub
-
-    'logger ut den gjeldende brukeren
-    Private Sub loggutBtn_Click(sender As Object, e As EventArgs) Handles loggutBtn.Click
-        Dim pros As New prosedyrer
-        Me.Close()
-        pros.loggUt()
     End Sub
 
     'prosedyre for å behandle innkalling. kan bekrefte eller kansellere
@@ -424,7 +378,8 @@
         oppdaterInnkallinger()
     End Sub
 
-    'Regner ut literbehov
+    'Regner ut behov for blodgivere basert på hvor mange liter en skal ha.
+    'benytter seg kun av de blodtypene som finnes i databasen
     Public Sub regnUtBehov()
         Dim literbehov As Double
         Dim giverbehov As Integer
@@ -442,8 +397,8 @@
         End Try
     End Sub
 
-    'Sender bestilling i retur
-    Public Sub sendRetur()
+    'Sender bestilling i retur til lege/institusjon etc. 
+    Public Sub sendBestillingRetur()
         'Importerer SQL-funksjon
         Dim info As New info
 
@@ -455,6 +410,23 @@
         oppdaterBestillinger()
     End Sub
 
+    'sender tilbake en bestilling godkjent til lege/institusjon etc.
+    Private Sub sendBestillingGodkjent()
+        'Importerer SQL-funksjon
+        Dim info As New info
+
+        Dim valgtBestilling As String
+        valgtBestilling = CType(lstBestillinger.SelectedItem, listItem).value
+
+        If chkBekreft.Checked = False Then
+            MsgBox("Du må godkjenne bestillingen før du kan sende den")
+        Else
+            info.queryUpdate("bestilling", "status = 1", "bestilling_id = " & valgtBestilling & "")
+        End If
+        oppdaterBestillinger()
+    End Sub
+
+    'viser egenerklæring, basert på blodgiver og aktuell egenerklæring 
     Public Sub seEgenerklaering()
         Dim egenerklaering As New egenerklaering
 
@@ -472,6 +444,7 @@
         egenerklaering.fyllSkjema(CType(lstEgenNavn.SelectedItem, listItem).value, CType(lstEgenDato.SelectedItem, listItem).value)
     End Sub
 
+    'fyller i lstAntallBlodgivere hvor mange aktive blodgivere som er registrert i databasen
     Private Sub antallGivere(blodtype As String)
         Dim info As New info
         Dim tabell As New DataTable
@@ -485,9 +458,8 @@
 
     End Sub
 
+    'prosedyre for å oppdatere stastistikken
     Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
-        'Knapp med samme funksjoner som på load for å refreshe statistikken
-
 
         lstAntallBlodgivere.Items.Clear()
         lstAntallTappinger.Items.Clear()
@@ -500,7 +472,6 @@
         antallGivere("AB-")
         antallGivere("O+")
         antallGivere("O-")
-
 
         Dim info As New info
         Dim tabell As New DataTable
@@ -534,18 +505,17 @@
                     lstAntallTappinger.Items.Add("Desember: " & rad("COUNT(tappe_id)"))
             End Select
 
-
-
         Next
     End Sub
-
-    Private Sub antallBlod()
+    'fyller ut antall med blod tappet siste måned, kvartar eller år.
+    'ikke helt 100% pga SQL-spørringen
+    Private Sub blodTappetSiste()
         Dim info As New info
         Dim tabell As New DataTable
         Dim valg As String = 0
 
-        ListBox4.Items.Clear()
-        Select Case ComboBox1.SelectedItem
+        lstBlodTappet.Items.Clear()
+        Select Case cmbSiste.SelectedItem
             Case "Måned"
                 valg = 1
             Case "Kvartal"
@@ -560,9 +530,10 @@
                              LEFT JOIN blodplater ON blodplater.tappe_id = tappesesjon.tappe_id",
                             "tappesesjon.tappedato >= MONTH(CURDATE() - " & valg & ");")
         'SQL spørring funker ikke som den skal
+        'skal hente ut
 
         For Each rad In tabell.Rows
-            With ListBox4.Items
+            With lstBlodTappet.Items
                 .Add((rad("COUNT(blodlegemer.id)")) * 0.45 & " liter blodlegemer")
                 .Add((rad("COUNT(blodplasma.id)")) * 0.45 & " liter blodplasma")
                 .Add((rad("COUNT(blodplater.id)")) * 0.45 & " liter blodplater")
@@ -570,9 +541,41 @@
 
         Next
     End Sub
+    'Fyller info for antall blodtappinger på statistikk
+    Private Sub antBlodTapp()
 
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-        antallBlod()
+        Dim info As New info
+        Dim tabell As New DataTable
+        tabell = info.query("COUNT(tappe_id), MONTH(tappedato)", "tappesesjon", "YEAR(tappedato) = YEAR(CURDATE()) GROUP BY MONTH(tappedato)")
+
+        For Each rad In tabell.Rows
+            Select Case rad("MONTH(tappedato)")
+                Case 1
+                    lstAntallTappinger.Items.Add("Januar: " & rad("COUNT(tappe_id)"))
+                Case 2
+                    lstAntallTappinger.Items.Add("Februar: " & rad("COUNT(tappe_id)"))
+                Case 3
+                    lstAntallTappinger.Items.Add("Mars: " & rad("COUNT(tappe_id)"))
+                Case 4
+                    lstAntallTappinger.Items.Add("April: " & rad("COUNT(tappe_id)"))
+                Case 5
+                    lstAntallTappinger.Items.Add("Mai: " & rad("COUNT(tappe_id)"))
+                Case 6
+                    lstAntallTappinger.Items.Add("Juni: " & rad("COUNT(tappe_id)"))
+                Case 7
+                    lstAntallTappinger.Items.Add("Juli: " & rad("COUNT(tappe_id)"))
+                Case 8
+                    lstAntallTappinger.Items.Add("August: " & rad("COUNT(tappe_id)"))
+                Case 9
+                    lstAntallTappinger.Items.Add("September: " & rad("COUNT(tappe_id)"))
+                Case 10
+                    lstAntallTappinger.Items.Add("Oktober: " & rad("COUNT(tappe_id)"))
+                Case 11
+                    lstAntallTappinger.Items.Add("November: " & rad("COUNT(tappe_id)"))
+                Case 12
+                    lstAntallTappinger.Items.Add("Desember: " & rad("COUNT(tappe_id)"))
+            End Select
+        Next
     End Sub
 End Class
 

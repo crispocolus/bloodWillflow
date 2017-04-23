@@ -26,7 +26,7 @@ Partial Class ansattSide
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnLeggInnTime = New System.Windows.Forms.Button()
         Me.sokSpesCmb = New System.Windows.Forms.ComboBox()
         Me.sokTxt = New System.Windows.Forms.TextBox()
         Me.btnSokBruker = New System.Windows.Forms.Button()
@@ -39,7 +39,7 @@ Partial Class ansattSide
         Me.Label9 = New System.Windows.Forms.Label()
         Me.btnBehov = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtLiterBehov = New System.Windows.Forms.TextBox()
         Me.btnInnkalling = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.tappeKalender = New System.Windows.Forms.MonthCalendar()
@@ -52,8 +52,8 @@ Partial Class ansattSide
         Me.lblPlater = New System.Windows.Forms.Label()
         Me.txtPlater = New System.Windows.Forms.TextBox()
         Me.chkBekreft = New System.Windows.Forms.CheckBox()
-        Me.btnRetur = New System.Windows.Forms.Button()
-        Me.btnGodkjenn = New System.Windows.Forms.Button()
+        Me.btnReturBestilling = New System.Windows.Forms.Button()
+        Me.btnGodkjennBestilling = New System.Windows.Forms.Button()
         Me.txtPlasma = New System.Windows.Forms.TextBox()
         Me.lblPlasma = New System.Windows.Forms.Label()
         Me.txtLegemer = New System.Windows.Forms.TextBox()
@@ -66,7 +66,7 @@ Partial Class ansattSide
         Me.lblResultat = New System.Windows.Forms.Label()
         Me.cBoxProdukt = New System.Windows.Forms.ComboBox()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.lstFullOversikt = New System.Windows.Forms.ListBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -116,7 +116,7 @@ Partial Class ansattSide
         'TabPage1
         '
         Me.TabPage1.Controls.Add(Me.Label7)
-        Me.TabPage1.Controls.Add(Me.Button1)
+        Me.TabPage1.Controls.Add(Me.btnLeggInnTime)
         Me.TabPage1.Controls.Add(Me.sokSpesCmb)
         Me.TabPage1.Controls.Add(Me.sokTxt)
         Me.TabPage1.Controls.Add(Me.btnSokBruker)
@@ -129,7 +129,7 @@ Partial Class ansattSide
         Me.TabPage1.Controls.Add(Me.Label9)
         Me.TabPage1.Controls.Add(Me.btnBehov)
         Me.TabPage1.Controls.Add(Me.Label8)
-        Me.TabPage1.Controls.Add(Me.TextBox1)
+        Me.TabPage1.Controls.Add(Me.txtLiterBehov)
         Me.TabPage1.Controls.Add(Me.btnInnkalling)
         Me.TabPage1.Controls.Add(Me.Label3)
         Me.TabPage1.Controls.Add(Me.tappeKalender)
@@ -138,7 +138,7 @@ Partial Class ansattSide
         Me.TabPage1.Controls.Add(Me.CBoxBlodtype)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(745, 410)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Innkalling"
@@ -154,21 +154,21 @@ Partial Class ansattSide
         Me.Label7.TabIndex = 35
         Me.Label7.Text = "Søk blodgiver"
         '
-        'Button1
+        'btnLeggInnTime
         '
-        Me.Button1.Location = New System.Drawing.Point(555, 259)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(86, 39)
-        Me.Button1.TabIndex = 34
-        Me.Button1.Text = "Legg inn time"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnLeggInnTime.Location = New System.Drawing.Point(555, 259)
+        Me.btnLeggInnTime.Name = "btnLeggInnTime"
+        Me.btnLeggInnTime.Size = New System.Drawing.Size(107, 39)
+        Me.btnLeggInnTime.TabIndex = 34
+        Me.btnLeggInnTime.Text = "Telefonbestilling"
+        Me.btnLeggInnTime.UseVisualStyleBackColor = True
         '
         'sokSpesCmb
         '
         Me.sokSpesCmb.FormattingEnabled = True
         Me.sokSpesCmb.Items.AddRange(New Object() {"fornavn", "etternavn", "e-post"})
         Me.sokSpesCmb.Location = New System.Drawing.Point(17, 272)
-        Me.sokSpesCmb.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.sokSpesCmb.Margin = New System.Windows.Forms.Padding(2)
         Me.sokSpesCmb.Name = "sokSpesCmb"
         Me.sokSpesCmb.Size = New System.Drawing.Size(92, 21)
         Me.sokSpesCmb.TabIndex = 33
@@ -222,7 +222,7 @@ Partial Class ansattSide
         Me.cmbMin.FormattingEnabled = True
         Me.cmbMin.Items.AddRange(New Object() {"00", "15", "30", "45"})
         Me.cmbMin.Location = New System.Drawing.Point(572, 225)
-        Me.cmbMin.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmbMin.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbMin.Name = "cmbMin"
         Me.cmbMin.Size = New System.Drawing.Size(29, 21)
         Me.cmbMin.TabIndex = 27
@@ -232,7 +232,7 @@ Partial Class ansattSide
         Me.cmbTime.FormattingEnabled = True
         Me.cmbTime.Items.AddRange(New Object() {"10", "11", "12", "13", "14", "15", "16", "17", "18"})
         Me.cmbTime.Location = New System.Drawing.Point(522, 225)
-        Me.cmbTime.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmbTime.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbTime.Name = "cmbTime"
         Me.cmbTime.Size = New System.Drawing.Size(32, 21)
         Me.cmbTime.TabIndex = 26
@@ -274,12 +274,12 @@ Partial Class ansattSide
         Me.Label8.TabIndex = 8
         Me.Label8.Text = "Literbehov:"
         '
-        'TextBox1
+        'txtLiterBehov
         '
-        Me.TextBox1.Location = New System.Drawing.Point(74, 171)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(74, 20)
-        Me.TextBox1.TabIndex = 7
+        Me.txtLiterBehov.Location = New System.Drawing.Point(74, 171)
+        Me.txtLiterBehov.Name = "txtLiterBehov"
+        Me.txtLiterBehov.Size = New System.Drawing.Size(74, 20)
+        Me.txtLiterBehov.TabIndex = 7
         '
         'btnInnkalling
         '
@@ -337,8 +337,8 @@ Partial Class ansattSide
         Me.TabPage2.Controls.Add(Me.lblPlater)
         Me.TabPage2.Controls.Add(Me.txtPlater)
         Me.TabPage2.Controls.Add(Me.chkBekreft)
-        Me.TabPage2.Controls.Add(Me.btnRetur)
-        Me.TabPage2.Controls.Add(Me.btnGodkjenn)
+        Me.TabPage2.Controls.Add(Me.btnReturBestilling)
+        Me.TabPage2.Controls.Add(Me.btnGodkjennBestilling)
         Me.TabPage2.Controls.Add(Me.txtPlasma)
         Me.TabPage2.Controls.Add(Me.lblPlasma)
         Me.TabPage2.Controls.Add(Me.txtLegemer)
@@ -349,7 +349,7 @@ Partial Class ansattSide
         Me.TabPage2.Controls.Add(Me.lstBestillinger)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(745, 410)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Bestillinger"
@@ -397,24 +397,24 @@ Partial Class ansattSide
         Me.chkBekreft.Text = "Bekreft bestilling"
         Me.chkBekreft.UseVisualStyleBackColor = True
         '
-        'btnRetur
+        'btnReturBestilling
         '
-        Me.btnRetur.Location = New System.Drawing.Point(232, 321)
-        Me.btnRetur.Name = "btnRetur"
-        Me.btnRetur.Size = New System.Drawing.Size(100, 23)
-        Me.btnRetur.TabIndex = 11
-        Me.btnRetur.Text = "Send retur"
-        Me.btnRetur.UseVisualStyleBackColor = True
+        Me.btnReturBestilling.Location = New System.Drawing.Point(232, 321)
+        Me.btnReturBestilling.Name = "btnReturBestilling"
+        Me.btnReturBestilling.Size = New System.Drawing.Size(100, 23)
+        Me.btnReturBestilling.TabIndex = 11
+        Me.btnReturBestilling.Text = "Send retur"
+        Me.btnReturBestilling.UseVisualStyleBackColor = True
         '
-        'btnGodkjenn
+        'btnGodkjennBestilling
         '
-        Me.btnGodkjenn.Enabled = False
-        Me.btnGodkjenn.Location = New System.Drawing.Point(232, 289)
-        Me.btnGodkjenn.Name = "btnGodkjenn"
-        Me.btnGodkjenn.Size = New System.Drawing.Size(100, 23)
-        Me.btnGodkjenn.TabIndex = 10
-        Me.btnGodkjenn.Text = "Godkjenn"
-        Me.btnGodkjenn.UseVisualStyleBackColor = True
+        Me.btnGodkjennBestilling.Enabled = False
+        Me.btnGodkjennBestilling.Location = New System.Drawing.Point(232, 289)
+        Me.btnGodkjennBestilling.Name = "btnGodkjennBestilling"
+        Me.btnGodkjennBestilling.Size = New System.Drawing.Size(100, 23)
+        Me.btnGodkjennBestilling.TabIndex = 10
+        Me.btnGodkjennBestilling.Text = "Godkjenn"
+        Me.btnGodkjennBestilling.UseVisualStyleBackColor = True
         '
         'txtPlasma
         '
@@ -486,14 +486,14 @@ Partial Class ansattSide
         Me.TabPage3.Controls.Add(Me.lblResultat)
         Me.TabPage3.Controls.Add(Me.cBoxProdukt)
         Me.TabPage3.Controls.Add(Me.Label13)
-        Me.TabPage3.Controls.Add(Me.ListBox1)
+        Me.TabPage3.Controls.Add(Me.lstFullOversikt)
         Me.TabPage3.Controls.Add(Me.Label12)
         Me.TabPage3.Controls.Add(Me.Label11)
         Me.TabPage3.Controls.Add(Me.Label10)
         Me.TabPage3.Controls.Add(Me.cBoxOversikt)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage3.Size = New System.Drawing.Size(745, 410)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Oversikt blodbank"
@@ -527,13 +527,13 @@ Partial Class ansattSide
         Me.Label13.TabIndex = 27
         Me.Label13.Text = "Blodprodukt"
         '
-        'ListBox1
+        'lstFullOversikt
         '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(26, 94)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(383, 251)
-        Me.ListBox1.TabIndex = 5
+        Me.lstFullOversikt.FormattingEnabled = True
+        Me.lstFullOversikt.Location = New System.Drawing.Point(26, 94)
+        Me.lstFullOversikt.Name = "lstFullOversikt"
+        Me.lstFullOversikt.Size = New System.Drawing.Size(383, 251)
+        Me.lstFullOversikt.TabIndex = 5
         '
         'Label12
         '
@@ -579,9 +579,9 @@ Partial Class ansattSide
         Me.TabPage4.Controls.Add(Me.btnBehandle)
         Me.TabPage4.Controls.Add(Me.lstSvarInn)
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage4.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(2)
         Me.TabPage4.Size = New System.Drawing.Size(745, 410)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Svar innkallinger"
@@ -601,7 +601,7 @@ Partial Class ansattSide
         Me.lstBehandlet.FormattingEnabled = True
         Me.lstBehandlet.Location = New System.Drawing.Point(202, 18)
         Me.lstBehandlet.Name = "lstBehandlet"
-        Me.lstBehandlet.Size = New System.Drawing.Size(243, 316)
+        Me.lstBehandlet.Size = New System.Drawing.Size(366, 316)
         Me.lstBehandlet.TabIndex = 3
         '
         'lblUbehInn
@@ -616,7 +616,7 @@ Partial Class ansattSide
         'btnBehandle
         '
         Me.btnBehandle.Location = New System.Drawing.Point(26, 342)
-        Me.btnBehandle.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnBehandle.Margin = New System.Windows.Forms.Padding(2)
         Me.btnBehandle.Name = "btnBehandle"
         Me.btnBehandle.Size = New System.Drawing.Size(133, 47)
         Me.btnBehandle.TabIndex = 1
@@ -627,7 +627,7 @@ Partial Class ansattSide
         '
         Me.lstSvarInn.FormattingEnabled = True
         Me.lstSvarInn.Location = New System.Drawing.Point(7, 18)
-        Me.lstSvarInn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.lstSvarInn.Margin = New System.Windows.Forms.Padding(2)
         Me.lstSvarInn.Name = "lstSvarInn"
         Me.lstSvarInn.Size = New System.Drawing.Size(177, 316)
         Me.lstSvarInn.TabIndex = 0
@@ -641,7 +641,7 @@ Partial Class ansattSide
         Me.TabPage5.Controls.Add(Me.lstEgenNavn)
         Me.TabPage5.Location = New System.Drawing.Point(4, 22)
         Me.TabPage5.Name = "TabPage5"
-        Me.TabPage5.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage5.Size = New System.Drawing.Size(745, 410)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Egenerklæring"
@@ -693,7 +693,7 @@ Partial Class ansattSide
         'btnHurtigB
         '
         Me.btnHurtigB.Location = New System.Drawing.Point(421, 12)
-        Me.btnHurtigB.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnHurtigB.Margin = New System.Windows.Forms.Padding(2)
         Me.btnHurtigB.Name = "btnHurtigB"
         Me.btnHurtigB.Size = New System.Drawing.Size(92, 28)
         Me.btnHurtigB.TabIndex = 29
@@ -703,7 +703,7 @@ Partial Class ansattSide
         'endrePwBtn
         '
         Me.endrePwBtn.Location = New System.Drawing.Point(529, 12)
-        Me.endrePwBtn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.endrePwBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.endrePwBtn.Name = "endrePwBtn"
         Me.endrePwBtn.Size = New System.Drawing.Size(91, 28)
         Me.endrePwBtn.TabIndex = 13
@@ -799,7 +799,7 @@ Partial Class ansattSide
     Friend WithEvents Label1 As Label
     Friend WithEvents lstKandidater As ListBox
     Friend WithEvents CBoxBlodtype As ComboBox
-    Friend WithEvents btnGodkjenn As Button
+    Friend WithEvents btnGodkjennBestilling As Button
     Friend WithEvents txtPlasma As TextBox
     Friend WithEvents lblPlasma As Label
     Friend WithEvents txtLegemer As TextBox
@@ -808,14 +808,14 @@ Partial Class ansattSide
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents lstBestillinger As ListBox
-    Friend WithEvents btnRetur As Button
+    Friend WithEvents btnReturBestilling As Button
     Friend WithEvents chkBekreft As CheckBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtLiterBehov As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents btnBehov As Button
     Friend WithEvents TabPage3 As TabPage
-    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents lstFullOversikt As ListBox
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
@@ -856,5 +856,5 @@ Partial Class ansattSide
     Friend WithEvents btnSokBruker As Button
     Friend WithEvents sokSpesCmb As ComboBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnLeggInnTime As Button
 End Class
