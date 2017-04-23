@@ -335,7 +335,7 @@
         Dim tabell As New DataTable
         lstEgenDato.Items.Clear()
 
-        tabell = info.query("skjema_id, dato", "skjema", "person_nr = " & pnummer & "")
+        tabell = info.query("skjema_id, dato", "skjema", "person_nr = " & pnummer & " ORDER BY dato DESC")
 
         For Each rad As DataRow In tabell.Rows
             lstEgenDato.Items.Add(New listItem With {.display = rad("dato"), .value = rad("skjema_id")})
@@ -417,12 +417,14 @@
     Public Sub seEgenerklaering()
         Dim egenerklaering As New egenerklaering
 
-        If lstEgenNavn.SelectedIndex = "" Then
+        If lstEgenNavn.SelectedIndex <= 0 Then
             MsgBox("Du må velge en blodgiver!")
+            Exit Sub
         End If
 
-        If lstEgenDato.SelectedIndex = "" Then
+        If lstEgenDato.SelectedIndex <= 0 Then
             MsgBox("Du må velge en egenerklæring!")
+            Exit Sub
         End If
 
         egenerklaering.Show()
