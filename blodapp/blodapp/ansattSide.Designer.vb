@@ -147,7 +147,7 @@ Partial Class ansattSide
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(15, 257)
+        Me.Label7.Location = New System.Drawing.Point(91, 252)
         Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(72, 13)
@@ -167,7 +167,7 @@ Partial Class ansattSide
         '
         Me.sokSpesCmb.FormattingEnabled = True
         Me.sokSpesCmb.Items.AddRange(New Object() {"fornavn", "etternavn", "e-post"})
-        Me.sokSpesCmb.Location = New System.Drawing.Point(17, 272)
+        Me.sokSpesCmb.Location = New System.Drawing.Point(93, 267)
         Me.sokSpesCmb.Margin = New System.Windows.Forms.Padding(2)
         Me.sokSpesCmb.Name = "sokSpesCmb"
         Me.sokSpesCmb.Size = New System.Drawing.Size(92, 21)
@@ -175,14 +175,14 @@ Partial Class ansattSide
         '
         'sokTxt
         '
-        Me.sokTxt.Location = New System.Drawing.Point(17, 297)
+        Me.sokTxt.Location = New System.Drawing.Point(93, 292)
         Me.sokTxt.Name = "sokTxt"
         Me.sokTxt.Size = New System.Drawing.Size(102, 20)
         Me.sokTxt.TabIndex = 32
         '
         'btnSokBruker
         '
-        Me.btnSokBruker.Location = New System.Drawing.Point(17, 328)
+        Me.btnSokBruker.Location = New System.Drawing.Point(93, 323)
         Me.btnSokBruker.Name = "btnSokBruker"
         Me.btnSokBruker.Size = New System.Drawing.Size(52, 23)
         Me.btnSokBruker.TabIndex = 31
@@ -192,7 +192,7 @@ Partial Class ansattSide
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(151, 33)
+        Me.Label2.Location = New System.Drawing.Point(200, 33)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(81, 13)
         Me.Label2.TabIndex = 29
@@ -201,7 +201,7 @@ Partial Class ansattSide
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(151, 46)
+        Me.Label6.Location = New System.Drawing.Point(200, 46)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(76, 13)
         Me.Label6.TabIndex = 30
@@ -250,7 +250,7 @@ Partial Class ansattSide
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(26, 231)
+        Me.Label9.Location = New System.Drawing.Point(15, 205)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(112, 13)
         Me.Label9.TabIndex = 10
@@ -258,7 +258,7 @@ Partial Class ansattSide
         '
         'btnBehov
         '
-        Me.btnBehov.Location = New System.Drawing.Point(74, 197)
+        Me.btnBehov.Location = New System.Drawing.Point(93, 170)
         Me.btnBehov.Name = "btnBehov"
         Me.btnBehov.Size = New System.Drawing.Size(74, 22)
         Me.btnBehov.TabIndex = 9
@@ -268,7 +268,7 @@ Partial Class ansattSide
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(78, 155)
+        Me.Label8.Location = New System.Drawing.Point(97, 128)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(60, 13)
         Me.Label8.TabIndex = 8
@@ -276,7 +276,7 @@ Partial Class ansattSide
         '
         'txtLiterBehov
         '
-        Me.txtLiterBehov.Location = New System.Drawing.Point(74, 171)
+        Me.txtLiterBehov.Location = New System.Drawing.Point(93, 144)
         Me.txtLiterBehov.Name = "txtLiterBehov"
         Me.txtLiterBehov.Size = New System.Drawing.Size(74, 20)
         Me.txtLiterBehov.TabIndex = 7
@@ -308,7 +308,7 @@ Partial Class ansattSide
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(74, 74)
+        Me.Label1.Location = New System.Drawing.Point(93, 74)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(74, 13)
         Me.Label1.TabIndex = 2
@@ -317,7 +317,7 @@ Partial Class ansattSide
         'lstKandidater
         '
         Me.lstKandidater.FormattingEnabled = True
-        Me.lstKandidater.Location = New System.Drawing.Point(154, 74)
+        Me.lstKandidater.Location = New System.Drawing.Point(203, 74)
         Me.lstKandidater.Name = "lstKandidater"
         Me.lstKandidater.Size = New System.Drawing.Size(220, 264)
         Me.lstKandidater.TabIndex = 1
@@ -325,7 +325,7 @@ Partial Class ansattSide
         'CBoxBlodtype
         '
         Me.CBoxBlodtype.FormattingEnabled = True
-        Me.CBoxBlodtype.Location = New System.Drawing.Point(74, 90)
+        Me.CBoxBlodtype.Location = New System.Drawing.Point(93, 90)
         Me.CBoxBlodtype.Name = "CBoxBlodtype"
         Me.CBoxBlodtype.Size = New System.Drawing.Size(74, 21)
         Me.CBoxBlodtype.TabIndex = 0
