@@ -103,7 +103,7 @@ Partial Class brukerSide
         '
         'btnSokTime
         '
-        Me.btnSokTime.Location = New System.Drawing.Point(90, 278)
+        Me.btnSokTime.Location = New System.Drawing.Point(196, 300)
         Me.btnSokTime.Name = "btnSokTime"
         Me.btnSokTime.Size = New System.Drawing.Size(130, 23)
         Me.btnSokTime.TabIndex = 3
@@ -445,7 +445,7 @@ Partial Class brukerSide
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(312, 272)
+        Me.Label5.Location = New System.Drawing.Point(24, 272)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(334, 13)
         Me.Label5.TabIndex = 35
@@ -453,7 +453,7 @@ Partial Class brukerSide
         '
         'btnEgenErk
         '
-        Me.btnEgenErk.Location = New System.Drawing.Point(402, 298)
+        Me.btnEgenErk.Location = New System.Drawing.Point(47, 300)
         Me.btnEgenErk.Name = "btnEgenErk"
         Me.btnEgenErk.Size = New System.Drawing.Size(131, 22)
         Me.btnEgenErk.TabIndex = 34
