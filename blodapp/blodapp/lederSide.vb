@@ -23,13 +23,17 @@
         antallGivere("AB-")
         antallGivere("O+")
         antallGivere("O-")
+
+        'Gjemmer logginn siden
+        LoginForm.Hide()
     End Sub
 
-    'logger ut den gjeldende brukeren
+    'logger ut den gjeldende brukeren og viser formet for innlogging igjen
     Private Sub loggutBtn_Click(sender As Object, e As EventArgs) Handles loggutBtn.Click
         Dim pros As New prosedyrer
         Me.Close()
         pros.loggUt()
+        LoginForm.Show()
     End Sub
 
     'Knapp for å se egenerklæring. avhengig av lstEgennavn og lstEgenDato

@@ -164,7 +164,7 @@ Partial Class brukerSide
         '
         'btnEndrePersinfo
         '
-        Me.btnEndrePersinfo.Location = New System.Drawing.Point(419, 223)
+        Me.btnEndrePersinfo.Location = New System.Drawing.Point(408, 247)
         Me.btnEndrePersinfo.Name = "btnEndrePersinfo"
         Me.btnEndrePersinfo.Size = New System.Drawing.Size(103, 23)
         Me.btnEndrePersinfo.TabIndex = 11
@@ -182,33 +182,33 @@ Partial Class brukerSide
         '
         'fornavnTxt
         '
-        Me.fornavnTxt.Location = New System.Drawing.Point(408, 55)
+        Me.fornavnTxt.Location = New System.Drawing.Point(408, 58)
         Me.fornavnTxt.Name = "fornavnTxt"
-        Me.fornavnTxt.Size = New System.Drawing.Size(100, 20)
+        Me.fornavnTxt.Size = New System.Drawing.Size(126, 20)
         Me.fornavnTxt.TabIndex = 13
         Me.fornavnTxt.Visible = False
         '
         'etternavnTxt
         '
-        Me.etternavnTxt.Location = New System.Drawing.Point(408, 83)
+        Me.etternavnTxt.Location = New System.Drawing.Point(408, 86)
         Me.etternavnTxt.Name = "etternavnTxt"
-        Me.etternavnTxt.Size = New System.Drawing.Size(100, 20)
+        Me.etternavnTxt.Size = New System.Drawing.Size(126, 20)
         Me.etternavnTxt.TabIndex = 14
         Me.etternavnTxt.Visible = False
         '
         'telefonTxt
         '
-        Me.telefonTxt.Location = New System.Drawing.Point(408, 111)
+        Me.telefonTxt.Location = New System.Drawing.Point(408, 114)
         Me.telefonTxt.Name = "telefonTxt"
-        Me.telefonTxt.Size = New System.Drawing.Size(100, 20)
+        Me.telefonTxt.Size = New System.Drawing.Size(126, 20)
         Me.telefonTxt.TabIndex = 15
         Me.telefonTxt.Visible = False
         '
         'epostTxt
         '
-        Me.epostTxt.Location = New System.Drawing.Point(408, 139)
+        Me.epostTxt.Location = New System.Drawing.Point(408, 142)
         Me.epostTxt.Name = "epostTxt"
-        Me.epostTxt.Size = New System.Drawing.Size(100, 20)
+        Me.epostTxt.Size = New System.Drawing.Size(126, 20)
         Me.epostTxt.TabIndex = 16
         Me.epostTxt.Visible = False
         '
@@ -285,7 +285,7 @@ Partial Class brukerSide
         '
         'btnLagrePInfo
         '
-        Me.btnLagrePInfo.Location = New System.Drawing.Point(419, 252)
+        Me.btnLagrePInfo.Location = New System.Drawing.Point(408, 276)
         Me.btnLagrePInfo.Name = "btnLagrePInfo"
         Me.btnLagrePInfo.Size = New System.Drawing.Size(103, 23)
         Me.btnLagrePInfo.TabIndex = 30
@@ -302,9 +302,9 @@ Partial Class brukerSide
         '
         'postnrTxt
         '
-        Me.postnrTxt.Location = New System.Drawing.Point(408, 195)
+        Me.postnrTxt.Location = New System.Drawing.Point(408, 198)
         Me.postnrTxt.Name = "postnrTxt"
-        Me.postnrTxt.Size = New System.Drawing.Size(100, 20)
+        Me.postnrTxt.Size = New System.Drawing.Size(126, 20)
         Me.postnrTxt.TabIndex = 28
         Me.postnrTxt.Visible = False
         '
@@ -318,9 +318,9 @@ Partial Class brukerSide
         '
         'adresseTxt
         '
-        Me.adresseTxt.Location = New System.Drawing.Point(408, 167)
+        Me.adresseTxt.Location = New System.Drawing.Point(408, 170)
         Me.adresseTxt.Name = "adresseTxt"
-        Me.adresseTxt.Size = New System.Drawing.Size(100, 20)
+        Me.adresseTxt.Size = New System.Drawing.Size(126, 20)
         Me.adresseTxt.TabIndex = 26
         Me.adresseTxt.Visible = False
         '
@@ -379,25 +379,25 @@ Partial Class brukerSide
         '
         Me.LineShape5.Name = "LineShape5"
         Me.LineShape5.X1 = 402
-        Me.LineShape5.X2 = 508
+        Me.LineShape5.X2 = 541
         Me.LineShape5.Y1 = 46
         Me.LineShape5.Y2 = 46
         '
         'LineShape4
         '
         Me.LineShape4.Name = "LineShape4"
-        Me.LineShape4.X1 = 508
-        Me.LineShape4.X2 = 508
-        Me.LineShape4.Y1 = 46
-        Me.LineShape4.Y2 = 211
+        Me.LineShape4.X1 = 542
+        Me.LineShape4.X2 = 542
+        Me.LineShape4.Y1 = 49
+        Me.LineShape4.Y2 = 231
         '
         'LineShape3
         '
         Me.LineShape3.Name = "LineShape3"
-        Me.LineShape3.X1 = 402
-        Me.LineShape3.X2 = 508
-        Me.LineShape3.Y1 = 213
-        Me.LineShape3.Y2 = 213
+        Me.LineShape3.X1 = 401
+        Me.LineShape3.X2 = 541
+        Me.LineShape3.Y1 = 229
+        Me.LineShape3.Y2 = 229
         '
         'LineShape2
         '
@@ -405,7 +405,7 @@ Partial Class brukerSide
         Me.LineShape2.X1 = 401
         Me.LineShape2.X2 = 400
         Me.LineShape2.Y1 = 46
-        Me.LineShape2.Y2 = 213
+        Me.LineShape2.Y2 = 228
         '
         'LineShape1
         '

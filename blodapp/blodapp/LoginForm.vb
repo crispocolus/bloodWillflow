@@ -12,6 +12,7 @@ Public Class LoginForm
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         loggInn()
+
     End Sub
 
     Private Sub llblLoginReg_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llblLoginReg.LinkClicked
@@ -61,6 +62,7 @@ Public Class LoginForm
 
             leser.Close()
             oppkobling.Close()
+
 
         Catch ex As MySqlException
             MessageBox.Show("Noe gikk galt: " & ex.Message)

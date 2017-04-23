@@ -3,6 +3,7 @@
     'utføres når siden lastes inn
     Private Sub adminSide_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CenterToParent()
+        LoginForm.Hide()
     End Sub
 
     Private Sub btnSokBruker_Click(sender As Object, e As EventArgs) Handles btnSokBruker.Click
@@ -13,6 +14,7 @@
         Dim pros As New prosedyrer
         pros.loggUt()
         Me.Close()
+        LoginForm.Show()
     End Sub
 
     'utføres når admin registrerer ny bruker

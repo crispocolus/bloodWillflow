@@ -1,7 +1,7 @@
 ﻿Public Class ansattSide
     Dim kommentar As String
 
-    'Kode som utføres når siden lastes
+    'Kode som utføres når siden lastes og lukker login form
     Private Sub ansattSide_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Sentrerer siden når den lastes
         Me.CenterToParent()
@@ -13,13 +13,16 @@
         blodFullOversikt()
         oppdaterInnkallinger()
         fyllEgenNavn()
+
+        LoginForm.Hide()
     End Sub
 
-    'logger ut den gjeldende brukeren
+    'logger ut den gjeldende brukeren og viser login form igjen
     Private Sub loggutBtn_Click(sender As Object, e As EventArgs) Handles loggutBtn.Click
         Dim pros As New prosedyrer
         Me.Close()
         pros.loggUt()
+        LoginForm.Show()
     End Sub
 
     'Knapp for å endre passord. 

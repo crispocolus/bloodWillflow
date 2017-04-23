@@ -1,19 +1,21 @@
 ﻿Public Class brukerSide
     Private Sub brukerSide_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Henter inn diverse info ved innlasting av side
-        hentPersonInfo()
+        'Henter inn diverse info ved innlasting av side og gjemmer login form
+        hentpersonInfo()
         sjekkMelding()
         sjekkTime()
         'sørger for at kalenderen alltid er 14 dager i forveien 
         mndKal1.MinDate = Today.AddDays(14)
         Me.CenterToParent()
+        LoginForm.Hide()
     End Sub
 
-    'utfører utloggings-prosedyre når brukeren logger ut
+    'utfører utloggings-prosedyre når brukeren logger ut og viser login formet igjen
     Private Sub btnLoggUt_Click(sender As Object, e As EventArgs) Handles btnLoggUt.Click
         Dim pros As New prosedyrer
         Me.Close()
         pros.loggUt()
+        LoginForm.Show()
     End Sub
 
     Private Sub mndKal1_DateChanged(sender As Object, e As DateRangeEventArgs) Handles mndKal1.DateChanged
