@@ -36,7 +36,7 @@
 
 
 
-    Private Sub btnRegistrer_Click(sender As Object, e As EventArgs) Handles btnRegistrer.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim reg As New RegistrerForm
         reg.SjekkInfo(postnrTxt.Text, adresseTxt.Text, pnummerTxt.Text, fornavnTxt.Text, etternavnTxt.Text, epostTxt.Text, tlfTxt.Text, passordcTxt.Text, passordTxt.Text)
 
@@ -102,7 +102,7 @@
 
             info.queryUpdate("bruker", "brukerstatus = '" & brukerstatus & "'", "person_nr = '" & bruker & "';")
 
-            MsgBox("Bruker har fått brukerstatus endret til " & ComboBox1.Text)
+        MsgBox("Bruker har fått brukerstatus endret til " & ComboBox1.Text)
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -150,7 +150,7 @@
             MsgBox("Brukerinfo er blitt oppdatert")
 
         Catch ex As Exception
-            MsgBox("Ingen bruker valgt")
+            MsgBox(ex.Message)
         End Try
     End Sub
 
