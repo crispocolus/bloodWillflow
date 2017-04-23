@@ -101,7 +101,7 @@
         Next
     End Sub
 
-    Private Sub btnEgenErk_Click(sender As Object, e As EventArgs) Handles btnEgenErk.Click
+    Private Sub btnEgenErk_Click(sender As Object, e As EventArgs)
         egenerklaering.Show()
     End Sub
 
