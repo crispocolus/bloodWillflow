@@ -541,8 +541,40 @@
         Next
     End Sub
 
+    Private Sub antallBlod()
+        Dim info As New info
+        Dim tabell As New DataTable
+        Dim valg As String
 
+        ListBox4.Items.Clear()
+        Select Case ComboBox1.SelectedItem
+            Case "Måned"
+                valg = 1
+            Case "Kvartal"
+                valg = 3
+            Case "År"
+                valg = 12
+        End Select
+        tabell = info.query("COUNT(blodlegemer.id), COUNT(blodplasma.id), COUNT(blodplater.id)", "bruker
+                             LEFT JOIN tappesesjon ON tappesesjon.person_nr = bruker.person_nr
+                             LEFT JOIN blodlegemer ON blodlegemer.tappe_id = tappesesjon.tappe_id
+                             LEFT JOIN blodplasma ON blodplasma.tappe_id = tappesesjon.tappe_id
+                             LEFT JOIN blodplater ON blodplater.tappe_id = tappesesjon.tappe_id",
+                            "tappesesjon.tappedato >= MONTH(CURDATE() - " & valg & ");")
+        'SQL spørring funker ikke som den skal
 
+        For Each rad In tabell.Rows
+            With ListBox4.Items
+                .Add((rad("COUNT(blodlegemer.id)")) * 0.45 & " liter blodlegemer")
+                .Add((rad("COUNT(blodplasma.id)")) * 0.45 & " liter blodplasma")
+                .Add((rad("COUNT(blodplater.id)")) * 0.45 & " liter blodplater")
+            End With
 
+        Next
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+        antallBlod()
+    End Sub
 End Class
 
