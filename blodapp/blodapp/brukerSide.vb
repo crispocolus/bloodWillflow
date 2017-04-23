@@ -281,17 +281,6 @@
         sjekkInn()
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs)
-        'Dim Egenerk As New EgenErk
-        'Dim table As New ArrayList
-        'Dim sql As New SQL
 
-        'table = Egenerk.hentEgenErk(1231231231)
-        'For i = 1 To table.Count
-        '    For Each rad In table
-        '        'ListBox4.Items.Add(rad(i))
-        '    Next
-        'Next
-    End Sub
 
 End Class
