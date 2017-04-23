@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class egenerklaering
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class egenerklaering
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(egenerklaering))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
@@ -381,7 +381,6 @@ Partial Class egenerklaering
         Me.LineShape76 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape75 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape74 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.Label19 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -469,7 +468,6 @@ Partial Class egenerklaering
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.Label19)
         Me.TabPage1.Controls.Add(Me.lblSomFør)
         Me.TabPage1.Controls.Add(Me.Panel2)
         Me.TabPage1.Controls.Add(Me.Panel1)
@@ -3867,15 +3865,6 @@ Partial Class egenerklaering
         Me.LineShape74.Y1 = 42
         Me.LineShape74.Y2 = 253
         '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(175, 543)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(45, 13)
-        Me.Label19.TabIndex = 100000
-        Me.Label19.Text = "Label19"
-        '
         'egenerklaering
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -4384,5 +4373,4 @@ Partial Class egenerklaering
     Friend WithEvents CheckBox61 As CheckBox
     Friend WithEvents LineShape86 As PowerPacks.LineShape
     Friend WithEvents LineShape85 As PowerPacks.LineShape
-    Friend WithEvents Label19 As Label
 End Class

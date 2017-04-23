@@ -90,6 +90,8 @@ Public Class egenerklaering
         Dim info As New info
         Dim tabell As New DataTable
 
+
+
         egenerk.hentEgenTabellBruker(pnummer, skjema_id)
         egenerk.hentEgenTabell("skjema_besvar", skjema_id)
         egenerk.svarTabell.Add(0)
@@ -111,9 +113,11 @@ Public Class egenerklaering
             For Each pnl In tb.Controls.OfType(Of Panel)().OrderBy(Function(c) c.TabIndex)
                 For Each cb In pnl.Controls.OfType(Of CheckBox)()
                     If idx = egenerk.svarTabell.Count - 1 Then
+                        cb.Enabled = False
                         cb.Checked = egenerk.svarTabell(idx)
                         Exit Sub
                     Else
+                        cb.Enabled = False
                         cb.Checked = egenerk.svarTabell(idx)
                         idx += 1
                     End If
