@@ -544,7 +544,7 @@
     Private Sub antallBlod()
         Dim info As New info
         Dim tabell As New DataTable
-        Dim valg As String
+        Dim valg As String = 0
 
         ListBox4.Items.Clear()
         Select Case ComboBox1.SelectedItem
