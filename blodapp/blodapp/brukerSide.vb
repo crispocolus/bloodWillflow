@@ -52,6 +52,7 @@
         End If
     End Sub
 
+    'Sub for å fylle liste på Min Side tab med behandlet innkallinger/bestillinger av time for blodtapping
     Private Sub sjekkTime()
         Dim info As New info
 

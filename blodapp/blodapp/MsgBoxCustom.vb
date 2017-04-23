@@ -1,4 +1,6 @@
-﻿Public Class MsgBoxCustom
+﻿'Custom msgbox med 3 knapper (Button3 gjemt som default) 
+
+Public Class MsgBoxCustom
 
     Public button1click As Boolean
     Public button2click As Boolean
