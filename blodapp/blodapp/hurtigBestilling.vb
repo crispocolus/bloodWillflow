@@ -34,9 +34,14 @@
         'Utfører query ved hjelp av funksjonen query under klassen info. 
         Tabell = info.queryJoin("fornavn, etternavn, telefon", "bruker", "blodgiver ON bruker.person_nr = blodgiver.person_nr", "blodtype = '" & blodtype & "';")
 
+
         'Legger til kandidater basert på hva som er valgt i ComboBox
         For Each rad In Tabell.Rows
             lstBGTlf.Items.Add(rad("fornavn") & " " & rad("etternavn") & ", " & rad("telefon"))
         Next
+    End Sub
+
+    Private Sub cmbHurtigBType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbHurtigBType.SelectedIndexChanged
+        lastBGTlf(cmbHurtigBType.Text)
     End Sub
 End Class
