@@ -23,7 +23,7 @@
     End Sub
 
     'viser egenerklæring når knapp trykkes
-    Private Sub btnEgenErk_Click(sender As Object, e As EventArgs)
+    Private Sub btnEgenErk_Click(sender As Object, e As EventArgs) Handles btnEgenErk.Click
         egenerklaering.Show()
     End Sub
 
@@ -296,4 +296,6 @@
             MsgBox("Du må velge en time")
         End Try
     End Sub
+
+
 End Class
