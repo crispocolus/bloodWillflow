@@ -444,14 +444,29 @@
 
     'legger inn time manuelt, uten at bruker må godkjenne denne på forhånd
     Private Sub leggInnTime()
+        Dim epost As New epost
         Dim info As New info
         Dim status As Integer
         status = 2
         Dim pNr As Double
         pNr = CType(lstKandidater.SelectedItem, listItem).value
+        Dim janei As Integer
+        Dim epostTab As New DataTable
+        Dim epostAddr As String = ""
 
+        kommentar = InputBox("Skriv inn en kommentar")
 
-        info.sendInnkalling(pNr, status, kommentar, tappeKalender.SelectionStart.ToString("yyyy/MM/dd") & " " & cmbTime.SelectedItem & ":" & cmbMin.SelectedItem & ":00")
+        epostTab = info.query("epost", "bruker", "person_nr = '" & pNr & "'")
+
+        For Each rad As DataRow In epostTab.Rows
+            epostAddr = rad("epost")
+        Next
+
+        janei = MsgBox("Vil du sende innkallingen?", MsgBoxStyle.YesNo)
+        If janei = DialogResult.Yes Then
+            info.sendInnkalling(pNr, status, kommentar, tappeKalender.SelectionStart.ToString("yyyy/MM/dd") & " " & cmbTime.SelectedItem & ":" & cmbMin.SelectedItem & ":00")
+            epost.sendEpost("Innkalling " & tappeKalender.SelectionStart.ToString("dd/MM/yyyy"), "Du har fått en innkalling til blodtapping den " & tappeKalender.SelectionStart.ToString("dd/MM/yyyy") & " klokken " & cmbTime.SelectedItem & ":" & cmbMin.SelectedItem & vbCrLf & "Har du spørsmål kan du ringe oss på 12345678" & vbCrLf & "Mvh Blodbanken", epostAddr)
+        End If
     End Sub
 
     'brukes for å søke i brukere i databasen

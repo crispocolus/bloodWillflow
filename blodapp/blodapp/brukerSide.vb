@@ -8,6 +8,7 @@
         mndKal1.MinDate = Today.AddDays(14)
         Me.CenterToParent()
         LoginForm.Hide()
+        fyllLabSvar(LoginForm.bnavn)
     End Sub
 
     'utfører utloggings-prosedyre når brukeren logger ut og viser login formet igjen
@@ -162,7 +163,6 @@
                 epostAddr = rad("epost")
                 pNr = rad("person_nr")
             Next
-            MsgBox(epostAddr & " " & pNr & " " & kommentar)
 
             janei = MsgBox("Vil du sende bestillingen?", MsgBoxStyle.YesNo)
             If janei = DialogResult.Yes Then
@@ -297,5 +297,24 @@
         End Try
     End Sub
 
+    Public Sub fyllLabSvar(brukernavn)
+        Dim info As New info
+        Dim pros As New prosedyrer
+        Dim tabell As New DataTable
+        Dim person_nr As String
 
+        person_nr = pros.finnPersonNummer(brukernavn)
+
+
+        tabell = info.query("*", "labsvar", "person_nr = " & person_nr & "")
+
+        For Each rad In tabell.Rows
+            lstLabsvar.Items.Add("Tid sendt: " & rad("tid_sendt"))
+            lstLabsvar.Items.Add("Kommentar: " & rad("fritekst_resultat"))
+            lstLabsvar.Items.Add("CRP: " & rad("CRP"))
+            lstLabsvar.Items.Add("Hvite blodceller: " & rad("hvit"))
+            lstLabsvar.Items.Add("Røde blodceller:" & rad("rod"))
+            lstLabsvar.Items.Add("Blodsukker: " & rad("blodsukker"))
+        Next
+    End Sub
 End Class
