@@ -477,6 +477,8 @@
         Dim resultatTab As New DataTable
         Dim sorter As String = "fornavn"
 
+        CBoxBlodtype.SelectedIndex = -1
+
         Select Case sokSpesCmb.Text
             Case "fornavn"
                 sorter = "fornavn"
@@ -490,7 +492,7 @@
 
         lstKandidater.Items.Clear()
         For Each rad As DataRow In resultatTab.Rows
-            lstKandidater.Items.Add(New listItem With {.display = rad("Fornavn") & " " & rad("Etternavn") & " " & rad("Epost") & " " & rad("Fdato"), .value = rad("person_nr")})
+            lstKandidater.Items.Add(New listItem With {.display = rad("Fornavn") & " " & rad("Etternavn") & ", " & rad("Fdato"), .value = rad("person_nr")})
         Next
     End Sub
 End Class

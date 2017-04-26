@@ -317,4 +317,48 @@
             lstLabsvar.Items.Add("Blodsukker: " & rad("blodsukker"))
         Next
     End Sub
+
+    Private Sub fornavnTxt_TextChanged(sender As Object, e As EventArgs) Handles fornavnTxt.TextChanged
+
+    End Sub
+
+    Private Sub lblPostnr_Click(sender As Object, e As EventArgs) Handles lblPostnr.Click
+
+    End Sub
+
+    Private Sub postnrTxt_TextChanged(sender As Object, e As EventArgs) Handles postnrTxt.TextChanged
+
+    End Sub
+
+    Private Sub lblAdresse_Click(sender As Object, e As EventArgs) Handles lblAdresse.Click
+
+    End Sub
+
+    Private Sub adresseTxt_TextChanged(sender As Object, e As EventArgs) Handles adresseTxt.TextChanged
+
+    End Sub
+
+    Private Sub lblEpost_Click(sender As Object, e As EventArgs) Handles lblEpost.Click
+
+    End Sub
+
+    Private Sub lblTlf_Click(sender As Object, e As EventArgs) Handles lblTlf.Click
+
+    End Sub
+
+    Private Sub lblEtternavn_Click(sender As Object, e As EventArgs) Handles lblEtternavn.Click
+
+    End Sub
+
+    Private Sub etternavnTxt_TextChanged(sender As Object, e As EventArgs) Handles etternavnTxt.TextChanged
+
+    End Sub
+
+    Private Sub telefonTxt_TextChanged(sender As Object, e As EventArgs) Handles telefonTxt.TextChanged
+
+    End Sub
+
+    Private Sub epostTxt_TextChanged(sender As Object, e As EventArgs) Handles epostTxt.TextChanged
+
+    End Sub
 End Class

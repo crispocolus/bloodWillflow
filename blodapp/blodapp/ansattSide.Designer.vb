@@ -210,7 +210,7 @@ Partial Class ansattSide
         'lblKolon
         '
         Me.lblKolon.AutoSize = True
-        Me.lblKolon.Location = New System.Drawing.Point(558, 230)
+        Me.lblKolon.Location = New System.Drawing.Point(573, 230)
         Me.lblKolon.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblKolon.Name = "lblKolon"
         Me.lblKolon.Size = New System.Drawing.Size(10, 13)
@@ -221,10 +221,10 @@ Partial Class ansattSide
         '
         Me.cmbMin.FormattingEnabled = True
         Me.cmbMin.Items.AddRange(New Object() {"00", "15", "30", "45"})
-        Me.cmbMin.Location = New System.Drawing.Point(572, 225)
+        Me.cmbMin.Location = New System.Drawing.Point(587, 225)
         Me.cmbMin.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbMin.Name = "cmbMin"
-        Me.cmbMin.Size = New System.Drawing.Size(29, 21)
+        Me.cmbMin.Size = New System.Drawing.Size(42, 21)
         Me.cmbMin.TabIndex = 27
         '
         'cmbTime
@@ -234,7 +234,7 @@ Partial Class ansattSide
         Me.cmbTime.Location = New System.Drawing.Point(522, 225)
         Me.cmbTime.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbTime.Name = "cmbTime"
-        Me.cmbTime.Size = New System.Drawing.Size(32, 21)
+        Me.cmbTime.Size = New System.Drawing.Size(47, 21)
         Me.cmbTime.TabIndex = 26
         '
         'lblKlokkeslett
